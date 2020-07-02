@@ -5,7 +5,10 @@ export default function IndexPage() {
     <div>
       <Nav />
       <div className="hero">
-        <h1 className="title">Notes Site</h1>
+        <h1 className="title">Sam's notes</h1>
+        <h3 className="text-center text-xl text-gray-600">
+          Notes from my course at Durham University
+        </h3>
       </div>
     </div>
   );

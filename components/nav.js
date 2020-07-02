@@ -7,13 +7,26 @@ const links = [
 
 export default function Nav() {
   return (
-    <nav className="shadow">
-      <ul className="flex justify-between items-center p-4 bg-gray-200">
+    <nav className="shadow bg-teal-500">
+      <ul className="flex justify-between items-center p-4 text-white">
         <li>
           <Link href="/">
-            <a className="text-blue-500 no-underline">Home</a>
+            <a className="no-underline">Home</a>
           </Link>
         </li>
+        <li className="relative">
+          <a href="#">Year 1</a>
+          <div className="absolute bg-gray-400 text-black w-48 rounded-md">
+            <a href="#" className="block">
+              Maths for Computer Science
+            </a>
+            <a href="#" className="block">
+              Computer Systems
+            </a>
+          </div>
+        </li>
+        <li>Year 2</li>
+        <li>Year 3</li>
         <ul className="flex justify-between items-center space-x-4">
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
