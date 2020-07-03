@@ -43,7 +43,7 @@ export default function NavItem(props) {
         </a>
       </div>
       <div
-        className="absolute bg-white text-black w-48"
+        className="absolute bg-white text-black w-48 shadow-lg"
         style={{
           display: showMe ? "block" : "none",
         }}
