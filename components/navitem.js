@@ -48,12 +48,11 @@ export default function NavItem(props) {
           display: showMe ? "block" : "none",
         }}
       >
-        <a href="#" className="block p-2">
-          Maths for Computer Science
-        </a>
-        <a href="#" className="block p-2">
-          Computer Systems
-        </a>
+        {props.subFolders.map((number) => (
+          <a href="#" className="block p-2">
+            {number}
+          </a>
+        ))}
       </div>
     </li>
   );

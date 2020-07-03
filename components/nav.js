@@ -1,12 +1,13 @@
 import Link from "next/link";
 import NavItem from "./navitem";
+// import getYears from "../lib/years";
 
 const links = [
   { href: "https://github.com/vercel/next.js", label: "GitHub" },
   { href: "https://nextjs.org/docs", label: "Docs" },
 ];
 
-export default function Nav() {
+export default function Nav(props) {
   const [showMe, setShowMe] = React.useState(false);
 
   function toggle() {
@@ -20,9 +21,15 @@ export default function Nav() {
             <a className="no-underline">Home</a>
           </Link>
         </li>
-        <NavItem year="Year One" />
+        {props.years.map(({ fileName, subFolders }) => (
+          <NavItem year={fileName} subFolders={subFolders} />
+        ))}
+        {/* {getYears.map(({ fileName }) => (
+          <NavItem year={{ fileName }} />
+        ))} */}
+        {/* <NavItem year="Year One" />
         <NavItem year="Year Two" />
-        <NavItem year="Year Three" />
+        <NavItem year="Year Three" /> */}
         {/* <ul className="flex justify-between items-center space-x-4">
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
@@ -36,3 +43,12 @@ export default function Nav() {
     </nav>
   );
 }
+
+// export async function getStaticProps() {
+//   const getYears = getYears();
+//   return {
+//     props: {
+//       getYears,
+//     },
+//   };
+// }
