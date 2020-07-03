@@ -14,16 +14,16 @@ export default function Nav() {
   }
   return (
     <nav className="shadow bg-teal-500">
-      <ul className="flex justify-between items-center p-4 text-white">
-        <li>
+      <ul className="flex justify-left items-center text-white">
+        <li className="pl-4 pr-4">
           <Link href="/">
             <a className="no-underline">Home</a>
           </Link>
         </li>
         <NavItem year="Year One" />
         <NavItem year="Year Two" />
-        <li>Year 3</li>
-        <ul className="flex justify-between items-center space-x-4">
+        <NavItem year="Year Three" />
+        {/* <ul className="flex justify-between items-center space-x-4">
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
               <a href={href} className="btn-blue no-underline">
@@ -31,7 +31,7 @@ export default function Nav() {
               </a>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </ul>
     </nav>
   );
