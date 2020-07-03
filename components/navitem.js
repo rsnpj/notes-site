@@ -30,18 +30,18 @@ export default function NavItem(props) {
   //
   return (
     <li ref={node} className="relative">
-      <div
-        className=""
-        className={
-          showMe
-            ? "w-48 pt-3 pb-3 text-center align-middle bg-teal-700"
-            : " w-48 pt-3 pb-3 text-center align-middle bg-teal-500"
-        }
-      >
-        <a href="#" onClick={toggle}>
+      <button href="#" onClick={toggle}>
+        <div
+          className=""
+          className={
+            showMe
+              ? "w-48 pt-3 pb-3 text-center align-middle bg-teal-700"
+              : " w-48 pt-3 pb-3 text-center align-middle bg-teal-500 hover:bg-teal-700"
+          }
+        >
           {props.year}
-        </a>
-      </div>
+        </div>
+      </button>
       <div
         className="absolute bg-white text-black w-48 shadow-lg"
         style={{
@@ -49,7 +49,7 @@ export default function NavItem(props) {
         }}
       >
         {props.subFolders.map((number) => (
-          <a href="#" className="block p-2">
+          <a href="#" className="block p-2 hover:bg-gray-200">
             {number}
           </a>
         ))}

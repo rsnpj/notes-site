@@ -16,7 +16,7 @@ export default function IndexPage({ allPostsData }) {
           Notes from my course at Durham University
         </h3>
       </div>
-      <ul>
+      {/* <ul>
         {allPostsData.map(({ id, date, title }) => (
           <li key={id}>
             <Link href="/posts/[id]" as={`/posts/${id}`}>
@@ -25,7 +25,7 @@ export default function IndexPage({ allPostsData }) {
             <br />
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
