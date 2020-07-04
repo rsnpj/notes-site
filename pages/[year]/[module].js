@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Link from "next/link";
-import { getSortedPostsData } from "../../lib/posts";
+import { getSortedPostsData, sidebar } from "../../lib/posts";
 import Nav from "../../components/nav";
 
 // const Post = () => {
@@ -17,7 +17,7 @@ import Nav from "../../components/nav";
 
 // export default Post;
 
-export default function IndexPage({ allPostsData }) {
+export default function IndexPage({ allPostsData, sidebarReturn }) {
   const router = useRouter();
   const { module, year } = router.query;
   return (
@@ -26,31 +26,30 @@ export default function IndexPage({ allPostsData }) {
         <title>Sam's notes</title>
       </Head>
       <Nav years={allPostsData} selectedYear={year} />
-      <div className="hero">
-        <h1 className="title">Sam's notes</h1>
-        <h3 className="text-center text-xl text-gray-600">
-          Notes from my course at Durham University
-        </h3>
+
+      <div className="flex">
+        <div className="flex-none w-full max-w-xs text-black bg-white p-4 shadow-xl rounded-br">
+          <h2 className="text-2xl mb-4">{module.replace(/_/g, " ")}</h2>
+          <hr className="mb-4" />
+          <ul className="text-lg">
+            {sidebarReturn.map(({ fileName, subFolders }) => (
+              <li>{fileName}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="flex-1 text-black ">Main content area</div>
       </div>
-      {/* <ul>
-          {allPostsData.map(({ id, date, title }) => (
-            <li key={id}>
-              <Link href="/posts/[id]" as={`/posts/${id}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
-            </li>
-          ))}
-        </ul> */}
     </div>
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps(context) {
   const allPostsData = getSortedPostsData();
+  const sidebarReturn = sidebar(context);
   return {
     props: {
       allPostsData,
+      sidebarReturn,
     },
   };
 }
