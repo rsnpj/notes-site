@@ -27,7 +27,14 @@ export default function NavItem(props) {
     // outside click
     setShowMe(false);
   };
-  //
+  // This sets the default background colour to teal-500 with teal-700 on hover, but if it is in the URL then will always be teal-700
+  var default_background = " bg-teal-500 hover:bg-teal-700";
+  if (props.year === props.selectedYear) {
+    default_background = " bg-teal-700";
+  }
+  // Set the standard proprties to make the code cleaner, not sure if there's an inline way to do this
+  const standard_properties = "w-48 pt-3 pb-3 text-center align-middle";
+
   return (
     <li ref={node} className="relative">
       <button href="#" onClick={toggle}>
@@ -35,11 +42,11 @@ export default function NavItem(props) {
           className=""
           className={
             showMe
-              ? "w-48 pt-3 pb-3 text-center align-middle bg-teal-700"
-              : " w-48 pt-3 pb-3 text-center align-middle bg-teal-500 hover:bg-teal-700"
+              ? standard_properties + " bg-teal-700"
+              : standard_properties + default_background
           }
         >
-          {props.year}
+          {props.year.replace(/_/g, " ")}
         </div>
       </button>
       <div
@@ -50,7 +57,7 @@ export default function NavItem(props) {
       >
         {props.subFolders.map((number) => (
           <a href="#" className="block p-2 hover:bg-gray-200">
-            {number}
+            {number.replace(/_/g, " ")}
           </a>
         ))}
       </div>

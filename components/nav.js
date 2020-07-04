@@ -13,6 +13,7 @@ export default function Nav(props) {
   function toggle() {
     setShowMe(!showMe);
   }
+
   return (
     <nav className="shadow bg-teal-500">
       <ul className="flex justify-left items-center text-white">
@@ -22,7 +23,11 @@ export default function Nav(props) {
           </Link>
         </li>
         {props.years.map(({ fileName, subFolders }) => (
-          <NavItem year={fileName} subFolders={subFolders} />
+          <NavItem
+            year={fileName}
+            subFolders={subFolders}
+            selectedYear={props.selectedYear}
+          />
         ))}
         {/* {getYears.map(({ fileName }) => (
           <NavItem year={{ fileName }} />
