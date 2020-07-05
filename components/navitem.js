@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 export default function NavItem(props) {
   useEffect(() => {
     if (open) {
@@ -56,9 +57,11 @@ export default function NavItem(props) {
         }}
       >
         {props.subFolders.map((number) => (
-          <a href="#" className="block p-2 hover:bg-gray-200">
-            {number.replace(/_/g, " ")}
-          </a>
+          <Link href={"/" + props.year + "/" + number}>
+            <a className="block p-2 hover:bg-gray-200">
+              {number.replace(/_/g, " ")}
+            </a>
+          </Link>
         ))}
       </div>
     </li>

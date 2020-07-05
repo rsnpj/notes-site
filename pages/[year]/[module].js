@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { getSortedPostsData, sidebar } from "../../lib/posts";
 import Nav from "../../components/nav";
+import SidebarItem from "../../components/sidebar_item";
 
 // const Post = () => {
 //   const router = useRouter();
@@ -33,7 +34,7 @@ export default function IndexPage({ allPostsData, sidebarReturn }) {
           <hr className="mb-4" />
           <ul className="text-lg">
             {sidebarReturn.map(({ fileName, subFolders }) => (
-              <li>{fileName}</li>
+              <SidebarItem fileName={fileName} subFolders={subFolders} />
             ))}
           </ul>
         </div>
