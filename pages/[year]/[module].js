@@ -59,7 +59,6 @@ export async function getStaticPaths() {
   return {
     paths: [
       { params: { year: "Year_1", module: "Algorithms_and_Data_Structures" } },
-      { params: { year: "Year_2", module: "Algorithms_and_Data_Structures" } },
     ],
     fallback: false, // See the "fallback" section below
   };
