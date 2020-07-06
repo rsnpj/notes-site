@@ -1,9 +1,9 @@
 // import months from "./notes/data";
 // months.forEach((element) => {});
 var myList = [];
-import("./notes/data.js").then((module) => {
+import("./notes/data.json").then((module) => {
   myList += module["default"];
-  import("./notes/" + module["default"] + "/data.js").then(
+  import("./notes/" + module["default"] + "/data.json").then(
     (module) => (myList += module["default"])
   );
 });

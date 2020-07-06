@@ -2,9 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 // import { frontMatter } from "../pages/**/*.md";
 var myList = [];
-import("../pages/notes/data.js").then((module) => {
+import("../pages/notes/data.json").then((module) => {
   myList += module["default"];
-  import("../pages/notes/" + module["default"] + "/data.js").then(
+  import("../pages/notes/" + module["default"] + "/data.json").then(
     (module) => (myList += module["default"])
   );
 });
