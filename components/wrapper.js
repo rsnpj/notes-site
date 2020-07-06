@@ -8,24 +8,24 @@ export default ({ pathname, children, allPostsData }) => {
         <title>Sam's notes</title>
       </Head> */}
       <nav className="bg-teal-400 shadow p-4">
-        <ul class="flex">
-          <li class="mr-6">
+        <ul className="flex">
+          <li className="mr-6">
             <Link href="/">
-              <a class="text-blue-500 hover:text-blue-800">Home</a>
+              <a className="text-blue-500 hover:text-blue-800">Home</a>
             </Link>
           </li>
-          <li class="mr-6">
+          <li className="mr-6">
             <Link href="/docs">
-              <a class="text-blue-500 hover:text-blue-800">Docs</a>
+              <a className="text-blue-500 hover:text-blue-800">Docs</a>
             </Link>
           </li>
-          <li class="mr-6">
-            <a class="text-blue-500 hover:text-blue-800" href="#">
+          <li className="mr-6">
+            <a className="text-blue-500 hover:text-blue-800" href="#">
               Link
             </a>
           </li>
-          <li class="mr-6">
-            <a class="text-gray-400 cursor-not-allowed" href="#">
+          <li className="mr-6">
+            <a className="text-gray-400 cursor-not-allowed" href="#">
               Disabled
             </a>
           </li>
