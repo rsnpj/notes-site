@@ -12,7 +12,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "remark": "^12.0.0",
-    "remark-html": "^11.0.2"
+    "remark-emoji": "^2.1.0",
+    "remark-html": "^11.0.2",
+    "remark-images": "^2.0.0"
   },
   "devDependencies": {
     "postcss-preset-env": "^6.7.0",
