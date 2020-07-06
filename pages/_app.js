@@ -1,7 +1,15 @@
-import '../styles/index.css'
+import React from "react";
+import { MDXProvider } from "@mdx-js/react";
+import "../styles/index.css";
+import Wrapper from "../components/wrapper";
+const mdComponents = {
+  h1: (props) => <h1 style={{ color: "tomato" }} {...props} />,
+};
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
-}
-
-export default MyApp
+export default ({ Component, pageProps }) => (
+  <Wrapper>
+    <MDXProvider components={mdComponents}>
+      <Component {...pageProps} />
+    </MDXProvider>
+  </Wrapper>
+);
