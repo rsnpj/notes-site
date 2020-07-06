@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import "../styles/index.css";
 
 export default ({ pathname, children, allPostsData }) => {
   return (
