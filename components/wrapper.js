@@ -1,7 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
-
-export default ({ pathname, children, allPostsData }) => {
+// import { frontMatter } from "../pages/**/*.md";
+var myList = [];
+import("../pages/notes/data.js").then((module) => {
+  myList += module["default"];
+  import("../pages/notes/" + module["default"] + "/data.js").then(
+    (module) => (myList += module["default"])
+  );
+});
+export default ({ pathname, children, data }) => {
+  // console.log({ frontMatter });
   return (
     <div>
       {/* <Head>
@@ -31,6 +39,7 @@ export default ({ pathname, children, allPostsData }) => {
           </li>
         </ul>
       </nav>
+      <p>{myList}</p>
       <div className="flex">
         <div className="flex-none w-full max-w-xs text-black bg-gray-200 p-4 shadow-xl rounded-br">
           <h2 className="text-2xl mb-4">Sidebar</h2>
