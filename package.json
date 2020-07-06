@@ -7,6 +7,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mdx-js/loader": "^1.6.6",
+    "@next/mdx": "^9.4.4",
     "gray-matter": "^4.0.2",
     "next": "^9.2.0",
     "react": "^16.12.0",
