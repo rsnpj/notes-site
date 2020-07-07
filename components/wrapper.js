@@ -3,12 +3,12 @@ import Link from "next/link";
 import Sidebar from "./sidebar";
 // import { frontMatter } from "../pages/**/*.md";
 var myList = [];
-import("../pages/notes/data.json").then((module) => {
-  myList += module["default"];
-  import("../pages/notes/" + module["default"] + "/data.json").then(
-    (module) => (myList += module["default"])
-  );
-});
+// import("../pages/notes/data.json").then((module) => {
+//   myList += module["default"];
+//   import("../pages/notes/" + module["default"] + "/data.json").then(
+//     (module) => (myList += module["default"])
+//   );
+// });
 export default ({ pathname, children, data }) => {
   // console.log({ frontMatter });
   return (
