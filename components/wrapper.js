@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Sidebar from "./sidebar";
 // import { frontMatter } from "../pages/**/*.md";
 var myList = [];
 import("../pages/notes/data.json").then((module) => {
@@ -41,13 +42,7 @@ export default ({ pathname, children, data }) => {
       </nav>
       <p>{myList}</p>
       <div className="flex">
-        <div className="flex-none w-full max-w-xs text-black bg-gray-200 p-4 shadow-xl rounded-br">
-          <h2 className="text-2xl mb-4">Sidebar</h2>
-          <hr className="mb-4" />
-          <ul className="text-lg">
-            <li>List</li>
-          </ul>
-        </div>
+        <Sidebar />
         <div className="flex-1 text-black p-4 h-screen bg-white">
           {children}
         </div>
