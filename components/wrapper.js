@@ -24,7 +24,7 @@ export default ({ pathname, children, data }) => {
             </Link>
           </li>
           <li className="mr-6">
-            <Link href="/docs">
+            <Link href="/notes">
               <a className="text-blue-500 hover:text-blue-800">Docs</a>
             </Link>
           </li>
