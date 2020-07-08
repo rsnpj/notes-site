@@ -22,7 +22,12 @@ function Sidebar() {
   }
   return (
     <div className="flex-none w-full max-w-xs text-black bg-gray-200 p-4 shadow-xl rounded-br">
-      <Select options={options} onChange={handleChange} />
+      <Select
+        options={options}
+        onChange={handleChange}
+        isClearable={false}
+        isSearchable={false}
+      />
       <hr className="mb-4" />
       <ModuleList modules={count} />
       {/* <ul className="text-lg">
