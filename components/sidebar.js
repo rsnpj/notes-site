@@ -33,8 +33,32 @@ function Sidebar() {
     );
   }
 
+  function unsetModule() {
+    setModule(false);
+  }
+
   function Submodule_layer() {
-    return <h1>{module}</h1>;
+    return (
+      <>
+        <div className="grid grid-cols-8 gap-2">
+          <button className="col-span-1" onClick={unsetModule}>
+            <svg
+              fill="none"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6"
+            >
+              <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </button>
+          <h1 className="text-2xl col-span-7">{module.replace(/_/g, " ")}</h1>
+        </div>
+        <hr className="border-gray-400 border-2 mt-2" />
+      </>
+    );
   }
 
   function Switching() {
@@ -50,7 +74,7 @@ function Sidebar() {
     import(
       "../pages/notes/" + selectedOption.value + "/data.json"
     ).then((module) => setCount(module["default"]));
-    setModule(false);
+    unsetModule();
   }
   return (
     <div className="flex-none w-full max-w-xs text-black bg-gray-200 p-4 shadow-xl rounded-br">
