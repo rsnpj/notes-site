@@ -77,7 +77,17 @@ function Sidebar() {
       }
     );
     if (isSubmodules) {
-      return <h1> {submodulelist.toString()}</h1>;
+      console.log(submodulelist);
+      return (
+        <ul>
+          {Object.keys(submodulelist).map((submodule) => (
+            <>
+              <li className="text-2xl">{submodule}</li>
+              <ul className="pl-4 text-gray-800"></ul>
+            </>
+          ))}
+        </ul>
+      );
     } else {
       return (
         <ul>
