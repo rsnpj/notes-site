@@ -1,4 +1,5 @@
 import Select from "react-select";
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import("../pages/notes/data.json").then((years) =>
   years["default"].forEach(append_dropdown)
@@ -8,12 +9,14 @@ var options = [];
 
 function append_dropdown(item, index) {
   options.push({ value: item, label: item.replace(/_/g, " ") });
-  //   console.log(test_options);
 }
 
 function Sidebar() {
   const [count, setCount] = useState([""]);
   const [module, setModule] = useState(false);
+  const [year, setYear] = useState(false);
+  const [isSubmodules, setIsSubmodules] = useState(false);
+  const [submodulelist, setSubmodules] = useState([""]);
 
   function selectModule(element) {
     setModule(element);
@@ -38,15 +41,19 @@ function Sidebar() {
   }
 
   function Submodule_layer() {
+    import(
+      "../pages/notes/" + year + "/" + module + "/data.json"
+    ).then((module) => console.log(module.list));
+
     return (
       <>
         <div className="grid grid-cols-8 gap-2">
           <button className="col-span-1" onClick={unsetModule}>
             <svg
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
               className="h-6"
@@ -57,8 +64,33 @@ function Sidebar() {
           <h1 className="text-2xl col-span-7">{module.replace(/_/g, " ")}</h1>
         </div>
         <hr className="border-gray-400 border-2 mt-2" />
+        <LectureList />
       </>
     );
+  }
+
+  function LectureList() {
+    import("../pages/notes/" + year + "/" + module + "/data.json").then(
+      (module) => {
+        setIsSubmodules(module.submodules);
+        setSubmodules(module.list);
+      }
+    );
+    if (isSubmodules) {
+      return <h1> {submodulelist.toString()}</h1>;
+    } else {
+      return (
+        <ul>
+          {submodulelist.map((lecture) => (
+            <li>
+              <Link href={"/notes/" + year + "/" + module + "/" + lecture}>
+                <a>{lecture}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      );
+    }
   }
 
   function Switching() {
@@ -71,6 +103,7 @@ function Sidebar() {
 
   // This function sets the state to the modules to be listed, it might be nicer to have the state be the year, and the fetching be handled in the component
   function handleChange(selectedOption) {
+    setYear(selectedOption.value);
     import(
       "../pages/notes/" + selectedOption.value + "/data.json"
     ).then((module) => setCount(module["default"]));
