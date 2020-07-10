@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import Sidebar from "./sidebar";
-import { useMediaQuery } from "react-responsive";
 import { useEffect, useRef, useState } from "react";
+import Router from "next/router";
 
 // import { frontMatter } from "../pages/**/*.md";
 var myList = [];
@@ -24,6 +24,7 @@ export default ({ pathname, children, data }) => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+
   const [navVisible, setNavVisible] = useState(false);
   const node = useRef();
   const node2 = useRef();
@@ -37,7 +38,12 @@ export default ({ pathname, children, data }) => {
     setNavVisible(false);
   };
 
-  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const handleRouteChange = (url) => {
+    setNavVisible(false);
+  };
+
+  Router.events.on("routeChangeStart", handleRouteChange);
+
   return (
     <div className="h-screen">
       <nav
