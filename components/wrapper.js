@@ -26,9 +26,10 @@ export default ({ pathname, children, data }) => {
   });
   const [navVisible, setNavVisible] = useState(false);
   const node = useRef();
+  const node2 = useRef();
   const handleClickOutside = (e) => {
     console.log("clicking anywhere");
-    if (node.current.contains(e.target)) {
+    if (node.current.contains(e.target) || node2.current.contains(e.target)) {
       // inside click
       return;
     }
@@ -39,7 +40,10 @@ export default ({ pathname, children, data }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
     <div className="h-screen">
-      <nav className="bg-white shadow p-4 h-12 border-b border-gray-200">
+      <nav
+        ref={node2}
+        className="bg-white shadow p-4 h-12 border-b border-gray-200"
+      >
         <ul className="float-left">
           <li className="mr-6 visible sm:hidden">
             <button onClick={() => setNavVisible(!navVisible)}>
