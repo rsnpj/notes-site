@@ -56,8 +56,8 @@ export default ({ pathname, children, data }) => {
           <div
             className={
               navVisible
-                ? " block w-full max-w-xs h-full z-10"
-                : " hidden sm:block w-full max-w-xs h-full z-10"
+                ? " block w-full max-w-xs z-10"
+                : " hidden sm:block w-full max-w-xs z-10"
             }
           >
             <Sidebar />
