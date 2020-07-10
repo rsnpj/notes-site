@@ -15,4 +15,17 @@
   line-height: 1.15;
 }
 
+.main-content {
+  height: calc(100vh - 3rem);
+}
+
 @tailwind utilities;
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}

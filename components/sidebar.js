@@ -1,6 +1,6 @@
 import Select from "react-select";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import("../pages/notes/data.json").then((years) =>
   years["default"].forEach(append_dropdown)
 );
@@ -93,7 +93,7 @@ function Sidebar() {
           {submodulelist.map((lecture) => (
             <li>
               <Link href={"/notes/" + year + "/" + module + "/" + lecture}>
-                <a>{lecture}</a>
+                <a>{lecture.replace(/_/g, " ")}</a>
               </Link>
             </li>
           ))}
@@ -111,7 +111,7 @@ function Sidebar() {
         <>
           <li className="text-2xl">
             <Link href={"/notes/" + year + "/" + module + "/" + props.lecture}>
-              <a>{props.lecture}</a>
+              <a>{props.lecture.replace(/_/g, " ")}</a>
             </Link>
             <ul className="pl-4 text-base">
               <LectureList2 output={output} submodule={props.lecture} />
@@ -140,7 +140,7 @@ function Sidebar() {
               lecture
             }
           >
-            {lecture}
+            {lecture.replace(/_/g, " ")}
           </Link>
         </li>
       ));
@@ -166,7 +166,7 @@ function Sidebar() {
     unsetModule();
   }
   return (
-    <div className="flex-none w-full max-w-xs text-black bg-gray-200 p-4 shadow-xl rounded-br">
+    <div className="absolute sm:relative sm:flex-none w-full max-w-xs text-black bg-white overflow-y-scroll p-4 border-r h-full overflow-x-hidden">
       <Select
         options={options}
         onChange={handleChange}
