@@ -103,21 +103,25 @@ function Sidebar() {
   }
 
   function LectureList(props) {
-    const output = lectures[props.lecture];
-    console.log("LectureList");
-    console.log(output);
-    return (
-      <>
-        <li className="text-2xl">
-          <Link href={"/notes/" + year + "/" + module + "/" + props.lecture}>
-            <a>{props.lecture}</a>
-          </Link>
-          <ul className="pl-4 text-base">
-            <LectureList2 output={output} submodule={props.lecture} />
-          </ul>
-        </li>
-      </>
-    );
+    if (typeof lectures !== "undefined") {
+      const output = lectures[props.lecture];
+      console.log("LectureList");
+      console.log(output);
+      return (
+        <>
+          <li className="text-2xl">
+            <Link href={"/notes/" + year + "/" + module + "/" + props.lecture}>
+              <a>{props.lecture}</a>
+            </Link>
+            <ul className="pl-4 text-base">
+              <LectureList2 output={output} submodule={props.lecture} />
+            </ul>
+          </li>
+        </>
+      );
+    } else {
+      return "Blank";
+    }
   }
 
   function LectureList2(props) {
