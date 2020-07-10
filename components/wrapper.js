@@ -13,7 +13,28 @@ var myList = [];
 //   );
 // });
 export default ({ pathname, children, data }) => {
+  useEffect(() => {
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  });
   const [navVisible, setNavVisible] = useState(false);
+  const node = useRef();
+  const handleClickOutside = (e) => {
+    console.log("clicking anywhere");
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setNavVisible(false);
+  };
 
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
   return (
@@ -59,6 +80,7 @@ export default ({ pathname, children, data }) => {
                 ? " block w-full max-w-xs z-10"
                 : " hidden sm:block w-full max-w-xs z-10"
             }
+            ref={node}
           >
             <Sidebar />
           </div>
