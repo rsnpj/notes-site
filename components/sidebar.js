@@ -17,6 +17,7 @@ function Sidebar() {
   const [year, setYear] = useState(false);
   const [isSubmodules, setIsSubmodules] = useState(false);
   const [submodulelist, setSubmodules] = useState([""]);
+  const [lectures, setLectures] = useState({});
 
   function selectModule(element) {
     setModule(element);
@@ -64,27 +65,25 @@ function Sidebar() {
           <h1 className="text-2xl col-span-7">{module.replace(/_/g, " ")}</h1>
         </div>
         <hr className="border-gray-400 border-2 mt-2" />
-        <LectureList />
+        <SubModuleList />
       </>
     );
   }
 
-  function LectureList() {
+  function SubModuleList() {
     import("../pages/notes/" + year + "/" + module + "/data.json").then(
       (module) => {
         setIsSubmodules(module.submodules);
         setSubmodules(module.list);
+        setLectures(module.lectures);
       }
     );
     if (isSubmodules) {
       console.log(submodulelist);
       return (
         <ul>
-          {Object.keys(submodulelist).map((submodule) => (
-            <>
-              <li className="text-2xl">{submodule}</li>
-              <ul className="pl-4 text-gray-800"></ul>
-            </>
+          {submodulelist.map((lecture) => (
+            <LectureList lecture={lecture} />
           ))}
         </ul>
       );
@@ -100,6 +99,49 @@ function Sidebar() {
           ))}
         </ul>
       );
+    }
+  }
+
+  function LectureList(props) {
+    const output = lectures[props.lecture];
+    console.log("LectureList");
+    console.log(output);
+    return (
+      <>
+        <li className="text-2xl">
+          <Link href={"/notes/" + year + "/" + module + "/" + props.lecture}>
+            <a>{props.lecture}</a>
+          </Link>
+          <ul className="pl-4 text-base">
+            <LectureList2 output={output} submodule={props.lecture} />
+          </ul>
+        </li>
+      </>
+    );
+  }
+
+  function LectureList2(props) {
+    if (typeof props.output !== "undefined") {
+      return props.output.map((lecture) => (
+        <li>
+          <Link
+            href={
+              "/notes/" +
+              year +
+              "/" +
+              module +
+              "/" +
+              props.submodule +
+              "/" +
+              lecture
+            }
+          >
+            {lecture}
+          </Link>
+        </li>
+      ));
+    } else {
+      return "Blank";
     }
   }
 
