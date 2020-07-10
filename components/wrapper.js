@@ -52,12 +52,12 @@ export default ({ pathname, children, data }) => {
         </ul>
       </nav>
       <div>
-        <div className="sm:flex main-content">
+        <div className="sm:flex sm:main-content">
           <div
             className={
               navVisible
-                ? " block w-full max-w-xs sticky h-full z-10"
-                : " hidden sm:block w-full max-w-xs sticky h-full z-10"
+                ? " block w-full max-w-xs h-full z-10"
+                : " hidden sm:block w-full max-w-xs h-full z-10"
             }
           >
             <Sidebar />
@@ -67,7 +67,7 @@ export default ({ pathname, children, data }) => {
             Hi
           </div>
         </div> */}
-          <div className="sm:flex-1 text-black h-full bg-white p-4">
+          <div className="sm:flex-1 text-black h-screen bg-white p-4">
             {children}
           </div>
         </div>
