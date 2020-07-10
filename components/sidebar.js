@@ -166,7 +166,7 @@ function Sidebar() {
     unsetModule();
   }
   return (
-    <div className="absolute sm:relative sm:flex-none w-full max-w-xs text-black bg-white overflow-y-scroll p-4 border-r h-full overflow-x-hidden">
+    <div className="absolute sm:relative sm:flex-none w-full max-w-xs text-black bg-white overflow-y-auto p-4 border-r h-full overflow-x-hidden">
       <Select
         options={options}
         onChange={handleChange}
