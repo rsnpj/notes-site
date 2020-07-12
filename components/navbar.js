@@ -1,14 +1,14 @@
-function NavBar() {
+function NavBar(props) {
   return (
     <nav className="bg-white shadow p-4 h-12 border-b border-gray-200">
-      <ul class="flex float-left">
-        <li class="mr-6 visible sm:hidden">
-          <button>
+      <ul className="flex float-left">
+        <li className="mr-6 visible sm:hidden">
+          <button onClick={() => props.toggleFunction()}>
             <svg
               fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               viewBox="0 0 24 24"
               stroke="currentColor"
               className="h-5"
@@ -17,12 +17,12 @@ function NavBar() {
             </svg>
           </button>
         </li>
-        <li class="mr-6">Sam's Notes</li>
+        <li className="mr-6">Sam's Notes</li>
       </ul>
-      <ul class="flex float-right">
-        <li class="mr-6">
+      <ul className="flex float-right">
+        <li className="mr-6">
           <a
-            class="text-blue-500 hover:text-blue-800"
+            className="text-blue-500 hover:text-blue-800"
             href="https://github.com/samrobbins85/notes-site"
           >
             <svg viewBox="0 0 24 24" className="h-5">
