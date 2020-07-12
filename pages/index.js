@@ -14,7 +14,7 @@ function HomePage() {
       <NavBar toggleFunction={toggleSidebar} />
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} />
-        <MainContent>
+        <MainContent toggle={sidebarVisible}>
           Welcome to Next.js! Here is some more content to check if it is
           properly underneath
         </MainContent>
