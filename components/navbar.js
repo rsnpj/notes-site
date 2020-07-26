@@ -1,8 +1,8 @@
-function NavBar(props) {
+const NavBar = React.forwardRef((props, ref) => {
   return (
-    <nav className="bg-white shadow p-4 h-12 border-b border-gray-200">
+    <nav className="h-12 p-4 bg-white border-b border-gray-200 shadow">
       <ul className="flex float-left">
-        <li className="mr-6 visible sm:hidden">
+        <li className="visible mr-6 sm:hidden" ref={ref}>
           <button onClick={() => props.toggleFunction()}>
             <svg
               fill="none"
@@ -33,6 +33,6 @@ function NavBar(props) {
       </ul>
     </nav>
   );
-}
+});
 
 export default NavBar;

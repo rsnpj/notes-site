@@ -4,6 +4,8 @@ import MainContent from "../components/main_content";
 import { useState, useEffect, useRef } from "react";
 
 function HomePage() {
+  const node = useRef();
+  const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
   function toggleSidebar() {
     setSidebarVisible(!sidebarVisible);
@@ -20,11 +22,10 @@ function HomePage() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
-  const node = useRef();
-  const node2 = useRef();
+
   const handleClickOutside = (e) => {
     console.log("clicking anywhere");
-    if (node.current.contains(e.target)) {
+    if (node.current.contains(e.target) || node2.current.contains(e.target)) {
       // inside click
       return;
     }
@@ -34,7 +35,7 @@ function HomePage() {
 
   return (
     <>
-      <NavBar toggleFunction={toggleSidebar} />
+      <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} />
         <MainContent toggle={sidebarVisible}>
