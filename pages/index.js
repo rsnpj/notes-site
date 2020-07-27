@@ -2,8 +2,10 @@ import NavBar from "../components/navbar";
 import Sidebar from "../components/new_sidebar";
 import MainContent from "../components/main_content";
 import { useState, useEffect, useRef } from "react";
+import { getTree } from "../lib/tree";
 
-function HomePage() {
+function HomePage({ tree }) {
+  console.log(tree);
   const node = useRef();
   const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -37,7 +39,7 @@ function HomePage() {
     <>
       <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
-        <Sidebar toggle={sidebarVisible} ref={node} />
+        <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
         <MainContent toggle={sidebarVisible}>
           Welcome to Next.js! Here is some more content to check if it is
           properly underneath
@@ -48,3 +50,12 @@ function HomePage() {
 }
 
 export default HomePage;
+
+export async function getStaticProps() {
+  const tree = getTree();
+  return {
+    props: {
+      tree,
+    },
+  };
+}

@@ -1,10 +1,14 @@
 import Select from "react-select";
 const Sidebar = React.forwardRef((props, ref) => {
   const toggle = props.toggle ? "" : "hidden sm:block";
-  var options = [
-    { value: "year_1", label: "Year 1" },
-    { value: "year_2", label: "Year 2" },
-  ];
+  // var options = [
+  //   { value: "year_1", label: "Year 1" },
+  //   { value: "year_2", label: "Year 2" },
+  // ];
+  var options = props.tree.children.map((x) => ({
+    value: x.name,
+    label: x.name.replace(/_/g, " "),
+  }));
   return (
     <div
       className={`${toggle} absolute sm:relative w-full max-w-xs z-10 main-content`}
