@@ -26,7 +26,6 @@ function HomePage({ tree }) {
   });
 
   const handleClickOutside = (e) => {
-    console.log("clicking anywhere");
     if (node.current.contains(e.target) || node2.current.contains(e.target)) {
       // inside click
       return;
