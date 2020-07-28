@@ -46,15 +46,17 @@ const Sidebar = React.forwardRef((props, ref) => {
           .children.map(function (elem) {
             if (elem.type !== "directory") {
               return (
-                <li>{elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}</li>
+                <li className="hover:bg-gray-200 py-1 pl-2 rounded">
+                  {elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
+                </li>
               );
             } else {
               return (
                 <li className="text-xl font-semibold">
                   {elem.name.replace(/_/g, " ")}
-                  <ul className="text-base font-normal pl-4">
+                  <ul className="text-base font-normal">
                     {elem.children.map((lecture) => (
-                      <li>
+                      <li className="pl-2 py-1 hover:bg-gray-200 rounded">
                         {lecture.name
                           .replace(/\.[^/.]+$/, "")
                           .replace(/_/g, " ")}
