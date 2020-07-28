@@ -22,9 +22,9 @@ const Sidebar = React.forwardRef((props, ref) => {
 
   function Module_layer() {
     return (
-      <ul>
+      <ul className="divide-y divide-gray-400">
         {modules.map((element) => (
-          <li key={element}>
+          <li key={element} className="p-2 text-center">
             <button onClick={() => setModule(element)}>
               {element.replace(/_/g, " ")}
             </button>
@@ -39,21 +39,26 @@ const Sidebar = React.forwardRef((props, ref) => {
   }
   function Submodule_List() {
     return (
-      <ul>
+      <ul className="divide-y-4 divide-transparent pt-4">
         {props.tree.children
           .find((x) => x.name === year)
           .children.find((x) => x.name === module)
           .children.map(function (elem) {
             if (elem.type !== "directory") {
-              return <li>{elem.name}</li>;
-            } else {
-              var lectures = elem.children.map((elem) => elem.name);
               return (
-                <li>
-                  {elem.name}
-                  <ul>
+                <li>{elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}</li>
+              );
+            } else {
+              return (
+                <li className="text-xl font-semibold">
+                  {elem.name.replace(/_/g, " ")}
+                  <ul className="text-base font-normal pl-4">
                     {elem.children.map((lecture) => (
-                      <li>{lecture.name}</li>
+                      <li>
+                        {lecture.name
+                          .replace(/\.[^/.]+$/, "")
+                          .replace(/_/g, " ")}
+                      </li>
                     ))}
                   </ul>
                 </li>
