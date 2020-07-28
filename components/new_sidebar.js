@@ -34,8 +34,31 @@ const Sidebar = React.forwardRef((props, ref) => {
     );
   }
 
+  function unsetModule() {
+    setModule(false);
+  }
   function Submodule_layer() {
-    return "Hiya";
+    return (
+      <>
+        <div className="grid grid-cols-8 gap-2">
+          <button className="col-span-1" onClick={unsetModule}>
+            <svg
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="h-6"
+            >
+              <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+          </button>
+          <h1 className="col-span-7 text-2xl">{module.replace(/_/g, " ")}</h1>
+        </div>
+        <hr className="mt-2 border-2 border-gray-400" />
+      </>
+    );
   }
 
   function Switching() {
