@@ -37,6 +37,33 @@ const Sidebar = React.forwardRef((props, ref) => {
   function unsetModule() {
     setModule(false);
   }
+  function Submodule_List() {
+    return (
+      <ul>
+        {props.tree.children
+          .find((x) => x.name === year)
+          .children.find((x) => x.name === module)
+          .children.map(function (elem) {
+            if (elem.type !== "directory") {
+              return <li>{elem.name}</li>;
+            } else {
+              var lectures = elem.children.map((elem) => elem.name);
+              return (
+                <li>
+                  {elem.name}
+                  <ul>
+                    {elem.children.map((lecture) => (
+                      <li>{lecture.name}</li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
+          })}
+      </ul>
+    );
+  }
+
   function Submodule_layer() {
     return (
       <>
@@ -57,6 +84,7 @@ const Sidebar = React.forwardRef((props, ref) => {
           <h1 className="col-span-7 text-2xl">{module.replace(/_/g, " ")}</h1>
         </div>
         <hr className="mt-2 border-2 border-gray-400" />
+        <Submodule_List />
       </>
     );
   }
