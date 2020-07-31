@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-const Comment = () => {
+function Lecture() {
   const router = useRouter();
   const slug = router.query.slug || [];
 
@@ -9,6 +9,6 @@ const Comment = () => {
       <h1>Slug: {slug.join("/")}</h1>
     </>
   );
-};
+}
 
-export default Comment;
+export default Lecture;
