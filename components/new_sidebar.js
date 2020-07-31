@@ -1,5 +1,6 @@
 import Select from "react-select";
 import { useState } from "react";
+import Link from "next/link";
 const Sidebar = React.forwardRef((props, ref) => {
   const [year, setYear] = useState("");
   const [modules, setModules] = useState([]);
@@ -47,7 +48,20 @@ const Sidebar = React.forwardRef((props, ref) => {
             if (elem.type !== "directory") {
               return (
                 <li className="hover:bg-gray-200 py-1 pl-2 rounded">
-                  {elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
+                  <Link
+                    href={
+                      "./" +
+                      year +
+                      "/" +
+                      module +
+                      "/" +
+                      elem.name.replace(/\.[^/.]+$/, "")
+                    }
+                  >
+                    <a>
+                      {elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
+                    </a>
+                  </Link>
                 </li>
               );
             } else {
@@ -57,9 +71,24 @@ const Sidebar = React.forwardRef((props, ref) => {
                   <ul className="text-base font-normal">
                     {elem.children.map((lecture) => (
                       <li className="pl-2 py-1 hover:bg-gray-200 rounded">
-                        {lecture.name
-                          .replace(/\.[^/.]+$/, "")
-                          .replace(/_/g, " ")}
+                        <Link
+                          href={
+                            "./" +
+                            year +
+                            "/" +
+                            module +
+                            "/" +
+                            elem.name +
+                            "/" +
+                            lecture.name.replace(/\.[^/.]+$/, "")
+                          }
+                        >
+                          <a>
+                            {lecture.name
+                              .replace(/\.[^/.]+$/, "")
+                              .replace(/_/g, " ")}
+                          </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
