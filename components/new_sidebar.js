@@ -2,8 +2,7 @@ import Select from "react-select";
 import { useState } from "react";
 import Link from "next/link";
 const Sidebar = React.forwardRef((props, ref) => {
-  const [year, setYear] = useState("");
-  const [modules, setModules] = useState([]);
+  const [year, setYear] = useState(false);
   const [module, setModule] = useState(false);
   const toggle = props.toggle ? "" : "hidden sm:block";
   var options = props.tree.children.map((x) => ({
@@ -13,24 +12,22 @@ const Sidebar = React.forwardRef((props, ref) => {
   function handleChange(selected) {
     setModule(false);
     setYear(selected.value);
-    console.log(props.tree);
-    setModules(
-      props.tree.children
-        .find((x) => x.name === selected.value)
-        .children.map((x) => x.name)
-    );
   }
 
   function Module_layer() {
     return (
       <ul className="divide-y divide-gray-400">
-        {modules.map((element) => (
-          <li key={element} className="p-2 text-center">
-            <button onClick={() => setModule(element)}>
-              {element.replace(/_/g, " ")}
-            </button>
-          </li>
-        ))}
+        {year &&
+          props.tree.children
+            .find((x) => x.name === year)
+            .children.map((x) => x.name)
+            .map((element) => (
+              <li key={element} className="p-2 text-center">
+                <button onClick={() => setModule(element)}>
+                  {element.replace(/_/g, " ")}
+                </button>
+              </li>
+            ))}
       </ul>
     );
   }

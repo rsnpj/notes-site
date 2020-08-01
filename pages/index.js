@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import { getTree } from "../lib/tree";
 
 function HomePage({ tree }) {
-  console.log(tree);
   const node = useRef();
   const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
