@@ -74,6 +74,6 @@ export async function getStaticPaths(slug) {
         },
       }, // See the "paths" section below
     ],
-    fallback: true, // See the "fallback" section below
+    fallback: false, // See the "fallback" section below
   };
 }
