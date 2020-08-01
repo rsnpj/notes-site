@@ -1,3 +1,4 @@
+import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
   return (
     <nav className="h-12 p-4 bg-white border-b border-gray-200 shadow">
@@ -17,7 +18,11 @@ const NavBar = React.forwardRef((props, ref) => {
             </svg>
           </button>
         </li>
-        <li className="mr-6">Sam's Notes</li>
+        <li className="mr-6">
+          <Link href="/">
+            <a>Sam's Notes</a>
+          </Link>
+        </li>
       </ul>
       <ul className="flex float-right">
         <li className="mr-6">

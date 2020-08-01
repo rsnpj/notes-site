@@ -42,9 +42,9 @@ function Lecture({ tree }) {
         <MainContent toggle={sidebarVisible}>
           Welcome to Next.js! Here is some more content to check if it is
           properly underneath
+          <h1>Slug: {slug.join("/")}</h1>
         </MainContent>
       </div>
-      <h1>Slug: {slug.join("/")}</h1>
     </>
   );
 }
