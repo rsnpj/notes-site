@@ -73,7 +73,7 @@ const Sidebar = React.forwardRef((props, ref) => {
                       <li className="pl-2 py-1 hover:bg-gray-200 rounded">
                         <Link
                           href={
-                            "./" +
+                            "/" +
                             year +
                             "/" +
                             module +
