@@ -1,6 +1,7 @@
 import Select from "react-select";
 import Link from "next/link";
 import { useState } from "react";
+
 import("../pages/notes/data.json").then((years) =>
   years["default"].forEach(append_dropdown)
 );
@@ -27,7 +28,7 @@ function Sidebar() {
     return (
       <div className="divide-y divide-gray-400">
         {count.map((element) => (
-          <div className="text-center py-2" key={element}>
+          <div className="py-2 text-center" key={element}>
             <button onClick={() => selectModule(element)}>
               {element.replace(/_/g, " ")}
             </button>
@@ -62,9 +63,9 @@ function Sidebar() {
               <path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
             </svg>
           </button>
-          <h1 className="text-2xl col-span-7">{module.replace(/_/g, " ")}</h1>
+          <h1 className="col-span-7 text-2xl">{module.replace(/_/g, " ")}</h1>
         </div>
-        <hr className="border-gray-400 border-2 mt-2" />
+        <hr className="mt-2 border-2 border-gray-400" />
         <SubModuleList />
       </>
     );
@@ -166,7 +167,7 @@ function Sidebar() {
     unsetModule();
   }
   return (
-    <div className="absolute sm:relative sm:flex-none w-full max-w-xs text-black bg-white overflow-y-auto p-4 border-r h-full overflow-x-hidden">
+    <div className="absolute w-full h-full max-w-xs p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r sm:relative sm:flex-none">
       <Select
         options={options}
         onChange={handleChange}
