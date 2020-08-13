@@ -41,10 +41,13 @@ function Lecture({ tree, postData }) {
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
         <MainContent toggle={sidebarVisible}>
-          Welcome to Next.js! Here is some more content to check if it is
+          {/* Welcome to Next.js! Here is some more content to check if it is
           properly underneath
-          <h1>Slug: {slug.join("/")}</h1>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <h1>Slug: {slug.join("/")}</h1> */}
+          <div
+            className="prose"
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          />
         </MainContent>
       </div>
     </>

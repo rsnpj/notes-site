@@ -2,7 +2,7 @@
 title: "Arrays"
 ---
 
-# Arrays
+## Arrays
 
 This is MDX!
 
