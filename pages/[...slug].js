@@ -1,4 +1,3 @@
-import { useRouter } from "next/router";
 import { useState, useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
 import Sidebar from "../components/new_sidebar";
@@ -6,15 +5,14 @@ import NavBar from "../components/navbar";
 import { getTree } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
 
-function Lecture({ tree, postData }) {
+function Lecture({ tree, postData, params }) {
   const node = useRef();
   const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
   function toggleSidebar() {
     setSidebarVisible(!sidebarVisible);
   }
-  const router = useRouter();
-  const slug = router.query.slug || [];
+
   useEffect(() => {
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
@@ -41,9 +39,15 @@ function Lecture({ tree, postData }) {
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
         <MainContent toggle={sidebarVisible}>
-          {/* Welcome to Next.js! Here is some more content to check if it is
-          properly underneath
-          <h1>Slug: {slug.join("/")}</h1> */}
+          <div className="p-6">
+            <h1 className="text-5xl text-center font-semibold">
+              {postData.title}
+            </h1>
+            <h2 className="text-center text-lg text-gray-700">
+              {params.slug[1].replace(/_/g, " ")}
+            </h2>
+          </div>
+          <hr className="pb-4" />
           <div
             className="prose"
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
@@ -63,6 +67,7 @@ export async function getStaticProps({ params }) {
     props: {
       tree,
       postData,
+      params,
     },
   };
 }
