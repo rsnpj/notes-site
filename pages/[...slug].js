@@ -4,8 +4,9 @@ import MainContent from "../components/main_content";
 import Sidebar from "../components/new_sidebar";
 import NavBar from "../components/navbar";
 import { getTree } from "../lib/tree";
+import { getPostData } from "../lib/lecture";
 
-function Lecture({ tree }) {
+function Lecture({ tree, postData }) {
   const node = useRef();
   const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -43,6 +44,7 @@ function Lecture({ tree }) {
           Welcome to Next.js! Here is some more content to check if it is
           properly underneath
           <h1>Slug: {slug.join("/")}</h1>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </MainContent>
       </div>
     </>
@@ -51,11 +53,13 @@ function Lecture({ tree }) {
 
 export default Lecture;
 
-export async function getStaticProps() {
+export async function getStaticProps({ params }) {
+  const postData = await getPostData(params.slug);
   const tree = getTree();
   return {
     props: {
       tree,
+      postData,
     },
   };
 }

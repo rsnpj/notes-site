@@ -7,7 +7,6 @@
     "dev": "next",
     "start": "next start"
   },
-  
   "dependencies": {
     "@mdx-js/loader": "^1.6.6",
     "@mdx-js/mdx": "^1.6.6",
@@ -29,7 +28,7 @@
   "devDependencies": {
     "remark": "^12.0.0"
   },
-  "resolutions":{
+  "resolutions": {
     "webpack": "^5.0.0-beta.22"
   }
 }
