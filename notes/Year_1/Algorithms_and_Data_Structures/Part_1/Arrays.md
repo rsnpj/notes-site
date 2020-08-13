@@ -73,8 +73,6 @@ May refer to node `N` using:
 `NULL` means "there's nothing there", i.e., last element has no
 successor
 
-## A linked list
-
 ## Finding the ith item
 
 How would we like `L.find(i)` to find the *i*th piece of data in a list?
