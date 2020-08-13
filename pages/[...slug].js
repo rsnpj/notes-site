@@ -4,7 +4,7 @@ import Sidebar from "../components/new_sidebar";
 import NavBar from "../components/navbar";
 import { getTree } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
-
+import Head from "next/head";
 function Lecture({ tree, postData, params }) {
   const node = useRef();
   const node2 = useRef();
@@ -35,6 +35,14 @@ function Lecture({ tree, postData, params }) {
   };
   return (
     <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+          integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
+          crossorigin="anonymous"
+        />
+      </Head>
       <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
@@ -48,10 +56,12 @@ function Lecture({ tree, postData, params }) {
             </h2>
           </div>
           <hr className="pb-4" />
-          <div
-            className="prose"
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-          />
+          <div class="flex justify-center">
+            <div
+              className="prose container"
+              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+            />
+          </div>
         </MainContent>
       </div>
     </>
