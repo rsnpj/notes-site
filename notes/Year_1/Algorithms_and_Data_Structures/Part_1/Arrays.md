@@ -229,12 +229,12 @@ and e in the condition of the **if** statement
 - First time through the loop, puts the smallest item in the array in
   A\[0\]
 
-- Then puts the second smallest item in the array in A\[1\] etc etc
+- Then puts the second smallest item in the array in `A[1]` etc etc
 
 - This provides a list sorted from smallest to largest
 
 - This is running the sorting algorithm selection sort
 
-- Comparisons (n-1)+(n-2)\...
+- Comparisons $(n-1)+(n-2)...$
 
 - Complexity is approximately $n^2$
