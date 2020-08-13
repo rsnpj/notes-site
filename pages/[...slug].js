@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
 import Sidebar from "../components/new_sidebar";
 import NavBar from "../components/navbar";
-import { getTree } from "../lib/tree";
+import { getTree, getPaths } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 function Lecture({ tree, postData, params }) {
@@ -56,7 +56,7 @@ function Lecture({ tree, postData, params }) {
             </h2>
           </div>
           <hr className="pb-4" />
-          <div class="flex justify-center">
+          <div className="flex justify-center">
             <div
               className="prose container"
               dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
@@ -83,19 +83,9 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths(slug) {
+  const paths = getPaths();
   return {
-    paths: [
-      {
-        params: {
-          slug: [
-            "Year_1",
-            "Algorithms_and_Data_Structures",
-            "Part_1",
-            "Arrays",
-          ],
-        },
-      }, // See the "paths" section below
-    ],
+    paths: paths,
     fallback: false, // See the "fallback" section below
   };
 }

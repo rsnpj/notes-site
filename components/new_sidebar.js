@@ -44,10 +44,14 @@ const Sidebar = React.forwardRef((props, ref) => {
           .children.map(function (elem) {
             if (elem.type !== "directory") {
               return (
-                <li className="hover:bg-gray-200 py-1 pl-2 rounded">
+                <li
+                  key={elem.name.replace(/\.[^/.]+$/, "")}
+                  className="hover:bg-gray-200 py-1 pl-2 rounded"
+                >
                   <Link
-                    href={
-                      "./" +
+                    href="/[...slug]"
+                    as={
+                      "/" +
                       year +
                       "/" +
                       module +
@@ -63,11 +67,14 @@ const Sidebar = React.forwardRef((props, ref) => {
               );
             } else {
               return (
-                <li className="text-xl font-semibold">
+                <li key={elem.name} className="text-xl font-semibold">
                   {elem.name.replace(/_/g, " ")}
                   <ul className="text-base font-normal">
                     {elem.children.map((lecture) => (
-                      <li className="pl-2 py-1 hover:bg-gray-200 rounded">
+                      <li
+                        key={lecture.name}
+                        className="pl-2 py-1 hover:bg-gray-200 rounded"
+                      >
                         <Link
                           href="/[...slug]"
                           as={
