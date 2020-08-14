@@ -36,7 +36,7 @@ function Lecture({ tree, postData, params }) {
   return (
     <>
       <Head>
-        <title>{postData.title} | Sam's Notes</title>
+        <title>Sam's Notes</title>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
@@ -48,21 +48,26 @@ function Lecture({ tree, postData, params }) {
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
         <MainContent toggle={sidebarVisible}>
-          <div className="p-6">
-            <h1 className="text-5xl text-center font-semibold">
-              {postData.title}
-            </h1>
-            <h2 className="text-center text-lg text-gray-700">
-              {params.slug[1].replace(/_/g, " ")}
-            </h2>
-          </div>
-          <hr className="pb-4" />
-          <div className="flex justify-center">
-            <div
-              className="prose container"
-              dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-            />
-          </div>
+          {!postData.isHome && (
+            <>
+              <div className="p-6">
+                <h1 className="text-5xl text-center font-semibold">
+                  {postData.title}
+                </h1>
+                <h2 className="text-center text-lg text-gray-700">
+                  {params.slug[1].replace(/_/g, " ")}
+                </h2>
+              </div>
+              <hr className="pb-4" />
+              <div className="flex justify-center">
+                <div
+                  className="prose container"
+                  dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+                />
+              </div>
+            </>
+          )}
+          {postData.isHome && <h1>Hello</h1>}
         </MainContent>
       </div>
     </>
@@ -72,7 +77,7 @@ function Lecture({ tree, postData, params }) {
 export default Lecture;
 
 export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.slug);
+  const postData = await getPostData(params);
   const tree = getTree();
   return {
     props: {

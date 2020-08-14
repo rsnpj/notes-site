@@ -1,8 +1,8 @@
-import NavBar from "../components/navbar";
-import Sidebar from "../components/new_sidebar";
-import MainContent from "../components/main_content";
+import NavBar from "./components/navbar";
+import Sidebar from "./components/new_sidebar";
+import MainContent from "./components/main_content";
 import { useState, useEffect, useRef } from "react";
-import { getTree } from "../lib/tree";
+import { getTree } from "./lib/tree";
 import Head from "next/head";
 function HomePage({ tree }) {
   const node = useRef();

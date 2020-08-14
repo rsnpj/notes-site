@@ -49,7 +49,7 @@ const Sidebar = React.forwardRef((props, ref) => {
                   className="hover:bg-gray-200 py-1 pl-2 rounded"
                 >
                   <Link
-                    href="/[...slug]"
+                    href="/[[...slug]]"
                     as={
                       "/" +
                       year +
@@ -76,7 +76,7 @@ const Sidebar = React.forwardRef((props, ref) => {
                         className="pl-2 py-1 hover:bg-gray-200 rounded"
                       >
                         <Link
-                          href="/[...slug]"
+                          href="/[[...slug]]"
                           as={
                             "/" +
                             year +
