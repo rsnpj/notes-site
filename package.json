@@ -10,19 +10,20 @@
   "dependencies": {
     "@mdx-js/loader": "^1.6.7",
     "@mdx-js/mdx": "^1.6.6",
+    "@tailwindcss/typography": "^0.2.0",
     "directory-tree": "^2.2.4",
+    "gray-matter": "^4.0.2",
     "next": "^9.5.0",
     "postcss-preset-env": "^6.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-select": "^3.1.0",
-    "remark-emoji": "^2.1.0",
-    "remark-images": "^2.0.0",
-    "tailwindcss": "^1.6.2",
-    "@tailwindcss/typography": "^0.2.0",
     "rehype-katex": "^3.1.0",
     "remark": "^12.0.1",
-    "remark-math": "^2.0.1"
+    "remark-emoji": "^2.1.0",
+    "remark-images": "^2.0.0",
+    "remark-math": "^2.0.1",
+    "tailwindcss": "^1.6.2"
   },
   "resolutions": {
     "webpack": "^5.0.0-beta.22"
