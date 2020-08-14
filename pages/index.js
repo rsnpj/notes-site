@@ -3,7 +3,7 @@ import Sidebar from "../components/new_sidebar";
 import MainContent from "../components/main_content";
 import { useState, useEffect, useRef } from "react";
 import { getTree } from "../lib/tree";
-
+import Head from "next/head";
 function HomePage({ tree }) {
   const node = useRef();
   const node2 = useRef();
@@ -35,6 +35,9 @@ function HomePage({ tree }) {
 
   return (
     <>
+      <Head>
+        <title>Sam's Notes</title>
+      </Head>
       <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
         <Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
