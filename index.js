@@ -1,5 +1,5 @@
 import NavBar from "./components/navbar";
-import Sidebar from "./components/new_sidebar";
+import Sidebar from "./components/sidebar";
 import MainContent from "./components/main_content";
 import { useState, useEffect, useRef } from "react";
 import { getTree } from "./lib/tree";

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
-import Sidebar from "../components/new_sidebar";
+import Sidebar from "../components/sidebar";
 import NavBar from "../components/navbar";
 import { getTree, getPaths } from "../lib/tree";
 import { getPostData } from "../lib/lecture";

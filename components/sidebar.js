@@ -1,52 +1,111 @@
 import Select from "react-select";
-import Link from "next/link";
 import { useState } from "react";
-
-import("../pages/notes/data.json").then((years) =>
-  years["default"].forEach(append_dropdown)
-);
-
-var options = [];
-
-function append_dropdown(item, index) {
-  options.push({ value: item, label: item.replace(/_/g, " ") });
-}
-
-function Sidebar() {
-  const [count, setCount] = useState([""]);
-  const [module, setModule] = useState(false);
+import Link from "next/link";
+const Sidebar = React.forwardRef((props, ref) => {
   const [year, setYear] = useState(false);
-  const [isSubmodules, setIsSubmodules] = useState(false);
-  const [submodulelist, setSubmodules] = useState([""]);
-  const [lectures, setLectures] = useState({});
-
-  function selectModule(element) {
-    setModule(element);
+  const [module, setModule] = useState(false);
+  const toggle = props.toggle ? "" : "hidden sm:block";
+  var options = props.tree.children.map((x) => ({
+    value: x.name,
+    label: x.name.replace(/_/g, " "),
+  }));
+  function handleChange(selected) {
+    setModule(false);
+    setYear(selected.value);
   }
 
   function Module_layer() {
     return (
-      <div className="divide-y divide-gray-400">
-        {count.map((element) => (
-          <div className="py-2 text-center" key={element}>
-            <button onClick={() => selectModule(element)}>
-              {element.replace(/_/g, " ")}
-            </button>
-          </div>
-        ))}
-      </div>
+      <ul className="divide-y divide-gray-400">
+        {year &&
+          props.tree.children
+            .find((x) => x.name === year)
+            .children.map((x) => x.name)
+            .map((element) => (
+              <li key={element} className="p-2 text-center">
+                <button onClick={() => setModule(element)}>
+                  {element.replace(/_/g, " ")}
+                </button>
+              </li>
+            ))}
+      </ul>
     );
   }
 
   function unsetModule() {
     setModule(false);
   }
+  function Submodule_List() {
+    return (
+      <ul className="divide-y-4 divide-transparent pt-4">
+        {props.tree.children
+          .find((x) => x.name === year)
+          .children.find((x) => x.name === module)
+          .children.map(function (elem) {
+            if (elem.type !== "directory") {
+              return (
+                <li
+                  key={elem.name.replace(/\.[^/.]+$/, "")}
+                  className="hover:bg-gray-200 py-1 pl-2 rounded"
+                >
+                  <Link
+                    href="/[[...slug]]"
+                    as={
+                      "/" +
+                      year +
+                      "/" +
+                      module +
+                      "/" +
+                      elem.name.replace(/\.[^/.]+$/, "")
+                    }
+                  >
+                    <a>
+                      {elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
+                    </a>
+                  </Link>
+                </li>
+              );
+            } else {
+              return (
+                <li key={elem.name} className="text-xl font-semibold">
+                  {elem.name.replace(/_/g, " ")}
+                  <ul className="text-base font-normal">
+                    {elem.children.map((lecture) => (
+                      <li
+                        key={lecture.name}
+                        className="pl-2 py-1 hover:bg-gray-200 rounded"
+                      >
+                        <Link
+                          href="/[[...slug]]"
+                          as={
+                            "/" +
+                            year +
+                            "/" +
+                            module +
+                            "/" +
+                            elem.name +
+                            "/" +
+                            lecture.name.replace(/\.[^/.]+$/, "")
+                          }
+                        >
+                          <a>
+                            {lecture.name
+                              .replace(/\.[^/.]+$/, "")
+                              .replace(/_/g, " ")}
+                          </a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              );
+            }
+          })}
+      </ul>
+    );
+  }
 
   function Submodule_layer() {
-    import(
-      "../pages/notes/" + year + "/" + module + "/data.json"
-    ).then((module) => console.log(module.list));
-
     return (
       <>
         <div className="grid grid-cols-8 gap-2">
@@ -66,88 +125,9 @@ function Sidebar() {
           <h1 className="col-span-7 text-2xl">{module.replace(/_/g, " ")}</h1>
         </div>
         <hr className="mt-2 border-2 border-gray-400" />
-        <SubModuleList />
+        <Submodule_List />
       </>
     );
-  }
-
-  function SubModuleList() {
-    import("../pages/notes/" + year + "/" + module + "/data.json").then(
-      (module) => {
-        setIsSubmodules(module.submodules);
-        setSubmodules(module.list);
-        setLectures(module.lectures);
-      }
-    );
-    if (isSubmodules) {
-      console.log(submodulelist);
-      return (
-        <ul>
-          {submodulelist.map((lecture) => (
-            <LectureList lecture={lecture} />
-          ))}
-        </ul>
-      );
-    } else {
-      return (
-        <ul>
-          {submodulelist.map((lecture) => (
-            <li>
-              <Link href={"/notes/" + year + "/" + module + "/" + lecture}>
-                <a>{lecture.replace(/_/g, " ")}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      );
-    }
-  }
-
-  function LectureList(props) {
-    if (typeof lectures !== "undefined") {
-      const output = lectures[props.lecture];
-      console.log("LectureList");
-      console.log(output);
-      return (
-        <>
-          <li className="text-2xl">
-            <Link href={"/notes/" + year + "/" + module + "/" + props.lecture}>
-              <a>{props.lecture.replace(/_/g, " ")}</a>
-            </Link>
-            <ul className="pl-4 text-base">
-              <LectureList2 output={output} submodule={props.lecture} />
-            </ul>
-          </li>
-        </>
-      );
-    } else {
-      return "Blank";
-    }
-  }
-
-  function LectureList2(props) {
-    if (typeof props.output !== "undefined") {
-      return props.output.map((lecture) => (
-        <li>
-          <Link
-            href={
-              "/notes/" +
-              year +
-              "/" +
-              module +
-              "/" +
-              props.submodule +
-              "/" +
-              lecture
-            }
-          >
-            {lecture.replace(/_/g, " ")}
-          </Link>
-        </li>
-      ));
-    } else {
-      return "Blank";
-    }
   }
 
   function Switching() {
@@ -158,27 +138,23 @@ function Sidebar() {
     }
   }
 
-  // This function sets the state to the modules to be listed, it might be nicer to have the state be the year, and the fetching be handled in the component
-  function handleChange(selectedOption) {
-    setYear(selectedOption.value);
-    import(
-      "../pages/notes/" + selectedOption.value + "/data.json"
-    ).then((module) => setCount(module["default"]));
-    unsetModule();
-  }
   return (
-    <div className="absolute w-full h-full max-w-xs p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r sm:relative sm:flex-none">
-      <Select
-        options={options}
-        onChange={handleChange}
-        isClearable={false}
-        isSearchable={false}
-        instanceId={1}
-      />
-      <hr className="mb-4" />
-      <Switching />
+    <div
+      className={`${toggle} absolute sm:relative w-full max-w-xs z-10 main-content`}
+      ref={ref}
+    >
+      <div className="h-full p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r">
+        <Select
+          options={options}
+          onChange={handleChange}
+          isClearable={false}
+          isSearchable={false}
+          instanceId={1}
+        />
+        <hr className="mt-4 mb-4" />
+        <Switching />
+      </div>
     </div>
   );
-}
-
+});
 export default Sidebar;
