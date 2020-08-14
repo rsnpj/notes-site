@@ -88,7 +88,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths(slug) {
+export async function getStaticPaths() {
   const paths = getPaths();
   return {
     paths: paths,
