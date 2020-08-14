@@ -5,7 +5,9 @@ import NavBar from "../components/navbar";
 import { getTree, getPaths } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
 import Head from "next/head";
+import { useRouter } from "next/router";
 function Lecture({ tree, postData, params }) {
+  const router = useRouter();
   const node = useRef();
   const node2 = useRef();
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -24,6 +26,10 @@ function Lecture({ tree, postData, params }) {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
+
+  useEffect(() => {
+    router.events.on("routeChangeComplete", () => setSidebarVisible(false));
+  }, []);
 
   const handleClickOutside = (e) => {
     if (node.current.contains(e.target) || node2.current.contains(e.target)) {
