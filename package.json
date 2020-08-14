@@ -23,7 +23,7 @@
     "react-sidebar": "^3.0.2",
     "remark-emoji": "^2.1.0",
     "remark-images": "^2.0.0",
-    "tailwindcss": "^1.5.1"
+    "tailwindcss": "^1.6.2"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.2.0",
