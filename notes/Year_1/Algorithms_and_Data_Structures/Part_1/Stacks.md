@@ -311,15 +311,15 @@ return temp
     tail at that, and point the new node to the previously added
     node
 
-  # More
+# Binary Representation
 
-  ```
-  input integer k
-  output binary representation of k
-  stack S
-  while k>0
-      S.push (remainder of k/2)
-      k=k/2
-  while S isEmpty=False
-      S.pop()
-  ```
+```
+input integer k
+output binary representation of k
+stack S
+while k>0
+    S.push (remainder of k/2)
+    k=k/2
+while S isEmpty=False
+    S.pop()
+```

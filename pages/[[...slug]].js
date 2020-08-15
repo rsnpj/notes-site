@@ -67,7 +67,7 @@ function Lecture({ tree, postData, params }) {
               <hr className="pb-4" />
               <div className="flex justify-center">
                 <div
-                  className="prose container"
+                  className="prose container pb-6"
                   dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                 />
               </div>
