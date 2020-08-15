@@ -44,26 +44,26 @@ const Sidebar = React.forwardRef((props, ref) => {
           .children.map(function (elem) {
             if (elem.type !== "directory") {
               return (
-                <li
-                  key={elem.name.replace(/\.[^/.]+$/, "")}
-                  className="hover:bg-gray-200 py-1 pl-2 rounded"
+                <Link
+                  href="/[[...slug]]"
+                  as={
+                    "/" +
+                    year +
+                    "/" +
+                    module +
+                    "/" +
+                    elem.name.replace(/\.[^/.]+$/, "")
+                  }
                 >
-                  <Link
-                    href="/[[...slug]]"
-                    as={
-                      "/" +
-                      year +
-                      "/" +
-                      module +
-                      "/" +
-                      elem.name.replace(/\.[^/.]+$/, "")
-                    }
-                  >
-                    <a>
+                  <a>
+                    <li
+                      key={elem.name.replace(/\.[^/.]+$/, "")}
+                      className="hover:bg-gray-200 py-1 pl-2 rounded"
+                    >
                       {elem.name.replace(/\.[^/.]+$/, "").replace(/_/g, " ")}
-                    </a>
-                  </Link>
-                </li>
+                    </li>
+                  </a>
+                </Link>
               );
             } else {
               return (
@@ -71,30 +71,30 @@ const Sidebar = React.forwardRef((props, ref) => {
                   {elem.name.replace(/_/g, " ")}
                   <ul className="text-base font-normal">
                     {elem.children.map((lecture) => (
-                      <li
-                        key={lecture.name}
-                        className="pl-2 py-1 hover:bg-gray-200 rounded"
+                      <Link
+                        href="/[[...slug]]"
+                        as={
+                          "/" +
+                          year +
+                          "/" +
+                          module +
+                          "/" +
+                          elem.name +
+                          "/" +
+                          lecture.name.replace(/\.[^/.]+$/, "")
+                        }
                       >
-                        <Link
-                          href="/[[...slug]]"
-                          as={
-                            "/" +
-                            year +
-                            "/" +
-                            module +
-                            "/" +
-                            elem.name +
-                            "/" +
-                            lecture.name.replace(/\.[^/.]+$/, "")
-                          }
-                        >
-                          <a>
+                        <a>
+                          <li
+                            key={lecture.name}
+                            className="pl-2 py-1 hover:bg-gray-200 rounded"
+                          >
                             {lecture.name
                               .replace(/\.[^/.]+$/, "")
                               .replace(/_/g, " ")}
-                          </a>
-                        </Link>
-                      </li>
+                          </li>
+                        </a>
+                      </Link>
                     ))}
                   </ul>
                 </li>
