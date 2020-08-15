@@ -5,25 +5,24 @@ title: "Stacks and Queues"
 # Syntax Checking
 
 A stack is good for the problem of bracket checking as the bracket
-closed should match with the last opened bracket.
+closed should match with the last opened bracket
 
-```
 input B, a sequence of brackets
+
 output accept or reject
 
+```python
 stack S
 for b in B
-    if b is an open bracket then
+    if b == "(":
         S.push(b)
-    end if
-
-    if b is a close bracket then
-        b'=S.pop()
-        if b != b' don't match then
-            reject
-if S.isEmpty is false then
-    reject
-accept
+    if b == ")"
+        b1=S.pop()
+        if b != b1:
+            return false
+if S.isEmpty == false:
+    return false
+return true
 ```
 
 Requirements
@@ -94,21 +93,14 @@ is the output of each and what are the contents of the stack?_
 ## Methods
 
 ```python
-# How do you find the find the size of the stack
-size
-    return t+1
-```
-
-```{.python mathescape="true" language="Python"}
 # How do you determine if the stack is empty
-isEmpty
-    if t<0
-        return True
-    else
-        return False
+if t<0
+    return True
+else
+    return False
 ```
 
-```{.python mathescape="true" language="Python"}
+```
 # Return the top element of the stack
 top
     if isEmpty then
@@ -117,7 +109,7 @@ top
     return S[i]
 ```
 
-```{.python mathescape="true" language="Python"}
+```
 # Add an element to the stack
 push(e)
     # If size = N then the stack is full
@@ -128,7 +120,7 @@ push(e)
     S[t]=e
 ```
 
-```{mathescape="true"}
+```
 # Remove an element from the stack
 pop()
 if isEmpty then
@@ -246,7 +238,7 @@ _How can we implement a queue using an array Q of size N?_
 
 ### Size
 
-```{mathescape="true"}
+```python
 return (N-f+r) mod N
 # This allows for loop around as when the number gets bigger than N
 # it will return the number into the LHS the array goes
@@ -254,13 +246,13 @@ return (N-f+r) mod N
 
 ### isEmpty
 
-```{mathescape="true"}
+```
 return (f=r)
 ```
 
 ### Front
 
-```{mathescape="true"}
+```
 if isEmpty then
     throw a EmptyQueueException
 end if
@@ -268,7 +260,7 @@ end if
 
 ### enqueue(e)
 
-```{mathescape="true"}
+```
 if size=N-1 then
     throw a FullQueueException
 end if
@@ -281,7 +273,7 @@ even though it is full
 
 ### Dequeue
 
-```{mathescape="true"}
+```
 if isEmpty then
     throw a EmptyQueueException
 end if
@@ -321,7 +313,7 @@ return temp
 
   # More
 
-  ```{mathescape="true"}
+  ```
   input integer k
   output binary representation of k
   stack S

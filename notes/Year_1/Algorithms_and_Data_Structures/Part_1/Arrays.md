@@ -191,7 +191,7 @@ Input: List L, Node N
 
 Output: L with N removed
 
-```{mathescape="true"}
+```
 M=N.prev
 P=N.next
 M.next=P
@@ -203,7 +203,7 @@ L.size=L.size-1
 
 # Question about an array
 
-```{mathescape="true"}
+```
 Input: n numbers in array A[0],. . .,A[n-1]
 Output: ?
     for i=0 to n-2 do

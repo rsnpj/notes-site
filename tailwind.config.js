@@ -5,7 +5,19 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        code: {
+          green: "var(--color-code-green)",
+          yellow: "var(--color-code-yellow)",
+          purple: "var(--color-code-purple)",
+          red: "var(--color-code-red)",
+          blue: "var(--color-code-blue)",
+          white: "var(--color-code-white)",
+        },
+        "green-150": "#e6ffee",
+      },
+    },
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
