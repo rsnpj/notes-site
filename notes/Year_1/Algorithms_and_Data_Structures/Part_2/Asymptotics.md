@@ -491,8 +491,10 @@ $|g(x)|\leqslant C_2\cdot |f(x)|$ whenever $x\geqslant k$
 ## Proving something is $\Theta$
 
 $$
-3x^2+2x+1$$ $$1\leqslant x\leqslant x^2 \ where \ x\geqslant 1
+3x^2+2x+1
+$$ 
 $$
+1\leqslant x\leqslant x^2 \ where \ x\geqslant 1
 $$
 3x^2+2x+1\leqslant 3x^2+2x^2+x^2=6x^2
 $$
