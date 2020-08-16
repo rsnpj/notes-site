@@ -11,6 +11,11 @@
   @apply py-4;
 }
 
+.prose p img {
+  @apply mx-auto;
+  @apply block;
+}
+
 @tailwind utilities;
 @import url("https://rsms.me/inter/inter.css");
 html {
