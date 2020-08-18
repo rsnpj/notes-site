@@ -8,8 +8,10 @@ title: Recap
 
 Let $n\geqslant 0$ be an integer, and let $a_0,a_1,...,a_n$ be real
 numbers, $a_n\neq0$ the function:
-$$f(x)=a_n\cdot x^n+a_{n-1}\cdot x^{n-1}+...+a_1\cdot x+a_0$$ is called
-a **polynomial**
+$$
+f(x)=a_n\cdot x^n+a_{n-1}\cdot x^{n-1}+...+a_1\cdot x+a_0
+$$
+is called a **polynomial**
 
 The numbers $a_0,...,a_n$ are called **coefficients**
 
