@@ -2,9 +2,10 @@
 title: "Arrays"
 ---
 
+
 # Arrays
 
-**Array** - A sequence of elements $a_1, a_2 ... a_n$
+<Definition name="Array">A sequence of elements $a_1, a_2 ... a_n$</Definition>
 
 An array is usually denoted something like:
 
