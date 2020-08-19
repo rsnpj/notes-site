@@ -6,6 +6,7 @@ import { getTree, getPaths } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 function Lecture({ tree, postData, params }) {
   const router = useRouter();
   const node = useRef();
@@ -22,7 +23,7 @@ function Lecture({ tree, postData, params }) {
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
-    return () => { 
+    return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
@@ -41,6 +42,17 @@ function Lecture({ tree, postData, params }) {
     });
   }, []);
 
+  useEffect(() => {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+    });
+  }, []);
+
   const handleClickOutside = (e) => {
     if (node.current.contains(e.target) || node2.current.contains(e.target)) {
       // inside click
@@ -53,30 +65,6 @@ function Lecture({ tree, postData, params }) {
     <>
       <Head>
         <title>Sam's Notes</title>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
-          integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
-          crossOrigin="anonymous"
-        />
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
-          integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
-          crossOrigin="anonymous"
-        ></script>
-        <script
-          defer
-          src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
-          integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
-          crossOrigin="anonymous"
-          onLoad='renderMathInElement(document.body, {delimiters: [
-  {left: "$$", right: "$$", display: true},
-    {left: "$", right: "$", display: false},
-  {left: "\\(", right: "\\)", display: false},
-  {left: "\\[", right: "\\]", display: true}
-]});'
-        ></script>
       </Head>
       <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
