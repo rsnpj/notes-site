@@ -22,21 +22,21 @@ function Lecture({ tree, postData, params }) {
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
-    return () => {
+    return () => { 
       document.removeEventListener("mousedown", handleClickOutside);
     };
   });
 
   useEffect(() => {
-    router.events.on("routeChangeComplete", function(){
-      setSidebarVisible(false)
+    router.events.on("routeChangeComplete", function () {
+      setSidebarVisible(false);
       renderMathInElement(document.body, {
         delimiters: [
           { left: "$$", right: "$$", display: true },
           { left: "$", right: "$", display: false },
           { left: "\\(", right: "\\)", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ]
+          { left: "\\[", right: "\\]", display: true },
+        ],
       });
     });
   }, []);
@@ -59,14 +59,24 @@ function Lecture({ tree, postData, params }) {
           integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X"
           crossOrigin="anonymous"
         />
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossOrigin="anonymous"></script>
-        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossOrigin="anonymous"
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+          integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+          crossOrigin="anonymous"
+        ></script>
+        <script
+          defer
+          src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+          integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa"
+          crossOrigin="anonymous"
           onLoad='renderMathInElement(document.body, {delimiters: [
   {left: "$$", right: "$$", display: true},
     {left: "$", right: "$", display: false},
   {left: "\\(", right: "\\)", display: false},
   {left: "\\[", right: "\\]", display: true}
-]});'></script>
+]});'
+        ></script>
       </Head>
       <NavBar toggleFunction={toggleSidebar} ref={node2} />
       <div className="sm:flex main-content">
@@ -116,6 +126,6 @@ export async function getStaticPaths() {
   const paths = getPaths();
   return {
     paths: paths,
-    fallback: false, // See the "fallback" section below
+    fallback: false,
   };
 }
