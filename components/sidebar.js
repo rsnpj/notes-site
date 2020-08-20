@@ -140,10 +140,10 @@ const Sidebar = React.forwardRef((props, ref) => {
 
   return (
     <div
-      className={`${toggle} absolute sm:relative w-full max-w-xs z-10 main-content`}
+      className={`${toggle} sm:relative w-full max-w-xs z-10 main-content fixed`}
       ref={ref}
     >
-      <div className="h-full p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r">
+      <div className="h-full p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r fixed pt-16 w-64 md:w-1/4 lg:w-1/5">
         <Select
           options={options}
           onChange={handleChange}

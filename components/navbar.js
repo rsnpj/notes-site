@@ -1,7 +1,7 @@
 import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
   return (
-    <nav className="h-12 p-4 bg-white border-b border-gray-200 shadow">
+    <nav className="fixed h-12 p-4 bg-white border-b border-gray-200 shadow w-full z-20">
       <ul className="flex float-left">
         <li className="visible mr-6 sm:hidden" ref={ref}>
           <button onClick={() => props.toggleFunction()}>
