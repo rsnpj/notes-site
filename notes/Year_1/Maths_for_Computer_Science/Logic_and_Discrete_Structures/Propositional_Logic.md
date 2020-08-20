@@ -84,7 +84,7 @@ The truth tables for our logical connectives are as follows:
 In order to build the truth table of a formula we decompose the formula
 into sub formulae e.g.:
 
-| p   | q   | ((p | $\land$ | $\lnot$ | q)  | $\lor$ | p)  | $\land$ | $\lnot$ | (p  | $\lor$ | $\lnot$ | q ) |
+| p   | q   | ((p | $\land$ | $\lnot$ | q)  | $\lor$ | p)  | $\land$ | $\lnot$ | (p  | $\lor$ | $\lnot$ | q)  |
 | --- | --- | --- | ------- | ------- | --- | ------ | --- | ------- | ------- | --- | ------ | ------- | --- |
 | T   | T   | T   | F       | F       | T   | T      | T   | F       | F       | T   | T      | F       | T   |
 | T   | F   | T   | T       | T       | F   | T      | T   | F       | F       | T   | T      | T       | F   |
