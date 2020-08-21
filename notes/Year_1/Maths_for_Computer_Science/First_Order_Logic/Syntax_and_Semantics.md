@@ -55,7 +55,7 @@ $$
 \forall x ( \forall y ( P ( x , y ) \Leftrightarrow \neg Q ( x , y ) ) ) \wedge \exists x ( P ( C , x ) \wedge \neg Q ( x , C ) )
 $$
 
-![image]((/img/Year_1/MCS/First_Order_Logic/Syntax_and_Semantics/tree.png)
+![image](/img/Year_1/MCS/First_Order_Logic/Syntax_and_Semantics/tree.png)
 
 Note that here $p\Leftrightarrow q$ has been replaced with
 $(p\land q)\lor (\lnot p \land \lnot q)$
