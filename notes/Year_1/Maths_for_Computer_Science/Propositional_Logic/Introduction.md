@@ -43,8 +43,8 @@ propositional variables and formulae by the use of logical operators
 ## Construction
 
 The operators $\land, \lor , \Rightarrow$ and $\Leftrightarrow$ take two
-propositional formulae $\varphi$ and $\psi$\
-\
+propositional formulae $\varphi$ and $\psi$
+
 The operator $\lnot$ takes one propositional formula $\varphi$ and
 yields a new one
 
@@ -278,3 +278,221 @@ $$
 $$
 p \land \lnot p \equiv F
 $$
+
+# Distribution laws
+
+Whereas De Morgan's Laws allow us to simplify formulae with respect to
+negations we often have "combinations" of disjunctions and
+conjunctions.
+
+The Distributive Law of Disjunction over Conjunction is:\
+
+$$
+p\lor (q\land r)\equiv (p\lor q)\land (p\lor r)
+$$
+
+And the **Distributive law of conjunction over disjunction is**
+
+$$
+p\land(q\lor r)\equiv (p\land q)\lor (p\land r)
+$$
+
+Just as before there are the **generalised Distributive laws**
+
+$$
+X\land(Y_1\lor Y_2 \lor ... \lor Y_n)\equiv (X\land Y_1)\lor (X\land Y_2)\lor ... \lor (X\land Y_n)
+$$
+
+$$
+X\lor (Y_1\land Y_2 \land ...\land Y_n)\equiv (X\lor Y_1)\land (X\lor Y_2)\land ... \land (X\lor Y_n)
+$$
+
+Of course we can apply these laws to combinations of formulae and to
+sub-formulae not just with propositional variables.
+
+# Functional Completeness
+
+We defined propositional logic using the connectives:
+$\land \lor \lnot \Rightarrow \Leftrightarrow$, but we could have chosen
+other connectives
+
+We say that a set C of logical connectives is **functionally complete**
+if any propositional formula is equivalent to one constructed using only
+the connectives from C. - This is kind of like Turing complete for
+logic
+
+In fact $\land \lor\lnot$ is functionally complete
+
+- Let $\varphi$ be a propositional formula involving the variables
+  $p_1,p_2,...,p_n$
+
+- Build the truth table for $\varphi$ and let f be some truth
+  assignment that evaluates to **true**
+
+- Suppose that in this truth assignment f each $p_i$ has the truth
+  value of $v_i$
+
+- Build a conjunction $\chi_f$ of literals as follows: for each i
+
+  - if $v_i$ is **true** then include the literal $p_i$ in the
+    conjunction $\chi_f$
+
+  - if $v_i$ is **false** then include the literal $\lnot p_i$ in
+    the conjunction $\chi_f$
+
+## Example
+
+![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig1.png)
+
+- $f_1$ can be specified by writing a truth assignment
+  $p\land q\land \lnot r \land s$
+
+- The disjunction can then be written as the lor of all the inputs
+  that make it true, so $\psi={\chi_f}_1\lor...$
+
+- Only in the case of truth assignment $f_1$ will $\chi_1$ be true and
+  etc for the rest of the fs
+
+- So this can be used to show that two truth tables are exactly the
+  same, and so that $\land \lor \lnot$ is **functionally complete**
+
+## More on Functional Completeness
+
+- Now let $\psi$ be the disjunction of all those conjunctions $\chi_f$
+  we have just built. Remember, we only build disjunctions
+  corresponding to the rows of the truth table evaluating to **true**
+
+- We claim that $\varphi$ and $\psi$ are logically equivalent
+
+  - Suppose that f is some truth statement making $\varphi$ true, so
+    we have indeed built the conjunction $\chi_f$
+
+  - Key Point: The only truth assignment making the conjunction
+    $\chi_f$ true is the truth assignment f itself
+
+  - In particular the truth assignment f must make $\chi_f$ true
+
+    - For example with regard to the truth assignment f in the
+      example $\chi_f$ is
+
+      $p_1\land \lnot p_2 \land ... \land \lnot p_n$
+
+      Which is made **true** only by the truth assignment f
+
+  - Hence, f makes $\psi$ true
+
+- Conversely
+
+  - Suppose that g is some truth assignment making $\psi$ true
+
+    - So at least one conjunct $\chi_f$ say, is made **true** by g
+
+  - But the only truth assignment making $\chi_f$ true is f
+
+    - Hence, f=g
+
+  - The reason $\chi_f$ appears as a conjunct is because f makes
+    $\varphi$ true
+
+    - So g=f is a truth assignment making $\varphi$ true
+
+- Consequently, for any truth assignment f
+
+  - f satisfies $\varphi$ if, and only if, f satisfies $\psi$
+
+    - That is, $\varphi\equiv\psi$
+
+- Our proof yields even more
+
+  - Every formula of propositional logic is equivalent to a formula
+    in **disjunctive normal form**
+
+    - A disjunction of conjunctions of literals
+
+  - Also, every truth table is the truth table of some propositional
+    formula
+
+# Conjunctive normal form
+
+- Let $\varphi$ be some formula of propositional logic
+
+- The formula $\lnot \varphi$ is equivalent to one in disjunctive
+  normal form
+
+  - That is, one of the form
+
+    $\chi_1\lor\chi_2\lor ... \lor \chi_m$
+
+    Where each $\chi_i$ is a conjunction of literals
+
+- So, $\varphi$ is equivalent to the formula
+
+  $\lnot(\chi_1\lor\chi_2\lor ... \lor \chi_m)$
+
+  Which in turn, by using generalised De Morgan's Laws, is equivalent
+  to
+
+  $\lnot \chi_1\land \lnot \chi_2\land ... \land \lnot \chi_m$
+
+- Each $\lnot\chi_i$ is equivalent to a disjunction of literals, by
+  again using generalised De Morgan's Laws
+
+- Thus
+
+  - Every formula of propositional logic is logically equivalent to
+    a conjunction of disjunctions of literals, i.e., a conjunction
+    of **clauses**
+
+    - That is, every formula of propositional logic is equivalent
+      to a formula in **conjunctive normal form**
+
+# A spot of practice
+
+![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.png)
+
+# Converting to c.n.f syntactically
+
+- We can often establish normal forms "syntactically"
+
+- Consider the formula
+
+  ![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.png)
+
+- In the "semantic" approach, i.e., using truth tables we are stuck
+  with using exponentially sized truth tables
+
+- However with the "syntactic" approach, i.e., using known
+  equivalences
+
+  - We can often achieve our aims much more quickly, though this
+    often requires cunning
+
+Non-Examinable from here on
+
+# An application: SAT-solving
+
+- The power of propositional logic of quite remarkable as
+  computationally complex problems can be described using logic
+
+- The aim of SAT-solving is
+
+  - To encode a problem X as a propositional formula $\varphi$ so
+    that
+
+    - A solution to X corresponds to $\varphi$ having a satisfying
+      truth assignment
+
+  - To employ algorithms to solve the satisfiability problem (SAT)
+    for $\varphi$ (and so X)
+
+- The SAT problem is to decide if a propositional formula has a
+  satisfying truth assignment. It is extremely hard to solve
+
+  - In fact, it is NP-complete, even if the formula is given in
+    c.n.f, so it takes time exponential in the size of the formula
+    to solve
+
+- However, modern day SAT-solvers can give extremely good results
+
+  - Note that all modern day SAT-solvers need their inputs to be in
+    c.n.f
