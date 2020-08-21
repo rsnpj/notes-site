@@ -4,7 +4,7 @@ import Link from "next/link";
 const Sidebar = React.forwardRef((props, ref) => {
   const [year, setYear] = useState(false);
   const [module, setModule] = useState(false);
-  const toggle = props.toggle ? "" : "hidden sm:block";
+  const toggle = props.toggle ? "" : "hidden md:block";
   var options = props.tree.children.map((x) => ({
     value: x.name,
     label: x.name.replace(/_/g, " "),
