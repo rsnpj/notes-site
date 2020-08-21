@@ -203,25 +203,35 @@ $$
 \operatorname{Animal}(Tuna)
 $$
 
-$$\label{eq:23}\lnot(\operatorname{Kills}(Curiosity, Tuna))$$ Combining
-[\[eq:19\]](#eq:19){reference-type="eqref" reference="eq:19"} and
-[\[eq:22\]](#eq:22){reference-type="eqref" reference="eq:22"}
-$$\label{eq:24}v / Tuna \rightarrow \lnot Kills(u, Tuna)\lor \lnot \operatorname{Loves}(w,u)$$
-Combining [\[eq:21\]](#eq:21){reference-type="eqref" reference="eq:21"}
-and [\[eq:23\]](#eq:23){reference-type="eqref" reference="eq:23"}
-$$\label{eq:25}\rightarrow \operatorname{Kills}(Jack, Tuna)$$ Combining
-[\[eq:24\]](#eq:24){reference-type="eqref" reference="eq:24"} and
-[\[eq:25\]](#eq:25){reference-type="eqref" reference="eq:25"}
-$$\label{eq:26}u/Jack \rightarrow \lnot Loves(w,Jack)$$ Combining
-[\[eq:18\]](#eq:18){reference-type="eqref" reference="eq:18"} and
-[\[eq:20\]](#eq:20){reference-type="eqref" reference="eq:20"}
-$$\label{eq:27}x/Jack, t/F(Jack) \rightarrow \lnot \operatorname{Animal}(F(Jack)) \lor \operatorname{Loves}(G(Jack),Jack)$$
-Combining [\[eq:18\]](#eq:18){reference-type="eqref" reference="eq:18"}
-and [\[eq:27\]](#eq:27){reference-type="eqref" reference="eq:27"}
-$$\label{eq:28}x/Jack\rightarrow \operatorname{Loves}(G(Jack),Jack)$$
-Combining [\[eq:26\]](#eq:26){reference-type="eqref" reference="eq:26"}
-and [\[eq:28\]](#eq:28){reference-type="eqref" reference="eq:28"}
-$$\label{eq:29}w/G(Jack)\Rightarrow \{\}$$ So curiosity Killed the cat
+$$
+\lnot(\operatorname{Kills}(Curiosity, Tuna))
+$$
+
+$$
+v / Tuna \rightarrow \lnot Kills(u, Tuna)\lor \lnot \operatorname{Loves}(w,u)
+$$
+
+$$
+\rightarrow \operatorname{Kills}(Jack, Tuna)
+$$
+
+$$
+u/Jack \rightarrow \lnot Loves(w,Jack)
+$$
+
+$$
+x/Jack, t/F(Jack) \rightarrow \lnot \operatorname{Animal}(F(Jack)) \lor \operatorname{Loves}(G(Jack),Jack)
+$$
+
+$$
+x/Jack\rightarrow \operatorname{Loves}(G(Jack),Jack)
+$$
+
+$$
+w/G(Jack)\Rightarrow \{\}
+$$
+
+So curiosity Killed the cat
 
 # Some comments on resolution
 
@@ -240,7 +250,7 @@ if Resolution answers 'yes' then the first-order formula is valid."_
 
 However, this is not the case; for unlike in propositional logic
 Resolution in first-order logic might not halt when a formula is not
-valid. Resolution is sometimes said to be semi-decidable.\
-\
+valid. Resolution is sometimes said to be semi-decidable.
+
 The Resolution proof system lies at the heart of many modern-day theorem
 provers.
