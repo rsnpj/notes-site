@@ -4,7 +4,7 @@ title: CPU Architecture
 
 # Components of a CPU
 
-![image](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.jpg){width="6cm"}
+![image](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.jpg)
 
 5 major components
 
