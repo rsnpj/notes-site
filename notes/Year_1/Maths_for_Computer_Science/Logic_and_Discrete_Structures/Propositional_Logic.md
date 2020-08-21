@@ -184,12 +184,12 @@ Laws
 
 These formulae are indeed equivalences:
 
-| X   | Y   | $\lnot$ | (X  | $\land$ | Y)  | $\lnot$ | X   | $\lor$ | $\lnot$ | Y     | $\lnot$ | (X  | $\lor$ | Y)  | $\lnot$ | X     | $\land$ | $\lnot$ | y   |
-| --- | --- | ------- | --- | ------- | --- | ------- | --- | ------ | ------- | ----- | ------- | --- | ------ | --- | ------- | ----- | ------- | ------- | --- |
-| T   | T   | **F**   | T   | T       | T   | F       | T   | **F**  | F       | T     | **F**   | T   | T      | T   | F       | T     | **F**   | F       | T   |
-| T   | F   | **T**   | T   | F       | F   | F       | T   | **T**  | T       | F     | **F**   | T   | T      | F   | F       | T     | **F**   | T       | F   |
-| F   | T   | **T**   | F   | F       | T   | T       | F   | **T**  | F T     | **F** | F       | T   | T      | T   | F       | **F** | F       | T       |
-| F   | F   | **T**   | F   | F       | F   | T       | F   | **T**  | T       | F     | **T**   | F   | F      | F   | T       | F     | **T**   | T       | F   |
+| X   | Y   | $\lnot$ | (X  | $\land$ | Y)  | $\lnot$ | X   | $\lor$ | $\lnot$ | Y   | $\lnot$ | (X  | $\lor$ | Y)  | $\lnot$ | X   | $\land$ | $\lnot$ | y   |
+| --- | --- | ------- | --- | ------- | --- | ------- | --- | ------ | ------- | --- | ------- | --- | ------ | --- | ------- | --- | ------- | ------- | --- |
+| T   | T   | **F**   | T   | T       | T   | F       | T   | **F**  | F       | T   | **F**   | T   | T      | T   | F       | T   | **F**   | F       | T   |
+| T   | F   | **T**   | T   | F       | F   | F       | T   | **T**  | T       | F   | **F**   | T   | T      | F   | F       | T   | **F**   | T       | F   |
+| F   | T   | **T**   | F   | F       | T   | T       | F   | **T**  | F       | T   | **F**   | F   | T      | T   | T       | F   | **F**   | F       | T   |
+| F   | F   | **T**   | F   | F       | F   | T       | F   | **T**  | T       | F   | **T**   | F   | F      | F   | T       | F   | **T**   | T       | F   |
 
 - De Morgan's Laws can be applied not just to variables, but to
   formulae $\varphi$ and $\psi$
