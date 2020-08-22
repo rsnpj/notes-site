@@ -67,7 +67,7 @@ RCS was designed to be compact, git is designed to be fast
 
 ## Key commands in git
 
-```sh
+```
 git init
 git add
 git status
