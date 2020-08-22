@@ -73,7 +73,7 @@ function Lecture({ tree, postData, params }) {
           {!postData.isHome && (
             <>
               <div className="p-6 pt-24 pb-12">
-                <h1 className="text-4xl text-center font-semibold">
+                <h1 className="text-4xl sm:text-6xl text-center font-semibold">
                   {postData.title}
                 </h1>
                 <h2 className="text-center text-lg text-gray-700">
@@ -83,7 +83,7 @@ function Lecture({ tree, postData, params }) {
               <hr className="pb-4" />
               <div className="flex justify-center">
                 <div
-                  className="prose container pb-6"
+                  className="prose prose-sm sm:prose container pb-6"
                   dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                 />
               </div>
