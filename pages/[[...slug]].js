@@ -7,6 +7,7 @@ import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+import HomePage from "../components/homepage";
 function Lecture({ tree, postData, params }) {
   const router = useRouter();
   const node = useRef();
@@ -89,7 +90,11 @@ function Lecture({ tree, postData, params }) {
               </div>
             </>
           )}
-          {postData.isHome && <h1>Hello</h1>}
+          {postData.isHome && (
+            <div className="p-6 pt-24 pb-12 flex justify-center">
+              <HomePage />
+            </div>
+          )}
         </MainContent>
       </div>
     </>
