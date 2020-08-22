@@ -1,10 +1,26 @@
+import remark from "remark";
+import html from "remark-html";
+import { useState, useEffect } from "react";
+
 export default function definition(props) {
+  const [defin, setDefin] = useState("Definition");
+  if (defin === "Definition") {
+    try {
+      remark()
+        .use(html)
+        .process(props.children, function (err, file) {
+          setDefin(file);
+        });
+    } catch (err) {
+      console.log(err);
+    }
+  }
   return (
     <div className="border border-gray-400 rounded p-4 m-2">
       <span className="block text-2xl font-semibold text-black">
         {props.name}
       </span>
-      <span>{props.children}</span>
+      <div dangerouslySetInnerHTML={{ __html: defin }} />
     </div>
   );
 }
