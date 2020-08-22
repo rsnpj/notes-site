@@ -1,5 +1,5 @@
 ---
-title: Circuitds
+title: Circuits
 ---
 
 # Key Circuits
