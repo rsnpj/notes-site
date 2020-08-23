@@ -1,5 +1,5 @@
 ---
-title: The Art of Cyber Security: The Threat Landscape and
+title: The Art of Cyber Security - The Threat Landscape and
 Tactics
 ---
 
