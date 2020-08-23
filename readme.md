@@ -22,3 +22,6 @@ In the React components, newline characters need to be inserted manually until I
 - The order of operations in the interleaving is consistent with the program order in which each individual process executed them`}
 </Definition>
 ```
+## Conversion
+
+When converting from LaTeX notes, the best tool to use is pandoc, passing the `latex+raw_tex` flag under `-f` will leave in anything that can't be converted, which is useful for custom environments. Passing the `markdown-smart` flag under `-t` will stop quotes being escaped etc, reducing the work to tidy things.
