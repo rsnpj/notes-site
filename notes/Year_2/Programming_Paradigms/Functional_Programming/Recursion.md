@@ -1,7 +1,7 @@
 ---
 title: Recursion and higher order functions
----
 
+---
 # Advice when writing recursive functions
 
 1.  Define the type
@@ -197,7 +197,7 @@ Loosely, the last thing a tail recursive function does is call itself with new a
 
 Loops are convenient:
 
-```{.python}
+```python
 def factorial (n):
     res = 1
     for i in range(n,1,-1)
