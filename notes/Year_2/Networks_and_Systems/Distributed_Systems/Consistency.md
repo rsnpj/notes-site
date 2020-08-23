@@ -5,7 +5,7 @@ title: Concurrent events and consistency control
 # Concurrency
 
 <Definition name="Shared Object">
-  **May be simultaneously accessed by multiple events (requests into the system)**
+  May be simultaneously accessed by multiple events (requests into the system)
 </Definition>
 
 - A server which manages shared objects is responsible for ensuring
@@ -183,12 +183,12 @@ Modelling of Consistency Control:
   An read on a data item X returned a value corresponding to the result of the most recent write on X
 </Definition>
 
-\begin{definition}[Sequential Consistency] If for any transaction there is some interleaving of the series of operations issued by all the clients that satisfies the following two criteria
-\begin{itemize}
-\item The interleaved sequence of operations meets the specification of a (single) correct copy of the contents
-\item The order of operations in the interleaving is consistent with the program order in which each individual process executed them
-\end{itemize}
-\end{definition}
+<Definition name="Sequential Consistency">
+{`- The interleaved sequence of operations meets the specification of a (single) correct copy of the contents \n
+  
+- The order of operations in the interleaving is consistent with the program order in which each individual process executed them`}
+  </Definition>
 
-\begin{definition}[Casual Consistency]If event B is caused or influenced by an earlier event A, everyone first see A and then B
-\end{definition}
+<Definition name="Casual Consistency">
+  If event B is caused or influenced by an earlier event A, everyone first see A and then B
+</Definition>
