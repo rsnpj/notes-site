@@ -1,6 +1,5 @@
 ---
-title: The Art of Cyber Security - The Threat Landscape and
-Tactics
+title: The Art of Cyber Security - The Threat Landscape and Tactics
 ---
 
 # Who really are the adversaries?
