@@ -17,7 +17,7 @@ In the React components, newline characters need to be inserted manually until I
 
 ```js
 <Definition name="Sequential Consistency">
-{`- The interleaved sequence of operations meets the specification of a (single) correct copy of the contents \n
+{`- The interleaved sequence of operations meets the specification of a (single) correct copy of the contents 
   
 - The order of operations in the interleaving is consistent with the program order in which each individual process executed them`}
 </Definition>
