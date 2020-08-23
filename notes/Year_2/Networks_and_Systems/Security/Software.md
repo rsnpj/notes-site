@@ -23,7 +23,7 @@ title: Software Security
 
 # Computer Architecture
 
-![image](/img/Year_2/Networks_and_Systems/Software/Computer_Architecture.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/Computer_Architecture.png)
 
 # GPU
 
@@ -31,7 +31,7 @@ title: Software Security
 
 # The Stack
 
-![image](/img/Year_2/Networks_and_Systems/Software/stack.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/stack.png)
 
 - When a program thread starts, the operating system reserves some
   amount of space for the stack - stack memory does not grow during
@@ -45,7 +45,7 @@ The stack being full is cased by
 
 # The Heap
 
-![image](/img/Year_2/Networks_and_Systems/Software/heap.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/heap.png)
 
 - Memory is not guaranteed to be initialised to zero
 
