@@ -4,8 +4,12 @@ title: Contracts
 
 # What is a contract
 
-- An _agreement_ between two or more _parties_ (legal / natural
+<Definition name="Contract">
+{`
+ An _agreement_ between two or more _parties_ (legal / natural
   persons) that can be enforced in a court of law
+`}
+</Definition>
 
 - All the parties must intend to make the contract - can’t fool people
   into signing
