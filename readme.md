@@ -11,6 +11,8 @@ There are some issues which as far as I can tell are pretty much out of my contr
 
 * Wide tables cause extra width on Chrome. This is a strange bug that doesn't appear on Firefox. Despite having overflow auto on the tables, there is whitespace where the table would otherwise be. 
 
+* On Firefox mobile, when scrolling up, there is a tiny gap between the top of the navbar and the top of the viewport you can see the text scrolling through
+
 ## Workarounds
 
 In the React components, newline characters need to be inserted manually until I work out how to fix this, so follow the example below
