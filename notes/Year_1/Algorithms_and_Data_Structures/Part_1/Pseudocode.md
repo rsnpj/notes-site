@@ -4,7 +4,7 @@ title: "Introduction and Pseudocode"
 
 # Algorithms
 
-**Algorithm** - A method or a process followed to solve a problem
+Algorithm - A method or a process followed to solve a problem
 
 Properties an algorithm must have
 
