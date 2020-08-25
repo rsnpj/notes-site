@@ -2,7 +2,9 @@
 title: State Spaces
 ---
 
-State space - a set of states
+<Definition name="State space"> 
+A set of spaces
+</Definition>
 
 Two types of search problems
 
