@@ -30,6 +30,6 @@
     "tailwindcss": "^1.7.3"
   },
   "resolutions": {
-    "webpack": "^5.0.0-beta.22"
+    "webpack": "^5.0.0-beta.28"
   }
 }
