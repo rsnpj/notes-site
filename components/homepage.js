@@ -2,8 +2,8 @@ export default function HomePage() {
   return (
     <>
       <div className="grid">
-        <div class="text-center text-6xl font-extrabold leading-none tracking-tight">
-          <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
+        <div className="text-center text-6xl font-extrabold leading-none tracking-tight">
+          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
             Sam's Notes
           </h1>
         </div>
