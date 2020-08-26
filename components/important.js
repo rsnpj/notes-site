@@ -4,11 +4,12 @@ import { useState } from "react";
 
 export default function important(props) {
   const [Important, setImportant] = useState("Important");
+  const newchild = props.children.replace(/\\n/g, "\n");
   if (Important === "Important") {
     try {
       remark()
         .use(html)
-        .process(props.children, function (err, file) {
+        .process(newchild, function (err, file) {
           setImportant(file);
         });
     } catch (err) {

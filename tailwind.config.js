@@ -23,4 +23,7 @@ module.exports = {
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
 };

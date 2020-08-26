@@ -1,14 +1,17 @@
 import remark from "remark";
 import html from "remark-html";
 import { useState } from "react";
+import math from "../lib/remark-math";
 
 export default function definition(props) {
   const [defin, setDefin] = useState("Definition");
+  const newchild = props.children.replace(/\\n/g, "\n");
   if (defin === "Definition") {
     try {
       remark()
+        .use(math)
         .use(html)
-        .process(props.children, function (err, file) {
+        .process(newchild, function (err, file) {
           setDefin(file);
         });
     } catch (err) {
