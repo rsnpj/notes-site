@@ -226,7 +226,7 @@ Extreme scenario
 * Any choice of value for X will, in general, rule out certain values for other unassigned variables (from their set of legitimate values)
 * The total number of all such ruled-out values over all unassigned variables is maintained (in reality we just need to worry about those with unassigned variable sharing a constraint with X)
 * Values for X are ordered in decreasing numbers of ruled-out values - "illegal" values are not considered and ties are broken arbitrarily
-}`
+`}
 </Definition>
 
 Intuition - Try to leave the maximum flexibility for subsequent variable
