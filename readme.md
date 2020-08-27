@@ -19,8 +19,7 @@ In the React components, newline characters need to be inserted manually until I
 
 ```js
 <Definition name="Sequential Consistency">
-{`- The interleaved sequence of operations meets the specification of a (single) correct copy of the contents 
-  
+{`- The interleaved sequence of operations meets the specification of a (single) correct copy of the contents  \n  
 - The order of operations in the interleaving is consistent with the program order in which each individual process executed them`}
 </Definition>
 ```
@@ -37,7 +36,7 @@ In which case we call $H_{w,b}$ a separating hyperplane.
 </Definition>
 ```
 
-Don't worry about `\n`, that gets fixed inside the component
+ `\n`, gets fixed inside the component, but requires a space after the `\n` so that it doesn't also match things like `\not`. Not the most elegant solution I admit, I'll probably come up with a better way in the future.
 
 ## Conversion
 
