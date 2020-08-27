@@ -38,8 +38,10 @@ Maximum revenue if we cut two rods of length 2, and we have $r_4=10$
 
 ## A note on integer partitions
 
-<Definition name="">
+<Definition name="Integer Partitions">
+{String.raw`
 An integer partition of a positive integer n is a list of positive integers $\langle a_1,...,a_k \rangle$ such that $a_1\leqslant a_2\leqslant ... \leqslant a_k$ and $\sum*{i=1}^{k} a*{i}=n$
+`}
 </Definition>
 
 Let $p(n)$ denote the number of integer partitions of n, then
