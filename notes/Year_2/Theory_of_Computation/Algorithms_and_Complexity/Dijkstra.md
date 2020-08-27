@@ -75,7 +75,9 @@ The process of relaxing an edge (u,v):
   repeatedly relaxes the appropriate edges (according to the weight
   function w)
 
-```{caption="Relax({u,v,w})"}
+`Relax(u,v,w)`
+
+```
 if d(v)$>$d(u)+w(u,v) then
     d(v)=d(u)+w(u,v)
     $\pi$(v)=u
@@ -97,7 +99,9 @@ if d(v)$>$d(u)+w(u,v) then
 
   - Relax all edges leaving u
 
-```{caption="Dijkstra({G,w,s})"}
+`Dijkstra({G,w,s})`
+
+```
 Initialise-Single-Source(G,s)
 S=$\varnothing$
 Q=V(G)
