@@ -6,20 +6,12 @@ export default function important(props) {
       <span className="text-xl text-teal-800 font-semibold uppercase">
         Problem {props.name ? "- " + props.name : ""}:
       </span>
-      <div className="flex items-center pl-4">
-        <span className="text-lg font-semibold text-teal-800 ">Instance -</span>
-        <span className="text-lg align-middle inline-block pl-1 text-black">
-          {props.instance}
-        </span>
-      </div>
-      <div className="flex items-center pl-4">
-        <span className="block text-lg font-semibold text-teal-800 ">
-          Question -
-        </span>
-        <span className=" text-lg align-middle inline-block pl-1 text-black">
-          {props.question}
-        </span>
-      </div>
+      <span className="block text-lg text-teal-800 pl-4">
+        <span className="font-semibold">Instance -</span> {props.instance}
+      </span>
+      <span className="block text-lg text-teal-800 pl-4">
+        <span className="font-semibold">Question -</span> {props.question}
+      </span>
     </div>
   );
 }
