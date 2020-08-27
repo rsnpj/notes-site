@@ -54,7 +54,7 @@ not contain negative cycles.
 `Initialise-Single-Source(G,s)`
 
 ```python
-for each vertex v in V(g) do
+for each vertex v in V(g):
     d(v)=infinity
     pi(v)=NULL
 d(s)=0
@@ -77,10 +77,10 @@ The process of relaxing an edge (u,v):
 
 `Relax(u,v,w)`
 
-```
-if d(v)$>$d(u)+w(u,v) then
+```python
+if d(v)>d(u)+w(u,v):
     d(v)=d(u)+w(u,v)
-    $\pi$(v)=u
+    pi(v)=u
 ```
 
 # Dijkstra’s Algorithm
@@ -101,22 +101,22 @@ if d(v)$>$d(u)+w(u,v) then
 
 `Dijkstra({G,w,s})`
 
-```
+```python
 Initialise-Single-Source(G,s)
-S=$\varnothing$
+S=[]
 Q=V(G)
-while Q$\neq \varnothing$ do
+while Q!=[] do
     u=Extract-Min(Q)
-    S=S$\cup${u}
-    for each vertex v $\in$ Adj(u) do
+    S=S+{u}
+    for each vertex v in Adj(u) do
         Relax(u,v,w)
 ```
 
 ## Runtime
 
 Initialisation is done in $\mathcal{O}(V)$ time - two operations per
-vertex\
-\
+vertex
+
 Finding the vertex v in Q with minimum d(v) takes $\mathcal{O}(V)$ time
 and this is done v times
 
@@ -125,31 +125,47 @@ and this is done v times
 - To compute the new vertex in S, find the new minimum of Q
 
 Relaxation takes in total $\mathcal{O}(E)$ time as every edge is relaxed
-once\
-\
-The total running time is $\mathcal{O}(V+V^2+E)=\mathcal{O}(V^2)$\
-\
+once
+
+The total running time is $\mathcal{O}(V+V^2+E)=\mathcal{O}(V^2)$
+
 However using a more sophisticated implementation for extracting the
 minimum for Q it can run in $\mathcal{O}(V\log V+E)$ time
 
 # Properties of shortest paths and relaxation
 
-\begin{definition}[Triangle inequality]For all edges (u,v) we have $\delta(s,v)\leqslant \delta(s,u)+w(u,v)$
-\end{definition}
-\newpage
-\begin{definition}[Optimal Substructure]Any subpath of a shortest path is also a shortest path
-\end{definition}
-\begin{definition}[Upper bound property]For every vertex v, we have $d(v)\geqslant \delta(s,v)$
-\end{definition}
-\begin{definition}[No-path property]If $\delta(s,v)=\infty$ then we have $d(v)=\infty$ at every iteration
-\end{definition}
-\begin{definition}[Convergence property]If there is a shortest path from s to v including the edge (u,v) and if $d(u)=\delta(s,u)$, then we obtain $d(v)=\delta(s,v)$ when $(u,v)$ is relaxed
-\end{definition}
+<Definition name="Triangle Inequality">
+{String.raw`
+For all edges (u,v) we have $\delta(s,v)\leqslant \delta(s,u)+w(u,v)$
+`}
+</Definition>
+
+<Definition name="Optimal substructure">
+Any subpath of a shortest path is also a shortest path
+</Definition>
+
+<Definition name="Upper bound property">
+{String.raw`
+For every vertex v, we have $d(v)\geqslant \delta(s,v)$
+`}
+</Definition>
+
+<Definition name="No-path property">
+{String.raw`
+If $\delta(s,v)=\infty$ then we have $d(v)=\infty$ at every iteration
+`}
+</Definition>
+
+<Definition name="Convergence property">
+{String.raw`
+If there is a shortest path from s to v including the edge (u,v) and if $d(u)=\delta(s,u)$, then we obtain $d(v)=\delta(s,v)$ when $(u,v)$ is relaxed
+`}
+</Definition>
 
 # Correctness of Dijkstra’s algorithm
 
-We need to prove the loop invariant always remains true.\
-\
+We need to prove the loop invariant always remains true.
+
 At the start of each iteration of the while loop, $d(v)=\delta(s,v)$ for
 every $v\in S$
 

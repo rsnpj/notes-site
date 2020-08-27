@@ -1,20 +1,9 @@
-import remark from "remark";
-import html from "remark-html";
 import { useState } from "react";
 
 export default function important(props) {
   const [Important, setImportant] = useState("Important");
-  const newchild = props.children.replace(/\\n/g, "\n");
   if (Important === "Important") {
-    try {
-      remark()
-        .use(html)
-        .process(newchild, function (err, file) {
-          setImportant(file);
-        });
-    } catch (err) {
-      console.log(err);
-    }
+    mdconvert(setImportant, props.children);
   }
   return (
     <div className="border border-red-700 rounded p-4 mx-2 my-6 bg-red-300">
