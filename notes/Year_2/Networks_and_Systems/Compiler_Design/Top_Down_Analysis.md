@@ -299,12 +299,12 @@ S, then \$ is in FOLLOW(A) (where \$ is the end of file symbol)
 # LL(1) Grammars
 
 <Definition name="LL(1) Grammar">
-    A Grammar G is an LL(1) grammar iff for every two productions $A\rightarrow \alpha | \beta$:
-    <ul>
-        <li> There is no terminal a such that both $\alpha$ and $\beta$ derive a string starting with a</li>
-        <li> At most one of $\alpha$ and $\beta$ can derive the empty string $\epsilon$</li>
-        <li> If $\beta \Rightarrow \epsilon$ then $\alpha$ does not derive any string beginning with a terminal in FOLLOW(A) and vice versa</li>
-    </ul>
+{String.raw`
+A Grammar G is an LL(1) grammar iff for every two productions $A\rightarrow \alpha | \beta$:
+  * There is no terminal a such that both $\alpha$ and $\beta$ derive a string starting with a
+  * At most one of $\alpha$ and $\beta$ can derive the empty string $\epsilon$
+  * If $\beta \Rightarrow \epsilon$ then $\alpha$ does not derive any string beginning with a terminal in FOLLOW(A) and vice versa
+`}
 </Definition>
 
 Therefore an efficient algorithm to determine whether a grammar G is
