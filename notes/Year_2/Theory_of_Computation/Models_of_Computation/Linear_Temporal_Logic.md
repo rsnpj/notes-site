@@ -221,7 +221,7 @@ A transition from $s_1$ into $s_2$ labelled by $a\in 2^{AP}$ is added if
 The expansion
 $\varphi_{1} \cup \varphi_{2} \rightarrow \varphi_{2} \vee\left(\varphi_{1} \wedge \bigcirc\left(\varphi_{1} \cup \varphi_{2}\right)\right)$
 doesn’t guarantee that $\varphi_2$ eventually happens. Thus, any
-infinite run that always has $\varphi_{1}\cup\varphi_{2}$ but never
+infinite run that always has $\varphi_{1}\cup\varphi_{2}$ but ever
 $\varphi_{2}$ is inconsistent. We can prevent it, though, by insisting
 that every run has states that have $\varphi_{2}$ or haven’t
 $\varphi_{1}\cup \varphi_{2}$ infinitely often.

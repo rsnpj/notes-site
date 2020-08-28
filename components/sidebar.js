@@ -1,6 +1,7 @@
 import Select from "react-select";
 import { useState } from "react";
-import Link from "next/link";
+// import Link from "next/link";
+import ActiveLink from "../components/ActiveLink";
 const Sidebar = React.forwardRef((props, ref) => {
 	const [year, setYear] = useState(false);
 	const [module, setModule] = useState(false);
@@ -53,7 +54,8 @@ const Sidebar = React.forwardRef((props, ref) => {
 					.map(function (elem) {
 						if (elem.type !== "directory") {
 							return (
-								<Link
+								<ActiveLink
+									activeClassName="font-semibold"
 									href="/[[...slug]]"
 									as={
 										"/" +
@@ -77,7 +79,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 												.replace(/_/g, " ")}
 										</li>
 									</a>
-								</Link>
+								</ActiveLink>
 							);
 						} else {
 							return (
@@ -88,7 +90,8 @@ const Sidebar = React.forwardRef((props, ref) => {
 									{elem.name.replace(/_/g, " ")}
 									<ul className="text-base font-normal">
 										{elem.children.map((lecture) => (
-											<Link
+											<ActiveLink
+												activeClassName="font-semibold"
 												key={lecture.name}
 												href="/[[...slug]]"
 												as={
@@ -118,7 +121,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 															.replace(/_/g, " ")}
 													</li>
 												</a>
-											</Link>
+											</ActiveLink>
 										))}
 									</ul>
 								</li>
