@@ -55,7 +55,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 						if (elem.type !== "directory") {
 							return (
 								<ActiveLink
-									activeClassName="font-semibold"
+									activeClassName="font-semibold bg-gray-200 py-1 rounded"
 									href="/[[...slug]]"
 									as={
 										"/" +
@@ -66,13 +66,16 @@ const Sidebar = React.forwardRef((props, ref) => {
 										elem.name.replace(/\.[^/.]+$/, "")
 									}
 								>
-									<a>
+									<a className="hover:bg-gray-200">
 										<li
 											key={elem.name.replace(
 												/\.[^/.]+$/,
 												""
 											)}
-											className="hover:bg-gray-200 py-1 rounded"
+											className="py-1 rounded"
+											style={{
+												backgroundColor: "inherit",
+											}}
 										>
 											{elem.name
 												.replace(/\.[^/.]+$/, "")
@@ -91,7 +94,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 									<ul className="text-base font-normal">
 										{elem.children.map((lecture) => (
 											<ActiveLink
-												activeClassName="font-semibold"
+												activeClassName="font-semibold bg-gray-200 py-1 rounded"
 												key={lecture.name}
 												href="/[[...slug]]"
 												as={
@@ -108,10 +111,14 @@ const Sidebar = React.forwardRef((props, ref) => {
 													)
 												}
 											>
-												<a>
+												<a className="hover:bg-gray-200">
 													<li
 														key={lecture.name}
-														className="pl-2 py-1 hover:bg-gray-200 rounded"
+														className="pl-2 py-1 rounded"
+														style={{
+															backgroundColor:
+																"inherit",
+														}}
 													>
 														{lecture.name
 															.replace(
