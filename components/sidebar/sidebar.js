@@ -1,8 +1,9 @@
 import { useState } from "react";
 import LinkList from "./LinkList";
+
 const Sidebar = React.forwardRef((props, ref) => {
-	const [year, setYear] = useState(props.slug[0]);
-	const [module, setModule] = useState(props.slug[1]);
+	const [year, setYear] = useState(props.slug ? props.slug[0] : "Base");
+	const [module, setModule] = useState(props.slug ? props.slug[1] : false);
 	const toggle = props.toggle ? "" : "hidden md:block";
 	function handleChange(event) {
 		setModule(false);
@@ -126,6 +127,10 @@ const Sidebar = React.forwardRef((props, ref) => {
 					value={year}
 					onChange={handleChange}
 				>
+					<option key="Base" value="Base" disabled selected hidden>
+						Select a Year
+					</option>
+
 					{props.tree.children.map((x) => (
 						<option key={x.name} value={x.name}>
 							{x.name.replace(/_/g, " ")}
@@ -134,12 +139,12 @@ const Sidebar = React.forwardRef((props, ref) => {
 				</select>
 
 				<hr className="mt-4 mb-4" />
-				<Switching />
+				{year !== "Base" && <Switching />}
 			</div>
 		</div>
 	);
 });
 
-Sidebar.displayName = "SideBar";
+Sidebar.displayName = "Sidebar";
 
 export default Sidebar;

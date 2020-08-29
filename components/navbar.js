@@ -1,4 +1,3 @@
-import Link from "next/link";
 const NavBar = React.forwardRef((props, ref) => {
 	return (
 		<nav className="fixed h-12 p-4 bg-white border-b border-gray-200 shadow w-full z-20">
@@ -19,9 +18,7 @@ const NavBar = React.forwardRef((props, ref) => {
 					</button>
 				</li>
 				<li className="mr-6">
-					<Link href="/">
-						<a>{"Sam's Notes"}</a>
-					</Link>
+					<a href="/">{"Sam's Notes"}</a>
 				</li>
 			</ul>
 			<ul className="flex float-right">
