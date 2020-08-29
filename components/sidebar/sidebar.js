@@ -1,6 +1,6 @@
 import Select from "react-select";
 import { useState } from "react";
-import ActiveLink from "./ActiveLink";
+import LinkList from "./LinkList";
 const Sidebar = React.forwardRef((props, ref) => {
 	const [year, setYear] = useState(false);
 	const [module, setModule] = useState(false);
@@ -32,9 +32,6 @@ const Sidebar = React.forwardRef((props, ref) => {
 		);
 	}
 
-	function unsetModule() {
-		setModule(false);
-	}
 	function Submodule_List() {
 		return (
 			<ul className="divide-y-4 divide-transparent pt-4">
@@ -53,35 +50,11 @@ const Sidebar = React.forwardRef((props, ref) => {
 					.map(function (elem) {
 						if (elem.type !== "directory") {
 							return (
-								<ActiveLink
-									activeClassName="bg-blue-100 text-blue-800 py-1 rounded hover:text-blue-800"
-									href="/[[...slug]]"
-									as={
-										"/" +
-										year +
-										"/" +
-										module +
-										"/" +
-										elem.name.replace(/\.[^/.]+$/, "")
-									}
-								>
-									<a className="hover:text-gray-900 text-gray-600 font-medium">
-										<li
-											key={elem.name.replace(
-												/\.[^/.]+$/,
-												""
-											)}
-											className="pl-2 py-1 rounded"
-											style={{
-												backgroundColor: "inherit",
-											}}
-										>
-											{elem.name
-												.replace(/\.[^/.]+$/, "")
-												.replace(/_/g, " ")}
-										</li>
-									</a>
-								</ActiveLink>
+								<LinkList
+									year={year}
+									module={module}
+									lecture={elem.name}
+								/>
 							);
 						} else {
 							return (
@@ -92,42 +65,13 @@ const Sidebar = React.forwardRef((props, ref) => {
 									{elem.name.replace(/_/g, " ")}
 									<ul className="text-base font-normal">
 										{elem.children.map((lecture) => (
-											<ActiveLink
-												activeClassName="bg-blue-100 text-blue-800 py-1 rounded hover:text-blue-800"
+											<LinkList
 												key={lecture.name}
-												href="/[[...slug]]"
-												as={
-													"/" +
-													year +
-													"/" +
-													module +
-													"/" +
-													elem.name +
-													"/" +
-													lecture.name.replace(
-														/\.[^/.]+$/,
-														""
-													)
-												}
-											>
-												<a className="hover:text-gray-900 text-gray-600 font-medium">
-													<li
-														key={lecture.name}
-														className="pl-2 py-1 rounded"
-														style={{
-															backgroundColor:
-																"inherit",
-														}}
-													>
-														{lecture.name
-															.replace(
-																/\.[^/.]+$/,
-																""
-															)
-															.replace(/_/g, " ")}
-													</li>
-												</a>
-											</ActiveLink>
+												year={year}
+												module={module}
+												submodule={elem.name}
+												lecture={lecture.name}
+											/>
 										))}
 									</ul>
 								</li>
@@ -142,7 +86,10 @@ const Sidebar = React.forwardRef((props, ref) => {
 		return (
 			<>
 				<div className="grid grid-cols-8 gap-2">
-					<button className="col-span-1" onClick={unsetModule}>
+					<button
+						className="col-span-1"
+						onClick={() => setModule(false)}
+					>
 						<svg
 							fill="none"
 							strokeLinecap="round"
