@@ -1,7 +1,19 @@
 import "../styles/index.css";
 import "../styles/prism-atom-dark.css";
 import "katex/dist/katex.min.css";
+import { useEffect } from "react";
+import Router from "next/router";
+import * as gtag from "../lib/gtag";
 function MyApp({ Component, pageProps }) {
+	useEffect(() => {
+		const handleRouteChange = (url) => {
+			gtag.pageview(url);
+		};
+		Router.events.on("routeChangeComplete", handleRouteChange);
+		return () => {
+			Router.events.off("routeChangeComplete", handleRouteChange);
+		};
+	}, []);
 	return <Component {...pageProps} />;
 }
 
