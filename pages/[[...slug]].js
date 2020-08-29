@@ -108,7 +108,7 @@ function Lecture({ tree, postData, params }) {
 										__html: postData.contentHtml,
 									}}
 								/>
-								<div className="flex flex-row-reverse">
+								<div className="flex justify-center">
 									<a
 										className="flex content-center hover:underline text-blue-700"
 										href={
