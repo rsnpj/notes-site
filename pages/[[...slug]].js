@@ -72,7 +72,12 @@ function Lecture({ tree, postData, params }) {
 			</Head>
 			<NavBar toggleFunction={toggleSidebar} ref={node2} />
 			<div className="sm:flex main-content">
-				<Sidebar toggle={sidebarVisible} ref={node} tree={tree} />
+				<Sidebar
+					toggle={sidebarVisible}
+					ref={node}
+					tree={tree}
+					slug={params.slug}
+				/>
 				<MainContent toggle={sidebarVisible}>
 					{!postData.isHome && (
 						<>

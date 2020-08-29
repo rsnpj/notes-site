@@ -1,17 +1,12 @@
-import Select from "react-select";
 import { useState } from "react";
 import LinkList from "./LinkList";
 const Sidebar = React.forwardRef((props, ref) => {
-	const [year, setYear] = useState(false);
-	const [module, setModule] = useState(false);
+	const [year, setYear] = useState(props.slug[0]);
+	const [module, setModule] = useState(props.slug[1]);
 	const toggle = props.toggle ? "" : "hidden md:block";
-	var options = props.tree.children.map((x) => ({
-		value: x.name,
-		label: x.name.replace(/_/g, " "),
-	}));
-	function handleChange(selected) {
+	function handleChange(event) {
 		setModule(false);
-		setYear(selected.value);
+		setYear(event.target.value);
 	}
 
 	function Module_layer() {
@@ -126,13 +121,18 @@ const Sidebar = React.forwardRef((props, ref) => {
 			ref={ref}
 		>
 			<div className="h-full p-4 overflow-x-hidden overflow-y-auto text-black bg-white border-r fixed pt-16 w-64 md:w-1/4 lg:w-1/5 max-w-xs">
-				<Select
-					options={options}
+				<select
+					className="form-select mt-1 block w-full"
+					value={year}
 					onChange={handleChange}
-					isClearable={false}
-					isSearchable={false}
-					instanceId={1}
-				/>
+				>
+					{props.tree.children.map((x) => (
+						<option key={x.name} value={x.name}>
+							{x.name.replace(/_/g, " ")}
+						</option>
+					))}
+				</select>
+
 				<hr className="mt-4 mb-4" />
 				<Switching />
 			</div>
