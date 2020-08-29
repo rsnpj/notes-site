@@ -68,7 +68,18 @@ function Lecture({ tree, postData, params }) {
 	return (
 		<>
 			<Head>
-				<title>{"Sam's Notes"}</title>
+				<title>
+					{(params.slug !== undefined
+						? params.slug[params.slug.length - 1].replace(
+								/_/g,
+								" "
+						  ) + " | "
+						: "") + "Sam's Notes"}
+				</title>
+				<meta
+					name="description"
+					content="Notes from my course at Durham University"
+				/>
 			</Head>
 			<NavBar toggleFunction={toggleSidebar} ref={node2} />
 			<div className="sm:flex main-content">
