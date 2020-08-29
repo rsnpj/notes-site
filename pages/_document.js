@@ -11,6 +11,16 @@ class MyDocument extends Document {
 						href="/favicon.ico"
 						type="image/x-icon"
 					/>
+					<script
+						async
+						src="https://www.googletagmanager.com/gtag/js?id=UA-156072112-2"
+					></script>
+					<script>
+						window.dataLayer = window.dataLayer || []; function
+						gtag(){dataLayer.push(arguments)}
+						gtag({"js"}, new Date()); gtag({"config"},
+						{"UA-156072112-2"});
+					</script>
 				</Head>
 				<body>
 					<Main />
