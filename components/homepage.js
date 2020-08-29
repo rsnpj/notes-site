@@ -1,6 +1,10 @@
 export default function HomePage() {
 	return (
 		<>
+			<link
+				href="https://fonts.googleapis.com/css?family=Cookie"
+				rel="stylesheet"
+			></link>
 			<div className="grid">
 				<div className="text-center text-6xl font-extrabold leading-none tracking-tight">
 					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
@@ -15,12 +19,22 @@ export default function HomePage() {
 				</h2>
 				<div className="flex justify-center">
 					<div className="grid sm:grid-cols-2 gap-4">
-						<a href="https://www.buymeacoffee.com/samrobbins">
+						<a
+							className="bmc-button"
+							href="https://www.buymeacoffee.com/samrobbins"
+						>
 							<img
-								src="https://cdn.buymeacoffee.com/buttons/default-orange.png"
-								alt="Buy Me A Coffee"
-								style={{ height: "51px", width: "217px" }}
+								src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
+								alt="Buy me a coffee"
 							/>
+							<span
+								style={{
+									marginLeft: "5px",
+									fontSize: "24px !important;",
+								}}
+							>
+								Buy me a coffee
+							</span>
 						</a>
 						<div className="flex items-center justify-center">
 							<div className="px-4 py-2 border border-gray-400 rounded ">

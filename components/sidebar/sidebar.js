@@ -127,7 +127,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 					value={year}
 					onChange={handleChange}
 				>
-					<option key="Base" value="Base" disabled selected hidden>
+					<option key="Base" value="Base" disabled hidden>
 						Select a Year
 					</option>
 
