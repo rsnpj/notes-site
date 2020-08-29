@@ -1,7 +1,6 @@
 import Select from "react-select";
 import { useState } from "react";
-// import Link from "next/link";
-import ActiveLink from "../components/ActiveLink";
+import ActiveLink from "./ActiveLink";
 const Sidebar = React.forwardRef((props, ref) => {
 	const [year, setYear] = useState(false);
 	const [module, setModule] = useState(false);
@@ -55,7 +54,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 						if (elem.type !== "directory") {
 							return (
 								<ActiveLink
-									activeClassName="font-semibold bg-gray-200 py-1 rounded"
+									activeClassName="bg-blue-100 text-blue-800 py-1 rounded hover:text-blue-800"
 									href="/[[...slug]]"
 									as={
 										"/" +
@@ -66,13 +65,13 @@ const Sidebar = React.forwardRef((props, ref) => {
 										elem.name.replace(/\.[^/.]+$/, "")
 									}
 								>
-									<a className="hover:bg-gray-200">
+									<a className="hover:text-gray-900 text-gray-600 font-medium">
 										<li
 											key={elem.name.replace(
 												/\.[^/.]+$/,
 												""
 											)}
-											className="py-1 rounded"
+											className="pl-2 py-1 rounded"
 											style={{
 												backgroundColor: "inherit",
 											}}
@@ -94,7 +93,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 									<ul className="text-base font-normal">
 										{elem.children.map((lecture) => (
 											<ActiveLink
-												activeClassName="font-semibold bg-gray-200 py-1 rounded"
+												activeClassName="bg-blue-100 text-blue-800 py-1 rounded hover:text-blue-800"
 												key={lecture.name}
 												href="/[[...slug]]"
 												as={
@@ -111,7 +110,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 													)
 												}
 											>
-												<a className="hover:bg-gray-200">
+												<a className="hover:text-gray-900 text-gray-600 font-medium">
 													<li
 														key={lecture.name}
 														className="pl-2 py-1 rounded"
@@ -194,6 +193,6 @@ const Sidebar = React.forwardRef((props, ref) => {
 	);
 });
 
-Sidebar.displayName = "Sidebar";
+Sidebar.displayName = "SideBar";
 
 export default Sidebar;
