@@ -32,6 +32,14 @@ class MyDocument extends Document {
 						async
 						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 					></script>
+					<link
+						rel="stylesheet"
+						href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"
+					/>
+					<script
+						type="text/javascript"
+						src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"
+					></script>
 				</Head>
 				<body>
 					<Main />
