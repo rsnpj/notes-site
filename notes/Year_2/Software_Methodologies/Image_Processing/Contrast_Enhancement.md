@@ -14,7 +14,7 @@ $$
 as a point transform operator transforms the image
 from one state to another
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/functional.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/functional.webp)
 
 Also known as intensity transform functions
 
@@ -25,13 +25,13 @@ information with greater clarity
 
 Image enhancement is subjective. It depends on
 
-- The information required by the visual task
+-   The information required by the visual task
 
-- The physical characteristics of the image
+-   The physical characteristics of the image
 
-- The user’s prior knowledge/experience
+-   The user’s prior knowledge/experience
 
-- The user’s intuition and judgement
+-   The user’s intuition and judgement
 
 Evaluation methodology: perceived quality of results
 
@@ -55,9 +55,9 @@ Increasing the dynamic range improves contrast
 
 Pixels can either be represented as:
 
-- Floats from 0 to 1
+-   Floats from 0 to 1
 
-- Integers from 0 to 255
+-   Integers from 0 to 255
 
 # Logarithmic transform
 
@@ -88,7 +88,7 @@ $$
 \log \left[1+\left(e^{\sigma}-1\right) I_{\text {input}}(i, j)\right]
 $$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log.webp)
 
 The dynamic range of this scene exceeded that of the sensor/camera (dark
 foreground - bright background)
@@ -96,14 +96,14 @@ foreground - bright background)
 As a result of a (usually automatic) decision on the camera exposure,
 the dynamic range of the dark parts was compressed
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log1.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log1.webp)
 
 The logarithmic transform in this example:
 
-- brightens the foreground (which consists of dark pixels) spreading
-  low pixel values over a wider range
+-   brightens the foreground (which consists of dark pixels) spreading
+    low pixel values over a wider range
 
-- compresses the background pixel range (the bright high values)
+-   compresses the background pixel range (the bright high values)
 
 Applying the logarithmic transform yields poor results: information loss
 and worse visualisation
@@ -159,7 +159,7 @@ Basis $>1$ is required for functions suitable for out purpose (decrease
 the dynamic range of dark regions - increase the dynamic range of bight
 regions)
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/exp.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/exp.webp)
 
 The exponential transform decreases the dynamic range of dark regions
 whilst increasing the dynamic range in light regions\
@@ -193,13 +193,13 @@ correction
 The transform $f(x)=x^\gamma$ with $\gamma<1$ weights the intensities
 towards higher (brighter) values
 
-- an underexposed photo can be corrected using gamma correction with
-  $\gamma<1$
+-   an underexposed photo can be corrected using gamma correction with
+    $\gamma<1$
 
 The transform $f(x)=x^y$ with $\gamma>1$ weights the intensities toward
 lower(darker) values
 
-- An overexposed photo can be corrected using gamma correction with
-  $\gamma>1$
+-   An overexposed photo can be corrected using gamma correction with
+    $\gamma>1$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/gamma.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/gamma.webp)

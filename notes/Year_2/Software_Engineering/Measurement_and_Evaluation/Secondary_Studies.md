@@ -15,11 +15,11 @@ studies, reinforcing finding that are common, and reducing the effect of
 variability in individual studies. In particular, the process of
 identifying well-founded evidence by using a secondary study requires
 
-- Comprehensive and exhaustive searches to find all potentially
-  relevant primary studies
+-   Comprehensive and exhaustive searches to find all potentially
+    relevant primary studies
 
-- Carefully defined procedures for deciding whether to include or
-  exclude each study that is found
+-   Carefully defined procedures for deciding whether to include or
+    exclude each study that is found
 
 Aim is to minimise bias and to emphasis the objectivity of the
 procedures employed
@@ -28,15 +28,15 @@ procedures employed
 
 For a systematic review, the research protocol will need to:
 
-- Specify a well focused researched question
+-   Specify a well focused researched question
 
-- Use the RQ to identify a set of keywords for searching
+-   Use the RQ to identify a set of keywords for searching
 
-- Specify how and where to search for source material and the period
-  to search
+-   Specify how and where to search for source material and the period
+    to search
 
-- Provide clear inclusion/exclusion rules for selecting primary
-  studies
+-   Provide clear inclusion/exclusion rules for selecting primary
+    studies
 
 A broader form of systematic review, termed a mapping study can be used
 to identify where primary studies on a topic are clustered and where
@@ -46,16 +46,16 @@ there are gaps in the empirical coverage
 
 Secondary studies:
 
-- Influence the reporting standards for primary studies since for
-  effective aggregation they need to be able to extract data using
-  some common bias
+-   Influence the reporting standards for primary studies since for
+    effective aggregation they need to be able to extract data using
+    some common bias
 
-- Help identify where primary studies are needed, since they may "map
-  the terrain" for particular topics
+-   Help identify where primary studies are needed, since they may "map
+    the terrain" for particular topics
 
 # The SR Context
 
-![image](/img/Year_2/Software_Engineering/Measurement/Secondary_Studies/srcontext.png)
+![image](/img/Year_2/Software_Engineering/Measurement/Secondary_Studies/srcontext.webp)
 
 # Procedures for a SR
 

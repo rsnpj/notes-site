@@ -4,13 +4,13 @@ title: The basics of Graph Theory
 
 # What is a Graph?
 
-- A mathematical model
+-   A mathematical model
 
-- A representation of objects and relations between them
+-   A representation of objects and relations between them
 
-- The objects can be 'anything'
+-   The objects can be 'anything'
 
-- The relations between pairs of anything
+-   The relations between pairs of anything
 
 # Formal Definitions
 
@@ -21,52 +21,52 @@ set of **verticies**(or nodes) and $E(G)$ is a set of **unordered
 pairs** {u,v} with $u,v\in V(G)$ and $u\neq v$ called the **edges** of
 G.
 
-- V(G) can be infinite, but all our graphs will be finite
+-   V(G) can be infinite, but all our graphs will be finite
 
-- If no confustion can arise we write $uv$ instead of $\{u,v\}$
+-   If no confustion can arise we write $uv$ instead of $\{u,v\}$
 
-- If the graph G is clear from the context, we write V and E instead
-  of V(G) and E(G)
+-   If the graph G is clear from the context, we write V and E instead
+    of V(G) and E(G)
 
-- It often helps to draw graphs
+-   It often helps to draw graphs
 
-  - represent each vertex by a point
+    -   represent each vertex by a point
 
-  - each edge by a line or curve connecting the corresponding points
+    -   each edge by a line or curve connecting the corresponding points
 
-  - only endpoints of lines/curves matter, not the exact shape
+    -   only endpoints of lines/curves matter, not the exact shape
 
 # A drawing of a graph
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/drawing.png)
+![image](/img/Year_1/MCS/DMLA/Graph_Theory/drawing.webp)
 
 # Types of graphs
 
-- **directed** graphs or **digraphs** - edges can have directions
+-   **directed** graphs or **digraphs** - edges can have directions
 
-  - The web graph: vertices are webpages and edges are hyperlinks
+    -   The web graph: vertices are webpages and edges are hyperlinks
 
-  - the precedence graph: vertices are program statements, edges
-    reflect execution order
+    -   the precedence graph: vertices are program statements, edges
+        reflect execution order
 
-  - the influence graph: vertices are people in the group, edges
-    mean "influences"
+    -   the influence graph: vertices are people in the group, edges
+        mean "influences"
 
-- multigraphs - multiple edges are allowed between two vertices
+-   multigraphs - multiple edges are allowed between two vertices
 
-  - the air link graph - several different airlines can fly between
-    two towns
+    -   the air link graph - several different airlines can fly between
+        two towns
 
-- pseudographs - edges of the form $uu$, called loops are allowed
+-   pseudographs - edges of the form $uu$, called loops are allowed
 
-  - region pseudograph in computer graphics: Vertices are connected
-    regions edges mean "can get from one to the other by crossing a
-    fence"
+    -   region pseudograph in computer graphics: Vertices are connected
+        regions edges mean "can get from one to the other by crossing a
+        fence"
 
-- vertex or edge weighted graphs - vertices and/or edges can have
-  weights
+-   vertex or edge weighted graphs - vertices and/or edges can have
+    weights
 
-  - the road map graph: weights on edges
+    -   the road map graph: weights on edges
 
 By default, all our graphs are **simple undirected** graphs, that is,
 the above things are not allowed
@@ -76,16 +76,16 @@ the above things are not allowed
 Graphs can be useful to express **conflicting** situations between
 objects
 
-- vertices - base stations for mobile phones, Edges: overlapping
-  service areas
+-   vertices - base stations for mobile phones, Edges: overlapping
+    service areas
 
-- vertices - traffic flows at a junctions, Edges: conflicting flows
+-   vertices - traffic flows at a junctions, Edges: conflicting flows
 
 Graphs can be useful for **analysing strategies** and **solutions**
 
-- vertices: states in a game, edges: transitions between states
+-   vertices: states in a game, edges: transitions between states
 
-- vertices: steps in a solution, Edges: transitions between steps
+-   vertices: steps in a solution, Edges: transitions between steps
 
 # Terminology
 
@@ -93,14 +93,14 @@ Graphs can be useful for **analysing strategies** and **solutions**
 
 Let G be a graph and $uv$ cn edge in it. Then
 
-- u and v care called endpoints of the edge $uv$
+-   u and v care called endpoints of the edge $uv$
 
-- u and v are called neighbours or adjacent vertices
+-   u and v are called neighbours or adjacent vertices
 
-- $uv$ is said to be incident to u (and to v)
+-   $uv$ is said to be incident to u (and to v)
 
-- if $vw$ is also an edge and $w\neq u$ then $uv$ and $vw$ are called
-  adjacent
+-   if $vw$ is also an edge and $w\neq u$ then $uv$ and $vw$ are called
+    adjacent
 
 ## Definitions
 
@@ -149,7 +149,7 @@ Some graphs appear so often they have special names
 
 ## $P_3$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/p3.png)
+![image](/img/Year_1/MCS/DMLA/Graph_Theory/p3.webp)
 
 This is denotes an $P_3$ and in general we define $P_n$ as a path on n
 vertices i.e. a graph with vertex set $\{v_1,v_2,...,v\}$ and edge set
@@ -162,7 +162,7 @@ $k\geqslant 1$. This notion is called a **simple path**
 
 ## $C_4$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/c4.png)
+![image](/img/Year_1/MCS/DMLA/Graph_Theory/c4.webp)
 
 In general a cycle $C_n$ on n verticies is defined similarly as a $P_n$,
 but with an additional edge between $v_n$ and $v_n$. So $C_n$ has n
@@ -175,7 +175,7 @@ integer $k\geqslant 3$. This notion is called a **simple circuit**
 
 ## $K_{p,q}$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/kpq.png)
+![image](/img/Year_1/MCS/DMLA/Graph_Theory/kpq.webp)
 
 All four of these graphs can be described as $K_{p,q}$: a graph
 consisting of two disjoint vertex sets on p and q vertices and all the
@@ -208,7 +208,7 @@ one entry
 
 ### Example
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/n_dimension.png)
+![image](/img/Year_1/MCS/DMLA/Graph_Theory/n_dimension.webp)
 
 # More on n cubes
 
@@ -218,26 +218,26 @@ All n cubes are bipartite
 
 ## Proof
 
-- We give a bipartition of the vertex set of the n cube
+-   We give a bipartition of the vertex set of the n cube
 
-- Let $V_1$ contain all the vertices with an odd number of 1s
+-   Let $V_1$ contain all the vertices with an odd number of 1s
 
-- Let $V_2$ contain all vertices with an even number of 1s
+-   Let $V_2$ contain all vertices with an even number of 1s
 
-- This is clearly a partition of V into two disjoint sets
+-   This is clearly a partition of V into two disjoint sets
 
-- It is easy to see that each edge has one endpoint in each of the
-  sets
+-   It is easy to see that each edge has one endpoint in each of the
+    sets
 
-- So it proves that all n-cubes are bipartite
+-   So it proves that all n-cubes are bipartite
 
 # Types of graphs
 
-- $p_n$ is only k regular for $p_2$
-- $c_n$ is k regular
-- $K_{p,q}$ is only k regylar for p=q
-- $Q_n$ is k regular
-- $p_n$ is bipartite
-- $C_n$ is bipartite only for even n
-- In $Q^n$ the number of verticies is $2^n$ and each has $n$ connections.
-  The number of edges is $n\times 2^{n-1}$
+-   $p_n$ is only k regular for $p_2$
+-   $c_n$ is k regular
+-   $K_{p,q}$ is only k regylar for p=q
+-   $Q_n$ is k regular
+-   $p_n$ is bipartite
+-   $C_n$ is bipartite only for even n
+-   In $Q^n$ the number of verticies is $2^n$ and each has $n$ connections.
+    The number of edges is $n\times 2^{n-1}$

@@ -40,12 +40,12 @@ image. Quantisation must avoid aliasing
 
 As resolution is limited, there is aliasing effects.
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing.webp)
 
 An analogue signal will always suffer some form of aliasing in the
 digitisation process - at some level
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing1.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing1.webp)
 
 Aliasing effects both the connectivity and topological measurement image
 features - noise is introduced. Image processing algorithms must be able
@@ -90,32 +90,32 @@ row (r) = y co-ordinate
 
 **Infra-red**: Infra-red electromagnetic intensity
 
-- Near and far infra-red are different wavelengths
+-   Near and far infra-red are different wavelengths
 
-- Visualisation may require colour mapping
+-   Visualisation may require colour mapping
 
 **Medical CT/ MRI** - Pixel values are proportional to the absorption
 characteristics of tissue in relation to a signal sent through the body
 
-- Segmentation
+-   Segmentation
 
-- Visualisation of volumetric data
+-   Visualisation of volumetric data
 
 **Radar** - Pixel values are proportional to target distance from the
 sensor and reflectivity
 
-- Calibrating values correspond to distance
+-   Calibrating values correspond to distance
 
-- Noise
+-   Noise
 
 **Depth/distance** - Pixel values encode distance of object/surface from
 sensor
 
-- Explicit 3D information rather than just a 2D projection, but
-  partial only view of the captured 3D object
+-   Explicit 3D information rather than just a 2D projection, but
+    partial only view of the captured 3D object
 
 **Scientific** - Pixel values encode measurements from a given sensor
 
-- Representation: positive and negative floating point image values
+-   Representation: positive and negative floating point image values
 
-- Visualisation: colour mapping/negative value scaling
+-   Visualisation: colour mapping/negative value scaling

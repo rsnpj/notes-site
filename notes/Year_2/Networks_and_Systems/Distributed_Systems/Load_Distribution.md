@@ -26,11 +26,11 @@ title: Load Distribution
 
 Load information collection:
 
-- **Central coordinator**: collects server load information centrally
-  and globally
+-   **Central coordinator**: collects server load information centrally
+    and globally
 
-- **Local approach**: a server locally collects load information of
-  neighbouring servers
+-   **Local approach**: a server locally collects load information of
+    neighbouring servers
 
 # Simple task transfer
 
@@ -46,25 +46,25 @@ Load information collection:
   collection and transmission of task states
 </Definition>
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Load_Distribution/preemptive/png)
+![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Load_Distribution/preemptive.webp)
 
 # Routing mechanisms based on network network packet content
 
 Layer-4 routing
 
-- Determines the target server without referring the message/request
-  content
+-   Determines the target server without referring the message/request
+    content
 
-- **Content-blind routing**: server selection is purely based on
-  information from the IP header
+-   **Content-blind routing**: server selection is purely based on
+    information from the IP header
 
 Layer 7 Routing:
 
-- Examine a request at the application level and select a server
-  accordingly
+-   Examine a request at the application level and select a server
+    accordingly
 
-- Can support sophisticated dispatching policies, but may induce
-  significant latency (also called content aware routing)
+-   Can support sophisticated dispatching policies, but may induce
+    significant latency (also called content aware routing)
 
 ## Implementations
 
@@ -80,12 +80,12 @@ Two way is less scalable because of the overhead in the front end
 
 Layer 4 vs Layer 7 routing:
 
-- Layer 4 routing is efficient and requires only simple FE servers
+-   Layer 4 routing is efficient and requires only simple FE servers
 
-- Layer 7 routing is less scalable
+-   Layer 7 routing is less scalable
 
-- Layer 7 routing benefits from server specialisation and content
-  partition
+-   Layer 7 routing benefits from server specialisation and content
+    partition
 
 | Layer   | Approach | Routing       | Data Flow         | Pros                                                                         | Cons                                               |
 | ------- | -------- | ------------- | ----------------- | ---------------------------------------------------------------------------- | -------------------------------------------------- |
@@ -98,36 +98,36 @@ Layer 4 vs Layer 7 routing:
 
 Static:
 
-- Decisions are hard-coded into an algorithm
+-   Decisions are hard-coded into an algorithm
 
-- Simple in implementation
+-   Simple in implementation
 
-- A prior knowledge of system is required
+-   A prior knowledge of system is required
 
 Dynamic:
 
-- Make decision during runtime based on system states
+-   Make decision during runtime based on system states
 
-- Correctness of load distribution depends on the timeliness of
-  parameters collected
+-   Correctness of load distribution depends on the timeliness of
+    parameters collected
 
 Adaptive:
 
-- Enhance the dynamic approach by allowing making choices of decision
-  algorithms and the frequency of collecting load information based on
-  system states
+-   Enhance the dynamic approach by allowing making choices of decision
+    algorithms and the frequency of collecting load information based on
+    system states
 
 # Constructing a load distribution algorithm
 
 Four main components:
 
-- Transfer
+-   Transfer
 
-- Selection
+-   Selection
 
-- Location
+-   Location
 
-- Information policies
+-   Information policies
 
 These define what information is required to collect and maintain
 supporting decision making, and what procedures are required to follow
@@ -137,44 +137,44 @@ for distributing workload
 
 Decide whether a server needs to transfer tasks
 
-- Thresholds: number of tasks, processor utilisation
+-   Thresholds: number of tasks, processor utilisation
 
-- Role: a server becomes sender/receiver when its load over/under a
-  threshold
+-   Role: a server becomes sender/receiver when its load over/under a
+    threshold
 
-- Issue: sensitive to time duration of a task transfer
+-   Issue: sensitive to time duration of a task transfer
 
 ## Selection policy
 
 Determines which task(s) to transfer
 
-- Tasks cause a server overload
+-   Tasks cause a server overload
 
-- Estimated task execution time
+-   Estimated task execution time
 
-- Or serve response time improvement
+-   Or serve response time improvement
 
-- Minimise location-dependent system calls made by the selected task
+-   Minimise location-dependent system calls made by the selected task
 
 ## Location policy
 
 Decide the receiving server for a task
 
-- Polling is generally used
+-   Polling is generally used
 
-- Can be done serially or in parallel(using multicast)
+-   Can be done serially or in parallel(using multicast)
 
 ## Information policy
 
 Decide when, where and what information to collect
 
-- Demand-driven: a server collects the state of other servers only
-  when it becomes either a sender or receiver
+-   Demand-driven: a server collects the state of other servers only
+    when it becomes either a sender or receiver
 
-- Periodic: servers exchange load information periodically
+-   Periodic: servers exchange load information periodically
 
-- State-change-driven: servers disseminate state information whenever
-  their state changes by a certain degree
+-   State-change-driven: servers disseminate state information whenever
+    their state changes by a certain degree
 
 # Load distributing algorithms
 
@@ -206,69 +206,69 @@ Decide when, where and what information to collect
 
 ## Symmetric
 
-- Senders search for receivers and vice-versa
+-   Senders search for receivers and vice-versa
 
-- Low loads: senders can find receivers easily
+-   Low loads: senders can find receivers easily
 
-  High loads: receivers can find senders easily
+    High loads: receivers can find senders easily
 
-- May have the disadvantages of both
+-   May have the disadvantages of both
 
-  - Polling at high loads can make the system unstable
+    -   Polling at high loads can make the system unstable
 
-  - Receiver-initiated task transfers can be preemptive and so
-    expensive
+    -   Receiver-initiated task transfers can be preemptive and so
+        expensive
 
 ## Adaptive algorithm
 
 **Main idea**
 
-- Aim: Limit sender’s polling actions at high load to avoid
-  instability
+-   Aim: Limit sender’s polling actions at high load to avoid
+    instability
 
-- Classify servers based on the collected state information and poll
-  adaptively
+-   Classify servers based on the collected state information and poll
+    adaptively
 
 **The process**
 
-- Each server maintains three lists. All servers are assumed to be
-  receivers initially
+-   Each server maintains three lists. All servers are assumed to be
+    receivers initially
 
-- Location policy at sender:
+-   Location policy at sender:
 
-  - Sender polls the head of the receiver list
+    -   Sender polls the head of the receiver list
 
-  - Polled server puts the sender at the head of its sender list,
-    and informs the sender whether it is a receiver, a sender, or an
-    OK server
+    -   Polled server puts the sender at the head of its sender list,
+        and informs the sender whether it is a receiver, a sender, or an
+        OK server
 
-  - If the polled server is still a receiver, the new task is
-    transferred
+    -   If the polled server is still a receiver, the new task is
+        transferred
 
-  - Else sender updates lists and polls the next potential receiver
+    -   Else sender updates lists and polls the next potential receiver
 
-  - If this polling process fails to identify a receiver, the task
-    can still be transferred during a receiver-initiated dialogue
+    -   If this polling process fails to identify a receiver, the task
+        can still be transferred during a receiver-initiated dialogue
 
-- Location policy at receiver:
+-   Location policy at receiver:
 
-  - Receivers obtain tasks from potential senders. Lists are scanned
-    in the following order
+    -   Receivers obtain tasks from potential senders. Lists are scanned
+        in the following order
 
-    - Head to tail in senders list (most up to date info used),
-      tail to head in OK list (lead up to date used), tail to head
-      in receiver list
+        -   Head to tail in senders list (most up to date info used),
+            tail to head in OK list (lead up to date used), tail to head
+            in receiver list
 
-    - Least up to date used in the hope that status might have
-      changed
+        -   Least up to date used in the hope that status might have
+            changed
 
-  - Transfer a task if a sender is found
+    -   Transfer a task if a sender is found
 
-  - If the server is not a sender, both the polled server and
-    receiver update each other’s status
+    -   If the server is not a sender, both the polled server and
+        receiver update each other’s status
 
-  - Polling process stops if a sender is found or a static PollLimit
-    is reached
+    -   Polling process stops if a sender is found or a static PollLimit
+        is reached
 
 At high loads, sender initiated polling gradually reduces as servers get
 removed from receiver list(and become senders) whereas at low loads,
@@ -286,14 +286,14 @@ loads (sender initiated)
 
 # Selecting an algorithm
 
-- If a system never gets highly loaded, sender initiated algorithms
-  work better
+-   If a system never gets highly loaded, sender initiated algorithms
+    work better
 
-- Receiver-initiated algorithms are better for high loads
+-   Receiver-initiated algorithms are better for high loads
 
-- Widely fluctuating loads: symmetric algorithms
+-   Widely fluctuating loads: symmetric algorithms
 
-- Widely fluctuating loads and high migration cost for preemptive
-  transfers: sender-initiated algorithms
+-   Widely fluctuating loads and high migration cost for preemptive
+    transfers: sender-initiated algorithms
 
-- Heterogeneous work arrival: adaptive algorithms
+-   Heterogeneous work arrival: adaptive algorithms

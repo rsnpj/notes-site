@@ -12,10 +12,10 @@ experience, and make the appropriate adjustments
 
 When to use
 
-- SCRUM is best suited in the base where a cross functional team is
-  working in a product development setting where there is a non
-  trivial amount of work that lends itself to being split into more
-  than one 1-4 week iteration
+-   SCRUM is best suited in the base where a cross functional team is
+    working in a product development setting where there is a non
+    trivial amount of work that lends itself to being split into more
+    than one 1-4 week iteration
 
 # Roles
 
@@ -33,15 +33,15 @@ Has NO managerial authority over the team; facilitates team needs without author
 
 # Sprint
 
-![image](/img/Year_2/Software_Engineering/Methodologies/SCRUM/sprint.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/SCRUM/sprint.webp)
 
-- The starting point for planning is the product backlog (user
-  stories), which is the list of work to be done on the project
+-   The starting point for planning is the product backlog (user
+    stories), which is the list of work to be done on the project
 
-- Once these are agreed, the team organise themselves to develop the
-  software - the team creates a spring backlog (their to-do list for
-  the sprint). At the end of the sprint, the work done is reviewed and
-  presented to stakeholder. The next sprint cycle then begins
+-   Once these are agreed, the team organise themselves to develop the
+    software - the team creates a spring backlog (their to-do list for
+    the sprint). At the end of the sprint, the work done is reviewed and
+    presented to stakeholder. The next sprint cycle then begins
 
 # Artifacts
 
@@ -49,109 +49,109 @@ Has NO managerial authority over the team; facilitates team needs without author
 A list of all things that need to be done within the project. It replaces the traditional requirements specification artifacts. These items can have a technical nature or can be user-centric e.g. in the form of user stories
 </Definition>
 
-- Each scrum product backlog has certain properties that differentiate
-  it from a simple to-do list:
+-   Each scrum product backlog has certain properties that differentiate
+    it from a simple to-do list:
 
-  - An entry in the SPB always add value for the customer
+    -   An entry in the SPB always add value for the customer
 
-  - The entries in the SPB are prioritized and ordered accordingly
+    -   The entries in the SPB are prioritized and ordered accordingly
 
-  - All entries are estimated
+    -   All entries are estimated
 
-  - The SPB is a living document (priorities shift)
+    -   The SPB is a living document (priorities shift)
 
-  - There are no action-items or low-level tasks in the SPB
+    -   There are no action-items or low-level tasks in the SPB
 
-  - SPB entries can be scenarios or use cases
+    -   SPB entries can be scenarios or use cases
 
 # SPB items (SPBI)
 
-- What you have agreed to do (SPBI) in the current sprint; has an end
+-   What you have agreed to do (SPBI) in the current sprint; has an end
 
-- How is breaking the SPBIs into small pieces - sprint tasks
+-   How is breaking the SPBIs into small pieces - sprint tasks
 
-- These tasks can be tested
+-   These tasks can be tested
 
 # Meetings
 
 Sprint planning:
 
-- Plan one sprint. PO and team decide what SPBIs go into sprint
-  backlog (have top priorities); try to get it clear what they have to
-  do and how much they can do in the time allocated (timebox)
+-   Plan one sprint. PO and team decide what SPBIs go into sprint
+    backlog (have top priorities); try to get it clear what they have to
+    do and how much they can do in the time allocated (timebox)
 
-- Use story points - arbitrary measure of effort required
+-   Use story points - arbitrary measure of effort required
 
 Daily scrum:
 
-- Meet daily; 15 minute stand up and report to each other NOT to the
-  PO or SM
+-   Meet daily; 15 minute stand up and report to each other NOT to the
+    PO or SM
 
-- What you did yesterday, what you will do today, what problems have
-  you got
+-   What you did yesterday, what you will do today, what problems have
+    you got
 
 Sprint review:
 
-- Demo potentially shippable product increment to PO and anyone
-  interested. PO declares what is complete and what doesn’t satisfy
-  user requirements
+-   Demo potentially shippable product increment to PO and anyone
+    interested. PO declares what is complete and what doesn’t satisfy
+    user requirements
 
 Retrospective meeting:
 
-- At the end of every sprint what went well, what can be improved,
-  what you have learned, feedback to each other - teams take ownership
-  of the process
+-   At the end of every sprint what went well, what can be improved,
+    what you have learned, feedback to each other - teams take ownership
+    of the process
 
 Refinement meeting:
 
-- Team and PO look ahead a little at the PBI’s to determine possible
-  candidates and maybe break some down for the next couple of sprints.
-  This can also be done in the sprint planning meeting
+-   Team and PO look ahead a little at the PBI’s to determine possible
+    candidates and maybe break some down for the next couple of sprints.
+    This can also be done in the sprint planning meeting
 
 # Estimation
 
 How much effort is involved:
 
-- Focus is on the collective effort not the individual effort per task
+-   Focus is on the collective effort not the individual effort per task
 
-- Teams can compare items to each other or estimate in relative units
+-   Teams can compare items to each other or estimate in relative units
 
-- Teams breaks it into the smallest possible stories
+-   Teams breaks it into the smallest possible stories
 
 Velocity:
 
-- Measure of work completed by the development team in a given sprint
+-   Measure of work completed by the development team in a given sprint
 
-- Is based on your estimated targets
+-   Is based on your estimated targets
 
 # Advantages
 
-- The product is broken down into a set of manageable and
-  understandable chunks
+-   The product is broken down into a set of manageable and
+    understandable chunks
 
-- Unstable requirements do not hold up progress
+-   Unstable requirements do not hold up progress
 
-- The whole team have visibility of everything and consequently team
-  communication is improved
+-   The whole team have visibility of everything and consequently team
+    communication is improved
 
-- Customers see on-time delivery of increments and gain feedback on
-  how the product works
+-   Customers see on-time delivery of increments and gain feedback on
+    how the product works
 
-- Trust between customers and developers is established and a positive
-  culture is created in which everyone expects the project to succeed
+-   Trust between customers and developers is established and a positive
+    culture is created in which everyone expects the project to succeed
 
 # Disadvantages
 
-- It can be difficult to keep the interest of customers who are
-  involved in the process
+-   It can be difficult to keep the interest of customers who are
+    involved in the process
 
-- Prioritising changes can be difficult where there are multiple
-  stakeholders
+-   Prioritising changes can be difficult where there are multiple
+    stakeholders
 
-- Maintaining simplicity requires extra work
+-   Maintaining simplicity requires extra work
 
-- Contracts may be a problem as with other approaches to iterative
-  development
+-   Contracts may be a problem as with other approaches to iterative
+    development
 
-- Team members may be unsuited to the intense involvement that
-  characterises agile methods
+-   Team members may be unsuited to the intense involvement that
+    characterises agile methods

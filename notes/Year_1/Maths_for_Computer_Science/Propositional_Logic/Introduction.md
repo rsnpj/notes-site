@@ -6,37 +6,37 @@ title: Fundamentals of Propositional Logic
 
 Propositional Logic:
 
-- The most fundamental logic, lying at the heart of many other things
+-   The most fundamental logic, lying at the heart of many other things
 
-- Formalises day-to-day, common sense reasoning
+-   Formalises day-to-day, common sense reasoning
 
 Key to propositional logic are **propositions**:
 
-- Declarative sentences can be either **true** or **false**
+-   Declarative sentences can be either **true** or **false**
 
 Propositions are represented by **propositional variables** (**Boolean
 variables, atoms**)
 
-- Usually letters such as **x,Y,a** or subscripted letters such as
-  $\mathbf{x_2,Y_0,a_1}$
+-   Usually letters such as **x,Y,a** or subscripted letters such as
+    $\mathbf{x_2,Y_0,a_1}$
 
-- Which can take a truth value T (true) or F(false)
+-   Which can take a truth value T (true) or F(false)
 
 Syntax\
 New propositions called **formulae** or **Boolean formulae** or
 **propositional formulae** or **compound propositions** are formed from
 propositional variables and formulae by the use of logical operators
 
-- $\land$ - conjunction(and)
+-   $\land$ - conjunction(and)
 
-- $\lor$ - disjunction(or)
+-   $\lor$ - disjunction(or)
 
-- $\lnot$ - negation(not)
+-   $\lnot$ - negation(not)
 
-- $\Rightarrow$ - implies (if left statement true, then right
-  statement must be true, if LHS false, whole statement becomes true)
+-   $\Rightarrow$ - implies (if left statement true, then right
+    statement must be true, if LHS false, whole statement becomes true)
 
-- $\Leftrightarrow$ - if and only if (iff)
+-   $\Leftrightarrow$ - if and only if (iff)
 
 # Some formulae
 
@@ -48,7 +48,7 @@ propositional formulae $\varphi$ and $\psi$
 The operator $\lnot$ takes one propositional formula $\varphi$ and
 yields a new one
 
-- $\lnot\varphi$
+-   $\lnot\varphi$
 
 ## Use of parentheses
 
@@ -68,9 +68,9 @@ $$(((a\Rightarrow b)\Rightarrow c)\Rightarrow d)$$
 Semantics: all propositional variables take the value **T(True)** or
 **F(false)**
 
-- The value of a formula under some **truth assignment** is
-  ascertained by using the **truth tables** for the above logical
-  connectives
+-   The value of a formula under some **truth assignment** is
+    ascertained by using the **truth tables** for the above logical
+    connectives
 
 The truth tables for our logical connectives are as follows:
 
@@ -178,9 +178,9 @@ Laws
 
 **De Morgan's Laws** are:
 
-- $\lnot(X\land Y)\equiv \lnot X\lor\lnot Y$
+-   $\lnot(X\land Y)\equiv \lnot X\lor\lnot Y$
 
-- $\lnot(X\lor Y)\equiv \lnot X\land\lnot Y$
+-   $\lnot(X\lor Y)\equiv \lnot X\land\lnot Y$
 
 These formulae are indeed equivalences:
 
@@ -191,11 +191,11 @@ These formulae are indeed equivalences:
 | F   | T   | **T**   | F   | F       | T   | T       | F   | **T**  | F       | T   | **F**   | F   | T      | T   | T       | F   | **F**   | F       | T   |
 | F   | F   | **T**   | F   | F       | F   | T       | F   | **T**  | T       | F   | **T**   | F   | F      | F   | T       | F   | **T**   | T       | F   |
 
-- De Morgan's Laws can be applied not just to variables, but to
-  formulae $\varphi$ and $\psi$
+-   De Morgan's Laws can be applied not just to variables, but to
+    formulae $\varphi$ and $\psi$
 
-- De Morgan's Laws are often used to simplify formulae with regard to
-  negations
+-   De Morgan's Laws are often used to simplify formulae with regard to
+    negations
 
 # Applying De Morgan's Laws
 
@@ -323,176 +323,176 @@ logic
 
 In fact $\land \lor\lnot$ is functionally complete
 
-- Let $\varphi$ be a propositional formula involving the variables
-  $p_1,p_2,...,p_n$
+-   Let $\varphi$ be a propositional formula involving the variables
+    $p_1,p_2,...,p_n$
 
-- Build the truth table for $\varphi$ and let f be some truth
-  assignment that evaluates to **true**
+-   Build the truth table for $\varphi$ and let f be some truth
+    assignment that evaluates to **true**
 
-- Suppose that in this truth assignment f each $p_i$ has the truth
-  value of $v_i$
+-   Suppose that in this truth assignment f each $p_i$ has the truth
+    value of $v_i$
 
-- Build a conjunction $\chi_f$ of literals as follows: for each i
+-   Build a conjunction $\chi_f$ of literals as follows: for each i
 
-  - if $v_i$ is **true** then include the literal $p_i$ in the
-    conjunction $\chi_f$
+    -   if $v_i$ is **true** then include the literal $p_i$ in the
+        conjunction $\chi_f$
 
-  - if $v_i$ is **false** then include the literal $\lnot p_i$ in
-    the conjunction $\chi_f$
+    -   if $v_i$ is **false** then include the literal $\lnot p_i$ in
+        the conjunction $\chi_f$
 
 ## Example
 
-![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig1.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig1.webp)
 
-- $f_1$ can be specified by writing a truth assignment
-  $p\land q\land \lnot r \land s$
+-   $f_1$ can be specified by writing a truth assignment
+    $p\land q\land \lnot r \land s$
 
-- The disjunction can then be written as the lor of all the inputs
-  that make it true, so $\psi={\chi_f}_1\lor...$
+-   The disjunction can then be written as the lor of all the inputs
+    that make it true, so $\psi={\chi_f}_1\lor...$
 
-- Only in the case of truth assignment $f_1$ will $\chi_1$ be true and
-  etc for the rest of the fs
+-   Only in the case of truth assignment $f_1$ will $\chi_1$ be true and
+    etc for the rest of the fs
 
-- So this can be used to show that two truth tables are exactly the
-  same, and so that $\land \lor \lnot$ is **functionally complete**
+-   So this can be used to show that two truth tables are exactly the
+    same, and so that $\land \lor \lnot$ is **functionally complete**
 
 ## More on Functional Completeness
 
-- Now let $\psi$ be the disjunction of all those conjunctions $\chi_f$
-  we have just built. Remember, we only build disjunctions
-  corresponding to the rows of the truth table evaluating to **true**
+-   Now let $\psi$ be the disjunction of all those conjunctions $\chi_f$
+    we have just built. Remember, we only build disjunctions
+    corresponding to the rows of the truth table evaluating to **true**
 
-- We claim that $\varphi$ and $\psi$ are logically equivalent
+-   We claim that $\varphi$ and $\psi$ are logically equivalent
 
-  - Suppose that f is some truth statement making $\varphi$ true, so
-    we have indeed built the conjunction $\chi_f$
+    -   Suppose that f is some truth statement making $\varphi$ true, so
+        we have indeed built the conjunction $\chi_f$
 
-  - Key Point: The only truth assignment making the conjunction
-    $\chi_f$ true is the truth assignment f itself
+    -   Key Point: The only truth assignment making the conjunction
+        $\chi_f$ true is the truth assignment f itself
 
-  - In particular the truth assignment f must make $\chi_f$ true
+    -   In particular the truth assignment f must make $\chi_f$ true
 
-    - For example with regard to the truth assignment f in the
-      example $\chi_f$ is
+        -   For example with regard to the truth assignment f in the
+            example $\chi_f$ is
 
-      $p_1\land \lnot p_2 \land ... \land \lnot p_n$
+            $p_1\land \lnot p_2 \land ... \land \lnot p_n$
 
-      Which is made **true** only by the truth assignment f
+            Which is made **true** only by the truth assignment f
 
-  - Hence, f makes $\psi$ true
+    -   Hence, f makes $\psi$ true
 
-- Conversely
+-   Conversely
 
-  - Suppose that g is some truth assignment making $\psi$ true
+    -   Suppose that g is some truth assignment making $\psi$ true
 
-    - So at least one conjunct $\chi_f$ say, is made **true** by g
+        -   So at least one conjunct $\chi_f$ say, is made **true** by g
 
-  - But the only truth assignment making $\chi_f$ true is f
+    -   But the only truth assignment making $\chi_f$ true is f
 
-    - Hence, f=g
+        -   Hence, f=g
 
-  - The reason $\chi_f$ appears as a conjunct is because f makes
-    $\varphi$ true
+    -   The reason $\chi_f$ appears as a conjunct is because f makes
+        $\varphi$ true
 
-    - So g=f is a truth assignment making $\varphi$ true
+        -   So g=f is a truth assignment making $\varphi$ true
 
-- Consequently, for any truth assignment f
+-   Consequently, for any truth assignment f
 
-  - f satisfies $\varphi$ if, and only if, f satisfies $\psi$
+    -   f satisfies $\varphi$ if, and only if, f satisfies $\psi$
 
-    - That is, $\varphi\equiv\psi$
+        -   That is, $\varphi\equiv\psi$
 
-- Our proof yields even more
+-   Our proof yields even more
 
-  - Every formula of propositional logic is equivalent to a formula
-    in **disjunctive normal form**
+    -   Every formula of propositional logic is equivalent to a formula
+        in **disjunctive normal form**
 
-    - A disjunction of conjunctions of literals
+        -   A disjunction of conjunctions of literals
 
-  - Also, every truth table is the truth table of some propositional
-    formula
+    -   Also, every truth table is the truth table of some propositional
+        formula
 
 # Conjunctive normal form
 
-- Let $\varphi$ be some formula of propositional logic
+-   Let $\varphi$ be some formula of propositional logic
 
-- The formula $\lnot \varphi$ is equivalent to one in disjunctive
-  normal form
+-   The formula $\lnot \varphi$ is equivalent to one in disjunctive
+    normal form
 
-  - That is, one of the form
+    -   That is, one of the form
 
-    $\chi_1\lor\chi_2\lor ... \lor \chi_m$
+        $\chi_1\lor\chi_2\lor ... \lor \chi_m$
 
-    Where each $\chi_i$ is a conjunction of literals
+        Where each $\chi_i$ is a conjunction of literals
 
-- So, $\varphi$ is equivalent to the formula
+-   So, $\varphi$ is equivalent to the formula
 
-  $\lnot(\chi_1\lor\chi_2\lor ... \lor \chi_m)$
+    $\lnot(\chi_1\lor\chi_2\lor ... \lor \chi_m)$
 
-  Which in turn, by using generalised De Morgan's Laws, is equivalent
-  to
+    Which in turn, by using generalised De Morgan's Laws, is equivalent
+    to
 
-  $\lnot \chi_1\land \lnot \chi_2\land ... \land \lnot \chi_m$
+    $\lnot \chi_1\land \lnot \chi_2\land ... \land \lnot \chi_m$
 
-- Each $\lnot\chi_i$ is equivalent to a disjunction of literals, by
-  again using generalised De Morgan's Laws
+-   Each $\lnot\chi_i$ is equivalent to a disjunction of literals, by
+    again using generalised De Morgan's Laws
 
-- Thus
+-   Thus
 
-  - Every formula of propositional logic is logically equivalent to
-    a conjunction of disjunctions of literals, i.e., a conjunction
-    of **clauses**
+    -   Every formula of propositional logic is logically equivalent to
+        a conjunction of disjunctions of literals, i.e., a conjunction
+        of **clauses**
 
-    - That is, every formula of propositional logic is equivalent
-      to a formula in **conjunctive normal form**
+        -   That is, every formula of propositional logic is equivalent
+            to a formula in **conjunctive normal form**
 
 # A spot of practice
 
-![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.webp)
 
 # Converting to c.n.f syntactically
 
-- We can often establish normal forms "syntactically"
+-   We can often establish normal forms "syntactically"
 
-- Consider the formula
+-   Consider the formula
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.webp)
 
-- In the "semantic" approach, i.e., using truth tables we are stuck
-  with using exponentially sized truth tables
+-   In the "semantic" approach, i.e., using truth tables we are stuck
+    with using exponentially sized truth tables
 
-- However with the "syntactic" approach, i.e., using known
-  equivalences
+-   However with the "syntactic" approach, i.e., using known
+    equivalences
 
-  - We can often achieve our aims much more quickly, though this
-    often requires cunning
+    -   We can often achieve our aims much more quickly, though this
+        often requires cunning
 
 Non-Examinable from here on
 
 # An application: SAT-solving
 
-- The power of propositional logic of quite remarkable as
-  computationally complex problems can be described using logic
+-   The power of propositional logic of quite remarkable as
+    computationally complex problems can be described using logic
 
-- The aim of SAT-solving is
+-   The aim of SAT-solving is
 
-  - To encode a problem X as a propositional formula $\varphi$ so
-    that
+    -   To encode a problem X as a propositional formula $\varphi$ so
+        that
 
-    - A solution to X corresponds to $\varphi$ having a satisfying
-      truth assignment
+        -   A solution to X corresponds to $\varphi$ having a satisfying
+            truth assignment
 
-  - To employ algorithms to solve the satisfiability problem (SAT)
-    for $\varphi$ (and so X)
+    -   To employ algorithms to solve the satisfiability problem (SAT)
+        for $\varphi$ (and so X)
 
-- The SAT problem is to decide if a propositional formula has a
-  satisfying truth assignment. It is extremely hard to solve
+-   The SAT problem is to decide if a propositional formula has a
+    satisfying truth assignment. It is extremely hard to solve
 
-  - In fact, it is NP-complete, even if the formula is given in
-    c.n.f, so it takes time exponential in the size of the formula
-    to solve
+    -   In fact, it is NP-complete, even if the formula is given in
+        c.n.f, so it takes time exponential in the size of the formula
+        to solve
 
-- However, modern day SAT-solvers can give extremely good results
+-   However, modern day SAT-solvers can give extremely good results
 
-  - Note that all modern day SAT-solvers need their inputs to be in
-    c.n.f
+    -   Note that all modern day SAT-solvers need their inputs to be in
+        c.n.f

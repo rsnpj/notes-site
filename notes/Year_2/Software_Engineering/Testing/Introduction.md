@@ -11,15 +11,15 @@ the process of testing as being an ISP, needing a design approach.
 
 Alternate answer:
 
-- To discover problems (a developer-centric view): does the
-  component/system behave as expected?
+-   To discover problems (a developer-centric view): does the
+    component/system behave as expected?
 
-- To assess quality (a customer/market-led view): is the system
-  acceptable to the end users?
+-   To assess quality (a customer/market-led view): is the system
+    acceptable to the end users?
 
-- Plan driven forms of development tend to put early emphasis on the
-  developer perspective, agile forms tend to emphasise both
-  perspectives throughout.
+-   Plan driven forms of development tend to put early emphasis on the
+    developer perspective, agile forms tend to emphasise both
+    perspectives throughout.
 
 # Limitations
 
@@ -31,15 +31,15 @@ providing confidence about software
 
 # Where’s the challenge?
 
-- Many people find designing tests offers an intellectual challenge,
-  regardless of perspective
+-   Many people find designing tests offers an intellectual challenge,
+    regardless of perspective
 
-- In some ways it is a bit like a game, you are pitting your wits
-  against the designer of the software
+-   In some ways it is a bit like a game, you are pitting your wits
+    against the designer of the software
 
-- The job of the tester is to "think outside of the box" and try to
-  avoid making the same (possibly wrong) assumptions that the
-  developer might have done
+-   The job of the tester is to "think outside of the box" and try to
+    avoid making the same (possibly wrong) assumptions that the
+    developer might have done
 
 # Definitions
 
@@ -78,17 +78,17 @@ whether or not the outputs are acceptable.
 
 # Testing in the Life Cycle
 
-- Testing is one of the activities that is organised quite differently
-  within waterfall and agile development processes, although the
-  actual test details may not be very different
+-   Testing is one of the activities that is organised quite differently
+    within waterfall and agile development processes, although the
+    actual test details may not be very different
 
-- Development usually has a hierarchy of test activities corresponding
-  with particular stages of development, regardless of how they are
-  organised.
+-   Development usually has a hierarchy of test activities corresponding
+    with particular stages of development, regardless of how they are
+    organised.
 
-- With agile forms, testing may be more interpolated with development
-  activities, depending on the form. In particular, with XP, there is
-  the practice of writing the testes before writing the code
+-   With agile forms, testing may be more interpolated with development
+    activities, depending on the form. In particular, with XP, there is
+    the practice of writing the testes before writing the code
 
 ![image](/img/Year_2/Software_Engineering/Testing/Introduction/v-model.png)
 
@@ -119,10 +119,10 @@ implementation is visible and can be used to generate test cases
 
 Not all errors are of equal importance in terms of their effect
 
-- A system may well be able to continue functioning in the presence of
-  errors, although not fully correctly
+-   A system may well be able to continue functioning in the presence of
+    errors, although not fully correctly
 
-- Some errors may only occur on very rare occasions
+-   Some errors may only occur on very rare occasions
 
 This is one example of a scale for severity:
 

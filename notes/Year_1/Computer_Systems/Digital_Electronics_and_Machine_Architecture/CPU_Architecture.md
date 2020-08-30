@@ -4,24 +4,24 @@ title: CPU Architecture
 
 # Components of a CPU
 
-![image](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.jpg)
+![image](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.webp)
 
 5 major components
 
-- **Memory** - RAM - "the mailboxes"
+-   **Memory** - RAM - "the mailboxes"
 
-- **Registers** - The special memory locations that can be accessed
-  very fast. 3 registers are shown: the Instruction register (IR), the
-  Program Counter (PC) and the Accumulator
+-   **Registers** - The special memory locations that can be accessed
+    very fast. 3 registers are shown: the Instruction register (IR), the
+    Program Counter (PC) and the Accumulator
 
-- **Arithmetic/Logic Unit** - "the calculator"
+-   **Arithmetic/Logic Unit** - "the calculator"
 
-- **Buses** - bundles of tiny wires that carry data between
-  components. The three most important buses are the address,data and
-  control buses
+-   **Buses** - bundles of tiny wires that carry data between
+    components. The three most important buses are the address,data and
+    control buses
 
-- **Control Unit** - Responsible for directing the flow of
-  instructions and data within the CPU
+-   **Control Unit** - Responsible for directing the flow of
+    instructions and data within the CPU
 
 In the diagram the Decoder and Multiplexor comprise the Control Unit
 
@@ -34,11 +34,11 @@ perform that purpose
 
 Hold a binary value for
 
-- Storage
+-   Storage
 
-- Manipulation
+-   Manipulation
 
-- Calculation
+-   Calculation
 
 Manipulated directly by the Control Unit
 
@@ -50,14 +50,14 @@ This is considered part of the ALU
 
 These are general purpose registers used for:
 
-- Holding data
+-   Holding data
 
-- Holding interim and final results of arithmetic operations
+-   Holding interim and final results of arithmetic operations
 
-- Holding data waiting to be transferred between different memory
-  locations
+-   Holding data waiting to be transferred between different memory
+    locations
 
-- Holding data waiting to be transferred between I/O and memory
+-   Holding data waiting to be transferred between I/O and memory
 
 ## Registers in the Control Unit
 
@@ -103,14 +103,14 @@ one location in a system to another is called a bus
 A bus is a group of electrical conductors (**lines**) used to carry
 signals
 
-- **Data Bus** - Transfer Data
+-   **Data Bus** - Transfer Data
 
-- **Control Bus** - Controls what bits of circuitry are active
+-   **Control Bus** - Controls what bits of circuitry are active
 
-- **Address Bus** - Activates the right part of the RAM to get data
-  out of
+-   **Address Bus** - Activates the right part of the RAM to get data
+    out of
 
-- **Power Bus** - Feed power to all parts of the chip
+-   **Power Bus** - Feed power to all parts of the chip
 
 ## Point-to-point
 

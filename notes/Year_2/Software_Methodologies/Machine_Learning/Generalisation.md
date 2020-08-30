@@ -4,36 +4,36 @@ title: Generalisation
 
 # Generalisation
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Generalisation/Generalisation.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Generalisation/Generalisation.webp)
 
-- Goal - to predict well on new data drawn from (hidden) true
-  distribution
+-   Goal - to predict well on new data drawn from (hidden) true
+    distribution
 
-- Issue - we don’t see the truth, but we only get to sample from it
+-   Issue - we don’t see the truth, but we only get to sample from it
 
-- If it fits current sample well, how can we trust it will predict
-  well on other new samples?
+-   If it fits current sample well, how can we trust it will predict
+    well on other new samples?
 
 How do we know if our model is good?
 
-- Theoretically
+-   Theoretically
 
-  - Generalisation theory - based on ideas of measuring model
-    simplicity/complexity
+    -   Generalisation theory - based on ideas of measuring model
+        simplicity/complexity
 
-- Intuition: formalisation of Ockham’s razor principle
+-   Intuition: formalisation of Ockham’s razor principle
 
-  - The less complex a model is, the more likely a good empirical
-    result is
+    -   The less complex a model is, the more likely a good empirical
+        result is
 
-- Empirically
+-   Empirically
 
-  - Asking: will our model do well on a new sample of data
+    -   Asking: will our model do well on a new sample of data
 
-  - Evaluate: get a new sample of data - call it the set set
+    -   Evaluate: get a new sample of data - call it the set set
 
-  - Good performance on the test set is a useful indicator of good
-    performance
+    -   Good performance on the test set is a useful indicator of good
+        performance
 
 Three basic assumptions in all of the above
 

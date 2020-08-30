@@ -4,68 +4,68 @@ title: Natural Deduction for Propositional Logic
 
 # Proof Systems for Propositional Logic
 
-- What we would like from a proof system
+-   What we would like from a proof system
 
-  - **Completeness** - Using our proof system, we should be able to
-    prove all of the tautologies
+    -   **Completeness** - Using our proof system, we should be able to
+        prove all of the tautologies
 
-  - **Soundness** - All theorems proved by our proof system should
-    be tautologies
+    -   **Soundness** - All theorems proved by our proof system should
+        be tautologies
 
-- A **proof system** defines the proofs (valid mathematical arguments)
-  of the system - it is a collection of **rules of inference**
+-   A **proof system** defines the proofs (valid mathematical arguments)
+    of the system - it is a collection of **rules of inference**
 
-- These rules of inference can be applied to infer new formulae from
-  old
+-   These rules of inference can be applied to infer new formulae from
+    old
 
-- Henceforth, we consider propositional logic to consist only of those
-  formulae build using the connectives $\land \lor \lnot \Rightarrow$
+-   Henceforth, we consider propositional logic to consist only of those
+    formulae build using the connectives $\land \lor \lnot \Rightarrow$
 
-  - With other connectives, such as $\Leftrightarrow$, abbreviations
+    -   With other connectives, such as $\Leftrightarrow$, abbreviations
 
-- An **argument form** in propositional logic is a sequence of
-  formulae
+-   An **argument form** in propositional logic is a sequence of
+    formulae
 
-  $\varphi_1,\varphi_2,...,\varphi_n,\psi$\
-  and such an argument form is valid if:
+    $\varphi_1,\varphi_2,...,\varphi_n,\psi$\
+    and such an argument form is valid if:
 
-  - Whenever a truth assignment f is s.t.
-    $\varphi_1,\varphi_2,...,\varphi_n$ evaluate to true under f
-    then $\psi$ necessarily evaluates to true under f
+    -   Whenever a truth assignment f is s.t.
+        $\varphi_1,\varphi_2,...,\varphi_n$ evaluate to true under f
+        then $\psi$ necessarily evaluates to true under f
 
-- An argument form can also be written in the form
-  $\varphi_1,\varphi_2,...,\varphi_n\vdash\psi$ when it is referred to
-  as a **sequent**
+-   An argument form can also be written in the form
+    $\varphi_1,\varphi_2,...,\varphi_n\vdash\psi$ when it is referred to
+    as a **sequent**
 
-- The rule of inference corresponding to the above argument form is:
-- $\varphi_1,\varphi_2,...,\varphi_n\Rightarrow \psi$
+-   The rule of inference corresponding to the above argument form is:
+-   $\varphi_1,\varphi_2,...,\varphi_n\Rightarrow \psi$
 
-  and if the above argument form is valid then this rule of inference
-  is a **tautology**
+    and if the above argument form is valid then this rule of inference
+    is a **tautology**
 
-- The most well known rule of inference for propositional logic is the
-  law of detachment
+-   The most well known rule of inference for propositional logic is the
+    law of detachment
 
 # Applying rules of inference
 
-- Of course, when applying a rule of inference we can substitute
-  arbitrary formulae for p and q
+-   Of course, when applying a rule of inference we can substitute
+    arbitrary formulae for p and q
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig1.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig1.webp)
 
-- Similarly, given any rule of inference
-  $\varphi_1,\varphi_2,...,\varphi_n\Rightarrow\psi$
+-   Similarly, given any rule of inference
+    $\varphi_1,\varphi_2,...,\varphi_n\Rightarrow\psi$
 
-  - We can apply this rule by substituting **any** formula for
-    **any** propositional variable, so long as the same formula is
-    substituted for the same variable
+    -   We can apply this rule by substituting **any** formula for
+        **any** propositional variable, so long as the same formula is
+        substituted for the same variable
 
-  - Thus, a valid argument form yields an infinite collection of
-    tautologies
+    -   Thus, a valid argument form yields an infinite collection of
+        tautologies
 
 # Other rules of inference
 
-![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig2.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig2.webp)
 
 For all these diagrams, if the two statements on the top are true, then
 the statement on the bottom must be true.
@@ -74,62 +74,62 @@ the statement on the bottom must be true.
 
 # An alternative approach
 
-- We could write down all possible truth assignments on A,W,I,P,S and
-  D, and:
+-   We could write down all possible truth assignments on A,W,I,P,S and
+    D, and:
 
-  - Retain only those for which
+    -   Retain only those for which
 
-    $A\land W\Rightarrow I,A\lor P,W\lor S, \lnot I$ and
-    $D\Rightarrow \lnot (P\lor S)$
+        $A\land W\Rightarrow I,A\lor P,W\lor S, \lnot I$ and
+        $D\Rightarrow \lnot (P\lor S)$
 
-    are true
+        are true
 
-  - Then check to see that for all of these retained truth
-    assignments we have that $\lnot D$ is true
+    -   Then check to see that for all of these retained truth
+        assignments we have that $\lnot D$ is true
 
-- However, this would mean that $2^6=64$ different truth assignments
-  need to be checked
+-   However, this would mean that $2^6=64$ different truth assignments
+    need to be checked
 
-- Consequently, the proof-theoretic approach can be significantly more
-  efficient than the truth table approach, especially when there is a
-  large number of propositional variables
+-   Consequently, the proof-theoretic approach can be significantly more
+    efficient than the truth table approach, especially when there is a
+    large number of propositional variables
 
-- Of course knowing which rules of inference to apply which formulae
-  so that we get a speedy proof is another difficulty that needs to be
-  overcome
+-   Of course knowing which rules of inference to apply which formulae
+    so that we get a speedy proof is another difficulty that needs to be
+    overcome
 
 # Natural Deduction
 
-- The proof system **natural deduction** consists of a collection of
-  valid rules of inference and is used to obtain proofs of sequence of
-  the form:
+-   The proof system **natural deduction** consists of a collection of
+    valid rules of inference and is used to obtain proofs of sequence of
+    the form:
 
-  $\varphi_1,\varphi_2,...,\varphi_n\vdash \psi$
+    $\varphi_1,\varphi_2,...,\varphi_n\vdash \psi$
 
-- We assume that we are given $\varphi_1,\varphi_2,...,\varphi_n$ as
-  **premises**. We hope to apply our rules of inference from the proof
-  system to obtain $\psi$
+-   We assume that we are given $\varphi_1,\varphi_2,...,\varphi_n$ as
+    **premises**. We hope to apply our rules of inference from the proof
+    system to obtain $\psi$
 
-- Rules for conjunction:
+-   Rules for conjunction:
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Conjunction.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Conjunction.webp)
 
-- Rules for double negation:
+-   Rules for double negation:
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Negation.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Negation.webp)
 
-- Note
+-   Note
 
-  - In general $\varphi_1$ and $\varphi_2$ are formulae and not
-    necessarily propositional variables
+    -   In general $\varphi_1$ and $\varphi_2$ are formulae and not
+        necessarily propositional variables
 
-  - All of our rules are valid
+    -   All of our rules are valid
 
 # A simple proof
 
-- Here is the proof of the sequent
-  $p,\lnot\lnot (q\land r)\vdash \lnot \lnot p \land r$ using the
-  rules we have introduced so far
+-   Here is the proof of the sequent
+    $p,\lnot\lnot (q\land r)\vdash \lnot \lnot p \land r$ using the
+    rules we have introduced so far
 
 | Index | Formula                 | Rule             |
 | ----- | ----------------------- | ---------------- |
@@ -140,207 +140,207 @@ the statement on the bottom must be true.
 | 5     | r                       | $\land e2 4$     |
 | 6     | $\lnot\lnot p\land r$   | $\land i 3 5$    |
 
-- Note that the validity of the rules means that
+-   Note that the validity of the rules means that
 
-  - If p and $\lnot \lnot(q\land r)$ are true under some truth
-    assignment then $\lnot \lnot p\land r$ is necessarily true under
-    this truth assignment
+    -   If p and $\lnot \lnot(q\land r)$ are true under some truth
+        assignment then $\lnot \lnot p\land r$ is necessarily true under
+        this truth assignment
 
-- We often say that a sequent is **valid** if it can be proved
+-   We often say that a sequent is **valid** if it can be proved
 
 # More rules
 
-- Rule for eliminating implication
+-   Rule for eliminating implication
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig3.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig3.webp)
 
-- Rule for introducing implication
+-   Rule for introducing implication
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig4.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig4.webp)
 
-- The box doesn't imply $\varphi_1$ is true, just that the stuff below
-  the line is true if the stuff above the line is true
+-   The box doesn't imply $\varphi_1$ is true, just that the stuff below
+    the line is true if the stuff above the line is true
 
-- In order to apply the rules $\Rightarrow i$
+-   In order to apply the rules $\Rightarrow i$
 
-  - To start with the intended premise $\varphi_1$, as the first
-    line of the box
+    -   To start with the intended premise $\varphi_1$, as the first
+        line of the box
 
-  - Continue until we prove $\varphi_2$
+    -   Continue until we prove $\varphi_2$
 
-  - Close the box and write our implication
-    $\varphi_1\Rightarrow\varphi_2$
+    -   Close the box and write our implication
+        $\varphi_1\Rightarrow\varphi_2$
 
-- Thereafter we are not allowed to use any formula in the box. Once a
-  box has closed then the formula within it are no longer available to
-  us
+-   Thereafter we are not allowed to use any formula in the box. Once a
+    box has closed then the formula within it are no longer available to
+    us
 
 # Proof using boxes
 
-- Here is a proof of the sequent
-  $p\Rightarrow q, q\Rightarrow r \vdash p \Rightarrow r$
+-   Here is a proof of the sequent
+    $p\Rightarrow q, q\Rightarrow r \vdash p \Rightarrow r$
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig5.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig5.webp)
 
-- Note that it is possible
+-   Note that it is possible
 
-  - For a proof to involve more than one box
+    -   For a proof to involve more than one box
 
-  - For boxes to be nested within each other
+    -   For boxes to be nested within each other
 
-- Note that boxes cannot overlap
+-   Note that boxes cannot overlap
 
-  - We cannot **open** a box and then **open** another box, then
-    **close** the first box before **closing** the second box
+    -   We cannot **open** a box and then **open** another box, then
+        **close** the first box before **closing** the second box
 
 # More than one box
 
-- Here is a proof of the sequent
-  $(p\land q)\Rightarrow r \vdash p\Rightarrow(q\Rightarrow r)$
+-   Here is a proof of the sequent
+    $(p\land q)\Rightarrow r \vdash p\Rightarrow(q\Rightarrow r)$
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig6.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/Fig6.webp)
 
-- Note that the structure of the formula we wish to prove helps to
-  determine the structure/tactics of our proof
+-   Note that the structure of the formula we wish to prove helps to
+    determine the structure/tactics of our proof
 
 # More rules
 
-- Rules for introducing disjunction
+-   Rules for introducing disjunction
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v-introduction.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v-introduction.webp)
 
-- Rules for eliminating disjunction
+-   Rules for eliminating disjunction
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v-elimination.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v-elimination.webp)
 
-- In order to apply the rule $\lor$e, we use boxes as previously
+-   In order to apply the rule $\lor$e, we use boxes as previously
 
-  - But now there is a box starting with each disjunct $\varphi$ and
-    $\psi$
+    -   But now there is a box starting with each disjunct $\varphi$ and
+        $\psi$
 
-  - Each box needs to end with the same intended formula, $\chi$
+    -   Each box needs to end with the same intended formula, $\chi$
 
 # A proof using $\lor$ elimination
 
-![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v_proof1.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v_proof1.webp)
 
-- Assume that p is true, so the RHS is true
+-   Assume that p is true, so the RHS is true
 
-- $p\lor r$ is true
+-   $p\lor r$ is true
 
-- Open box assuming q is true
+-   Open box assuming q is true
 
-- Eliminate the implies symbol from the LHS
+-   Eliminate the implies symbol from the LHS
 
-- Shown that no matter if p or q is true, the statement $p\lor r$ will
-  be true
+-   Shown that no matter if p or q is true, the statement $p\lor r$ will
+    be true
 
-- It has been shown that if $p\lor q$ is true, that $p\lor r$ is true,
-  so $(p\lor q)\Rightarrow (p\lor r)$ will always be true
+-   It has been shown that if $p\lor q$ is true, that $p\lor r$ is true,
+    so $(p\lor q)\Rightarrow (p\lor r)$ will always be true
 
-![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v_proof2.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/v_proof2.webp)
 
-- Basically trying to build the RHS from the LHS
+-   Basically trying to build the RHS from the LHS
 
 # More rules
 
-- Rules for negation
+-   Rules for negation
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_rules.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_rules.webp)
 
-- The symbol $\bot$, known as bottom, represents a contradiction, in
-  natural deduction if one has a contradiction then one can infer
-  **any** formula
+-   The symbol $\bot$, known as bottom, represents a contradiction, in
+    natural deduction if one has a contradiction then one can infer
+    **any** formula
 
-- Rules for introducing negation
+-   Rules for introducing negation
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/introduce_negation.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/introduce_negation.webp)
 
 # A proof using rules for negation
 
-![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_proof1.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_proof1.webp)
 
-- $p\land\lnot p\Rightarrow \varphi$ holds as $p\land\lnot p$ will
-  always be false, and if the LHS of an implication is false, then the
-  whole statement will be true
+-   $p\land\lnot p\Rightarrow \varphi$ holds as $p\land\lnot p$ will
+    always be false, and if the LHS of an implication is false, then the
+    whole statement will be true
 
-- Lines $2\rightarrow 5$ say $x\Rightarrow(y\Rightarrow x)$
+-   Lines $2\rightarrow 5$ say $x\Rightarrow(y\Rightarrow x)$
 
-![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_proof2.png)
+![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/negation_proof2.webp)
 
 # A derived rule
 
-- We can derive other rules in natural deduction
+-   We can derive other rules in natural deduction
 
-- Consider modus tollens
-  $\varphi\Rightarrow\psi, \lnot\psi\vdash\lnot\varphi$
+-   Consider modus tollens
+    $\varphi\Rightarrow\psi, \lnot\psi\vdash\lnot\varphi$
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/modus_tollens.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/modus_tollens.webp)
 
-- Note that we can use derived rules just as if they were rules of
-  natural deduction
+-   Note that we can use derived rules just as if they were rules of
+    natural deduction
 
-  - e.g., in a proof with
+    -   e.g., in a proof with
 
-    - a line reading $\varphi\Rightarrow\psi$
+        -   a line reading $\varphi\Rightarrow\psi$
 
-    - and another line reading $\lnot\psi$
+        -   and another line reading $\lnot\psi$
 
-  - we could immediately infer $\lnot\psi$ and write modus tollens
-    as an explaining remark
-
-# More derived rules
-
-- Proof by contradiction is the principle "if from $\lnot\varphi$ I
-  can prove $\bot$ then I can deduce $\varphi$"
-
-- Here is a proof that this principle can be applied in natural
-  deduction
-
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/ProofByContradiction.png)
-
-- We denote reductio ad absurdum by RAA
+    -   we could immediately infer $\lnot\psi$ and write modus tollens
+        as an explaining remark
 
 # More derived rules
 
-- The law of excluded middle states that either $\varphi$ is true or
-  $\lnot\varphi$ is true
+-   Proof by contradiction is the principle "if from $\lnot\varphi$ I
+    can prove $\bot$ then I can deduce $\varphi$"
 
-- Here is a proof of it
+-   Here is a proof that this principle can be applied in natural
+    deduction
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/MiddleStates.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/ProofByContradiction.webp)
 
-- We denote the law of excluded middle by LEM
+-   We denote reductio ad absurdum by RAA
+
+# More derived rules
+
+-   The law of excluded middle states that either $\varphi$ is true or
+    $\lnot\varphi$ is true
+
+-   Here is a proof of it
+
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/MiddleStates.webp)
+
+-   We denote the law of excluded middle by LEM
 
 # Some facts about Natural Deduction
 
-- Natural deduction is sound and complete
+-   Natural deduction is sound and complete
 
-- Let $\varphi_1,\varphi_2,...,\varphi_m$ and $\psi$ be formulae
+-   Let $\varphi_1,\varphi_2,...,\varphi_m$ and $\psi$ be formulae
 
-- Soundness
+-   Soundness
 
-  - If the sequent $\varphi_1,\varphi_2,...\varphi_m\vdash\psi$ is
-    provable then the formula
-    $\varphi_1\land\varphi_2\land...\land\varphi_m\Rightarrow\psi$
-    is a tautology
+    -   If the sequent $\varphi_1,\varphi_2,...\varphi_m\vdash\psi$ is
+        provable then the formula
+        $\varphi_1\land\varphi_2\land...\land\varphi_m\Rightarrow\psi$
+        is a tautology
 
-- Completeness
+-   Completeness
 
-  - If
-    $\varphi_1\land\varphi_2\land...\land\varphi_m\Rightarrow\psi$
-    is a tautology then the sequent
-    $\varphi_1,\varphi_2,...\varphi_m\vdash\psi$ is provable
+    -   If
+        $\varphi_1\land\varphi_2\land...\land\varphi_m\Rightarrow\psi$
+        is a tautology then the sequent
+        $\varphi_1,\varphi_2,...\varphi_m\vdash\psi$ is provable
 
-- A **theorem** is a formula $\psi$ for which the sequent $\vdash\psi$
-  is provable, thus, the soundness and completeness of natural
-  deduction tells us that every theorem is a tautology and every
-  tautology is a theorem
+-   A **theorem** is a formula $\psi$ for which the sequent $\vdash\psi$
+    is provable, thus, the soundness and completeness of natural
+    deduction tells us that every theorem is a tautology and every
+    tautology is a theorem
 
 # Proving Theorems
 
-- Here is a proof that the sequent
-  $(p\Rightarrow(\lnot p\lor q))\lor (p\Rightarrow\lnot q)$ is a
-  theorem
+-   Here is a proof that the sequent
+    $(p\Rightarrow(\lnot p\lor q))\lor (p\Rightarrow\lnot q)$ is a
+    theorem
 
-  ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/ProvingTheorems.png)
+    ![image](/img/Year_1/MCS/Propositional_Logic/Natural_Deduction/ProvingTheorems.webp)

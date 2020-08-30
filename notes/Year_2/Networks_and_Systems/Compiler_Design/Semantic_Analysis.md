@@ -2,25 +2,25 @@
 title: Semantic Analysis
 ---
 
-- Ensure that the program has a well defined meaning
+-   Ensure that the program has a well defined meaning
 
-- Verify properties aren't caught during earlier phases e.g.
+-   Verify properties aren't caught during earlier phases e.g.
 
-  - Variables are declared before they are used
+    -   Variables are declared before they are used
 
-  - Expressions have the right types
+    -   Expressions have the right types
 
-  - Number and types of arguments of a procedure call agree with the
-    procedure declaration
+    -   Number and types of arguments of a procedure call agree with the
+        procedure declaration
 
-- To check these properties
+-   To check these properties
 
-  - We need to check context conditions imposed by the language
-    specification
+    -   We need to check context conditions imposed by the language
+        specification
 
-  - They can't be checked by context free grammars
+    -   They can't be checked by context free grammars
 
-  - We enhance our grammars: attribute grammars
+    -   We enhance our grammars: attribute grammars
 
 # Syntax-Directed Definition
 
@@ -75,26 +75,26 @@ attributes upon which its value depends
 
 Examples:
 
-- Only synthesized attributes (S-attributed SDD)
+-   Only synthesized attributes (S-attributed SDD)
 
-  - Evaluate first the children, then the node itself
+    -   Evaluate first the children, then the node itself
 
-  - All the nodes can be evaluated in any bottom-up order
+    -   All the nodes can be evaluated in any bottom-up order
 
-- Only inherited attributes
+-   Only inherited attributes
 
-  - Evaluate first the parent and all (needed) attributes of
-    siblings and of itself, then evaluate the node itself
+    -   Evaluate first the parent and all (needed) attributes of
+        siblings and of itself, then evaluate the node itself
 
-  - Evaluate the tree in some top-down order
+    -   Evaluate the tree in some top-down order
 
-  - However: never only inherited attributes! (compare terminals vs
-    root)
+    -   However: never only inherited attributes! (compare terminals vs
+        root)
 
 With both synthesized and inherited attributes there is no guarantee
 that there exists an order to evaluate the attributes of all nodes
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Semantic_Analysis/Evaluation_Attributes.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Semantic_Analysis/Evaluation_Attributes.webp)
 
 These routes are circular as it is impossible to evaluate either A.s or
 B.i without first evaluating the other
@@ -107,10 +107,10 @@ an annotated parse tree, we construct the dependency graph
 A directed graph $G=(N,E)$ with a set of nodes N and a set of directed
 edges E, with
 
-- A node for each attribute in the annotated parse tree
+-   A node for each attribute in the annotated parse tree
 
-- A directed edge $X.c\rightarrow A.b$ whenever in order for compute
-  $A.b$ we have to compute first $X.c$
+-   A directed edge $X.c\rightarrow A.b$ whenever in order for compute
+    $A.b$ we have to compute first $X.c$
 
 There exists an evaluation order for all the attributes iff the
 dependency graph has no directed cycles
@@ -140,37 +140,37 @@ The region of the program, in which the uses of x refer to this
 declaration of x
 </Definition>
 
-- A new declaration for x in the same scope may hide older
-  declarations of x
+-   A new declaration for x in the same scope may hide older
+    declarations of x
 
-- A symbol table is a mapping from a name to what the name refers to
+-   A symbol table is a mapping from a name to what the name refers to
 
-- As we run our semantic analysis we continuously update the symbol
-  table with information about what is in scope
+-   As we run our semantic analysis we continuously update the symbol
+    table with information about what is in scope
 
 In order to keep track of what is visible we implement a stack of
 tables:
 
-- Each table corresponds to a particular scope
+-   Each table corresponds to a particular scope
 
-- Stack allows for easy "enter" and "exit" operations
+-   Stack allows for easy "enter" and "exit" operations
 
 Symbol table operations are:
 
-- **Push** scope: enter a new scope
+-   **Push** scope: enter a new scope
 
-- **Pop** scope: remove a scope, discarding all its declarations
+-   **Pop** scope: remove a scope, discarding all its declarations
 
-- **Insert** symbol: add a new entry to the current scope
+-   **Insert** symbol: add a new entry to the current scope
 
-- **Lookup** symbol: find the name this symbol corresponds too
+-   **Lookup** symbol: find the name this symbol corresponds too
 
 # Spaghetti stack
 
-- Treat the symbol table as a linked structure of scopes
+-   Treat the symbol table as a linked structure of scopes
 
-- Each scope stores a pointer to its parents, but not vice versa
+-   Each scope stores a pointer to its parents, but not vice versa
 
-- From any point in the program the symbol table appears to be a stack
+-   From any point in the program the symbol table appears to be a stack
 
-- This is called a spaghetti stack
+-   This is called a spaghetti stack

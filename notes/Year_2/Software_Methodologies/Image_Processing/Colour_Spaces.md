@@ -40,22 +40,22 @@ A portion of the Hue colour channel (range of wavalengths) can be isolated. For 
 
 Isolate objects by colour:
 
-- Use an upper and lower threshold on the Hue channel to isolate by
-  colour
+-   Use an upper and lower threshold on the Hue channel to isolate by
+    colour
 
-- Use a threshold on the Saturation channel to isolate pure colours
+-   Use a threshold on the Saturation channel to isolate pure colours
 
-- Combine the two outputs with logical AND
+-   Combine the two outputs with logical AND
 
 **Specular highlights**
 
-- RGB: very different position in space to original colour
+-   RGB: very different position in space to original colour
 
-- HSV: similar position in Hue as specular present in Value
+-   HSV: similar position in Hue as specular present in Value
 
 **Shadows**:
 
-- HSV: isolated in the Saturation/Value components
+-   HSV: isolated in the Saturation/Value components
 
 # CMY colour space
 
@@ -67,7 +67,7 @@ absorbed by the pigments
 
 The CMY colour space can be modelled by a cube
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Colour_Spaces/CMY.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Colour_Spaces/CMY.webp)
 
 # CMYK colour space
 
@@ -120,9 +120,9 @@ while $l_M$ is assigned $c_{M-1}$
 
 More general technique for colour mapping
 
-- Scalar value s; colour value c
+-   Scalar value s; colour value c
 
-- Colour transfer function: $f(s)=c$
+-   Colour transfer function: $f(s)=c$
 
 Any functional expression can map s into values for the colour
 components $c_1,c_2,c_3$

@@ -9,32 +9,32 @@ manipulating the corresponding matrix\
 We can process (transform) images by manipulating the corresponding
 matrices
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/matrices.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/matrices.webp)
 
 # Transformation aims
 
 Four categories:
 
-- **Remove image degradations** introduced during capture
+-   **Remove image degradations** introduced during capture
 
-- **Improve image appearance** for viewing or further processing (i.e.
-  image enhancement)
+-   **Improve image appearance** for viewing or further processing (i.e.
+    image enhancement)
 
-- **Identify image features** for recognition of scene objects
+-   **Identify image features** for recognition of scene objects
 
-- **Transform image to alternative representation** for efficient
-  processing
+-   **Transform image to alternative representation** for efficient
+    processing
 
 # Types of image transforms
 
 An image transform processing $I_{input}$ to $I_{output}$ may be:
 
-- A point transform involving only a single pixel at a time
+-   A point transform involving only a single pixel at a time
 
-- A local transform involving the local image neighbourhood
-  (pixel+those immediately "next to it" - later in course)
+-   A local transform involving the local image neighbourhood
+    (pixel+those immediately "next to it" - later in course)
 
-- A global transform involving the whole image (later in course)
+-   A global transform involving the whole image (later in course)
 
 # Basic point transforms
 
@@ -82,7 +82,7 @@ each pixel increases brightness
 Application blending: adding images together produces a composite image
 of both inputs
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/addition.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/addition.webp)
 
 In both cases watch for integer overflow. The result of the addition can
 be out of range
@@ -107,7 +107,7 @@ Application image differencing: dividing an image by another
 
 This is less efficient than subtraction
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/division.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/division.webp)
 
 ## Multiplication
 
@@ -131,20 +131,20 @@ Alternatively,
 different weights can be used between images to enhance/suppress the
 features of different images in the final result
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/image_blending.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/image_blending.webp)
 
 # Bit planes
 
 Intuitively, logical (bit-wise) operations can be thought of as applied
 on bit planes
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/bit_planes.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/bit_planes.webp)
 
-- The most significant bit contains most of the information in the
-  image, and so image processing could just be done on that
+-   The most significant bit contains most of the information in the
+    image, and so image processing could just be done on that
 
-- Bit planes are used so that image processing can have a less complex
-  image to deal with, and so is faster
+-   Bit planes are used so that image processing can have a less complex
+    image to deal with, and so is faster
 
 # Logical operations
 
@@ -169,14 +169,14 @@ effect
 
 Can be used for:
 
-- Detecting differences or overlap between images - Not(A) and Not(B)
+-   Detecting differences or overlap between images - Not(A) and Not(B)
 
-- Highlighting appropriate regions with a mask - All black with white
-  round selection
+-   Highlighting appropriate regions with a mask - All black with white
+    round selection
 
-- Slicing bit planes through an image - And with powers of 2
+-   Slicing bit planes through an image - And with powers of 2
 
-- Superimpose images
+-   Superimpose images
 
 ## OR
 
@@ -202,9 +202,9 @@ This is a non invertible, lossy transform, information is destroyed.
 A simple way to do the conversion is to take a weighted sub of the R,G,B
 values:
 
-- Input RGB colour image, $I_c$
+-   Input RGB colour image, $I_c$
 
-- Output Grayscale image, $I_g$
+-   Output Grayscale image, $I_g$
 
 $$
 I_g=\alpha I_c (R) + \beta I_c (G) + \gamma I_c(B)
@@ -229,7 +229,7 @@ increases rapidly as the image size increases
 
 Solutions:
 
-- Parallel processing (traditional)
+-   Parallel processing (traditional)
 
-- Image pyramid approaches: down size image, do the processing, then
-  up-size again
+-   Image pyramid approaches: down size image, do the processing, then
+    up-size again

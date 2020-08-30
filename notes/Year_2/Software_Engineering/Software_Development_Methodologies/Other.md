@@ -6,15 +6,15 @@ title: Other Methodologies
 
 Used to track itemised work at any level:
 
-- Arrangement of columns to track work progress
+-   Arrangement of columns to track work progress
 
-- Each column represents a step in the development process
+-   Each column represents a step in the development process
 
-- Each user story tracked across the columns
+-   Each user story tracked across the columns
 
-- Used to define next steps to be completed
+-   Used to define next steps to be completed
 
-- Easy to identify progress and bottlenecks
+-   Easy to identify progress and bottlenecks
 
 # Introduction to other models
 
@@ -52,44 +52,44 @@ A SD philosophy that emphasises careful design, quality code, software testing a
 
 # RAD(Rapid Application Development)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/RAD.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/RAD.webp)
 
-- Allows for greater flexibility than waterfall, but not as much as
-  agile
+-   Allows for greater flexibility than waterfall, but not as much as
+    agile
 
 # Spiral
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Spiral.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/Spiral.webp)
 
-- Linear model
+-   Linear model
 
-- Risk analysis - Make sure you are able to complete the part of the
-  spiral before the next analysis
+-   Risk analysis - Make sure you are able to complete the part of the
+    spiral before the next analysis
 
 # Prototyping
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Prototyping.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/Prototyping.webp)
 
 # Lean Innovation
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean-Innovation.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean-Innovation.webp)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean.webp)
 
 # DevOps
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps.webp)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps1.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps1.webp)
 
 # Not a Software Development Model
 
-- ITIL (Information Technology Infrastructure Library) v4
+-   ITIL (Information Technology Infrastructure Library) v4
 
-- Linked to DevOps, Agile and Lean
+-   Linked to DevOps, Agile and Lean
 
-- Service - Providing benefit to a person
+-   Service - Providing benefit to a person
 
-- Value - Return on what you are putting in
+-   Value - Return on what you are putting in
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/ITIL.png)
+![image](/img/Year_2/Software_Engineering/Methodologies/Other/ITIL.webp)

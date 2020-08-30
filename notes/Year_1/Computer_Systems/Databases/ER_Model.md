@@ -4,155 +4,155 @@ title: The entity relationship models
 
 # Why a data model?
 
-- A model: an abstract representation of something existing in the
-  real world
+-   A model: an abstract representation of something existing in the
+    real world
 
-- Models help make complex things understandable
+-   Models help make complex things understandable
 
-- In databases:
+-   In databases:
 
-  - DDL is too low level
+    -   DDL is too low level
 
-  - not easily understandable by most users
+    -   not easily understandable by most users
 
-- We have seen:
+-   We have seen:
 
-  - Relational data model
+    -   Relational data model
 
-  - Relations between data $\rightarrow$ stored in tables
+    -   Relations between data $\rightarrow$ stored in tables
 
-  - based on the concept of mathematical relations
+    -   based on the concept of mathematical relations
 
 # Entity-Relationship Model
 
-- Relational data model
+-   Relational data model
 
-  - Sometimes still too low level for big companies
+    -   Sometimes still too low level for big companies
 
-  - we need a model of communication that is non technical and free
-    of ambiguities
+    -   we need a model of communication that is non technical and free
+        of ambiguities
 
-- Entity relationship model - a graphical description of the DB
+-   Entity relationship model - a graphical description of the DB
 
-- A **top down** approach to database design
+-   A **top down** approach to database design
 
-  - Start with a set of requirements
+    -   Start with a set of requirements
 
-  - identify the types of "things" that you need to represent data
-    about
+    -   identify the types of "things" that you need to represent data
+        about
 
-  - Identify the attributes of those "things"
+    -   Identify the attributes of those "things"
 
-- Objective of the ER model
+-   Objective of the ER model
 
-  - To help understanding of the nature and relationships among the
-    data
+    -   To help understanding of the nature and relationships among the
+        data
 
-  - To help deriving the tables in the relational data model
+    -   To help deriving the tables in the relational data model
 
-- Most important before building the ER model:
+-   Most important before building the ER model:
 
-  - proper understanding of the problem domain (the scenario)
+    -   proper understanding of the problem domain (the scenario)
 
-  - lack of understanding $\rightarrow$ wrong ER model $\rightarrow$
-    wrong DB design
+    -   lack of understanding $\rightarrow$ wrong ER model $\rightarrow$
+        wrong DB design
 
-- Basic concepts:
+-   Basic concepts:
 
-  - the important data objects (entities)
+    -   the important data objects (entities)
 
-  - the important properties of the entities (attributes)
+    -   the important properties of the entities (attributes)
 
-  - the associations between the entities (relationships)
+    -   the associations between the entities (relationships)
 
-- Furthermore - constraints on the entities, relationships and
-  attributes
+-   Furthermore - constraints on the entities, relationships and
+    attributes
 
-- Several notations for representing the ER model:
+-   Several notations for representing the ER model:
 
-  - Crow's foot notation
+    -   Crow's foot notation
 
-  - UML notation (unified modelling language)
+    -   UML notation (unified modelling language)
 
 # Main components of an ER model
 
-- An entity
+-   An entity
 
-  - any real thing that we recognise as a separate concern within
-    the database
+    -   any real thing that we recognise as a separate concern within
+        the database
 
-  - important enough to be represented separately
+    -   important enough to be represented separately
 
-  - A rectangle represents an entity type
+    -   A rectangle represents an entity type
 
-- Relationship
+-   Relationship
 
-  - A named association between two entity types
+    -   A named association between two entity types
 
-  - Shown by a labelled line connecting two entities
+    -   Shown by a labelled line connecting two entities
 
 # Cardinality
 
-- The cardinality of a relationship - the number of entity occurrences
-  that are related to a single occurence of an associated entity type
-  through this relationship
+-   The cardinality of a relationship - the number of entity occurrences
+    that are related to a single occurence of an associated entity type
+    through this relationship
 
-- The cardinality of a relationship can be
+-   The cardinality of a relationship can be
 
-  - one to one
+    -   one to one
 
-  - one to many
+    -   one to many
 
-  - many to many
+    -   many to many
 
 Many to one is not needed, as it is just the opposite way round as one
 to many.
 
 # Optionality and participation
 
-- Optionality is where a relationship could or could not exist, and is
-  denoted by a circle in the ER diagram
+-   Optionality is where a relationship could or could not exist, and is
+    denoted by a circle in the ER diagram
 
-  ![image](/img/Year_1/CSys/Databases/ER_Model/optionality.png)
+    ![image](/img/Year_1/CSys/Databases/ER_Model/optionality.webp)
 
-- if an entity participates optionally in a relationship:
+-   if an entity participates optionally in a relationship:
 
-  - it has partial participation
+    -   it has partial participation
 
-  - otherwise it has total participation
+    -   otherwise it has total participation
 
-- In the ER diagram total participation is denoted by a vertical bar
+-   In the ER diagram total participation is denoted by a vertical bar
 
-  ![image](/img/Year_1/CSys/Databases/ER_Model/participation.png)
+    ![image](/img/Year_1/CSys/Databases/ER_Model/participation.webp)
 
 # Attributes
 
-- The attributes of an entity
+-   The attributes of an entity
 
-  - The set of all common characteristics that are shared by all
-    entity occurrences of an entity type
+    -   The set of all common characteristics that are shared by all
+        entity occurrences of an entity type
 
-- Diagrammatic representation of attributes have primary keys
-  underlined
+-   Diagrammatic representation of attributes have primary keys
+    underlined
 
-  - for every attribute one **labeled ellipse** attached to the
-    entity rectangle
+    -   for every attribute one **labeled ellipse** attached to the
+        entity rectangle
 
-  - all attributes in the lower part of the entity rectangle
+    -   all attributes in the lower part of the entity rectangle
 
 ## Determining the attributes
 
 What are the appropriate attributes
 
-- We first look for the natural characteristics of an entity
+-   We first look for the natural characteristics of an entity
 
-- an attribute can be associated with a value domain
+-   an attribute can be associated with a value domain
 
-- Single value attribute - holds only one value
+-   Single value attribute - holds only one value
 
-- Multivalued attribute - holds many values
+-   Multivalued attribute - holds many values
 
-- Derived attribute - derivable from the value of a related attribute
+-   Derived attribute - derivable from the value of a related attribute
 
 # Step by step construction of an ER model
 

@@ -8,26 +8,26 @@ There are $2^{2^k}$ possible boolean operations on k inputs
 
 ## XOR
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/XOR.webp)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR2.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/XOR2.webp)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR3.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/XOR3.webp)
 
 # Functionally complete sets
 
 Any logic circuit can be constructed from just the 3 operators:
 
-- AND, OR, NOT
+-   AND, OR, NOT
 
-- They form a functionally complete set
+-   They form a functionally complete set
 
-- It has been shown that NOR gates alone form a functionally complete
-  set
+-   It has been shown that NOR gates alone form a functionally complete
+    set
 
 ## NOR Gates
 
-![image](/img/Year_1/CSys/DEMA/Boolean/NOR.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/NOR.webp)
 
 ## NAND Chips
 
@@ -39,40 +39,40 @@ than NOR gates, so are often used as universal gates
 Digital design is all about managing the complexity of huge numbers of
 interacting elements. Some principles help humans do this:
 
-- Abstraction: Hiding details when they aren't important.
+-   Abstraction: Hiding details when they aren't important.
 
-- Discipline: Restricting design choices to make things easier to
-  model, design and combine. E.g. the logic families and the digital
-  abstraction.
+-   Discipline: Restricting design choices to make things easier to
+    model, design and combine. E.g. the logic families and the digital
+    abstraction.
 
 The three --y's:
 
-- Hierarchy: dividing a system into modules and submodules
+-   Hierarchy: dividing a system into modules and submodules
 
-- Modularity: well-defined functions and interfaces for modules
+-   Modularity: well-defined functions and interfaces for modules
 
-- Regularity: encouraging uniformity to modules can be swapped or
-  reused.
+-   Regularity: encouraging uniformity to modules can be swapped or
+    reused.
 
 ## Circuits
 
 A circuit has:
 
-- one or more discrete valued input terminals
+-   one or more discrete valued input terminals
 
-- one or more discrete valued output terminals
+-   one or more discrete valued output terminals
 
-- a specification of the relationship between inputs and outputs
+-   a specification of the relationship between inputs and outputs
 
-- a specification of the delay between inputs changing and outputs -
-  performance specification responding
+-   a specification of the delay between inputs changing and outputs -
+    performance specification responding
 
 The circuit is made up of elements and nodes:
 
-- An **element** is itself a circuit with inputs, outputs and specs.
+-   An **element** is itself a circuit with inputs, outputs and specs.
 
-- A **node** is a wire joining elements, whose voltage conveys a
-  discrete valued variable.
+-   A **node** is a wire joining elements, whose voltage conveys a
+    discrete valued variable.
 
 ## Combinatorial Logic
 
@@ -81,24 +81,24 @@ Arbitrary circuits can include short circuits and instability, so we
 restrict what we allow, firstly to combinational logic (and later
 sequential logic). Combinational logic rules:
 
-- **Individual gates** are combinational circuits.
+-   **Individual gates** are combinational circuits.
 
-- Every circuit **element** must be a combinational circuit.
+-   Every circuit **element** must be a combinational circuit.
 
-- Every node is either an input to the circuit or connecting to
-  **exactly one output** of a circuit element
+-   Every node is either an input to the circuit or connecting to
+    **exactly one output** of a circuit element
 
-- The circuit has **no cyclic paths** -- every path through the
-  circuit visits any node at most once.
+-   The circuit has **no cyclic paths** -- every path through the
+    circuit visits any node at most once.
 
 # Boolean Algebra
 
-- The algebra of 0/1 variables.
+-   The algebra of 0/1 variables.
 
-- Used for specifying the function of a combinational circuit
+-   Used for specifying the function of a combinational circuit
 
-- Used to analyse and simplify the circuits required to give a
-  specified truth table.
+-   Used to analyse and simplify the circuits required to give a
+    specified truth table.
 
 Variables are represented by letters, e.g. A, B, C...
 
@@ -124,35 +124,35 @@ A **maxterm** is a sum involving all the inputs to a function.
 
 ## Truth Table to Boolean Equation
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToBool.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/TruthToBool.webp)
 
 ## Truth Table to SOP (Sum of Products)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToSOP.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/TruthToSOP.webp)
 
-- The minterms are true only for the combination of inputs
+-   The minterms are true only for the combination of inputs
 
-- Note that the diagram above has the wrong row highlighted, make
-  modifications myself.
+-   Note that the diagram above has the wrong row highlighted, make
+    modifications myself.
 
 ## Example
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Example.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/Example.webp)
 
 ![image](/img/Year_1/CSys/DEMA/Boolean/Example2)
 
 ## Truth Table to POS
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToPOS.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/TruthToPOS.webp)
 
-- These are specified so that the situation does not come up that you
-  are on a 0 row
+-   These are specified so that the situation does not come up that you
+    are on a 0 row
 
 ## Boolean Algebra
 
 Two equivalent expression for the same logical formula:
 
-![image](/img/Year_1/CSys/DEMA/Boolean/BoolForm.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/BoolForm.webp)
 
 Which is simpler?
 
@@ -163,7 +163,7 @@ equivalent expression that can then be turned into circuitry
 
 # Axioms of Boolean Algebra
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Axioms.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/Axioms.webp)
 
 Axioms cannot be proven -- they are defined or assumed.
 
@@ -171,9 +171,9 @@ Each axiom has a dual obtained by interchanging AND and OR, and 0 and 1.
 
 # Theorems of several variables
 
-![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar.png)
-![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar2.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar.webp)
+![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar2.webp)
 
 # De Morgans
 
-![image](/img/Year_1/CSys/DEMA/Boolean/DeMorgan.png)
+![image](/img/Year_1/CSys/DEMA/Boolean/DeMorgan.webp)

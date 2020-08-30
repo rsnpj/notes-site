@@ -113,7 +113,7 @@ for i = 1 to m:
 return c and b
 ```
 
-![image](/img/Year_2/Theory_of_Computation/AAC/LCS/algorithm.png)
+![image](/img/Year_2/Theory_of_Computation/AAC/LCS/algorithm.webp)
 
 # Constructing an LCS
 

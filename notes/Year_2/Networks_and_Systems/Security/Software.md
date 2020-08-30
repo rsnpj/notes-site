@@ -23,7 +23,7 @@ title: Software Security
 
 # Computer Architecture
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/Computer_Architecture.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/Computer_Architecture.webp)
 
 # GPU
 
@@ -31,33 +31,33 @@ title: Software Security
 
 # The Stack
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/stack.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/stack.webp)
 
-- When a program thread starts, the operating system reserves some
-  amount of space for the stack - stack memory does not grow during
-  runtime
+-   When a program thread starts, the operating system reserves some
+    amount of space for the stack - stack memory does not grow during
+    runtime
 
 The stack being full is cased by
 
-- Badly written recursive functions
+-   Badly written recursive functions
 
-- Too much local memory allocated (especially with multi-threading)
+-   Too much local memory allocated (especially with multi-threading)
 
 # The Heap
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/heap.png)
+![image](/img/Year_2/Networks_and_Systems/Security/Software/heap.webp)
 
-- Memory is not guaranteed to be initialised to zero
+-   Memory is not guaranteed to be initialised to zero
 
-- Can malloc memory to same size of some sensitive data
+-   Can malloc memory to same size of some sensitive data
 
-- Stack is in registers, heap is in main memory
+-   Stack is in registers, heap is in main memory
 
 # Understanding the platform
 
-- The key to writing good, secure software is to understand the
-  platform
+-   The key to writing good, secure software is to understand the
+    platform
 
-- Hardware is the base platform (for software)
+-   Hardware is the base platform (for software)
 
-- Lots of things get in the way
+-   Lots of things get in the way

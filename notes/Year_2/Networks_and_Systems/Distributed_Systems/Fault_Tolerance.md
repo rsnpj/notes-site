@@ -8,113 +8,113 @@ title: Fault Tolerance
 
 # Approaches based on redundancy
 
-- Apply duplication to increase system reliability
+-   Apply duplication to increase system reliability
 
-- System architecture approach
+-   System architecture approach
 
-  - Incorporate Active or Passive replication
+    -   Incorporate Active or Passive replication
 
-  - Design server configuration and number of replicated servers
+    -   Design server configuration and number of replicated servers
 
-  - Could be expensive due to requiring extra hardware
+    -   Could be expensive due to requiring extra hardware
 
-- Operational approach
+-   Operational approach
 
-  - Replicate system operations to offer fault tolerance
+    -   Replicate system operations to offer fault tolerance
 
-    - Time redundancy
+        -   Time redundancy
 
-    - Component redundancy
+        -   Component redundancy
 
-    - Information redundancy
+        -   Information redundancy
 
-    - Communication redundancy
+        -   Communication redundancy
 
 ## Time redundancy
 
-- Perform the same operation multiple times
+-   Perform the same operation multiple times
 
-- No fault if getting the same result each time
+-   No fault if getting the same result each time
 
-- Detect temporary faults but not permanent ones
+-   Detect temporary faults but not permanent ones
 
-- Impact system performance
+-   Impact system performance
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Time_Redundancy.png)
+![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Time_Redundancy.webp)
 
 ## Component redundancy
 
 Replicate component and compare outputs:
 
-- Introduce two or more independent running components which provide
-  the same functionalities
+-   Introduce two or more independent running components which provide
+    the same functionalities
 
-- Impose little or no performance impact
+-   Impose little or no performance impact
 
 N-Version Programming (NVP):
 
-- Design diversity - implementing multiple versions of the program
+-   Design diversity - implementing multiple versions of the program
 
-- Tolerate hardware and software faults, but not correlated faults
+-   Tolerate hardware and software faults, but not correlated faults
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Component_Redundancy.png)
+![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Component_Redundancy.webp)
 
 ## Information Redundancy
 
 Encode outputs with error detection or correcting code\
 Advantage:
 
-- Less hardware is required than replicating module
+-   Less hardware is required than replicating module
 
-- Support fault detection
+-   Support fault detection
 
 Drawback
 
-- Added complexity in design
+-   Added complexity in design
 
-- Fault recovery capability may be limited
+-   Fault recovery capability may be limited
 
 # Communication Failures
 
 Client is unable to locate server
 
-- Use an exception handler (programming language dependent)
+-   Use an exception handler (programming language dependent)
 
-- Check out available/update servers from a directory service
+-   Check out available/update servers from a directory service
 
 Client request to server is lost:
 
-- Apply timeout to await server reply then re-send
+-   Apply timeout to await server reply then re-send
 
-- If multiple requests appear to get lost assume "can’t locate server"
-  error
+-   If multiple requests appear to get lost assume "can’t locate server"
+    error
 
 Server crashes after receiving client request
 
-- Server may stop before or after returning the info, or before ACK
+-   Server may stop before or after returning the info, or before ACK
 
-- Store user request in the FE
+-   Store user request in the FE
 
-- Rebuild or use alternate server to retry request
+-   Rebuild or use alternate server to retry request
 
-- Give up and report failure
+-   Give up and report failure
 
 Server reply to client is lost
 
-- Apply timeout to await server reply
+-   Apply timeout to await server reply
 
 # General Workflow towards fault tolerance
 
-- Error (or fault) detection and diagnosis
+-   Error (or fault) detection and diagnosis
 
-- Failure isolation - system must be able to isolate the failure to
-  the offending component
+-   Failure isolation - system must be able to isolate the failure to
+    the offending component
 
-- Error containment - confine the effects of hardware or software
-  faults to the region where they occur
+-   Error containment - confine the effects of hardware or software
+    faults to the region where they occur
 
-- Recovery - move the system to a state that does not contain the
-  error
+-   Recovery - move the system to a state that does not contain the
+    error
 
 # Backwards recovery
 
@@ -124,17 +124,17 @@ Server reply to client is lost
 
 Checkpointing
 
-- Each DS component periodically saves its state, which contains
-  sufficient information to restart component execution
+-   Each DS component periodically saves its state, which contains
+    sufficient information to restart component execution
 
 <Definition name="Global Checkpoint">
     To support state saving, a consistent global checkpoint can be set up, which comprises a set of N local checkpoints, one from each DS component, forming a consistent system state
 </Definition>
 
-- Component execution can be restarted upon failure by following the
-  saved checkpoints
+-   Component execution can be restarted upon failure by following the
+    saved checkpoints
 
-- The most recent consistent checkpoint is called the recovery line
+-   The most recent consistent checkpoint is called the recovery line
 
 ## Types of checkpointing
 
@@ -188,23 +188,23 @@ Methods to avoid stopping the system:
 
 ## Backward Recovery
 
-- Require no knowledge about the error
+-   Require no knowledge about the error
 
-- Only need to mainatin some prior error free state
+-   Only need to mainatin some prior error free state
 
-- Application independent
+-   Application independent
 
-- Limitations: resource/time consumption, domino effect
+-   Limitations: resource/time consumption, domino effect
 
 ## Forward Recovery
 
-- Efficient in terms of time and storage space
+-   Efficient in terms of time and storage space
 
-- Require knowledge of error
+-   Require knowledge of error
 
-- Application dependent
+-   Application dependent
 
-- Use when significant system delay is not acceptable
+-   Use when significant system delay is not acceptable
 
 # Measurement of system quality
 

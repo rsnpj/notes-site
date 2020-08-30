@@ -22,25 +22,25 @@ Images may contain visually non essential information that is ignored by the hum
 
 Lossy compression:
 
-- Used when images need not be reproduced exactly and an approximation
-  is OK
+-   Used when images need not be reproduced exactly and an approximation
+    is OK
 
-- Compression artefacts in the image, which may not be visible
+-   Compression artefacts in the image, which may not be visible
 
-- Source of noise for image processing and computer vision algorithms
+-   Source of noise for image processing and computer vision algorithms
 
-- Widely used, efficient implementations exists
+-   Widely used, efficient implementations exists
 
 Lossless compression:
 
-- Computationally more expensive
+-   Computationally more expensive
 
-- Resulting file size often larger than corresponding lossy
-  compression files
+-   Resulting file size often larger than corresponding lossy
+    compression files
 
-- No additional noise to the image
+-   No additional noise to the image
 
-- Generally less widely used
+-   Generally less widely used
 
 # JPEG
 
@@ -67,7 +67,7 @@ elements of the DCT matrix and real numbers.
 The 2D DCT uses a set of 2D matrices as basis functions, each one
 corresponding to a 2D cosine function
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Compression/Basis_Functions.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Compression/Basis_Functions.webp)
 
 ## JPEG Compression
 

@@ -39,11 +39,11 @@ $$
 
 ### Proof
 
-- Selecting k objects out of n is the same as leaving out k-n elements
+-   Selecting k objects out of n is the same as leaving out k-n elements
 
-- LHS counts the number of ways to select k
+-   LHS counts the number of ways to select k
 
-- RHS counts the number of ways to leave n-k out
+-   RHS counts the number of ways to leave n-k out
 
 # Pascal's identity
 
@@ -59,7 +59,7 @@ $$
 
 ### Direct Proof
 
-![Proof](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_proof.png)
+![Proof](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_proof.webp)
 
 ### Combinatorial Proof
 
@@ -72,22 +72,22 @@ $$
 Show that both sides of the identity count the same things in a different
 way:
 
-- The left hand side counts all the possible subsets of k elements
-  from a set of n+1 elements
+-   The left hand side counts all the possible subsets of k elements
+    from a set of n+1 elements
 
-- Fix one element x. The right hand side counts:
+-   Fix one element x. The right hand side counts:
 
-  - All the possible k subsets containing x (we have to choose
-    another k-1 elements from the other n elements) plus,
+    -   All the possible k subsets containing x (we have to choose
+        another k-1 elements from the other n elements) plus,
 
-  - All the possible k subsets not containing x (we still have to
-    choose k elements from the other n elements)
+    -   All the possible k subsets not containing x (we still have to
+        choose k elements from the other n elements)
 
 # Pascal's Triangle and Binomial Coefficients
 
-![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_1.png)
+![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_1.webp)
 
-![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_2.png)
+![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_2.webp)
 
 # Binomial Theorem
 
@@ -109,11 +109,11 @@ The coefficients are rows in Pascal's triangle
 
 ## Idea of the proof
 
-- In the expansion of $(x+y)^n$ we obtain the value of "n choose k"
-  as the coefficient of the term $x^{n-k}y^{k}$
+-   In the expansion of $(x+y)^n$ we obtain the value of "n choose k"
+    as the coefficient of the term $x^{n-k}y^{k}$
 
-- This is because one has to choose a y from k of the n brackets x+y
-  in the expansion; the other n-k are all x
+-   This is because one has to choose a y from k of the n brackets x+y
+    in the expansion; the other n-k are all x
 
 ## Examples
 
@@ -144,11 +144,11 @@ $$
 
 As with anagrams
 
-- There are $C(n,n_1)$ choices to put $n_1$ type 1 objects in n
-  positions
+-   There are $C(n,n_1)$ choices to put $n_1$ type 1 objects in n
+    positions
 
-- Then $C(n-n_1,n_2)$ choices t put $n_2$ type 2 objects in the
-  remaining $n-n_1$ positions, and so on
+-   Then $C(n-n_1,n_2)$ choices t put $n_2$ type 2 objects in the
+    remaining $n-n_1$ positions, and so on
 
 The total number is:
 
@@ -179,21 +179,21 @@ $C(n+r-1,n-1)=C(n+r-1,r)$
 _How many ways are there to distribute n objects into k boxes?_\
 The answer depends of whether the objects/boxes are distinguishable
 
-- D objects into D boxes
+-   D objects into D boxes
 
-  - Ex. Dealing 52 cards to 4 people
+    -   Ex. Dealing 52 cards to 4 people
 
-- inD objects into D Boxes
+-   inD objects into D Boxes
 
-  - Identical balls into numbered boxes
+    -   Identical balls into numbered boxes
 
-- D objects into inD Boxes
+-   D objects into inD Boxes
 
-  - Numbered balls into identical boxes
+    -   Numbered balls into identical boxes
 
-- inD objects into inD Boxes
+-   inD objects into inD Boxes
 
-  - Identical balls into identical boxes
+    -   Identical balls into identical boxes
 
 ## Objects into D-Boxes
 

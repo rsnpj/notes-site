@@ -8,11 +8,11 @@ Enables operations which are relatively complex in the spatial domain to
 be computed as simpler and computationally more efficient operations in
 Fourier space, such as:
 
-- Convolution
+-   Convolution
 
-- Correlation
+-   Correlation
 
-- De-convolution
+-   De-convolution
 
 <Important>
 Don't forget, the equation of a circle is
@@ -90,7 +90,7 @@ $$
 Ringing occurs at sharp edges in the image because sharp frequency
 cut-offs are poorly approximated in the spatial domain
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Filtering/low_pass.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Filtering/low_pass.webp)
 
 ## Gaussian low pass filter
 

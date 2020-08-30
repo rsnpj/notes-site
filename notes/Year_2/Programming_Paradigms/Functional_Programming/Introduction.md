@@ -53,12 +53,12 @@ print(f(1))=> "3"
 
 # A functional approach
 
-- Forbid variable assignment and side effects in the language "pure
-  functional"
+-   Forbid variable assignment and side effects in the language "pure
+    functional"
 
-- Makes reasoning about code simpler (for humans and compilers)
+-   Makes reasoning about code simpler (for humans and compilers)
 
-- A new programming paradigm: takes some time to get used to
+-   A new programming paradigm: takes some time to get used to
 
 # Why programming languages
 
@@ -72,43 +72,43 @@ add 3, reg1, reg2; add 3 to reg1 and write into reg2
 mov reg2, addr_b; write reg2 to address of b
 ```
 
-- Explicit about what is going on
+-   Explicit about what is going on
 
-- Obfuscates algorithm from implementation
+-   Obfuscates algorithm from implementation
 
-- Not portable (would need different instructions for different
-  hardware e.g. different registers)
+-   Not portable (would need different instructions for different
+    hardware e.g. different registers)
 
-- Not easy to modify
+-   Not easy to modify
 
-- Not succinct
+-   Not succinct
 
 ## Programming languages
 
-- Allow writing code to an abstract machine model
+-   Allow writing code to an abstract machine model
 
-- A translator of some kind (perhaps a compiler) transforms this code
-  into something that executes on some hardware (sometimes this
-  hardware is a virtual machine)
+-   A translator of some kind (perhaps a compiler) transforms this code
+    into something that executes on some hardware (sometimes this
+    hardware is a virtual machine)
 
-- Some virtual machines are "hybrid": they do just-in-time compilation
+-   Some virtual machines are "hybrid": they do just-in-time compilation
 
-- The Haskell distribution we will use has both Compiler and
-  Interpreter mode
+-   The Haskell distribution we will use has both Compiler and
+    Interpreter mode
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Introduction/Compiler.png)
+![image](/img/Year_2/Programming_Paradigms/Functional/Introduction/Compiler.webp)
 
-- Micro-architecture just reads an instruction stream
+-   Micro-architecture just reads an instruction stream
 
-- Note easy to program complex algorithms in such a "language" so use
-  abstractions leading to high level languages
+-   Note easy to program complex algorithms in such a "language" so use
+    abstractions leading to high level languages
 
-- Features driven by programming paradigm considerations, domain
-  knowledge, wanting to target particular hardware...
+-   Features driven by programming paradigm considerations, domain
+    knowledge, wanting to target particular hardware...
 
-- Compiler or interpreter maps this language onto machine instructions
+-   Compiler or interpreter maps this language onto machine instructions
 
-- Therefore we need a formal specification
+-   Therefore we need a formal specification
 
 # Example
 
@@ -120,12 +120,12 @@ filter p (x:xs)
     | otherwise = filter p xs
 ```
 
-- Higher order
+-   Higher order
 
-- Polymorphic (works for all types a) (functions that take functions
-  as parameters)
+-   Polymorphic (works for all types a) (functions that take functions
+    as parameters)
 
-- Function defined with recursion and pattern matching
+-   Function defined with recursion and pattern matching
 
 # Syntax and Semantics
 
@@ -135,11 +135,11 @@ filter p (x:xs)
 
 # Naming Requirements
 
-- Can have characters in function names, for example `x’`
+-   Can have characters in function names, for example `x’`
 
-- s at the end to show a list
+-   s at the end to show a list
 
-- lowercase letter to start
+-   lowercase letter to start
 
 # Comments
 

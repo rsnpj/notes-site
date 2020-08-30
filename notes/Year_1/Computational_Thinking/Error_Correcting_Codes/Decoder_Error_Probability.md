@@ -17,11 +17,11 @@ Impossible to predict how many errors will occur
 
 If more than t errors occur, two situations could happen
 
-- The decoder cannot find any codeword at a distance $\leqslant$ t
-  from the received vector: Decoder **failure**
+-   The decoder cannot find any codeword at a distance $\leqslant$ t
+    from the received vector: Decoder **failure**
 
-- The decoder finds another (wrong) codeword at distance $\leqslant$ t
-  from the received vector: Decoder **error**
+-   The decoder finds another (wrong) codeword at distance $\leqslant$ t
+    from the received vector: Decoder **error**
 
 Failure: Ask for retransmission. No big deal\
 Error: the decoder is totally oblivious. Much more problematic.\
@@ -44,19 +44,19 @@ $$
 
 Suppose we send the all zero codeword C=(0,0,0,0,0)
 
-- If the vector v=(0,1,0,1,0) is received: failure
+-   If the vector v=(0,1,0,1,0) is received: failure
 
-- If the vector v=(1,1,0,0,0) is received: error
+-   If the vector v=(1,1,0,0,0) is received: error
 
 # Decoder error probability
 
 In general, the decoder error probability (DEP) depends on:
 
-- The channel
+-   The channel
 
-- The code we use
+-   The code we use
 
-- The transmitted codeword
+-   The transmitted codeword
 
 For a given channel and a given code, it can be determined
 
@@ -67,7 +67,7 @@ simplify the channel model
 
 Binary symmetric channel (BSC) with crossover probability p:
 
-![image](/img/Year_1/CT/ECC/bsc1.png)
+![image](/img/Year_1/CT/ECC/bsc1.webp)
 
 ## How many errors?
 

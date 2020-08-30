@@ -4,14 +4,14 @@ title: Data Link Layer
 
 # Frames
 
-- Link layer accepts packets from the network layer, and encapsulates
-  them into frames that it sends using the physical layer; reception
-  is the opposite process
+-   Link layer accepts packets from the network layer, and encapsulates
+    them into frames that it sends using the physical layer; reception
+    is the opposite process
 
-- The physical layer (below) is responsible for the transmission of
-  raw sequences of bits
+-   The physical layer (below) is responsible for the transmission of
+    raw sequences of bits
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/frame.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/frame.webp)
 
 # Framing methods
 
@@ -27,7 +27,7 @@ be incorrect.
 We add a header (e.g. the length of the data, etc.) and a trailer (extra
 data that can be used e.g. error-detection or error-correction)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/flag.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/flag.webp)
 
 Two adjacent frames are separated by a flag
 
@@ -39,13 +39,13 @@ Special flag bytes delimit frames; occurrences of flags in the data must
 If the flag value is found in the data you get lost again. The solution
 to this is byte or bit stuffing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing1.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing1.webp)
 
 ## Bit stuffing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/bit_stuffing.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/bit_stuffing.webp)
 
 This is useful where you aren’t working in bytes, as frames can be any
 size now
@@ -64,34 +64,34 @@ Bit stuffing
 
 Sender:
 
-- Encloses packet (bit stream): `0 1 1 1 1 1 0`
+-   Encloses packet (bit stream): `0 1 1 1 1 1 0`
 
-- Appends a 0 after each `1 1 1 1 1` in body (bit stuffing)
+-   Appends a 0 after each `1 1 1 1 1` in body (bit stuffing)
 
 Receiver, upon receiving `0 1 1 1 1 1`:
 
-- next bit 0: stuffed bit is removed
+-   next bit 0: stuffed bit is removed
 
-- next bit 1
+-   next bit 1
 
-  - if next bit 0: end of frame marker
+    -   if next bit 0: end of frame marker
 
-  - if next bit 1: error
+    -   if next bit 1: error
 
 # Error detection and correction
 
-- Errors occur during frame transmission
+-   Errors occur during frame transmission
 
-- Two strategies to deal with error
+-   Two strategies to deal with error
 
-  - Include enough redundant information to help receivers deduce
-    original data (**error correcting**)
+    -   Include enough redundant information to help receivers deduce
+        original data (**error correcting**)
 
-  - Include enough information to deduce an error occurred (**error
-    detecting**)
+    -   Include enough information to deduce an error occurred (**error
+        detecting**)
 
-  - Neither error-correcting codes nor error-detecting codes can
-    handle all possible errors
+    -   Neither error-correcting codes nor error-detecting codes can
+        handle all possible errors
 
 **EDC** = Error detection and correction bits (redundancy)
 
@@ -100,7 +100,7 @@ Receiver, upon receiving `0 1 1 1 1 1`:
 Error detection is not 100% reliable, protocol may miss some errors, but
 rarely
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/EDC.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/EDC.webp)
 
 # Codeword
 
@@ -108,10 +108,10 @@ rarely
 The massage with check bits added
 </Definition>
 
-- A frame consists of m data (message) bits and r redundant (check)
-  bits
+-   A frame consists of m data (message) bits and r redundant (check)
+    bits
 
-- n-bit codewords with n=m+r
+-   n-bit codewords with n=m+r
 
 # Error codes
 
@@ -126,21 +126,21 @@ The number of bit positions in which two codewords differ
 
 We will see a specific hamming code that corrects a single error:
 
-- **Encoding**: we number the data bits starting from one and skipping
-  the powers of two. The powers of two are reserved for parity bits,
-  the rest are message bits.
+-   **Encoding**: we number the data bits starting from one and skipping
+    the powers of two. The powers of two are reserved for parity bits,
+    the rest are message bits.
 
-- **Decoding**: calculate all parities. If they are all OK, there was
-  no error. If not, add up the positions of the incorrect ones - this
-  gives us the position of the error
+-   **Decoding**: calculate all parities. If they are all OK, there was
+    no error. If not, add up the positions of the incorrect ones - this
+    gives us the position of the error
 
 Hamming code gives a simple way to add check bits and correct up to a
 single bit error
 
-- Check bits are parity over subsets of the codeword
+-   Check bits are parity over subsets of the codeword
 
-- Recomputing the parity sums (syndrome) gives the position of the
-  error to flip, or 0 if there is no error
+-   Recomputing the parity sums (syndrome) gives the position of the
+    error to flip, or 0 if there is no error
 
 # Error detection
 
@@ -153,12 +153,12 @@ bit for whatever the length of the message
 
 **Two dimensional bit parity** - detect and correct single bit errors
 
-- Write the message in rows
+-   Write the message in rows
 
-- Calculate the parity bit for both the row and column
+-   Calculate the parity bit for both the row and column
 
-- These can then be used to correct a bit error as there will be a
-  parity error on the corresponding row and column of the bit
+-   These can then be used to correct a bit error as there will be a
+    parity error on the corresponding row and column of the bit
 
 ## Checksum
 
@@ -187,14 +187,14 @@ codes
 
 Basic approach:
 
-- Let M1 be the message of n-bits
+-   Let M1 be the message of n-bits
 
-- M1 is padded with CRC code and send it
+-   M1 is padded with CRC code and send it
 
-- CRC is generated using a given polynomial P1 (or divisor)
+-   CRC is generated using a given polynomial P1 (or divisor)
 
-- P1 is agreed between sender and receiver
+-   P1 is agreed between sender and receiver
 
-- Receiver gets M1 + CRC and extracts the M1 using P1
+-   Receiver gets M1 + CRC and extracts the M1 using P1
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/CRC.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/CRC.webp)

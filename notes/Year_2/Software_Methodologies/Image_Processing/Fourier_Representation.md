@@ -15,14 +15,14 @@ operator
 
 Discrete Fourier Transform:
 
-- Decomposes image into frequency components (sinusoidal functions)
+-   Decomposes image into frequency components (sinusoidal functions)
 
-- Typically. the frequency components are arranged in array the same
-  size as the image (sometimes it is convenient to think of the output
-  of the DFT as an image, even though the ’pixel values’ are complex
-  numbers)
+-   Typically. the frequency components are arranged in array the same
+    size as the image (sometimes it is convenient to think of the output
+    of the DFT as an image, even though the ’pixel values’ are complex
+    numbers)
 
-- Major applications in image processing, analysis and compression
+-   Major applications in image processing, analysis and compression
 
 # Terminology
 
@@ -58,7 +58,7 @@ sum
 $\varphi$ is the phase. Changes in the phase shift a sinusoidal function
 left or right
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Fourier.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Fourier.webp)
 
 Low frequency components influence the coarse outline of the signal
 
@@ -74,7 +74,7 @@ We want to understand the signal as a sum of weighted and phase shifted
 frequencies. The Fourier transform reparametrises the signal by $\omega$
 instead of x
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/fourier_transform.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/fourier_transform.webp)
 
 $F(\omega)$ itself is called the Fourier transform of $f(x)$. The
 inverse Fourier transform applied on $F(\omega)$ parametrizes the signal
@@ -94,7 +94,7 @@ a vertical vector)
 $F(\omega)$: Fourier domain representation (N frequency coefficients
 arranged as a vertical vector)
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Discrete_Fourier.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Discrete_Fourier.webp)
 
 The inverse Fourier transform $M^{-1}*F(\omega)=f(x)$ is again a change
 of basis
@@ -118,7 +118,7 @@ $$
 By taking integrals instead of infinite sums, we can extend the Fourier
 transform to continuous functions
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Continuous_Fourier.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Continuous_Fourier.webp)
 
 # 2D sine functions
 
@@ -138,9 +138,9 @@ Why "discrete"? Because of the discrete nature of image sampling
 
 Computable efficiently via Fast Fourier Transform (FFT) algorithm
 
-- 1D FFT is $\mathcal{O}(N\log_2N)$
+-   1D FFT is $\mathcal{O}(N\log_2N)$
 
-- 2D FFT is a series of 2N 1D FFTs
+-   2D FFT is a series of 2N 1D FFTs
 
 # Fast Fourier Transform
 
@@ -152,7 +152,7 @@ than general matrix multiplication via the FFT algorithm
 
 # Visualising Fourier images
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/visualise.png)
+![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/visualise.webp)
 
 The output $F_{nm}$ of the DFT of an input image $I_{input}$ is a
 complex number valued output image containing the coefficients of the
@@ -246,29 +246,29 @@ others unchanged
 
 Example:
 
-- Compute and inspect the amplitude spectrum of the image
+-   Compute and inspect the amplitude spectrum of the image
 
-- Hand-craft a binary mask P
+-   Hand-craft a binary mask P
 
-  - 1 to keep a frequency
+    -   1 to keep a frequency
 
-  - 0 to remove that frequency
+    -   0 to remove that frequency
 
-- Component wise multiplication of amplitude spectrum and mask P
+-   Component wise multiplication of amplitude spectrum and mask P
 
-- Inverse Fourier transform
+-   Inverse Fourier transform
 
 JPEG compression algorithm based on a Fourier related transform called
 Discrete Cosine Transform (DCT) Efficient implementation of spatial
 filtering:
 
-- Make image and mask the same dimension by zero padding
+-   Make image and mask the same dimension by zero padding
 
-- Apply FFT to the image and to the mask
+-   Apply FFT to the image and to the mask
 
-- Component wise multiplication of the corresponding Fourier spectra
+-   Component wise multiplication of the corresponding Fourier spectra
 
-- Return to the spatial domain by applying inverse FFT
+-   Return to the spatial domain by applying inverse FFT
 
 If the mask is large, for example larger than $20\times 20$, the above
 algorithm is more efficient than doing to convolution directly in the

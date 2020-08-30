@@ -4,21 +4,21 @@ title: Introduction to Machine Learning
 
 # Machine Learning Lifecycle
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle.webp)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle1.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle1.webp)
 
-- Randomise the data order so that the model doesn’t train for
-  specific orders
+-   Randomise the data order so that the model doesn’t train for
+    specific orders
 
-- Two types of data, training and evaluation, to train and assess the
-  model respectively
+-   Two types of data, training and evaluation, to train and assess the
+    model respectively
 
-- To determine how to differentiate between things using our model
-  rather than using human judgement and manual rules
+-   To determine how to differentiate between things using our model
+    rather than using human judgement and manual rules
 
-- We can extrapolate the ideas to other problem domains as well, where
-  the same principles apply
+-   We can extrapolate the ideas to other problem domains as well, where
+    the same principles apply
 
 # What is machine learning?
 
@@ -28,11 +28,11 @@ A computer program is said to learn from experience E with respect to some class
 
 Machine learning is the study of algorithms that:
 
-- Improve their performance P
+-   Improve their performance P
 
-- At some task T
+-   At some task T
 
-- With experience E
+-   With experience E
 
 A well defined learning task is given by `<P,T,E>`
 
@@ -59,14 +59,14 @@ of the system
 Occasional positive and negative feedback is used to reinforce
 behaviours
 
-- Good behaviours are rewarded with a treat and become more common
+-   Good behaviours are rewarded with a treat and become more common
 
-- Bad behaviours are punished and become less common
+-   Bad behaviours are punished and become less common
 
 A reinforcement learning algorithm just aims to maximise its rewards by
 playing the game over and over again
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Categories.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Categories.webp)
 
 # Key terms
 

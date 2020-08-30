@@ -16,38 +16,38 @@ If V=W then f is called a linear operator
 
 ## Examples
 
-- The map $f:V\rightarrow W$ such that $f(u)=0$ for all u is linear
+-   The map $f:V\rightarrow W$ such that $f(u)=0$ for all u is linear
 
-- If A is an $m\times n$ matrix then the map
-  $f_A:\mathbb{R}^n\rightarrow \mathbb{R}^m$ given by $f_A(x)=Ax$ is
-  linear. (Here x and Ax are column vectors in $\mathbb{R}^n$ and
-  $\mathbb{R}^m$, respectively)\
-  Indeed,
-  $$
-  f _ { A } ( \mathbf { u } + \mathbf { v } ) = A ( \mathbf { u } + \mathbf { v } ) = A \mathbf { u } + A \mathbf { v } = f _ { A } ( \mathbf { u } ) + f _ { A } ( \mathbf { v } )
-  $$
-  and
-  $$
-  f _ { A } ( k \mathbf { u } ) = A ( k \mathbf { u } ) = k ( A \mathbf { u } ) = k f _ { A } ( \mathbf { u } )
-  $$
+-   If A is an $m\times n$ matrix then the map
+    $f_A:\mathbb{R}^n\rightarrow \mathbb{R}^m$ given by $f_A(x)=Ax$ is
+    linear. (Here x and Ax are column vectors in $\mathbb{R}^n$ and
+    $\mathbb{R}^m$, respectively)\
+    Indeed,
+    $$
+    f _ { A } ( \mathbf { u } + \mathbf { v } ) = A ( \mathbf { u } + \mathbf { v } ) = A \mathbf { u } + A \mathbf { v } = f _ { A } ( \mathbf { u } ) + f _ { A } ( \mathbf { v } )
+    $$
+    and
+    $$
+    f _ { A } ( k \mathbf { u } ) = A ( k \mathbf { u } ) = k ( A \mathbf { u } ) = k f _ { A } ( \mathbf { u } )
+    $$
 
 # Non-examples in $\mathbb{R}^2$
 
-- The map $g: \mathbb{R}^2\rightarrow \mathbb{R}^2$ defined by
-  $g(x,y)=(x,y+1)$ is not linear . Indeed, any linear map f satisfies
+-   The map $g: \mathbb{R}^2\rightarrow \mathbb{R}^2$ defined by
+    $g(x,y)=(x,y+1)$ is not linear . Indeed, any linear map f satisfies
 
-  $$
-  f ( \mathbf { 0 } ) = f ( 0 \mathbf { x } ) = 0 f ( \mathbf { x } ) = \mathbf { 0 }
-  $$
+    $$
+    f ( \mathbf { 0 } ) = f ( 0 \mathbf { x } ) = 0 f ( \mathbf { x } ) = \mathbf { 0 }
+    $$
 
-  and the above map g fails this property
+    and the above map g fails this property
 
-- The map $f: \mathbb{R}^2\rightarrow \mathbb{R}^2$ defined by
-  $f(x,y)=(0,xy)$ is not linear. Indeed, $$f(e_1+e_2)=f(1,1)=(0,1)$$
-  while
-  $$
-  f(e_1)+f(e_2)=f(0,1)+f(1,0)=(0,0)
-  $$
+-   The map $f: \mathbb{R}^2\rightarrow \mathbb{R}^2$ defined by
+    $f(x,y)=(0,xy)$ is not linear. Indeed, $$f(e_1+e_2)=f(1,1)=(0,1)$$
+    while
+    $$
+    f(e_1)+f(e_2)=f(0,1)+f(1,0)=(0,0)
+    $$
 
 # Example in $\mathbb{R}^2$
 
@@ -69,7 +69,7 @@ $$
 They correspond to **reflections** of $\mathbb{R}^2$ about the y-axis.
 x-axis, and line $x=y$ respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/reflections.png)
+![image](/img/Year_1/MCS/DMLA/Linear_Maps/reflections.webp)
 
 ## Orthogonal Projection
 
@@ -88,7 +88,7 @@ $f _ { A } ( x , y ) = ( 0 , y ) ,$ respectively.
 They correspond to the orthogonal projections of $\mathbb{R}^2$ onto
 x-axis and y-axis respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/projections.png)
+![image](/img/Year_1/MCS/DMLA/Linear_Maps/projections.webp)
 
 ## Rotation
 
@@ -108,7 +108,7 @@ $$
 This corresponds to the rotation of $\mathbb{R}^2$ by angle of $\theta$
 counter clock-wise
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/rotation.png)
+![image](/img/Year_1/MCS/DMLA/Linear_Maps/rotation.webp)
 
 ## Contraction/Dilation
 
@@ -127,7 +127,7 @@ $$
 
 This is **contraction** (if $0<k<1)$) or **dilation** (if $k>1$) of $\mathbb{R}^2$
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/contraction.png)
+![image](/img/Year_1/MCS/DMLA/Linear_Maps/contraction.webp)
 
 ## Compression/Expansion
 
@@ -146,7 +146,7 @@ $f _ { A } ( x , y ) = ( x , k y ) ,$ respectively.
 They correspond to **compressions** (if $0<k<1$) and **expansions** (if
 $k>1$) of $\mathbb{R}^2$ along x-axis and y-axis respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/compression.png)
+![image](/img/Year_1/MCS/DMLA/Linear_Maps/compression.webp)
 
 # Bases and Linear Maps
 
@@ -220,34 +220,34 @@ $$
 
 # The matrix of a linear map
 
-- Let $f: \mathbb{R}^n\rightarrow \mathbb{R}^m$ be a linear map
+-   Let $f: \mathbb{R}^n\rightarrow \mathbb{R}^m$ be a linear map
 
-- Let A be the $m\times n$ matrix
-  $\left[ f \left( \mathbf { e } _ { 1 } \right) \left| f \left( \mathbf { e } _ { 2 } \right) \right| \ldots | f \left( \mathbf { e } _ { n } \right) \right]$
-  whose columns are vectors $f(e_i)\in \mathbb{R}^m$. For example, if
-  $f:\mathbb{R}^3\rightarrow \mathbb{R}^2$ is linear and
-  $f(1,0,0)=(2,3)$
+-   Let A be the $m\times n$ matrix
+    $\left[ f \left( \mathbf { e } _ { 1 } \right) \left| f \left( \mathbf { e } _ { 2 } \right) \right| \ldots | f \left( \mathbf { e } _ { n } \right) \right]$
+    whose columns are vectors $f(e_i)\in \mathbb{R}^m$. For example, if
+    $f:\mathbb{R}^3\rightarrow \mathbb{R}^2$ is linear and
+    $f(1,0,0)=(2,3)$
 
 $$
 f ( 0,1,0 ) = ( 0,0 ) , f ( 0,0,1 ) = ( - 1,1 ) \text { then } A = \left( \begin{array} { c c c } { 2 } & { 0 } & { - 1 } \\ { 3 } & { 0 } & { 1 } \end{array} \right)
 $$
 
-- Note that $f(e_i)=Ae_i=f_A(e_i)$ for all i, For example
+-   Note that $f(e_i)=Ae_i=f_A(e_i)$ for all i, For example
 
 $$
 f \left( \mathbf { e } _ { 2 } \right) = \left( \begin{array} { c } { a _ { 12 } } \\ { a _ { 22 } } \\ { \vdots } \\ { a _ { m 2 } } \end{array} \right) = \left( \begin{array} { c c c c } { a _ { 11 } } & { a _ { 12 } } & { \cdots } & { a _ { 1 n } } \\ { a _ { 21 } } & { a _ { 22 } } & { \cdots } & { a _ { 2 n } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { a _ { m 1 } } & { a _ { m 2 } } & { \cdots } & { a _ { m n } } \end{array} \right) \left( \begin{array} { c } { 0 } \\ { 1 } \\ { \vdots } \\ { 0 } \end{array} \right) = A \mathbf { e } _ { 2 } = f _ { A } \left( \mathbf { e } _ { 2 } \right)
 $$
 
-- Since f and $f_A$ agree on all vectors in a basis, we have $f=f_A$
+-   Since f and $f_A$ agree on all vectors in a basis, we have $f=f_A$
 
-- Hence, every linear map $f:\mathbb{R}^n\rightarrow \mathbb{R}^m$ of
-  the form $f_A$ for some matrix A
+-   Hence, every linear map $f:\mathbb{R}^n\rightarrow \mathbb{R}^m$ of
+    the form $f_A$ for some matrix A
 
-- This matrix A is called the (standard) matrix of linear map f
+-   This matrix A is called the (standard) matrix of linear map f
 
-- Thus, linear maps from $\mathbb{R}^n$ to $\mathbb{R}^m$ are in
-  1-to-1 correspondence with $m\times n$ matrices (The same works for
-  any pair of finite dimensional spaces)
+-   Thus, linear maps from $\mathbb{R}^n$ to $\mathbb{R}^m$ are in
+    1-to-1 correspondence with $m\times n$ matrices (The same works for
+    any pair of finite dimensional spaces)
 
 # Exercise
 
@@ -282,14 +282,14 @@ $\operatorname{ker}(f)=\{x\in V| f(x)=0\}$\
 The **range** of f is defined as
 $\operatorname{range}( f ) = \{ \mathbf { u } \in W | \mathbf { u } = f ( \mathbf { x } ) \text { for some } \mathbf { x } \in V \}$
 
-- Let A be the standard matrix of a linear map
-  $f : \mathbb { R } ^ { n } \rightarrow \mathbb { R } ^ { m } ( \text { so } f ( \mathbf { x } ) = A \mathbf { x } )$
+-   Let A be the standard matrix of a linear map
+    $f : \mathbb { R } ^ { n } \rightarrow \mathbb { R } ^ { m } ( \text { so } f ( \mathbf { x } ) = A \mathbf { x } )$
 
-- The $\operatorname{ker}(f)$ is the null space of A and
-  $\operatorname{range}(f)$ is the column space of A
+-   The $\operatorname{ker}(f)$ is the null space of A and
+    $\operatorname{range}(f)$ is the column space of A
 
-- Use algorithms for null space and column space to find
-  $\operatorname{ker}(f)$ and $\operatorname{range}(f)$
+-   Use algorithms for null space and column space to find
+    $\operatorname{ker}(f)$ and $\operatorname{range}(f)$
 
 # Dimension theorems for matrices and linear maps
 

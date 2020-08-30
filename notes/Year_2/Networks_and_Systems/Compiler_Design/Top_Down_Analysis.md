@@ -4,21 +4,21 @@ title: Top down analysis
 
 Top down constriction of a parse tree:
 
-- Start with the root, labelled by the starting symbol
+-   Start with the root, labelled by the starting symbol
 
-- Repeatedly perform the following steps:
+-   Repeatedly perform the following steps:
 
-  1.  At internal node N, labelled with non-terminal A
+    1.  At internal node N, labelled with non-terminal A
 
-      - Select one of the production rules for A
+        -   Select one of the production rules for A
 
-      - Construct children at N for the symbols in the right part of
-        this production rule
+        -   Construct children at N for the symbols in the right part of
+            this production rule
 
-  2.  Find the next node to construct a subtree
+    2.  Find the next node to construct a subtree
 
-      - Typically the leftmost unexpanded non-terminal of the
-        current tree
+        -   Typically the leftmost unexpanded non-terminal of the
+            current tree
 
 During the construction of the parse tree the current terminal of the
 input that is being scanned is called the lookahead symbol
@@ -31,28 +31,28 @@ that starts with for
 
 When a node in the parse tree:
 
-- Is labelled with a terminal
+-   Is labelled with a terminal
 
-- Matches the lookahead symbol
+-   Matches the lookahead symbol
 
 Then
 
-- The lookahead becomes the next terminal in the input
+-   The lookahead becomes the next terminal in the input
 
-- We consider the next child in the parse tree
+-   We consider the next child in the parse tree
 
 When a node in the parse tree is labelled with a non-terminal then:
 
-- We repeat by selecting one of its production rules
+-   We repeat by selecting one of its production rules
 
-- Special case: $A\rightarrow \epsilon$ - we choose it when nothing
-  else can be used
+-   Special case: $A\rightarrow \epsilon$ - we choose it when nothing
+    else can be used
 
 In general:
 
-- Many possibilities for a production at a non-terminal
+-   Many possibilities for a production at a non-terminal
 
-- The selection of one of them may involve trial and error
+-   The selection of one of them may involve trial and error
 
 A selected production is unsuitable if after using this production, we
 can't complete the tree to match the whole input string
@@ -60,46 +60,46 @@ can't complete the tree to match the whole input string
 If a selected production is unsuitable, backtrack and try another
 production until we
 
-- either match the input string
+-   either match the input string
 
-- or we report error (input string not in the language)
+-   or we report error (input string not in the language)
 
 # Recursive descent parsing
 
-- A top-down parsing method, using recursive procedures to process the
-  input
+-   A top-down parsing method, using recursive procedures to process the
+    input
 
-- One procedure for each non-terminal of the grammar
+-   One procedure for each non-terminal of the grammar
 
-- In general it requires backtracking until it finds the correct
-  production rule
+-   In general it requires backtracking until it finds the correct
+    production rule
 
-- Very easy and intuitive to write code for it
+-   Very easy and intuitive to write code for it
 
 ## Predictive parsing
 
-- Special case of recursive-descent parsing
+-   Special case of recursive-descent parsing
 
-- It uniquely determines the steps of each procedure, therefore no
-  backtracking is required
+-   It uniquely determines the steps of each procedure, therefore no
+    backtracking is required
 
-- Runs in linear time
+-   Runs in linear time
 
-- Not all grammars can be parsed by predictive parsing
+-   Not all grammars can be parsed by predictive parsing
 
 LL(k) grammars:
 
-- A recursive de4cent parser can uniquely determine the next
-  production rule, just by looking to the next k tokens of the input
+-   A recursive de4cent parser can uniquely determine the next
+    production rule, just by looking to the next k tokens of the input
 
-- Subclass of context free grammars
+-   Subclass of context free grammars
 
 Predictive parsing is only possible for LL(k) grammars LL(k) grammars
 exclude:
 
-- All ambiguous grammars
+-   All ambiguous grammars
 
-- All grammars containing left recursion
+-   All grammars containing left recursion
 
 ## Elimination of left recursion
 
@@ -161,24 +161,24 @@ $$
 A'\rightarrow \alpha_1A'|\alpha_2A'|...|\alpha_mA'|\epsilon
 $$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Top_Down/algorithm_left_recursion.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Top_Down/algorithm_left_recursion.webp)
 
 # Left factoring
 
 Many times:
 
-- Two alternative production rules have the same prefix
+-   Two alternative production rules have the same prefix
 
-- The choice between them is not clear
+-   The choice between them is not clear
 
 Example: $A\rightarrow \alpha\beta_1|\alpha\beta_2$
 
-- Suppose the input begins with a string derived from $\alpha$
+-   Suppose the input begins with a string derived from $\alpha$
 
-- Which transition to choose?
+-   Which transition to choose?
 
-- We need to read more symbols from the input - this grammar is not an
-  LL(1) grammar
+-   We need to read more symbols from the input - this grammar is not an
+    LL(1) grammar
 
 We can turn this example into an LL(1) grammar in the following way
 
@@ -194,20 +194,20 @@ $$
 
 For each non-terminal A
 
-- Find the longest prefix $\alpha$ common to two or more of its
-  alternative productions
+-   Find the longest prefix $\alpha$ common to two or more of its
+    alternative productions
 
-  $$
-  A\rightarrow \alpha\beta_1|\alpha\beta_2|...|\alpha\beta_n|\gamma
-  $$
+    $$
+    A\rightarrow \alpha\beta_1|\alpha\beta_2|...|\alpha\beta_n|\gamma
+    $$
 
-- Replace these productions by the following
-  $$
-  A\rightarrow \alpha A' | \gamma
-  $$
-  $$
-  A'\rightarrow \beta_1|\beta_2|...|\beta_n
-  $$
+-   Replace these productions by the following
+    $$
+    A\rightarrow \alpha A' | \gamma
+    $$
+    $$
+    A'\rightarrow \beta_1|\beta_2|...|\beta_n
+    $$
 
 Repeat until no two alternative productions have a common prefix
 
@@ -215,42 +215,42 @@ Repeat until no two alternative productions have a common prefix
 
 When we consider a non-terminal:
 
-- How do we know which production rule to use?
+-   How do we know which production rule to use?
 
-- The predictive parser looks ahead to the rest of the input and its
-  decision is forced
+-   The predictive parser looks ahead to the rest of the input and its
+    decision is forced
 
 LL(k) grammar:
 
-- L: left-to-right scan of the input tokens
+-   L: left-to-right scan of the input tokens
 
-- L: leftmost derivation of the input string
+-   L: leftmost derivation of the input string
 
-- k: look k tokens ahead in the input string
+-   k: look k tokens ahead in the input string
 
 We must first:
 
-- Eliminate ambiguities
+-   Eliminate ambiguities
 
-- Eliminate left recursions
+-   Eliminate left recursions
 
-- Perform left factoring
+-   Perform left factoring
 
 ## LL(1) grammars
 
 Interesting case:
 
-- LL(1) grammars - read only one token ahead in the input
+-   LL(1) grammars - read only one token ahead in the input
 
-- More efficient parsing than other LL(k) grammars
+-   More efficient parsing than other LL(k) grammars
 
 How can we uniquely determine the next production in an LL(1) grammar?
 
 We do these with the help of two functions (sets)
 
-- FIRST($\alpha$), where $\alpha$ is any string of grammar symbols
+-   FIRST($\alpha$), where $\alpha$ is any string of grammar symbols
 
-- FOLLOW(A), where A is any non-terminal
+-   FOLLOW(A), where A is any non-terminal
 
 And a predictive parsing table that associates terminals (of the
 grammar) with non-terminals (of the input)
@@ -259,39 +259,39 @@ grammar) with non-terminals (of the input)
 
 The set FIRST($\alpha$), for a string $\alpha$, contains:
 
-- Every first terminal of a string derived from $\alpha$
+-   Every first terminal of a string derived from $\alpha$
 
-- i.e. if $\alpha\xRightarrow{*} c\gamma$, then $c\in FIRST(\alpha)$
+-   i.e. if $\alpha\xRightarrow{*} c\gamma$, then $c\in FIRST(\alpha)$
 
-- also, if $\alpha\xRightarrow{*} \epsilon$, then
-  $\epsilon\in FIRST(\alpha)$
+-   also, if $\alpha\xRightarrow{*} \epsilon$, then
+    $\epsilon\in FIRST(\alpha)$
 
 Example usage:
 
-- Consider the two productions $A\rightarrow \gamma_1$ and
-  $A\rightarrow \gamma_2$
+-   Consider the two productions $A\rightarrow \gamma_1$ and
+    $A\rightarrow \gamma_2$
 
-- Suppose that FIRST($\gamma_1$) and FIRST($\gamma_2$) are disjoint
+-   Suppose that FIRST($\gamma_1$) and FIRST($\gamma_2$) are disjoint
 
-- let the next input symbol be a
+-   let the next input symbol be a
 
-- if a belongs to FIRST($\gamma_1$), then choose
-  $A\rightarrow \gamma_1$
+-   if a belongs to FIRST($\gamma_1$), then choose
+    $A\rightarrow \gamma_1$
 
-- if a belongs to FIRST($\gamma_2$), then choose
-  $A\rightarrow \gamma_2$
+-   if a belongs to FIRST($\gamma_2$), then choose
+    $A\rightarrow \gamma_2$
 
-- Otherwise report error
+-   Otherwise report error
 
 ### Follow
 
 The set FOLLOW(A), for a non-terminal contains:
 
-- Every terminal a that can appear immediately to the right of A in
-  some string derived from S
+-   Every terminal a that can appear immediately to the right of A in
+    some string derived from S
 
-- i.e. there exists a derivation $S\xRightarrow{*}\alpha Aa\beta$
-  where $\alpha$ and $\beta$ are two strings
+-   i.e. there exists a derivation $S\xRightarrow{*}\alpha Aa\beta$
+    where $\alpha$ and $\beta$ are two strings
 
 In addition if A can be the rightmost symbol in some string derived from
 S, then \$ is in FOLLOW(A) (where \$ is the end of file symbol)
@@ -322,8 +322,8 @@ We saw predictive parsing via recursive calls of procedures
 
 We can "mimic" leftmost derivation:
 
-- Explicitly maintain a stack
-- "table driven predictive parsing"
+-   Explicitly maintain a stack
+-   "table driven predictive parsing"
 
 If w is the input that has been matched so far, then the stack holds a
 sequence $\alpha$ of grammar symbols (terminals and non-terminals), such
@@ -338,21 +338,21 @@ grammar
 
 Given a parsing table M and input w:
 
-- Initialise a stack containing S (with bottom symbol \$)
+-   Initialise a stack containing S (with bottom symbol \$)
 
-- Repeat until the stack contains only \$:
+-   Repeat until the stack contains only \$:
 
-  - Let the next input character be c
+    -   Let the next input character be c
 
-  - If the top of the stack is a terminal t, then:
+    -   If the top of the stack is a terminal t, then:
 
-    - If c and t don't match, report an error
+        -   If c and t don't match, report an error
 
-    - Otherwise match c and t - consume c from input and pop t
-      from stack
+        -   Otherwise match c and t - consume c from input and pop t
+            from stack
 
-  - If the top of the stack is a non-terminal A, then:
+    -   If the top of the stack is a non-terminal A, then:
 
-    - If $M[A,c]$ is undefined, report an error
+        -   If $M[A,c]$ is undefined, report an error
 
-    - Otherwise replace the top of the stack with $M[A,c]$
+        -   Otherwise replace the top of the stack with $M[A,c]$

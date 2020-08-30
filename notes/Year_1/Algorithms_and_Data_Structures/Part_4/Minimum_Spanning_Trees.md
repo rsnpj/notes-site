@@ -7,7 +7,7 @@ title: Minimum Spanning Trees
 Input: a graph G=(V,E) with a weight (or a cost) w(u,v) for each edge
 (u,v)
 
-![image](/img/Year_1/ADS/Part_4/MST/graph1.png)
+![image](/img/Year_1/ADS/Part_4/MST/graph1.webp)
 
 Objective: Choose a subset of the edges that connects the vertices. Find
 the solution that costs the least
@@ -18,11 +18,11 @@ _Find a tree that spans the vertices and has minimum cost_
 
 Basic properties of MSTs:
 
-- have $|V|-1$ edges
+-   have $|V|-1$ edges
 
-- Have no cycles
+-   Have no cycles
 
-- might not be unique
+-   might not be unique
 
 # Representations of weighted graphs
 
@@ -33,7 +33,7 @@ $$
 Note that the zeros represent the fact there is no edge between the two
 nodes, it could equally be $\infty$
 
-![image](/img/Year_1/ADS/Part_4/MST/graph2.png)
+![image](/img/Year_1/ADS/Part_4/MST/graph2.webp)
 
 # Kruskal's Algorithm
 
@@ -48,7 +48,7 @@ nodes, it could equally be $\infty$
 
 Running time is $\mathcal{O}(E\log V)$
 
-![image](/img/Year_1/ADS/Part_4/MST/graph3.png)
+![image](/img/Year_1/ADS/Part_4/MST/graph3.webp)
 
 ## Correctness
 
@@ -61,33 +61,33 @@ is a spanning tree.
 
 **Base case**
 
-- $A=\varnothing$ so the claim is true in this case
+-   $A=\varnothing$ so the claim is true in this case
 
 **Inductive step**:
 
-- Assume A is a subtree of a MST
+-   Assume A is a subtree of a MST
 
-- Must show that $A+e$ us a subtree of a MST when e is added to A.
+-   Must show that $A+e$ us a subtree of a MST when e is added to A.
 
-- Let T be the MST that contains A
+-   Let T be the MST that contains A
 
-- If T contains $e$, we are done
+-   If T contains $e$, we are done
 
-- Suppose $e$ is not in T. So $T+e$ contains a cycle
+-   Suppose $e$ is not in T. So $T+e$ contains a cycle
 
-- Some of the edges in the cycle are not in $A+e$
+-   Some of the edges in the cycle are not in $A+e$
 
-- Let f be an edge in the cycle not in $A+e$
+-   Let f be an edge in the cycle not in $A+e$
 
-- Consider $T+e-f$. A tree that contains $A+e$
+-   Consider $T+e-f$. A tree that contains $A+e$
 
-- $w(T+e-f)> w(T)$ since T is an MST
+-   $w(T+e-f)> w(T)$ since T is an MST
 
-- $w(T)+w(e)-w(F)> w(T)$
+-   $w(T)+w(e)-w(F)> w(T)$
 
-- $w(e)>w(F)$
+-   $w(e)>w(F)$
 
-- This is a contradiction. The algorithm should pick $F$ before $e$
+-   This is a contradiction. The algorithm should pick $F$ before $e$
 
 # Prim's Algorithm
 
@@ -103,33 +103,33 @@ Running time is $\mathcal{O}(V\log V+E)$
 
 ## Correctness
 
-- Let T be the output
+-   Let T be the output
 
-- Suppose that T is not a MST
+-   Suppose that T is not a MST
 
-- Let $T^*$ be a MST with most edges in common with T
+-   Let $T^*$ be a MST with most edges in common with T
 
-- Let e be the first edge that belongs to T but not $T^*$
+-   Let e be the first edge that belongs to T but not $T^*$
 
-- Consider the moment that $e$ is chosen
+-   Consider the moment that $e$ is chosen
 
-  - U is the vertices chosen so far
+    -   U is the vertices chosen so far
 
-  - W is the remaining vertices
+    -   W is the remaining vertices
 
-  - Let e connect U to W
+    -   Let e connect U to W
 
-  - $T^*$ must contain some other edge f from U to W
+    -   $T^*$ must contain some other edge f from U to W
 
-  - And $w(f)\geqslant w(e)$
+    -   And $w(f)\geqslant w(e)$
 
-- Notice that $T^*+e-f$ is a tree
+-   Notice that $T^*+e-f$ is a tree
 
-- $w(T^*+e-f)\leqslant w(T^*)$
+-   $w(T^*+e-f)\leqslant w(T^*)$
 
-- So $w(T^*+e-f)=w(T^*)$ as no spanning trees can weigh less than
-  $T^*$ as it is an MST
+-   So $w(T^*+e-f)=w(T^*)$ as no spanning trees can weigh less than
+    $T^*$ as it is an MST
 
-- So $T^*+e-f$ is a MST with more edges in common with T than $T^*$
+-   So $T^*+e-f$ is a MST with more edges in common with T than $T^*$
 
-- A contradiction.
+-   A contradiction.

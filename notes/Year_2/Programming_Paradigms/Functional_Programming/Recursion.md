@@ -1,7 +1,7 @@
 ---
 title: Recursion and higher order functions
-
 ---
+
 # Advice when writing recursive functions
 
 1.  Define the type
@@ -70,24 +70,24 @@ title: Recursion and higher order functions
 
 # Equivalence of recursion and iteration
 
-- Both purely iterative and purely recursive programming languages are
-  Turing complete
+-   Both purely iterative and purely recursive programming languages are
+    Turing complete
 
-- Hence, it is always possible to transform from one representation to
-  the other
+-   Hence, it is always possible to transform from one representation to
+    the other
 
-- Which is convenient depends on the algorithm, and the programming
-  languages
+-   Which is convenient depends on the algorithm, and the programming
+    languages
 
 Recursion $\Rightarrow$ Iteration
 
-- Write looping constructs, manually manage function call stack
+-   Write looping constructs, manually manage function call stack
 
 Iteration $\Rightarrow$ recursion
 
-- Turn loop variables into additional function arguments
+-   Turn loop variables into additional function arguments
 
-- And write tail recursive function (see later)
+-   And write tail recursive function (see later)
 
 # How are function calls managed
 
@@ -101,39 +101,39 @@ length' (x:xs) = 1 + length' xs
 
 Calling length’ on \[1,2,3\] does:
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/Function_Calls.png)
+![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/Function_Calls.webp)
 
-- Each entry on the stack uses memory
+-   Each entry on the stack uses memory
 
-- Too many entries cases errors: the dreaded stack overflow
+-   Too many entries cases errors: the dreaded stack overflow
 
-- How big this stack is depends on the language
+-   How big this stack is depends on the language
 
-- Typically "small" in imperative languages and "big" in functional
-  ones
+-   Typically "small" in imperative languages and "big" in functional
+    ones
 
 # Typically don’t have to worry about stack overflows
 
-- In traditional imperative languages, we often try and avoid
-  recursion
+-   In traditional imperative languages, we often try and avoid
+    recursion
 
-- Function calls are more expensive than just looping
+-   Function calls are more expensive than just looping
 
-- Deep recursion can result in stack overflow
+-   Deep recursion can result in stack overflow
 
-- In contrast, Haskell is fine with much deeper recursion
+-   In contrast, Haskell is fine with much deeper recursion
 
-- Unsurprising, given the programming model
+-   Unsurprising, given the programming model
 
-- Still prefer to avoid recursion trees that are too deep
+-   Still prefer to avoid recursion trees that are too deep
 
 # Classifying recursive functions
 
-- Since it is natural to write recursive functions, it makes sense to
-  think about classifying the different types we can encounter
+-   Since it is natural to write recursive functions, it makes sense to
+    think about classifying the different types we can encounter
 
-- Classifying the type of recursion is useful to allow us to think
-  about better/cheaper implementations
+-   Classifying the type of recursion is useful to allow us to think
+    about better/cheaper implementations
 
 Linear recursion - only contains a single self reference
 
@@ -182,16 +182,16 @@ Loosely, the last thing a tail recursive function does is call itself with new a
 `}
 </Definition>
 
-- Such functions are useful because they have a trivial translation
-  into loops
+-   Such functions are useful because they have a trivial translation
+    into loops
 
-- Some languages (e.g. Scheme) guarantee that a tail recursive call
-  will be transformed into a "loop-like" implementation using a
-  technique called tail call elimination
+-   Some languages (e.g. Scheme) guarantee that a tail recursive call
+    will be transformed into a "loop-like" implementation using a
+    technique called tail call elimination
 
-- Complexity remains unchanged, but implementation is more efficient
+-   Complexity remains unchanged, but implementation is more efficient
 
-- In haskell implementations, while nice, this is not so important
+-   In haskell implementations, while nice, this is not so important
 
 # Iteration $\Leftrightarrow$ tail recursion
 
@@ -207,11 +207,11 @@ def factorial (n):
 
 **Tail recursive implementation**
 
-- We can’t write this directly, since we’re not allowed to mutate
-  things
+-   We can’t write this directly, since we’re not allowed to mutate
+    things
 
-- We can write it with a helper recursive function where all loop
-  variables become arguments to the function
+-   We can write it with a helper recursive function where all loop
+    variables become arguments to the function
 
 ```haskell
 factorial n = loop n 1
@@ -222,12 +222,12 @@ factorial n = loop n 1
 
 # What about complexity?
 
-- Linear recursion often appears in list traversals. Typically make
-  $\mathcal{O}(n)$ recursive calls on data of size n
+-   Linear recursion often appears in list traversals. Typically make
+    $\mathcal{O}(n)$ recursive calls on data of size n
 
-- Multiple recursion often appears in tree or graph traversals, as
-  well as "divide and conquer" algorithms. Number of recursive calls
-  more problem dependent
+-   Multiple recursion often appears in tree or graph traversals, as
+    well as "divide and conquer" algorithms. Number of recursive calls
+    more problem dependent
 
 # Maps and folds
 
@@ -251,72 +251,72 @@ order in haskell
 
 ### Why are they useful?
 
-- Common programming idioms can be written as functions in the
-  language
+-   Common programming idioms can be written as functions in the
+    language
 
-- Domain specific languages can be defined with appropriate
-  collections of higher order functions
+-   Domain specific languages can be defined with appropriate
+    collections of higher order functions
 
-- We can use the algebraic properties of higher order functions to
-  reason about programs $\Rightarrow$ provably correct program
-  transformations
+-   We can use the algebraic properties of higher order functions to
+    reason about programs $\Rightarrow$ provably correct program
+    transformations
 
-- Useful for domain specific compilers and automated program
-  generation
+-   Useful for domain specific compilers and automated program
+    generation
 
 ### Higher order functions on lists
 
-- Many linear recursive functions on lists can be written using higher
-  order library functions.
+-   Many linear recursive functions on lists can be written using higher
+    order library functions.
 
-- map: apply a function to a list
+-   map: apply a function to a list
 
-  ```haskell
-  map :: (a -> b) -> [a] -> [b]
-  map _ [] = []
-  map f xs [f x | x <- xs]
-  ```
+    ```haskell
+    map :: (a -> b) -> [a] -> [b]
+    map _ [] = []
+    map f xs [f x | x <- xs]
+    ```
 
-- filter: remove entries from a list
+-   filter: remove entries from a list
 
-  ```haskell
-  filter :: (a -> Bool) -> [a] -> [a]
-  filter _ [] = []
-  filter p xs = [x | x <- xs, p x]
-  ```
+    ```haskell
+    filter :: (a -> Bool) -> [a] -> [a]
+    filter _ [] = []
+    filter p xs = [x | x <- xs, p x]
+    ```
 
 ## Function composition
 
-- Often tedious to write brackets and explicit variable names
+-   Often tedious to write brackets and explicit variable names
 
-- Can use function composition to simplify this
+-   Can use function composition to simplify this
 
-  $$
-  (f \circ g)(x) = f(g(x))
-  $$
+    $$
+    (f \circ g)(x) = f(g(x))
+    $$
 
-- Haskell uses the (.) operator
+-   Haskell uses the (.) operator
 
-  ```haskell
-  (.) :: (b -> c) -> (a -> b) -> (a -> c)
-  f . g = \backslash x -> f (g (x))
-  -- example
-  odd a = not (even a)
-  odd   = not . even -- no need for the variable
-  ```
+    ```haskell
+    (.) :: (b -> c) -> (a -> b) -> (a -> c)
+    f . g = \backslash x -> f (g (x))
+    -- example
+    odd a = not (even a)
+    odd   = not . even -- no need for the variable
+    ```
 
-- Useful for writing compositions of functions to be passed to other
-  higher order functions
+-   Useful for writing compositions of functions to be passed to other
+    higher order functions
 
-- Removes need to write $\lambda$-expressions
+-   Removes need to write $\lambda$-expressions
 
 ## Folds
 
-- Folds process a data structure in some order and build a return
-  value
+-   Folds process a data structure in some order and build a return
+    value
 
-- Haskell provides a number of these in the standard prelude, with
-  more available in the `Data.List` module
+-   Haskell provides a number of these in the standard prelude, with
+    more available in the `Data.List` module
 
 ### foldr: right associative fold
 
@@ -328,7 +328,7 @@ foldr f z []     = z
 foldr f z (x:xs) = x `f` (foldr f z xs)
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldr.png)
+![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldr.webp)
 
 ### foldl: left associative fold
 
@@ -340,56 +340,56 @@ foldl f z []     = z
 foldl f z (x:xs) = foldl f (z `f` x) xs -- tail recursive
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldl.png)
+![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldl.webp)
 
 ### Why would I use them?
 
-- Capture many linear recursive patterns cleanly
+-   Capture many linear recursive patterns cleanly
 
-- Can have efficient library implementation $\Rightarrow$ can apply
-  program optimisations
+-   Can have efficient library implementation $\Rightarrow$ can apply
+    program optimisations
 
-- Actually apply to all `Foldable` types, not just lists
+-   Actually apply to all `Foldable` types, not just lists
 
-- e.g. `foldr`’s type is actually
+-   e.g. `foldr`’s type is actually
 
-  ```haskell
-  foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
-  ```
+    ```haskell
+    foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
+    ```
 
-- So we can write code for lists and (say) trees identically
+-   So we can write code for lists and (say) trees identically
 
 Folds are general:
 
-- Many library functions on lists are written using folds
+-   Many library functions on lists are written using folds
 
-  ```haskell
-  product = foldr (*) 1
-  sum = foldr (+) 0
-  maximum = foldr1 max -- foldr1 assumes list has at least one value
-  ```
+    ```haskell
+    product = foldr (*) 1
+    sum = foldr (+) 0
+    maximum = foldr1 max -- foldr1 assumes list has at least one value
+    ```
 
 ### Which to choose?
 
 foldr:
 
-- Generally the right choice
+-   Generally the right choice
 
-- Works even for infinite lists
+-   Works even for infinite lists
 
-- Note `foldr (:) [] = id`
+-   Note `foldr (:) [] = id`
 
-- Can terminate early
+-   Can terminate early
 
 foldl:
 
-- Usually best to use strict versions
+-   Usually best to use strict versions
 
-  ```haskell
-  import Data.List
-  foldl' -- note trailing
-  ```
+    ```haskell
+    import Data.List
+    foldl' -- note trailing
+    ```
 
-- Doesn’t work on infinite lists (needs start at the end)
+-   Doesn’t work on infinite lists (needs start at the end)
 
-- Can’t terminate early
+-   Can’t terminate early

@@ -4,157 +4,157 @@ title: SQL
 
 # Database languages
 
-- A good database language should allow users to:
+-   A good database language should allow users to:
 
-  - Create the database, define relation structures
+    -   Create the database, define relation structures
 
-  - Perform basic data management
+    -   Perform basic data management
 
-  - Perform simple and complex queries
+    -   Perform simple and complex queries
 
-- All these tasks with minimal user effort!
+-   All these tasks with minimal user effort!
 
-  - Syntax/command structure should be easy to learn
+    -   Syntax/command structure should be easy to learn
 
-  - Users should concentrate on which queries to make (not how they
-    are implemented)
+    -   Users should concentrate on which queries to make (not how they
+        are implemented)
 
-- The language should be portable:
+-   The language should be portable:
 
-  - Conform to a recognized standard
+    -   Conform to a recognized standard
 
-  - We can use the same language with many DBMS's
+    -   We can use the same language with many DBMS's
 
-- SQL: (structured query language)
+-   SQL: (structured query language)
 
-  - The most common database language
+    -   The most common database language
 
-  - simple syntax/ easy to learn and use
+    -   simple syntax/ easy to learn and use
 
-  - It has two components: DDL & DML
+    -   It has two components: DDL & DML
 
-- Data Definition Language (DDL)
+-   Data Definition Language (DDL)
 
-  - Allows users to define the database
+    -   Allows users to define the database
 
-  - Define the schema for each relation (attributes/types)
+    -   Define the schema for each relation (attributes/types)
 
-  - Define the domain of each attribute
+    -   Define the domain of each attribute
 
-  - Specify integrity constraints
+    -   Specify integrity constraints
 
-- Data Manipulation Language (DML)
+-   Data Manipulation Language (DML)
 
-  - Allows users to insert/update/delete/retrieve data from the DB
+    -   Allows users to insert/update/delete/retrieve data from the DB
 
-  - Query Language: the part of the DML that involves data retrieval
+    -   Query Language: the part of the DML that involves data retrieval
 
 # Two types of query languages
 
-- SQL: formal definition of a new relation from existing relations in
-  the DB
+-   SQL: formal definition of a new relation from existing relations in
+    the DB
 
-- Relational algebra: specifies how to build a new relation from
-  existing relations in the DB
+-   Relational algebra: specifies how to build a new relation from
+    existing relations in the DB
 
-- Their place in the big picture
+-   Their place in the big picture
 
-![image](/img/Year_1/CSys/Databases/SQL/overview.png)
+![image](/img/Year_1/CSys/Databases/SQL/overview.webp)
 
 # Writing SQL statements
 
-- SQL statements consist of:
+-   SQL statements consist of:
 
-  - Reserved words: a fixed part of SQL
+    -   Reserved words: a fixed part of SQL
 
-  - User defined words: made up by the user
+    -   User defined words: made up by the user
 
-- SQL Statements
+-   SQL Statements
 
-  - Case insensitive (both upper/lower case)
+    -   Case insensitive (both upper/lower case)
 
-  - Except for literal character data (i.e. data entries)
+    -   Except for literal character data (i.e. data entries)
 
-- SQL is free-format
+-   SQL is free-format
 
-  - Parts of statements do not have to be written in specific
-    locations on the screen
+    -   Parts of statements do not have to be written in specific
+        locations on the screen
 
-- However:
+-   However:
 
-  - More readable with systematic indentation and lineation
+    -   More readable with systematic indentation and lineation
 
-  - Each clause should begin on a new line
+    -   Each clause should begin on a new line
 
-  - Start of a clause should line up with the start of other clauses
+    -   Start of a clause should line up with the start of other clauses
 
-  - If a clause has several parts, they should each appear on
-    separate lines and be indented under the start of clause
+    -   If a clause has several parts, they should each appear on
+        separate lines and be indented under the start of clause
 
 # Data Manipulation Language (DML)
 
-- We mainly look at DML aspects of SQL
+-   We mainly look at DML aspects of SQL
 
-- To create a database in MySQL
+-   To create a database in MySQL
 
-  - either use DDL command
+    -   either use DDL command
 
-  - or just use the interactive tools of phpMyAdmin
+    -   or just use the interactive tools of phpMyAdmin
 
-- Main statements of interest in DML:
+-   Main statements of interest in DML:
 
-  - `SELECT` - to query data in the database
+    -   `SELECT` - to query data in the database
 
-  - `INSERT` - To insert new data into an existing table
+    -   `INSERT` - To insert new data into an existing table
 
-  - `UPDATE` - To update data in an existing table
+    -   `UPDATE` - To update data in an existing table
 
-  - `DELETE` - To delete data from an existing table
+    -   `DELETE` - To delete data from an existing table
 
 # Writing SQL commands
 
-- Literals (character data/ numericals) are constants used in SQL
-  statements
+-   Literals (character data/ numericals) are constants used in SQL
+    statements
 
-- All non numeric literals must be enclosed in single quotes
+-   All non numeric literals must be enclosed in single quotes
 
-- All numeric literals must not be enclosed in quotes
+-   All numeric literals must not be enclosed in quotes
 
-- Notation:
+-   Notation:
 
-  - UPPER-case letters represent **reserved** words
+    -   UPPER-case letters represent **reserved** words
 
-  - lower-case letters represent **user-defined** words
+    -   lower-case letters represent **user-defined** words
 
-  - a vertical bar (\|) indicates a choice among **alternatives**
+    -   a vertical bar (\|) indicates a choice among **alternatives**
 
-  - curly braces $\{a\}$ indicate a required element
+    -   curly braces $\{a\}$ indicate a required element
 
-  - square braces \[a\] indicate an optional element
+    -   square braces \[a\] indicate an optional element
 
-  - ellipsis (\...) indicates optional repetition (0 or more)
+    -   ellipsis (\...) indicates optional repetition (0 or more)
 
 # Examples of syntax
 
 All examples are based on the following tables:
 
-![image](/img/Year_1/CSys/Databases/SQL/example.png)
+![image](/img/Year_1/CSys/Databases/SQL/example.webp)
 
 ## Simple queries
 
 The sequence of processing in a `SELECT-FROM-WHERE` statement is:
 
-- `SELECT`: specifies which columns are to appear in the output
+-   `SELECT`: specifies which columns are to appear in the output
 
-- `FROM`: specifies the table or tables to be used
+-   `FROM`: specifies the table or tables to be used
 
-- `WHERE`: filters the rows subject to some condition
+-   `WHERE`: filters the rows subject to some condition
 
-  - `GROUP BY`: forms groups of rows with the same column value
+    -   `GROUP BY`: forms groups of rows with the same column value
 
-  - `HAVING`: filters the groups subject to some condition
+    -   `HAVING`: filters the groups subject to some condition
 
-  - `ORDER BY:` specifies the order of the output
+    -   `ORDER BY:` specifies the order of the output
 
 SELECT and FROM are mandatory
 
@@ -175,8 +175,8 @@ Example:
 SELECT staffNo, fName, IName, position, sex, DOB, salary, branchNo FROM staff;
 ```
 
-- The above statement will select the (whole) specified columns from
-  the staff table
+-   The above statement will select the (whole) specified columns from
+    the staff table
 
 Note that if you want to place more queries at once, remember to put a
 semicolon at the end of each SQL statement. The ; indicates that your
@@ -186,17 +186,17 @@ SQL statement has finished and the next one can start
 
 ## Example 1
 
-- _List full details of all staff (all columns, all rows)_
+-   _List full details of all staff (all columns, all rows)_
 
-  ```sql
-  SELECT staffNo, fName, IName, position, sex, DOB, salary, branchNo FROM Staff
-  ```
+    ```sql
+    SELECT staffNo, fName, IName, position, sex, DOB, salary, branchNo FROM Staff
+    ```
 
-- Alternative
+-   Alternative
 
-  ```sql
-  SELECT * FROM Staff
-  ```
+    ```sql
+    SELECT * FROM Staff
+    ```
 
 ## Example 2
 
@@ -235,41 +235,41 @@ FROM table_name
 WHERE first_column_name>12000
 ```
 
-- Next to the SELECT keyword:
+-   Next to the SELECT keyword:
 
-  - the column name(s) specify which will be returned
+    -   the column name(s) specify which will be returned
 
-  - as many columns as we like
+    -   as many columns as we like
 
-  - or \* to return all columns
+    -   or \* to return all columns
 
-- Next to the FROM keyword:
+-   Next to the FROM keyword:
 
-  - The table name(s) specifies the table that will be required to
-    retrieve the results
+    -   The table name(s) specifies the table that will be required to
+        retrieve the results
 
-- Next to the (optional) WHERE keyword:
+-   Next to the (optional) WHERE keyword:
 
-  - the condition(s) specifies which rows will be returned
-    (filtering the rows)
+    -   the condition(s) specifies which rows will be returned
+        (filtering the rows)
 
 # DISTINCT
 
-- In normalized relational tables there are no repeated rows
+-   In normalized relational tables there are no repeated rows
 
-- But the use of SELECT may have duplicate rows
+-   But the use of SELECT may have duplicate rows
 
-  ```sql
-  SELECT propertyNo FROM Viewing
-  ```
+    ```sql
+    SELECT propertyNo FROM Viewing
+    ```
 
-  ![image](/img/Year_1/CSys/Databases/SQL/duplicate.png)
+    ![image](/img/Year_1/CSys/Databases/SQL/duplicate.webp)
 
-- Use DISTINCT to eliminate duplicates
+-   Use DISTINCT to eliminate duplicates
 
-  ```sql
-  SELECT DISTINCT propertyNo FROM Viewing
-  ```
+    ```sql
+    SELECT DISTINCT propertyNo FROM Viewing
+    ```
 
 ## SELECT Statement, Example 4 (DISTINCT)
 
@@ -287,25 +287,25 @@ SELECT DISTINCT branchNo FROM Staff
 
 # SELECT statement (WHERE)
 
-- We often need to restrict the rows that are retrieved
+-   We often need to restrict the rows that are retrieved
 
-- The WHERE clause is followed by a search conditions (predicates)
+-   The WHERE clause is followed by a search conditions (predicates)
 
-  - Comparisons: compare values of two expressions
+    -   Comparisons: compare values of two expressions
 
-  - Range
+    -   Range
 
-    - BETWEEN/NOT BETWEEN
+        -   BETWEEN/NOT BETWEEN
 
-    - tests whether the values falls within a specified range
+        -   tests whether the values falls within a specified range
 
-  - Set membership
+    -   Set membership
 
-    - IN/NOT IN
+        -   IN/NOT IN
 
-  - Pattern matching
+    -   Pattern matching
 
-    - LIKE/NOT LIKE
+        -   LIKE/NOT LIKE
 
 # Range conditions
 
@@ -345,30 +345,30 @@ WHERE position='Manager' OR position='Supervisor'
 
 # Pattern matching (LIKE)
 
-- Sometimes we want to search within a string
+-   Sometimes we want to search within a string
 
-- SQL has two special pattern matching symbols
+-   SQL has two special pattern matching symbols
 
-  - \% represents an arbitrary sequence of zero or more characters
-    (called wildcard)
+    -   \% represents an arbitrary sequence of zero or more characters
+        (called wildcard)
 
-  - \_ represents an arbitrary single character
+    -   \_ represents an arbitrary single character
 
-- LIKE 'H%' means:
+-   LIKE 'H%' means:
 
-  - first character must be H, but the rest can be anything
+    -   first character must be H, but the rest can be anything
 
-- LIKE 'H\_\_\_' means:
+-   LIKE 'H\_\_\_' means:
 
-  - exactly 4 characters, first character must he H
+    -   exactly 4 characters, first character must he H
 
-- LIKE '%e' means:
+-   LIKE '%e' means:
 
-  - any sequence of characters, ending at 'e'
+    -   any sequence of characters, ending at 'e'
 
-- NOT LIKE 'H%' means:
+-   NOT LIKE 'H%' means:
 
-  - The first character can not be 'H'
+    -   The first character can not be 'H'
 
 Find all owners with the string 'Glasgow' in their address
 
@@ -380,15 +380,15 @@ WHERE address LIKE '\%Glasgow\%'
 
 # Combining conditions and Boolean Operations
 
-- The logical AND operator:
+-   The logical AND operator:
 
-  - both sides of the condition must be true
+    -   both sides of the condition must be true
 
-- The logical OR operator:
+-   The logical OR operator:
 
-  - at least one of the two sides must be true
+    -   at least one of the two sides must be true
 
-- They can be used in two (or more) conditions in the WHERE clause
+-   They can be used in two (or more) conditions in the WHERE clause
 
 ```sql
 SELECT fName, IName, position, salary
@@ -406,16 +406,16 @@ These two operators can also be used combined
 
 # ORDER BY clause
 
-- In the resulting table of a SELECT query the rows are NOT ordered
+-   In the resulting table of a SELECT query the rows are NOT ordered
 
-- ORDER BY can be used to sort the rows
+-   ORDER BY can be used to sort the rows
 
-  - according to the values of a particular set of columns
+    -   according to the values of a particular set of columns
 
-  - can be ascending/descending
+    -   can be ascending/descending
 
-  - ordering appears regardless of whether that column appears in
-    the result
+    -   ordering appears regardless of whether that column appears in
+        the result
 
 General format:
 
@@ -427,20 +427,20 @@ ORDER BY 'column-list' [ASC|DESC]
 
 We can also sort according to multiple columns:
 
-- first sort according to the first column
+-   first sort according to the first column
 
-- among rows with the same value in the first column, sort according
-  to the second column etc
+-   among rows with the same value in the first column, sort according
+    to the second column etc
 
 # Aggregate functions
 
 Aggregate functions:
 
-- Operate on a single column
+-   Operate on a single column
 
-- return a single (numeric) value
+-   return a single (numeric) value
 
-![image](/img/Year_1/CSys/Databases/SQL/Aggregate.png)
+![image](/img/Year_1/CSys/Databases/SQL/Aggregate.webp)
 
 ## Examples
 
@@ -454,17 +454,17 @@ WHERE rent>350
 
 # GROUP BY clause
 
-- Aggregate functions are similar to the totals at the bottom of a
-  report
+-   Aggregate functions are similar to the totals at the bottom of a
+    report
 
-- Often we need also "subtotals" in reports at the bottom of some
-  part of the report
+-   Often we need also "subtotals" in reports at the bottom of some
+    part of the report
 
-- GROUP BY can be used to:
+-   GROUP BY can be used to:
 
-  - partition the data into groups
+    -   partition the data into groups
 
-  - produce a single summary row (e.g. "subtotal") for each group
+    -   produce a single summary row (e.g. "subtotal") for each group
 
 _Find the number of staff working in each branch and sum of their
 salaries_
@@ -488,46 +488,46 @@ FROM table1[,table2,table3,...]
 [WHERE "conditions"];
 ```
 
-- The "conditions" in the `WHERE` clause can be:
+-   The "conditions" in the `WHERE` clause can be:
 
-  - A comparison predicate (e.g. `salary >10000`)
+    -   A comparison predicate (e.g. `salary >10000`)
 
-  - A range predicate (e.g. `salary BETWEEN 10000 AND 30000`)
+    -   A range predicate (e.g. `salary BETWEEN 10000 AND 30000`)
 
-  - A set membership predicate (e.g. `position IN('Manager','Worker')`)
+    -   A set membership predicate (e.g. `position IN('Manager','Worker')`)
 
-  - A pattern matching predicate (e.g. `address LIKE '%Glaskow%'`)
+    -   A pattern matching predicate (e.g. `address LIKE '%Glaskow%'`)
 
-  - Combinations of the above with `AND` and `OR`
+    -   Combinations of the above with `AND` and `OR`
 
-- But it can also be the result of another (independent) query (called
-  subquery)
+-   But it can also be the result of another (independent) query (called
+    subquery)
 
-- Three types of subquery:
+-   Three types of subquery:
 
-  1.  A single-value (scalar) subquery (single column & single row )
+    1.  A single-value (scalar) subquery (single column & single row )
 
-      ```sql
-      SELECT COUNT(*) AS myCount
-      FROM PropertyForRent
-      WHERE rent>350
-      ```
+        ```sql
+        SELECT COUNT(*) AS myCount
+        FROM PropertyForRent
+        WHERE rent>350
+        ```
 
-  2.  A multiple value subquery (one column & multiple rows)
+    2.  A multiple value subquery (one column & multiple rows)
 
-      ```sql
-      SELECT staffNo
-      FROM Staff
-      WHERE position='Manager'
-      ```
+        ```sql
+        SELECT staffNo
+        FROM Staff
+        WHERE position='Manager'
+        ```
 
-  3.  A table subquery (multiple columns/rows)
+    3.  A table subquery (multiple columns/rows)
 
-      ```sql
-      SELECT clientNo, viewDate
-      FROM Viewing
-      WHERE propertyNo='PG4' AND comment IS NULL
-      ```
+        ```sql
+        SELECT clientNo, viewDate
+        FROM Viewing
+        WHERE propertyNo='PG4' AND comment IS NULL
+        ```
 
 # Subquery
 
@@ -542,42 +542,42 @@ WHERE branchNo=
      WHERE street='163 Main St')
 ```
 
-- The inner `SELECT`:
+-   The inner `SELECT`:
 
-  - Finds the branch number of the branch in 163 main street
+    -   Finds the branch number of the branch in 163 main street
 
-  - Only one such branch (with branchNo='B003')$\Rightarrow$ scalar
-    subquery
+    -   Only one such branch (with branchNo='B003')$\Rightarrow$ scalar
+        subquery
 
-- The outer `SELECT` is equivalent with:
+-   The outer `SELECT` is equivalent with:
 
-  ```sql
-  SELECT staffNO, fName, IName, position
-  FROM Staff
-  WHERE branchNo='B003'
-  ```
+    ```sql
+    SELECT staffNO, fName, IName, position
+    FROM Staff
+    WHERE branchNo='B003'
+    ```
 
 _List all staff whose salary is greater than the average salary, and show by how much_
 
-- If we know that the average salary is 17000, then:
+-   If we know that the average salary is 17000, then:
 
-  ```sql
-  SELECT staffNo, fName, IName, position,
-      salary-17000 AS SalDiff
-  FROM Staff
-  WHERE salary>17000
-  ```
+    ```sql
+    SELECT staffNo, fName, IName, position,
+        salary-17000 AS SalDiff
+    FROM Staff
+    WHERE salary>17000
+    ```
 
-- We cannot write `WHERE salary>AVG(salary)`
+-   We cannot write `WHERE salary>AVG(salary)`
 
-- Instead, we use a subquery
+-   Instead, we use a subquery
 
-  ```sql
-  SELECT staffNo, fName, IName, position
-      salary-(SELECT AVG(salary) FROM Staff) AS SalDiff
-  FROM Staff
-  WHERE salary>(SELECT AVG(salary) FROM Staff)
-  ```
+    ```sql
+    SELECT staffNo, fName, IName, position
+        salary-(SELECT AVG(salary) FROM Staff) AS SalDiff
+    FROM Staff
+    WHERE salary>(SELECT AVG(salary) FROM Staff)
+    ```
 
 # Nested Queries
 
@@ -598,21 +598,21 @@ WHERE staffNo IN (SELECT staffNo
              WHERE street='163 Main St'))
 ```
 
-- From the innermost query outwards:
+-   From the innermost query outwards:
 
-  - The first query selects the branch number of the branch at 163
-    Main St
+    -   The first query selects the branch number of the branch at 163
+        Main St
 
-  - The second selects the staff working at this branch
+    -   The second selects the staff working at this branch
 
-  - Many staff $\Rightarrow$ in the outermost query we use `IN` ("="
-    is not possible)
+    -   Many staff $\Rightarrow$ in the outermost query we use `IN` ("="
+        is not possible)
 
-- In multi value subqueries:
+-   In multi value subqueries:
 
-  - Use of the operator `ANY` (or `SOME`) before the subquery means the
-    WHERE condition is true if it is satisfied by at least one value
-    returned by the subquery
+    -   Use of the operator `ANY` (or `SOME`) before the subquery means the
+        WHERE condition is true if it is satisfied by at least one value
+        returned by the subquery
 
 _Find all staff whose salary is larger than the salary of at least one
 member of staff at Branch B003_
@@ -635,53 +635,53 @@ WHERE salary>(SELECT MIN(salary)
 
 # Multi-Table Queries
 
-- All examples so far have a major limitation: the whole information
-  belongs to a single table
+-   All examples so far have a major limitation: the whole information
+    belongs to a single table
 
-- We can extend queries to multiple tables either with subqueries that
-  query different tables:
+-   We can extend queries to multiple tables either with subqueries that
+    query different tables:
 
-  _List all Durham staff with salary greater than the average
-  London-salary_
+    _List all Durham staff with salary greater than the average
+    London-salary_
 
-  ```sql
-  SELECT staffNo, fName, IName, position
-  FROM DurhamStaff
-  WHERE salary>(SELECT AVG(salary) FROM LondonStaff)
-  ```
+    ```sql
+    SELECT staffNo, fName, IName, position
+    FROM DurhamStaff
+    WHERE salary>(SELECT AVG(salary) FROM LondonStaff)
+    ```
 
-- Or by using a join operation:
+-   Or by using a join operation:
 
-  - Link data from two (or more) tables together (in a single query)
+    -   Link data from two (or more) tables together (in a single query)
 
-  - Include more than one table in the FROM clause
+    -   Include more than one table in the FROM clause
 
-  - Separate these tables with a comma
+    -   Separate these tables with a comma
 
 # Joins
 
-- In joins, usually
+-   In joins, usually
 
-  - Include a `WHERE` clause to specify the joined columns
+    -   Include a `WHERE` clause to specify the joined columns
 
-  - We keep in the search only those rows which have the same values
-    in the specified columns
+    -   We keep in the search only those rows which have the same values
+        in the specified columns
 
-  - For clarity, in the `SELECT` clause, we can putt the table name
-    before the column name (e.g. Staff.staffNo)
+    -   For clarity, in the `SELECT` clause, we can putt the table name
+        before the column name (e.g. Staff.staffNo)
 
-  - Also possible to use an alias for a table in the `FROM` clause
-    (useful for distinguishing column names in case of ambiguity)
+    -   Also possible to use an alias for a table in the `FROM` clause
+        (useful for distinguishing column names in case of ambiguity)
 
-  - Alias is separated from table name with a space
+    -   Alias is separated from table name with a space
 
-- Usually the syntax is
+-   Usually the syntax is
 
-  ```sql
-  SELECT "list-of-columns"
-  WHERE table1,table2,...
-  WHERE "search conditions"
-  ```
+    ```sql
+    SELECT "list-of-columns"
+    WHERE table1,table2,...
+    WHERE "search conditions"
+    ```
 
 _List the details of all clients who have viewed a property, along with
 any comment supplied_
@@ -702,12 +702,12 @@ WHERE c.clientNo=v.clientNo
 
 This type of join is also known as a natural inner join:
 
-- Keeps the rows that coincide in the specified columns (in the `WHERE`
-  clause)
+-   Keeps the rows that coincide in the specified columns (in the `WHERE`
+    clause)
 
-- Ignores all rows that do not meet the join conditions
+-   Ignores all rows that do not meet the join conditions
 
-- The most common type of Join
+-   The most common type of Join
 
 ## Three table Join
 
@@ -730,44 +730,44 @@ FROM (Branch b JOIN Staff s USING branchNo)
 
 ## Inner Joins
 
-- Instead of demanding the same column values in the matching columns
-  we can demand different relations between the column values\
-  _List all Durham-Staff who have salary 10% more than some staff
-  member in London_
+-   Instead of demanding the same column values in the matching columns
+    we can demand different relations between the column values\
+    _List all Durham-Staff who have salary 10% more than some staff
+    member in London_
 
-  ```sql
-  SELECT dur.staffNo,dur.fName,dur.IName, dur.position, dur.salary
-  FROM DurhamSaff dur, LondonStaff lon
-  WHERE dur.salary>1.1*lon.salary
-  ```
+    ```sql
+    SELECT dur.staffNo,dur.fName,dur.IName, dur.position, dur.salary
+    FROM DurhamSaff dur, LondonStaff lon
+    WHERE dur.salary>1.1*lon.salary
+    ```
 
-- This type of join is an inner join:
+-   This type of join is an inner join:
 
-  - We add the term "natural", if we demand equality for the
-    columns with the same name in the two tables (e.g.
-    dur.salary=lon.salary)
+    -   We add the term "natural", if we demand equality for the
+        columns with the same name in the two tables (e.g.
+        dur.salary=lon.salary)
 
-  - Inner joins still ignore all rows that do not meet the join
-    conditions
+    -   Inner joins still ignore all rows that do not meet the join
+        conditions
 
 ## Outer Joins
 
-- Inner join: If one row of a table is unmatched, the row is omitted
-  from the output table
+-   Inner join: If one row of a table is unmatched, the row is omitted
+    from the output table
 
-- Outer join: It retains (some of) the rows that do not satisfy the
-  join conditions
+-   Outer join: It retains (some of) the rows that do not satisfy the
+    join conditions
 
-- Left outer join: It retains the rows of the left table that are
-  unmatched with rows from the right table
+-   Left outer join: It retains the rows of the left table that are
+    unmatched with rows from the right table
 
-- Right outer join: Retain the unmatched rows of the right table
+-   Right outer join: Retain the unmatched rows of the right table
 
-- Full outer join: Retain the unmatched rows of both tables
+-   Full outer join: Retain the unmatched rows of both tables
 
 ### Example
 
-![image](/img/Year_1/CSys/Databases/SQL/example1.png)
+![image](/img/Year_1/CSys/Databases/SQL/example1.webp)
 
 **Left outer Join**
 
@@ -780,12 +780,12 @@ FROM Branch b LEFT JOIN PropertyForRent p
     ON b.bCity=p.pCity
 ```
 
-![image](/img/Year_1/CSys/Databases/SQL/Left_Outer.png)
+![image](/img/Year_1/CSys/Databases/SQL/Left_Outer.webp)
 
-- Includes the Bristol row of the left table unmatched with rows from
-  the right table
+-   Includes the Bristol row of the left table unmatched with rows from
+    the right table
 
-- No rows corresponding to the properties in Aberdeen
+-   No rows corresponding to the properties in Aberdeen
 
 **Right outer join**
 
@@ -799,10 +799,10 @@ FROM Branch b RIGHT JOIN PropertyForRent p
 
 ![image](/img/Year_1/CSys/Databases/SQL/Right_Outer.pmg)
 
-- Includes the Aberdeen-row of the right table unmatched with rows
-  from the left table
+-   Includes the Aberdeen-row of the right table unmatched with rows
+    from the left table
 
-- No rows corresponding to branches in Bristol
+-   No rows corresponding to branches in Bristol
 
 **Full outer join**
 _List the branch offices and properties that are in
@@ -814,78 +814,78 @@ FROM Branch b FULL JOIN PropertyForRent p
     ON b.bCity=p.pCity
 ```
 
-![image](/img/Year_1/CSys/Databases/SQL/Full.png)
+![image](/img/Year_1/CSys/Databases/SQL/Full.webp)
 
 # Database Updates
 
 Three SQL statements for modifying the contents of the (existing) tables
 in the database
 
-- `INSERT`: adds new rows of data into the table
+-   `INSERT`: adds new rows of data into the table
 
-  ```sql
-              INSERT INTO TableName [columnList]
-              VALUES (data ValueList)
-  ```
+    ```sql
+                INSERT INTO TableName [columnList]
+                VALUES (data ValueList)
+    ```
 
-- `UPDATE`: Modifies existing data in a table
+-   `UPDATE`: Modifies existing data in a table
 
-  ```sql
-              UPDATE TableName
-              SET columnName1=dataValue1[,columnName2=dataValue2]
-              [WHERE searchCondition]
-  ```
+    ```sql
+                UPDATE TableName
+                SET columnName1=dataValue1[,columnName2=dataValue2]
+                [WHERE searchCondition]
+    ```
 
-- `DELETE`: Removes rows of data from a table
+-   `DELETE`: Removes rows of data from a table
 
-  ```sql
-              DELETE FROM TableName
-              [WHERE searchCondition]
-  ```
+    ```sql
+                DELETE FROM TableName
+                [WHERE searchCondition]
+    ```
 
 # Data Definition Language Overview
 
 Basic commands
 
-- `CREATE`: create a new table
+-   `CREATE`: create a new table
 
-  - Assign a name to the table and define the names and domains of
-    each of the columns in the table
+    -   Assign a name to the table and define the names and domains of
+        each of the columns in the table
 
-- `ALTER`: Amend the relation schema (i.e. table structure)
+-   `ALTER`: Amend the relation schema (i.e. table structure)
 
-  - If it is necessary to change the structure of a table because of
-    design error, or just because the design has changed
+    -   If it is necessary to change the structure of a table because of
+        design error, or just because the design has changed
 
-- Specify integrity and referential constraints
+-   Specify integrity and referential constraints
 
-  - `PRIMARY KEY, FOREIGN KEY`
+    -   `PRIMARY KEY, FOREIGN KEY`
 
-- `DROP`: Delete a table.
+-   `DROP`: Delete a table.
 
-- `CREATE VIEW`: define a virtual table
+-   `CREATE VIEW`: define a virtual table
 
-  - Virtual relation (table) that appears to the user
+    -   Virtual relation (table) that appears to the user
 
-  - It is derived from a query on a \"real table\"
+    -   It is derived from a query on a \"real table\"
 
 # Main domain types in SQL
 
-- **CHAR(n)**: character string of fixed length n
+-   **CHAR(n)**: character string of fixed length n
 
-- **VARCHAR(n)**:character string of variable length at most n
+-   **VARCHAR(n)**:character string of variable length at most n
 
-- **BIT(n)**: bit string of fixed length n
+-   **BIT(n)**: bit string of fixed length n
 
-- **INTEGER**: large positive/negative integer values
+-   **INTEGER**: large positive/negative integer values
 
-- **SMALLINT**: small positive/negative integer values (up to 32767)
+-   **SMALLINT**: small positive/negative integer values (up to 32767)
 
-- **NUMERIC(p,d)**: a (positive/negative) decimal number with at most:
+-   **NUMERIC(p,d)**: a (positive/negative) decimal number with at most:
 
-- Precision p (total number of all digits)
+-   Precision p (total number of all digits)
 
-- Scale d: total number of decimal digits
+-   Scale d: total number of decimal digits
 
 # Other domain types in SQL
 
@@ -914,65 +914,65 @@ CREATE DOMAIN StaffNumber AS VARCHAR(5)
 
 # Constraints
 
-- Referential actions when defining a table (i.e. for `FOREIGN KEY`)
+-   Referential actions when defining a table (i.e. for `FOREIGN KEY`)
 
-  - `ON UPDATE` (what to do when the corresponding primary key is
-    updated)
+    -   `ON UPDATE` (what to do when the corresponding primary key is
+        updated)
 
-  - `ON DELETE` (what to do when the corresponding primary key is
-    deleted)
+    -   `ON DELETE` (what to do when the corresponding primary key is
+        deleted)
 
-- Available options for these actions
+-   Available options for these actions
 
-  - `CASCADE` (when update/delete: update the foreign key/delete the
-    tuple)
+    -   `CASCADE` (when update/delete: update the foreign key/delete the
+        tuple)
 
-  - `SET NULL` (when update/delete: set the foreign key to `NULL`)
+    -   `SET NULL` (when update/delete: set the foreign key to `NULL`)
 
-  - `SET DEFAULT` (when update/delete: set the foreign key to the
-    default value)
+    -   `SET DEFAULT` (when update/delete: set the foreign key to the
+        default value)
 
-  - `NO ACTION` (when update/delete: do nothing - this is dangerous)
+    -   `NO ACTION` (when update/delete: do nothing - this is dangerous)
 
 # Create Table Construct
 
-- An SQL relation is defined using the create table command:
+-   An SQL relation is defined using the create table command:
 
-  ```sql
-  CREATE TABLE R(
-      Attribute1 Domain1 [NOT NULL|UNIQUE],
-      Attribute2 Domain2 [NOT NULL|UNIQUE],
-      ...,
-      Integrity & Referential constraints)
-  ```
+    ```sql
+    CREATE TABLE R(
+        Attribute1 Domain1 [NOT NULL|UNIQUE],
+        Attribute2 Domain2 [NOT NULL|UNIQUE],
+        ...,
+        Integrity & Referential constraints)
+    ```
 
-- A good strategy:
+-   A good strategy:
 
-  - Before the `CREATE TABLE R(...)`it is always safe to write
-    `DROP TABLE R`;
+    -   Before the `CREATE TABLE R(...)`it is always safe to write
+        `DROP TABLE R`;
 
-- Two options for `DROP TABLE R`
+-   Two options for `DROP TABLE R`
 
-  - `RESTRICT` (the `DROP` is rejected if there are other objects
-    that depend for their existence upon the continued existence
-    of R)
+    -   `RESTRICT` (the `DROP` is rejected if there are other objects
+        that depend for their existence upon the continued existence
+        of R)
 
-  - `CASCADE` (default option: the `DROP` is proceeds anyway and SQL
-    drops all dependant objects, and upon all dependent objects)
+    -   `CASCADE` (default option: the `DROP` is proceeds anyway and SQL
+        drops all dependant objects, and upon all dependent objects)
 
 # Defining Views
 
-- View: a relation (table) that:
+-   View: a relation (table) that:
 
-  - Depends on other relations and
+    -   Depends on other relations and
 
-  - Is not physically stored as a table
+    -   Is not physically stored as a table
 
-- Main use of views
+-   Main use of views
 
-  - For presenting different information to different users
+    -   For presenting different information to different users
 
-  - Simplify complex queries
+    -   Simplify complex queries
 
 ```sql
 CREATE VIEW Developers AS

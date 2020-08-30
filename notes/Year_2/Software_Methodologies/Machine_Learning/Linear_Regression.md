@@ -12,10 +12,10 @@ $$
 y=b+w_1x_1
 $$
 
-- y - the predicted label
-- b - the bias, sometimes referred to as $w_0$
-- $w_1$ - the weight of feature 1
-- $x_1$ - a feature
+-   y - the predicted label
+-   b - the bias, sometimes referred to as $w_0$
+-   $w_1$ - the weight of feature 1
+-   $x_1$ - a feature
 
 # Training and loss
 
@@ -51,9 +51,9 @@ $$
 
 (x,y) is an example where
 
-- x is the set of features used by the model to make predictions
+-   x is the set of features used by the model to make predictions
 
-- y is the example’s label
+-   y is the example’s label
 
 prediction(x) is a function of the weights and bias in combination with
 the set of features x
@@ -64,16 +64,16 @@ N is the number of examples in D
 
 # Reducing loss
 
-- Hyperparameters are the configuration settings used to tune how the
-  model is trained
+-   Hyperparameters are the configuration settings used to tune how the
+    model is trained
 
-- Derivative of loss with respect to weights and biases tells us how
-  loss changes for a given example
+-   Derivative of loss with respect to weights and biases tells us how
+    loss changes for a given example
 
-- So we repeatedly take small steps in the direction that minimises
-  loss, we call these **Gradient steps**
+-   So we repeatedly take small steps in the direction that minimises
+    loss, we call these **Gradient steps**
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Linear_Regression/Gradient_Descent.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Linear_Regression/Gradient_Descent.webp)
 
 ## Weight initialisation
 
@@ -82,20 +82,20 @@ looks like $x^2$
 
 Foreshadowing: not true for neural networks
 
-- More than one minimum
+-   More than one minimum
 
-- Strong dependency on initial values
+-   Strong dependency on initial values
 
 ## Efficiency of reducing loss
 
-- Could compute gradient over entire dataset on each step, but this
-  turns out to be unnecessary
+-   Could compute gradient over entire dataset on each step, but this
+    turns out to be unnecessary
 
-- Computing gradient on small data examples works well
+-   Computing gradient on small data examples works well
 
-- **Stochastic Gradient Descent** - one example at a time
+-   **Stochastic Gradient Descent** - one example at a time
 
-- **Mini-batch Gradient Descent** - batches of 10-1000
+-   **Mini-batch Gradient Descent** - batches of 10-1000
 
 ## Learning rate
 

@@ -24,29 +24,29 @@ Improved by fixing bugs before they activate
 
 Staff problems:
 
-- Limited understanding
+-   Limited understanding
 
-- Management priorities
+-   Management priorities
 
-- Morale
+-   Morale
 
 Technical problems:
 
-- Artifacts and paradigms
+-   Artifacts and paradigms
 
-- Testing difficulties
+-   Testing difficulties
 
 # Process metrics
 
 May be used to assess maintainability:
 
-- Number of requests for corrective maintenance
+-   Number of requests for corrective maintenance
 
-- Average time required for impact analysis
+-   Average time required for impact analysis
 
-- Average time taken to implement a change request
+-   Average time taken to implement a change request
 
-- Number of outstanding change requests
+-   Number of outstanding change requests
 
 # Techniques for maintenance
 
@@ -68,7 +68,7 @@ Restructuring or rewriting part or all of a legacy system without changing its f
 
 # Re-engineering
 
-![image](/img/Year_2/Software_Engineering/Maintenance/re-engineering.png)
+![image](/img/Year_2/Software_Engineering/Maintenance/re-engineering.webp)
 
 ## Refactoring vs re-engineering
 
@@ -86,14 +86,14 @@ more maintainable.
 
 Multiple strategies for legacy systems:
 
-- Scrap the system completely
+-   Scrap the system completely
 
-- Continue maintaining the system
+-   Continue maintaining the system
 
-- Transform the system by re-engineering to improve its
-  maintainability
+-   Transform the system by re-engineering to improve its
+    maintainability
 
-- Replace the system with a new system
+-   Replace the system with a new system
 
 ## Legacy system categories
 

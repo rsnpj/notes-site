@@ -6,63 +6,63 @@ title: From middleware to web services
 
 RPC, Java RMI and Python PYRO
 
-- Closely follow the traditional program development process that
-  creased an application based on
+-   Closely follow the traditional program development process that
+    creased an application based on
 
-  1.  Program libraries integration
+    1.  Program libraries integration
 
-  2.  Parameter passing
+    2.  Parameter passing
 
-- Do not require developers to deal with socket programming when
-  implementing programs that support remote communication
+-   Do not require developers to deal with socket programming when
+    implementing programs that support remote communication
 
-- Have a performance issue due to synchronous communication
+-   Have a performance issue due to synchronous communication
 
 CORBA
 
-- Still follow the programming library approach
+-   Still follow the programming library approach
 
-- Similar to Java RMI: provide object request broker (ORB) define the
-  interface definition language (IDL)
+-   Similar to Java RMI: provide object request broker (ORB) define the
+    interface definition language (IDL)
 
-- Integrate components developer by different programming languages
+-   Integrate components developer by different programming languages
 
 # Message-Oriented Middleware (MOM)
 
-- We need something more loosely coupled
+-   We need something more loosely coupled
 
-- Communication using messages
+-   Communication using messages
 
-- Messages stored in message queues
+-   Messages stored in message queues
 
-- Message servers decouple client and server
+-   Message servers decouple client and server
 
-- Various assumptions about message content
+-   Various assumptions about message content
 
-- Provides data persistence, if server goes down, when it comes back
-  up it will send the info again
+-   Provides data persistence, if server goes down, when it comes back
+    up it will send the info again
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/MOM.png)
+![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/MOM.webp)
 
 ## Properties of MOM
 
 Asynchronous interaction
 
-- Client and server are only loosely coupled
+-   Client and server are only loosely coupled
 
-- Messages are queued
+-   Messages are queued
 
-- Good for application integration
+-   Good for application integration
 
 Support for reliable delivery service
 
-- Keep queues in persistent storage
+-   Keep queues in persistent storage
 
 Processing of messages by intermediate message server(s)
 
-- May do filtering, transforming, logging
+-   May do filtering, transforming, logging
 
-- Networks of message servers
+-   Networks of message servers
 
 Natural for database integration
 
@@ -71,23 +71,23 @@ one request (in a similar way to multicasting)
 
 # Java Message Service (JMS)
 
-- API specification to access MOM implementations
+-   API specification to access MOM implementations
 
-- Two modes of operations
+-   Two modes of operations
 
-- Point to point
+-   Point to point
 
-  - One to one communication
+    -   One to one communication
 
-- Publish/subscribe
+-   Publish/subscribe
 
-  - One to many communication
+    -   One to many communication
 
-- JMS server implements JMS API
+-   JMS server implements JMS API
 
-- JMS clients connect to JMS servers
+-   JMS clients connect to JMS servers
 
-- Java objects can be serialised to JMS messages
+-   Java objects can be serialised to JMS messages
 
 # Web services
 
@@ -95,22 +95,22 @@ Use well known web standards for distributed computing
 
 Communication
 
-- Message content expressed in XML
+-   Message content expressed in XML
 
-- Simple Object Access Protocol (SOAP) - lightweight protocol for
-  sync/async communication
+-   Simple Object Access Protocol (SOAP) - lightweight protocol for
+    sync/async communication
 
 Service description
 
-- Web Services Description Language (WSDL) - interface description for
-  web services
+-   Web Services Description Language (WSDL) - interface description for
+    web services
 
 Service Discovery
 
-- Universal Description Discovery and Integration (UDDI) - directory
-  with web service description in WSDL
+-   Universal Description Discovery and Integration (UDDI) - directory
+    with web service description in WSDL
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/Web_Services.png)
+![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/Web_Services.webp)
 
 ## Attributed of Web-Services
 
@@ -129,14 +129,14 @@ creating machine readable documents
 
 REST
 
-- An architectural style, treating the web as a resource centric
-  application
+-   An architectural style, treating the web as a resource centric
+    application
 
-- Each URL in a RESTful application represents a resource
+-   Each URL in a RESTful application represents a resource
 
 JSON
 
-- An open standard format that uses human readable text to transmit
-  data objects consisting of attribute-value pairs
+-   An open standard format that uses human readable text to transmit
+    data objects consisting of attribute-value pairs
 
-- Provide lightweight communication
+-   Provide lightweight communication

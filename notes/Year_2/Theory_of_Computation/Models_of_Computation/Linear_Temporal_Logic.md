@@ -55,7 +55,7 @@ $$
 
 # Intuitive statements
 
-![image](/img/Year_2/Theory_of_Computation/MOC/LTL/Intuitive_statements.png)
+![image](/img/Year_2/Theory_of_Computation/MOC/LTL/Intuitive_statements.webp)
 
 # Formal Semantics
 

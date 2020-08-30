@@ -8,27 +8,27 @@ Something involving choice and uncertainty based on incomplete information
 
 The "cautious planner" school of risk management:
 
-- Identify risks in advance
+-   Identify risks in advance
 
-- Assess probability and impact
+-   Assess probability and impact
 
-- Prioritise
+-   Prioritise
 
-- Risk management plan
+-   Risk management plan
 
 Types of risk:
 
-- Project risks
+-   Project risks
 
-- Technical risks
+-   Technical risks
 
-- Business risks
+-   Business risks
 
-- Known risks
+-   Known risks
 
-- Predictable risks
+-   Predictable risks
 
-- Unknown risks
+-   Unknown risks
 
 A risk can be measured by its likelihood $\times$ the impact
 
@@ -46,9 +46,9 @@ Distinguish risks from other project events by looking for:
 
 There are two major sources of risk
 
-- Generic risk
+-   Generic risk
 
-- Project risk
+-   Project risk
 
 # Risk management
 
@@ -68,7 +68,7 @@ Risks affecting the quality or performance of the software being developed
 Risks affecting the organisation developing or procuring the software
 </Definition>
 
-![image](/img/Year_2/Software_Engineering/Risks/risk_management.png)
+![image](/img/Year_2/Software_Engineering/Risks/risk_management.webp)
 
 # Risk identification
 
@@ -77,39 +77,39 @@ experience
 
 A checklist of common risks may be used to identify risks in a project
 
-- Technology risks
+-   Technology risks
 
-- People risks
+-   People risks
 
-- Organisational risks
+-   Organisational risks
 
-- Tools risk
+-   Tools risk
 
-- Requirements risks
+-   Requirements risks
 
-- Estimation risks
+-   Estimation risks
 
 # Risk analysis
 
-- Asses probability and seriousness of each risk
+-   Asses probability and seriousness of each risk
 
-- Probability may be very low, low, moderate, high or very high
+-   Probability may be very low, low, moderate, high or very high
 
-- Risk consequences might be catastrophic, serious, tolerable or
-  insignificant
+-   Risk consequences might be catastrophic, serious, tolerable or
+    insignificant
 
 # Risk mitigation
 
 Consider each risk and develop a strategy to manage that risk:
 
-- Avoidance strategies - the probability that the risk will arise is
-  reduced
+-   Avoidance strategies - the probability that the risk will arise is
+    reduced
 
-- Minimisation strategies - the impact of the risk on the project or
-  product will be reduced
+-   Minimisation strategies - the impact of the risk on the project or
+    product will be reduced
 
-- Contingency plans - if the risk arises, contingency plans are plans
-  to deal with that risk
+-   Contingency plans - if the risk arises, contingency plans are plans
+    to deal with that risk
 
 # Risk monitoring
 
@@ -118,13 +118,13 @@ less or more probable
 
 Risk monitoring tracks progress
 
-- Assess whether a predicted risk occurs
+-   Assess whether a predicted risk occurs
 
-- Assess whether the effects of the risk have changed
+-   Assess whether the effects of the risk have changed
 
-- Ensures that risk aversion steps are defined and properly applied
+-   Ensures that risk aversion steps are defined and properly applied
 
-- Collects information that can be used in the future
+-   Collects information that can be used in the future
 
 Each key risk should be discussed at management progress meetings
 

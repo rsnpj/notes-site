@@ -6,9 +6,9 @@ title: Performance Measurement
 
 How well did we capture the + group for the given threshold
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R.webp)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R1.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R1.webp)
 
 Precision:
 
@@ -16,7 +16,7 @@ $$
 \dfrac{tp}{tp+fp}>1$$ Recall (Sensitivity)
 $$
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R2.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R2.webp)
 
 ## ROC Curve
 
@@ -40,7 +40,7 @@ $$
 
 Support (% pop)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/G+L.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/G+L.webp)
 
 Base rate
 

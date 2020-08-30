@@ -9,13 +9,13 @@ to deal with subproblems
 
 At each level of recursion:
 
-- **Divide** the problem into a number of subproblems
+-   **Divide** the problem into a number of subproblems
 
-- **Conquer** the subproblems by solving them: recursively, or
-  straightforward if the subproblem sizes are small enough
+-   **Conquer** the subproblems by solving them: recursively, or
+    straightforward if the subproblem sizes are small enough
 
-- **Combine** the solutions for the subproblems into a solution for
-  the original problem
+-   **Combine** the solutions for the subproblems into a solution for
+    the original problem
 
 # Problem Definition
 
@@ -37,15 +37,15 @@ The task of given a graph G determining $\chi_G$ is an NP hard problem
 
 This can be done in several ways. For example:
 
-- Heuristics
+-   Heuristics
 
-- Approximation algorithms
+-   Approximation algorithms
 
-- Exact algorithms
+-   Exact algorithms
 
-- Parametrized algorithms
+-   Parametrized algorithms
 
-- Algorithms with restricted inputs
+-   Algorithms with restricted inputs
 
 We focus on the last approach. That is, we exploit the structure of the
 input with an aim to develop faster algorithms.
@@ -72,11 +72,11 @@ Adding all possible edges between the graphs
 
 A graph G is a cograph iff G can be created by the following rules
 
-- The 1-vertex graph $K_1$ is a cograph
+-   The 1-vertex graph $K_1$ is a cograph
 
-- If $G_1$ and $G_2$ are cographs, then so is $G_1+G_2$
+-   If $G_1$ and $G_2$ are cographs, then so is $G_1+G_2$
 
-- If $G_1$ and $G_2$ are cographs, then so is $G_1\times G_2$
+-   If $G_1$ and $G_2$ are cographs, then so is $G_1\times G_2$
 
 <Important>
 $P_4$ is the smallest graph that is not a cograph
@@ -91,7 +91,7 @@ $P_4$ via vertex deletions
 
 If not, then G is said to be $P_4$-free
 
-![image](/img/Year_2/Theory_of_Computation/AAC/divide/p4.png)
+![image](/img/Year_2/Theory_of_Computation/AAC/divide/p4.webp)
 
 It is known that a graph is a cograph iff it is $P_4$-free
 
@@ -109,11 +109,11 @@ satisfying
     labelled + of $\times$, and corresponds to an induced subgraph $G_x$
     of $G$ defined as follows:
 
-    - If x is a +- node, then $G_x$ is the disjoint union of all
-      graphs $G_y$, where y is a child of x
+    -   If x is a +- node, then $G_x$ is the disjoint union of all
+        graphs $G_y$, where y is a child of x
 
-    - If x is a $\times$-node, then $G_x$ is the join of all graphs
-      $G_y$ where y is a child of x
+    -   If x is a $\times$-node, then $G_x$ is the join of all graphs
+        $G_y$ where y is a child of x
 
 4.  Labels of internal nodes on the (unique) path from any leaf to r
     alternate between + and $\times$

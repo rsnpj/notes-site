@@ -8,31 +8,31 @@ Comprises a set of connected polygons to represent an object
 
 # Why WebGL
 
-- Cross-platform, browser-based
+-   Cross-platform, browser-based
 
-- Hardware-based rendering
+-   Hardware-based rendering
 
-- Support programmable rendering pipeline
+-   Support programmable rendering pipeline
 
-- Zero setup effort before you start programming
+-   Zero setup effort before you start programming
 
 # GPU Programming
 
 GPU
 
-- Typically comprises of hundreds to thousands of processors
+-   Typically comprises of hundreds to thousands of processors
 
-- Process graphics primitives in parallel
+-   Process graphics primitives in parallel
 
 Programmable rendering pipeline
 
-- Vertex shader and fragment shader are programmable
+-   Vertex shader and fragment shader are programmable
 
-- GPU programming is also called shader programming
+-   GPU programming is also called shader programming
 
 # Programmable rendering pipeline
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/WebGL/pipeline.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/WebGL/pipeline.webp)
 
 Pixels - Colour info
 
@@ -43,20 +43,20 @@ lighting effects
 
 Vertex shader:
 
-- Manipulates per-vertex data such as vertex coordinates, normals,
-  colors, and texture coordinates
+-   Manipulates per-vertex data such as vertex coordinates, normals,
+    colors, and texture coordinates
 
 Fragment shader:
 
-- Deals with surface points for processing
+-   Deals with surface points for processing
 
-- Main goal: calculate colour for each pixel that will display on the
-  screen
+-   Main goal: calculate colour for each pixel that will display on the
+    screen
 
 Rasterization process:
 
-- A black box (non programmable) generates fragments from outputs of
-  vertex shader
+-   A black box (non programmable) generates fragments from outputs of
+    vertex shader
 
 # Data Structures
 

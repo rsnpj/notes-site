@@ -12,48 +12,48 @@ A logical name for an allocated area of memory assigned to store a value of a ce
 int i = 10;
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Basic_Integer.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Basic_Integer.webp)
 
 # Pointer variables
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Variable.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Variable.webp)
 
-- ```c
-  int i = 10;
-  ```
+-   ```c
+    int i = 10;
+    ```
 
-- value of `i` is `10`
+-   value of `i` is `10`
 
-- The memory address of `i` is `&i` and has a value of `4`
+-   The memory address of `i` is `&i` and has a value of `4`
 
-- A pointer variable stores a memory address:
+-   A pointer variable stores a memory address:
 
-  ```c
-  int *p;
-  p = &i;
-  ```
+    ```c
+    int *p;
+    p = &i;
+    ```
 
-- now the pointer variable `p` stores the memory address of the
-  integer variable `i`
+-   now the pointer variable `p` stores the memory address of the
+    integer variable `i`
 
 # Pointers
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer.webp)
 
 ```c
 int i = 10;   // simple variable
 int *p = &i;  // pointer variable
 ```
 
-- You can read the address operator `&` as _address of_
+-   You can read the address operator `&` as _address of_
 
 ```c
 printf("%d %d\n", i, *p ) ;
 ```
 
-- This outputs `10 10`
+-   This outputs `10 10`
 
-- You can read the indirection operator `*` as _value of_
+-   You can read the indirection operator `*` as _value of_
 
 # Basic pointer operations
 
@@ -64,7 +64,7 @@ int *p;    // declare a variable pointer to an int
 p = &i;    // & "address of"
 ```
 
-- Use indirection operator `*` to access and modify the value:
+-   Use indirection operator `*` to access and modify the value:
 
 ```c
 *p = 7;      // assign value of 7 to i
@@ -74,91 +74,91 @@ p = &i;    // & "address of"
 
 # The Indirection Operator: what not to do
 
-- Applying the indirection operator to an uninitialized pointer
-  variable causes undefined behaviour:
+-   Applying the indirection operator to an uninitialized pointer
+    variable causes undefined behaviour:
 
-  ```c
-    int *p;
-    printf("%d", *p);   /*** WRONG ***/
-  ```
+    ```c
+      int *p;
+      printf("%d", *p);   /*** WRONG ***/
+    ```
 
-- Assigning a value to `*p` is particularly dangerous:
+-   Assigning a value to `*p` is particularly dangerous:
 
-  ```c
-    int *p;
-    *p = 1;   /*** DANGER ***/
-  ```
+    ```c
+      int *p;
+      *p = 1;   /*** DANGER ***/
+    ```
 
 # Pointer Assignment
 
-- C allows the use of the assignment operator to copy pointers of the
-  same type
+-   C allows the use of the assignment operator to copy pointers of the
+    same type
 
-- Assume that the following declaration is in effect:
+-   Assume that the following declaration is in effect:
 
-  ```c
-  int i, j, *p, *q;
-  ```
+    ```c
+    int i, j, *p, *q;
+    ```
 
-- Example of pointer assignment:
+-   Example of pointer assignment:
 
-  ```c
-  p = &i;
-  ```
+    ```c
+    p = &i;
+    ```
 
-- Another example of pointer assignment:
+-   Another example of pointer assignment:
 
-  ```c
-  q = p;
-  ```
+    ```c
+    q = p;
+    ```
 
-- `q` now points to the same place as `p`:
+-   `q` now points to the same place as `p`:
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point.webp)
 
-- If `p` and `q` both point to `i`, we can change `i` by assigning a
-  new value to either `*p` or `*q`:
+-   If `p` and `q` both point to `i`, we can change `i` by assigning a
+    new value to either `*p` or `*q`:
 
-  ```c
-  *p = 1;
-  ```
+    ```c
+    *p = 1;
+    ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point1.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point1.webp)
 
 ```c
   *q = 2;
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point2.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point2.webp)
 
-- Any number of pointer variables may point to the same object
+-   Any number of pointer variables may point to the same object
 
 # Pointers as Arguments
 
-- Previously we tried write a `swap()` function that could modify its
-  arguments, but it didn’t work
+-   Previously we tried write a `swap()` function that could modify its
+    arguments, but it didn’t work
 
-- By passing a pointer to a variable instead of the value of the
-  variable, `swap()` can be fixed
+-   By passing a pointer to a variable instead of the value of the
+    variable, `swap()` can be fixed
 
 # Swap
 
-- We want to write a simple function in C to swap the values of two
-  integer variables, `x` and `y`
+-   We want to write a simple function in C to swap the values of two
+    integer variables, `x` and `y`
 
-  ```c
-  void swap(int a, int b) {
-    int temp;
+    ```c
+    void swap(int a, int b) {
+      int temp;
 
-    temp = a;
-    a = b;
-    b = temp;
-  }
-  ```
+      temp = a;
+      a = b;
+      b = temp;
+    }
+    ```
 
-- Then call `swap(x,y);`
+-   Then call `swap(x,y);`
 
-- Does this work?
+-   Does this work?
 
 ## A working solution
 
@@ -172,39 +172,39 @@ void swap(int *a, int *b) {
 }
 ```
 
-- Then call `swap(&x,&y);`
+-   Then call `swap(&x,&y);`
 
-- Remember C uses call by value, but by using pointers you can get
-  around this problem as the pointer still points at the original data
+-   Remember C uses call by value, but by using pointers you can get
+    around this problem as the pointer still points at the original data
 
 # Pointers as Arguments
 
-- Arguments in calls of `scanf()` are pointers:
+-   Arguments in calls of `scanf()` are pointers:
 
-  ```c
-    int i;
-  ...
-    scanf("%d", &i);
-  ```
+    ```c
+      int i;
+    ...
+      scanf("%d", &i);
+    ```
 
-- Without the `&`, `scanf()` would be supplied with the value of `i`
+-   Without the `&`, `scanf()` would be supplied with the value of `i`
 
-- Although `scanf()`’s arguments must be pointers, it’s not always
-  true that every argument needs the `&` operator:
+-   Although `scanf()`’s arguments must be pointers, it’s not always
+    true that every argument needs the `&` operator:
 
-  ```c
-    int i, *p;
-  ...
-    p = &i;
-    scanf("%d", p);
-  ```
+    ```c
+      int i, *p;
+    ...
+      p = &i;
+      scanf("%d", p);
+    ```
 
-- Using the `&` operator in the call would be wrong:
+-   Using the `&` operator in the call would be wrong:
 
-  ```c
-    scanf("%d", &p);   /*** WRONG, would be the address of the pointer,
-     rather than the address of the thing p points at ***/
-  ```
+    ```c
+      scanf("%d", &p);   /*** WRONG, would be the address of the pointer,
+       rather than the address of the thing p points at ***/
+    ```
 
 # Arrays in C
 
@@ -212,48 +212,48 @@ void swap(int *a, int *b) {
 int a[10];
 ```
 
-- declares a fixed size array holding ten `int` values
+-   declares a fixed size array holding ten `int` values
 
-  ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Array.png)
+    ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Array.webp)
 
-* `a[i]` is the `i`th element of the array
+*   `a[i]` is the `i`th element of the array
 
-* `sizeof(a) = 10 * sizeof(int) = 40` bytes
+*   `sizeof(a) = 10 * sizeof(int) = 40` bytes
 
-* The array is stored in memory as a single contiguous block that is
-  40 bytes (10 `int`s) in size
+*   The array is stored in memory as a single contiguous block that is
+    40 bytes (10 `int`s) in size
 
-* Note that `sizeof(a) / sizeof(a[0])=10`
+*   Note that `sizeof(a) / sizeof(a[0])=10`
 
-  - This is a common way of checking the number of elements in an
-    array.
+    -   This is a common way of checking the number of elements in an
+        array.
 
-  - We can’t pass an array to a function, but we can pass a pointer
-    to it. The line above will not work correctly on a pointer, so
-    we will need to pass the length of the array too.
+    -   We can’t pass an array to a function, but we can pass a pointer
+        to it. The line above will not work correctly on a pointer, so
+        we will need to pass the length of the array too.
 
 # Strings
 
-- Are represented as an array of characters
+-   Are represented as an array of characters
 
-  ```c
-  char a[] = "Hello worlds";
-  char b[13];
-  b = a; // Not allowed
-  char *c;
-  c = a;
-  ```
+    ```c
+    char a[] = "Hello worlds";
+    char b[13];
+    b = a; // Not allowed
+    char *c;
+    c = a;
+    ```
 
-- will set pointer `c` to same address as `a`
+-   will set pointer `c` to same address as `a`
 
-- assignment of an array to array is not supported in C
+-   assignment of an array to array is not supported in C
 
-- unlike `struct` as we saw last lecture
+-   unlike `struct` as we saw last lecture
 
-- `strcpy(b,a);` first argument is the destination, ordered like
-  assignment above
+-   `strcpy(b,a);` first argument is the destination, ordered like
+    assignment above
 
-  - need to `#include<string.h>`
+    -   need to `#include<string.h>`
 
 ```c
 char a[] = "Hello";
@@ -261,123 +261,123 @@ strlen(a) = 5; // number of characters
 sizeof(a) = 6; // includes the null character at the end
 ```
 
-- Strings are null terminated – important when allocating space to
-  store them
+-   Strings are null terminated – important when allocating space to
+    store them
 
-  ```c
-  printf("%s %c\n", a, a[0]);
-  ```
+    ```c
+    printf("%s %c\n", a, a[0]);
+    ```
 
-- Output is:
+-   Output is:
 
-  ```c
-  Hello H
-  ```
+    ```c
+    Hello H
+    ```
 
-- If you use the variable `a` on its own, it represents the memory
-  address of the start of the string
+-   If you use the variable `a` on its own, it represents the memory
+    address of the start of the string
 
 # Pointers, strings and arrays
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/String_Array.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/String_Array.webp)
 
 ```c
 char a[] = "Hello"; // sizeof = 6
 char *a = "Hello"; // sizeof = 8  as pointers take 8 bytes
 ```
 
-- These are equivalent declarations, and create the identical bytes in
-  memory, as shown above.
+-   These are equivalent declarations, and create the identical bytes in
+    memory, as shown above.
 
-- _Warning:_ using `sizeof(a)` will give `6` in the first case (the
-  size of the array) and `8` in the second case (the size of the
-  pointer).
+-   _Warning:_ using `sizeof(a)` will give `6` in the first case (the
+    size of the array) and `8` in the second case (the size of the
+    pointer).
 
-- In the second case, the string `"Hello"` is constant and cannot be
-  modified.
+-   In the second case, the string `"Hello"` is constant and cannot be
+    modified.
 
-- Pointers and arrays are often used interchangeably
+-   Pointers and arrays are often used interchangeably
 
 # Pointer arithmetic
 
-- Pointer arithmetic accounts for the base type of the items:
+-   Pointer arithmetic accounts for the base type of the items:
 
-  ```c
-  int a[10];
-  int *pa;
+    ```c
+    int a[10];
+    int *pa;
 
-  pa = &a[0];
-  pa = a;
-  ```
+    pa = &a[0];
+    pa = a;
+    ```
 
-  ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic.png)
+    ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic.webp)
 
 ```c
 pa = &a[1];
 pa = (a+1);
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic1.png)
+![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic1.webp)
 
-- The two pairs of statements above are equivalent using array or
-  pointer notation: `+1` translates to `+4` bytes (1 `int`)
+-   The two pairs of statements above are equivalent using array or
+    pointer notation: `+1` translates to `+4` bytes (1 `int`)
 
 # Strange but true
 
-- In C if I write `a[x]` this works by adding `x` to `a` to find the
-  pointer
+-   In C if I write `a[x]` this works by adding `x` to `a` to find the
+    pointer
 
-- Hence `a[x]` is the same as `*(a+x)`
+-   Hence `a[x]` is the same as `*(a+x)`
 
-- This seems fine if I write `a[2]`
+-   This seems fine if I write `a[2]`
 
-- But what if I write `2[a]`?
+-   But what if I write `2[a]`?
 
-- It compiles and works!
+-   It compiles and works!
 
-- See `array.c`
+-   See `array.c`
 
 # What about?
 
-- `a[-4]` ?
+-   `a[-4]` ?
 
-- Interpreted as `*(a + -4)`
+-   Interpreted as `*(a + -4)`
 
-- Is the following valid?
+-   Is the following valid?
 
-  ```c
-  int *p;
-  int i = 5;
-  int j = 20;
-  p = &i;
-  printf("%d %d\n", p[0], p[1]);
-  ```
+    ```c
+    int *p;
+    int i = 5;
+    int j = 20;
+    p = &i;
+    printf("%d %d\n", p[0], p[1]);
+    ```
 
-- What will the output be?
+-   What will the output be?
 
 # Peeking at memory
 
-- Can look at bits of memory
+-   Can look at bits of memory
 
-- See `peek.c`
+-   See `peek.c`
 
-- Can find adjacent local variables and parameters
+-   Can find adjacent local variables and parameters
 
-- Easy to make mistakes
+-   Easy to make mistakes
 
-- Cannot tell what data is by looking at it
+-   Cannot tell what data is by looking at it
 
 # Breaking things
 
-- We can use random numbers to write random values in random places
+-   We can use random numbers to write random values in random places
 
-- See `break.c`
+-   See `break.c`
 
-- This can upset the system
+-   This can upset the system
 
-- Segmentation fault occurs: hardware tells OS a memory access is not
-  allowed
+-   Segmentation fault occurs: hardware tells OS a memory access is not
+    allowed
 
-- Sometimes it goes on for a shockingly long time
+-   Sometimes it goes on for a shockingly long time
 
-- Sometimes the last number is very strange: why?
+-   Sometimes the last number is very strange: why?

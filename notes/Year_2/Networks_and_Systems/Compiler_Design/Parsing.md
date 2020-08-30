@@ -4,26 +4,26 @@ title: Syntax Analysis (Parsing)
 
 Lexical analyser:
 
-- Reads the source program
+-   Reads the source program
 
-- Produces the sequence of tokens and delivers it to the parser (for
-  syntax analysis)
+-   Produces the sequence of tokens and delivers it to the parser (for
+    syntax analysis)
 
-- Tokens are represented by regular expressions
+-   Tokens are represented by regular expressions
 
 Syntax of a programming language:
 
-- Expressed by a context free grammar
+-   Expressed by a context free grammar
 
-- Alphabet of the grammar - the set of tokens
+-   Alphabet of the grammar - the set of tokens
 
 Context free grammar:
 
-- A finite way of describing the infinite number of strings
+-   A finite way of describing the infinite number of strings
 
-- Given by a start symbol and production rules
+-   Given by a start symbol and production rules
 
-- String - a valid program of the source language
+-   String - a valid program of the source language
 
 Derivation of a string s in grammar:
 
@@ -44,11 +44,11 @@ Derivation of a string s in grammar:
 
 Grammar:
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.webp)
 
 Considering the string $(x+y)\times x$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Derivation.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Derivation.webp)
 
 Leftmost derivation - at each stage replace the leftmost non-terminal
 using a production rule
@@ -60,72 +60,72 @@ using a production rule
 
 Purpose of a parser:
 
-- Given a string of tokens, to check whether it belongs to the
-  language
+-   Given a string of tokens, to check whether it belongs to the
+    language
 
-- If yes, to find a derivation of this string in the grammar
+-   If yes, to find a derivation of this string in the grammar
 
-- If not, to report useful syntax errors
+-   If not, to report useful syntax errors
 
 For well formed strings of tokens (programs):
 
-- The parser constructs a syntax tree (parse tree)
+-   The parser constructs a syntax tree (parse tree)
 
-  - A graphical representation of the derivation of the string in
-    the grammar
+    -   A graphical representation of the derivation of the string in
+        the grammar
 
-- The parse tree is passed to the next phase of the compiler (semantic
-  analysis)
+-   The parse tree is passed to the next phase of the compiler (semantic
+    analysis)
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/process.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/process.webp)
 
 In the parse tree:
 
-- Each internal node:
+-   Each internal node:
 
-  - Is marked by a non-terminal
+    -   Is marked by a non-terminal
 
-  - Represents the application of a production rule
+    -   Represents the application of a production rule
 
-- Each leaf is marked by a terminal
+-   Each leaf is marked by a terminal
 
-- All the leaves given the input string
+-   All the leaves given the input string
 
 Two main methods for constructing a parse tree:
 
-- The top-down approach
+-   The top-down approach
 
-  - Start from the root (labelled with the start symbol)
+    -   Start from the root (labelled with the start symbol)
 
-  - Continue down to the leaves
+    -   Continue down to the leaves
 
-- The bottom-up approach
+-   The bottom-up approach
 
-  - Start from the leaves
+    -   Start from the leaves
 
-  - Continue up to the root
+    -   Continue up to the root
 
 So creating a parse tree from the previous example looks like this
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Parse_Tree.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Parse_Tree.webp)
 
 # Ambiguity
 
 Ambiguous grammar:
 
-- If there is more than one parse tree for the same string
+-   If there is more than one parse tree for the same string
 
-- Equivalently: there exists more than one leftmost (or rightmost)
-  derivation of the same string
+-   Equivalently: there exists more than one leftmost (or rightmost)
+    derivation of the same string
 
 To prove a grammar is ambiguous just find a string of terminals that is
 produced by two parse trees
 
 A string with two parse trees may have two meanings, therefore we need:
 
-- To use additional rules to resolve ambiguities
+-   To use additional rules to resolve ambiguities
 
-- Or to design unambiguous grammars
+-   Or to design unambiguous grammars
 
 Common occurrences here are things that are normally solved with BODMAS,
 e..g what is 9-5+2
@@ -134,76 +134,76 @@ e..g what is 9-5+2
 
 Two solutions:
 
-- Use diambiguating rules that "throw away" undesired parse trees
+-   Use diambiguating rules that "throw away" undesired parse trees
 
-- Construct an equivalent unambiguous grammar
+-   Construct an equivalent unambiguous grammar
 
 Example of disambiguating rules:
 
-- Impose rules defining the relative precedence of operators when we
-  have two different operators
+-   Impose rules defining the relative precedence of operators when we
+    have two different operators
 
-- Operator \* has higher precedence than +
+-   Operator \* has higher precedence than +
 
 The dangling else grammar
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/dangling_else.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/dangling_else.webp)
 
 Problem - when we read from left to right, which else matches with which
 else
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else1.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else1.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else2.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else2.webp)
 
 Most languages prefer the first tree - match each else with the closest
 unmatched then
 
 To rewrite this into an unambiguous grammar
 
-- A statement appearing between a then and else must be "matched",
-  i.e. it can't end with an unmatched then
+-   A statement appearing between a then and else must be "matched",
+    i.e. it can't end with an unmatched then
 
-- A matched statement is
+-   A matched statement is
 
-  - Either an if-then-else statement
+    -   Either an if-then-else statement
 
-  - Or any other unconditional statement
+    -   Or any other unconditional statement
 
 # Abstract syntax tree
 
 Recall
 
-- The parse tree represents the steps of the derivation of a string
+-   The parse tree represents the steps of the derivation of a string
 
-- Every internal node:
+-   Every internal node:
 
-  - Is marked by a non-terminal
+    -   Is marked by a non-terminal
 
-  - Represents the application of a production rule
+    -   Represents the application of a production rule
 
 Often parse trees are very complicated
 
-- Many non-terminals in the grammar:
+-   Many non-terminals in the grammar:
 
-  - Are auxillary non terminals
+    -   Are auxillary non terminals
 
-  - Do not represent operations.
+    -   Do not represent operations.
 
-- We need a simpler representation of string derivations
+-   We need a simpler representation of string derivations
 
 Abstract syntax tree:
 
-- Much simpler than the parse tree
+-   Much simpler than the parse tree
 
-- Every internal node represents an operation and no a non-terminal
+-   Every internal node represents an operation and no a non-terminal
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/AST.png)
+![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/AST.webp)
 
 We can add annotations (or attributes) to the nodes of each tree
 
 Attributed:
 
-- Detailed information about semantics
+-   Detailed information about semantics
 
-- e.g. type information, location in memory \...
+-   e.g. type information, location in memory \...

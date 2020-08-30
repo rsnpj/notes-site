@@ -27,14 +27,7 @@ export default function HomePage() {
 								src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg"
 								alt="Buy me a coffee"
 							/>
-							<span
-								style={{
-									marginLeft: "5px",
-									fontSize: "24px !important;",
-								}}
-							>
-								Buy me a coffee
-							</span>
+							<span>Buy me a coffee</span>
 						</a>
 						<div className="flex items-center justify-center">
 							<div className="px-4 py-2 border border-gray-400 rounded ">

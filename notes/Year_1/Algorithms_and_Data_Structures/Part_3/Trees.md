@@ -14,13 +14,13 @@ title: Trees
 
 In a binary tree, each node has:
 
-- Pointer to parent (or NIL, or to itself, if root)
+-   Pointer to parent (or NIL, or to itself, if root)
 
-- Pointer to left child (or NIL, or to itself, if there isn't one)
+-   Pointer to left child (or NIL, or to itself, if there isn't one)
 
-- Pointer to right child (or NIL, or to itself, if there isn't one)
+-   Pointer to right child (or NIL, or to itself, if there isn't one)
 
-- Payload
+-   Payload
 
 Binary trees are useful to store data, giving fast insert, lookup and
 delete operations.
@@ -33,9 +33,9 @@ children
 You must build and maintain the tree such that it's true for every node
 v of the tree that
 
-- all elements in its left sub tree are "smaller" than v
+-   all elements in its left sub tree are "smaller" than v
 
-- all elements in its right sub tree are "bigger" than v
+-   all elements in its right sub tree are "bigger" than v
 
 Smaller and bigger refer to the payload. The left/right sub-tree refers
 to the tree rooted in a node's left/right child
@@ -44,16 +44,17 @@ to the tree rooted in a node's left/right child
 
 Starting with root:
 
-- In order: Recurse into left sub-tree, print payload, recurse into
-  right sub-tree
+-   In order: Recurse into left sub-tree, print payload, recurse into
+    right sub-tree
 
-- Pre-order: Print payload, recurse into subtrees
+-   Pre-order: Print payload, recurse into subtrees
 
-- Post-order: recurse into sub-trees, print payload
+-   Post-order: recurse into sub-trees, print payload
 
 ## Code for a BST
 
 Initialising a node:
+
 ```python
     class Node:
         """
@@ -92,6 +93,7 @@ class Node:
 ```
 
 Looking up a value:
+
 ```python
 class Node:
     ...
@@ -123,14 +125,15 @@ returns "not found" then we're done.
 
 Otherwise, three cases need to be considered:
 
-- If a node is a leaf then simply remove it
+-   If a node is a leaf then simply remove it
 
-- If a node has one child then remove and replace it with that one
-  child - list the sub tree up
+-   If a node has one child then remove and replace it with that one
+    child - list the sub tree up
 
-- If a node has two children
+-   If a node has two children
 
 Counting children:
+
 ```python
 class Node:
     ...
@@ -148,7 +151,9 @@ class Node:
             cnt += 1
         return cnt
 ```
+
 Deleting a node
+
 ```python
 class Node:
     ...
@@ -205,17 +210,17 @@ class Node:
 
 BST property: for all nodes v with key k:
 
-- nodes in left subtree has keys $<k$
+-   nodes in left subtree has keys $<k$
 
-- nodes in right subtree have keys $>k$
+-   nodes in right subtree have keys $>k$
 
 Have seen simple BST operations:
 
-- Lookup
+-   Lookup
 
-- Minimum, maximum
+-   Minimum, maximum
 
-- Predecessor, successor
+-   Predecessor, successor
 
 All take $\mathcal{O}(h)$ time, h height of tree
 
@@ -249,7 +254,7 @@ A BST is a red-black tree if:
 5.  for all nodes, all paths from node to descendant leaves contain the
     same number of black nodes'
 
-![RedBlack Tree](/img/Year_1/ADS/Part_3/Trees/redblack.png)
+![RedBlack Tree](/img/Year_1/ADS/Part_3/Trees/redblack.webp)
 
 A redblack tree with n internal nodes has height at most $2\log(n+1)$
 
@@ -262,13 +267,13 @@ In order to maintain the red-black property, rotations must be used.
 
 There is the option of a left or right rotation, under the assumptions:
 
-- left rotation on x: right child not NULL
+-   left rotation on x: right child not NULL
 
-- right rotation on x: left child not NULL
+-   right rotation on x: left child not NULL
 
-![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate.png)
+![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate.webp)
 
-![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate1.png)
+![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate1.webp)
 
 This can be done in $\mathcal{O}(\log n)$ time
 
@@ -287,21 +292,21 @@ Then call the fixup procedure to restore the red black property
 
 Heaps are also trees, but typically assumed to be stored in a flat array
 
-- each tree node corresponds to an element of the array
+-   each tree node corresponds to an element of the array
 
-- the tree is complete except perhaps the lowest level, filled left to
-  right
+-   the tree is complete except perhaps the lowest level, filled left to
+    right
 
-- heap property: for all nodes v in the tree,
-  `v.parent.data >= v.data`
+-   heap property: for all nodes v in the tree,
+    `v.parent.data >= v.data`
 
-- This is a max heap (for min heaps, `v.parent.data =< v.data`)
+-   This is a max heap (for min heaps, `v.parent.data =< v.data`)
 
 Heap represented as an array A has two attributes:
 
-- Length(A) - The size of the array
+-   Length(A) - The size of the array
 
-- HeapSize(A) - The size of the heap stored within the array
+-   HeapSize(A) - The size of the heap stored within the array
 
 Clearly, Length(A)$\geqslant$HeapSize(A) at all times
 
@@ -309,17 +314,18 @@ Clearly, Length(A)$\geqslant$HeapSize(A) at all times
 
 Assume we start counting at position 1, then:
 
-- The root is in A\[1\]
+-   The root is in A\[1\]
 
-- parent(i)=A\[i/1\] (integer division, rounds down)
+-   parent(i)=A\[i/1\] (integer division, rounds down)
 
-- left(i)=A\[2i\]
+-   left(i)=A\[2i\]
 
-- right(i)=A\[2i+1\]
+-   right(i)=A\[2i+1\]
 
 ## Why use heaps?
 
 Heaps are very good data structures for priority queues as sorting
+
 ```python
 HeapExtractMax(A)
     ret = A[1] // biggest element (highest priority)
@@ -328,22 +334,23 @@ HeapExtractMax(A)
     Heapify(A,1,HeapSize(A))
     return ret
 ```
+
 ## Heapify
 
 Heapify changes a tree into a heap
 
 Idea:
 
-- Starting at the root, identify largest of current node v and its
-  children
+-   Starting at the root, identify largest of current node v and its
+    children
 
-- Suppose largest element is in w
+-   Suppose largest element is in w
 
-- If $w\neq v$
+-   If $w\neq v$
 
-  - Swap A\[w\] and A\[v\]
+    -   Swap A\[w\] and A\[v\]
 
-  - Recurse into w (contains now what root contained previously)
+    -   Recurse into w (contains now what root contained previously)
 
 ```python
 def Heapify(A,v,n)
@@ -361,15 +368,18 @@ if largest != v then
     swap A[v], A[largest]
     Heapify (A, largest, n)
 ```
+
 ## BuildHeap
 
 Task: given array A with n arbitrary numbers in it, convert A into a
 heap
+
 ```python
 def BuildHeap(A,n):
     for i=n to n/2:
         Heapify(A,i,n)
 ```
+
 ### Runtime
 
 Loop with n iterations, each call to Heapify takes $\mathcal{O}(\log n)$
@@ -378,42 +388,43 @@ This implies an overall bound of $\mathcal{O}(n\log n)$
 
 However big O gives an upper bound, so can we reduce this any further?
 
-- If _height_ of a node is counting upwards from lowest leaves with
-  height of leaf on lowest level-1 and height(root)=$\log n$ then in
-  n-element heap there are $\leqslant \dfrac{n}{2^h}$ nodes of height
-  h
+-   If _height_ of a node is counting upwards from lowest leaves with
+    height of leaf on lowest level-1 and height(root)=$\log n$ then in
+    n-element heap there are $\leqslant \dfrac{n}{2^h}$ nodes of height
+    h
 
-- time for Heapify when called on a node of height h is
-  $\mathcal{O}(h)$
+-   time for Heapify when called on a node of height h is
+    $\mathcal{O}(h)$
 
-- Cost:
-  $$
-  T ( n ) = \sum _ { h = 1 } ^ { \log n } ( \# \text { nodes at height } h ) \cdot O ( h ) \leq \sum _ { h = 1 } ^ { \log n } \frac { n } { 2 ^ { h } } \cdot O ( h ) = O \left( \sum _ { h = 1 } ^ { \log n } \frac { n } { 2 ^ { h } } \cdot h \right) = O \left( n \cdot \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \right)
-  $$
-  It is well known that for $x\in (0,1)$,
-  $$
-  \sum _ { i = 0 } ^ { \infty } i \cdot x ^ { i } = \frac { x } { ( 1 - x ) ^ { 2 } }
-  $$
-  Use this (x=1/2)
-  $$
-  \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \leq \sum _ { h = 0 } ^ { \infty } h \cdot \left( \frac { 1 } { 2 } \right) ^ { h }   = \frac { 1 / 2 } { ( 1 - 1 / 2 ) ^ { 2 } } = \frac { 1 / 2 } { 1 / 4 } = 2
-  $$
-  And hence:
-  $$
-  T ( n ) = O \left( n \cdot \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \right) = O ( n )
-  $$
-  That is, can turn any array into heap in time $\mathcal{O}(n)$
+-   Cost:
+    $$
+    T ( n ) = \sum _ { h = 1 } ^ { \log n } ( \# \text { nodes at height } h ) \cdot O ( h ) \leq \sum _ { h = 1 } ^ { \log n } \frac { n } { 2 ^ { h } } \cdot O ( h ) = O \left( \sum _ { h = 1 } ^ { \log n } \frac { n } { 2 ^ { h } } \cdot h \right) = O \left( n \cdot \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \right)
+    $$
+    It is well known that for $x\in (0,1)$,
+    $$
+    \sum _ { i = 0 } ^ { \infty } i \cdot x ^ { i } = \frac { x } { ( 1 - x ) ^ { 2 } }
+    $$
+    Use this (x=1/2)
+    $$
+    \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \leq \sum _ { h = 0 } ^ { \infty } h \cdot \left( \frac { 1 } { 2 } \right) ^ { h }   = \frac { 1 / 2 } { ( 1 - 1 / 2 ) ^ { 2 } } = \frac { 1 / 2 } { 1 / 4 } = 2
+    $$
+    And hence:
+    $$
+    T ( n ) = O \left( n \cdot \sum _ { h = 1 } ^ { \log n } \frac { h } { 2 ^ { h } } \right) = O ( n )
+    $$
+    That is, can turn any array into heap in time $\mathcal{O}(n)$
 
 ## HeapSort
 
 The method for this is:
 
-- Call BuildHeap on unsorted data, and
+-   Call BuildHeap on unsorted data, and
 
-- repeatedly call HeapExtractMin until empty
+-   repeatedly call HeapExtractMin until empty
 
 This has running time:
 $\mathcal{O}(n)+n\cdot\mathcal{O}(\log n)=\mathcal{O}(n\log n)$
+
 ```python
 def HeapSort(A)
     BuildHeap(A, Length(A))
@@ -422,6 +433,7 @@ def HeapSort(A)
         HeapSize(A) = HeapSize(A)-1
         Heapify(A, 1, HeapSize(A))
 ```
+
 # Lower bounds
 
 ## Sorting and decision trees
@@ -455,7 +467,7 @@ We have at least n! leaves - at least one for each outcome
 
 ### Selection sort
 
-![Selection Sort](/img/Year_1/ADS/Part_3/Trees/selection.png)
+![Selection Sort](/img/Year_1/ADS/Part_3/Trees/selection.webp)
 
 An correct sorting algorithm must be able to produce each permutation of
 input (or: must sort any permutation of e.g. $\{1,...,n\}$)
@@ -478,22 +490,22 @@ Any comparison based sorting algorithm requires $\Omega (n\log n)$
 
 ### Proof
 
-- Sufficient to determine minimum height of a decision tree in which
-  each permutation appears as a leaf
+-   Sufficient to determine minimum height of a decision tree in which
+    each permutation appears as a leaf
 
-- Consider decision tree of height h with $\ell$ leaves corresponding
-  to a comparison sort on n elements
+-   Consider decision tree of height h with $\ell$ leaves corresponding
+    to a comparison sort on n elements
 
-- Each of the n! permutations of the input appears as some leaf:
-  $\ell\geqslant n!$
+-   Each of the n! permutations of the input appears as some leaf:
+    $\ell\geqslant n!$
 
-- Binary tree of height h has at most $2^h$ leaves:
-  $\ell\leqslant 2^h$
+-   Binary tree of height h has at most $2^h$ leaves:
+    $\ell\leqslant 2^h$
 
-- Together $n!\leqslant\ell\leqslant 2^h$ and therefore
-  $2^h\geqslant n!$
+-   Together $n!\leqslant\ell\leqslant 2^h$ and therefore
+    $2^h\geqslant n!$
 
-- Take logs: $h\geqslant \log (n!)=\Omega(n\log n)$
+-   Take logs: $h\geqslant \log (n!)=\Omega(n\log n)$
 
 ## Selection and adversaries
 
@@ -501,15 +513,15 @@ Any comparison based sorting algorithm requires $\Omega (n\log n)$
 
 Adversary:
 
-- Is second algorithm intercepting access to input
+-   Is second algorithm intercepting access to input
 
-- Gives answers so that there's always a consistent input
+-   Gives answers so that there's always a consistent input
 
-- Tries to make original algorithm delay a decision by dynamically
-  constructing a bad input for it
+-   Tries to make original algorithm delay a decision by dynamically
+    constructing a bad input for it
 
-- doesn't know what original algorithm will do in the future, must
-  work for **any original algorithm**
+-   doesn't know what original algorithm will do in the future, must
+    work for **any original algorithm**
 
 To get a good lower bound, design a good adversary
 
@@ -526,13 +538,12 @@ comparisons in the worst case
 
 #### Proof
 
-
 After $\leqslant n-2$ comparisons, $\geqslant 2$ elements never lost (a
 comp)
 
-- Adversary can make any of them max and be consistent
+-   Adversary can make any of them max and be consistent
 
-- Not enough info for algorithm to make a decision
+-   Not enough info for algorithm to make a decision
 
 Hence algorithm needs to make at least n-1 comparisons
 
@@ -540,23 +551,23 @@ Hence algorithm needs to make at least n-1 comparisons
 
 1.  As a digraph:
 
-    - the elements of array are the nodes
+    -   the elements of array are the nodes
 
-    - if i loses to j, draw edge $i\rightarrow j$
+    -   if i loses to j, draw edge $i\rightarrow j$
 
-    - The adversary is consistent, so there cannot be any cycles, as
-      that would lead to a contradiction
+    -   The adversary is consistent, so there cannot be any cycles, as
+        that would lead to a contradiction
 
-    - The algorithm can stop when there is an element which can be
-      reached from any other element following the path of directed
-      edges, then you know the element is maximum. The smallest number
-      of edges to make the graph connected is n-1
+    -   The algorithm can stop when there is an element which can be
+        reached from any other element following the path of directed
+        edges, then you know the element is maximum. The smallest number
+        of edges to make the graph connected is n-1
 
 2.  As a status update table with bits of info revealed:
     Each index i has status NL (never lost) or L (lost)
     When comparing i and j:
 
-    ![Adversaries](/img/Year_1/ADS/Part_3/Trees/adversary.png)
+    ![Adversaries](/img/Year_1/ADS/Part_3/Trees/adversary.webp)
 
 All the elements but one must lose at least once
 
@@ -593,24 +604,24 @@ Adversary can force $\lceil\log_2 n\rceil$ comparisons involving max
 Adversary assigns weight $w_i$ to each input element $a_i$\
 Initially all $w_i=1$, then update using these rules
 
-![Strategy](/img/Year_1/ADS/Part_3/Trees/strategy.png)
+![Strategy](/img/Year_1/ADS/Part_3/Trees/strategy.webp)
 
 If the weights are equal and positive then the adversary makes a random
 decision
 
 ### Analysis
 
-- $w_i=0$ $\Leftrightarrow$ i lost $\geqslant 1$ comparison
+-   $w_i=0$ $\Leftrightarrow$ i lost $\geqslant 1$ comparison
 
-- Weight of an element at most doubles after a comparison (because you
-  are shifting the smaller weight to the larger one)
+-   Weight of an element at most doubles after a comparison (because you
+    are shifting the smaller weight to the larger one)
 
-- If max is involved in m comparisons, its weight is $\leqslant 2^m$
+-   If max is involved in m comparisons, its weight is $\leqslant 2^m$
 
-- In the end, max accumulates all the weight, so $n\leqslant 2^m$ (all
-  elements feeding into max)
+-   In the end, max accumulates all the weight, so $n\leqslant 2^m$ (all
+    elements feeding into max)
 
-- Taking logs, $\log_2 n\leqslant m$, as required
+-   Taking logs, $\log_2 n\leqslant m$, as required
 
 To conclude, Adversary can force $n+\lceil \log_2 n \rceil -2$
 comparisons
@@ -620,7 +631,7 @@ comparisons
 1. Here's an algorithm that matches out lower bound.
 2. Consider a knock out tournament: players= array elements
 3. Think a balanced tree, leaves-array elements. With array of size n, the
-height of the tree is $\lceil \log_2 n\rceil$
+   height of the tree is $\lceil \log_2 n\rceil$
 4. Play the tournament to find max: this takes n-1 comparisons.
 5. Consider the $\lceil \log_2 n\rceil$ elements who lost directly to max.
 6. 2nd largest overall=largest among those.
@@ -630,7 +641,7 @@ height of the tree is $\lceil \log_2 n\rceil$
 ### Finding kth largest
 
 1. Let $C_k$ be the number of comparisons necessary and sufficient to find
-the kth largest element in an array of size n
+   the kth largest element in an array of size n
 2. The exact value of $C_k$ is known for $$k=1,2,n-1,n$$ For the other
-values of k, this is open.
+   values of k, this is open.
 3. Though there are known bounds on $C_k$

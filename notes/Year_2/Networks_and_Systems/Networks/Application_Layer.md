@@ -4,30 +4,30 @@ title: Application Layer
 
 Network Architecture:
 
-- Client-server architecture
+-   Client-server architecture
 
-- P2P Architecture
+-   P2P Architecture
 
 Processes and Socket programming
 
-- TCP
+-   TCP
 
-- UDP
+-   UDP
 
 # Creating a network app
 
 Write programs that:
 
-- Run on (different) end systems
+-   Run on (different) end systems
 
-- Communicate over network
+-   Communicate over network
 
 No need to write software for network-core devices
 
-- Network-core devices do not run user applications
+-   Network-core devices do not run user applications
 
-- Applications on end systems allow for rapid app development,
-  propagation
+-   Applications on end systems allow for rapid app development,
+    propagation
 
 # Application Architectures
 
@@ -35,41 +35,41 @@ No need to write software for network-core devices
 
 Server:
 
-- Always-on host
+-   Always-on host
 
-- Fixed (static) IP address
+-   Fixed (static) IP address
 
-- Data centres for scaling
+-   Data centres for scaling
 
 Clients
 
-- Communicate with server
+-   Communicate with server
 
-- May be intermittently connected
+-   May be intermittently connected
 
-- May have dynamic IP addresses
+-   May have dynamic IP addresses
 
-- Do not communicate directly with each other
+-   Do not communicate directly with each other
 
 ## P2P Architecture
 
-- No always on server
+-   No always on server
 
-- Arbitrary end systems directly communicate
+-   Arbitrary end systems directly communicate
 
-- Peers request service from other peers, provide service in return to
-  other peers
+-   Peers request service from other peers, provide service in return to
+    other peers
 
-- Self scalability - new peers bring service capacity, as well as new
-  service demands
+-   Self scalability - new peers bring service capacity, as well as new
+    service demands
 
-- Peers are intermittently connected and change IP addresses
+-   Peers are intermittently connected and change IP addresses
 
 ## Hybrid
 
-- Often there is a hybrid architecture, an example of this might be
-  video calling, the initial connection and authentication might be
-  handled by a server, but the actual video will be sent via P2P
+-   Often there is a hybrid architecture, an example of this might be
+    video calling, the initial connection and authentication might be
+    handled by a server, but the actual video will be sent via P2P
 
 # Processes communicating
 
@@ -81,75 +81,75 @@ A program running within a host
 A software mechanism that allows a process to create and send messages into, and receive messages from the network
 </Definition>
 
-- Within same host, two processes communicate using inter-process
-  communication (defined by OS)
+-   Within same host, two processes communicate using inter-process
+    communication (defined by OS)
 
-- Processes in different hosts communicate by exchanging messages
+-   Processes in different hosts communicate by exchanging messages
 
-- A process is analogous to a house, and its socket is analogous to
-  its door
+-   A process is analogous to a house, and its socket is analogous to
+    its door
 
-- Interface between application layer and transport layer
+-   Interface between application layer and transport layer
 
 # Sockets
 
-- Process sends/receives messages to/from its socket
+-   Process sends/receives messages to/from its socket
 
-- A socket shoves message out of the door
+-   A socket shoves message out of the door
 
-- Sending process relies on transport infrastructure on the other side
-  of the door to deliver message to a socket at the receiving process
+-   Sending process relies on transport infrastructure on the other side
+    of the door to deliver message to a socket at the receiving process
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/sockets.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/sockets.webp)
 
 # What transport service does an app need?
 
 Data integrity
 
-- Some apps (e.g. file transfer, web transactions) require 100%
-  reliable data transfer
+-   Some apps (e.g. file transfer, web transactions) require 100%
+    reliable data transfer
 
-- Other apps (e.g. audio) can tolerate some loss
+-   Other apps (e.g. audio) can tolerate some loss
 
 Security:
 
-- Encryption, data integrity, ...
+-   Encryption, data integrity, ...
 
 Timing:
 
-- Some apps (e.g. internet telephony, interactive games) require low
-  delay to be "effective"
+-   Some apps (e.g. internet telephony, interactive games) require low
+    delay to be "effective"
 
 # Internet Transport Protocols Service
 
 TCP Service:
 
-- **Connection-Oriented**: Setup required between client and server
-  process
+-   **Connection-Oriented**: Setup required between client and server
+    process
 
-- **Reliable transport** between sending and receiving processes
+-   **Reliable transport** between sending and receiving processes
 
-- **Flow control**: Sender won’t overwhelm receiver
+-   **Flow control**: Sender won’t overwhelm receiver
 
-- **Full-duplex connection**: Connection can send messages to each
-  other at the same time
+-   **Full-duplex connection**: Connection can send messages to each
+    other at the same time
 
 UDP service:
 
-- **Unreliable data transfer** between sending and receiving processes
+-   **Unreliable data transfer** between sending and receiving processes
 
-- **Does not provide** reliability, flow control, timing, security or
-  connection setup
+-   **Does not provide** reliability, flow control, timing, security or
+    connection setup
 
 # App-layer protocol defines
 
-- Types of messages exchanged - E.g. request, response
+-   Types of messages exchanged - E.g. request, response
 
-- Message syntax - What fields in messages & how fields are delineated
+-   Message syntax - What fields in messages & how fields are delineated
 
-- Message semantics - Meaning of information in fields
+-   Message semantics - Meaning of information in fields
 
-- Rules for when and how processes send & respond to messages
+-   Rules for when and how processes send & respond to messages
 
 <Definition name="Open protocols">
 Defined in Request For Comments (RFC) Allow for interoperability e.g. HTTP, SMTP
@@ -163,14 +163,14 @@ Web's application layer protocol
 
 HTTP uses TCP:
 
-- Client initiates TCP connection (creates socket) to server, port 80
+-   Client initiates TCP connection (creates socket) to server, port 80
 
-- Server accepts TCP connection from client
+-   Server accepts TCP connection from client
 
-- HTTP messages (application - layer protocol messages) exchanged
-  between browser (HTTP client) and web server (HTTP server)
+-   HTTP messages (application - layer protocol messages) exchanged
+    between browser (HTTP client) and web server (HTTP server)
 
-- TCP connection closed
+-   TCP connection closed
 
 <Important>
 HTTP is stateless - server maintains no information about past client requests
@@ -187,18 +187,18 @@ HTTP is stateless - server maintains no information about past client requests
 
 Non persistent HTTP
 
-- At most one object sent over TCP connection, connection then closed
+-   At most one object sent over TCP connection, connection then closed
 
 Persistent HTTP
 
-- Multiple objects can be sent over single TCP connection, between
-  client, server
+-   Multiple objects can be sent over single TCP connection, between
+    client, server
 
 ## Non-persistent HTTP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP2.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP2.webp)
 
 ### Response Time
 
@@ -208,32 +208,32 @@ The time for a small packet to travel from client to server and back
 
 HTTP Response time:
 
-- One RTT to initiate TCP connection
+-   One RTT to initiate TCP connection
 
-- One RTT for HTTP request and first few bytes of HTTP response to
-  return
+-   One RTT for HTTP request and first few bytes of HTTP response to
+    return
 
-- File transmission time
+-   File transmission time
 
-- Non-persistent HTTP response time = 2RTT + file transmission time\
-  Incurred for each file
+-   Non-persistent HTTP response time = 2RTT + file transmission time\
+    Incurred for each file
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/RTT.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/RTT.webp)
 
 ## Persistent HTTP
 
-- Server leaves connection open after sending response
+-   Server leaves connection open after sending response
 
-- Subsequent HTTP messages between same client/server sent over open
-  connection
+-   Subsequent HTTP messages between same client/server sent over open
+    connection
 
-- Client sends requests as soon as it encounters a referenced object
+-   Client sends requests as soon as it encounters a referenced object
 
-- Takes as little as one RTT + file transmission time total
+-   Takes as little as one RTT + file transmission time total
 
-  - Assuming connections to server already established
+    -   Assuming connections to server already established
 
-  - Assuming all files requested in parallel
+    -   Assuming all files requested in parallel
 
 # Socket Programming
 
@@ -245,9 +245,9 @@ protocol
 
 Two socket types for two transport services:
 
-- UDP: unreliable datagram
+-   UDP: unreliable datagram
 
-- TCP: reliable, byte stream-oriented
+-   TCP: reliable, byte stream-oriented
 
 Application example:
 
@@ -262,25 +262,25 @@ Application example:
 
 ## Socket programming with UDP
 
-- UDP: no "connection" between client & server
+-   UDP: no "connection" between client & server
 
-- No handshaking before sending data
+-   No handshaking before sending data
 
-- Sender explicitly attaches IP destination address and port \# to
-  each packet
+-   Sender explicitly attaches IP destination address and port \# to
+    each packet
 
-- Receiver extracts sender IP address and port\# from received packet
+-   Receiver extracts sender IP address and port\# from received packet
 
-- UDP: transmitted data may be lost or received out-of-order
+-   UDP: transmitted data may be lost or received out-of-order
 
-- Application viewpoint:
+-   Application viewpoint:
 
-- UDP provides unreliable transfer of groups of bytes ("datagrams")
-  between client and server
+-   UDP provides unreliable transfer of groups of bytes ("datagrams")
+    between client and server
 
 ### Client/server socket interaction: UDP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/UDP.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/UDP.webp)
 
 ### Example app: UDP client
 
@@ -324,37 +324,37 @@ print('The serve is ready to receive')
 
 # Socket Programming with TCP
 
-- Client must contact server
+-   Client must contact server
 
-- Server process must first be running
+-   Server process must first be running
 
-- Server must have created socket that welcomes client’s contact
+-   Server must have created socket that welcomes client’s contact
 
-- Client contacts server by
+-   Client contacts server by
 
-  - Creating TCP socket, specifying IP address, port number of
-    server process
+    -   Creating TCP socket, specifying IP address, port number of
+        server process
 
-- When client establishes socket: client TCP establishes connection to
-  server TCP
+-   When client establishes socket: client TCP establishes connection to
+    server TCP
 
-- When contacted by the client:
+-   When contacted by the client:
 
-  - Server TCP create new socket for server process to communicate
-    with that particular client
+    -   Server TCP create new socket for server process to communicate
+        with that particular client
 
-- Allows server to talk with multiple clients
+-   Allows server to talk with multiple clients
 
-- Source port numbers used to distinguish clients
+-   Source port numbers used to distinguish clients
 
 Application viewpoint:
 
-- TCP provides reliable, in-order byte-stream transfer ("pipe")
-  between client and server
+-   TCP provides reliable, in-order byte-stream transfer ("pipe")
+    between client and server
 
 ## Client/server socket interaction: TCP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/TCP.png)
+![image](/img/Year_2/Networks_and_Systems/Networks/Application/TCP.webp)
 
 ## Example app: TCP Client
 

@@ -16,7 +16,7 @@ $$
 Recall that to check if a formula is well formed we can use a parse
 tree. We illustrated this with
 
-![image](/img/Year_1/MCS/First_Order_Logic/Prenex_Normal_Form/parse.png)
+![image](/img/Year_1/MCS/First_Order_Logic/Prenex_Normal_Form/parse.webp)
 
 # Prenex Normal Form
 
@@ -34,12 +34,12 @@ $$
 
 Where:
 
-- each $Q_i$ is a quantifier
+-   each $Q_i$ is a quantifier
 
-- each $x_i$ is a variable
+-   each $x_i$ is a variable
 
-- the formula $\phi$ is quantifier free (so all the logic symbols like
-  $\land$ are in here)
+-   the formula $\phi$ is quantifier free (so all the logic symbols like
+    $\land$ are in here)
 
 We shall show that every first order formula is equivalent to one in
 prenex normal form
@@ -70,20 +70,20 @@ So, the formula corresponding to the subtree rooted at this $\land$-node
 is of the form $\psi\land \chi$ and we have already constructed $\psi'$
 and $\chi'$ such that:
 
-- $\psi'$ and $\chi'$ are in prenex normal form:
+-   $\psi'$ and $\chi'$ are in prenex normal form:
 
-  - $\psi'$ is
-    $Q _ { 1 } x _ { 1 } Q _ { 2 } x _ { 2 } \cdots Q _ { k } x _ { k } \psi ^ { \prime \prime }$
-    quantifier tree (and each $Q_i$ a quantifier)
+    -   $\psi'$ is
+        $Q _ { 1 } x _ { 1 } Q _ { 2 } x _ { 2 } \cdots Q _ { k } x _ { k } \psi ^ { \prime \prime }$
+        quantifier tree (and each $Q_i$ a quantifier)
 
-  - $\chi'$ is
-    $P _ { 1 } y _ { 1 } P _ { 2 } y _ { 2 } \cdots P _ { k } y _ { k } \chi ^ { \prime \prime }$
-    with $\chi ^ { \prime \prime }$ quantifier free (and each $P_i$
-    a quantifier)
+    -   $\chi'$ is
+        $P _ { 1 } y _ { 1 } P _ { 2 } y _ { 2 } \cdots P _ { k } y _ { k } \chi ^ { \prime \prime }$
+        with $\chi ^ { \prime \prime }$ quantifier free (and each $P_i$
+        a quantifier)
 
-- $\psi\equiv\psi'$
+-   $\psi\equiv\psi'$
 
-- $\chi\equiv\chi'$
+-   $\chi\equiv\chi'$
 
 Note that by renaming bound variables (if necessary) we may assume that
 no $x_i$ is the same variable as any $y_j$

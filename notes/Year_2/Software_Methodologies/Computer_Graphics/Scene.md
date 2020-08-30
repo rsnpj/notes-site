@@ -30,48 +30,48 @@ visible
 
 **Object appearance** - Modify or preserve object shape properties
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Projection_Transform.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Projection_Transform.webp)
 
 # Define a view frustum
 
 Projection transform is done based on a view frustum and it is defined
 by six planes (near, far, top, bottom, right and left)
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/View_Frustum.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/View_Frustum.webp)
 
 # Types of View Frustum
 
-- The shape and extent of the frustum determines the type of view
-  projection from the 3D scene space to the 2D screen
+-   The shape and extent of the frustum determines the type of view
+    projection from the 3D scene space to the 2D screen
 
-- If the far and near planes have the same dimensions, then the
-  frustum will determine an orthographic projection. Otherwise, it
-  will be a perspective projection
+-   If the far and near planes have the same dimensions, then the
+    frustum will determine an orthographic projection. Otherwise, it
+    will be a perspective projection
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Frustum_Shape.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Frustum_Shape.webp)
 
 # Viewport Transform
 
 Map projected view to the available space in the computer screen, i.e.
 viewport, typically referring to the canvas
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Viewport_Transform.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Viewport_Transform.webp)
 
 **NDC** - Normalized Device Coordinates. Its x and y coordinates
 represent the location of your vertices on a normalised 2D screen space
 
 # Model-View-Projection Transformation
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Model-View-Projection_Transformation.png)
+![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Model-View-Projection_Transformation.webp)
 
 # Scene Graph
 
 Scene Graph
 
-- Is a collection of nodes in a graph or tree structure
+-   Is a collection of nodes in a graph or tree structure
 
-- A tree node may have many children but often only a single parent,
-  with the effect of a parent applied to all its child nodes
+-   A tree node may have many children but often only a single parent,
+    with the effect of a parent applied to all its child nodes
 
-- An operation performed on a group automatically propagates its
-  effect to all of its members
+-   An operation performed on a group automatically propagates its
+    effect to all of its members

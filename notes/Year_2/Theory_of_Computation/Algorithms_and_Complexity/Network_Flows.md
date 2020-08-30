@@ -4,18 +4,18 @@ title: Network Flows
 
 # Flow networks, flow, maximum flow
 
-- Material is transferred in a network from a "source" to a "sink"
+-   Material is transferred in a network from a "source" to a "sink"
 
-- Source produces material at a steady rate, sink consumes at same
-  rate
+-   Source produces material at a steady rate, sink consumes at same
+    rate
 
 Edges have a given capacity
 
 Vertices (other than source/sink) are junctions
 
-- Material flows through them without collecting in them
+-   Material flows through them without collecting in them
 
-- Entering rate = exiting rate
+-   Entering rate = exiting rate
 
 # Definitions
 
@@ -152,15 +152,15 @@ $c(u,v)$
 
 Interpretation:
 
-- Flow of $-x$ from u to v (i.e. $f(u,v)=-x<0$)
+-   Flow of $-x$ from u to v (i.e. $f(u,v)=-x<0$)
 
-- Implies flow of x from v to u (i.e. $f(v,u)=x>0$)
+-   Implies flow of x from v to u (i.e. $f(v,u)=x>0$)
 
-- Can be cancelled by pushing x units from u back to v
+-   Can be cancelled by pushing x units from u back to v
 
-- Can then push another $c(u,v)$ from u to v
+-   Can then push another $c(u,v)$ from u to v
 
-- We can push in total $c_f(u,v)=c(u,v)+x>c(u,v)$ from u to v
+-   We can push in total $c_f(u,v)=c(u,v)+x>c(u,v)$ from u to v
 
 Given flow network $G=(V,E)$ and flow f, the residual network of G
 induced by f is $G_f=(V,E_f)$ with
@@ -256,7 +256,7 @@ $$
 c_{f}(P)=\min _{(u, v) \in P} c_{f}(u, v)
 $$
 
-![image](/img/Year_2/Theory_of_Computation/AAC/Network_Flows/Augmenting_Path.png)
+![image](/img/Year_2/Theory_of_Computation/AAC/Network_Flows/Augmenting_Path.webp)
 
 **Lemma**:
 
@@ -301,20 +301,20 @@ determined
 
 **If chosen poorly:**
 
-- Value of flow increases with each iteration
+-   Value of flow increases with each iteration
 
-- But possibly too slowly
+-   But possibly too slowly
 
-- In extreme cases it can never terminate and it can even not converge
-  to the value of maximum flow (can only happen if capacities are
-  irrational numbers)
+-   In extreme cases it can never terminate and it can even not converge
+    to the value of maximum flow (can only happen if capacities are
+    irrational numbers)
 
 **In practice**
 
-- Capacities are integers so always terminates
+-   Capacities are integers so always terminates
 
-- If capacities are small then it is an efficient algorithm
-  (polynomial time)
+-   If capacities are small then it is an efficient algorithm
+    (polynomial time)
 
 ### Running time analysis
 
@@ -322,13 +322,13 @@ Assume integral capacities. Simple bound $\mathcal{O}(E\cdot |f^*|)$ for
 running time when choosing paths arbitrarily, $|f^*|$ being the value of
 maximum flow
 
-- Initialisation in lines 1-4 take $\mathcal{O}(E)$
+-   Initialisation in lines 1-4 take $\mathcal{O}(E)$
 
-- While loop in lines 5-11 is executed at most $|f^*|$ times (value of
-  flow increases by at least one unit in each interaction)
+-   While loop in lines 5-11 is executed at most $|f^*|$ times (value of
+    flow increases by at least one unit in each interaction)
 
-- In lines 6-10 (within the while loop) we need
-  $\mathcal{O}(V+E)=\mathcal{O}(E)$ time.
+-   In lines 6-10 (within the while loop) we need
+    $\mathcal{O}(V+E)=\mathcal{O}(E)$ time.
 
 ### Problematic case
 
@@ -342,12 +342,12 @@ This algorithm has not polynomial running time in the worst case
 
 # Edmonds-Karp algorithm
 
-- A special implementation of Ford-Fulkerson algorithm
+-   A special implementation of Ford-Fulkerson algorithm
 
-- The augmenting path P is always chosen to be a shortest path from s
-  to t (e.g. using BFS) in the residual network $G_f$
+-   The augmenting path P is always chosen to be a shortest path from s
+    to t (e.g. using BFS) in the residual network $G_f$
 
-- Regardless of the flow that fits in this path P
+-   Regardless of the flow that fits in this path P
 
 This has running time $\mathcal{O}(V\cdot E^2)$
 

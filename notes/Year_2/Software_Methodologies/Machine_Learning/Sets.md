@@ -11,13 +11,13 @@ evaluation metrics and tighter confidence intervals
 
 Ensure the test set meets the following 2 conditions:
 
-- Is large enough to yield statistically meaningful results
+-   Is large enough to yield statistically meaningful results
 
-- Is representative of the data set as a whole
+-   Is representative of the data set as a whole
 
 ## Validation Set
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Sets/Validation.png)
+![image](/img/Year_2/Software_Methodologies/Machine_Learning/Sets/Validation.webp)
 
 1.  Keeping the test data way off to the side (completely unused)
 
@@ -60,15 +60,15 @@ as one feature (e.g. young people with blood type A)
 
 ## Hashing
 
-- Save memory and time
+-   Save memory and time
 
-- Adds some noise, but limits the maximum number of possibilities
+-   Adds some noise, but limits the maximum number of possibilities
 
 ## Embedding
 
-- Powerful ways to represent large vocabularies
+-   Powerful ways to represent large vocabularies
 
-- Tell the model that objects with different names mean the same thing
-  (group together)
+-   Tell the model that objects with different names mean the same thing
+    (group together)
 
-- For example rabbit and bunny could be grouped together
+-   For example rabbit and bunny could be grouped together
