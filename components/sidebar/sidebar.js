@@ -30,7 +30,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 
 	function Submodule_List() {
 		return (
-			<ul className="divide-y-4 divide-transparent pt-4">
+			<ul className="divide-transparent pt-4">
 				{props.tree.children
 					.find((x) => x.name === year)
 					.children.find((x) => x.name === module)
@@ -47,6 +47,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 						if (elem.type !== "directory") {
 							return (
 								<LinkList
+									key={elem.name}
 									year={year}
 									module={module}
 									lecture={elem.name}
@@ -56,7 +57,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 							return (
 								<li
 									key={elem.name}
-									className="text-xl font-semibold"
+									className="text-xl font-semibold my-2"
 								>
 									{elem.name.replace(/_/g, " ")}
 									<ul className="text-base font-normal">
@@ -98,7 +99,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 							<path d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
 						</svg>
 					</button>
-					<h1 className="col-span-7 text-2xl">
+					<h1 className="col-span-7 text-2xl font-semibold">
 						{module.replace(/_/g, " ")}
 					</h1>
 				</div>

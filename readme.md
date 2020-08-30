@@ -11,7 +11,7 @@ There are some issues which as far as I can tell are pretty much out of my contr
 
 * Wide tables cause extra width on Chrome. This is a strange bug that doesn't appear on Firefox. Despite having overflow auto on the tables, there is whitespace where the table would otherwise be. 
 
-* On Firefox mobile, when scrolling up, there is a tiny gap between the top of the navbar and the top of the viewport you can see the text scrolling through
+* On Firefox mobile, when scrolling up, there is a tiny gap between the top of the navbar and the top of the viewport you can see the text scrolling through. I've seen this behaviour on other sites too, it's just a Firefox problem
 
 ## Workarounds
 
@@ -41,3 +41,50 @@ In which case we call $H_{w,b}$ a separating hyperplane.
 ## Conversion
 
 When converting from LaTeX notes, the best tool to use is pandoc, passing the `latex+raw_tex` flag under `-f` will leave in anything that can't be converted, which is useful for custom environments. Passing the `markdown-smart` flag under `-t` will stop quotes being escaped etc, reducing the work to tidy things.
+
+### webp
+If you want to convert a folder full of PNGs to WEBP, the following command is useful
+
+```shell
+parallel -eta cwebp -q 80 {} -o {.}.webp ::: *.png && rm *.png  
+```
+
+## Algolia Docsearch
+
+This site uses [Algolia Docsearch](https://docsearch.algolia.com/) for searching. To index the site, run the following command:
+
+```shell
+podman run -it --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper
+```
+
+Note `podman` is being used here as I run Fedora and so it is recommended to use this instead of Docker when using cgroup v2. On other machines simply replace `podman` with `docker` and it should just work.
+
+This is also pulling in two files, `.env` and `config.json`, you can read about the full details of these [in the DocSearch documentation](https://docsearch.algolia.com/docs/run-your-own).
+
+The short version is that `.env` should look as follows:
+
+```
+APPLICATION_ID=YOUR_APP_ID
+API_KEY=YOUR_API_KEY
+```
+
+and `config.json` looks like this for my site
+
+```json
+{
+  "index_name": "csnotes",
+  "sitemap_urls": ["http://csnotes.me/sitemap.xml"],
+  "stop_urls": [],
+  "selectors": {
+    "lvl0": ".prose h1",
+    "lvl1": ".prose h2",
+    "lvl2": ".prose h3",
+    "lvl3": ".prose h4",
+    "lvl4": ".prose h5",
+    "lvl5": ".prose h6",
+    "text": ".prose p, li"
+  }
+}
+```
+
+All my content is inside a `.prose` class, hence the `.prose` for each level and given there isn't a link tree to traverse the sitemap is used.

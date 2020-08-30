@@ -93,7 +93,10 @@ function Lecture({ tree, postData, params }) {
 					{!postData.isHome && (
 						<>
 							<div className="p-6 pt-24 pb-12">
-								<h1 className="text-4xl sm:text-6xl text-center font-semibold">
+								<h1
+									className="text-4xl sm:text-6xl text-center font-semibold"
+									id="title"
+								>
 									{postData.title}
 								</h1>
 								<h2 className="text-center text-lg text-gray-700">

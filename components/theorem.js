@@ -7,13 +7,13 @@ function Theorem(props) {
 		mdconvert(setTheorem, props.children);
 	}
 	return (
-		<div className="bg-clip-border bg-gradient-to-r from-orange-300 via-green-300 to-purple-300 py-1 rounded my-4">
-			<div className="bg-white p-4 m-2">
-				<span className="block text-2xl font-semibold text-black">
+		<div className="bg-clip-border bg-gradient-to-r from-orange-300 via-green-300 to-purple-300 py-2 mx-2 rounded">
+			<div className="bg-white p-4 mx-2">
+				<span className="block text-2xl font-semibold text-black mx-2">
 					Theorem {props.name ? "- " + props.name : ""}
 				</span>
 				<div
-					className="italic"
+					className="italic mx-2"
 					dangerouslySetInnerHTML={{ __html: theorem }}
 				/>
 			</div>
