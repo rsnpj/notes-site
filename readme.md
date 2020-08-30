@@ -76,15 +76,15 @@ and `config.json` looks like this for my site
   "sitemap_urls": ["http://csnotes.me/sitemap.xml"],
   "stop_urls": [],
   "selectors": {
-    "lvl0": ".prose h1",
-    "lvl1": ".prose h2",
-    "lvl2": ".prose h3",
-    "lvl3": ".prose h4",
-    "lvl4": ".prose h5",
-    "lvl5": ".prose h6",
+    "lvl0": "#title",
+    "lvl1": ".prose h1",
+    "lvl2": ".prose h2",
+    "lvl3": ".prose h3",
+    "lvl4": ".prose h4",
+    "lvl5": ".prose h5",
     "text": ".prose p, li"
   }
 }
 ```
 
-All my content is inside a `.prose` class, hence the `.prose` for each level and given there isn't a link tree to traverse the sitemap is used.
+The title is given the id of "title" hence level 0, then all my content is inside a `.prose` class, hence the `.prose` for each subsequent level and given there isn't a link tree to traverse the sitemap is used.
