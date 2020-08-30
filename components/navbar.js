@@ -42,7 +42,7 @@ const NavBar = React.forwardRef((props, ref) => {
 			</div>
 			<input
 				type="search"
-				className="docsearch-input form-input "
+				className="docsearch-input form-input -mt-1 pt-2 pb-2"
 				placeholder="Search"
 			/>
 			<a
