@@ -3,7 +3,7 @@ const fs = require("fs");
 
 sitemap({
 	baseUrl: "https://csnotes.me",
-	pagesDirectory: __dirname + "/.next/server/pages",
+	pagesDirectory: __dirname,
 	targetDirectory: "public/",
 	ignoredExtensions: ["js", "map"],
 	ignoredPaths: ["[fallback]"],
