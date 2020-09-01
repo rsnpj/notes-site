@@ -20,6 +20,17 @@ module.exports = {
 				"green-150": "#e6ffee",
 			},
 		},
+		typography: {
+			default: {
+				css: {
+					pre: {
+						code: {
+							"&:after": { content: "none !important" },
+						},
+					},
+				},
+			},
+		},
 	},
 	variants: {},
 	plugins: [
