@@ -1,5 +1,5 @@
 {
-	"name": "next-mdx",
+	"name": "notes-site",
 	"version": "1.0.0",
 	"private": true,
 	"scripts": {
@@ -26,14 +26,13 @@
 		"remark-images": "^2.0.0",
 		"tailwindcss": "^1.7.6"
 	},
-	"resolutions": {
-		"webpack": "^5.0.0-beta.28"
-	},
 	"devDependencies": {
 		"@tailwindcss/custom-forms": "^0.2.1",
 		"eslint": "^7.8.0",
 		"eslint-plugin-react": "^7.20.6",
 		"next-sitemap": "^1.1.6",
-		"nextjs-sitemap-generator": "^1.1.1"
+		"nextjs-sitemap-generator": "^1.1.1",
+		"prettier": "^2.1.1",
+		"prettier-plugin-package": "^1.0.0"
 	}
 }
