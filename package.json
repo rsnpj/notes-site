@@ -21,10 +21,13 @@
 		"postcss-preset-env": "^6.7.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"rehype-autolink-headings": "^4.0.0",
 		"remark": "^12.0.1",
+		"remark-autolink-headings": "^6.0.1",
 		"remark-emoji": "^2.1.0",
 		"remark-html": "^12.0.0",
 		"remark-images": "^2.0.0",
+		"remark-slug": "^6.0.0",
 		"tailwindcss": "^1.7.6"
 	},
 	"devDependencies": {
