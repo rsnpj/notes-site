@@ -1,4 +1,6 @@
 /* This restyles \overline{} in LaTeX as it was too light */
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
 span.overline-line {
 	border-color: #4a5568 !important;
 }
@@ -21,8 +23,24 @@ span.overline-line {
 	@apply block;
 }
 
-.prose :is(h1, h2, h3, h4, h5, h6) a {
-	@apply inline-block;
+/* Styling for anchor links */
+
+.prose h1 a,
+.prose h2 a,
+.prose h3 a,
+.prose h4 a,
+.prose h5 a,
+.prose h6 a {
+	@apply inline-block opacity-0 ml-1;
+}
+
+.prose h1:hover a,
+.prose h2:hover a,
+.prose h3:hover a,
+.prose h4:hover a,
+.prose h5:hover a,
+.prose h6:hover a {
+	@apply opacity-100;
 }
 
 /*  This offsets the links by the size of the navbar */
