@@ -35,16 +35,16 @@ const Sidebar = React.forwardRef((props, ref) => {
 					.find((x) => x.name === year)
 					.children.find((x) => x.name === module)
 					.children.sort(function (a, b) {
-						if (a.type !== "directory" && b.type === "directory") {
+						if ("extension" in a && !("extension" in b)) {
 							return -1;
 						}
-						if (b.type !== "directory" && a.type === "directory") {
+						if ("extension" in b && !("extension" in a)) {
 							return 1;
 						}
 						return 0;
 					})
 					.map(function (elem) {
-						if (elem.type !== "directory") {
+						if ("extension" in elem) {
 							return (
 								<LinkList
 									key={elem.name}
