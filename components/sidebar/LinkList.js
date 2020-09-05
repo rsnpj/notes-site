@@ -1,12 +1,10 @@
 import ActiveLink from "./ActiveLink";
-
 export default function LinkList(props) {
 	return (
 		<li key={props.lecture.replace(/\.[^/.]+$/, "")}>
 			<ActiveLink
 				activeClassName="bg-blue-100 text-blue-800 rounded hover:text-blue-800"
-				href="/[[...slug]]"
-				as={
+				href={
 					"/" +
 					props.year +
 					"/" +
