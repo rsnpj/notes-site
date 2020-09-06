@@ -29,3 +29,7 @@ In which case we call $H_{w,b}$ a separating hyperplane.
 ```
 
  `\n`, gets fixed inside the component, but requires a space after the `\n` so that it doesn't also match things like `\not`. Not the most elegant solution I admit, I'll probably come up with a better way in the future.
+ 
+ ## Performance issues in Firefox with uBlock Origin
+ 
+ By default uBlock Origin disables link prefetching, which is one of the methods that the websites uses to increase performance. If you notice the site being slow when you are using Firefox with uBlock Origin, you can change this in the uBlock Origin settings on the **settings** tab under **privacy** uncheck **disable link prefetching**.
