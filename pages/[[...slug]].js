@@ -134,9 +134,34 @@ function Lecture({ tree, postData, params }) {
 					)}
 					{postData.isHome && (
 						<div className="p-6 pt-24 pb-12 flex justify-center">
-							<HomePage />
+							<HomePage tree={tree} />
 						</div>
 					)}
+					{postData.isHome === undefined &&
+						postData.contentHtml === undefined && (
+							<>
+								<h1 className="pt-20 text-5xl text-center font-bold text-purple-800 w-5/6 mx-auto">
+									{params.slug.length === 2 &&
+										params.slug[
+											params.slug.length - 1
+										].replace(/_/g, " ")}
+									{params.slug.length === 3 &&
+										params.slug[
+											params.slug.length - 2
+										].replace(/_/g, " ") +
+											" - " +
+											params.slug[
+												params.slug.length - 1
+											].replace(/_/g, " ")}
+								</h1>
+
+								<h2 className="text-center text-2xl text-gray-700">
+									{params.slug.length === 1
+										? "Select a module from the sidebar"
+										: "Select a lecture from the sidebar"}
+								</h2>
+							</>
+						)}
 				</MainContent>
 			</div>
 		</>

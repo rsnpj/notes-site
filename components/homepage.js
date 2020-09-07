@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function HomePage({ tree }) {
 	return (
 		<>
 			<link
@@ -52,6 +52,35 @@ export default function HomePage() {
 							</div>
 						</div>
 					</div>
+				</div>
+				<h2 className="text-center pt-10 pb-5 text-3xl font-semibold">
+					Quick Links
+				</h2>
+				<div className="flex justify-evenly gap-10">
+					{tree.children.map((year) => (
+						<div className="w-1/2">
+							<h2 className="text-2xl font-semibold">
+								{year.name.replace(/_/g, " ")}
+							</h2>
+							<ul className="divide-y-8 divide-transparent">
+								{year.children.map((module) => (
+									<li key={module.name}>
+										<a
+											className="text-gray-600 hover:text-gray-900 font-medium"
+											href={
+												"/" +
+												year.name +
+												"/" +
+												module.name
+											}
+										>
+											{module.name.replace(/_/g, " ")}
+										</a>
+									</li>
+								))}
+							</ul>
+						</div>
+					))}
 				</div>
 			</div>
 		</>
