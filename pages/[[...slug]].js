@@ -141,7 +141,7 @@ function Lecture({ tree, postData, params }) {
 						postData.contentHtml === undefined && (
 							<>
 								<h1 className="pt-20 text-5xl text-center font-bold text-purple-800 w-5/6 mx-auto">
-									{params.slug.length === 2 &&
+									{params.slug.length <= 2 &&
 										params.slug[
 											params.slug.length - 1
 										].replace(/_/g, " ")}
