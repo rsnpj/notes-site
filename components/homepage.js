@@ -11,6 +11,7 @@ export default function HomePage() {
 						{"Sam's Notes"}
 					</h1>
 				</div>
+
 				<h2 className="text-lg text-gray-700 pt-6 text-center">
 					These are my notes from my Course at Durham University
 				</h2>

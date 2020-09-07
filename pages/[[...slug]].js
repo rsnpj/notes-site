@@ -90,7 +90,7 @@ function Lecture({ tree, postData, params }) {
 					slug={params.slug}
 				/>
 				<MainContent toggle={sidebarVisible}>
-					{!postData.isHome && (
+					{postData.contentHtml !== undefined && (
 						<>
 							<div className="p-6 pt-24 pb-12">
 								<h1 className="text-4xl sm:text-6xl text-center font-semibold title">
