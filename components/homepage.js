@@ -58,7 +58,7 @@ export default function HomePage({ tree }) {
 				</h2>
 				<div className="flex justify-evenly gap-10">
 					{tree.children.map((year) => (
-						<div className="w-1/2">
+						<div className="w-1/2" key={year.name}>
 							<h2 className="text-2xl font-semibold">
 								{year.name.replace(/_/g, " ")}
 							</h2>
