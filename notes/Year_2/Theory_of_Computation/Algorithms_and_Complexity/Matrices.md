@@ -1,5 +1,5 @@
 ---
-title:Matrices and Strassen’s Algorithm
+title: Matrices and Strassen’s Algorithm
 ---
 
 # Master Method
