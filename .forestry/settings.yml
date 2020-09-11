@@ -5,6 +5,11 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: notes/Year_1
+  label: Year 1
+  create: all
+  match: "**/*"
+- type: directory
   path: notes
   label: Notes
   create: all
