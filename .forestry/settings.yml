@@ -4,11 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
-  path: notes/Year_1/Programming
-  label: Programming
-  create: all
-  match: "**/*"
 - type: heading
   label: Year 1
 - type: directory
@@ -29,6 +24,11 @@ sections:
 - type: directory
   path: notes/Year_1/Maths_for_Computer_Science
   label: Maths for Computer Science
+  create: all
+  match: "**/*"
+- type: directory
+  path: notes/Year_1/Programming
+  label: Programming
   create: all
   match: "**/*"
 upload_dir: public/img
