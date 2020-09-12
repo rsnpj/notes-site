@@ -1,5 +1,5 @@
 ---
-title:Decision Trees and Random Forests
+title: Decision Trees and Random Forests
 ---
 
 # Decision Trees
