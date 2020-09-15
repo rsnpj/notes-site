@@ -4,7 +4,7 @@ title: Networks
 
 # Comparator
 
-![Comparator](/img/Year_1/ADS/Part_3/Networks/comparator.webp)
+![Comparator](/img/Year_1/ADS/Part_3/Networks/comparator.webp "A comparator")
 
 This works in $\mathcal{O}(1)$ time
 

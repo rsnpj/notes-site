@@ -12,21 +12,6 @@ span.overline-line {
 	height: calc(100vh - 3rem);
 }
 
-/* Fix overflow for KaTeX display */
-
-.katex-display {
-	@apply overflow-x-auto;
-	@apply overflow-y-hidden;
-	@apply py-4;
-}
-
-/* Centers images in text */
-
-.prose p img {
-	@apply mx-auto;
-	@apply block;
-}
-
 /* Styling for anchor links */
 
 .prose h1 a,
