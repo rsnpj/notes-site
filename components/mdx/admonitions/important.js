@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mdconvert from "../lib/remark";
+import mdconvert from "@/lib/remark";
 export default function important(props) {
 	const [Important, setImportant] = useState("Important");
 	if (Important === "Important") {

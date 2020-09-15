@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mdconvert from "../lib/remark";
+import mdconvert from "@/lib/remark";
 
 export default function definition(props) {
 	const [defin, setDefin] = useState("Definition");

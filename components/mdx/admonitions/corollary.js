@@ -1,5 +1,5 @@
 import { useState } from "react";
-import mdconvert from "../lib/remark";
+import mdconvert from "@/lib/remark";
 
 export default function corollary(props) {
 	const [Corollary, setCorollary] = useState("Corollary");
