@@ -7,6 +7,9 @@ module.exports = {
 		"./notes/**/*.md",
 	],
 	theme: {
+		fontFamily: {
+			mono: ["Jetbrains Mono"],
+		},
 		extend: {
 			colors: {
 				code: {
