@@ -22,7 +22,7 @@ _We want to compare the growth rate of $f(x)=x^2$ and $g(x)=2^x$_
 | 3   | 9          | 8          |
 | 4   | 16         | 16         |
 | 5   | 25         | 32         |
-| 10  | 100        | 1023       |
+| 10  | 100        | 1024       |
 
 ### Example 2
 
@@ -97,10 +97,10 @@ It can be evaluated as follows
 ```
     Polynomial(x_0,a_0,...,a_n: real numbers)
     power = 1
-    y=$a_0$
+    y=a[0]
     for i=1 to n do
-        power=power$\times x_0$
-        $y=y+a_i\times$  power
+        power=power & times x[0]
+        y=y+a[i] * power
     end for
 ```
 
@@ -112,12 +112,12 @@ additions to evaluate a polynomial of degree n at $x=x_0$
 
 However there is an alternate method
 
-```
-    Horner(a_0,a_0,...,a_n:real numbers)
-    $y=a_n$
-    for i=n-1 down to 0 do
-        $y=y\times x_0+a_i$
-    end for
+Horner($a_0,a_0,...,a_n$:real numbers)
+
+```python
+y=a[n]
+for i=n-1 to 0:
+    y=y * x[0] + a[i]
 ```
 
 If we use this procedure, then we will need n multiplications (1
@@ -129,20 +129,22 @@ polynomial of degree n at $x=x_0$
 The real numbers $a_1,...,a_n, n\geqslant 2$ can be sorted (i.e.
 arranged in ascending order) by the **insertion sort** algorithm
 
-    Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
-    for j=2 to n do
-        $x=x_j$
-        i=j-1
-        while i>0 and $a_i>x$ do
-            $a_{i+1}=a_i$
-            i=i-1
-        end while
-        $a_{i+1}=x$
-    end for
+Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
+```python    
+for j=2 to n:
+    x=x[j]
+    i=j-1
+    while i>0 and a[i]>x:
+        a[i+1]=a[i]
+        i=i-1
+    a[i+1]=x
+```
 
 The **worst case** for number of comparisons $a_i>x$ is:
-$$1 + 2 + \ldots + ( n - 1 ) = \frac { n ( n - 1 ) } { 2 }$$ If
-$a_1\leqslant a_2\leqslant...\leqslant a_n$ then the number of
+$$
+1 + 2 + \ldots + ( n - 1 ) = \frac { n ( n - 1 ) } { 2 }
+$$
+If $a_1\leqslant a_2\leqslant...\leqslant a_n$ then the number of
 comparisons $a_j>x$ is n-1
 
 ## Worst case time complexity
@@ -286,40 +288,26 @@ $a\geqslant 1$; a contradiction
 ### Example 4
 
 The polynomial
-$$f ( x ) = a _ { n } x ^ { n } + a _ { n - 1 } x ^ { n - 1 } + \ldots + a _ { 1 } x + a _ { 0 }$$
+$$
+f ( x ) = a _ { n } x ^ { n } + a _ { n - 1 } x ^ { n - 1 } + \ldots + a _ { 1 } x + a _ { 0 }
+$$
 at a fixed value $x_0$ can be evaluated as follows
 
-    Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
-    for j=2 to n do
-    $x=x_j$
-    i=j-1
-    while i>0 and $a_i>x$ do
-    $a_{i+1}=a_i$
+Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
+```python
+for j=2 to n:
+  x=x[j]
+  i=j-1
+  while i>0 and a[i]>x:
+    a[i+1]=a[i]
     i=i-1
-    end while
-    $a_{i+1}=x$
-    end for
+  a[i+1]=x
+```
+$$
+y=a_nx_0^n+a_{n-1}x_0^{n-1}+...+a_1x_0+a_0
+$$
+The time complexity of the procedure is $\mathcal{O}(n)$
 
-$$y=a_nx_0^n+a_{n-1}x_0^{n-1}+...+a_1x_0+a_0$$ The time complexity of
-the procedure is $\mathcal{O}(n)$
-
-### Example 5
-
-The real numbers $a_1,...,a_n, n\geqslant 2$ can be sorted (i.e.
-arranged in ascending order) by the **insertion sort** algorithm
-
-    Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
-    for j=2 to n do
-    $x=x_j$
-    i=j-1
-    while i>0 and $a_i>x$ do
-    $a_{i+1}=a_i$
-    i=i-1
-    end while
-    $a_{i+1}=x$
-    end for
-
-The time complexity of the procedure is $\mathcal{O}(n^2)$
 
 ## Summary
 

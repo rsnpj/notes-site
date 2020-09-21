@@ -62,10 +62,6 @@
 		@apply py-4;
 	}
 
-	table {
-		@apply block overflow-x-auto;
-	}
-
 	/* Styling for anchor links */
 
 	.prose h1 a,
