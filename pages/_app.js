@@ -1,5 +1,4 @@
 import "../styles/index.css";
-import "../styles/prism-atom-dark.css";
 import "katex/dist/katex.min.css";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
