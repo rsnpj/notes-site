@@ -94,14 +94,13 @@ _Is there a smarter way (in terms of the number of operations)?_
 
 It can be evaluated as follows
 
-```
-    Polynomial(x_0,a_0,...,a_n: real numbers)
-    power = 1
-    y=a[0]
-    for i=1 to n do
-        power=power & times x[0]
-        y=y+a[i] * power
-    end for
+Polynomial($x_0,a_0,...,a_n$: real numbers)
+```python
+power = 1
+y=a[0]
+for i=1 to n:
+    power=power * x[0]
+    y=y+a[i] * power
 ```
 
 - This builds the power up as you go along so vastly reduces re
