@@ -56,7 +56,7 @@
 		height: calc(100vh - 3rem);
 	}
 
-	.katex-display {
+	.math-display {
 		@apply overflow-x-auto;
 		@apply overflow-y-hidden;
 		@apply py-4;
