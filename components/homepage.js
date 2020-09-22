@@ -5,7 +5,7 @@ export default function HomePage({ tree }) {
 				href="https://fonts.googleapis.com/css?family=Cookie"
 				rel="stylesheet"
 			></link>
-			<div className="grid">
+			<div className="grid w-full">
 				<div className="text-center text-6xl font-extrabold leading-none tracking-tight">
 					<h1 className="bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-500 text-center">
 						{"Sam's Notes"}
@@ -56,9 +56,9 @@ export default function HomePage({ tree }) {
 				<h2 className="text-center pt-10 pb-5 text-3xl font-semibold">
 					Quick Links
 				</h2>
-				<div className="flex justify-evenly gap-10">
+				<div className="flex justify-between gap-4 flex-wrap lg:container lg:mx-auto">
 					{tree.children.map((year) => (
-						<div className="w-1/2" key={year.name}>
+						<div key={year.name}>
 							<h2 className="text-2xl font-semibold">
 								{year.name.replace(/_/g, " ")}
 							</h2>

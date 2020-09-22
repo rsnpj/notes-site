@@ -64,8 +64,8 @@ per subscription is 10.
 
 ## Support plans
 
-|                             | Developer              | Standard             | Professional Direct                       |
-| --------------------------- | ---------------------- | -------------------- | ----------------------------------------- |
-| Best for                    | Non-critical workloads | Production workloads | Business-critical workloads               |
-| Reactive technical support  | 1 business day         | 1 hour for critical  | 1 hour and priority tracking for critical |
-| Proactive technical support | N/A                    | N/A                  | Access to a pool of technical experts     |
+|                                 | Developer              | Standard             | Professional Direct                       |
+| ------------------------------- | ---------------------- | -------------------- | ----------------------------------------- |
+| **Best for**                    | Non-critical workloads | Production workloads | Business-critical workloads               |
+| **Reactive technical support**  | 1 business day         | 1 hour for critical  | 1 hour and priority tracking for critical |
+| **Proactive technical support** | N/A                    | N/A                  | Access to a pool of technical experts     |
