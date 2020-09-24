@@ -59,7 +59,7 @@ mult (1+2, 3+4)
 
 -   1,2,3, and 4 are terminal (not reducible) expressions
 
--   (+) and milt are reducible expressions
+-   `+` and `mult` are reducible expressions
 
 ### Innermost evaluation
 
