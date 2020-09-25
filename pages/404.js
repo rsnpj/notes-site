@@ -2,7 +2,7 @@ import Link from "next/link";
 export default function Custom404() {
 	return (
 		<div className="flex items-center justify-center h-screen">
-			<div className="w-1/4">
+			<div className="w-full sm:w-1/2 md:w-1/3 px-2">
 				<h1 className="text-center text-4xl font-medium">
 					Oops, that's a 404, looks like you're lost
 				</h1>
@@ -14,7 +14,15 @@ export default function Custom404() {
 						</a>
 					</Link>
 				</div>
-				<p className="text-center">Don't think this should be a 404?</p>
+				<p className="text-center pt-12">
+					Don't think this should be a 404? Let me know in a{" "}
+					<a
+						className="text-blue-600 hover:underline"
+						href="https://github.com/samrobbins85/notes-site/issues/new"
+					>
+						GitHub Issue
+					</a>
+				</p>
 			</div>
 		</div>
 	);
