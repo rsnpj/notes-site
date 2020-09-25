@@ -167,7 +167,7 @@ function Lecture({
 							</h1>
 
 							<div className="flex justify-center pt-4">
-								<ul>
+								<ul className="divide-y-4 divide-transparent">
 									{list.children.map((x) => (
 										<li>
 											<Link
