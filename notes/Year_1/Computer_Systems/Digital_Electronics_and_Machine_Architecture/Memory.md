@@ -2,7 +2,8 @@
 title: Memory
 ---
 
-**Goal:** Efficiently store large amount of data\
+**Goal:** Efficiently store large amount of data
+
 3 common types:
 
 -   DRAM
