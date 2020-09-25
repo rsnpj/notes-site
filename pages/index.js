@@ -1,12 +1,11 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
 import Sidebar from "../components/sidebar/sidebar";
 import NavBar from "../components/navbar";
 import { getTree } from "../lib/tree";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import HomePage from "../components/homepage";
-function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
+export default function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -149,8 +148,6 @@ function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 		</>
 	);
 }
-
-export default Homepage;
 
 export async function getStaticProps() {
 	const tree = getTree();
