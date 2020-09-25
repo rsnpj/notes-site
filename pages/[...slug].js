@@ -6,6 +6,7 @@ import { getTree, getPaths } from "../lib/tree";
 import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 function Lecture({
 	tree,
@@ -69,6 +70,16 @@ function Lecture({
 		// outside click
 		setSidebarVisible(false);
 	};
+
+	var list = [];
+	if (postData.contentHtml === undefined) {
+		var i;
+		var temp = tree;
+		for (i = 0; i < params.slug.length; i++) {
+			temp = temp.children.find((x) => x.name === params.slug[i]);
+		}
+		list = temp;
+	}
 	return (
 		<>
 			<Head>
@@ -155,11 +166,36 @@ function Lecture({
 										].replace(/_/g, " ")}
 							</h1>
 
-							<h2 className="text-center text-2xl text-gray-700">
-								{params.slug.length === 1
-									? "Select a module from the sidebar"
-									: "Select a lecture from the sidebar"}
-							</h2>
+							<div className="flex justify-center pt-4">
+								<ul>
+									{list.children.map((x) => (
+										<li>
+											<Link
+												href={
+													"/" +
+													params.slug.join("/") +
+													"/" +
+													x.name.replace(
+														/\.[^/.]+$/,
+														""
+													)
+												}
+											>
+												<a className="text-lg text-blue-700 hover:underline">
+													<p className="text-center">
+														{x.name
+															.replace(
+																/\.[^/.]+$/,
+																""
+															)
+															.replace(/_/g, " ")}
+													</p>
+												</a>
+											</Link>
+										</li>
+									))}
+								</ul>
+							</div>
 						</>
 					)}
 				</MainContent>
