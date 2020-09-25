@@ -1,6 +1,6 @@
 import "../styles/index.css";
 import "katex/dist/katex.min.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/gtag";
 function MyApp({ Component, pageProps }) {
@@ -14,7 +14,14 @@ function MyApp({ Component, pageProps }) {
 			router.events.off("routeChangeComplete", handleRouteChange);
 		};
 	}, [router.events]);
-	return <Component {...pageProps} />;
+	const [sidebarVisible, setSidebarVisible] = useState(false);
+	return (
+		<Component
+			sidebarVisible={sidebarVisible}
+			setSidebarVisible={setSidebarVisible}
+			{...pageProps}
+		/>
+	);
 }
 
 export default MyApp;

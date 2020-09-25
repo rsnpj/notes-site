@@ -8,11 +8,16 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
 import HomePage from "../components/homepage";
-function Lecture({ tree, postData, params }) {
+function Lecture({
+	tree,
+	postData,
+	params,
+	sidebarVisible,
+	setSidebarVisible,
+}) {
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
-	const [sidebarVisible, setSidebarVisible] = useState(false);
 	function toggleSidebar() {
 		setSidebarVisible(!sidebarVisible);
 	}
