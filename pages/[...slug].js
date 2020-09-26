@@ -8,6 +8,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import hydrate from "next-mdx-remote/hydrate";
+import renderToString from "next-mdx-remote/render-to-string";
+
 import {
 	Definition,
 	Important,
@@ -18,24 +20,32 @@ import {
 } from "@/components/mdx/admonitions";
 import MyImg from "@/components/mdx/image";
 import MyTable from "@/components/mdx/table";
+import slug from "remark-slug";
+import remarkSmartypants from "@/lib/remarkSmartypants";
+import math from "@/lib/remark-math";
+import emoji from "remark-emoji";
+import highlightCode from "@mapbox/rehype-prism";
+import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+
+const components = {
+	table: MyTable,
+	img: MyImg,
+	Definition,
+	Important,
+	Theorem,
+	Corollary,
+	Lemma,
+	Problem,
+};
 function Lecture({
 	tree,
 	postData,
 	params,
+	source,
 	sidebarVisible,
 	setSidebarVisible,
 }) {
-	const components = {
-		table: MyTable,
-		img: MyImg,
-		Definition,
-		Important,
-		Theorem,
-		Corollary,
-		Lemma,
-		Problem,
-	};
-	const content = hydrate(postData.contentHtml, { components });
+	const content = hydrate(source, { components });
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -58,8 +68,27 @@ function Lecture({
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
+			renderMathInElement(document.body, {
+				delimiters: [
+					{ left: "$$", right: "$$", display: true },
+					{ left: "$", right: "$", display: false },
+					{ left: "\\(", right: "\\)", display: false },
+					{ left: "\\[", right: "\\]", display: true },
+				],
+			});
 		});
 	}, []);
+
+	useEffect(() => {
+		renderMathInElement(document.body, {
+			delimiters: [
+				{ left: "$$", right: "$$", display: true },
+				{ left: "$", right: "$", display: false },
+				{ left: "\\(", right: "\\)", display: false },
+				{ left: "\\[", right: "\\]", display: true },
+			],
+		});
+	});
 
 	const handleClickOutside = (e) => {
 		if (
@@ -207,12 +236,20 @@ export default Lecture;
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params);
+	const source = await renderToString(postData.contentHtml, {
+		components: components,
+		mdxOptions: {
+			remarkPlugins: [slug, emoji, math, remarkSmartypants],
+			rehypePlugins: [highlightCode],
+		},
+	});
 	const tree = getTree();
 	return {
 		props: {
 			tree,
 			postData,
 			params,
+			source,
 		},
 	};
 }
