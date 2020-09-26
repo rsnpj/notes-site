@@ -66,7 +66,6 @@ function Lecture({
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
-			renderMath();
 		});
 	}, []);
 
