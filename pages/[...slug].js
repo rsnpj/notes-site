@@ -7,7 +7,17 @@ import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+import hydrate from "next-mdx-remote/hydrate";
+import {
+	Definition,
+	Important,
+	Theorem,
+	Corollary,
+	Lemma,
+	Problem,
+} from "@/components/mdx/admonitions";
+import MyImg from "@/components/mdx/image";
+import MyTable from "@/components/mdx/table";
 function Lecture({
 	tree,
 	postData,
@@ -15,6 +25,17 @@ function Lecture({
 	sidebarVisible,
 	setSidebarVisible,
 }) {
+	const components = {
+		table: MyTable,
+		img: MyImg,
+		Definition,
+		Important,
+		Theorem,
+		Corollary,
+		Lemma,
+		Problem,
+	};
+	const content = hydrate(postData.contentHtml, { components });
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -37,25 +58,6 @@ function Lecture({
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
-			renderMathInElement(document.body, {
-				delimiters: [
-					{ left: "$$", right: "$$", display: true },
-					{ left: "$", right: "$", display: false },
-					{ left: "\\(", right: "\\)", display: false },
-					{ left: "\\[", right: "\\]", display: true },
-				],
-			});
-		});
-	}, []);
-
-	useEffect(() => {
-		renderMathInElement(document.body, {
-			delimiters: [
-				{ left: "$$", right: "$$", display: true },
-				{ left: "$", right: "$", display: false },
-				{ left: "\\(", right: "\\)", display: false },
-				{ left: "\\[", right: "\\]", display: true },
-			],
 		});
 	}, []);
 
@@ -117,12 +119,9 @@ function Lecture({
 							</div>
 							<hr className="pb-4" />
 							<div className="pb-6">
-								<div
-									className="prose pb-6 mx-auto"
-									dangerouslySetInnerHTML={{
-										__html: postData.contentHtml,
-									}}
-								/>
+								<div className="prose pb-6 mx-auto">
+									{content}
+								</div>
 								<div className="flex justify-center">
 									<a
 										className="flex content-center hover:underline text-blue-700"
