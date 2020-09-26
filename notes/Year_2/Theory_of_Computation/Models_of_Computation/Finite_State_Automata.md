@@ -347,18 +347,7 @@ when starting from s, is accepted when starting from t and vice versa.
 
 ## Equivalent and Distinguishable states
 
-**Extended Transition Function**: Let a DFA
-$M=(Q,\Sigma, \delta, q_0, F)$ be given and let
-$\hat{\delta}: Q\times \Sigma^8\rightarrow Q$ be defined as
 
-$$
-\begin{array}
-{\hat{\delta}(s, \varepsilon)=s} \\
-{\hat{\delta}\left(s, w_{1} w_{2} \ldots w_{n}\right)=\hat{\delta}\left(\delta\left(s, w_{1}\right), w_{2} \ldots w_{n}\right)}
-\end{array}
-$$
-
-for every state s and every word $w_1w_2...w_n$\
 **Equivalent states**: Two states s and t are equivalent if
 
 $$
