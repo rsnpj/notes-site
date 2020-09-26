@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
 import Sidebar from "../components/sidebar/sidebar";
 import NavBar from "../components/navbar";
@@ -7,14 +7,43 @@ import { getPostData } from "../lib/lecture";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
+import hydrate from "next-mdx-remote/hydrate";
+import renderToString from "next-mdx-remote/render-to-string";
+import {
+	Definition,
+	Important,
+	Theorem,
+	Corollary,
+	Lemma,
+	Problem,
+} from "@/components/mdx/admonitions";
+import MyImg from "@/components/mdx/image";
+import MyTable from "@/components/mdx/table";
+import slug from "remark-slug";
+import remarkSmartypants from "@/lib/remarkSmartypants";
+import math from "@/lib/remark-math";
+import emoji from "remark-emoji";
+import highlightCode from "@mapbox/rehype-prism";
+import renderMath from "@/lib/rendermath";
+const components = {
+	table: MyTable,
+	img: MyImg,
+	Definition,
+	Important,
+	Theorem,
+	Corollary,
+	Lemma,
+	Problem,
+};
 function Lecture({
 	tree,
 	postData,
 	params,
+	source,
 	sidebarVisible,
 	setSidebarVisible,
 }) {
+	const content = hydrate(source, { components });
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -37,27 +66,13 @@ function Lecture({
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
-			renderMathInElement(document.body, {
-				delimiters: [
-					{ left: "$$", right: "$$", display: true },
-					{ left: "$", right: "$", display: false },
-					{ left: "\\(", right: "\\)", display: false },
-					{ left: "\\[", right: "\\]", display: true },
-				],
-			});
+			renderMath();
 		});
 	}, []);
 
 	useEffect(() => {
-		renderMathInElement(document.body, {
-			delimiters: [
-				{ left: "$$", right: "$$", display: true },
-				{ left: "$", right: "$", display: false },
-				{ left: "\\(", right: "\\)", display: false },
-				{ left: "\\[", right: "\\]", display: true },
-			],
-		});
-	}, []);
+		renderMath();
+	}, [content]);
 
 	const handleClickOutside = (e) => {
 		if (
@@ -117,12 +132,9 @@ function Lecture({
 							</div>
 							<hr className="pb-4" />
 							<div className="pb-6">
-								<div
-									className="prose pb-6 mx-auto"
-									dangerouslySetInnerHTML={{
-										__html: postData.contentHtml,
-									}}
-								/>
+								<div className="prose pb-6 mx-auto">
+									{content}
+								</div>
 								<div className="flex justify-center">
 									<a
 										className="flex content-center hover:underline text-blue-700"
@@ -208,12 +220,20 @@ export default Lecture;
 
 export async function getStaticProps({ params }) {
 	const postData = await getPostData(params);
+	const source = await renderToString(postData.contentHtml, {
+		components: components,
+		mdxOptions: {
+			remarkPlugins: [slug, emoji, math, remarkSmartypants],
+			rehypePlugins: [highlightCode],
+		},
+	});
 	const tree = getTree();
 	return {
 		props: {
 			tree,
 			postData,
 			params,
+			source,
 		},
 	};
 }
