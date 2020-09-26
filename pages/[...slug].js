@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import MainContent from "../components/main_content";
 import Sidebar from "../components/sidebar/sidebar";
 import NavBar from "../components/navbar";
@@ -9,7 +9,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
-
 import {
 	Definition,
 	Important,
@@ -25,8 +24,7 @@ import remarkSmartypants from "@/lib/remarkSmartypants";
 import math from "@/lib/remark-math";
 import emoji from "remark-emoji";
 import highlightCode from "@mapbox/rehype-prism";
-import renderMathInElement from "katex/dist/contrib/auto-render.mjs";
-
+import renderMath from "@/lib/rendermath";
 const components = {
 	table: MyTable,
 	img: MyImg,
@@ -68,27 +66,13 @@ function Lecture({
 	useEffect(() => {
 		router.events.on("routeChangeComplete", function () {
 			setSidebarVisible(false);
-			renderMathInElement(document.body, {
-				delimiters: [
-					{ left: "$$", right: "$$", display: true },
-					{ left: "$", right: "$", display: false },
-					{ left: "\\(", right: "\\)", display: false },
-					{ left: "\\[", right: "\\]", display: true },
-				],
-			});
+			renderMath();
 		});
 	}, []);
 
 	useEffect(() => {
-		renderMathInElement(document.body, {
-			delimiters: [
-				{ left: "$$", right: "$$", display: true },
-				{ left: "$", right: "$", display: false },
-				{ left: "\\(", right: "\\)", display: false },
-				{ left: "\\[", right: "\\]", display: true },
-			],
-		});
-	});
+		renderMath();
+	}, [content]);
 
 	const handleClickOutside = (e) => {
 		if (
