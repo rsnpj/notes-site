@@ -1,5 +1,6 @@
 ---
 title: JavaScript with p5.js
+lecturer: Steven
 ---
 
 ## Client- and server- side

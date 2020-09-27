@@ -1,5 +1,6 @@
 ---
 title: Divisibility and Primes
+lecturer: Andrei
 ---
 
 # Divisibility and Perfect Numbers

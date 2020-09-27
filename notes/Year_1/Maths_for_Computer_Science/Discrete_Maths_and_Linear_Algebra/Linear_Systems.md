@@ -1,5 +1,6 @@
 ---
 title: Linear Systems
+lecturer: Andrei
 ---
 
 # Systems of linear equations

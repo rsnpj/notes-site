@@ -1,5 +1,6 @@
 ---
 title: Software Reuse
+lecturer: Craig
 ---
 
 <Definition name="Software Reuse">

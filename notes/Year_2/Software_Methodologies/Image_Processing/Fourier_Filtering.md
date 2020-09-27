@@ -1,5 +1,6 @@
 ---
 title: Fourier Images in Filtering
+lecturer: Ioannis
 ---
 
 # Image filtering in Fourier space

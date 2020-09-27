@@ -1,5 +1,6 @@
 ---
 title: Memory
+lecturer: Magnus
 ---
 
 **Goal:** Efficiently store large amount of data

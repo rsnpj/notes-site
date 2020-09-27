@@ -1,5 +1,6 @@
 ---
 title: Relational Calculus and Relational Algebra
+lecturer: George
 ---
 
 **Relational Calculus**: Formal definition of a new relation from

@@ -1,5 +1,6 @@
 ---
 title: CPU Architecture
+lecturer: Magnus
 ---
 
 # Components of a CPU

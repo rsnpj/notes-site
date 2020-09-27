@@ -1,5 +1,6 @@
 ---
 title: Top down analysis
+lecturer: Max
 ---
 
 Top down constriction of a parse tree:

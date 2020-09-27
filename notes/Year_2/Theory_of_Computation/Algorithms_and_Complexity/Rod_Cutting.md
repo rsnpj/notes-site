@@ -1,5 +1,6 @@
 ---
 title: Rod cutting
+lecturer: Daniel
 ---
 
 # Rod cutting problem

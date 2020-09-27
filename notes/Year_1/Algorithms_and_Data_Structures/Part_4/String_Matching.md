@@ -1,5 +1,6 @@
 ---
 title: String Matching
+lecturer: Matthew
 ---
 
 # Problem Definition

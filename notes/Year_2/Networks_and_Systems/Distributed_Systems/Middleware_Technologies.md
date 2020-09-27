@@ -1,5 +1,6 @@
 ---
 title: Middleware Technologies and RMI
+lecturer: Freddie
 ---
 
 # Middleware Technologies

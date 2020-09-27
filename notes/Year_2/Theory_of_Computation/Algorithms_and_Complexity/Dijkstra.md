@@ -1,5 +1,6 @@
 ---
 title: Dijkstra’s Shortest Path Algorithm
+lecturer: Daniel
 ---
 
 The shortest path between u and v is denoted $\delta(u,v)$, if there is

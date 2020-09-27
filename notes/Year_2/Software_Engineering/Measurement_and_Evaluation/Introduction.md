@@ -1,5 +1,6 @@
 ---
 title: Introduction to Measurement and Evaluation
+lecturer: David
 ---
 
 <Definition name="Measure">

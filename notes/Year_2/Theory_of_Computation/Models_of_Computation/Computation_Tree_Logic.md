@@ -1,5 +1,6 @@
 ---
 title: Computation Tree Logic
+lecturer: Stefan
 ---
 
 # Syntax of CTL

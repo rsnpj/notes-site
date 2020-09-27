@@ -1,5 +1,6 @@
 ---
 title: Images in Fourier Representation
+lecturer: Ioannis
 ---
 
 # Summary

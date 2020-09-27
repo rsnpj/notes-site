@@ -1,5 +1,6 @@
 ---
 title: Physical Layer
+lecturer: Donald
 ---
 
 # Bandwidth

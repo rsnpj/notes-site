@@ -1,5 +1,6 @@
 ---
 title: OO and Usability Metrics
+lecturer: David
 ---
 
 # What do we want to measure?

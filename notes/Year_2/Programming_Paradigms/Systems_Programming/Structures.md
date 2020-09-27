@@ -1,5 +1,6 @@
 ---
 title: Structures
+lecturer: Konrad
 ---
 
 - Collections of one or more variables forming a new data structure,

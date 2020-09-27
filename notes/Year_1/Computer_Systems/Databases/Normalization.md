@@ -1,5 +1,6 @@
 ---
 title: Functional dependencies and normalization
+lecturer: George
 ---
 
 # Two approaches to database design

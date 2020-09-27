@@ -1,5 +1,6 @@
 ---
 title: Karnaugh Maps
+lecturer: Magnus
 ---
 
 # Simplifying Boolean Expressions

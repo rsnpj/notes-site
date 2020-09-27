@@ -1,5 +1,6 @@
 ---
 title: Eigenvalues and Eigenvectors
+lecturer: Andrei
 ---
 
 ## Definition

@@ -1,5 +1,6 @@
 ---
 title: Circuits
+lecturer: Magnus
 ---
 
 # Key Circuits

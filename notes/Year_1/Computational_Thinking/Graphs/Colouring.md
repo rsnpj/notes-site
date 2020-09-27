@@ -1,5 +1,6 @@
 ---
 title: Graph Colouring
+lecturer: George
 ---
 
 # Problems in natural science

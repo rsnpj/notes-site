@@ -1,5 +1,6 @@
 ---
 title: Basic Counting and Binomial Coefficients
+lecturer: Andrei
 ---
 
 # Binomial Coefficients

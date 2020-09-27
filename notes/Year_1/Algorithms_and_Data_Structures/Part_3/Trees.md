@@ -1,5 +1,6 @@
 ---
 title: Trees
+lecturer: Andrei
 ---
 
 **Tree** - A connected graph without cycles

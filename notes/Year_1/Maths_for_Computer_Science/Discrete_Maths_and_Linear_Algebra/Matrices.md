@@ -1,5 +1,6 @@
 ---
 title: Matrices and Determinants
+lecturer: Andrei
 ---
 
 # Matrices

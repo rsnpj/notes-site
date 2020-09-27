@@ -1,5 +1,6 @@
 ---
 title: Privacy
+lecturer: Konrad
 ---
 
 # What is privacy?

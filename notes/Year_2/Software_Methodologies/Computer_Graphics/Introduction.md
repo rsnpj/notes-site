@@ -1,5 +1,6 @@
 ---
 title: Introduction to Computer Graphics
+lecturer: Freddie
 ---
 
 Study methods for digitally synthesizing and manipulating visual content

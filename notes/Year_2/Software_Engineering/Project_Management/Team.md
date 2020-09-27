@@ -1,5 +1,6 @@
 ---
 title: Team
+lecturer: Craig
 ---
 
 ## Skills Audit

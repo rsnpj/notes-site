@@ -1,5 +1,6 @@
 ---
 title: Introduction to Image Processing
+lecturer: Ioannis
 ---
 
 <Definition name="Assistive Imaging">

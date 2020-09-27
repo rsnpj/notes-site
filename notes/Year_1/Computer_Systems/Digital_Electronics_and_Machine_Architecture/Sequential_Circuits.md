@@ -1,5 +1,6 @@
 ---
 title: Sequential Circuits
+lecturer: Magnus
 ---
 
 # Circuits

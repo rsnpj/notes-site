@@ -1,5 +1,6 @@
 ---
 title: Introduction
+lecturer: Max
 ---
 
 # Error control

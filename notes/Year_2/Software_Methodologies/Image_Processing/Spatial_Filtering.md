@@ -1,5 +1,6 @@
 ---
 title: Spatial Filtering
+lecturer: Ioannis
 ---
 
 # Convolution

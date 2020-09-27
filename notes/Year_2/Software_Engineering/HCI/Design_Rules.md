@@ -1,5 +1,6 @@
 ---
 title: Design Rules and Principles
+lecturer: Craig
 ---
 
 3 Types:

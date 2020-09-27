@@ -1,5 +1,6 @@
 ---
 title: Grouping Objects
+lecturer: Steven
 ---
 
 # Class Libraries

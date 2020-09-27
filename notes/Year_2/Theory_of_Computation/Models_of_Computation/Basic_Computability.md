@@ -1,5 +1,6 @@
 ---
 title: Basic Computability
+lecturer: Stefan
 ---
 
 # m-reducibility

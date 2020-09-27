@@ -1,5 +1,6 @@
 ---
 title: Object Interaction
+lecturer: Steven
 ---
 
 <Definition name="Abstraction">

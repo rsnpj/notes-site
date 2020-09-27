@@ -1,5 +1,6 @@
 ---
 title: "Arrays"
+lecturer: Matthew
 ---
 
 

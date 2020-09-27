@@ -1,5 +1,6 @@
 ---
 title: Recursion and higher order functions
+lecturer: Lawrence
 ---
 
 # Advice when writing recursive functions

@@ -1,5 +1,6 @@
 ---
 title: Linear Regression, Training and Loss
+lecturer: Lei
 ---
 
 # Linear regression

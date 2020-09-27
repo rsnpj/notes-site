@@ -1,5 +1,6 @@
 ---
 title: Introduction to C
+lecturer: Konrad
 ---
 
 # Key topics for sub-module

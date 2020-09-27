@@ -1,5 +1,6 @@
 ---
 title: Paths, Cycles and Trees
+lecturer: Andrei
 ---
 
 # Eulerian Circuits

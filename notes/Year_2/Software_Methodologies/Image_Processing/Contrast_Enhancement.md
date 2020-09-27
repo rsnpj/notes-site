@@ -1,5 +1,6 @@
 ---
 title: Point intensity transforms for contrast enhancement
+lecturer: Ioannis
 ---
 
 # Functional point transforms

@@ -1,5 +1,6 @@
 ---
 title: Floating Point
+lecturer: Magnus
 ---
 
 Sometimes we need to deal with numbers outside the usual range:

@@ -1,5 +1,6 @@
 ---
 title: Matrix Inversion
+lecturer: Andrei
 ---
 
 # Row equivalence of matrices

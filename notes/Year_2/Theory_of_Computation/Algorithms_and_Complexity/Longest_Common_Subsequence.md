@@ -1,5 +1,6 @@
 ---
 title: Longest common subsequence
+lecturer: Daniel
 ---
 
 # Longest common subsequence problem

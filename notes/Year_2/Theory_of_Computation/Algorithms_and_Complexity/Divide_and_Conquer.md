@@ -1,5 +1,6 @@
 ---
 title: Divide-and-Conquer Colouring for Restricted Inputs
+lecturer: Daniel
 ---
 
 # Divide-and-conquer algorithms

@@ -1,5 +1,6 @@
 ---
 title: The role of modelling
+lecturer: David
 ---
 
 <Definition name="Model">

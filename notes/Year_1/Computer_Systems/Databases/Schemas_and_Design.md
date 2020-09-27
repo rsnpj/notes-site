@@ -1,5 +1,6 @@
 ---
 title: Database Schemas and Design
+lecturer: George
 ---
 
 # Transactions and concurrency control

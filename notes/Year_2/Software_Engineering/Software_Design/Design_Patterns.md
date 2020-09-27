@@ -1,5 +1,6 @@
 ---
 title: Software Design Patterns
+lecturer: David
 ---
 
 # Elements of a Design Pattern

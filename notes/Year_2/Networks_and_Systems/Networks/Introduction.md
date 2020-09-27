@@ -1,5 +1,6 @@
 ---
 title: Introduction
+lecturer: Donald
 ---
 
 <Definition name="Computer Network">

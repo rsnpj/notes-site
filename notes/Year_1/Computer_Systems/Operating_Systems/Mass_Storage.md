@@ -1,5 +1,6 @@
 ---
 title: Mass storage systems
+lecturer: Barnaby
 ---
 
 # Overview of Mass Storage Structure

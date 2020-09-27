@@ -1,5 +1,6 @@
 ---
 title: Version Control
+lecturer: Steven
 ---
 
 Linear history - Sequential history of saving on top of a file, when

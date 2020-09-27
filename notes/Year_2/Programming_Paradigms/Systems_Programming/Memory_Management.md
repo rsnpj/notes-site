@@ -1,5 +1,6 @@
 ---
 title: Dynamic Memory Management
+lecturer: Konrad
 ---
 
 # Pointer oddities

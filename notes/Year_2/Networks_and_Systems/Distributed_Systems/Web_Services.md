@@ -1,5 +1,6 @@
 ---
 title: From middleware to web services
+lecturer: Freddie
 ---
 
 # Middleware for system integration

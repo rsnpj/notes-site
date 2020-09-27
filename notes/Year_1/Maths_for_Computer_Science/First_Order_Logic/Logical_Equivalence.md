@@ -1,5 +1,6 @@
 ---
 title: Logical Equivalence in First Order Logic
+lecturer: Daniel
 ---
 
 Two formulae $\phi$ and $\psi$ are logically equivalent of they are true

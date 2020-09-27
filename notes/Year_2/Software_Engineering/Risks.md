@@ -1,5 +1,6 @@
 ---
 title: Risks
+lecturer: Craig
 ---
 
 <Definition name="Risk">

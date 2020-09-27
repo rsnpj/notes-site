@@ -1,5 +1,6 @@
 ---
 title: Depth First Search
+lecturer: Matthew
 ---
 
 # Depth First Search

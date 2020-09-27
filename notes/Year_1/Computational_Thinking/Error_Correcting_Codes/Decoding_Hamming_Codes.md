@@ -1,5 +1,6 @@
 ---
 title: Decoding Hamming Codes
+lecturer: Max
 ---
 
 # Decoding

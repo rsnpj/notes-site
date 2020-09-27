@@ -1,5 +1,6 @@
 ---
 title: Heuristic Search
+lecturer: Iain
 ---
 
 # General Heuristic Search

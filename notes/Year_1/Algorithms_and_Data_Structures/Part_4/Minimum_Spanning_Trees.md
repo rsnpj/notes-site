@@ -1,5 +1,6 @@
 ---
 title: Minimum Spanning Trees
+lecturer: Matthew
 ---
 
 # Connecting the vertices

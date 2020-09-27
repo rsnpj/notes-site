@@ -1,5 +1,6 @@
 ---
 title: Decoder Error Probability
+lecturer: Max
 ---
 
 # Error v failure

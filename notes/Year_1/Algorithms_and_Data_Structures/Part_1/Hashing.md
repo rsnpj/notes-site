@@ -1,5 +1,6 @@
 ---
 title: "Hashing Algorithms"
+lecturer: Matthew
 ---
 
 # Key-Value Pairs

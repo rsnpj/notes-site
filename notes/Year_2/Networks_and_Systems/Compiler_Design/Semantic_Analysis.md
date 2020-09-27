@@ -1,5 +1,6 @@
 ---
 title: Semantic Analysis
+lecturer: Max
 ---
 
 -   Ensure that the program has a well defined meaning

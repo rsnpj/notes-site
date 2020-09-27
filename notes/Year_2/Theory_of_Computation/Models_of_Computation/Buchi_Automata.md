@@ -1,5 +1,6 @@
 ---
 title: Buchi Automata
+lecturer: Stefan
 ---
 
 A Finite-sate Automaton (FA) consists of

@@ -1,5 +1,6 @@
 ---
 title: Memory Access Using Pointers
+lecturer: Konrad
 ---
 
 # Implementing variables

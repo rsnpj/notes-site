@@ -1,5 +1,6 @@
 ---
 title: Training and test set representation
+lecturer: Lei
 ---
 
 # Training and Test set

@@ -1,5 +1,6 @@
 ---
 title: Other Methodologies
+lecturer: Craig
 ---
 
 # Kanban Boards

@@ -1,5 +1,6 @@
 ---
 title: Sorting
+lecturer: Rob
 ---
 
 > Note that they're indexing from 1

@@ -1,5 +1,6 @@
 ---
 title: List Patterns and Comprehension
+lecturer: Lawrence
 ---
 
 # Pattern matching

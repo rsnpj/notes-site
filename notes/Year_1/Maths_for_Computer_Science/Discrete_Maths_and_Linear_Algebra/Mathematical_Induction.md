@@ -1,5 +1,6 @@
 ---
 title: Mathematical Induction
+lecturer: Andrei
 ---
 
 # Proof By Induction

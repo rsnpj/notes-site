@@ -1,5 +1,6 @@
 ---
 title: Sets
+lecturer: Daniel
 ---
 
 # Some notation

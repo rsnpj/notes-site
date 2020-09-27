@@ -1,5 +1,6 @@
 ---
 title: Linear Temporal Logic
+lecturer: Stefan
 ---
 
 # Intuition

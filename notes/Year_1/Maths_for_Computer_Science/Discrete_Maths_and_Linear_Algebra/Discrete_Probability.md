@@ -1,5 +1,6 @@
 ---
 title: Intro to discrete probability
+lecturer: Andrei
 ---
 
 # Probability Theory

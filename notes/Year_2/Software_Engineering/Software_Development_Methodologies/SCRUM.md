@@ -1,5 +1,6 @@
 ---
 title: SCRUM
+lecturer: Craig
 ---
 
 The Scrum process is suited for projects with rapidly changing or highly

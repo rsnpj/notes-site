@@ -1,5 +1,6 @@
 ---
 title: Concurrent Systems
+lecturer: Stefan
 ---
 
 # Peterson’s Algorithm for Mutual Exclusion

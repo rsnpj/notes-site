@@ -1,5 +1,6 @@
 ---
 title: Large Programs and External Libraries
+lecturer: Konrad
 ---
 
 # Multiple source files

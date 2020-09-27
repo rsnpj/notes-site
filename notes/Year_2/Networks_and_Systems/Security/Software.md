@@ -1,5 +1,6 @@
 ---
 title: Software Security
+lecturer: Chris
 ---
 
 # Types of memory

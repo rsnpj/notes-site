@@ -1,5 +1,6 @@
 ---
 title: Algebraic data types and type classes
+lecturer: Lawrence
 ---
 
 # Adding new data types

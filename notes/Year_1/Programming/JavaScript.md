@@ -1,5 +1,6 @@
 ---
 title: JavaScript
+lecturer: Steven
 ---
 
 ## [History]

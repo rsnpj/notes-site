@@ -1,5 +1,6 @@
 ---
 title: Viewpoints and Models
+lecturer: David
 ---
 
 -   Any notation we use, whether diagrammatic or mathematical/textual,

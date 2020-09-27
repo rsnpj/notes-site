@@ -1,5 +1,6 @@
 ---
 title: The Art of Cyber Security - The Threat Landscape and Tactics
+lecturer: Chris
 ---
 
 # Who really are the adversaries?

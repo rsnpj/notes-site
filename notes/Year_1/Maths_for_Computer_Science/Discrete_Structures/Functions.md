@@ -1,5 +1,6 @@
 ---
 title: Functions
+lecturer: Daniel
 ---
 
 -   To make associations between elements of sets we use functions

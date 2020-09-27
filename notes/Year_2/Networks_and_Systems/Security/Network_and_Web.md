@@ -1,5 +1,6 @@
 ---
 title: Network and Web Security
+lecturer: Chris
 ---
 
 # Border Gateway Protocol

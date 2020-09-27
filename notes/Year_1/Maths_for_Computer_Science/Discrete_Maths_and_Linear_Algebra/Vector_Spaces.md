@@ -1,5 +1,6 @@
 ---
 title: Vector Spaces and Linear Independence
+lecturer: Andrei
 ---
 
 # Vectors in $\mathbb{R}^n$

@@ -1,5 +1,6 @@
 ---
 title: Database Security
+lecturer: Chris
 ---
 
 # Database Management System

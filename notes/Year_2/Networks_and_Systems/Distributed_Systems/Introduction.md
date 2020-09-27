@@ -1,5 +1,6 @@
 ---
 title: Introduction
+lecturer: Freddie
 ---
 
 OSI is more time consuming than TCP/IP as it has more layers and so

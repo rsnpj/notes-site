@@ -1,5 +1,6 @@
 ---
 title: Modular Arithmetic
+lecturer: Andrei
 ---
 
 # Basic modular arithmetic

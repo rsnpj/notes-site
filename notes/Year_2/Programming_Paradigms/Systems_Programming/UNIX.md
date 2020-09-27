@@ -1,5 +1,6 @@
 ---
 title: UNIX and C
+lecturer: Konrad
 ---
 
 # The Shell

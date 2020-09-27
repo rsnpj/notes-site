@@ -1,5 +1,6 @@
 ---
 title: Secondary Studies
+lecturer: David
 ---
 
 # The evidence based paradigm

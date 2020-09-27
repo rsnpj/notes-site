@@ -1,5 +1,6 @@
 ---
 title: Breadth First Search
+lecturer: Matthew
 ---
 
 # Graphs

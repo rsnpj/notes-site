@@ -1,5 +1,6 @@
 ---
 title: Network Core
+lecturer: Donald
 ---
 
 # The network core

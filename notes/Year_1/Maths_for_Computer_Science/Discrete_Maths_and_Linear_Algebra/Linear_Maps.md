@@ -1,5 +1,6 @@
 ---
 title: Linear Maps
+lecturer: Andrei
 ---
 
 ## Definition

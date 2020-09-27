@@ -1,5 +1,6 @@
 ---
 title: Refactoring
+lecturer: Craig
 ---
 
 # Code Complexity

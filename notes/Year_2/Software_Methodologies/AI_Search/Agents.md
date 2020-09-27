@@ -1,5 +1,6 @@
 ---
 title: Agents and Knowledge Bases
+lecturer: Iain
 ---
 
 # Knowledge-based agents

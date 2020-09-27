@@ -1,5 +1,6 @@
 ---
 title: Basic Counting Principles
+lecturer: Andrei
 ---
 
 # The Product Rule

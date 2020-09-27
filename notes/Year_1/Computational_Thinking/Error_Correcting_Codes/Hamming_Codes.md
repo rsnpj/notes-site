@@ -1,5 +1,6 @@
 ---
 title: Hamming Codes
+lecturer: Max
 ---
 
 # Linear Codes

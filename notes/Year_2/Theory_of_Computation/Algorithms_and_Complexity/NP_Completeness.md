@@ -1,6 +1,8 @@
 ---
 title: NP-Completeness
+lecturer: Daniel
 ---
+
 
 # Polynomial time reductions
 

@@ -1,5 +1,6 @@
 ---
 title: Data Protection
+lecturer: Konrad
 ---
 
 # Data Protection Overview

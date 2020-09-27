@@ -1,5 +1,6 @@
 ---
 title: Patents
+lecturer: Konrad
 ---
 
 # Brief History of Patents in the UK

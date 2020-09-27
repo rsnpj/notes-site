@@ -1,5 +1,6 @@
 ---
 title: Uninformed Search
+lecturer: Iain
 ---
 
 # Breadth First Search

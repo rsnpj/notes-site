@@ -1,5 +1,6 @@
 ---
 title: Configuration Management
+lecturer: Craig
 ---
 
 <Definition name="Configuration Management">

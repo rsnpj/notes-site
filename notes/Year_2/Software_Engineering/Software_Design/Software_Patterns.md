@@ -1,5 +1,6 @@
 ---
 title: Software Patterns
+lecturer: David
 ---
 
 # Plan-driven design approaches

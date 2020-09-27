@@ -1,5 +1,6 @@
 ---
 title: Matrix chain multiplication
+lecturer: Daniel
 ---
 
 # Matrix chain multiplication problem

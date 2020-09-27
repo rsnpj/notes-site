@@ -1,5 +1,6 @@
 ---
 title: Performance Measurement
+lecturer: Lei
 ---
 
 # Precision and Recall

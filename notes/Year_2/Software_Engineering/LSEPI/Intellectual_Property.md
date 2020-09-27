@@ -1,5 +1,6 @@
 ---
 title: Intellectual Property Rights
+lecturer: Konrad
 ---
 
 # Intellectual Property

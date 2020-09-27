@@ -1,5 +1,6 @@
 ---
 title: Control Flow and Functions
+lecturer: Konrad
 ---
 
 # Arrays

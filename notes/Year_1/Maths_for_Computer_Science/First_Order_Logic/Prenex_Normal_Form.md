@@ -1,5 +1,6 @@
 ---
 title: Prenex Normal Form
+lecturer: Daniel
 ---
 
 # Logical equivalence

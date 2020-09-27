@@ -1,5 +1,6 @@
 ---
 title: Lexical Analysis
+lecturer: Max
 ---
 
 The role of a lexical analyser

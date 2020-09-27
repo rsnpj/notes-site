@@ -1,5 +1,6 @@
 ---
 title: Turing Machines
+lecturer: Stefan
 ---
 
 A Turing machine has an infinite tape (memory). There is a finite-state

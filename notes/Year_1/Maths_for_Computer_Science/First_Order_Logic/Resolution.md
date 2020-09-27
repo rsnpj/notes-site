@@ -1,5 +1,6 @@
 ---
 title: Resolution for first-order logic
+lecturer: Daniel
 ---
 
 Resolution is not only a proof system for propositional logic but it is

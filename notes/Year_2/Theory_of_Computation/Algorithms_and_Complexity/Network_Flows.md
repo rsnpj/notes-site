@@ -1,5 +1,6 @@
 ---
 title: Network Flows
+lecturer: Daniel
 ---
 
 # Flow networks, flow, maximum flow

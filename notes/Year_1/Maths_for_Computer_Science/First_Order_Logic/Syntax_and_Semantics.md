@@ -1,5 +1,6 @@
 ---
 title: Syntax and Semantics
+lecturer: Daniel
 ---
 
 # Syntax of first-order logic

@@ -1,5 +1,6 @@
 ---
 title: Building GUIs
+lecturer: Steven
 ---
 
 <Definition name="Stage">

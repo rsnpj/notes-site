@@ -1,5 +1,6 @@
 ---
 title: Matchings in Graphs
+lecturer: Daniel
 ---
 
 # Problem Definition

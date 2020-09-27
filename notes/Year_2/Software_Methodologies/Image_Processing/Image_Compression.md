@@ -1,5 +1,6 @@
 ---
 title: Image Compression
+lecturer: Ioannis
 ---
 
 # Redundancy in images

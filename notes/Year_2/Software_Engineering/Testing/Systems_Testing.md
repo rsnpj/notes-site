@@ -1,5 +1,6 @@
 ---
 title: System Testing
+lecturer: David
 ---
 
 System testing is much more concerned with conformance to the

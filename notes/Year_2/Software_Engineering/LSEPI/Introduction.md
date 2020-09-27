@@ -1,5 +1,6 @@
 ---
 title: Introduction to English Law
+lecturer: Konrad
 ---
 
 # Law

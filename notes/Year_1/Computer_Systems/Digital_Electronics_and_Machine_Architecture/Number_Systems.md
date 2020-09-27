@@ -1,5 +1,6 @@
 ---
 title: Number Systems
+lecturer: Magnus
 ---
 
 # Decimal

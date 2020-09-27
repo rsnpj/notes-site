@@ -1,5 +1,6 @@
 ---
 title: Equality
+lecturer: Konrad
 ---
 
 # Equality Act 2010

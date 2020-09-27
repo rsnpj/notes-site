@@ -1,5 +1,6 @@
 ---
 title: Design of codes
+lecturer: Max
 ---
 
 # Introduction

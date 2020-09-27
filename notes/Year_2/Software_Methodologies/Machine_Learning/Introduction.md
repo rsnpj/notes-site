@@ -1,5 +1,6 @@
 ---
 title: Introduction to Machine Learning
+lecturer: Lei
 ---
 
 # Machine Learning Lifecycle

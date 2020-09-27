@@ -1,5 +1,6 @@
 ---
 title: Binary Arithmetic
+lecturer: Magnus
 ---
 
 # Binary Addition

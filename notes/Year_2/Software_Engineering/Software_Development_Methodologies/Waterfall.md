@@ -1,5 +1,6 @@
 ---
 title: Waterfall
+lecturer: Craig
 ---
 
 - Plan vs course change

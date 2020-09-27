@@ -1,5 +1,6 @@
 ---
 title: Resolution as Search
+lecturer: Iain
 ---
 
 # Proof systems

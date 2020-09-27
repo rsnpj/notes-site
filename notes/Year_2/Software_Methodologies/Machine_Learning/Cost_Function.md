@@ -1,5 +1,6 @@
 ---
 title: Cost Function
+lecturer: Lei
 ---
 
 Supervised learning problem

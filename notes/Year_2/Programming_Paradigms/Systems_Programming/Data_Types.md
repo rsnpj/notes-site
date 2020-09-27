@@ -1,5 +1,6 @@
 ---
 title: Data Types
+lecturer: Konrad
 ---
 
 - Every C variable must have a type (strongly typed language)

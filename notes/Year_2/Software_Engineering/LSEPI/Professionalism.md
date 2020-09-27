@@ -1,5 +1,6 @@
 ---
 title: Professionalism
+lecturer: Konrad
 ---
 
 # Common Characteristics of a Profession

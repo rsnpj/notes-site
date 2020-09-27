@@ -1,5 +1,6 @@
 ---
 title: Recurrences
+lecturer: Rob
 ---
 
 # Intro

@@ -1,5 +1,6 @@
 ---
 title: Constraint Satisfaction
+lecturer: Iain
 ---
 
 # Definition

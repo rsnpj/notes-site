@@ -1,6 +1,8 @@
 ---
 title: Recap
+lecturer: Rob
 ---
+
 
 # Polynomials
 

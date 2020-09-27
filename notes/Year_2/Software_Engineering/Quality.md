@@ -1,5 +1,6 @@
 ---
 title: Quality
+lecturer: Craig
 ---
 
 Concerned with ensuring that the required level of quality is achieved

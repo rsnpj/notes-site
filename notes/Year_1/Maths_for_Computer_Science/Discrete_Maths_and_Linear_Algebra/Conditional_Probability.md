@@ -1,5 +1,6 @@
 ---
 title: Conditional Probability and Bernoulli Trials
+lecturer: Andrei
 ---
 
 # Conditional Probability

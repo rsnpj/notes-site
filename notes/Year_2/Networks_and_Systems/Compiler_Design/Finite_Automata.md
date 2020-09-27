@@ -1,5 +1,6 @@
 ---
 title: Finite Automata
+lecturer: Max
 ---
 
 These allow us to recognise whether a given string belongs to a given

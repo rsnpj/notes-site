@@ -1,5 +1,6 @@
 ---
 title: Binary Classifier
+lecturer: Lei
 ---
 
 # Binary Classifier

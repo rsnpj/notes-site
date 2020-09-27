@@ -1,5 +1,6 @@
 ---
 title: Integration Testing
+lecturer: David
 ---
 
 - When unit testing has demonstrated a suitable level of correctness

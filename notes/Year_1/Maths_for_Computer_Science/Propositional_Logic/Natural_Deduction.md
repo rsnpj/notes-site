@@ -1,5 +1,6 @@
 ---
 title: Natural Deduction for Propositional Logic
+lecturer: Daniel
 ---
 
 # Proof Systems for Propositional Logic

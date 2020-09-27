@@ -1,5 +1,6 @@
 ---
 title: The Complexity Class NP
+lecturer: Daniel
 ---
 
 # Certificates

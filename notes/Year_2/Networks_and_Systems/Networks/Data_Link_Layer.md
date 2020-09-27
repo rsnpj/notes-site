@@ -1,5 +1,6 @@
 ---
 title: Data Link Layer
+lecturer: Donald
 ---
 
 # Frames

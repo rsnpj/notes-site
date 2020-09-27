@@ -1,5 +1,6 @@
 ---
 title: Agile Development
+lecturer: Craig
 ---
 
 # Manifesto

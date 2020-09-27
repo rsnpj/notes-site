@@ -1,5 +1,6 @@
 ---
 title: "Stacks and Queues"
+lecturer: Matthew
 ---
 
 # Syntax Checking

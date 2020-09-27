@@ -1,5 +1,6 @@
 ---
 title: Lambda Expressions
+lecturer: Lawrence
 ---
 
 ## Nameless function

@@ -1,5 +1,6 @@
 ---
 title: Odds and Logistic Regression
+lecturer: Lei
 ---
 
 # Odds

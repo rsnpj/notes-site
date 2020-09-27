@@ -1,5 +1,6 @@
 ---
 title: Debugging
+lecturer: Konrad
 ---
 
 - We can also have multi-dimensional arrays in C e.g.

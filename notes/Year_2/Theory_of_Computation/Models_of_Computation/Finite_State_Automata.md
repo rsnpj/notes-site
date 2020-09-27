@@ -1,5 +1,6 @@
 ---
 title: Finite State Automata
+lecturer: Stefan
 ---
 
 # Formal Definition

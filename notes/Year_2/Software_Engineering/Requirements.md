@@ -1,5 +1,6 @@
 ---
 title: Requirements Engineering
+lecturer: Craig
 ---
 
 # Gathering Requirements

@@ -1,5 +1,6 @@
 ---
 title: Logic Gates and Transistors
+lecturer: Magnus
 ---
 
 # Transistors

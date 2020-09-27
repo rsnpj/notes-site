@@ -1,5 +1,6 @@
 ---
 title: Lighting in Computer Graphics
+lecturer: Freddie
 ---
 
 # Shading

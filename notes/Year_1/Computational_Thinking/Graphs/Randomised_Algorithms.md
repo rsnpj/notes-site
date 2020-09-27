@@ -1,5 +1,6 @@
 ---
 title: Randomised Algorithms
+lecturer: George
 ---
 
 # Deterministic algorithms

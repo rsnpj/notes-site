@@ -1,5 +1,6 @@
 ---
 title: Lazy Evaluation
+lecturer: Lawrence
 ---
 
 -   Not only is Haskell a pure functional language

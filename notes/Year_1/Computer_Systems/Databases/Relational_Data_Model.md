@@ -1,5 +1,6 @@
 ---
 title: The relational data model
+lecturer: George
 ---
 
 -   DDL is too low level and not easily understandable by most users

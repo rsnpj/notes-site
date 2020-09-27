@@ -1,5 +1,6 @@
 ---
 title: Wireless MAC
+lecturer: Donald
 ---
 
 # Elements of a wireless network

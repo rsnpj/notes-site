@@ -1,5 +1,6 @@
 ---
 title: Types and Classes
+lecturer: Lawrence
 ---
 
 # Types

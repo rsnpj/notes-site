@@ -1,5 +1,6 @@
 ---
 title: Introduction to testing
+lecturer: David
 ---
 
 # Why test software?

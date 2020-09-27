@@ -1,5 +1,6 @@
 ---
 title: Introduction
+lecturer: Lawrence
 ---
 
 # Computing n!

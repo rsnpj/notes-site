@@ -1,5 +1,6 @@
 ---
 title: Generalisation
+lecturer: Lei
 ---
 
 # Generalisation

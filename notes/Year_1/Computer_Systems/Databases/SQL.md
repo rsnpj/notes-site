@@ -1,5 +1,6 @@
 ---
 title: SQL
+lecturer: George
 ---
 
 # Database languages

@@ -1,5 +1,6 @@
 ---
 title: Identification, authentication and authorization
+lecturer: Chris
 ---
 
 # Access Control

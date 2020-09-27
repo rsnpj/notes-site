@@ -1,5 +1,6 @@
 ---
 title: MIPS
+lecturer: Magnus
 ---
 
 # Introduction

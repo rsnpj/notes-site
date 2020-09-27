@@ -1,5 +1,6 @@
 ---
 title: Greedy Algorithms
+lecturer: Daniel
 ---
 
 # The knapsack problem

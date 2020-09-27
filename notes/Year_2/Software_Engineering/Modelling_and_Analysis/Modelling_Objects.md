@@ -1,5 +1,6 @@
 ---
 title: Modelling Objects
+lecturer: David
 ---
 
 # Characteristics of Objects

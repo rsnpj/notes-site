@@ -1,5 +1,6 @@
 ---
 title: Contracts
+lecturer: Konrad
 ---
 
 # What is a contract

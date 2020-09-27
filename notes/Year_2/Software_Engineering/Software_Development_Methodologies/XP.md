@@ -1,5 +1,6 @@
 ---
 title: Extreme Programming
+lecturer: Craig
 ---
 
 # Plan-driven vs Agile

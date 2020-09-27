@@ -1,5 +1,6 @@
 ---
 title: Graphics Pipeline for Interactive Rendering
+lecturer: Freddie
 ---
 
 # Rendering in Computer Graphics

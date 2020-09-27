@@ -1,5 +1,6 @@
 ---
 title: Sorting, Searching and Selecting
+lecturer: Andrei
 ---
 
 # Sorting

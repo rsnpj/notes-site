@@ -1,5 +1,6 @@
 ---
 title: Scheduling
+lecturer: Craig
 ---
 
 ## Tracking Progress

@@ -1,5 +1,6 @@
 ---
 title: Graph Traversing
+lecturer: George
 ---
 
 # Graph Representations

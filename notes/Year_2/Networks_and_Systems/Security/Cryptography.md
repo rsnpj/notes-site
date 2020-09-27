@@ -1,5 +1,6 @@
 ---
 title: Applied Cryptography
+lecturer: Chris
 ---
 
 # Substitution Cyphers

@@ -1,5 +1,6 @@
 ---
 title: An Overview of First Order Logic
+lecturer: Daniel
 ---
 
 # Predicates and atomic formulae

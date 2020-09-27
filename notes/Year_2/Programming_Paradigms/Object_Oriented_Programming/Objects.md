@@ -1,5 +1,6 @@
 ---
 title: Objects First with Java
+lecturer: Steven
 ---
 
 # Methods and Parameters

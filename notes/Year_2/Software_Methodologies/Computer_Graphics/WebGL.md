@@ -1,5 +1,6 @@
 ---
 title: GPU Programming with WebGL
+lecturer: Freddie
 ---
 
 <Definition name="Polygon model/mesh">

@@ -1,5 +1,6 @@
 ---
 title: Software Development Lifecycle
+lecturer: Craig
 ---
 
 ![image](/img/Year_2/Software_Engineering/Methodologies/SDLC/Lifecycle.webp)

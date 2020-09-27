@@ -1,5 +1,6 @@
 ---
 title: Timing and Advanced Adders
+lecturer: Magnus
 ---
 
 # Timing

@@ -1,5 +1,6 @@
 ---
 title: Load Distribution
+lecturer: Freddie
 ---
 
 <Definition name="Load Distribution">

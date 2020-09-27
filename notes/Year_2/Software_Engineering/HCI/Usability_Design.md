@@ -1,5 +1,6 @@
 ---
 title: Usability Design
+lecturer: Craig
 ---
 
 # The design of everyday things

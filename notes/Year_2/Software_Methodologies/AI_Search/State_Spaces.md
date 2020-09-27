@@ -1,5 +1,6 @@
 ---
 title: State Spaces
+lecturer: Iain
 ---
 
 <Definition name="State space"> 

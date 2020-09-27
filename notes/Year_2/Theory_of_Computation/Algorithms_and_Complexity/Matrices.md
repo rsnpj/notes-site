@@ -1,5 +1,6 @@
 ---
 title: Matrices and Strassen’s Algorithm
+lecturer: Daniel
 ---
 
 # Master Method

@@ -1,5 +1,6 @@
 ---
 title: Colour spaces and adding colour to grayscale images
+lecturer: Ioannis
 ---
 
 # RGB Colour Space

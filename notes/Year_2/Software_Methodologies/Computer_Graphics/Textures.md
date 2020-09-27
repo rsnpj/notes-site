@@ -1,5 +1,6 @@
 ---
 title: Texture Mapping
+lecturer: Freddie
 ---
 
 - A method for adding surface details

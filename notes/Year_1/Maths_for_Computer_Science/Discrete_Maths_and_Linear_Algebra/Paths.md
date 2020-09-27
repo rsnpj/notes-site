@@ -1,5 +1,6 @@
 ---
 title: Paths, cycles and connectivity
+lecturer: Andrei
 ---
 
 # Walks, paths, cycles and distances

@@ -1,5 +1,6 @@
 ---
 title: Trees and Rooted Trees
+lecturer: Andrei
 ---
 
 # The number of leaves in a tree

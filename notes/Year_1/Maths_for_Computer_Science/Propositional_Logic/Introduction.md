@@ -1,5 +1,6 @@
 ---
 title: Fundamentals of Propositional Logic
+lecturer: Daniel
 ---
 
 # The Rudiments of Propositional Logic

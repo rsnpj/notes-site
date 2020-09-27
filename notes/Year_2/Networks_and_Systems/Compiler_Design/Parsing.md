@@ -1,5 +1,6 @@
 ---
 title: Syntax Analysis (Parsing)
+lecturer: Max
 ---
 
 Lexical analyser:

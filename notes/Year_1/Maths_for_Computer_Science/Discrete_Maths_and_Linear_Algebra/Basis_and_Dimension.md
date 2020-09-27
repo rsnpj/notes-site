@@ -1,5 +1,6 @@
 ---
 title: Basis and Dimension of a vector space
+lecturer: Andrei
 ---
 
 # Basis

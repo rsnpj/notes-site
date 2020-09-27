@@ -1,5 +1,6 @@
 ---
 title: Machine Architecture Introduction and LMC Model
+lecturer: Magnus
 ---
 
 # History of Computers

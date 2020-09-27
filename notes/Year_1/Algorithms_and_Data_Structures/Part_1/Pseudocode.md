@@ -1,5 +1,6 @@
 ---
 title: "Introduction and Pseudocode"
+lecturer: Matthew
 ---
 
 # Algorithms

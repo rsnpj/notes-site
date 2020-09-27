@@ -1,5 +1,6 @@
 ---
 title: HTTP
+lecturer: Steven
 ---
 
 ### Possible responses from a web request

@@ -1,5 +1,6 @@
 ---
 title: Distributed Architectures and DBMS
+lecturer: George
 ---
 
 # Multi User DBMS Architectures

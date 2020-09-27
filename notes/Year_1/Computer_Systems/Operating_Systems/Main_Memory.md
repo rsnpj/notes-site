@@ -1,5 +1,6 @@
 ---
 title: Memory Management - Main Memory
+lecturer: Barnaby
 ---
 
 # Usage of Memory

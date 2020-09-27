@@ -1,5 +1,6 @@
 ---
 title: Unit Tests
+lecturer: David
 ---
 
 - Unit testing is widely used, regardless of software architectural

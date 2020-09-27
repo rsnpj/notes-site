@@ -1,5 +1,6 @@
 ---
 title: Scope
+lecturer: Konrad
 ---
 
 # Memory allocation: `calloc() <stdlib.h>`

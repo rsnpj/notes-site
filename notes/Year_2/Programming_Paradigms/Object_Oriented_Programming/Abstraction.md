@@ -1,5 +1,6 @@
 ---
 title: Abstraction Techniques
+lecturer: Steven
 ---
 
 # Abstract classes and methods

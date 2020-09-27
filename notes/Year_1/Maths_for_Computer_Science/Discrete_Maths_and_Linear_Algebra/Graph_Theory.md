@@ -1,5 +1,6 @@
 ---
 title: The basics of Graph Theory
+lecturer: Andrei
 ---
 
 # What is a Graph?

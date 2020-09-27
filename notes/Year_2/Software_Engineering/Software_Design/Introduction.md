@@ -1,5 +1,6 @@
 ---
 title: Introduction
+lecturer: David
 ---
 
 <Definition name="Technical Debt">

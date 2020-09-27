@@ -1,5 +1,6 @@
 ---
 title: Medium Access Control
+lecturer: Donald
 ---
 
 # The MAC Sublayer

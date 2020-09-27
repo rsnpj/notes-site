@@ -1,5 +1,6 @@
 ---
 title: User Acceptance Testing (UAT)
+lecturer: David
 ---
 
 Consist of a set of tests:

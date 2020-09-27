@@ -1,5 +1,6 @@
 ---
 title: Scaling
+lecturer: Craig
 ---
 
 What is an ultra-large-scale system:

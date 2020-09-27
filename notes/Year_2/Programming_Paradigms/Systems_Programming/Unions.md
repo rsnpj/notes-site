@@ -1,5 +1,6 @@
 ---
 title: Unions
+lecturer: Konrad
 ---
 
 - A `union`, like a structure, consists of one or more members,

@@ -1,5 +1,6 @@
 ---
 title: Scene Construction and Projection
+lecturer: Freddie
 ---
 
 # World and Local Coordinate Systems

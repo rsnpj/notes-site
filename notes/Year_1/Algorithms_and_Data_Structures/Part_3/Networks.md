@@ -1,5 +1,6 @@
 ---
 title: Networks
+lecturer: Andrei
 ---
 
 # Comparator

@@ -1,5 +1,6 @@
 ---
 title: Geometric Transformations
+lecturer: Freddie
 ---
 
 # Transformations in Rendering Pipeline

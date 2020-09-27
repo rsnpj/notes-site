@@ -1,5 +1,6 @@
 ---
 title: Resolution for Propositional Logic
+lecturer: Daniel
 ---
 
 # Resolution

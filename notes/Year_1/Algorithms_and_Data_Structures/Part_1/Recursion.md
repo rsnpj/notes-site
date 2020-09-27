@@ -1,5 +1,6 @@
 ---
 title: "Recursion"
+lecturer: Matthew
 ---
 
 # Factorials

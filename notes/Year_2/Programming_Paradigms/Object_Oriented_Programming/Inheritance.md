@@ -1,5 +1,6 @@
 ---
 title: Improving Structure with Inheritance
+lecturer: Steven
 ---
 
 -   Define one superclass

@@ -1,5 +1,6 @@
 ---
 title: Concurrent events and consistency control
+lecturer: Freddie
 ---
 
 # Concurrency

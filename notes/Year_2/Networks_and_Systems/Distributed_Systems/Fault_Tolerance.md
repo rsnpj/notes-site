@@ -1,5 +1,6 @@
 ---
 title: Fault Tolerance
+lecturer: Freddie
 ---
 
 <Definition name="Fault Tolerance">

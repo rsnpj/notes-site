@@ -1,5 +1,6 @@
 ---
 title: Coping with Intractability
+lecturer: Daniel
 ---
 
 If an optimisation problem is NP-hard we generally regard it as

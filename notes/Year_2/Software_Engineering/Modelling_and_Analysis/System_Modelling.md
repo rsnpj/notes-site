@@ -1,5 +1,6 @@
 ---
 title: System Modelling
+lecturer: David
 ---
 
 System modelling helps the analyst to understand the functionality of

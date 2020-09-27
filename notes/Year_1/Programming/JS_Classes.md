@@ -1,5 +1,6 @@
 ---
 title: JavaScript Classes
+lecturer: Steven
 ---
 
 ## Collection of properties

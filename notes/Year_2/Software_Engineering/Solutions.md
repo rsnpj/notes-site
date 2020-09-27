@@ -1,5 +1,6 @@
 ---
 title: Solutions
+lecturer: Craig
 ---
 
 # ISPs

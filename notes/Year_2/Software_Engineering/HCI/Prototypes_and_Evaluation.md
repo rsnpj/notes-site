@@ -1,5 +1,6 @@
 ---
 title: Prototypes and Evaluation
+lecturer: Craig
 ---
 
 # Prototypes

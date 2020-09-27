@@ -1,5 +1,6 @@
 ---
 title: The C Standard Library
+lecturer: Konrad
 ---
 
 # Logical Operators

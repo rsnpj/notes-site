@@ -1,5 +1,6 @@
 ---
 title: Standards
+lecturer: Craig
 ---
 
 # Why standards?

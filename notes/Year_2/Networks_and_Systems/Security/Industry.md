@@ -1,5 +1,6 @@
 ---
 title: Security in Industry
+lecturer: Chris
 ---
 
 Trade off between:

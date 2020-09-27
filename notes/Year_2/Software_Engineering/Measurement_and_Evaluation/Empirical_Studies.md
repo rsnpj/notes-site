@@ -1,5 +1,6 @@
 ---
 title: Empirical Studies
+lecturer: David
 ---
 
 <Definition name="Evaluate">

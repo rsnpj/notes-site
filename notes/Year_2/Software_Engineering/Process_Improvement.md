@@ -1,5 +1,6 @@
 ---
 title: Process Improvement
+lecturer: Craig
 ---
 
 # Approaches to improvement

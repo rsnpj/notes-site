@@ -1,5 +1,6 @@
 ---
 title: Histograms and Histogram based image enhancement
+lecturer: Ioannis
 ---
 
 # What is a histogram?

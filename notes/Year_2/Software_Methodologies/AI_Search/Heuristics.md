@@ -1,5 +1,6 @@
 ---
 title: Heuristics
+lecturer: Iain
 ---
 
 # Heuristics for TSP

@@ -1,5 +1,6 @@
 ---
 title: The entity relationship models
+lecturer: George
 ---
 
 # Why a data model?

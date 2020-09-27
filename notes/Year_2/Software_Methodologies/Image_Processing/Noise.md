@@ -1,5 +1,6 @@
 ---
 title: Image noise
+lecturer: Ioannis
 ---
 
 # Noise in images

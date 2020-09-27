@@ -1,5 +1,6 @@
 ---
 title: Addressing Modes
+lecturer: Magnus
 ---
 
 # CPU Fetch Execute Cycle

@@ -1,5 +1,6 @@
 ---
 title: Asymptotics
+lecturer: Rob
 ---
 
 # Growth of functions

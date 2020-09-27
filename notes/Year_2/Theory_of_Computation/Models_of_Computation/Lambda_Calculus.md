@@ -1,5 +1,6 @@
 ---
 title: Lambda Calculus
+lecturer: Stefan
 ---
 
 # Syntax

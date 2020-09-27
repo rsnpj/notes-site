@@ -1,5 +1,6 @@
 ---
 title: Bayes' Theorem, Random Variables
+lecturer: Andrei
 ---
 
 # Motivation for Bayes' Theorem

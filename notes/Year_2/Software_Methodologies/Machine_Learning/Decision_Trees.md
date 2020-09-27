@@ -1,5 +1,6 @@
 ---
 title: Decision Trees and Random Forests
+lecturer: Lei
 ---
 
 # Decision Trees

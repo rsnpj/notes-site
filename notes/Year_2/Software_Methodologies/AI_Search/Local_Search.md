@@ -1,5 +1,6 @@
 ---
 title: Local Search
+lecturer: Iain
 ---
 
 Often in search problem the path to a goal state is of no consequence,

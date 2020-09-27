@@ -1,5 +1,6 @@
 ---
 title: Decision Problems
+lecturer: Daniel
 ---
 
 # Optimisation vs Decision Problems

@@ -1,5 +1,6 @@
 ---
 title: Process Management
+lecturer: Barnaby
 ---
 
 # Process State

@@ -1,6 +1,8 @@
 ---
 title: Replication models
+lecturer: Freddie
 ---
+
 
 # Replication
 

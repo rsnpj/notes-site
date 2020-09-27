@@ -1,5 +1,6 @@
 ---
 title: Operating System Security and Access Control
+lecturer: Chris
 ---
 
 # Access Control

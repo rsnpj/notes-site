@@ -1,5 +1,6 @@
 ---
 title: Support vector machines
+lecturer: Lei
 ---
 
 # Linear Separable SVM

@@ -1,5 +1,6 @@
 ---
 title: Code Metrics
+lecturer: David
 ---
 
 # Characteristics of a metric

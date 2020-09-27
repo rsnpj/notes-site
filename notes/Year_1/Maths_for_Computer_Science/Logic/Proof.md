@@ -1,5 +1,6 @@
 ---
 title: Methods of Proof
+lecturer: Daniel
 ---
 
 # Mathematical Proof

@@ -1,5 +1,6 @@
 ---
 title: Introduction to Logic
+lecturer: Daniel
 ---
 
 # What is logic?

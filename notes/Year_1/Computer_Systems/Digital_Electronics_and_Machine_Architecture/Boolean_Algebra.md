@@ -1,5 +1,6 @@
 ---
 title: Boolean Algebra
+lecturer: Magnus
 ---
 
 # Boolean Operations

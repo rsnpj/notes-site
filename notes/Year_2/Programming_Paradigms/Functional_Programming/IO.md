@@ -1,5 +1,6 @@
 ---
 title: IO and Interaction
+lecturer: Lawrence
 ---
 
 # Batch programs

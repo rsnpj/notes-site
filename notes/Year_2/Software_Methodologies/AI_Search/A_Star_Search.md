@@ -1,5 +1,6 @@
 ---
 title: A* Search
+lecturer: Iain
 ---
 
 # A\* Search Completeness

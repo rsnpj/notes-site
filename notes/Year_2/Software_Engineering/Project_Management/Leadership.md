@@ -1,5 +1,6 @@
 ---
 title: Leadership
+lecturer: Craig
 ---
 
 Poor leaders:

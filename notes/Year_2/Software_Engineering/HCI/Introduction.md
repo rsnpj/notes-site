@@ -1,5 +1,6 @@
 ---
 title: Introduction to Human Computer Interaction
+lecturer: Craig
 ---
 
 # Generations of computers

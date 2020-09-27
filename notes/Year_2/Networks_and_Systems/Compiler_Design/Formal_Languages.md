@@ -1,5 +1,6 @@
 ---
 title: Formal Languages and Grammars
+lecturer: Max
 ---
 
 # Formal Languages

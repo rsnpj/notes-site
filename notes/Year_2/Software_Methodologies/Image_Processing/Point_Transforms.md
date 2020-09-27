@@ -1,5 +1,6 @@
 ---
 title: Point transforms - arithmetic & logical operations
+lecturer: Ioannis
 ---
 
 # Matrices
