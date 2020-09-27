@@ -213,9 +213,10 @@ function Lecture({
 							</>
 						)}
 					</MainContent>
-					{postData.details !== null && (
-						<Footer details={postData.details} />
-					)}
+					{postData.details !== undefined &&
+						postData.details !== null && (
+							<Footer details={postData.details} />
+						)}
 				</div>
 			</div>
 		</>
