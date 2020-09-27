@@ -11,7 +11,7 @@ relations in the DB
 
 Their place in the big picture
 
-![image](/img/Year_1/CSys/Databases/Calculus/big_picture.png)
+![image](/img/Year_1/CSys/Databases/Calculus/big_picture.webp)
 
 - Relational calculus
 
@@ -399,4 +399,4 @@ Steps:
 
 # Summary
 
-![image](/img/Year_1/CSys/Databases/Calculus/Summary.png)
+![image](/img/Year_1/CSys/Databases/Calculus/Summary.webp)

@@ -138,17 +138,17 @@ lecturer: Barnaby
 
 # Sequential access file
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/sa.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/sa.webp)
 
 # Access methods
 
 - Sequential access
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/sequential.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/sequential.webp)
 
 - Direct access - file is fixed length logical records
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/direct.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/direct.webp)
 
 - Relative block numbers allow the OS to decide where the block should
   be placed
@@ -175,13 +175,13 @@ Sequential Acess Implementation for direct access
 
 - If too large, index (in memory) of the index (on disk)
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/database.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/database.webp)
 
 # Directory Structure
 
 - A collection of nodes containing information about all files
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/directory_structure.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/directory_structure.webp)
 
 Both the directory structure and the files reside on disk
 
@@ -207,7 +207,7 @@ Both the directory structure and the files reside on disk
 
 # A Typical File-system Organization
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/Organisation.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/Organisation.webp)
 
 # Operations Performed on Directory
 
@@ -241,7 +241,7 @@ The directory is organized logically to obtain
 
 - A single directory for all users
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/single.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/single.webp)
 
 - Naming problem
 
@@ -251,7 +251,7 @@ The directory is organized logically to obtain
 
 - Separate directory for each user
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/two.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/two.webp)
 
 - Path name
 
@@ -263,7 +263,7 @@ The directory is organized logically to obtain
 
 # Tree-Structured Directories
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/tree.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/tree.webp)
 
 - Efficient searching
 
@@ -277,7 +277,7 @@ The directory is organized logically to obtain
 
 - Have shared subdirectories and files
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/acyclic.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/acyclic.webp)
 
 - Two different names (aliasing)
 
@@ -300,7 +300,7 @@ The directory is organized logically to obtain
 
 # General Graph Directory
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/General.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/General.webp)
 
 - How do we guarantee no cycles?
 
@@ -397,7 +397,7 @@ The directory is organized logically to obtain
 
 - Three classes of users on Unix/ Linux
 
-  ![image](/img/Year_1/CSys/Operating_Systems/Interface/users.png)
+  ![image](/img/Year_1/CSys/Operating_Systems/Interface/users.webp)
 
 - Ask manager to create a group (unique name), say G, and add some
   users to the group
@@ -405,4 +405,4 @@ The directory is organized logically to obtain
 - For a particular file (say game) or subdirectory, define an
   appropriate access
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/group.png)
+![image](/img/Year_1/CSys/Operating_Systems/Interface/group.webp)

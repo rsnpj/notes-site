@@ -28,7 +28,7 @@ lecturer: Barnaby
 
 # Moving head disk mechanism
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/mechanism.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/mechanism.webp)
 
 # Hard Disk Performance
 
@@ -168,7 +168,7 @@ queue =98,183,37,122,14,124,65,67
 
 Heads starts at 53
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/FCFS.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/FCFS.webp)
 
 # SSTF
 
@@ -180,7 +180,7 @@ Heads starts at 53
 
 - Illustration shows total head movement of 236 cylinders
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/SSTF.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/SSTF.webp)
 
 # SCAN
 
@@ -195,7 +195,7 @@ Heads starts at 53
 - But note that if the requests are uniformly dense, largest density
   at other end of disk and those wait the longest
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/SCAN.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/SCAN.webp)
 
 # C-SCAN
 
@@ -211,7 +211,7 @@ Heads starts at 53
 - Treats the cylinders as a circular list that wraps around from the
   last cylinder to the first one
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/C-Scan.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/C-Scan.webp)
 
 # C-LOOK
 
@@ -221,7 +221,7 @@ Heads starts at 53
   reverses direction immediately, without first going all the way to
   the end of the disk
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/C-LOOK.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/C-LOOK.webp)
 
 # Selecting a Disk-Scheduling Algorithm
 
@@ -356,11 +356,11 @@ Heads starts at 53
 
 # RAID Levels
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/Raid_Levels.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/Raid_Levels.webp)
 
 # RAID (0+1) and (1+0)
 
-![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/RAID01.png)
+![image](/img/Year_1/CSys/Operating_Systems/Mass_Storage/RAID01.webp)
 
 # Other Features
 

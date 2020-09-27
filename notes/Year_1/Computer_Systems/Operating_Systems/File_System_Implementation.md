@@ -123,7 +123,7 @@ Devices
   - NTFS stores into a master file table using relational DB
     structures
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Implementation.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Implementation.webp)
 
 # In-Memory File system structures
 
@@ -144,7 +144,7 @@ Devices
 - Data from read eventually copied to specified user process memory
   address
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Structure.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Structure.webp)
 
 # Partitions and Mounting
 
@@ -191,7 +191,7 @@ Devices
 - The API is to the VFS interface, rather than any specific type of
   file system
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/VFS.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/VFS.webp)
 
 # Directory Implementation
 
@@ -231,7 +231,7 @@ Devices
 
 - Mapping from logical to physical
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Allocation.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Allocation.webp)
 
 # Extent-Based systems
 
@@ -280,22 +280,22 @@ FAT (File Allocation Table) variation
 Each file is a linked list of disk blocks: blocks may be scattered
 anywhere on the disk
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked.webp)
 
 Mapping
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked1.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked1.webp)
 
 Block to be accessed is the Qth block in the linked chain of blocks
 representing the file
 
 Displacement into block $=R+1$
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked2.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked2.webp)
 
 # File-Allocation Table
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/FAT.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/FAT.webp)
 
 # Allocation Methods - Indexed
 
@@ -304,9 +304,9 @@ its data blocks
 
 Logical view
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index.webp)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index1.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index1.webp)
 
 - Need index table
 
@@ -319,28 +319,28 @@ Logical view
   bytes and block size of 512 bytes. We need only 1 block for index
   table
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index2.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index2.webp)
 
 - Mapping from logical to physical in a file of unbounded length
   (block size of 512 words)
 
 - Linked scheme - Link blocks of index table (no limit on size)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index3.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index3.webp)
 
 - Two-level index (4K blocks could store 1,024 four-byte pointers in
   outer index $\rightarrow$ 1,048,567 data blocks and file size of up
   to 4GB)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index4.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index4.webp)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/index5.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/index5.webp)
 
 # Combined Scheme: UNIX UFS
 
 4K bytes per block, 32-bit addresses
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/UFS.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/UFS.webp)
 
 More index blocks than can be addressed with 32-bit file pointer
 
@@ -374,7 +374,7 @@ More index blocks than can be addressed with 32-bit file pointer
 
 - Bit vector or bit map (n blocks)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Free_Space.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Free_Space.webp)
 
 - Bit map requires extra space
 
@@ -390,7 +390,7 @@ Linked list (free list)
 
 - No need to traverse the entire list (if \# of free blocks recorded)
 
-![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked_Free_Space.png)
+![image](/img/Year_1/CSys/Operating_Systems/Implementation/Linked_Free_Space.webp)
 
 # Efficiency and Performance
 

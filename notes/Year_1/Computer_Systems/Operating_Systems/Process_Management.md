@@ -193,7 +193,15 @@ A multilevel feedback queue scheduler may use the following parameters:
 - The first process to request the CPU is allocated the CPU until it
   is completed
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/FCFS.png)
+| Process | Priority | Arrival Time | Burst Time |
+| ------- | -------- | ------------ | ---------- |
+| A       | -        | 3            | 7          |
+| B       | -        | 6            | 3          |
+| C       | -        | 0            | 5          |
+| D       | -        | 5            | 4          |
+| E       | -        | 4            | 1          |
+
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/FCFS.webp)
 
 - The average waiting time may or may not be lengthy
 
@@ -213,7 +221,15 @@ A multilevel feedback queue scheduler may use the following parameters:
 - Non pre emptive - once the CPU is given a process it cannot be
   pre-emptive until the process has completed its CPU Burst
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SJF.png)
+| Process | Priority | Arrival Time | Burst Time |
+| ------- | -------- | ------------ | ---------- |
+| A       | -        | 3            | 7          |
+| B       | -        | 6            | 3          |
+| C       | -        | 0            | 5          |
+| D       | -        | 5            | 4          |
+| E       | -        | 4            | 1          |
+
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SJF.webp)
 
 ## Round Robin (RR)
 
@@ -227,7 +243,15 @@ If there are n processes in the ready queue and the time quantum is q,
 them each process gets $\frac{1}{n}$ of the CPU time in chunks of at
 most q time units at once
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RR.png)
+| Process | Priority | Arrival Time | Burst Time |
+| ------- | -------- | ------------ | ---------- |
+| A       | -        | 3            | 7          |
+| B       | -        | 6            | 3          |
+| C       | -        | 0            | 5          |
+| D       | -        | 5            | 4          |
+| E       | -        | 4            | 1          |
+
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RR.webp)
 
 ## Shortest Remaining Time First
 
@@ -237,9 +261,17 @@ running process and run the process with the shorter CPU burst length.
 
 It can be viewed as a pre-emptive version of SJF.
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF1.png)
+| Process | Priority | Arrival Time | Burst Time |
+| ------- | -------- | ------------ | ---------- |
+| A       | -        | 3            | 7          |
+| B       | -        | 6            | 3          |
+| C       | -        | 0            | 5          |
+| D       | -        | 5            | 4          |
+| E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF2.png)
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF1.webp)
+
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF2.webp)
 
 ## Round Robin (With Priority)
 
@@ -254,4 +286,12 @@ With priority in round robin, we can choose to implement either:
 
 This is with time slice 2
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RRP.png)
+| Process | Priority | Arrival Time | Burst Time |
+| ------- | -------- | ------------ | ---------- |
+| A       | -        | 3            | 7          |
+| B       | -        | 6            | 3          |
+| C       | -        | 0            | 5          |
+| D       | -        | 5            | 4          |
+| E       | -        | 4            | 1          |
+
+![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RRP.webp)
