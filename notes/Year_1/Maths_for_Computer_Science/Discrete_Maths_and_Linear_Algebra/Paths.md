@@ -59,6 +59,10 @@ connected subgraph of G
 
 ![image](/img/Year_1/MCS/DMLA/Paths/graph.webp)
 
+_Is this path connected_
+
+_How many connected components does this graph have?_
+
 -   Is connected - In one piece
 
 -   Removing 6-7, 5-8 and 4-7 makes two connected components, making it

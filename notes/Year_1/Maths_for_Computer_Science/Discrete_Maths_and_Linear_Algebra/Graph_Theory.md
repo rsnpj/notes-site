@@ -18,7 +18,7 @@ lecturer: Andrei
 ## Definitions
 
 A **graph** G is a pair $(V(G),E(G))$, where $V(G)$ is a **nonempty**
-set of **verticies**(or nodes) and $E(G)$ is a set of **unordered
+set of **vertices**(or nodes) and $E(G)$ is a set of **unordered
 pairs** {u,v} with $u,v\in V(G)$ and $u\neq v$ called the **edges** of
 G.
 
@@ -40,6 +40,8 @@ G.
 # A drawing of a graph
 
 ![image](/img/Year_1/MCS/DMLA/Graph_Theory/drawing.webp)
+
+This is a drawing of the graph G=(V,E) with $V=\{a,b,c,d,e,f\}$ and $E=\{ab,ac,bc,bd,ce,de,ef\}$
 
 # Types of graphs
 
@@ -208,6 +210,8 @@ in which two vertices are neighbours iff the corresponding rows differ in exactl
 one entry
 
 ### Example
+
+$Q_1=P_2=K_2$; $Q_2=C_4$. For n=3, the set V consists of $2^3=8$ elements
 
 ![image](/img/Year_1/MCS/DMLA/Graph_Theory/n_dimension.webp)
 

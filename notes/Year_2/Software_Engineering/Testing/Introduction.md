@@ -91,7 +91,7 @@ whether or not the outputs are acceptable.
     activities, depending on the form. In particular, with XP, there is
     the practice of writing the testes before writing the code
 
-![image](/img/Year_2/Software_Engineering/Testing/Introduction/v-model.png)
+![image](/img/Year_2/Software_Engineering/Testing/Introduction/v-model.webp)
 
 # Regression Testing
 
@@ -127,7 +127,18 @@ Not all errors are of equal importance in terms of their effect
 
 This is one example of a scale for severity:
 
-![image](/img/Year_2/Software_Engineering/Testing/Introduction/severity.png)
+|     | Level of severity | Example                                      |
+| --- | ----------------- | -------------------------------------------- |
+| 1   | Mild              | Misspelled word in output                    |
+| 2   | Moderate          | Provides misleading or redundant information |
+| 3   | Annoying          | Truncated names                              |
+| 4   | Disturbing        | Some transactions not processed              |
+| 5   | Serious           | Loses a transaction                          |
+| 6   | Very serious      | Incorrect transaction execution              |
+| 7   | Extreme           | Frequent very serious errors                 |
+| 8   | Intolerable       | Database corruption                          |
+| 9   | Catastrophic      | System shut down                             |
+| 10  | Infectious        | Shut down that spreads to others             |
 
 # Implications
 

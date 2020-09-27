@@ -88,6 +88,10 @@ DFS(G,u):
 
 ![image](/img/Year_1/CT/Graphs/Traversing/DFS.webp)
 
+The algorithm runs in linear time
+
+A DFS ordering of the vertices: A,B,D,C,E,F
+
 # Graph traversing
 
 -   The Depth First Search (DFS) algorithm can be used to traverse the
@@ -164,6 +168,10 @@ def BFS(G,a,b):
 # BFS In action
 
 ![image](/img/Year_1/CT/Graphs/Traversing/BFS.webp)
+
+-   white vertex: **unlabelled**
+-   gray vertex: **labelled**, but not all its neighbours are labelled
+-   black vertex: **labelled**, and all its neighbours are labelled
 
 # Graph Traversing
 

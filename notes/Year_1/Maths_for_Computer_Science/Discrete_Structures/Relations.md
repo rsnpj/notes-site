@@ -239,6 +239,8 @@ $$
 
 ![image](/img/Year_1/MCS/Discrete_Structures/Relations/coms.webp)
 
+Take the reflexive, transitive closure of R and denote it by T. If we obtain a partial order (that is, T is anti-symmetric) then the trace is a legitimate one
+
 # Total and well orders
 
 If $(S,\leqslant)$ is a poset, and further, every two elements in S are

@@ -343,7 +343,39 @@ In fact $\land \lor\lnot$ is functionally complete
 
 ## Example
 
-![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig1.webp)
+Consider the following truth table for $\varphi$
+
+| p   | q   | r   | s   | $\varphi$ |
+| --- | --- | --- | --- | --------- |
+| T   | T   | T   | T   | F         |
+| T   | T   | T   | F   | F         |
+| T   | T   | F   | T   | **T**     |
+| T   | T   | F   | F   | F         |
+| T   | F   | T   | T   | F         |
+| T   | F   | T   | F   | F         |
+| T   | F   | F   | T   | **T**     |
+| T   | F   | F   | F   | **T**     |
+| F   | T   | T   | T   | F         |
+| F   | T   | T   | F   | F         |
+| F   | T   | T   | F   | F         |
+| F   | T   | F   | T   | F         |
+| F   | T   | F   | F   | **T**     |
+| F   | F   | T   | T   | F         |
+| F   | F   | T   | F   | F         |
+| F   | F   | F   | T   | F         |
+| F   | F   | F   | F   | **T**     |
+
+We consider each true statement as $f_1$ through to $f_5$
+
+So
+
+-   $\chi_{f_1} = p \land q \land \lnot r \land s$
+-   $\chi_{f_2} = p \land \lnot q \land \lnot r \land s$
+-   $\chi_{f_3} = p \land q \land \lnot r \land \lnot s$
+-   $\chi_{f_4} = \lnot p \land q \land \lnot r \land \lnot s$
+-   $\chi_{f_5} = \lnot p \land \lnot q \land \lnot r \land \lnot s$
+
+So $\varphi$ is the $\lor$ of all of these
 
 -   $f_1$ can be specified by writing a truth assignment
     $p\land q\land \lnot r \land s$

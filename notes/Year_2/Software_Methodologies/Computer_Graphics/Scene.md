@@ -40,6 +40,8 @@ by six planes (near, far, top, bottom, right and left)
 
 ![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/View_Frustum.webp)
 
+The frustum determines which objects or proportion of objects will be clipped out and discarded
+
 # Types of View Frustum
 
 -   The shape and extent of the frustum determines the type of view
@@ -50,6 +52,8 @@ by six planes (near, far, top, bottom, right and left)
     will be a perspective projection
 
 ![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Frustum_Shape.webp)
+
+The extent and shape of the frustum determines how much of the 3D view space is mapped to the screen and the type of 3D to 2D projection that takes place
 
 # Viewport Transform
 
