@@ -342,7 +342,14 @@ Four alternative strategies for the placement of data
 
     -   Combination of partitioning, replication and centralization
 
-![image](/img/Year_1/CSys/Databases/DBMS/Strategies.webp)
+## Balance of the strategic objectives
+
+|                           | Locality of reference | Reliability and availability  | Performance    | Storage costs | Communication costs           |
+| ------------------------- | --------------------- | ----------------------------- | -------------- | ------------- | ----------------------------- |
+| **Centralised**           | Lowest                | Lowest                        | Unsatisfactory | Lowest        | Highest                       |
+| **Fragmented**            | High                  | Low for item; high for system | Satisfactory   | Lowest        | Low                           |
+| **Complete Replication**  | Highest               | Highest                       | Best for read  | Highest       | High for update, low for read |
+| **Selective Replication** | High                  | Low for item, high for system | Satisfactory   | Average       | Low                           |
 
 Three correctness rules for the partitioned placement
 

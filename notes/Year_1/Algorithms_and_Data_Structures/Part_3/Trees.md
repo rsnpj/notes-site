@@ -528,8 +528,10 @@ To get a good lower bound, design a good adversary
 
 ### Finding max
 
-Goal: find max element in unsorted array\
-In an array of size n, can do this with n-1 comparisons\
+Goal: find max element in unsorted array
+
+In an array of size n, can do this with n-1 comparisons
+
 Same set-up as before: only comparisons are relevant
 
 #### Theorem
@@ -568,7 +570,12 @@ Hence algorithm needs to make at least n-1 comparisons
     Each index i has status NL (never lost) or L (lost)
     When comparing i and j:
 
-    ![Adversaries](/img/Year_1/ADS/Part_3/Trees/adversary.webp)
+    | Status for i,j | Adv reply | newStatus | Info |
+    | -------------- | --------- | --------- | ---- |
+    | N;N            | $a_i>a_j$ | N;L       | 1    |
+    | N;L            | $a_i>a_j$ | No change | 0    |
+    | L;N            | $a_i<a_j$ | No change | 0    |
+    | L;L            | Consist   | No change | 0    |
 
 All the elements but one must lose at least once
 
@@ -602,10 +609,16 @@ Adversary can force $\lceil\log_2 n\rceil$ comparisons involving max
 
 #### Proof
 
-Adversary assigns weight $w_i$ to each input element $a_i$\
+Adversary assigns weight $w_i$ to each input element $a_i$
+
 Initially all $w_i=1$, then update using these rules
 
-![Strategy](/img/Year_1/ADS/Part_3/Trees/strategy.webp)
+| Weights     | Adv Reply  | Update                |
+| ----------- | ---------- | --------------------- |
+| $w_i>w_j$   | $a_i>a_j$  | $w_i=w_i+w_j, w_j =0$ |
+| $w_i<w_j$   | $a_i<a_j$  | $w_j=w_i+w_j, w_i =0$ |
+| $w_i=w_j>0$ | $a_i>a_j$  | $w_i=w_i+w_j, w_j =0$ |
+| $w_i=w_j=0$ | Consistent | No change             |
 
 If the weights are equal and positive then the adversary makes a random
 decision

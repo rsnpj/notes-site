@@ -124,7 +124,18 @@ previous comparisons when we move window to the right
 
 ## Example
 
-![image](/img/Year_1/ADS/Part_4/String_Matching/Example1.webp)
+An example: consider T=aaaaabaaaaa and P=aaaa
+
+1. **aaaa**abaaaaa
+2. a**aaaa**baaaaa
+3. aa**aaab**aaaaa
+4. aaa**aaba**aaaa
+5. aaaa**abaa**aaa
+6. aaaaa**baaa**aa
+7. aaaaab**aaaa**a
+8. aaaaaba**aaaa**
+
+The first mismatch is in line 3, but do we really need to do 4,5 and 6?
 
 # The Rabin-Karp algorithm
 
