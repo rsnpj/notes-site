@@ -28,6 +28,12 @@ Any logic circuit can be constructed from just the 3 operators:
 
 ## NOR Gates
 
+**AND**: $A\cdot B = \overline{(\overline{A+A})+(\overline{B+B})}$
+
+**OR**: $A + B = \overline{(\overline{A+B})+(\overline{A+B})}$
+
+**NOT**: $\overline{A}=\overline{A+A}$
+
 ![image](/img/Year_1/CSys/DEMA/Boolean/NOR.webp)
 
 ## NAND Chips
@@ -125,35 +131,71 @@ A **maxterm** is a sum involving all the inputs to a function.
 
 ## Truth Table to Boolean Equation
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToBool.webp)
+**Sum of products form:**
+
+Every Boolean expression can be written as minterms **ORed together**:
+
+$$
+(A\cdot B \cdot C)+(A\cdot \overline{B} \cdot \overline{C})+(\overline{A}\cdot B \cdot C)
+$$
+
+**Product of sums form:**
+
+Also every boolean expression can be written as maxterms **ANDed together**
+
+$$
+(\overline{A}+\overline{B}+\overline{C})+(\overline{A}+B+C)\cdot(A+B+\overline{C})
+$$
 
 ## Truth Table to SOP (Sum of Products)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToSOP.webp)
+| X     | Y     | Z     | F(X,Y,Z) |
+| ----- | ----- | ----- | -------- |
+| **0** | **0** | **0** | 1        |
+| 0     | 0     | 1     | 0        |
+| 0     | 1     | 0     | 0        |
+| **0** | **1** | **1** | 1        |
+| 1     | 0     | 0     | 0        |
+| **1** | **0** | **1** | 1        |
+| **1** | **1** | **0** | 1        |
+| 1     | 1     | 1     | 0        |
+
+**OR** together the 1 values of the function, to give SOP form
+
+$$
+F(X, Y, Z)=\bar{X} \cdot \bar{Y} \cdot \bar{Z}+\bar{X} \cdot Y \cdot Z+X \cdot \bar{Y} \cdot Z+X \cdot Y \cdot \bar{Z}
+$$
 
 -   The minterms are true only for the combination of inputs
 
--   Note that the diagram above has the wrong row highlighted, make
-    modifications myself.
-
 ## Example
+
+$$
+Y=\bar{A} \bar{B} \bar{C}+A \bar{B} \bar{C}+A \bar{B} C
+$$
 
 ![image](/img/Year_1/CSys/DEMA/Boolean/Example.webp)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Example2)
+This layout can be used for any sum-of-products expression. It is how programmable logic arrays are laid out
 
-## Truth Table to POS
+$$
+Y=\bar{B} \bar{C}+A \bar{B}
+$$
 
-![image](/img/Year_1/CSys/DEMA/Boolean/TruthToPOS.webp)
+![image](/img/Year_1/CSys/DEMA/Boolean/Example2.webp)
 
--   These are specified so that the situation does not come up that you
-    are on a 0 row
+The simplified expression gives the same logical output with much less hardware
 
 ## Boolean Algebra
 
 Two equivalent expression for the same logical formula:
 
-![image](/img/Year_1/CSys/DEMA/Boolean/BoolForm.webp)
+$$
+\begin{array}{l}
+\mathrm{F}(\mathrm{X}, \mathrm{Y}, \mathrm{Z})=(\mathrm{X}+\mathrm{Y}+\overline{\mathrm{Z}})(\mathrm{X}+\overline{\mathrm{Y}}+\mathrm{Z})(\overline{\mathrm{X}}+\mathrm{Y}+\mathrm{Z})(\overline{\mathrm{X}}+\overline{\mathrm{Y}}+\overline{\mathrm{Z}}) \\
+\mathrm{F}(\mathrm{X}, \mathrm{Y}, \mathrm{Z})=\overline{\mathrm{X}} \cdot \overline{\mathrm{Y}} \cdot \overline{\mathrm{Z}}+\overline{\mathrm{X}} \cdot \mathrm{Y} \cdot \mathrm{Z}+\mathrm{X} \cdot \overline{\mathrm{Y}} \cdot \mathrm{Z}+\mathrm{X} \cdot \mathrm{Y} \cdot \overline{\mathrm{Z}}
+\end{array}
+$$
 
 Which is simpler?
 
@@ -164,7 +206,13 @@ equivalent expression that can then be turned into circuitry
 
 # Axioms of Boolean Algebra
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Axioms.webp)
+|     | Axiom                    |     | Dual Axiom       | Name         |
+| --- | ------------------------ | --- | ---------------- | ------------ |
+| A1  | B=0 if $B\neq 1$         | A1' | B=1 if $B\neq 0$ | Binary Field |
+| A2  | $\overline{0}=1$         | A2' | $\overline{1}=0$ | NOT          |
+| A3  | $0\cdot 0=0$             | A3' | 1+1=1            | AND/OR       |
+| A4  | $1\cdot 1=1$             | A4' | 0+0=0            | AND/OR       |
+| A5  | $0\cdot 1 = 1\cdot 0 =0$ | A5' | 1+0-0+1=1        | AND/OR       |
 
 Axioms cannot be proven -- they are defined or assumed.
 
@@ -177,4 +225,17 @@ Each axiom has a dual obtained by interchanging AND and OR, and 0 and 1.
 
 # De Morgans
 
-![image](/img/Year_1/CSys/DEMA/Boolean/DeMorgan.webp)
+Proof of two variable case:
+
+$$
+\overline{A\cdot B}=\overline{A}+\overline{B}
+$$
+
+Proof
+
+| A   | B   | $A\cdot B$ | $\overline{A\cdot B}$ | $\overline{A}$ | $\overline{B}$ | $\overline{A}+\overline{B}$ |
+| --- | --- | ---------- | --------------------- | -------------- | -------------- | --------------------------- |
+| 0   | 0   | 0          | 1                     | 1              | 1              | 1                           |
+| 0   | 1   | 0          | 1                     | 1              | 0              | 1                           |
+| 1   | 0   | 0          | 1                     | 0              | 1              | 1                           |
+| 1   | 1   | 1          | 0                     | 0              | 0              | 0                           |

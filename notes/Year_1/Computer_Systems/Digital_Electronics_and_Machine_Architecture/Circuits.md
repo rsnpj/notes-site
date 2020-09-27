@@ -20,7 +20,27 @@ Sequential circuits:
 
 # Half adder
 
-Based on the simple binary addition rules
+Based on the simple binary addition rules:
+
+-   0 + 0 = 0
+-   0 + 1 = 1
+-   1 + 0 = 1
+-   1 + 1 = 0 (with carry)
+-   Carry + 0 + 0 = 1
+-   Carry + 0 + 1 = 0 with Carry
+-   Carry + 1 + 0 = 0 with Carry
+-   Carry + 1 + 1 = 1 with Carry
+
+**Inputs**: A,B
+
+**Outputs**: Sum, Carry
+
+| A   | B   | Sum | Carry |
+| --- | --- | --- | ----- |
+| 0   | 0   | 0   | 0     |
+| 0   | 1   | 1   | 0     |
+| 1   | 0   | 1   | 0     |
+| 1   | 1   | 0   | 1     |
 
 ![image](/img/Year_1/CSys/DEMA/Circuits/half_adder.webp)
 
@@ -70,6 +90,14 @@ response.
 # Multiplexor
 
 ![image](/img/Year_1/CSys/DEMA/Circuits/multiplexor.webp)
+
+The multiplexor has $k+2^k$ inputs and 1 output
+
+The first k inputs (selector) represent a binary number
+
+The output takes the value of the remaining input indexed by this binary number
+
+Consider many memory locations connected to inputs. Using the selector we can select which is loaded into a register connected to the output
 
 -   This allows us to select between data streams
 

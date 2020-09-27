@@ -82,11 +82,19 @@ With a=0,b=1 and c=1. If b falls to 0, the output will change from 1 to
 
 # Adder
 
+The full adder circuit we have looked at takes 3 gate delays for the carry out to be computed
+
 ![image](/img/Year_1/CSys/DEMA/Timing/adder.webp)
+
+If we can precompute the first level, there are only 2 gate delays once the carry in arrives
 
 # Ripple adder
 
+The computation of the carry bit ripples through the chained adders
+
 ![image](/img/Year_1/CSys/DEMA/Timing/ripple_adder.webp)
+
+A k bit ripple adder will take 3+2(k-1)=2k+1 gate delays to compute C<sub>out</sub>. So a 32 bit adder takes 65 gate delays
 
 -   3 time steps for 1st carry, then 2 time steps for each after that as
     the first level is pre computed
@@ -95,16 +103,41 @@ With a=0,b=1 and c=1. If b falls to 0, the output will change from 1 to
 
 ![image](/img/Year_1/CSys/DEMA/Timing/faster_adders.webp)
 
+**Key idea**: for later bits pre-compute the outcome with both carry in and no carry in, then quickly select the right answer
+
+Faster addition at the expense of more circuitry
+
 -   This uses $c_4$ for the multiplexor and makes large additions much
     faster, at the expense of more circuitry
 
 # Carry-Lookahead Adder
 
-![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead.webp)
+Define two functions
+
+-   **Generate** - G(A,B)=1 if A and B would cause C<sub>out</sub> even if C<sub>in</sub>=0
+-   **Propagate** - P(A,B)=1 if A and B would cause C<sub>out</sub> if C<sub>in</sub>=1
+
+G(A,B)= A AND B
+
+P(A,B) = A OR B
+
+Carry occurs if it is either generated or there is carry in and it is propagated
+
+$$
+C_{out}=G(A,B)+P(A,B)\cdot C_{in}
+$$
 
 ![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead1.webp)
 
-![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead2.webp)
+$$
+C_{\text {out }}=G_{4}+P_{4} G_{3}+P_{4} P_{3} G_{2}+P_{4} P_{3} P_{2} G_{1}+P_{4} P_{3} P_{2} P_{1} \cdot C_{\text {in }}
+$$
+
+We can compute every $P_i$ and $G_i$ in one gate delay
+
+So we can compute C<sub>out</sub> (and all the intermediate carries) in 3 gate delays
+
+We could compute the full sum in 3 gate delays
 
 ![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead3.webp)
 
@@ -118,13 +151,34 @@ With a=0,b=1 and c=1. If b falls to 0, the output will change from 1 to
 
 # More on the carry-lookahead adder
 
+We could create a CLA which adds n-bit numbers in constant gate delay. It would require order $n^2$ gates and gates taking order n inputs. This is impractical for large n
+
+**First solution:** chain 4-bit CLAs
+
 ![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead21.webp)
+
+The carry now ripples along the chain 4 times as fast as originally
 
 # 2 Level Carry-Lookahead Adder
 
+Rather than letting the carry ripple through the CLAs, we can precompute whether it would be generated or propagated by each CLA
+
 ![image](/img/Year_1/CSys/DEMA/Timing/2-level-lookahead.webp)
 
-![image](/img/Year_1/CSys/DEMA/Timing/2-level-lookahead1.webp)
+We now have a 16-bit 2-level CLA
+
+Gate delays:
+
+-   1 gate delay to compute the first level Gs and Ps
+-   2 gate delays to compute the second level Gs and Ps
+-   2 gate delays to compute carries
+-   1 gate delay to compute sums
+
+A standard 16 bit ripple carry adder would take 33 gate delays
+
+These 16 bit adders could be chained to given an n-bit adder with gate delay 2(n/16)+4
+
+Alternately, a 3 (or more) level CLA could be used to create an n-bit adder with delay $\mathcal{O}(\log n)$ and not too much circuitry
 
 # Example
 

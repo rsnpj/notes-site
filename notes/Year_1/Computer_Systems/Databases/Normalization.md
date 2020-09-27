@@ -293,7 +293,12 @@ must more irrelevant data
 
 # Data update anomalies
 
-![image](/img/Year_1/CSys/Databases/Normalization/anomalies.webp)
+| staffNo | sName      | position   | salary | branchNo | bAddress                 |
+| ------- | ---------- | ---------- | ------ | -------- | ------------------------ |
+| SL21    | John White | Manager    | 30000  | B005     | 22 Deer Rd, London       |
+| SG37    | Ann Beech  | Assistant  | 12000  | B003     | **163 Main St, Glasgow** |
+| SG14    | David Ford | Supervisor | 18000  | B003     | **163 Main St, Glasgow** |
+| SA9     | Mary Howe  | Assistant  | 9000   | B008     | 16 Argyll St, Aberdeen   |
 
 -   Modification anomaly:
 
@@ -389,7 +394,7 @@ The fundamentals of normalization theory:
 -   We study the first 3 normal forms which are most important for
     practical applications
 
-![image](/img/Year_1/CSys/Databases/Normal_Forms.webp)
+![image](/img/Year_1/CSys/Databases/Normalization/Normal_Forms.webp)
 
 # First Normal Form (1NF)
 
@@ -438,7 +443,13 @@ How to bring a table into 1NF
     -   enter appropriate data into the empty columns (by repeating
         data)
 
-        ![image](/img/Year_1/CSys/Databases/Normalization/1NF.webp)
+        | Note # | Packer | CoName | CoAddr | Item # | Qty | Part # | Desc   |
+        | ------ | ------ | ------ | ------ | ------ | --- | ------ | ------ |
+        | 300    | JW     | Bloggs | Perth  | 1      | 200 | 1234   | Nuts   |
+        | 300    | JW     | Bloggs | Perth  | 2      | 200 | 2234   | Bolts  |
+        | 300    | JW     | Bloggs | Perth  | 3      | 200 | 3334   | Washer |
+        | 301    | SD     | Smith  | Durham | 1      | 150 | 1234   | Nuts   |
+        | 301    | SD     | Smith  | Durham | 2      | 100 | 3334   | Washer |
 
     -   The resulting table is in 1NF, but still: we introduced a lot of
         redundancy (by repeating data)
@@ -453,6 +464,19 @@ How to bring a table into 1NF
         relation)
 
     -   iterate until no repeated groups remain
+
+        | Note # | Packer | CoName | CoAddr |
+        | ------ | ------ | ------ | ------ |
+        | 300    | JW     | Bloggs | Perth  |
+        | 301    | SD     | Smith  | Durham |
+
+        | Note # | Item # | Qty | Part # | Desc   |
+        | ------ | ------ | --- | ------ | ------ |
+        | 300    | 1      | 200 | 1234   | Nuts   |
+        | 300    | 2      | 200 | 2234   | Bolts  |
+        | 300    | 3      | 200 | 3334   | Washer |
+        | 301    | 1      | 150 | 1234   | Nuts   |
+        | 301    | 2      | 100 | 3334   | Washer |
 
     ![image](/img/Year_1/CSys/Databases/Normalization/1NF1.webp)
 

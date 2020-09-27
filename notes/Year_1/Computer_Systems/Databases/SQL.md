@@ -781,7 +781,11 @@ FROM Branch b LEFT JOIN PropertyForRent p
     ON b.bCity=p.pCity
 ```
 
-![image](/img/Year_1/CSys/Databases/SQL/Left_Outer.webp)
+| branchNo | bCity       | propertyNo | pCity    |
+| -------- | ----------- | ---------- | -------- |
+| B003     | Glasgow     | PG4        | Glasgow  |
+| **B004** | **Bristol** | **NULL**   | **NULL** |
+| B002     | London      | PL94       | London   |
 
 -   Includes the Bristol row of the left table unmatched with rows from
     the right table
@@ -798,7 +802,11 @@ FROM Branch b RIGHT JOIN PropertyForRent p
     ON b.bCity=p.pCity
 ```
 
-![image](/img/Year_1/CSys/Databases/SQL/Right_Outer.pmg)
+| branchNo | bCity    | propertyNo | pCity        |
+| -------- | -------- | ---------- | ------------ |
+| **NULL** | **NULL** | **PA14**   | **Aberdeen** |
+| B003     | Glasgow  | PG4        | Glasgow      |
+| B002     | London   | PL94       | London       |
 
 -   Includes the Aberdeen-row of the right table unmatched with rows
     from the left table
@@ -815,7 +823,12 @@ FROM Branch b FULL JOIN PropertyForRent p
     ON b.bCity=p.pCity
 ```
 
-![image](/img/Year_1/CSys/Databases/SQL/Full.webp)
+| branchNo | bCity       | propertyNo | pCity        |
+| -------- | ----------- | ---------- | ------------ |
+| **NULL** | **NULL**    | **PA14**   | **Aberdeen** |
+| B003     | Glasgow     | PG4        | Glasgow      |
+| **B004** | **Bristol** | **NULL**   | **NULL**     |
+| B002     | London      | PL94       | London       |
 
 # Database Updates
 
@@ -825,23 +838,23 @@ in the database
 -   `INSERT`: adds new rows of data into the table
 
     ```sql
-                INSERT INTO TableName [columnList]
-                VALUES (data ValueList)
+    INSERT INTO TableName [columnList]
+    VALUES (data ValueList)
     ```
 
 -   `UPDATE`: Modifies existing data in a table
 
     ```sql
-                UPDATE TableName
-                SET columnName1=dataValue1[,columnName2=dataValue2]
-                [WHERE searchCondition]
+    UPDATE TableName
+    SET columnName1=dataValue1[,columnName2=dataValue2]
+    [WHERE searchCondition]
     ```
 
 -   `DELETE`: Removes rows of data from a table
 
     ```sql
-                DELETE FROM TableName
-                [WHERE searchCondition]
+    DELETE FROM TableName
+    [WHERE searchCondition]
     ```
 
 # Data Definition Language Overview
