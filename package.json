@@ -34,6 +34,7 @@
 		"unist-util-visit": "^2.0.3"
 	},
 	"devDependencies": {
+		"@next/bundle-analyzer": "^9.5.3",
 		"@tailwindcss/custom-forms": "^0.2.1",
 		"eslint": "^7.10.0",
 		"eslint-plugin-react": "^7.21.2",
