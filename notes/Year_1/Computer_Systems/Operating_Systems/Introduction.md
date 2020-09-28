@@ -96,7 +96,15 @@ As a process executes, it changes state:
 - Terminated - The process has completed its execution, or some other
   event causing termination
 
-![image](/img/Year_1/CSys/Operating_Systems/Introduction/state.jpg)
+```mermaid
+stateDiagram
+    Ready --> Running : Scheduler dispatch
+    Running --> Ready :Interrupt
+    Running --> Waiting: I/O or wait event
+    Waiting --> Ready : I/O or event completion
+    New --> Ready : Admitted
+    Running --> Terminated : Exit
+```
 
 # Process Creation
 

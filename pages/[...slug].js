@@ -19,6 +19,8 @@ import {
 } from "@/components/mdx/admonitions";
 import MyImg from "@/components/mdx/image";
 import MyTable from "@/components/mdx/table";
+import MyCode from "@/components/mdx/code";
+import MyPre from "@/components/mdx/pre";
 import slug from "remark-slug";
 import remarkSmartypants from "@/lib/remarkSmartypants";
 import math from "@/lib/remark-math";
@@ -27,6 +29,8 @@ import Footer from "@/components/footer";
 const components = {
 	table: MyTable,
 	img: MyImg,
+	code: MyCode,
+	pre: MyPre,
 	Definition,
 	Important,
 	Theorem,
@@ -73,6 +77,7 @@ function Lecture({
 			import("../lib/rendermath").then((renderMath) => {
 				renderMath.default();
 			});
+			mermaid.init(undefined, ".mermaid");
 		}
 	}, [content]);
 
@@ -233,7 +238,7 @@ export async function getStaticProps({ params }) {
 		components: components,
 		mdxOptions: {
 			remarkPlugins: [slug, math, remarkSmartypants],
-			rehypePlugins: [highlightCode],
+			rehypePlugins: [[highlightCode, { ignoreMissing: true }]],
 		},
 	});
 	const tree = getTree();
