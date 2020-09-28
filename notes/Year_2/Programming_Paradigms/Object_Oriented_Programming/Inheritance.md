@@ -34,6 +34,31 @@ public class CD extends Item
 }
 ```
 
+```mermaid
+classDiagram
+    Item <|-- CD
+    Item <|-- DVD
+    Item : title
+    Item : playingTime
+    Item: gotIt
+    Item: comment
+    Item: setComment()
+    Item: getComment()
+    Item: SetOwn()
+    Item : GetOwn()
+    Item : Print()
+    class CD{
+      artist
+      numberOfTracks
+      getArtist()
+      getNumberOfTracks()
+    }
+    class DVD{
+      director
+      getDirector()
+    }
+```
+
 # Superclass constructor call
 
 -   Subclass constructors must always contain a "super" call

@@ -97,7 +97,17 @@ mov reg2, addr_b; write reg2 to address of b
 -   The Haskell distribution we will use has both Compiler and
     Interpreter mode
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Introduction/Compiler.webp)
+```mermaid
+graph TD
+    Algorithm --> C1[Compiler]
+    Algorithm --> C2[Compiler]
+    Algorithm --> I1[Interpreter]
+    C1 --> MC1[Machine Code]
+    C2 --> | To be done once | IC[Intermediate Code]
+    IC -->|Given to customer| I2[Interpreter]
+    I2 --> MC2[Machine Code]
+    I1 --> MC3[Machine Code]
+```
 
 -   Micro-architecture just reads an instruction stream
 
