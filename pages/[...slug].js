@@ -22,9 +22,7 @@ import MyTable from "@/components/mdx/table";
 import slug from "remark-slug";
 import remarkSmartypants from "@/lib/remarkSmartypants";
 import math from "@/lib/remark-math";
-import emoji from "remark-emoji";
 import highlightCode from "@mapbox/rehype-prism";
-import renderMath from "@/lib/rendermath";
 import Footer from "@/components/footer";
 const components = {
 	table: MyTable,
@@ -71,7 +69,11 @@ function Lecture({
 	}, []);
 
 	useEffect(() => {
-		renderMath();
+		if (postData.contentHtml !== undefined) {
+			import("../lib/rendermath").then((renderMath) => {
+				renderMath.default();
+			});
+		}
 	}, [content]);
 
 	const handleClickOutside = (e) => {
@@ -230,7 +232,7 @@ export async function getStaticProps({ params }) {
 	const source = await renderToString(postData.contentHtml, {
 		components: components,
 		mdxOptions: {
-			remarkPlugins: [slug, emoji, math, remarkSmartypants],
+			remarkPlugins: [slug, math, remarkSmartypants],
 			rehypePlugins: [highlightCode],
 		},
 	});
