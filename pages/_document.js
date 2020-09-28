@@ -35,7 +35,7 @@ class MyDocument extends Document {
 				</Head>
 				<body>
 					<Main />
-					<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+
 					<NextScript />
 				</body>
 			</Html>

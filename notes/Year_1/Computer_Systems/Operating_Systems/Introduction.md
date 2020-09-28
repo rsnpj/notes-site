@@ -1,6 +1,7 @@
 ---
 title: Introduction to Operating Systems
 lecturer: Barnaby
+mermaid: true
 ---
 
 ## Definition
@@ -9,25 +10,25 @@ A program that acts as an intermediary between a user and the hardware
 
 ## Goals
 
-- Execute user programs
+-   Execute user programs
 
-- Make solving user programs easier
+-   Make solving user programs easier
 
-- Make the computer system convenient to use
+-   Make the computer system convenient to use
 
-- Use the resources of the systems fairly and efficiently
+-   Use the resources of the systems fairly and efficiently
 
 ## Components
 
 An operating system is a:
 
-- **Resource allocator**: Responsible for the management of the
-  computer system resources
+-   **Resource allocator**: Responsible for the management of the
+    computer system resources
 
-- **Control Program**: Controls the execution of user programs and
-  operation of the I/O devices
+-   **Control Program**: Controls the execution of user programs and
+    operation of the I/O devices
 
-- **Kernel**: The one program that runs all the time
+-   **Kernel**: The one program that runs all the time
 
 A process is a unit of execution; an abstraction that is used to support
 the discussion and study of operating systems
@@ -43,58 +44,58 @@ collection of instructions that carry out a reasonable task.
 
 The operating system is responsible for process management including:
 
-- Process creation and deletion
+-   Process creation and deletion
 
-- Process holding and resuming
+-   Process holding and resuming
 
-- Mechanisms for process synchronization
+-   Mechanisms for process synchronization
 
 # The process concept
 
 A process includes:
 
-- Code: text section
+-   Code: text section
 
-- Current activity, represented by the program counter and the content
-  of the CPU's registers
+-   Current activity, represented by the program counter and the content
+    of the CPU's registers
 
-- Data stack: Temporary data such as local variables
+-   Data stack: Temporary data such as local variables
 
-- Data section: Global variables
+-   Data section: Global variables
 
-- Heap: Memory allocated while the process is running
+-   Heap: Memory allocated while the process is running
 
 # Process Control Block
 
 Information about each process is represented by a process control block
 (PCB) including
 
-- Unique identifier
+-   Unique identifier
 
-- State
+-   State
 
-- CPU Utilisation
+-   CPU Utilisation
 
-- CPU scheduling information
+-   CPU scheduling information
 
-- Memory usage
+-   Memory usage
 
-- Other information
+-   Other information
 
 # Process state
 
 As a process executes, it changes state:
 
-- New - The process is being created
+-   New - The process is being created
 
-- Running - instructions are being executed
+-   Running - instructions are being executed
 
-- Waiting - The process is waiting for some event to occur
+-   Waiting - The process is waiting for some event to occur
 
-- Ready - The process is ready to be dispatched to the CPU
+-   Ready - The process is ready to be dispatched to the CPU
 
-- Terminated - The process has completed its execution, or some other
-  event causing termination
+-   Terminated - The process has completed its execution, or some other
+    event causing termination
 
 ```mermaid
 stateDiagram
@@ -114,34 +115,34 @@ processes.
 
 Resource sharing: three possible cases:
 
-- The parent and child processes share all resources
+-   The parent and child processes share all resources
 
-- The child process shares a subset of the parent's resources
+-   The child process shares a subset of the parent's resources
 
-- The parent and child process share no resources
+-   The parent and child process share no resources
 
 Execution: two possible cases:
 
-- The parent and child execute concurrently
+-   The parent and child execute concurrently
 
-- The parent waits until the child terminates
+-   The parent waits until the child terminates
 
 # Process Termination
 
 The process executes its last statement and asks the operating system to
 delete it:
 
-- Outputs the data from the child's process to parent
+-   Outputs the data from the child's process to parent
 
-- The child process's resources are de-allocated by operating system
+-   The child process's resources are de-allocated by operating system
 
 The parent process may terminate execution of the child processes if:
 
-- The child process has exceeded its allocated resources
+-   The child process has exceeded its allocated resources
 
-- The task assigned to child is no longer required
+-   The task assigned to child is no longer required
 
-- The parent itself is terminating (cascade termination)
+-   The parent itself is terminating (cascade termination)
 
 # The Kernel
 
@@ -149,21 +150,21 @@ The parent process may terminate execution of the child processes if:
 
 Four essential components:
 
-- Privileged instruction set
+-   Privileged instruction set
 
-- Interrupt mechanism
+-   Interrupt mechanism
 
-- Memory protection
+-   Memory protection
 
-- Real time clock
+-   Real time clock
 
 The kernel consists of:
 
-- The first-level interrupt handler: to manage interrupts
+-   The first-level interrupt handler: to manage interrupts
 
-- The dispatcher: to switch the CPU between processes
+-   The dispatcher: to switch the CPU between processes
 
-- Intra operating system communications
+-   Intra operating system communications
 
 # Interrupts
 
@@ -172,11 +173,11 @@ The kernel consists of:
 An interrupt is a signal from either hardware or software of an event
 that will cause a change of process, for example:
 
-- **Hardware**: Triggers an interrupt by sending a signal to the CPU
-  via the system bus e.g. I/O event
+-   **Hardware**: Triggers an interrupt by sending a signal to the CPU
+    via the system bus e.g. I/O event
 
-- **Software**: Triggers an interrupt by sending a system call for
-  some action by the operating system
+-   **Software**: Triggers an interrupt by sending a system call for
+    some action by the operating system
 
 **Interrupt Routines**: OS routines that execute whenever an interrupt
 occurs
@@ -185,10 +186,10 @@ occurs
 
 The function of the FLIH is to:
 
-- Determine the source of the interrupt (prioritise)
+-   Determine the source of the interrupt (prioritise)
 
-- Initiate servicing of the interrupt (selection of suitable process
-  of the dispatcher)
+-   Initiate servicing of the interrupt (selection of suitable process
+    of the dispatcher)
 
 # Privileged instructions
 
@@ -197,11 +198,11 @@ Some instructions must be accessible only to the operating system:
 
 Privileged instructions include functions such as:
 
-- Managing interrupts
+-   Managing interrupts
 
-- Performing I/O
+-   Performing I/O
 
-- Halting a process
+-   Halting a process
 
 # Dual mode
 
@@ -211,37 +212,37 @@ could cause harm.
 
 Two modes:
 
-- User mode
+-   User mode
 
-- Kernel mode
+-   Kernel mode
 
 # Privileged Instructions
 
 Switching from user mode to kernel mode occurs when:
 
-- A user process calls on the operating system to execute a function
-  needing a privileged instruction
+-   A user process calls on the operating system to execute a function
+    needing a privileged instruction
 
-- An interrupt occurs
+-   An interrupt occurs
 
-- An error condition occurs in the user process
+-   An error condition occurs in the user process
 
-- An attempt is made to execute a privileged instruction while in user
-  mode
+-   An attempt is made to execute a privileged instruction while in user
+    mode
 
 # The dispatcher
 
-- Assigns processing resources for processes
+-   Assigns processing resources for processes
 
-- Is later initiated when
+-   Is later initiated when
 
-  - A current process cannot continue
+    -   A current process cannot continue
 
-  - The CPU may be better used elsewhere, for instance:
+    -   The CPU may be better used elsewhere, for instance:
 
-    - After an interrupt changes a process state
+        -   After an interrupt changes a process state
 
-    - After a system call which results in the current process not
-      being able to continue
+        -   After a system call which results in the current process not
+            being able to continue
 
-    - After an error which causes a process to suspend
+        -   After an error which causes a process to suspend

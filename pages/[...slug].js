@@ -77,7 +77,9 @@ function Lecture({
 			import("../lib/rendermath").then((renderMath) => {
 				renderMath.default();
 			});
-			mermaid.init(undefined, ".mermaid");
+			if (postData.mermaid) {
+				mermaid.init(undefined, ".mermaid");
+			}
 		}
 	}, [content]);
 
@@ -118,6 +120,9 @@ function Lecture({
 					content="Notes from my course at Durham University"
 				/>
 			</Head>
+			{postData.mermaid && (
+				<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+			)}
 			<NavBar toggleFunction={toggleSidebar} ref={node2} />
 			<div className="flex">
 				<Sidebar

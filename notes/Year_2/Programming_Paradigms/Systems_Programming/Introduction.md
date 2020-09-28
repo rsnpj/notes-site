@@ -1,6 +1,7 @@
 ---
 title: Introduction to C
 lecturer: Konrad
+mermaid: true
 ---
 
 # Key topics for sub-module
@@ -229,7 +230,6 @@ graph TD
     E --> G[Executable Code]
 ```
 
-
 # `gcc` Options
 
 -   When compiling on Linux, use `gcc`
@@ -253,7 +253,6 @@ graph TD
     A[Source Code] -->B(Pre-Processor)
     B --> C[Source Code]
 ```
-
 
 -   Directives such as `#define` and `#include` are handled by the
     _pre-processor_, a piece of software that edits C programs just
@@ -427,7 +426,6 @@ graph TD
     F[External Libraries] --> E
     E --> G[Executable Code]
 ```
-
 
 -   The linker’s job is to combine all the files needed to form the
     executable
