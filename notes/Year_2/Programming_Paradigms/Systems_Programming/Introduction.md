@@ -219,7 +219,16 @@ int main()
 
 # Compilation Model
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Introduction/Compilation.webp)
+```mermaid
+graph TD
+    A[Source Code] -->B(Pre-Processor)
+    B -->|Source Code| C[Compiler]
+    C --> |Assembly code| D[Assembler]
+    D --> |Object Code| E[Linker]
+    F[External Libraries] --> E
+    E --> G[Executable Code]
+```
+
 
 # `gcc` Options
 
@@ -239,7 +248,12 @@ int main()
 
 # The C Preprocessor
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Introduction/Preprocessor.webp)
+```mermaid
+graph TD
+    A[Source Code] -->B(Pre-Processor)
+    B --> C[Source Code]
+```
+
 
 -   Directives such as `#define` and `#include` are handled by the
     _pre-processor_, a piece of software that edits C programs just
@@ -407,7 +421,13 @@ _replacement-list_
 
 # The link editor (linker)
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Introduction/Linker.webp)
+```mermaid
+graph TD
+    D[Object Code] -->  E[Linker]
+    F[External Libraries] --> E
+    E --> G[Executable Code]
+```
+
 
 -   The linker’s job is to combine all the files needed to form the
     executable
