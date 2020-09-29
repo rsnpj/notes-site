@@ -233,7 +233,18 @@ A rooted tree is a tree in which one vertex is fixed as the root(vertex)
 We usually draw a rooted tree in (horizontal) levels, starting with the
 root (level 0), then the neighbours of the root (level 1), etc
 
-![image](/img/Year_1/MCS/DMLA/Cycles+Trees/root.webp)
+```graphviz
+digraph D {
+8 -> 3
+8 -> 10
+3 -> 1
+3-> 6
+6->4
+6->7
+10->14
+14->13
+}
+```
 
 ## Rooted trees, children and parents
 

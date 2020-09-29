@@ -1,5 +1,5 @@
 export default function MyPre(props) {
-	if (props.className === "language-mermaid") {
+	if (["language-mermaid", "language-graphviz"].includes(props.className)) {
 		return <div className="overflow-x-auto">{props.children}</div>;
 	} else {
 		return <pre {...props} />;
