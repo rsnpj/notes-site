@@ -1,7 +1,6 @@
 ---
 title: Introduction to C
 lecturer: Konrad
-mermaid: true
 ---
 
 # Key topics for sub-module

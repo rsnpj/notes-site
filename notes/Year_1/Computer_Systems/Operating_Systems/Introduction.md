@@ -1,7 +1,6 @@
 ---
 title: Introduction to Operating Systems
 lecturer: Barnaby
-mermaid: true
 ---
 
 ## Definition

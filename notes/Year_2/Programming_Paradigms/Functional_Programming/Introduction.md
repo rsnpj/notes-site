@@ -1,7 +1,6 @@
 ---
 title: Introduction
 lecturer: Lawrence
-mermaid: true
 ---
 
 # Computing n!
