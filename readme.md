@@ -4,6 +4,12 @@ This is a site for my university notes, written in MDX
 
 You can find the markdown for all the lectures in the `notes` directory, and all the images in the `public` directory. When adding styles you can use [Tailwind CSS](https://tailwindcss.com/).
 
+## Diagrams
+
+You can add diagrams using [mermaidjs](https://mermaid-js.github.io/mermaid/#/) and [graphviz](https://www.graphviz.org/). I also can easily add any of the diagram types from [kroki](https://kroki.io/), so raise an issue if you want to use one of them.
+
+To use them, simply create a codeblock with the language of `mermaid` and `graphviz` respectively and write the diagram and it will be imported
+
 
 ## Workarounds
 
