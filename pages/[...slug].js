@@ -190,7 +190,12 @@ function Lecture({
 								<div className="flex justify-center pt-4">
 									<ul className="divide-y-4 divide-transparent">
 										{list.children.map((x) => (
-											<li>
+											<li
+												key={x.name.replace(
+													/\.[^/.]+$/,
+													""
+												)}
+											>
 												<Link
 													href={
 														"/" +
