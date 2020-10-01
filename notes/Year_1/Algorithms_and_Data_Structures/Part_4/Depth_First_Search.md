@@ -19,7 +19,7 @@ lecturer: Matthew
 
 # Example
 
-![image](/img/Year_1/ADS/Part_4/DFS/Example.webp)
+![Example-DFS](/img/Year_1/ADS/Part_4/DFS/Example.webp)
 
 -   Initialize: source vertex grey, others white, source discovered at
     time 1
@@ -81,7 +81,7 @@ The edges used for discovering new vertices from the depth first tree
 
 # Example
 
-![image](/img/Year_1/ADS/Part_4/DFS/Example1.webp)
+![DFS on a graph](/img/Year_1/ADS/Part_4/DFS/Example1.webp)
 
 Once we have run DFS on a graph we can construct the predecessor
 subgraph. This has the same vertex set as the graph, and for each vertex
@@ -105,7 +105,7 @@ edges of G
 
 # Example
 
-![image](/img/Year_1/ADS/Part_4/DFS/Example2.webp)
+![Edges classification](/img/Year_1/ADS/Part_4/DFS/Example2.webp)
 
 # Classification of the edges
 
@@ -122,7 +122,7 @@ In an undirected graph, every edge is a tree edge or a back edge
 
 # Using DFS
 
-![image](/img/Year_1/ADS/Part_4/DFS/Using_DFS.webp)
+![Theorem using DFS](/img/Year_1/ADS/Part_4/DFS/Using_DFS.webp)
 
 -   Every edge in an undirected graph is either a tree edge or a black
     edge

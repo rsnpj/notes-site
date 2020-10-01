@@ -5,7 +5,7 @@ lecturer: Lei
 
 # Generalisation
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Generalisation/Generalisation.webp)
+![Generalisation](/img/Year_2/Software_Methodologies/Machine_Learning/Generalisation/Generalisation.webp)
 
 -   Goal - to predict well on new data drawn from (hidden) true
     distribution

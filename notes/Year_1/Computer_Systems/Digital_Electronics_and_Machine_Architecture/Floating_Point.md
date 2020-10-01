@@ -28,7 +28,7 @@ Single precision (32 bit) floating point numbers have:
 
 -   23 bit mantissa
 
-![image](/img/Year_1/CSys/DEMA/Floating_Point/float.webp)
+![Float diagram](/img/Year_1/CSys/DEMA/Floating_Point/float.webp)
 
 ## The sign bit, S
 
@@ -67,7 +67,7 @@ We only store 23 bits of the fractional part
 
 ## Example
 
-![image](/img/Year_1/CSys/DEMA/Floating_Point/float.webp)
+![Float diagram](/img/Year_1/CSys/DEMA/Floating_Point/float.webp)
 
 -   Sign 0 - a positive number
 

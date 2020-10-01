@@ -31,14 +31,14 @@ visible
 
 **Object appearance** - Modify or preserve object shape properties
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Projection_Transform.webp)
+![Projection Transform](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Projection_Transform.webp)
 
 # Define a view frustum
 
 Projection transform is done based on a view frustum and it is defined
 by six planes (near, far, top, bottom, right and left)
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/View_Frustum.webp)
+![view frustum](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/View_Frustum.webp)
 
 The frustum determines which objects or proportion of objects will be clipped out and discarded
 
@@ -51,7 +51,7 @@ The frustum determines which objects or proportion of objects will be clipped ou
     frustum will determine an orthographic projection. Otherwise, it
     will be a perspective projection
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Frustum_Shape.webp)
+![Frustum Shape](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Frustum_Shape.webp)
 
 The extent and shape of the frustum determines how much of the 3D view space is mapped to the screen and the type of 3D to 2D projection that takes place
 
@@ -60,14 +60,14 @@ The extent and shape of the frustum determines how much of the 3D view space is 
 Map projected view to the available space in the computer screen, i.e.
 viewport, typically referring to the canvas
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Viewport_Transform.webp)
+![Viewport Transform](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Viewport_Transform.webp)
 
 **NDC** - Normalized Device Coordinates. Its x and y coordinates
 represent the location of your vertices on a normalised 2D screen space
 
 # Model-View-Projection Transformation
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Model-View-Projection_Transformation.webp)
+![Model-View-Projection Transformation](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Model-View-Projection_Transformation.webp)
 
 # Scene Graph
 

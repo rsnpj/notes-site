@@ -43,7 +43,7 @@ CORBA
 -   Provides data persistence, if server goes down, when it comes back
     up it will send the info again
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/MOM.webp)
+![Message-Oriented Middleware (MOM)](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/MOM.webp)
 
 ## Properties of MOM
 
@@ -111,7 +111,7 @@ Service Discovery
 -   Universal Description Discovery and Integration (UDDI) - directory
     with web service description in WSDL
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/Web_Services.webp)
+![Web services](/img/Year_2/Networks_and_Systems/Distributed_Systems/Web/Web_Services.webp)
 
 ## Attributed of Web-Services
 

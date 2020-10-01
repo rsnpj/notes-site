@@ -69,7 +69,7 @@ Risks affecting the quality or performance of the software being developed
 Risks affecting the organisation developing or procuring the software
 </Definition>
 
-![image](/img/Year_2/Software_Engineering/Risks/risk_management.webp)
+![Risk management](/img/Year_2/Software_Engineering/Risks/risk_management.webp)
 
 # Risk identification
 

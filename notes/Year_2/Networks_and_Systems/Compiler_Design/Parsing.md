@@ -45,11 +45,11 @@ Derivation of a string s in grammar:
 
 Grammar:
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.webp)
+![Grammer](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.webp)
 
 Considering the string $(x+y)\times x$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Derivation.webp)
+![Derivation](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Derivation.webp)
 
 Leftmost derivation - at each stage replace the leftmost non-terminal
 using a production rule
@@ -78,7 +78,7 @@ For well formed strings of tokens (programs):
 -   The parse tree is passed to the next phase of the compiler (semantic
     analysis)
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/process.webp)
+![Parsing process](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/process.webp)
 
 In the parse tree:
 
@@ -108,7 +108,7 @@ Two main methods for constructing a parse tree:
 
 So creating a parse tree from the previous example looks like this
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Parse_Tree.webp)
+![Parse Tree](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Parse_Tree.webp)
 
 # Ambiguity
 
@@ -148,14 +148,14 @@ Example of disambiguating rules:
 
 The dangling else grammar
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/dangling_else.webp)
+![dangling else grammar](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/dangling_else.webp)
 
 Problem - when we read from left to right, which else matches with which
 else
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else1.webp)
+![Problem when we read from left to right](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else1.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else2.webp)
+![Problem when we read from left to right](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/else2.webp)
 
 Most languages prefer the first tree - match each else with the closest
 unmatched then
@@ -199,7 +199,7 @@ Abstract syntax tree:
 
 -   Every internal node represents an operation and no a non-terminal
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/AST.webp)
+![Abstract syntax tree](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/AST.webp)
 
 We can add annotations (or attributes) to the nodes of each tree
 

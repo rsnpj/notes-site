@@ -41,12 +41,12 @@ image. Quantisation must avoid aliasing
 
 As resolution is limited, there is aliasing effects.
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing.webp)
+![Aliasing](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing.webp)
 
 An analogue signal will always suffer some form of aliasing in the
 digitisation process - at some level
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing1.webp)
+![Aliasing fig 2](/img/Year_2/Software_Methodologies/Image_Processing/Introduction/Aliasing1.webp)
 
 Aliasing effects both the connectivity and topological measurement image
 features - noise is introduced. Image processing algorithms must be able

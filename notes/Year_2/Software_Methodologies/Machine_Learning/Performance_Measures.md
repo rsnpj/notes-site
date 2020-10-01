@@ -7,9 +7,9 @@ lecturer: Lei
 
 How well did we capture the + group for the given threshold
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R.webp)
+![Precision and Recall](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R.webp)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R1.webp)
+![Precision and Recall fig 2](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R1.webp)
 
 Precision:
 
@@ -17,7 +17,7 @@ $$
 \dfrac{tp}{tp+fp}>1$$ Recall (Sensitivity)
 $$
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R2.webp)
+![Precision and Recall fig 2](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/P+R2.webp)
 
 ## ROC Curve
 
@@ -27,9 +27,9 @@ $$
 \dfrac{tp}{tp+fn}$$ Specificity
 $$
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC)
+![ROC Curve](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC1)
+![ROC Curve fig2 ](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC1)
 
 # Gains and Lift
 
@@ -41,7 +41,7 @@ $$
 
 Support (% pop)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/G+L.webp)
+![Gains and Lift](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/G+L.webp)
 
 Base rate
 

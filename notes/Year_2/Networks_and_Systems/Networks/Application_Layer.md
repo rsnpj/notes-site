@@ -101,7 +101,7 @@ A software mechanism that allows a process to create and send messages into, and
 -   Sending process relies on transport infrastructure on the other side
     of the door to deliver message to a socket at the receiving process
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/sockets.webp)
+![Sockets](/img/Year_2/Networks_and_Systems/Networks/Application/sockets.webp)
 
 # What transport service does an app need?
 
@@ -197,9 +197,9 @@ Persistent HTTP
 
 ## Non-persistent HTTP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP.webp)
+![Non-persistent HTTP](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP2.webp)
+![Non-persistent HTTP](/img/Year_2/Networks_and_Systems/Networks/Application/HTTP2.webp)
 
 ### Response Time
 
@@ -219,7 +219,7 @@ HTTP Response time:
 -   Non-persistent HTTP response time = 2RTT + file transmission time\
     Incurred for each file
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/RTT.webp)
+![Response Time](/img/Year_2/Networks_and_Systems/Networks/Application/RTT.webp)
 
 ## Persistent HTTP
 
@@ -281,7 +281,7 @@ Application example:
 
 ### Client/server socket interaction: UDP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/UDP.webp)
+![UDP](/img/Year_2/Networks_and_Systems/Networks/Application/UDP.webp)
 
 ### Example app: UDP client
 
@@ -355,7 +355,7 @@ Application viewpoint:
 
 ## Client/server socket interaction: TCP
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Application/TCP.webp)
+![TCP](/img/Year_2/Networks_and_Systems/Networks/Application/TCP.webp)
 
 ## Example app: TCP Client
 

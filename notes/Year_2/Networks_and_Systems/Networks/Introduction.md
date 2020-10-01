@@ -10,7 +10,7 @@ another in order to exchange information or share resources
 
 # Overview
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Introduction/Overview.webp)
+![Computer Network overview](/img/Year_2/Networks_and_Systems/Networks/Introduction/Overview.webp)
 
 -   **Hosts** - End systems
 -   **Communication links** - Fiber, copper, radio, satellite
@@ -42,7 +42,7 @@ Asymmetric so much faster download than upload
 
 ## Cable network
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Introduction/Cable.webp)
+![Cable network](/img/Year_2/Networks_and_Systems/Networks/Introduction/Cable.webp)
 
 HFC - hybrid fiber coax
 
@@ -58,11 +58,11 @@ CMTS translates signal between the coaxial cable and the ISP
 
 ## Ethernet (Enterprise access networks)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Introduction/Ethernet.webp)
+![Ethernet](/img/Year_2/Networks_and_Systems/Networks/Introduction/Ethernet.webp)
 
 ## Home network
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Introduction/Home_Network.webp)
+![Home network](/img/Year_2/Networks_and_Systems/Networks/Introduction/Home_Network.webp)
 
 # Wireless Access Networks
 

@@ -33,7 +33,7 @@ Requirements:
 
 # System Model - Replication
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/System_Model.webp)
+![System Model - Replication](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/System_Model.webp)
 
 Replicas:
 
@@ -116,7 +116,7 @@ Front End (FE)
 
 ## Passive (Primary-Backup) model for fault tolerance
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/Passive_Fault_Tolerance.webp)
+![Passive fault tolerance](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/Passive_Fault_Tolerance.webp)
 
 -   There is at any time a single primary R and one or more secondary
     (backup, slave) Rs
@@ -189,7 +189,7 @@ Front End (FE)
 -   If an R crashes it has no effect on performance of the service
     because the others continue as normal
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/Active_Replication.webp)
+![Active replication](/img/Year_2/Networks_and_Systems/Distributed_Systems/Replication/Active_Replication.webp)
 
 Steps for client request
 

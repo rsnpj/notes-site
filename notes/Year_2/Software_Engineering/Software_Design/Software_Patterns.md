@@ -111,7 +111,7 @@ describes how part or all of a design solution is organised
 -   **Idioms** - Language specific forms used in object oriented
     programming, and provide a low-level type of pattern
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Pattern/abstraction.webp)
+![abstraction](/img/Year_2/Software_Engineering/Software_Design/Pattern/abstraction.webp)
 
 ## Architectural patterns
 
@@ -140,7 +140,7 @@ information about changes to controllers.
 
 Structuring a system in this way makes it easy to change the interface
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Pattern/MVC.webp)
+![MVC](/img/Year_2/Software_Engineering/Software_Design/Pattern/MVC.webp)
 
 # Patterns vs Styles
 

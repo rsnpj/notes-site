@@ -481,7 +481,7 @@ So $\varphi$ is the $\lor$ of all of these
 
 # A spot of practice
 
-![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.webp)
+![A spot of practice](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.webp)
 
 # Converting to c.n.f syntactically
 
@@ -489,7 +489,7 @@ So $\varphi$ is the $\lor$ of all of these
 
 -   Consider the formula
 
-    ![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.webp)
+    ![Converting to c.n.f syntactically](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.webp)
 
 -   In the "semantic" approach, i.e., using truth tables we are stuck
     with using exponentially sized truth tables

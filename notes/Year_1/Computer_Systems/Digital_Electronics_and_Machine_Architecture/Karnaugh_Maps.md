@@ -11,7 +11,7 @@ Key to simplifying is spotting terms of the form $PA+P\overline{A}$
 **Karnaugh Maps** are a graphical way of representing equations to make
 spotting these terms easier
 
-![image](/img/Year_1/CSys/DEMA/Karnaugh/karnaughex.webp)
+![Karnaugh map steps](/img/Year_1/CSys/DEMA/Karnaugh/karnaughex.webp)
 
 Each cell represents a minterm, and has a 0 or 1 depending on the value
 of Y corresponding to that minterm. SoP form is given by the 1s
@@ -22,7 +22,7 @@ this is why they are not in numerical order
 
 Terms of the form $PA+P\overline{A}$ are neighbouring 1s in the K-map
 
-![image](/img/Year_1/CSys/DEMA/Karnaugh/kmap1.webp)
+![K-map ](/img/Year_1/CSys/DEMA/Karnaugh/kmap1.webp)
 
 Rather than filling out the full SoP by taking every 1 as a term, we
 circle the neighbouring 1s, and use a single reduced implicant for both

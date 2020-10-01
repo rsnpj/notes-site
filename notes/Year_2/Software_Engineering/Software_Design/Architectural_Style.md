@@ -34,7 +34,7 @@ Main program/sub-programs:
 This is the form that is embodied in most non-OO imperative programming
 languages
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Style/Call_and_Return.webp)
+![Call and return example](/img/Year_2/Software_Engineering/Software_Design/Style/Call_and_Return.webp)
 
 ## Example 2
 
@@ -47,7 +47,7 @@ Classical objects - here the methods are part of the objects:
 Supported by object-based and object-oriented programming languages. May
 use run-time bindings
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Style/Call_and_Return1.webp)
+![Call and return example 2](/img/Year_2/Software_Engineering/Software_Design/Style/Call_and_Return1.webp)
 
 # Interacting Processes
 
@@ -83,7 +83,7 @@ Binding time can be at each construction or when the system is started.
 Each system runs in its own address space - no direct access to shared
 data
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Style/Communicating_Processes.webp)
+![Communicating processes](/img/Year_2/Software_Engineering/Software_Design/Style/Communicating_Processes.webp)
 
 ## Lightweight processes (threads)
 
@@ -97,7 +97,7 @@ threads within the program
 Because threads are part of a single process, they have a shared data
 space, needing care with synchronisation of access
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Style/Threads.webp)
+![Lightweight processes](/img/Year_2/Software_Engineering/Software_Design/Style/Threads.webp)
 
 # Data-Centred Repository
 
@@ -129,7 +129,7 @@ The classical idea of the data-centred repository
 Style is not concerned with the internal form of the database, only with
 its role
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Style/Transactional_Database.webp)
+![Transactional Database](/img/Year_2/Software_Engineering/Software_Design/Style/Transactional_Database.webp)
 
 ## Client-Server
 

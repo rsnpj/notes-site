@@ -69,15 +69,15 @@ Defining how the software process should be enacted
 
 ## Structure
 
-![image](/img/Year_2/Software_Engineering/Standards/SC7.webp)
+![ISO SC7 structure](/img/Year_2/Software_Engineering/Standards/SC7.webp)
 
 ## Domains
 
-![image](/img/Year_2/Software_Engineering/Standards/Domains.webp)
+![Domains](/img/Year_2/Software_Engineering/Standards/Domains.webp)
 
 ## Standards
 
-![image](/img/Year_2/Software_Engineering/Standards/Standards1.webp)
+![Standards](/img/Year_2/Software_Engineering/Standards/Standards1.webp)
 
 Standards of particular interest
 
@@ -93,7 +93,7 @@ Standards of particular interest
 
 # ISO 9000
 
-![image](/img/Year_2/Software_Engineering/Standards/ISO9000.webp)
+![ISO 9000](/img/Year_2/Software_Engineering/Standards/ISO9000.webp)
 
 QSM:
 
@@ -141,7 +141,7 @@ regulations
 
 ## ISO 12207:17
 
-![image](/img/Year_2/Software_Engineering/Standards/ISO12207:17.webp)
+![ISO 12207:17](/img/Year_2/Software_Engineering/Standards/ISO12207:17.webp)
 
 # Process Implementation
 
@@ -173,4 +173,4 @@ Why bother?
 
 -   Feeds into the future
 
-![image](/img/Year_2/Software_Engineering/Standards/ISO15504.webp)
+![ISO 15504](/img/Year_2/Software_Engineering/Standards/ISO15504.webp)

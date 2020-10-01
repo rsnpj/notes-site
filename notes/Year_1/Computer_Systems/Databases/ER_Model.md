@@ -114,7 +114,7 @@ to many.
 -   Optionality is where a relationship could or could not exist, and is
     denoted by a circle in the ER diagram
 
-    ![image](/img/Year_1/CSys/Databases/ER_Model/optionality.webp)
+    ![Optionality denoted](/img/Year_1/CSys/Databases/ER_Model/optionality.webp)
 
 -   if an entity participates optionally in a relationship:
 
@@ -124,7 +124,7 @@ to many.
 
 -   In the ER diagram total participation is denoted by a vertical bar
 
-    ![image](/img/Year_1/CSys/Databases/ER_Model/participation.webp)
+    ![Participation denoted](/img/Year_1/CSys/Databases/ER_Model/participation.webp)
 
 # Attributes
 

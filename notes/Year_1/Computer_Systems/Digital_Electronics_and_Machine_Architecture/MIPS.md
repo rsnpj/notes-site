@@ -84,7 +84,7 @@ complex instruction set computers (CISC)
 
 ## R Type
 
-![image](/img/Year_1/CSys/DEMA/MIPS/R-Type.webp)
+![R Type](/img/Year_1/CSys/DEMA/MIPS/R-Type.webp)
 
 3 Register Operands:
 
@@ -97,7 +97,7 @@ Other fields:
 -   `funct`: the function, with opcode, tells the computer what operation to perform
 -   `shamt`: the shift amount for shift instructions, otherwise 0
 
-![image](/img/Year_1/CSys/DEMA/MIPS/R-Type1.webp)
+![R Type example](/img/Year_1/CSys/DEMA/MIPS/R-Type1.webp)
 
 ### Example
 
@@ -115,7 +115,7 @@ Field values:
 
 ## I Type
 
-![image](/img/Year_1/CSys/DEMA/MIPS/I-Type.webp)
+![I type ](/img/Year_1/CSys/DEMA/MIPS/I-Type.webp)
 
 3 Operands:
 
@@ -142,7 +142,7 @@ addi, $s0, $s1, 5
 
 ## J Type
 
-![image](/img/Year_1/CSys/DEMA/MIPS/J-Type.webp)
+![J type](/img/Year_1/CSys/DEMA/MIPS/J-Type.webp)
 
 -   26-bit address operand: `addr`
 -   Used for jump instructions, `j`
@@ -256,7 +256,7 @@ Moves from `lo`/`hi` special registers
 
 # MIPS Function Calls
 
-![image](/img/Year_1/CSys/DEMA/MIPS/Function.webp)
+![MIPS Function Calls](/img/Year_1/CSys/DEMA/MIPS/Function.webp)
 
 # Conventions
 
@@ -321,4 +321,4 @@ Callee
 
 # Example - Factorials
 
-![image](/img/Year_1/CSys/DEMA/MIPS/Example.webp)
+![Factorials example](/img/Year_1/CSys/DEMA/MIPS/Example.webp)

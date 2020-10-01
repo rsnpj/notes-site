@@ -255,7 +255,7 @@ A BST is a red-black tree if:
 5.  for all nodes, all paths from node to descendant leaves contain the
     same number of black nodes'
 
-![RedBlack Tree](/img/Year_1/ADS/Part_3/Trees/redblack.webp)
+![RedBlack-Tree](/img/Year_1/ADS/Part_3/Trees/redblack.webp)
 
 A redblack tree with n internal nodes has height at most $2\log(n+1)$
 
@@ -272,9 +272,9 @@ There is the option of a left or right rotation, under the assumptions:
 
 -   right rotation on x: left child not NULL
 
-![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate.webp)
+![Left and right rotation](/img/Year_1/ADS/Part_3/Trees/rotate.webp)
 
-![Rotation](/img/Year_1/ADS/Part_3/Trees/rotate1.webp)
+![Left rotation](/img/Year_1/ADS/Part_3/Trees/rotate1.webp)
 
 This can be done in $\mathcal{O}(\log n)$ time
 

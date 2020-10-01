@@ -33,7 +33,7 @@ Programmable rendering pipeline
 
 # Programmable rendering pipeline
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/WebGL/pipeline.webp)
+![Programmable rendering pipeline](/img/Year_2/Software_Methodologies/Computer_Graphics/WebGL/pipeline.webp)
 
 Pixels - Colour info
 

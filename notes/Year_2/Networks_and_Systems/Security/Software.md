@@ -24,7 +24,7 @@ lecturer: Chris
 
 # Computer Architecture
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/Computer_Architecture.webp)
+![Computer Architecture](/img/Year_2/Networks_and_Systems/Security/Software/Computer_Architecture.webp)
 
 # GPU
 
@@ -32,7 +32,7 @@ lecturer: Chris
 
 # The Stack
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/stack.webp)
+![The Stack](/img/Year_2/Networks_and_Systems/Security/Software/stack.webp)
 
 -   When a program thread starts, the operating system reserves some
     amount of space for the stack - stack memory does not grow during
@@ -46,7 +46,7 @@ The stack being full is cased by
 
 # The Heap
 
-![image](/img/Year_2/Networks_and_Systems/Security/Software/heap.webp)
+![The Heap](/img/Year_2/Networks_and_Systems/Security/Software/heap.webp)
 
 -   Memory is not guaranteed to be initialised to zero
 

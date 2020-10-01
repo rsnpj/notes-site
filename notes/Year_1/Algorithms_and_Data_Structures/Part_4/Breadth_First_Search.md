@@ -19,7 +19,7 @@ lecturer: Matthew
 
 ## Representations
 
-![image](/img/Year_1/ADS/Part_4/BFS/representation.webp)
+![Representation of BFS](/img/Year_1/ADS/Part_4/BFS/representation.webp)
 
 For each representation:
 
@@ -70,7 +70,7 @@ For each representation:
 
 ## Example
 
-![image](/img/Year_1/ADS/Part_4/BFS/example.webp)
+![Example of BFS](/img/Year_1/ADS/Part_4/BFS/example.webp)
 
 -   Initialization: source vertex grey, others are while; distance to
     source is 0; add source to the queue

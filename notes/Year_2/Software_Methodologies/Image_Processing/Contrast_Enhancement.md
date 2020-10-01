@@ -15,7 +15,7 @@ $$
 as a point transform operator transforms the image
 from one state to another
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/functional.webp)
+![Functional point transforms](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/functional.webp)
 
 Also known as intensity transform functions
 
@@ -89,7 +89,7 @@ $$
 \log \left[1+\left(e^{\sigma}-1\right) I_{\text {input}}(i, j)\right]
 $$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log.webp)
+![Logarithmic transform](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log.webp)
 
 The dynamic range of this scene exceeded that of the sensor/camera (dark
 foreground - bright background)
@@ -97,7 +97,7 @@ foreground - bright background)
 As a result of a (usually automatic) decision on the camera exposure,
 the dynamic range of the dark parts was compressed
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log1.webp)
+![Logarithmic transform fig 2](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/log1.webp)
 
 The logarithmic transform in this example:
 
@@ -160,7 +160,7 @@ Basis $>1$ is required for functions suitable for out purpose (decrease
 the dynamic range of dark regions - increase the dynamic range of bight
 regions)
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/exp.webp)
+![Exponential transform](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/exp.webp)
 
 The exponential transform decreases the dynamic range of dark regions
 whilst increasing the dynamic range in light regions\
@@ -203,4 +203,4 @@ lower(darker) values
 -   An overexposed photo can be corrected using gamma correction with
     $\gamma>1$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/gamma.webp)
+![gamma correction](/img/Year_2/Software_Methodologies/Image_Processing/Contrast_Enhancement/gamma.webp)

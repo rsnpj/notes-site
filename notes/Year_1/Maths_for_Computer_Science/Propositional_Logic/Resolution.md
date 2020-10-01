@@ -7,7 +7,7 @@ lecturer: Daniel
 
 Recall the rule of inference known as resolution:
 
-![image](/img/Year_1/MCS/Propositional_Logic/Resolution/resolution.webp)
+![Resolution](/img/Year_1/MCS/Propositional_Logic/Resolution/resolution.webp)
 
 -   Forms the basis of the proof system for propositional logic known as
     **resolution**
@@ -15,7 +15,7 @@ Recall the rule of inference known as resolution:
 However, the basic rule of resolution is a more general one than that
 above
 
-![image](/img/Year_1/MCS/Propositional_Logic/Resolution/basic_resolution.webp)
+![basic rule of resolution](/img/Year_1/MCS/Propositional_Logic/Resolution/basic_resolution.webp)
 
 -   The ps and qs are literals - that is, variables or negated variables
     (not necessarily distinct)
@@ -67,11 +67,11 @@ can be inferred as there is a contradiction.
 
 Consider the propositional formula $\varphi$
 
-![image](/img/Year_1/MCS/Propositional_Logic/Resolution/phi.webp)
+![Resolution example](/img/Year_1/MCS/Propositional_Logic/Resolution/phi.webp)
 
 So $\lnot \varphi$ is
 
-![image](/img/Year_1/MCS/Propositional_Logic/Resolution/notphi.webp)
+![Resolution example](/img/Year_1/MCS/Propositional_Logic/Resolution/notphi.webp)
 
 So, the set of clauses to which we apply resolution is:
 
@@ -110,7 +110,7 @@ So $\varphi$ is a theorem, and so a tautology
 Let $\varphi$ be the formula
 $((p\lor q)\land (\lnot p\lor \lnot q)\lor (r\Rightarrow (p\land q)))\Rightarrow r$
 
-![image](/img/Year_1/MCS/Propositional_Logic/Resolution/action.webp)
+![Resolution example](/img/Year_1/MCS/Propositional_Logic/Resolution/action.webp)
 
 Hence, the set of clauses to which we apply resolution is
 

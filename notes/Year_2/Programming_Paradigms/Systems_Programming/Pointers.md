@@ -13,11 +13,11 @@ A logical name for an allocated area of memory assigned to store a value of a ce
 int i = 10;
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Basic_Integer.webp)
+![Basic Integer](/img/Year_2/Programming_Paradigms/Systems/Pointers/Basic_Integer.webp)
 
 # Pointer variables
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Variable.webp)
+![Pointer variables](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Variable.webp)
 
 -   ```c
     int i = 10;
@@ -39,7 +39,7 @@ int i = 10;
 
 # Pointers
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer.webp)
+![Pointers](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer.webp)
 
 ```c
 int i = 10;   // simple variable
@@ -115,7 +115,7 @@ p = &i;    // & "address of"
 
 -   `q` now points to the same place as `p`:
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point.webp)
+![Double point](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point.webp)
 
 -   If `p` and `q` both point to `i`, we can change `i` by assigning a
     new value to either `*p` or `*q`:
@@ -124,13 +124,13 @@ p = &i;    // & "address of"
     *p = 1;
     ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point1.webp)
+![Double point](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point1.webp)
 
 ```c
   *q = 2;
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point2.webp)
+![Double point](/img/Year_2/Programming_Paradigms/Systems/Pointers/Double_Point2.webp)
 
 -   Any number of pointer variables may point to the same object
 
@@ -215,7 +215,7 @@ int a[10];
 
 -   declares a fixed size array holding ten `int` values
 
-    ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Array.webp)
+    ![C Arrays](/img/Year_2/Programming_Paradigms/Systems/Pointers/Array.webp)
 
 *   `a[i]` is the `i`th element of the array
 
@@ -280,7 +280,7 @@ sizeof(a) = 6; // includes the null character at the end
 
 # Pointers, strings and arrays
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/String_Array.webp)
+![String array](/img/Year_2/Programming_Paradigms/Systems/Pointers/String_Array.webp)
 
 ```c
 char a[] = "Hello"; // sizeof = 6
@@ -311,14 +311,14 @@ char *a = "Hello"; // sizeof = 8  as pointers take 8 bytes
     pa = a;
     ```
 
-    ![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic.webp)
+    ![Pointer arithmetic](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic.webp)
 
 ```c
 pa = &a[1];
 pa = (a+1);
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic1.webp)
+![Pointer arithmetic](/img/Year_2/Programming_Paradigms/Systems/Pointers/Pointer_Arithmetic1.webp)
 
 -   The two pairs of statements above are equivalent using array or
     pointer notation: `+1` translates to `+4` bytes (1 `int`)

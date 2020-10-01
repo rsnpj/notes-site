@@ -201,7 +201,7 @@ A multilevel feedback queue scheduler may use the following parameters:
 | D       | -        | 5            | 4          |
 | E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/FCFS.webp)
+![First Come, First Served ](/img/Year_1/CSys/Operating_Systems/Process_Management/FCFS.webp)
 
 - The average waiting time may or may not be lengthy
 
@@ -229,7 +229,7 @@ A multilevel feedback queue scheduler may use the following parameters:
 | D       | -        | 5            | 4          |
 | E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SJF.webp)
+![Shortest-Job-First](/img/Year_1/CSys/Operating_Systems/Process_Management/SJF.webp)
 
 ## Round Robin (RR)
 
@@ -251,7 +251,7 @@ most q time units at once
 | D       | -        | 5            | 4          |
 | E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RR.webp)
+![Round Robin (RR)](/img/Year_1/CSys/Operating_Systems/Process_Management/RR.webp)
 
 ## Shortest Remaining Time First
 
@@ -269,9 +269,9 @@ It can be viewed as a pre-emptive version of SJF.
 | D       | -        | 5            | 4          |
 | E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF1.webp)
+![Shortest Remaining Time First 1](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF1.webp)
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF2.webp)
+![Shortest Remaining Time First 2](/img/Year_1/CSys/Operating_Systems/Process_Management/SRTF2.webp)
 
 ## Round Robin (With Priority)
 
@@ -294,4 +294,4 @@ This is with time slice 2
 | D       | -        | 5            | 4          |
 | E       | -        | 4            | 1          |
 
-![image](/img/Year_1/CSys/Operating_Systems/Process_Management/RRP.webp)
+![Round Robin](/img/Year_1/CSys/Operating_Systems/Process_Management/RRP.webp)

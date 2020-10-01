@@ -71,7 +71,7 @@ lecturer: Daniel
     then it is bijective or a one-to-one correspondence (with f being a
     bijection)
 
-![image](/img/Year_1/MCS/Discrete_Structures/Functions/types.webp)
+![Special types of function](/img/Year_1/MCS/Discrete_Structures/Functions/types.webp)
 
 # More on bijections
 
@@ -119,7 +119,7 @@ where:
 
 -   $f \left( f ^ { - 1 } ( b ) \right) = b , \forall b \in B$
 
-![image](/img/Year_1/MCS/Discrete_Structures/Functions/inverse.webp)
+![Inverses](/img/Year_1/MCS/Discrete_Structures/Functions/inverse.webp)
 
 -   Note that it may not always be the case that the inverse function
     exists

@@ -42,27 +42,27 @@ Based on the simple binary addition rules:
 | 1   | 0   | 1   | 0     |
 | 1   | 1   | 0   | 1     |
 
-![image](/img/Year_1/CSys/DEMA/Circuits/half_adder.webp)
+![Half adder](/img/Year_1/CSys/DEMA/Circuits/half_adder.webp)
 
 # Adder
 
 Input is not just A and B, but A, B and the carry from the previous bit
 Use two half-adders: Add A and B first, then add in the carried bit:
 
-![image](/img/Year_1/CSys/DEMA/Circuits/adder.webp)
+![Full adder](/img/Year_1/CSys/DEMA/Circuits/adder.webp)
 
 # Chaining adders
 
 Full adders can be chained to give more bits of input
 
-![image](/img/Year_1/CSys/DEMA/Circuits/chain_adder.webp)
+![Chaining adders](/img/Year_1/CSys/DEMA/Circuits/chain_adder.webp)
 
 # Subtractor
 
 Using twos compliment negative we can subtract numbers. Flip each of the
 bits with a not gate. Set the carry in to 1 in order to add 1
 
-![image](/img/Year_1/CSys/DEMA/Circuits/subtractor.webp)
+![Subtactor](/img/Year_1/CSys/DEMA/Circuits/subtractor.webp)
 
 # Decoder
 
@@ -77,7 +77,7 @@ This is what a decoder does:
 
 -   Which one depends on the input
 
-![image](/img/Year_1/CSys/DEMA/Circuits/decoder.webp)
+![Decoder](/img/Year_1/CSys/DEMA/Circuits/decoder.webp)
 
 Larger decoders require multi-input AND gates to be construct in
 two-level logic.
@@ -89,7 +89,7 @@ response.
 
 # Multiplexor
 
-![image](/img/Year_1/CSys/DEMA/Circuits/multiplexor.webp)
+![Multiplexor](/img/Year_1/CSys/DEMA/Circuits/multiplexor.webp)
 
 The multiplexor has $k+2^k$ inputs and 1 output
 
@@ -103,7 +103,7 @@ Consider many memory locations connected to inputs. Using the selector we can se
 
 # Tristate
 
-![image](/img/Year_1/CSys/DEMA/Circuits/tristate.webp)
+![Tristate](/img/Year_1/CSys/DEMA/Circuits/tristate.webp)
 
 -   Driven low - connected to low voltage line
 
@@ -115,7 +115,7 @@ Consider many memory locations connected to inputs. Using the selector we can se
 
 ## Inverting Tristate
 
-![image](/img/Year_1/CSys/DEMA/Circuits/inverting_tristate.webp)
+![Inverting tristate](/img/Year_1/CSys/DEMA/Circuits/inverting_tristate.webp)
 
 -   Means the output is driven directly from either the high or low
     voltage line.
@@ -128,7 +128,7 @@ Consider many memory locations connected to inputs. Using the selector we can se
 
 # Mux
 
-![image](/img/Year_1/CSys/DEMA/Circuits/mux.webp)
+![Mux](/img/Year_1/CSys/DEMA/Circuits/mux.webp)
 
 -   Using tristate gates a much more efficient multiplexor can be formed
 
@@ -137,7 +137,7 @@ Consider many memory locations connected to inputs. Using the selector we can se
 
 # Building a simple ALU
 
-![image](/img/Year_1/CSys/DEMA/Circuits/ALU.webp)
+![Building a simple ALU](/img/Year_1/CSys/DEMA/Circuits/ALU.webp)
 
 -   The mux is used for the subraction part of the circuit as it can
     invert the data line

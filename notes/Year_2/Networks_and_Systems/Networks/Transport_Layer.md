@@ -63,7 +63,7 @@ demultiplexing
 
 # Multiplexing and demultiplexing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/multiplexing.webp)
+![Multiplexing](/img/Year_2/Networks_and_Systems/Networks/Transport/multiplexing.webp)
 
 <Important>
 {`
@@ -85,7 +85,7 @@ In the transport layer it is called a segment
 
 -   Each socket has a unique identifier
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/segment.webp)
+![Segment](/img/Year_2/Networks_and_Systems/Networks/Transport/segment.webp)
 
 ## Connectionless multiplexing and demultiplexing
 
@@ -105,7 +105,7 @@ If two UDP segments have different source IP addresses and/or source
 port numbers but same dest IP and port \#, they will be directed to same
 process via same process via same socket as dest
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/demultiplexing.webp)
+![demultiplexing](/img/Year_2/Networks_and_Systems/Networks/Transport/demultiplexing.webp)
 
 ## Connection-oriented multiplexing and demultiplexing
 
@@ -129,7 +129,7 @@ Server host may support many simultaneous TCP sockets:
 -   Two arriving TCP segments with different source IP/ \#Port will be
     directed to two different sockets
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/connection.webp)
+![Connection-oriented](/img/Year_2/Networks_and_Systems/Networks/Transport/connection.webp)
 
 <Important>
 With TCP we have a different socket for each connection
@@ -163,16 +163,16 @@ With TCP we have a different socket for each connection
 
 ## Segment Header
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/udp.webp)
+![UDP Segment Header](/img/Year_2/Networks_and_Systems/Networks/Transport/udp.webp)
 
 # Principles of reliable data transfer
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/1rdt.webp)
+![Principles reliable data transfer](/img/Year_2/Networks_and_Systems/Networks/Transport/1rdt.webp)
 
 Note that reliable data transfer protocol is not a standard, it is just
 for us to look at academically
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/1rdt1.webp)
+![Principles reliable data transfer](/img/Year_2/Networks_and_Systems/Networks/Transport/1rdt1.webp)
 
 # Reliable data transfer
 
@@ -186,7 +186,7 @@ We will:
 
 -   Use finite state machines (FSM) to specify sender, receiver
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt.webp)
+![Reliable data transfer](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt.webp)
 
 ## rdt1.0: reliable transfer over a reliable channel
 
@@ -202,7 +202,7 @@ Separate FSMs for sender, receiver:
 
 -   Receiver reads data from underlying channel
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt1.webp)
+![RDT over reliable channel](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt1.webp)
 
 ## rdt2.0
 
@@ -238,15 +238,15 @@ Separate FSMs for sender, receiver:
 
 ### FSM specification
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/FSM.webp)
+![FSM specification](/img/Year_2/Networks_and_Systems/Networks/Transport/FSM.webp)
 
 ### Operation with no errors
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/operation_with_no_errors.webp)
+![Operation with no errors](/img/Year_2/Networks_and_Systems/Networks/Transport/operation_with_no_errors.webp)
 
 ### Error scenario
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/error_scenario.webp)
+![Error scenario](/img/Year_2/Networks_and_Systems/Networks/Transport/error_scenario.webp)
 
 ### Fatal flaw
 
@@ -296,17 +296,17 @@ Approach:
 
 ### Sender
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_sender.webp)
+![RDT sender](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_sender.webp)
 
 ### In action
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_in_action.webp)
+![RDT in action](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_in_action.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_in_action1.webp)
+![Rdt in action](/img/Year_2/Networks_and_Systems/Networks/Transport/rdt_in_action1.webp)
 
 # Pipelined protocols
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/pipelined_protocols1.webp)
+![Pipelined protocols](/img/Year_2/Networks_and_Systems/Networks/Transport/pipelined_protocols1.webp)
 
 **Pipelining** has the following consequences for reliable data transfer
 protocols:
@@ -349,7 +349,7 @@ Two generic forms of pipelined protocols:
 
 ## GBN(Go Back N) in action
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/GBN.webp)
+![GBN in action](/img/Year_2/Networks_and_Systems/Networks/Transport/GBN.webp)
 
 ## Selective repeat
 
@@ -402,7 +402,7 @@ Receiver:
 
 ### Selective repeat in action
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/selective_repeat_action.webp)
+![Selective repeat action](/img/Year_2/Networks_and_Systems/Networks/Transport/selective_repeat_action.webp)
 
 ### Selective repeat dilemma
 
@@ -416,7 +416,7 @@ Example:
 
     -   Duplicate data accepted as new in (b)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Transport/selective_repeat_dilemma.webp)
+![Selective repeat dilemma](/img/Year_2/Networks_and_Systems/Networks/Transport/selective_repeat_dilemma.webp)
 
 Note: That curtain is there to show that there is a lack of knowledge
 between the sender and receiver

@@ -60,7 +60,7 @@ This is done by the Goal Question Metric (GQM) paradigm
 
 3.  What process and product measures will provide this information
 
-![image](/img/Year_2/Software_Engineering/Improvement/GQM.webp)
+![Goal Question Metric](/img/Year_2/Software_Engineering/Improvement/GQM.webp)
 
 # Process change
 
@@ -102,7 +102,7 @@ the SEI work has been the most influential
 \begin{definition}[CMMI] Capability Maturity Model Integration, a framework made by the SEI for assessing the capabilities of software contractors
 \end{definition}
 
-![image](/img/Year_2/Software_Engineering/Improvement/CMMI.webp)
+![Capability Maturity Model Integration](/img/Year_2/Software_Engineering/Improvement/CMMI.webp)
 
 ## Level 1 - Initial
 
