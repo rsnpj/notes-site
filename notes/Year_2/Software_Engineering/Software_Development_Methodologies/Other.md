@@ -53,14 +53,14 @@ A SD philosophy that emphasises careful design, quality code, software testing a
 
 # RAD(Rapid Application Development)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/RAD.webp)
+![RAD](/img/Year_2/Software_Engineering/Methodologies/Other/RAD.webp)
 
 -   Allows for greater flexibility than waterfall, but not as much as
     agile
 
 # Spiral
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Spiral.webp)
+![Spiral](/img/Year_2/Software_Engineering/Methodologies/Other/Spiral.webp)
 
 -   Linear model
 
@@ -69,19 +69,19 @@ A SD philosophy that emphasises careful design, quality code, software testing a
 
 # Prototyping
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Prototyping.webp)
+![Prototyping](/img/Year_2/Software_Engineering/Methodologies/Other/Prototyping.webp)
 
 # Lean Innovation
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean-Innovation.webp)
+![Lean Innovation](/img/Year_2/Software_Engineering/Methodologies/Other/Lean-Innovation.webp)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/Lean.webp)
+![Lean](/img/Year_2/Software_Engineering/Methodologies/Other/Lean.webp)
 
 # DevOps
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps.webp)
+![DevOps figure 1](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps.webp)
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps1.webp)
+![DevOps figure 2](/img/Year_2/Software_Engineering/Methodologies/Other/DevOps1.webp)
 
 # Not a Software Development Model
 
@@ -93,4 +93,4 @@ A SD philosophy that emphasises careful design, quality code, software testing a
 
 -   Value - Return on what you are putting in
 
-![image](/img/Year_2/Software_Engineering/Methodologies/Other/ITIL.webp)
+![Information Technology Infrastructure Library](/img/Year_2/Software_Engineering/Methodologies/Other/ITIL.webp)

@@ -152,7 +152,7 @@ has a (proper) 3 colouring iff the formula is satisfiable
     $x_p$,$y_n$ and $z_p$ via the below gadget consisting of five
     clauses vertices which we call the C-vertices
 
-![image](/img/Year_2/Theory_of_Computation/AAC/NP_Complete/gadget.webp)
+![Encoding figure](/img/Year_2/Theory_of_Computation/AAC/NP_Complete/gadget.webp)
 
 ## Proof
 

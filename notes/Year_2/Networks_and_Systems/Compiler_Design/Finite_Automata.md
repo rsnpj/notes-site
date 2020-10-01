@@ -51,7 +51,7 @@ $$
 F=\{3\}
 $$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/NFA.webp)
+![Representation Finite Automata](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/NFA.webp)
 
 Alternative representation is a transition table
 
@@ -61,7 +61,7 @@ Alternative representation is a transition table
 
 -   Entries $\rightarrow$ Transitions between states
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/NFA1.webp)
+![transition table Finite Automata](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/NFA1.webp)
 
 Advantage of transition table: more visible transitions
 
@@ -141,20 +141,20 @@ r
 
 Recursive construction\
 For any symbol $a\in \Sigma \cup \{\epsilon\}$
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/recursive.webp)
+![Recursive construction](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/recursive.webp)
 
 For any two regular expressions s and t with NFAs N(s) and N(t). If
 $r=s|t$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/Two_Regular_Expressions.webp)
+![If $r=s|t$](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/Two_Regular_Expressions.webp)
 
 if $r=st$, then:
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/r=st.webp)
+![if $r=st$](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/r=st.webp)
 
 If $r=s^*$, then
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/rs.webp)
+![If $r=s^*$](/img/Year_2/Networks_and_Systems/Compiler_Design/Finite_Automata/rs.webp)
 
 # From NFA to DFA
 

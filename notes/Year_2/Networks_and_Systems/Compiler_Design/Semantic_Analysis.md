@@ -95,7 +95,7 @@ Examples:
 With both synthesized and inherited attributes there is no guarantee
 that there exists an order to evaluate the attributes of all nodes
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Semantic_Analysis/Evaluation_Attributes.webp)
+![Evaluation of attributes](/img/Year_2/Networks_and_Systems/Compiler_Design/Semantic_Analysis/Evaluation_Attributes.webp)
 
 These routes are circular as it is impossible to evaluate either A.s or
 B.i without first evaluating the other

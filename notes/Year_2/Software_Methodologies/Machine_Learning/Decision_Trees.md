@@ -50,11 +50,11 @@ To Build a tree:
 
 Ranked Data
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Decision_Trees/Ranked_Data.webp)
+![Ranked Data](/img/Year_2/Software_Methodologies/Machine_Learning/Decision_Trees/Ranked_Data.webp)
 
 Multiple Choices Data
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Decision_Trees/Multiple_Choices_Data.webp)
+![Multiple Choices Data](/img/Year_2/Software_Methodologies/Machine_Learning/Decision_Trees/Multiple_Choices_Data.webp)
 
 ## Missing data
 

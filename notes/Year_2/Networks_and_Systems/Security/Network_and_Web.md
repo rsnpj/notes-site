@@ -128,7 +128,7 @@ NAT
 
 This is very difficult to protect against
 
-![image](/img/Year_2/Networks_and_Systems/Security/Network+Web/DDoS.webp)
+![DDoS](/img/Year_2/Networks_and_Systems/Security/Network+Web/DDoS.webp)
 
 # Wiretapping
 
@@ -137,7 +137,7 @@ all the data passing along the cable
 
 # Cross-Site Scripting (XSS)
 
-![image](/img/Year_2/Networks_and_Systems/Security/Network+Web/XSS.webp)
+![XSS](/img/Year_2/Networks_and_Systems/Security/Network+Web/XSS.webp)
 
 Protection
 

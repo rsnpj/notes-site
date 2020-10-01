@@ -92,7 +92,7 @@ $P_4$ via vertex deletions
 
 If not, then G is said to be $P_4$-free
 
-![image](/img/Year_2/Theory_of_Computation/AAC/divide/p4.webp)
+![cograph graph](/img/Year_2/Theory_of_Computation/AAC/divide/p4.webp)
 
 It is known that a graph is a cograph iff it is $P_4$-free
 

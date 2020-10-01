@@ -73,7 +73,7 @@ A set of particular characteristics or attributes of a model, which in turn embo
 
 # Software as an ISP
 
-![image](/img/Year_2/Software_Engineering/Modelling/Role/ISP.webp)
+![ISP](/img/Year_2/Software_Engineering/Modelling/Role/ISP.webp)
 
 # Interconnectedness
 

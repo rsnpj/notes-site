@@ -74,7 +74,7 @@ N is the number of examples in D
 -   So we repeatedly take small steps in the direction that minimises
     loss, we call these **Gradient steps**
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Linear_Regression/Gradient_Descent.webp)
+![Gradient steps](/img/Year_2/Software_Methodologies/Machine_Learning/Linear_Regression/Gradient_Descent.webp)
 
 ## Weight initialisation
 

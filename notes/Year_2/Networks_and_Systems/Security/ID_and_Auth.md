@@ -112,7 +112,7 @@ Solution: Physical security keys:
 
 Receiver Operating Characteristic (ROC) curve
 
-![image](/img/Year_2/Networks_and_Systems/Security/ID+Auth/ROC.webp)
+![ROC](/img/Year_2/Networks_and_Systems/Security/ID+Auth/ROC.webp)
 
 Performance policy
 
@@ -203,7 +203,7 @@ Multiple cardholder verification mechanism (CVM)
 
 -   A cloned card is created with the same static data
 
-![image](/img/Year_2/Networks_and_Systems/Security/ID+Auth/EMV.webp)
+![SDA](/img/Year_2/Networks_and_Systems/Security/ID+Auth/EMV.webp)
 
 An attacker can get records, $sig_{BANK}[records]$ by listening to a
 valid transaction
@@ -220,7 +220,7 @@ Problem: static password
 Use challenge-response authentication to generate data unique to the
 transaction
 
-![image](/img/Year_2/Networks_and_Systems/Security/ID+Auth/dd.webp)
+![DDA](/img/Year_2/Networks_and_Systems/Security/ID+Auth/dd.webp)
 
 Card clone is not possible because sig$_{card}$\[card nonce, terminal
 nonce\] is different at every transaction.
@@ -230,7 +230,7 @@ However, card answer to PIN check is not authenticated either
 A wedge between a stolen card and a terminal can pretend that the
 password is always correct
 
-![image](/img/Year_2/Networks_and_Systems/Security/ID+Auth/DDA2.webp)
+![DDA](/img/Year_2/Networks_and_Systems/Security/ID+Auth/DDA2.webp)
 
 ## CDA: Combined DDA/Application Cryptogram Generation
 
@@ -240,7 +240,7 @@ The terminal sends a message called CVMR representing the terminal view
 of the operation (PIN OK, PIN Wrong, signature etc) for the card to
 compare with its own point of view
 
-![image](/img/Year_2/Networks_and_Systems/Security/ID+Auth/CDA.webp)
+![CDA](/img/Year_2/Networks_and_Systems/Security/ID+Auth/CDA.webp)
 
 Takeaway:
 

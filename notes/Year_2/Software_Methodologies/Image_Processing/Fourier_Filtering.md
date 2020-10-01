@@ -91,7 +91,7 @@ $$
 Ringing occurs at sharp edges in the image because sharp frequency
 cut-offs are poorly approximated in the spatial domain
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Filtering/low_pass.webp)
+![low pass filter](/img/Year_2/Software_Methodologies/Image_Processing/Filtering/low_pass.webp)
 
 ## Gaussian low pass filter
 

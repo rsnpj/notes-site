@@ -57,7 +57,7 @@ Middleware options:
 -   Mask remote function calls as being local, supporting distributed
     development
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/RPC.webp)
+![Remote Procedure Call (RPC)](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/RPC.webp)
 
 -   Request/reply paradigm usually implemented with message passing in
     RPC service
@@ -98,7 +98,7 @@ encapsulation or inheritance support
 
 ## Object-Oriented Middleware (OOM)
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/OOM.webp)
+![Object-Oriented Middleware (OOM)](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/OOM.webp)
 
 -   Objects can be local or remote
 
@@ -122,7 +122,7 @@ encapsulation or inheritance support
 -   **Application**: Utilize very fast remote processors or any
     specialised resources
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/RMI.webp)
+![Remote Method Invocation (RMI)](/img/Year_2/Networks_and_Systems/Distributed_Systems/Middleware/RMI.webp)
 
 ## RMI-based Application Development and Execution
 

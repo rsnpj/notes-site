@@ -42,7 +42,7 @@ Each user gets the entire transmission capacity for a fixed time interval
 Each user gets a portion of the transmission capacity for the whole time
 </Definition>
 
-![image](/img/Year_2/Networks_and_Systems/Networks/MAC/TDM_vs_FDM.webp)
+![Time division vs frequency division](/img/Year_2/Networks_and_Systems/Networks/MAC/TDM_vs_FDM.webp)
 
 The limitations of static channel allocation
 
@@ -219,7 +219,7 @@ Used in slotted channels (slotted ALOHA)
 
 ## Comparing the protocols
 
-![image](/img/Year_2/Networks_and_Systems/Networks/MAC/Compare-Protocols.webp)
+![Comparing protocols](/img/Year_2/Networks_and_Systems/Networks/MAC/Compare-Protocols.webp)
 
 # Controlled Access Protocols
 

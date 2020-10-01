@@ -96,7 +96,7 @@ Wait for graph:
 -   Most deadlock detections schemes operate by finding cycles in the
     transaction wait-for graph
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Consistency/Wait-for.webp)
+![Deadlock Detection](/img/Year_2/Networks_and_Systems/Distributed_Systems/Consistency/Wait-for.webp)
 
 ## Distributed Deadlock Detection
 
@@ -125,7 +125,7 @@ Edge chasing:
 -   A probe message consists of transaction wait-for relationships
     representing a (local) path in the global wait for graph
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Consistency/Edge_Chasing.webp)
+![Edge chasing](/img/Year_2/Networks_and_Systems/Distributed_Systems/Consistency/Edge_Chasing.webp)
 
 # Correctness of replicated objects
 

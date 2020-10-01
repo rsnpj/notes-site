@@ -68,7 +68,7 @@ elements of the DCT matrix and real numbers.
 The 2D DCT uses a set of 2D matrices as basis functions, each one
 corresponding to a 2D cosine function
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Compression/Basis_Functions.webp)
+![Basis functions](/img/Year_2/Software_Methodologies/Image_Processing/Compression/Basis_Functions.webp)
 
 ## JPEG Compression
 

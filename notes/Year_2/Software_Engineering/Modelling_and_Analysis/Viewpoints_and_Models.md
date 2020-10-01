@@ -70,14 +70,14 @@ Architectural ideas present two problems
 
 ### The DFD Symbols
 
-![image](/img/Year_2/Software_Engineering/Modelling/Viewpoints/DFD-Symbols.webp)
+![DFD Symbols](/img/Year_2/Software_Engineering/Modelling/Viewpoints/DFD-Symbols.webp)
 
 ### The context diagram
 
 -   This is the very top level of a DFD, consisting of a single bubble
     (to represent the system) and a set of sinks and sources
 
-![image](/img/Year_2/Software_Engineering/Modelling/Viewpoints/Context-Diagram.webp)
+![context diagram](/img/Year_2/Software_Engineering/Modelling/Viewpoints/Context-Diagram.webp)
 
 ### Hierarchy in DFDs
 
@@ -93,7 +93,7 @@ Architectural ideas present two problems
 
 ## A top-level DFD
 
-![image](/img/Year_2/Software_Engineering/Modelling/Viewpoints/top-level-dfd.webp)
+![top-level DFD](/img/Year_2/Software_Engineering/Modelling/Viewpoints/top-level-dfd.webp)
 
 ## What not to include
 
@@ -122,7 +122,7 @@ operates. Like DFDs, they focus on describing how information flows
 through a system and gets transformed, but do so by modelling events.
 Some key notational elements are:
 
-![image](/img/Year_2/Software_Engineering/Modelling/Viewpoints/activity_diagram.webp)
+![activity diagram](/img/Year_2/Software_Engineering/Modelling/Viewpoints/activity_diagram.webp)
 
 # The behavioural viewpoint
 

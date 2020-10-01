@@ -56,7 +56,7 @@ Secondary studies:
 
 # The SR Context
 
-![image](/img/Year_2/Software_Engineering/Measurement/Secondary_Studies/srcontext.webp)
+![The SR Context](/img/Year_2/Software_Engineering/Measurement/Secondary_Studies/srcontext.webp)
 
 # Procedures for a SR
 

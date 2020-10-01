@@ -141,7 +141,7 @@ for each pixel (i,j):
 Replace the original pixel values with the new ones (called the filter’s
 responses)
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Noise/neighbourhood.webp)
+![Spatial filtering](/img/Year_2/Software_Methodologies/Image_Processing/Noise/neighbourhood.webp)
 
 # Filtering
 
@@ -252,7 +252,7 @@ image neighbourhood
 
 Example: for $3\times 3$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Noise/Median.webp)
+![Median Filter](/img/Year_2/Software_Methodologies/Image_Processing/Noise/Median.webp)
 
 **Effect**: Eliminates sudden intensity jumps which could be caused by
 some noise processes, i.e. large deviations from the norm.
@@ -284,7 +284,7 @@ $$
 
 Example: For $N=3$
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Noise/Smoothing.webp)
+![Conservative smoothing](/img/Year_2/Software_Methodologies/Image_Processing/Noise/Smoothing.webp)
 
 **Effect**: Eliminates sudden intensity jumps
 

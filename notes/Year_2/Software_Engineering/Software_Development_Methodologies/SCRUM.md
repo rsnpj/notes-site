@@ -34,7 +34,7 @@ Has NO managerial authority over the team; facilitates team needs without author
 
 # Sprint
 
-![image](/img/Year_2/Software_Engineering/Methodologies/SCRUM/sprint.webp)
+![Sprint](/img/Year_2/Software_Engineering/Methodologies/SCRUM/sprint.webp)
 
 -   The starting point for planning is the product backlog (user
     stories), which is the list of work to be done on the project

@@ -63,7 +63,7 @@ Like a light bulb that emits light artificially in all directions from a point
 Represents indirect light, that is, light emitted from all light sources and reflected by walls or other
 </Definition>
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Types.webp)
+![light source types](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Types.webp)
 
 # Types of reflected light
 
@@ -90,7 +90,7 @@ diffuse reflection + surface colour by ambient reflection
 Surface colour by ambient reflection = light colour $\times$ base colour
 of surface
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Ambient.webp)
+![Ambient reflection](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Ambient.webp)
 
 ## Diffuse reflection
 
@@ -105,7 +105,7 @@ of surface
 Surface colour by diffuse reflection = light colour $\times$ base colour
 of surface $\times \cos\theta$
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Diffuse.webp)
+![Diffuse reflection](/img/Year_2/Software_Methodologies/Computer_Graphics/Lighting/Diffuse.webp)
 
 ### Calculating $\cos\theta$
 

@@ -20,4 +20,4 @@ lecturer: Lei
           \end{array}\right.
     $$
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Binary_Classifier/Binary_Classifier.webp)
+![Binary Classifier](/img/Year_2/Software_Methodologies/Machine_Learning/Binary_Classifier/Binary_Classifier.webp)

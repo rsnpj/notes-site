@@ -138,7 +138,7 @@ lecturer: Barnaby
 
 # Sequential access file
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/sa.webp)
+![Sequential access file](/img/Year_1/CSys/Operating_Systems/Interface/sa.webp)
 
 # Access methods
 
@@ -188,13 +188,13 @@ Sequential Acess Implementation for direct access
 
 -   If too large, index (in memory) of the index (on disk)
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/database.webp)
+![Index on memory](/img/Year_1/CSys/Operating_Systems/Interface/database.webp)
 
 # Directory Structure
 
 -   A collection of nodes containing information about all files
 
-    ![image](/img/Year_1/CSys/Operating_Systems/Interface/directory_structure.webp)
+    ![Directory Structure](/img/Year_1/CSys/Operating_Systems/Interface/directory_structure.webp)
 
 Both the directory structure and the files reside on disk
 
@@ -220,7 +220,7 @@ Both the directory structure and the files reside on disk
 
 # A Typical File-system Organization
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/Organisation.webp)
+![Typical File-system Organization](/img/Year_1/CSys/Operating_Systems/Interface/Organisation.webp)
 
 # Operations Performed on Directory
 
@@ -254,7 +254,7 @@ The directory is organized logically to obtain
 
 -   A single directory for all users
 
-    ![image](/img/Year_1/CSys/Operating_Systems/Interface/single.webp)
+    ![Single-Level Directory](/img/Year_1/CSys/Operating_Systems/Interface/single.webp)
 
 -   Naming problem
 
@@ -264,7 +264,7 @@ The directory is organized logically to obtain
 
 -   Separate directory for each user
 
-    ![image](/img/Year_1/CSys/Operating_Systems/Interface/two.webp)
+    ![Two level directory](/img/Year_1/CSys/Operating_Systems/Interface/two.webp)
 
 -   Path name
 
@@ -276,7 +276,7 @@ The directory is organized logically to obtain
 
 # Tree-Structured Directories
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/tree.webp)
+![Tree-Structured Directories](/img/Year_1/CSys/Operating_Systems/Interface/tree.webp)
 
 -   Efficient searching
 
@@ -290,7 +290,7 @@ The directory is organized logically to obtain
 
 -   Have shared subdirectories and files
 
-    ![image](/img/Year_1/CSys/Operating_Systems/Interface/acyclic.webp)
+    ![Acyclic-Graph Directories](/img/Year_1/CSys/Operating_Systems/Interface/acyclic.webp)
 
 -   Two different names (aliasing)
 
@@ -313,7 +313,7 @@ The directory is organized logically to obtain
 
 # General Graph Directory
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/General.webp)
+![General Graph Directory](/img/Year_1/CSys/Operating_Systems/Interface/General.webp)
 
 -   How do we guarantee no cycles?
 
@@ -410,7 +410,7 @@ The directory is organized logically to obtain
 
 -   Three classes of users on Unix/ Linux
 
-    ![image](/img/Year_1/CSys/Operating_Systems/Interface/users.webp)
+    ![Users classes on Unix/ Linux](/img/Year_1/CSys/Operating_Systems/Interface/users.webp)
 
 -   Ask manager to create a group (unique name), say G, and add some
     users to the group
@@ -418,4 +418,4 @@ The directory is organized logically to obtain
 -   For a particular file (say game) or subdirectory, define an
     appropriate access
 
-![image](/img/Year_1/CSys/Operating_Systems/Interface/group.webp)
+![Users classes for subdirectory](/img/Year_1/CSys/Operating_Systems/Interface/group.webp)

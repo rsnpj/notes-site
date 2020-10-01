@@ -68,7 +68,7 @@ absorbed by the pigments
 
 The CMY colour space can be modelled by a cube
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Colour_Spaces/CMY.webp)
+![CMY colour](/img/Year_2/Software_Methodologies/Image_Processing/Colour_Spaces/CMY.webp)
 
 # CMYK colour space
 

@@ -19,7 +19,7 @@ A characteristic of the service such as performance
 
 # Requirement Engineering
 
-![image](/img/Year_2/Software_Engineering/Requirements/Discovery.webp)
+![Discovery](/img/Year_2/Software_Engineering/Requirements/Discovery.webp)
 
 ## Analysis
 
@@ -85,7 +85,7 @@ Requirements error costs are so high so validation is very important
 -   Fixing a requirements error after delivery may cost up to 100 times
     the cost of fixing an implementation error
 
-![image](/img/Year_2/Software_Engineering/Requirements/validation.webp)
+![Validation](/img/Year_2/Software_Engineering/Requirements/validation.webp)
 
 Help ensure delivery of what the client wants\
 Need to be performed at every stage during the (requirements) process

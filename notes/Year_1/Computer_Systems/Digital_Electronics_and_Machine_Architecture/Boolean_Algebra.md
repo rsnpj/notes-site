@@ -9,11 +9,11 @@ There are $2^{2^k}$ possible boolean operations on k inputs
 
 ## XOR
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR.webp)
+![XOR gate table](/img/Year_1/CSys/DEMA/Boolean/XOR.webp)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR2.webp)
+![XOR gate using AND,OR and NOT](/img/Year_1/CSys/DEMA/Boolean/XOR2.webp)
 
-![image](/img/Year_1/CSys/DEMA/Boolean/XOR3.webp)
+![XOR diagram](/img/Year_1/CSys/DEMA/Boolean/XOR3.webp)
 
 # Functionally complete sets
 
@@ -34,7 +34,7 @@ Any logic circuit can be constructed from just the 3 operators:
 
 **NOT**: $\overline{A}=\overline{A+A}$
 
-![image](/img/Year_1/CSys/DEMA/Boolean/NOR.webp)
+![NOT gate](/img/Year_1/CSys/DEMA/Boolean/NOR.webp)
 
 ## NAND Chips
 
@@ -174,7 +174,7 @@ $$
 Y=\bar{A} \bar{B} \bar{C}+A \bar{B} \bar{C}+A \bar{B} C
 $$
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Example.webp)
+![SOP example](/img/Year_1/CSys/DEMA/Boolean/Example.webp)
 
 This layout can be used for any sum-of-products expression. It is how programmable logic arrays are laid out
 
@@ -182,7 +182,7 @@ $$
 Y=\bar{B} \bar{C}+A \bar{B}
 $$
 
-![image](/img/Year_1/CSys/DEMA/Boolean/Example2.webp)
+![SOP example](/img/Year_1/CSys/DEMA/Boolean/Example2.webp)
 
 The simplified expression gives the same logical output with much less hardware
 
@@ -220,8 +220,8 @@ Each axiom has a dual obtained by interchanging AND and OR, and 0 and 1.
 
 # Theorems of several variables
 
-![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar.webp)
-![image](/img/Year_1/CSys/DEMA/Boolean/SeveralVar2.webp)
+![several variables theorems](/img/Year_1/CSys/DEMA/Boolean/SeveralVar.webp)
+![several variables theorems](/img/Year_1/CSys/DEMA/Boolean/SeveralVar2.webp)
 
 # De Morgans
 

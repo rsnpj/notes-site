@@ -71,14 +71,14 @@ Algorithm:
 
 -   Repeat periodically
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Network/distance_vector_routing.webp)
+![Distance vector routing](/img/Year_2/Networks_and_Systems/Networks/Network/distance_vector_routing.webp)
 
 ### The Count-to-Infinity Problem
 
 Failures can cause DV to "count to infinity" while seeking a path to an
 unreachable node
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Network/infinity.webp)
+![Count-to-Infinity Problem](/img/Year_2/Networks_and_Systems/Networks/Network/infinity.webp)
 
 ## Link State Routing
 
@@ -102,14 +102,14 @@ steps:
 A list of the node's neighbours and weights of links to reach them
 </Definition>
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Network/LSP.webp)
+![Link State Packet](/img/Year_2/Networks_and_Systems/Networks/Network/LSP.webp)
 
 # Hierarchical Routing
 
 Hierarchical routing reduces the work of route computation but may
 result in slightly longer paths than flat routing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Network/Hierarchical.webp)
+![Hierarchical Routing](/img/Year_2/Networks_and_Systems/Networks/Network/Hierarchical.webp)
 
 Useful in the internet, each region would be geographical, makes routing
 much faster to compute.
@@ -138,4 +138,4 @@ Broadcast sends a packet to all nodes:
 -   2nd hop: 8 packets are generated, two by each router. 5 of them
     arrive on the preferred link
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Network/Broadcast.webp)
+![Broadcasting](/img/Year_2/Networks_and_Systems/Networks/Network/Broadcast.webp)

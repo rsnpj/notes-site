@@ -101,7 +101,7 @@ Consider the following problem:
 
 -   Heuristic h is a straight line distance to Bishop Aukland
 
-![image](/img/Year_2/Software_Methodologies/AI_Search/Heuristic/a_to_b.webp)
+![Greedy best-first search](/img/Year_2/Software_Methodologies/AI_Search/Heuristic/a_to_b.webp)
 
 The greedy expansion of this doesn’t lead to an optimal path
 
@@ -129,7 +129,7 @@ The greedy expansion of this doesn’t lead to an optimal path
 -   The improvement one gains with greedy best first search is strongly
     dependent upon the quality of the heuristic function
 
-![image](/img/Year_2/Software_Methodologies/AI_Search/Heuristic/lasi.webp)
+![GFS Performance](/img/Year_2/Software_Methodologies/AI_Search/Heuristic/lasi.webp)
 
 # Building a heuristic function
 

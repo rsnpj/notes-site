@@ -4,7 +4,7 @@ title: Security, responsibility and trust in Azure
 
 # Shared responsibility of cloud security
 
-![image](/img/Certifications/AZ900/Security/2-shared_responsibilities.png)
+![Shared-Responsibilities-of-cloud-security](/img/Certifications/AZ900/Security/2-shared_responsibilities.png)
 
 Regardless of the deployment type, you always retain responsibility for:
 

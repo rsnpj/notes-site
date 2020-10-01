@@ -104,7 +104,7 @@ $w=xy, x\in L_1$ and $y\in L_2$
 We need to run $M_1$ on a prefix of $w$ and then to run $M_2$ on the
 rest. To find the break point we guess it (non deterministically)
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/concatenation1.webp)
+![Concatenation](/img/Year_2/Theory_of_Computation/MOC/FSA/concatenation1.webp)
 
 The result is not a DFA because of the red transitions
 
@@ -158,7 +158,7 @@ can be into. As the DFA needs to keep track of all of these, the DFA’s
 states will correspond to subsets of the NFA’s-state set. The transition
 function of the DFA can then be defined as shown below:
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/NFA_to_DFA.webp)
+![NFA into a DFA](/img/Year_2/Theory_of_Computation/MOC/FSA/NFA_to_DFA.webp)
 
 Let $N=(Q,\Sigma, \delta, q_0, F)$ be a NFA recognising some language L
 (assume that L has no $\epsilon$ transitions). We shall construct a DFA
@@ -218,7 +218,7 @@ $$
 A \cup B=\{x | x \in A \text { or } x \in B\}
 $$
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/Union.webp)
+![Union](/img/Year_2/Theory_of_Computation/MOC/FSA/Union.webp)
 
 Concatenation
 
@@ -226,7 +226,7 @@ $$
 A \circ B=\{x y | x \in A \text { and } y \in B\}
 $$
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/Concatenation.webp)
+![Concatenation](/img/Year_2/Theory_of_Computation/MOC/FSA/Concatenation.webp)
 
 Star
 
@@ -234,7 +234,7 @@ $$
 A^{*}=\left\{x_{1} x_{2} \ldots x_{k} | k \geq 0 \text { and } x_{i} \in A \text { for every } i, 1 \leq i \leq k\right\}
 $$
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/Star.webp)
+![Star](/img/Year_2/Theory_of_Computation/MOC/FSA/Star.webp)
 
 # Equivalence of FA and Regular Expressions
 
@@ -263,18 +263,18 @@ $\Rightarrow$ Given a DFA M, construct a RE that recognises L(M)
 
 3.  Every transition is labelled with a regular expression
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/GNFA.webp)
+![Generalised Non-deterministic Finite Automaton](/img/Year_2/Theory_of_Computation/MOC/FSA/GNFA.webp)
 
 # DFA into RE
 
 1.  Convert the given n-state DFA(NFA) into an equivalent n+2 state GNFA
 
-    ![image](/img/Year_2/Theory_of_Computation/MOC/FSA/DFA_to_RE.webp)
+    ![DFA into RE](/img/Year_2/Theory_of_Computation/MOC/FSA/DFA_to_RE.webp)
 
 2.  Eliminate all internal states of the GNFA one by one, while
     preserving the language recognised by the automaton
 
-    ![image](/img/Year_2/Theory_of_Computation/MOC/FSA/DFA_to_RE1.webp)
+    ![DFA into RE fig 2](/img/Year_2/Theory_of_Computation/MOC/FSA/DFA_to_RE1.webp)
 
 3.  We are done, as $L(R)=L(DFA)$
 
@@ -284,7 +284,7 @@ Pick an internal state r for elimination
 
 For every two states u and v $u\neq r\neq v$, do the following
 
-![image](/img/Year_2/Theory_of_Computation/MOC/FSA/Elimination.webp)
+![Internal state elimination](/img/Year_2/Theory_of_Computation/MOC/FSA/Elimination.webp)
 
 # Non-regular languages
 

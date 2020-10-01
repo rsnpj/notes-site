@@ -39,7 +39,7 @@ G.
 
 # A drawing of a graph
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/drawing.webp)
+![Graph diagram](/img/Year_1/MCS/DMLA/Graph_Theory/drawing.webp)
 
 This is a drawing of the graph G=(V,E) with $V=\{a,b,c,d,e,f\}$ and $E=\{ab,ac,bc,bd,ce,de,ef\}$
 
@@ -152,7 +152,7 @@ Some graphs appear so often they have special names
 
 ## $P_3$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/p3.webp)
+![$P_3$ graph](/img/Year_1/MCS/DMLA/Graph_Theory/p3.webp)
 
 This is denotes an $P_3$ and in general we define $P_n$ as a path on n
 vertices i.e. a graph with vertex set $\{v_1,v_2,...,v\}$ and edge set
@@ -165,7 +165,7 @@ $k\geqslant 1$. This notion is called a **simple path**
 
 ## $C_4$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/c4.webp)
+![$C_4$ graph](/img/Year_1/MCS/DMLA/Graph_Theory/c4.webp)
 
 In general a cycle $C_n$ on n verticies is defined similarly as a $P_n$,
 but with an additional edge between $v_n$ and $v_n$. So $C_n$ has n
@@ -178,7 +178,7 @@ integer $k\geqslant 3$. This notion is called a **simple circuit**
 
 ## $K_{p,q}$
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/kpq.webp)
+![$K_{p,q}$ graph](/img/Year_1/MCS/DMLA/Graph_Theory/kpq.webp)
 
 All four of these graphs can be described as $K_{p,q}$: a graph
 consisting of two disjoint vertex sets on p and q vertices and all the
@@ -213,7 +213,7 @@ one entry
 
 $Q_1=P_2=K_2$; $Q_2=C_4$. For n=3, the set V consists of $2^3=8$ elements
 
-![image](/img/Year_1/MCS/DMLA/Graph_Theory/n_dimension.webp)
+![Example](/img/Year_1/MCS/DMLA/Graph_Theory/n_dimension.webp)
 
 # More on n cubes
 

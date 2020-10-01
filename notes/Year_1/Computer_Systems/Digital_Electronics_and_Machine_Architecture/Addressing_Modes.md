@@ -91,9 +91,9 @@ Loop over a table, and increment a value each time
 
 ## Indexed
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/indexed.webp)
+![Adding colum indexed](/img/Year_1/CSys/DEMA/Addressing_Modes/indexed.webp)
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/indexed1.webp)
+![Adding colum indexed table](/img/Year_1/CSys/DEMA/Addressing_Modes/indexed1.webp)
 
 Note the index is decremented each time
 
@@ -112,18 +112,18 @@ addressing mode
 **Relative addressing** - The address read is an offset to the current
 instruction address
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative.webp)
+![Relative addressing ](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative.webp)
 
 **Base offset addressing** - the address read is offset by the current
 value in a special 'base' register
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative1.webp)
+![Base offset addressing](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative1.webp)
 
 **IBM zSystem Load instruction:**
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative2.webp)
+![IBM zSystem Load instruction ](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative2.webp)
 
-![image](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative3.webp)
+![IBM zSystem Load instruction ](/img/Year_1/CSys/DEMA/Addressing_Modes/alternative3.webp)
 
 # Instructions
 

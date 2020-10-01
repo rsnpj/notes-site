@@ -8,7 +8,7 @@ lecturer: Magnus
 A transistor is just an electronically controlled switch: 2 ports (d and
 s) are connected depending on the voltage of 3rd (g)
 
-![image](/img/Year_1/CSys/DEMA/Gates/Fig1.webp)
+![Transistor](/img/Year_1/CSys/DEMA/Gates/Fig1.webp)
 The most common transistor is the MOSFET (Metal Oxide Semiconductor
 Field Effect Transistor)
 
@@ -17,7 +17,7 @@ available electrons(4) are used to form bonds with neighbouring atoms\
 Impurities (dopants) provide extra electrons or electron holes which
 increase conductivity
 
-![image](/img/Year_1/CSys/DEMA/Gates/Fig2.webp)
+![n and p type silicon](/img/Year_1/CSys/DEMA/Gates/Fig2.webp)
 
 In n type silicon it has a negative charge overall as there is a free
 electron in the lattice
@@ -34,7 +34,7 @@ The n type is a more efficient carrier.
 At a junction between p-type and n-type silicon, current can only flow
 from p type to n-type. This is a diode.
 
-![image](/img/Year_1/CSys/DEMA/Gates/Fig3.webp)
+![Diodes](/img/Year_1/CSys/DEMA/Gates/Fig3.webp)
 
 -   Attach a negative charge near the p type, the holes will be
     attracted. This will cause a depleted region in the middle. A
@@ -63,7 +63,7 @@ It takes time and energy to charge and discharge a capacitor
 
 ### nMOS transistor
 
-![image](/img/Year_1/CSys/DEMA/Gates/nMOS.webp)
+![nMOS transistor](/img/Year_1/CSys/DEMA/Gates/nMOS.webp)
 
 When the gate g is at $V_{DD}$, the capacitor effect draws negative
 charge (electrons) to the surface, and create a temporary channel of n
@@ -80,7 +80,7 @@ type silicon, which allows current to flow from source to drain
 
 A pMOS transistor is the opposite: on at g low and off at g high
 
-![image](/img/Year_1/CSys/DEMA/Gates/pMOS.webp)
+![pMOS transistor](/img/Year_1/CSys/DEMA/Gates/pMOS.webp)
 
 -   This is the same design as the nMOS transistor, but with the doped
     silicon the other way round
@@ -108,25 +108,25 @@ Basic Operations
 
 ### AND
 
-![image](/img/Year_1/CSys/DEMA/Gates/AND.webp)
+![AND gate](/img/Year_1/CSys/DEMA/Gates/AND.webp)
 
 ### OR
 
-![image](/img/Year_1/CSys/DEMA/Gates/OR.webp)
+![OR gate](/img/Year_1/CSys/DEMA/Gates/OR.webp)
 
 ### NOT
 
-![image](/img/Year_1/CSys/DEMA/Gates/NOT.webp)
+![NOT gate](/img/Year_1/CSys/DEMA/Gates/NOT.webp)
 
 # From transistors to gates
 
 ## NOT
 
-![image](/img/Year_1/CSys/DEMA/Gates/NOTTrans.webp)
+![NOT gate ](/img/Year_1/CSys/DEMA/Gates/NOTTrans.webp)
 
 ## NAND
 
-![image](/img/Year_1/CSys/DEMA/Gates/NANDTrans.webp)
+![NAND gate](/img/Year_1/CSys/DEMA/Gates/NANDTrans.webp)
 
 # Beneath the digital abstraction
 
@@ -151,14 +151,14 @@ by defining **logic levels**
 
 ## Logic Levels
 
-![image](/img/Year_1/CSys/DEMA/Gates/LogicLevels.webp)
+![Logic levels](/img/Year_1/CSys/DEMA/Gates/LogicLevels.webp)
 
 -   It is best for logic levels in a system to all be the same so that
     the components can best interoperate with each other.
 
 ## Transfer characteristics
 
-![image](/img/Year_1/CSys/DEMA/Gates/TransferChar.webp)
+![Transfer characteristics](/img/Year_1/CSys/DEMA/Gates/TransferChar.webp)
 
 -   An ideal inverter would output $V_{DD}$ for outputs up to $V_{DD}/2$
     and output 0 for inputs above $V_{DD}/2$

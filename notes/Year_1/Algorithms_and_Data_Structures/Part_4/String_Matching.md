@@ -27,7 +27,7 @@ P:bdde
     $$0 \leq s \leq n-m \text { and } T[s+1, \ldots, s+m]=P[1 \ldots m]$$
     e.g.
 
-    ![image](/img/Year_1/ADS/Part_4/String_Matching/Terminology.webp)
+    ![String-Matching Terminology](/img/Year_1/ADS/Part_4/String_Matching/Terminology.webp)
 
     Where we've got a shift of 4
 
@@ -100,7 +100,7 @@ operation(takes constant time), when in reality it isn't
 
 # Example
 
-![image](/img/Year_1/ADS/Part_4/String_Matching/Example.webp)
+![Naive-algorithm example](/img/Year_1/ADS/Part_4/String_Matching/Example.webp)
 
 Clearly running time $\mathcal{O}((n-m+1)\cdot m)$
 

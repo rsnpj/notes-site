@@ -102,7 +102,7 @@ length' (x:xs) = 1 + length' xs
 
 Calling length’ on \[1,2,3\] does:
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/Function_Calls.webp)
+![function call](/img/Year_2/Programming_Paradigms/Functional/Recursion/Function_Calls.webp)
 
 -   Each entry on the stack uses memory
 
@@ -329,7 +329,7 @@ foldr f z []     = z
 foldr f z (x:xs) = x `f` (foldr f z xs)
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldr.webp)
+![foldr](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldr.webp)
 
 ### foldl: left associative fold
 
@@ -341,7 +341,7 @@ foldl f z []     = z
 foldl f z (x:xs) = foldl f (z `f` x) xs -- tail recursive
 ```
 
-![image](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldl.webp)
+![foldl](/img/Year_2/Programming_Paradigms/Functional/Recursion/foldl.webp)
 
 ### Why would I use them?
 

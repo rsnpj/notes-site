@@ -30,7 +30,7 @@ You may also need additional subscriptions due to subscription limits as
 they have hard limits, such as the max number of Express Route circuits
 per subscription is 10.
 
-![image](/img/Certifications/AZ900/Account/4-billing-structure-overview.png)
+![Billing structure](/img/Certifications/AZ900/Account/4-billing-structure-overview.png)
 
 # Support options
 

@@ -28,7 +28,7 @@ Digital signals (0,1) are encoded by low and high voltage
 
 There are many digital encoding schemes
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Physical/Modulation.webp)
+![Digital Modulation](/img/Year_2/Networks_and_Systems/Networks/Physical/Modulation.webp)
 
 ## NRZ Encoding (Non-Return-to-Zero)
 
@@ -104,7 +104,7 @@ applications
 -   Put a small region in-between adjacent frequency bands to avoid
     interference
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Physical/FDM.webp)
+![Frequency Division Multiplexing](/img/Year_2/Networks_and_Systems/Networks/Physical/FDM.webp)
 
 1.  The original bandwidths
 
@@ -116,14 +116,14 @@ applications
 
 -   The same as FDM but for optical fibres instead of wireless signals
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Physical/WDM.webp)
+![Wavelength Division Multiplexing](/img/Year_2/Networks_and_Systems/Networks/Physical/WDM.webp)
 
 ## Time division multiplexing
 
 -   Intersperse the channels in some sequence, leave a guard time to be
     able to separate out information
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Physical/TDM.webp)
+![Time division multiplexing](/img/Year_2/Networks_and_Systems/Networks/Physical/TDM.webp)
 
 ## Code Division Multiple Access
 

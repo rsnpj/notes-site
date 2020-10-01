@@ -84,7 +84,7 @@ Much of this is now incorporated in the UML
 
 ## Hierarchy in statecharts
 
-![image](/img/Year_2/Software_Engineering/Modelling/Objects/statecharts.webp)
+![Hierarchy in statecharts](/img/Year_2/Software_Engineering/Modelling/Objects/statecharts.webp)
 
 # The Sequence Diagram
 
@@ -127,7 +127,7 @@ The sequence diagram can have two roles:
 -   Messages between objects are shown as solid horizontal arrows
     between the lifelines of the sender and recipient
 
-![image](/img/Year_2/Software_Engineering/Modelling/Objects/sequence_diagram.webp)
+![Sequence Diagram](/img/Year_2/Software_Engineering/Modelling/Objects/sequence_diagram.webp)
 
 ## Additional features
 
@@ -153,15 +153,15 @@ about methods, data etc in the boxes)
 
 This notation is widely used, including by many tools
 
-![image](/img/Year_2/Software_Engineering/Modelling/Objects/class.webp)
+![class diagram](/img/Year_2/Software_Engineering/Modelling/Objects/class.webp)
 
 Converted to UML it would look like this
 
-![image](/img/Year_2/Software_Engineering/Modelling/Objects/class-uml.webp)
+![Converted to UML](/img/Year_2/Software_Engineering/Modelling/Objects/class-uml.webp)
 
 The arrow heads mean as follows
 
-![image](/img/Year_2/Software_Engineering/Modelling/Objects/arrows.webp)
+![arrow heads](/img/Year_2/Software_Engineering/Modelling/Objects/arrows.webp)
 
 # Analysis
 

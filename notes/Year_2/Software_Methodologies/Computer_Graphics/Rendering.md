@@ -19,11 +19,11 @@ Two types:
 
 Fixed Function Pipeline
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Fixed-Function.webp)
+![imaFixed Function Pipelinege](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Fixed-Function.webp)
 
 Programmable Rendering Pipeline
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/programmable.webp)
+![Programmable Rendering Pipeline](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/programmable.webp)
 
 # Local and World Coordinate
 
@@ -59,7 +59,7 @@ Typically either a window on a screen or a view volume
 The Cohen-Sutherland Line-Clipping Algorithm works by dividing the area
 around the clip region as follows
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Clipping.webp)
+![Clipping](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Clipping.webp)
 
 -   This allows us to quickly identify lines to be trivially
     accept/reject
@@ -76,7 +76,7 @@ around the clip region as follows
 
 Break a primitive into pixel fragments
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Rasterization.webp)
+![Rasterization](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Rasterization.webp)
 
 -   Consider rasterizing a triangle $(v_1,v_2,v_3)$
 
@@ -137,4 +137,4 @@ $$
 -   $\phi$: angle between V and R
 -   $\cos^n(\phi)$ - The large the value of N, the smaller the cos value
 
-![image](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Specular_Lighting.webp)
+![Specular lighting](/img/Year_2/Software_Methodologies/Computer_Graphics/Rendering/Specular_Lighting.webp)
