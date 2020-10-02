@@ -286,7 +286,7 @@ Whereas De Morgan's Laws allow us to simplify formulae with respect to
 negations we often have "combinations" of disjunctions and
 conjunctions.
 
-The Distributive Law of Disjunction over Conjunction is:\
+The Distributive Law of Disjunction over Conjunction is:
 
 $$
 p\lor (q\land r)\equiv (p\lor q)\land (p\lor r)
