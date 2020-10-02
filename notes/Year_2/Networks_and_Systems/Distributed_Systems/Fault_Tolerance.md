@@ -62,7 +62,8 @@ N-Version Programming (NVP):
 
 ## Information Redundancy
 
-Encode outputs with error detection or correcting code\
+Encode outputs with error detection or correcting code
+
 Advantage:
 
 -   Less hardware is required than replicating module

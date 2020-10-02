@@ -159,7 +159,7 @@ Created using mknod (only accessible by root)
 
     -   Image randomization (OS boots in one of 256 configurations)
 
-    -   Services restart if failed (not the best practise for security)
+    -   Services restart if failed (not the best practice for security)
 
         -   Vista+ sets some critical services to only restart twice,
             then manual restart
