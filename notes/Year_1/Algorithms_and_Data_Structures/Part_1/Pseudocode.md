@@ -9,13 +9,13 @@ lecturer: Matthew
 
 Properties an algorithm must have
 
-- Correctness
+-   Correctness
 
-- Composed of concrete unambiguous steps
+-   Composed of concrete unambiguous steps
 
-- The number of steps must be finite
+-   The number of steps must be finite
 
-- Must terminate
+-   Must terminate
 
 # Data Structures
 
@@ -26,12 +26,12 @@ a computer so it can be used efficiently
 
 Random Access Machine
 
-- Memory consists of an infinite array
+-   Memory consists of an infinite array
 
-- Instructions executed sequentially one at a time
+-   Instructions executed sequentially one at a time
 
-- All instructions take unit time. Running time is the number of
-  executions executed
+-   All instructions take unit time. Running time is the number of
+    executions executed
 
 # Pseudocode
 
@@ -44,7 +44,7 @@ Declare variable type before using.
 
 Different formats for setting equal.
 
-Some conventions declare type separate to value, some do not\
+Some conventions declare type separate to value, some do not
 
 Logical operators included.
 
@@ -52,7 +52,7 @@ Logical operators included.
 
 To make one thing happen if a statement is true, and one if it is false,
 two if statements can be used, but using an else statement is better,
-for example\
+for example
 
 ```
 if x != 0 then
@@ -66,7 +66,7 @@ end if and indentation is used to make things clearer
 
 ## For loop
 
-If you want to iterate some (numeric) variable through some range
+Used if you want to iterate some (numeric) variable through some range
 
 Great many variations in how languages do this, simplest is probably
 
@@ -92,11 +92,11 @@ print s
 
 Things this for loop does without being written down:
 
-- Set I=L
+-   Set I=L
 
-- Iterate i by 1
+-   Iterate i by 1
 
-- Check if $i\leqslant U$
+-   Check if $i\leqslant U$
 
 In this for loop, it can only iterate consecutive integers
 

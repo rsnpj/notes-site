@@ -29,12 +29,12 @@ end if
 
 # Recursive Algorithms
 
-- A recursive algorithm must have a **base case**
+-   A recursive algorithm must have a **base case**
 
-- A recursive algorithm must **change** its state and move towards the
-  base case
+-   A recursive algorithm must **change** its state and move towards the
+    base case
 
-- A recursive algorithm must **call itself**, recursively
+-   A recursive algorithm must **call itself**, recursively
 
 # Lists
 
@@ -79,16 +79,16 @@ fibs
     return fibs(n-1)+fibs(n-2)
 ```
 
-- This is exceptionally slow as the whole previous Fibonacci sequence
-  is calculated in order to calculate each number, whereas with
-  iteration the values are calculated then stored.
+-   This is exceptionally slow as the whole previous Fibonacci sequence
+    is calculated in order to calculate each number, whereas with
+    iteration the values are calculated then stored.
 
-- The number of calls will be on the order of $2^{N}$ with recursion,
-  whereas iteration will use N calls
+-   The number of calls will be on the order of $2^{N}$ with recursion,
+    whereas iteration will use N calls
 
-- A way to speed up the recursive step is to store the values
-  calculated, as values are calculated multiple times in the previous
-  method
+-   A way to speed up the recursive step is to store the values
+    calculated, as values are calculated multiple times in the previous
+    method
 
 ## Palindromes
 
@@ -121,7 +121,7 @@ floodfill(x,y)
 
 Store the obtained results.
 
-For example a memoized recursive algorithm for fibonacci numbers would
+For example a memoized recursive algorithm for Fibonacci numbers would
 be:
 
 ```
@@ -135,13 +135,13 @@ return fib_memo[n]
 
 # Backtracking
 
-- A technique for problems with many **candidate** solutions but too
-  many to try
+-   A technique for problems with many **candidate** solutions but too
+    many to try
 
-- For example there are a huge number of ways to fill a sudoku grid
+-   For example there are a huge number of ways to fill a sudoku grid
 
-- General idea: Build up the solution one step at a time,
-  **backtracking** when unable to continue
+-   General idea: Build up the solution one step at a time,
+    **backtracking** when unable to continue
 
 ## Informal generic algorithm
 
@@ -153,7 +153,7 @@ return fib_memo[n]
 
 4.  Do I have a solution now? If yes, I'm done
 
-5.  If not, try and extend again
+5.  If not, try to extend again
 
 6.  When I can't extend, take one step back and try a different way
 
@@ -196,14 +196,14 @@ end if
 
 ## Implementing Knights Tour
 
-- Rather than having a list of moves made, it is easier to maintain an
-  $8\times8$ array recording when each square was visited (initially
-  all values are zero)
+-   Rather than having a list of moves made, it is easier to maintain an
+    $8\times8$ array recording when each square was visited (initially
+    all values are zero)
 
-- Use a counter to record how many squares have been visited
+-   Use a counter to record how many squares have been visited
 
-- If every square has been visited, we must also check that we can
-  return to the start in one more move
+-   If every square has been visited, we must also check that we can
+    return to the start in one more move
 
 # Queens Problem
 

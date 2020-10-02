@@ -3,7 +3,6 @@ title: "Arrays"
 lecturer: Matthew
 ---
 
-
 # Arrays
 
 <Definition name="Array">A sequence of elements $a_1, a_2 ... a_n$</Definition>
@@ -27,7 +26,7 @@ large the data structure is
 
 _What if we want to erase an element?_
 
-Once again, easy to find element. However there would be an empty space
+Once again, easy to find element. However, there would be an empty space
 left, so all following elements would have to be shifted, making it a
 slow process overall. Affected by size of dataset and position in the
 dataset.
@@ -42,35 +41,35 @@ adds complexity.
 
 # Linked lists
 
-- A **list** is made up of **nodes**. Each node stores an element (a
-  piece of data) plus a pointer or "**link**" to another node
+-   A **list** is made up of **nodes**. Each node stores an element (a
+    piece of data) plus a pointer or "**link**" to another node
 
-- The first node is called the **head**
+-   The first node is called the **head**
 
-- The last node, called the **tail** points to null
+-   The last node, called the **tail** points to null
 
-- The nodes may be scattered all over the memory
+-   The nodes may be scattered all over the memory
 
-- Each node points to the next node in the list
+-   Each node points to the next node in the list
 
 ## Implementing a list
 
 Assume for a list `L` we have pointers to the first as well as the last
 node of list:
 
-- `L.head`
+-   `L.head`
 
-- `L.tail`
+-   `L.tail`
 
-- (and possibly we also have `L.size`) - if the size of the list is
-  often requested, it is easier to set this up at the start, rather
-  than calculating every time
+-   (and possibly we also have `L.size`) - if the size of the list is
+    often requested, it is easier to set this up at the start, rather
+    than calculating every time
 
 May refer to node `N` using:
 
-- `N.data`, the element
+-   `N.data`, the element
 
-- `N.next`, the link, the next node in the list (may be `NULL`)
+-   `N.next`, the link, the next node in the list (may be `NULL`)
 
 `NULL` means "there's nothing there", i.e., last element has no
 successor
@@ -149,23 +148,23 @@ M.next=N.next
 
 # Doubly linked lists
 
-- A node in a **doubly** linked list stores two references:
+-   A node in a **doubly** linked list stores two references:
 
-  - a next link, which points to the next node in the list
+    -   a next link, which points to the next node in the list
 
-  - a prev link, which points to the previous node in the list
+    -   a prev link, which points to the previous node in the list
 
-- To simplify, we add two **dummy** or sentinel nodes at the ends of
-  the doubly linked list:
+-   To simplify, we add two **dummy** or sentinel nodes at the ends of
+    the doubly linked list:
 
-  - The header has a valid next reference but a null prev reference
+    -   The header has a valid next reference but a null prev reference
 
-  - The trailer has a valid prev reference but a null next reference
+    -   The trailer has a valid prev reference but a null next reference
 
-  - These act as the head and tail of the list, contain no data
+    -   These act as the head and tail of the list, contain no data
 
-  - These are useful as they will never be deleted during operations
-    on the list.
+    -   These are useful as they will never be deleted during operations
+        on the list.
 
 A doubly linked list needs to store references to the two sentinel nodes
 and a size counter keeping track of the number of nodes in the list (not
@@ -175,17 +174,17 @@ An empty list would have the two sentinel nodes pointing to each other
 
 # Circularly linked list
 
-- A **circularly** linked list has the same kind of nodes as a singly
-  linked list. That is, each node has a next pointer and a reference
-  to an element
+-   A **circularly** linked list has the same kind of nodes as a singly
+    linked list. That is, each node has a next pointer and a reference
+    to an element
 
-- The circularly linked list has no beginning or end. You can think of
-  it as a singly linked list, where the last nodes next pointer,
-  instead of being `NULL`, points back to the first node
+-   The circularly linked list has no beginning or end. You can think of
+    it as a singly linked list, where the last nodes next pointer,
+    instead of being `NULL`, points back to the first node
 
-- Instead of references to the head and tail, we mark a node of a
-  circularly linked list as the cursor. The cursor is the starting
-  node when we traverse the list
+-   Instead of references to the head and tail, we mark a node of a
+    circularly linked list as the cursor. The cursor is the starting
+    node when we traverse the list
 
 **Deletion from a doubly linked list**
 
@@ -224,17 +223,17 @@ Output: ?
 
 What is the output and how is obtained. How long does this procedure
 take (that is, say, how many times do we make the comparison of A\[j\]
-and e in the condition of the **if** statement
+and e in the condition of the **if** statement)
 
-- First time through the loop, puts the smallest item in the array in
-  A\[0\]
+-   First time through the loop, puts the smallest item in the array in
+    A\[0\]
 
-- Then puts the second smallest item in the array in `A[1]` etc etc
+-   Then puts the second smallest item in the array in `A[1]` etc etc
 
-- This provides a list sorted from smallest to largest
+-   This provides a list sorted from smallest to largest
 
-- This is running the sorting algorithm selection sort
+-   This is running the sorting algorithm selection sort
 
-- Comparisons $(n-1)+(n-2)...$
+-   Comparisons $(n-1)+(n-2)...$
 
-- Complexity is approximately $n^2$
+-   Complexity is approximately $n^2$
