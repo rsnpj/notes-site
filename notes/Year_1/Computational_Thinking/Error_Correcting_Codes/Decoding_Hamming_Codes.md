@@ -33,7 +33,7 @@ $$
 c=mG=(1,0,0,0,0,1,1)
 $$
 
-During transmission on the channel, the sixth bit is flipped, the reciever then obtains
+During transmission on the channel, the sixth bit is flipped, the receiver then obtains
 
 $$
 v=(1,0,0,0,0,0,1)

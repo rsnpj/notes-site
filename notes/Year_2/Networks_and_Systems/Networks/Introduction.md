@@ -75,9 +75,9 @@ station, aka "access point"
 
 # Physical media
 
-**Bit**: Propagates between transmitter/reciever pairs
+**Bit**: Propagates between transmitter/receiver pairs
 
-**Physical link**: What lies between the transmitter and reciever
+**Physical link**: What lies between the transmitter and receiver
 
 **Guided media**: Signals propagate in solid media (usually cables or
 fibers)
