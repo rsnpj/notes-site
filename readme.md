@@ -38,4 +38,4 @@ In which case we call $H_{w,b}$ a separating hyperplane.
  
  ## Performance issues in Firefox with uBlock Origin
  
- By default uBlock Origin disables link prefetching, which is one of the methods that the websites uses to increase performance. If you notice the site being slow when you are using Firefox with uBlock Origin, you can change this in the uBlock Origin settings on the **settings** tab under **privacy** uncheck **disable link prefetching**.
+ By default uBlock Origin disables link prefetching, which is one of the methods that the websites use to increase performance. If you notice the site being slow when you are using Firefox with uBlock Origin, you can change this in the uBlock Origin settings on the **settings** tab under **privacy** uncheck **disable link prefetching**.
