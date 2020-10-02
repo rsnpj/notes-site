@@ -19,7 +19,7 @@ Two observations
 1.  The theorem talks about comparison based sorting algorithms. The
     vast majority of sorting algorithms are in that class
 
-2.  Theorem says that \"there exists an input\". That means that for
+2.  Theorem says that "there exists an input". That means that for
     most inputs of length n it may actually beat the bound, but that
     there must be at leat one for which it does not
 
@@ -57,40 +57,40 @@ below"
 
 The idea of radix sort:
 
-- have as many buckets as you've got different digits, that is, for
-  base 10 you've got 10 of them
+-   have as many buckets as you've got different digits, that is, for
+    base 10 you've got 10 of them
 
-- Repeatedly bucket sort by given digit
+-   Repeatedly bucket sort by given digit
 
-- number of rounds will depend on values (the longer the base 10
-  representations, the more rounds), but number of buckets only
-  depends on number of different digits
+-   number of rounds will depend on values (the longer the base 10
+    representations, the more rounds), but number of buckets only
+    depends on number of different digits
 
 This has a running time of $\Theta(d\cdot n)$ where d is the maximum
 number of digits per item (rounds)
 
 Comparing this to bucket sort
 
-- RadixSort: $\Theta (n\cdot \log K)$
+-   RadixSort: $\Theta (n\cdot \log K)$
 
-- BucketSort:$\Theta (n+K)$
+-   BucketSort:$\Theta (n+K)$
 
 This means that for different inputs different types are better:
 
-- if K=n then $\Theta (n\log n)$ vs $\Theta (n)\rightarrow$ BucketSort
-  Wins
+-   if K=n then $\Theta (n\log n)$ vs $\Theta (n)\rightarrow$ BucketSort
+    Wins
 
-- if $K=n^2$ then $\Theta (n\log n)$ vs $\Theta (n^2)\rightarrow$
-  RadixSort Wins
+-   if $K=n^2$ then $\Theta (n\log n)$ vs $\Theta (n^2)\rightarrow$
+    RadixSort Wins
 
-- if $K=2^n$ then $\Theta(n^2)$ vs $\Theta(2^n)\rightarrow$ RadixSort
-  Wins
+-   if $K=2^n$ then $\Theta(n^2)$ vs $\Theta(2^n)\rightarrow$ RadixSort
+    Wins
 
 # Searching and Selecting
 
 Suppose you're given n numbers in array $A[1,...n]$
 
-Further suppose numbers are in sorted order
+Further, suppose numbers are in sorted order
 
 To make things slightly simpler, assume the n numbers are pairwise
 distinct, that is, no two are the same
@@ -128,29 +128,29 @@ Notice that this needs the fact that x is equal to one of the A\[i\]
 
 Same assumptions as before:
 
-- Peek right into the middle of the given array, at position
-  $p=\lceil n/2 \rceil$
+-   Peek right into the middle of the given array, at position
+    $p=\lceil n/2 \rceil$
 
-- If A\[p\]=x then we're lucky and done, and can return p
+-   If A\[p\]=x then we're lucky and done, and can return p
 
-- Otherwise, if X is greater than A\[p\], we may focus our search on
-  the stuff to the right of A\[p\] and may completely ignore anything
-  to it's left, because x is already bigger than A\[p\] and hence must
-  be even bigger than A\[1\...p-1\].
+-   Otherwise, if X is greater than A\[p\], we may focus our search on
+    the stuff to the right of A\[p\] and may completely ignore anything
+    to it's left, because x is already bigger than A\[p\] and hence must
+    be even bigger than A\[1\...p-1\].
 
-- Likewise, if x is smaller than A\[p\], we may focus our search on
-  stuff to the left of A\[p\] and may completely ignore anything to
-  its right.
+-   Likewise, if x is smaller than A\[p\], we may focus our search on
+    stuff to the left of A\[p\] and may completely ignore anything to
+    its right.
 
-  That's because x is already smaller than A\[p\] and hence must be
-  even smaller than $A[p+1...n]$.
+    That's because x is already smaller than A\[p\] and hence must be
+    even smaller than $A[p+1...n]$.
 
-  Hence, if the "top level" call was search(A,1,n,x) for "search
-  within array A, between the indices of 1 and n for element x". We
-  could now recursively call from within this function search, using
-  the updated indices, like so:
+    Hence, if the "top-level" call was search(A,1,n,x) for "search
+    within array A, between the indices of 1 and n for element x". We
+    could now recursively call from within this function search, using
+    the updated indices, like so:
 
-  `search(A,1,p-1,x)`
+    `search(A,1,p-1,x)`
 
 int search (int A\[1..n\], int left, int right, int x)
 
@@ -175,17 +175,17 @@ part of the array in which x is hiding).
 
 So far, had assumed that:
 
-- The input is sorted, and
+-   The input is sorted, and
 
-- We're looking for the position p of an element of given value v
+-   We're looking for the position p of an element of given value v
 
 Now we're changing the set-up
 
-- input is unsorted, and
+-   input is unsorted, and
 
-- We're looking for value of the ith smallest element in the input
-  (clearly, if input were sorted, it'd be trivial: return ith from the
-  left)
+-   We're looking for value of the ith smallest element in the input
+    (clearly, if input were sorted, it'd be trivial: return ith from the
+    left)
 
 ## Quickselect
 
@@ -215,10 +215,10 @@ This has the flaw that if the input is in sorted order and you always
 pick the right most element as pivot, then just as slow as QuickSort is
 when it's slow.
 
-- The part (LOW/HIGH) that's being recursed into is just one element
-  smaller than the current input is
+-   The part (LOW/HIGH) that's being recursed into is just one element
+    smaller than the current input is
 
-- $T(n)=T(n-1)+\mathcal{O}(n)$ which means $T(n)=\Theta(n^2)$
+-   $T(n)=T(n-1)+\mathcal{O}(n)$ which means $T(n)=\Theta(n^2)$
 
 So actually can be rather a lot slower than sorting with e.g. MergeSort
 
@@ -243,9 +243,9 @@ This can be sped up to $\mathcal{O}(n)$ by first randomising the input
 5.  Partition the entire input around x. Let k be the number of elements
     on low side plus one
 
-    - x is the kth smallest element, and
+    -   x is the kth smallest element, and
 
-    - there are n-k elements on high side of the partition
+    -   there are n-k elements on high side of the partition
 
 6.  if i=k, return x. Otherwise use Select recursively to find ith
     smallest element of low side if $i<k$, or (i-k)th smallest on high

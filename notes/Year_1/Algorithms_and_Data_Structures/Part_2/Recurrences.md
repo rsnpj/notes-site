@@ -6,52 +6,52 @@ lecturer: Rob
 # Intro
 
 We've seen two types of algorithms: iterative and recursive. To analyse
-iterative algorithms,
+iterative algorithms:
 
-- look at loop structure,
+-   Look at loop structure,
 
-- identify relevant operations, and
+-   Identify relevant operations, and
 
-- essentially, count them.
+-   Essentially, count them.
 
 One often ends up with some sort of sum (the more nested loops, the more
 nested sums).
 
 To analyse recursive algorithms, first of all note that most of them are
 actually hybrids between iterative and strictly recursive (e.g., the
-Partition funcion in QuickSort is iterative, the rest of QuickSort is
+Partition function in QuickSort is iterative, the rest of QuickSort is
 recursive.
 
 Anyway,
 
-- Look at recursive structure, e.g. Mergesort
+-   Look at recursive structure, e.g. Mergesort
 
-  - Split input of size n into two halves of equal size n/2 each
+    -   Split input of size n into two halves of equal size n/2 each
 
-  - Independently recurse into each half
+    -   Independently recurse into each half
 
-  - merge the resulting sorted sequences
+    -   merge the resulting sorted sequences
 
-- This will normally give you a recurrence, pretty much trivially:
-  $$
-  T ( n ) \leq \left\{ \begin{array} { l l } { d } & { \text { if } n \leq c , \text { for constants } c , d > 0 } \\ { \underbrace { 2 \cdot T ( n / 2 ) } _ { \text { recursions } } + \underbrace { a \cdot n } _ { \text { merging } } } & { \text { otherwise } } \end{array} \right.
-  $$
+-   This will normally give you a recurrence, pretty much trivially:
+    $$
+    T ( n ) \leq \left\{ \begin{array} { l l } { d } & { \text { if } n \leq c , \text { for constants } c , d > 0 } \\ { \underbrace { 2 \cdot T ( n / 2 ) } _ { \text { recursions } } + \underbrace { a \cdot n } _ { \text { merging } } } & { \text { otherwise } } \end{array} \right.
+    $$
 
-Three methods for solving such recurrencesL
+Three methods for solving such recurrences:
 
-- Induction (aka guess substitute and verify)
+-   Induction (aka guess substitute and verify)
 
-- Iterative substitution (spot the pattern)
+-   Iterative substitution (spot the pattern)
 
-- Master theorem
+-   Master theorem
 
 # Induction
 
 Quite simple really, only need to:
 
-- "guess" correct solution and
+-   "guess" correct solution and
 
-- Verify base case(s) and step
+-   Verify base case(s) and step
 
 Former is art, latter is maths
 
@@ -61,7 +61,7 @@ some constant number of steps, full stop.
 
 Interesting technical bit is step (recursion as well as induction).
 
-Consider again the recurrence for mergesort
+Consider again the recurrence for mergesort:
 
 $$
 T ( n ) \leq \left\{ \begin{array} { l l } { d } & { \text { if } n \leq c , \text { for constants } c , d > 0 } \\ { \underbrace { 2 \cdot T ( n / 2 ) } _ { \text { recursions } } + \underbrace { a \cdot n } _ { \text { merging } } } & { \text { otherwise } } \end{array} \right.
@@ -148,18 +148,25 @@ $$
 This looks like we can do this $\log_2n$ many times, and we'll find that
 after i many times
 
-- First term: $2^iT(n/2^i)$
+-   First term: $2^iT(n/2^i)$
 
-- Second term $ian$
+-   Second term $ian$
 
-Therefore after $\log_2n$ many times, $2^{\log_2n}\cdot$ \"base case
+Therefore, after $\log_2n$ many times, $2^{\log_2n}\cdot$ \"base case
 value\"+$\log_2(n)an=\mathcal{O}(n\log n)$
 
 # Master Theorem
 
-Can use if the recurrence is of the form: $$T(n) = aT(n/b) + f (n)$$ for
-$a\geqslant 1$ and $b>1$\
-Eg. Mergesort a=2, b=2, f(n)=an\
+Can use if the recurrence is of the form:
+
+$$
+T(n) = aT(n/b) + f (n)
+$$
+
+for $a\geqslant 1$ and $b>1$
+
+Eg. Mergesort a=2, b=2, f(n)=an
+
 Three cases:
 
 1.  If

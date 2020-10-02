@@ -198,7 +198,7 @@ All bitonic sequences of 0s and 1s are of the form:
 
 ## "Shapes" of bitonic sequences
 
-![“Shapes-bitonic-sequences](/img/Year_1/ADS/Part_3/Networks/shapes.webp)
+![Shapes-bitonic-sequences](/img/Year_1/ADS/Part_3/Networks/shapes.webp)
 
 ## Properties of bitonic sequences
 

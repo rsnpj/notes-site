@@ -23,25 +23,25 @@ end for
 
 We know:
 
-- When j has a certain value, it insets the jth element into already
-  sorted sequence $a_1,...,a_{j-1}$
+-   When j has a certain value, it insets the jth element into already
+    sorted sequence $a_1,...,a_{j-1}$
 
-- Can be proved correct by using invariant "after jth iteration first
-  j+1 elements are in order" (not necessarily in the correct position
-  for at the end of the sort)
+-   Can be proved correct by using invariant "after jth iteration first
+    j+1 elements are in order" (not necessarily in the correct position
+    for at the end of the sort)
 
-- Running time between n-1 and $\dfrac{n(n-1)}{2}$ - worst case
-  $\mathcal{O}(n^2)$
+-   Running time between n-1 and $\dfrac{n(n-1)}{2}$ - worst case
+    $\mathcal{O}(n^2)$
 
 Method:
 
-- After the first n cycles, the first n+1 numbers are in order (not
-  necessarily wrt the rest of the list)
+-   After the first n cycles, the first n+1 numbers are in order (not
+    necessarily wrt the rest of the list)
 
-- If there are repeats as the algorithm looks for strictly greater,
-  suppose the list started with 2 twos, the algorithm would look at it
-  as sorted. The order of repeated elements will not be changed. We
-  call an algorithm that works like this **stable**
+-   If there are repeats as the algorithm looks for strictly greater,
+    suppose the list started with 2 twos, the algorithm would look at it
+    as sorted. The order of repeated elements will not be changed. We
+    call an algorithm that works like this **stable**
 
 # Selection sort
 
@@ -63,20 +63,20 @@ end for
 
 How does it work?
 
-- Invariant: after ith iteration positions $1,...,i$ contain the
-  overall i many smallest elements in order
+-   Invariant: after ith iteration positions $1,...,i$ contain the
+    overall i many smallest elements in order
 
-- Not necessarily the first i elements
+-   Not necessarily the first i elements
 
-- In ith iteration of outer loop, we search the ith smallest element
-  in remainder (positions $i+1,...,n$) of input and swap it into
-  position i
+-   In ith iteration of outer loop, we search the ith smallest element
+    in remainder (positions $i+1,...,n$) of input and swap it into
+    position i
 
-  - elem keeps track of the current idea of value ith smallest
-    element
+    -   `elem` keeps track of the current idea of value ith smallest
+        element
 
-  - pos keeps track of current idea of position of the ith smallest
-    element
+    -   `pos` keeps track of current idea of position of the ith smallest
+        element
 
 Time Complexity:
 
@@ -104,7 +104,7 @@ for i=1 to n-2 do
 end for
 ```
 
-This can be improved by keeping track of whether or not an element was
+This can be improved by keeping track of whether an element was
 swapped
 
 BubbleSort-1 $(a_1,...,a_n\in \mathbb{R}, n\geqslant 2)$
@@ -146,18 +146,18 @@ $$
 
 The basic idea is simple
 
-- If given sequence of no more than one element then we're done
+-   If given sequence of no more than one element then we're done
 
-- Otherwise (Length$>1$) split sequence into two shorter sequences of
-  equal lenth, sort them recursively and merge the two resulting
-  sequences
+-   Otherwise (Length$>1$) split sequence into two shorter sequences of
+    equal length, sort them recursively and merge the two resulting
+    sequences
 
 Assumption:
 
-- Length of top level input sequence is a power of two
+-   Length of top-level input sequence is a power of two
 
-- This allows for nice splitting into equally sized sub problems as
-  they can all reduce to $2\times 1$
+-   This allows for nice splitting into equally sized sub problems as
+    they can all reduce to $2\times 1$
 
 list MergeSort (list m)
 
@@ -179,30 +179,30 @@ return Merge(leftsorted, rightsorted)
 
 This depth first approach is the easiest way to program it
 
-- There can be issues here with recursion depth as all the data is
-  stored in memory, so some computers/programming languages will be
-  unable to do it
+-   There can be issues here with recursion depth as all the data is
+    stored in memory, so some computers/programming languages will be
+    unable to do it
 
-- Note that this keeps a copy of the original data
+-   Note that this keeps a copy of the original data
 
 ## How to merge two sorted sequences
 
-- Also simple
+-   Also simple
 
-- Suppose two sorted sequences given as arguments, say left and right
+-   Suppose two sorted sequences given as arguments, say left and right
 
-- Start with initially empty result sequence
+-   Start with initially empty result sequence
 
-- If both left and right aren't empty look at the leftmost element
-  from each, say $l_1$ and $r_1$
+-   If both left and right aren't empty look at the leftmost element
+    from each, say $l_1$ and $r_1$
 
-- If $l_1<r_1$ then append $l_1$ to the result (and remove it from
-  left) otherwise append $r_1$ to result (and remove it from right)
+-   If $l_1<r_1$ then append $l_1$ to the result (and remove it from
+    left) otherwise append $r_1$ to result (and remove it from right)
 
-- If either left or right is empty, append the entire other one to the
-  result
+-   If either left or right is empty, append the entire other one to the
+    result
 
-- Repeat until both empty
+-   Repeat until both empty
 
 ```python
 list MergeSort (list left, list right)
@@ -227,31 +227,31 @@ end while
 return result
 ```
 
-- Best case is for merging two sublists length n is n, where the 1st
-  list are all smaller than the 2nd list
+-   Best case is for merging two sublists length n is n, where the 1st
+    list are all smaller than the 2nd list
 
-- In worst case the lists will be empty upon reaching the last element
-  of both
+-   In worst case the lists will be empty upon reaching the last element
+    of both
 
-  - Alternating inputs in sublists (1,3,5,7) and (2,4,6,8) for
-    example
+    -   Alternating inputs in sublists (1,3,5,7) and (2,4,6,8) for
+        example
 
 Mergesort:
 
-- is probably the simplest recursive sorting algorithm
+-   Is probably the simplest recursive sorting algorithm
 
-- It's bad cases are a lot less bad than those of some other sorting
-  algorithms
+-   Its bad cases are a lot less bad than those of some other sorting
+    algorithms
 
-- It's good cases, however may be worse than some algorithms
+-   Its good cases, however may be worse than some algorithms
 
-- More technically, MergeSort always requires $n\log (n)$ steps to
-  sort any n numbers
+-   More technically, MergeSort always requires $n\log (n)$ steps to
+    sort any n numbers
 
-- Some of the above can get away with $\approx n$ in particularly
-  nice, but **will** require $\approx n^2$ for others
+-   Some of the above can get away with $\approx n$ in particularly
+    nice, but **will** require $\approx n^2$ for others
 
-- $n^2$ is a lot worse than $n\log(n)$
+-   $n^2$ is a lot worse than $n\log(n)$
 
 # QuickSort
 
@@ -259,34 +259,34 @@ Note that this algorithm is all in place
 
 This is an example of divide and conquer
 
-- Does the hard work at the start, unlike merge sort
+-   Does the hard work at the start, unlike merge sort
 
-- Split input into two parts
+-   Split input into two parts
 
-- Recursively sort then, one after the other
+-   Recursively sort then, one after the other
 
-- Concatenate the resulting, sorted subsequences
+-   Concatenate the resulting, sorted subsequences
 
 Method:
 
-- At the beginning of each recursive call, QuickSort picks one element
-  from the current sequence, the **pivot**
+-   At the beginning of each recursive call, QuickSort picks one element
+    from the current sequence, the **pivot**
 
-- The partitioning will be done wrt to the pivot
+-   The partitioning will be done wrt to the pivot
 
-  - Each element smaller than the pivot goes into the left part
+    -   Each element smaller than the pivot goes into the left part
 
-  - Each element bigger than the pivot goes into the right part
+    -   Each element bigger than the pivot goes into the right part
 
-  - parts may have very different sizes
+    -   parts may have very different sizes
 
-- In some sense,
+-   In some sense,
 
-  - MergeSort does the complicated part after the sorted
-    subsequences come back from recursive calls
+    -   MergeSort does the complicated part after the sorted
+        subsequences come back from recursive calls
 
-  - QuickSort does its difficult bit prior to recursing. This means
-    that simple concatenation afterwards is OK
+    -   QuickSort does its difficult bit prior to recursing. This means
+        that simple concatenation afterwards is OK
 
 The basic flow is as follows:
 

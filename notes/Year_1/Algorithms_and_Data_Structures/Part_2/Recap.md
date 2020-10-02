@@ -3,16 +3,17 @@ title: Recap
 lecturer: Rob
 ---
 
-
 # Polynomials
 
 ## Definition
 
 Let $n\geqslant 0$ be an integer, and let $a_0,a_1,...,a_n$ be real
 numbers, $a_n\neq0$ the function:
+
 $$
 f(x)=a_n\cdot x^n+a_{n-1}\cdot x^{n-1}+...+a_1\cdot x+a_0
 $$
+
 is called a **polynomial**
 
 The numbers $a_0,...,a_n$ are called **coefficients**
@@ -44,18 +45,18 @@ $$
 
 be polynomials of degrees n and m respectively
 
-- the **sum** of the polynomials f(x)+g(x) is a polynomial of
-  **degree** max{n,m}
+-   the **sum** of the polynomials f(x)+g(x) is a polynomial of
+    **degree** max{n,m}
 
-- the **product** of the polynomials $f(x)\cdot g(x)$ is a polynomial
-  of degree n+m. Product is multiplying two functions together
+-   the **product** of the polynomials $f(x)\cdot g(x)$ is a polynomial
+    of degree n+m. Product is multiplying two functions together
 
-- the **composition** of the polynomials $f(g(x))$ is a polynomial of
-  degree $n\cdot m$. Composition is replacing the x terms in f(x) with
-  g(x). Remember $f(g(x))\neq g(f(x))$
+-   the **composition** of the polynomials $f(g(x))$ is a polynomial of
+    degree $n\cdot m$. Composition is replacing the x terms in f(x) with
+    g(x). Remember $f(g(x))\neq g(f(x))$
 
-- The degree is the important part, as most other parts are
-  insignificant as x becomes large
+-   The degree is the important part, as most other parts are
+    insignificant as x becomes large
 
 # Positive integer powers
 
@@ -156,13 +157,13 @@ For a fixed positive real number a, the function $$f(x)=a^x$$ is called
 
 Let $a,b,x,y$ be real numbers with $a,b>0$. Then
 
-- $a^x\cdot a^y=a^{x+y}$
+-   $a^x\cdot a^y=a^{x+y}$
 
-- $a^{-x}=\frac{1}{a_x}$
+-   $a^{-x}=\frac{1}{a_x}$
 
-- $(a^x)^y=a^{x\cdot y}$
+-   $(a^x)^y=a^{x\cdot y}$
 
-- $(ab)^x=a^x\cdot b^x$
+-   $(ab)^x=a^x\cdot b^x$
 
 ## Proposition 2
 
@@ -192,24 +193,29 @@ $$
 
 Let $a,x,y$ be positive real numbers $a\neq 1$ we have
 
-- $\log_axy=log_ax+log_ay$
+-   $\log_axy=log_ax+log_ay$
 
-- $\log_a\frac{x}{y}=\log_ax-\log_ay$
+-   $\log_a\frac{x}{y}=\log_ax-\log_ay$
 
-- $\log_ax^s=s\cdot \log_ax$ for any real s
+-   $\log_ax^s=s\cdot \log_ax$ for any real s
 
 **Proof**
 
-- $a^{\log_ax+\log_ay}=a^{\log_ax}\cdot a^{\log_ay}=x\cdot y$
+-   $a^{\log_ax+\log_ay}=a^{\log_ax}\cdot a^{\log_ay}=x\cdot y$
 
-- $a^{\log_ax-\log_ay}=a^{\log_ax}\cdot a^{-\log_ay}=\frac{x}{y}$
+-   $a^{\log_ax-\log_ay}=a^{\log_ax}\cdot a^{-\log_ay}=\frac{x}{y}$
 
-- $a^{s\log_ax}=(a^{\log_ax})^s=x^s$
+-   $a^{s\log_ax}=(a^{\log_ax})^s=x^s$
 
 ### Proposition
 
 Let $a,b,x$ be positive real numbers, $a,b \neq 1$, Then
-$$\log_ax=\dfrac{log_bx}{\log_ba}$$ So logarithms to different constant
+
+$$
+\log_ax=\dfrac{log_bx}{\log_ba}
+$$
+
+So logarithms to different constant
 bases only differ by a constant
 
 **Proof**
@@ -236,10 +242,10 @@ $$
 
 Defined for positive real numbers is called **logarithmic**
 
-- Logarithmic functions are **inverses** of exponential functions
+-   Logarithmic functions are **inverses** of exponential functions
 
-- They are only defined on positive real numbers
+-   They are only defined on positive real numbers
 
-- For any base, the logarithm of 1 to that base is 0
+-   For any base, the logarithm of 1 to that base is 0
 
-- For $a>1$ logarithms to the base a increase monotonically.
+-   For $a>1$ logarithms to the base a increase monotonically.

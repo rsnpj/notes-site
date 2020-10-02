@@ -46,7 +46,7 @@ $$
  \mathbf { g } ( 10,000 )  = 2 ^ { 10,000 } = 2 ^ { 10.1000 } = 1024 ^ { 1000 }  \gg 1000 ^ { 133 } \approx 10,000 ^ { 100 } = \mathbf { f } ( 10,000 )
 $$
 
-- Subbing in values will allow you to find the crossover point
+-   Subbing in values will allow you to find the crossover point
 
 # Time complexity
 
@@ -58,16 +58,16 @@ a particular size.
 
 Examples of basic operations are:
 
-- additions
+-   additions
 
-- multiplications
+-   multiplications
 
-- comparisons of two numbers (tends to be the slowest of the basic
-  operations)
+-   comparisons of two numbers (tends to be the slowest of the basic
+    operations)
 
-- swaps
+-   swaps
 
-- assignments of values to variables
+-   assignments of values to variables
 
 The **space complexity** of an algorithm is expressed in terms of the
 memory required by the algorithm for an input of a particular size. Will
@@ -87,15 +87,16 @@ different numbers of multiplications and additions.
 _How many operations of both types do we need in the straightforward
 way?_
 
-- n operations 1st term, n-1 2nd term etc etc
+-   n operations 1st term, n-1 2nd term etc etc
 
-- Roughly $n^2$ operations to perform
+-   Roughly $n^2$ operations to perform
 
 _Is there a smarter way (in terms of the number of operations)?_
 
 It can be evaluated as follows
 
 Polynomial($x_0,a_0,...,a_n$: real numbers)
+
 ```python
 power = 1
 y=a[0]
@@ -104,13 +105,13 @@ for i=1 to n:
     y=y+a[i] * power
 ```
 
-- This builds the power up as you go along so vastly reduces re
-  calculating
+-   This builds the power up as you go along so vastly reduces re
+    calculating
 
 If we use this procedure, then we will need 2n multiplications and n
 additions to evaluate a polynomial of degree n at $x=x_0$
 
-However there is an alternate method
+However, there is an alternate method
 
 Horner($a_0,a_0,...,a_n$:real numbers)
 
@@ -130,7 +131,8 @@ The real numbers $a_1,...,a_n, n\geqslant 2$ can be sorted (i.e.
 arranged in ascending order) by the **insertion sort** algorithm
 
 Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
-```python    
+
+```python
 for j=2 to n:
     x=x[j]
     i=j-1
@@ -141,9 +143,11 @@ for j=2 to n:
 ```
 
 The **worst case** for number of comparisons $a_i>x$ is:
+
 $$
 1 + 2 + \ldots + ( n - 1 ) = \frac { n ( n - 1 ) } { 2 }
 $$
+
 If $a_1\leqslant a_2\leqslant...\leqslant a_n$ then the number of
 comparisons $a_j>x$ is n-1
 
@@ -157,30 +161,30 @@ algorithm when the input has a particular size
 
 ### More on worst case time complexity
 
-- Worst case analysis tells us how many operations an algorithm
-  requires to guarantee that it will produce a solution
+-   Worst case analysis tells us how many operations an algorithm
+    requires to guarantee that it will produce a solution
 
-- The worst-case time analysis is a standard way to estimate the
-  efficiency of algorithms. Usually **time complexity** means **worst
-  case time complexity**
+-   The worst-case time analysis is a standard way to estimate the
+    efficiency of algorithms. Usually **time complexity** means **worst
+    case time complexity**
 
-- Another important type of complexity analysis is called **average
-  case** analysis. Here we are interested in the average number of
-  operations over all inputs of a given size
+-   Another important type of complexity analysis is called **average
+    case** analysis. Here we are interested in the average number of
+    operations over all inputs of a given size
 
-- It is difficult to compute the **exact** number of operations
+-   It is difficult to compute the **exact** number of operations
 
-- Usually we don't need it. It is sufficient to **estimate** this
-  number i.e. give **bounds**
+-   Usually we don't need it. It is sufficient to **estimate** this
+    number i.e. give **bounds**
 
-- We are more interested in **upper bounds** for the worst case
-  analysis
+-   We are more interested in **upper bounds** for the worst case
+    analysis
 
-- These bounds should give us the possibility to estimate **growth**
-  of the number of operations when the input size increases
+-   These bounds should give us the possibility to estimate **growth**
+    of the number of operations when the input size increases
 
-- It is important to estimate the number of operations then the input
-  size is **large**
+-   It is important to estimate the number of operations then the input
+    size is **large**
 
 # Big O
 
@@ -193,42 +197,42 @@ $$| f ( x ) | \leq C \cdot | g ( x ) |$$ whenever $x\geqslant k$
 
 ## More on Big O
 
-- The definition is introduced for general functions. If we consider
-  time complexity functions all functions will have positive values,
-  and we do not have to be concerned about the absolute value signs.
+-   The definition is introduced for general functions. If we consider
+    time complexity functions all functions will have positive values,
+    and we do not have to be concerned about the absolute value signs.
 
-- The definition says that after a certain point, namely after k, the
-  absolute value of $f(x)$ is bounded by C times the absolute value of
-  $g(x)$
+-   The definition says that after a certain point, namely after k, the
+    absolute value of $f(x)$ is bounded by C times the absolute value of
+    $g(x)$
 
-- In terms of time complexities $f(x)$ is no worse than $C\cdot g(x)$
-  for all relatively large input sizes x
+-   In terms of time complexities $f(x)$ is no worse than $C\cdot g(x)$
+    for all relatively large input sizes x
 
-- C is a fixed constant usually depending on the choice of k. We are
-  not allowed to increase C as x increases
+-   C is a fixed constant usually depending on the choice of k. We are
+    not allowed to increase C as x increases
 
-- The constants C and k in the definition of big-$\mathcal{O}$ are
-  called the **witnesses** to the relationship $f(x)$ is
-  $\mathcal{O}(g(x))$
+-   The constants C and k in the definition of big-$\mathcal{O}$ are
+    called the **witnesses** to the relationship $f(x)$ is
+    $\mathcal{O}(g(x))$
 
-- If there is a pair of witnesses to the relationship $f(x)$ is
-  $\mathcal{O}(g(x))$, then there are infinitely many pairs of
-  witnesses to that relationship
+-   If there is a pair of witnesses to the relationship $f(x)$ is
+    $\mathcal{O}(g(x))$, then there are infinitely many pairs of
+    witnesses to that relationship
 
-- Indeed if C and k are one pair of witnesses, then any pair C' and
-  k', where $C\leqslant C'$ and $k\leqslant k'$, is also a pair of
-  witnesses
+-   Indeed if C and k are one pair of witnesses, then any pair C' and
+    k', where $C\leqslant C'$ and $k\leqslant k'$, is also a pair of
+    witnesses
 
-- To establish that $f(x)$ is $\mathcal{O}(g(x))$ we need only one
-  pair of witnesses to this relationship. (We can be \"generous\",
-  i.e., we do not have to look for the best values of C and k)
+-   To establish that $f(x)$ is $\mathcal{O}(g(x))$ we need only one
+    pair of witnesses to this relationship. (We can be \"generous\",
+    i.e., we do not have to look for the best values of C and k)
 
 ## Examples
 
 ### Example 1
 
-- Here we are replacing all x terms with $x^2$, then the numbers will
-  come out easily.
+-   Here we are replacing all x terms with $x^2$, then the numbers will
+    come out easily.
 
 _Let $f(x)=x^2+2x+1$. Then $f(x)=\mathcal{O}(x^2)$_
 
@@ -288,12 +292,15 @@ $a\geqslant 1$; a contradiction
 ### Example 4
 
 The polynomial
+
 $$
 f ( x ) = a _ { n } x ^ { n } + a _ { n - 1 } x ^ { n - 1 } + \ldots + a _ { 1 } x + a _ { 0 }
 $$
+
 at a fixed value $x_0$ can be evaluated as follows
 
 Insertion($a_1,...,a_n$: real numbers with $n\geqslant2$)
+
 ```python
 for j=2 to n:
   x=x[j]
@@ -303,11 +310,12 @@ for j=2 to n:
     i=i-1
   a[i+1]=x
 ```
+
 $$
 y=a_nx_0^n+a_{n-1}x_0^{n-1}+...+a_1x_0+a_0
 $$
-The time complexity of the procedure is $\mathcal{O}(n)$
 
+The time complexity of the procedure is $\mathcal{O}(n)$
 
 ## Summary
 
@@ -410,6 +418,7 @@ f_1(x)+f_2(x)=4x^3+3x^2+3
 $$
 
 ### The product rule
+
 If $f_1(x)$ is $\mathcal{O}(g_1(x))$ and $f_2(x)$ is $\mathcal{O}(g_2(x))$, then $f_1(x)\cdot f_2(x)$ is $\mathcal{O}(g_1{x}\cdot g_2{x})$
 
 When multiplying two functions $f_1$ and $f_2$, then the $\mathcal{ O }$
@@ -428,12 +437,17 @@ $$
 ### Example
 
 Let $a_0,a_1,\ldots,a_n$ be real numbers,
+
 $$
-f ( x ) = a _ { n } \cdot x ^ { n } + a _ { n - 1 } \cdot x ^ { n - 1 } + \ldots + a _ { 1 } \cdot x + a _ { 0} 
+f ( x ) = a _ { n } \cdot x ^ { n } + a _ { n - 1 } \cdot x ^ { n - 1 } + \ldots + a _ { 1 } \cdot x + a _ { 0}
 $$
+
 Then
+
 $$
-f(x)=\mathcal{O}(x^n)$$
+f(x)=\mathcal{O}(x^n)
+$$
+
 For each $0\leqslant k\leqslant n$,
 $x^k=\mathcal{O}(x^n)$
 
@@ -452,7 +466,8 @@ lower bounds which is called **Big-Omega notation**
 
 Let $f(x)$ and $g(x)$ be functions from the set of real number to the
 set of real numbers. We say that $f(x)$ is $\Omega(g(x))$ if there are
-positive constants C and k such that 
+positive constants C and k such that
+
 $$
 |f(x)|\geqslant C\cdot |g(x)|
 $$
@@ -480,16 +495,20 @@ $|g(x)|\leqslant C_2\cdot |f(x)|$ whenever $x\geqslant k$
 
 $$
 3x^2+2x+1
-$$ 
+$$
+
 $$
 1\leqslant x\leqslant x^2 \ where \ x\geqslant 1
 $$
+
 $$
 3x^2+2x+1\leqslant 3x^2+2x^2+x^2=6x^2
 $$
+
 $$
 3x^2\leqslant 3x^2+2x+1\leqslant 6x^2
 $$
+
 $$
 k=1, C_1=3, C_2=6, g(x)=x^2
 $$
@@ -508,17 +527,23 @@ something at the same rate
 
 Let $f(x)$ and $g(x)$ be functions from the set of real numbers to the
 set of real numbers. We say that $f(x)$ is $o(g(x))$ when:
+
 $$
-\lim_{x\to\infty} \dfrac{f(x)}{g(x)}=0
+\lim\_{x\to\infty} \dfrac{f(x)}{g(x)}=0
 $$
+
 Without the limit, this can be shown as:
+
 $$
 o ( g ) = \{ f : \mathbb { N } \rightarrow \mathbb { N } | \forall C > 0 \exists k > 0 : C \cdot f ( n ) < g ( n ) \forall n \geq k \}
 $$
+
 This is actually saying
+
 $$
-C\cdot f(n)<g(n)  \ \text{for all values of C greater than 0}
+C\cdot f(n)<g(n) \ \text{for all values of C greater than 0}
 $$
+
 Solving is best done using the limit formula
 
 The non limit formula is best for proving that something isn't little o
@@ -542,24 +567,29 @@ function. With little o notation we can make this very precise.
 ### Definition
 
 A function $f(x)$ is called **sublinear** if $f(x)$ is $o(x)$, so if
+
 $$
-\lim_{x\to\infty}\dfrac{f(x)}{x}=0
+\lim\_{x\to\infty}\dfrac{f(x)}{x}=0
 $$
 
 ### Examples
 
 The function $f(x)=100x/\log x$ is sublinear since
+
 $$
-\lim_{x\to\infty}\dfrac{f(x)}{x}=\lim_{x\to\infty}\dfrac{100}{\log x}=0
+\lim*{x\to\infty}\dfrac{f(x)}{x}=\lim*{x\to\infty}\dfrac{100}{\log x}=0
 $$
+
 The function $f(x)=\sqrt[3]{x^2}$ is sublinear since:
+
 $$
-\lim_{x\to\infty}\dfrac{f(x)}{x}=\lim_{x\to\infty}\dfrac{x^{\frac{2}{3}}}{x}=\lim_{x\to\infty}x^{-\frac{1}{3}}=0
+\lim*{x\to\infty}\dfrac{f(x)}{x}=\lim*{x\to\infty}\dfrac{x^{\frac{2}{3}}}{x}=\lim\_{x\to\infty}x^{-\frac{1}{3}}=0
 $$
 
 # Little omega
 
 $\omega$ is to $o$ what $\Omega$ is to $\mathcal{O}$
+
 $$
 f=\omega(g) \qquad \Leftrightarrow \qquad g=o(f)
 $$
@@ -578,36 +608,47 @@ generally. You can use the rules without proving them
 ## Theorem
 
 $$
-\text { If } f _ { 1 } ( x ) \text { is } o ( g ( x ) ) \text { and } f _ { 2 } ( x ) \text { is o } ( g ( x ) ) , \text { then } f _ { 1 } ( x ) + f _ { 2 } ( x ) \text { is }  { o ( g ( x ) ) . }
+\text { If } f _ { 1 } ( x ) \text { is } o ( g ( x ) ) \text { and } f _ { 2 } ( x ) \text { is o } ( g ( x ) ) , \text { then } f _ { 1 } ( x ) + f _ { 2 } ( x ) \text { is } { o ( g ( x ) ) . }
 $$
 
 ## Theorem
 
 $$
-{ \text { If } f _ { 1 } ( x ) \text { is } O ( g ( x ) ) \text { and } f _ { 2 } ( x ) \text { is o } ( g ( x ) ) , \text { then } f _ { 1 } ( x ) + f _ { 2 } ( x ) \text { is } } { O ( g ( x ) ) . }$$
+{ \text { If } f _ { 1 } ( x ) \text { is } O ( g ( x ) ) \text { and } f _ { 2 } ( x ) \text { is o } ( g ( x ) ) , \text { then } f _ { 1 } ( x ) + f _ { 2 } ( x ) \text { is } } { O ( g ( x ) ) . }
+$$
 
 ## Theorem
 
 If $f_1(x)$ is $\Theta(g(x))$ and $f_2(x)$ is $o(g(x))$, then $f_1(x)+f_2(x)$ is $\Theta(g(x))$
+
 # Summary for $g:\mathbb{ N }\rightarrow \mathbb{ N }$
 
 Equivalent to $\leqslant$
+
 $$
 \mathcal { O } ( g ) = \{ f : \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{blue}{\exists} C , k > 0 : \mathbf{f ( n ) \leq C \cdot g ( n )} \forall n \geq k \}
 $$
+
 Equivalent to $\geqslant$
+
 $$
-\Omega ( g ) = \{ f :  \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{blue}{\exists} C , k > 0 :\mathbf{ f ( n ) \geq C \cdot g ( n )} \forall n \geq k \}
+\Omega ( g ) = \{ f : \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{blue}{\exists} C , k > 0 :\mathbf{ f ( n ) \geq C \cdot g ( n )} \forall n \geq k \}
 $$
+
 Equivalent to =
+
 $$
 \Theta ( g ) = \left\{ f : \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{blue}{\exists} C _ { \mathbf { 1 } } , C _ { 2 } , k > 0 : \mathbf{\quad C _ { \mathbf { 1 } } \cdot g ( n ) \leq f ( n ) \leq C _ { 2 } \cdot g ( n )} \forall n \geq k \right\}
 $$
+
 Equivalent to $<$
+
 $$
 o ( g ) = \{ f : \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{red}{\forall} C > 0 \exists k > 0 : \mathbf{C \cdot f ( n ) < g ( n )} \forall n \geq k \}
 $$
+
 Equivalent to $>$
+
 $$
 \omega ( g ) = \{ f : \mathbb{ N } \rightarrow \mathbb{ N } | \textcolor{red}{\forall} C > 0 \exists k > 0 : \mathbf{f ( n ) > C \cdot g ( n )} \forall n \geq k \}
 $$
