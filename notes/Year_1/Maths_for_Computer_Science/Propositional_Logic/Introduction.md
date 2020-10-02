@@ -43,7 +43,7 @@ propositional variables and formulae by the use of logical operators
 
 ## Construction
 
-The operators $\land, \lor , \Rightarrow$ and $\Leftrightarrow$ take two
+The operators $\land, \lor, \Rightarrow$ and $\Leftrightarrow$ take two
 propositional formulae $\varphi$ and $\psi$
 
 The operator $\lnot$ takes one propositional formula $\varphi$ and
@@ -58,7 +58,7 @@ then build $(\varphi \land \psi)\lor\chi$\
 $\varphi \land (\psi\lor\chi)$ means first build $\psi\lor\chi$ and then
 build $\varphi \land (\psi\lor\chi)$
 
-## Some typical well formed formulae
+## Some typical well-formed formulae
 
 $$\lnot((\lnot b\land a)\Rightarrow(c\lor\lnot d))$$
 $$((a\land\lnot a)\lor((b\lor c)\lor d))\Leftrightarrow d$$
@@ -141,7 +141,7 @@ is the same thing as
 "Either I explain this clearly or the students won't understand"
 
 To see this, denote the sub-statement "I don't explain this clearly"
-as **X** and denote the sub statement "the students won't understand" as **Y**
+as **X** and denote the sub-statement "the students won't understand" as **Y**
 
 The former statement is thus $X\Rightarrow Y$ and the latter:
 
@@ -525,7 +525,7 @@ Non-Examinable from here on
         c.n.f, so it takes time exponential in the size of the formula
         to solve
 
--   However, modern day SAT-solvers can give extremely good results
+-   However, modern-day SAT-solvers can give extremely good results
 
-    -   Note that all modern day SAT-solvers need their inputs to be in
+    -   Note that all modern-day SAT-solvers need their inputs to be in
         c.n.f
