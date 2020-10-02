@@ -60,7 +60,7 @@ lecturer: George
 
 -   Their place in the big picture
 
-![image](/img/Year_1/CSys/Databases/SQL/overview.webp)
+![Query langauge types](/img/Year_1/CSys/Databases/SQL/overview.webp)
 
 # Writing SQL statements
 
@@ -139,7 +139,7 @@ lecturer: George
 
 All examples are based on the following tables:
 
-![image](/img/Year_1/CSys/Databases/SQL/example.webp)
+![Examples of syntax](/img/Year_1/CSys/Databases/SQL/example.webp)
 
 ## Simple queries
 
@@ -264,7 +264,7 @@ WHERE first_column_name>12000
     SELECT propertyNo FROM Viewing
     ```
 
-    ![image](/img/Year_1/CSys/Databases/SQL/duplicate.webp)
+    ![Rows duplicates](/img/Year_1/CSys/Databases/SQL/duplicate.webp)
 
 -   Use DISTINCT to eliminate duplicates
 
@@ -441,7 +441,7 @@ Aggregate functions:
 
 -   return a single (numeric) value
 
-![image](/img/Year_1/CSys/Databases/SQL/Aggregate.webp)
+![Aggregate function](/img/Year_1/CSys/Databases/SQL/Aggregate.webp)
 
 ## Examples
 
@@ -768,7 +768,7 @@ FROM (Branch b JOIN Staff s USING branchNo)
 
 ### Example
 
-![image](/img/Year_1/CSys/Databases/SQL/example1.webp)
+![Outer Join example](/img/Year_1/CSys/Databases/SQL/example1.webp)
 
 **Left outer Join**
 

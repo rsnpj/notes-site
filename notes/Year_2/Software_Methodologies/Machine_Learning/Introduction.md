@@ -5,9 +5,9 @@ lecturer: Lei
 
 # Machine Learning Lifecycle
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle.webp)
+![Machine Learning Lifecycle](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle.webp)
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle1.webp)
+![Machine Learning Lifecycle fig 2](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Lifecycle1.webp)
 
 -   Randomise the data order so that the model doesn’t train for
     specific orders
@@ -67,7 +67,7 @@ behaviours
 A reinforcement learning algorithm just aims to maximise its rewards by
 playing the game over and over again
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Categories.webp)
+![Categories](/img/Year_2/Software_Methodologies/Machine_Learning/Introduction/Categories.webp)
 
 # Key terms
 

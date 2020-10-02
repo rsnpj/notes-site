@@ -5,11 +5,11 @@ lecturer: Andrei
 
 # Comparator
 
-![Comparator](/img/Year_1/ADS/Part_3/Networks/comparator.webp "A comparator")
+![A Comparator](/img/Year_1/ADS/Part_3/Networks/comparator.webp "A comparator")
 
 This works in $\mathcal{O}(1)$ time
 
-![Network](/img/Year_1/ADS/Part_3/Networks/intro.webp)
+![Comparator example](/img/Year_1/ADS/Part_3/Networks/intro.webp)
 
 Wires go straight, left to right
 
@@ -35,7 +35,7 @@ This comparison network will sort any set of 4 input values
 
 # Selection sorter
 
-![image](/img/Year_1/ADS/Part_3/Networks/selection.webp)
+![Selection sorter](/img/Year_1/ADS/Part_3/Networks/selection.webp)
 
 Depth:
 
@@ -73,7 +73,7 @@ $\mathcal{O}(\log n)$, with the caveats:
 
 For example:
 
-![image](/img/Year_1/ADS/Part_3/Networks/network.webp)
+![Simplification example](/img/Year_1/ADS/Part_3/Networks/network.webp)
 
 This is very similar to **bubble sort**
 
@@ -85,7 +85,7 @@ The questions are now:
 
 It can be viewed as a sorting network of depth n:
 
-![image](/img/Year_1/ADS/Part_3/Networks/network1.webp)
+![Simplification-sorting network of depth n](/img/Year_1/ADS/Part_3/Networks/network1.webp)
 
 We will prove this using the 0/1 principle and induction
 
@@ -124,7 +124,7 @@ $a=(a_0,...,a_{n-1})$ be 0/1 sequence
     0 then jump horses); might as well replace them with fixed crossing
     lines
 
-    ![image](/img/Year_1/ADS/Part_3/Networks/networkProof.webp)
+    ![case when a_{n-1}=0 ](/img/Year_1/ADS/Part_3/Networks/networkProof.webp)
 
 -   What remains is OETS network for input size n-1 so we're done
 
@@ -135,9 +135,9 @@ $a=(a_0,...,a_{n-1})$ be 0/1 sequence
 -   You have a monotonic function $f:\mathbb{Z}\rightarrow\mathbb{Z}$
 -   Where monotone is for every $x\leqslant y \Rightarrow f(x)\leqslant f(y)$
 -   Apply the monotonic function to a comparator
-    ![Network](/img/Year_1/ADS/Part_3/Networks/comparator.webp)
+    ![A Comparator](/img/Year_1/ADS/Part_3/Networks/comparator.webp)
     This would create
-    ![Network](/img/Year_1/ADS/Part_3/Networks/0-1.webp)
+    ![After applying monotonic function to a comparator](/img/Year_1/ADS/Part_3/Networks/0-1.webp)
 
 -   As this is true for a comparator, it will be true for any network of
     comparators
@@ -198,7 +198,7 @@ All bitonic sequences of 0s and 1s are of the form:
 
 ## "Shapes" of bitonic sequences
 
-![image](/img/Year_1/ADS/Part_3/Networks/shapes.webp)
+![“Shapes-bitonic-sequences](/img/Year_1/ADS/Part_3/Networks/shapes.webp)
 
 ## Properties of bitonic sequences
 
@@ -225,7 +225,7 @@ $$
 
 ### Step 0: Half cleaner
 
-![image](/img/Year_1/ADS/Part_3/Networks/half_cleaner.webp)
+![Half cleaner](/img/Year_1/ADS/Part_3/Networks/half_cleaner.webp)
 
 If clean in lower part: all 1s
 
@@ -248,7 +248,7 @@ repeatedly for all elements
 
 ### Step 1: Bitonic Sorter
 
-![image](/img/Year_1/ADS/Part_3/Networks/bitonic_sorter.webp)
+![Bitonic Sorter](/img/Year_1/ADS/Part_3/Networks/bitonic_sorter.webp)
 
 Using the bitonic sorters on the clean version, while not actually doing
 anything, keeps the data in the correct place. Supposing the converse
@@ -274,15 +274,15 @@ $$
 -   Don't explicitly reverse Y, instead reverse the bottom half of the
     connections of the first half-cleaner
 
-![image](/img/Year_1/ADS/Part_3/Networks/reverse_cleaner.webp)
+![reverse-cleaner](/img/Year_1/ADS/Part_3/Networks/reverse_cleaner.webp)
 
-![image](/img/Year_1/ADS/Part_3/Networks/full_network.webp)
+![full-network](/img/Year_1/ADS/Part_3/Networks/full_network.webp)
 
 ### Step 3: Asorting network
 
 Recursive merging - like merge sort, bottom up:
 
-![image](/img/Year_1/ADS/Part_3/Networks/AsortingNetwork.webp)
+![Asorting-network](/img/Year_1/ADS/Part_3/Networks/AsortingNetwork.webp)
 
 You can see that this just keeps recursing down the size of the mergers
 

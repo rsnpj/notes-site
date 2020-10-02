@@ -91,7 +91,7 @@ whether or not the outputs are acceptable.
     activities, depending on the form. In particular, with XP, there is
     the practice of writing the testes before writing the code
 
-![image](/img/Year_2/Software_Engineering/Testing/Introduction/v-model.webp)
+![V model figure](/img/Year_2/Software_Engineering/Testing/Introduction/v-model.webp)
 
 # Regression Testing
 

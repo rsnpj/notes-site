@@ -70,7 +70,7 @@ $$
 They correspond to **reflections** of $\mathbb{R}^2$ about the y-axis.
 x-axis, and line $x=y$ respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/reflections.webp)
+![Reflection ](/img/Year_1/MCS/DMLA/Linear_Maps/reflections.webp)
 
 ## Orthogonal Projection
 
@@ -89,7 +89,7 @@ $f _ { A } ( x , y ) = ( 0 , y ) ,$ respectively.
 They correspond to the orthogonal projections of $\mathbb{R}^2$ onto
 x-axis and y-axis respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/projections.webp)
+![Orthogonal Projection e](/img/Year_1/MCS/DMLA/Linear_Maps/projections.webp)
 
 ## Rotation
 
@@ -109,7 +109,7 @@ $$
 This corresponds to the rotation of $\mathbb{R}^2$ by angle of $\theta$
 counter clock-wise
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/rotation.webp)
+![Rotation](/img/Year_1/MCS/DMLA/Linear_Maps/rotation.webp)
 
 ## Contraction/Dilation
 
@@ -128,7 +128,7 @@ $$
 
 This is **contraction** (if $0<k<1)$) or **dilation** (if $k>1$) of $\mathbb{R}^2$
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/contraction.webp)
+![Contraction/Dilation](/img/Year_1/MCS/DMLA/Linear_Maps/contraction.webp)
 
 ## Compression/Expansion
 
@@ -147,7 +147,7 @@ $f _ { A } ( x , y ) = ( x , k y ) ,$ respectively.
 They correspond to **compressions** (if $0<k<1$) and **expansions** (if
 $k>1$) of $\mathbb{R}^2$ along x-axis and y-axis respectively
 
-![image](/img/Year_1/MCS/DMLA/Linear_Maps/compression.webp)
+![Compression/Expansion](/img/Year_1/MCS/DMLA/Linear_Maps/compression.webp)
 
 # Bases and Linear Maps
 

@@ -77,7 +77,7 @@ Multiple wireless senders and receivers create additional problems
 
 ## Hidden terminal problem
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/hidden_terminal.webp)
+![Hidden terminal](/img/Year_2/Networks_and_Systems/Networks/Wireless/hidden_terminal.webp)
 
 -   B,A hear each other
 
@@ -88,7 +88,7 @@ Multiple wireless senders and receivers create additional problems
 
 ## Signal Attenuation
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/signal_attenuation.webp)
+![Signal Attenuation](/img/Year_2/Networks_and_Systems/Networks/Wireless/signal_attenuation.webp)
 
 -   B,A hear each other
 
@@ -139,7 +139,7 @@ Host must **associate** with an AP
 
 ## Passive Scanning
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/passive_scanning.webp)
+![Passive Scanning](/img/Year_2/Networks_and_Systems/Networks/Wireless/passive_scanning.webp)
 
 1.  Beacon frames sent from APs
 
@@ -216,8 +216,8 @@ Avoid data frame collisions completely using small reservations packets
 
 # 802.11 frame: addressing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing.webp)
+![addressing](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing1.webp)
+![addressing](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing1.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing2.webp)
+![addressing](/img/Year_2/Networks_and_Systems/Networks/Wireless/addressing2.webp)

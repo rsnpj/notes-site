@@ -7,7 +7,7 @@ lecturer: Max
 
 ## Probabilistic channels
 
-Recall the source-channel-reciever diagram
+Recall the source-channel-receiver diagram
 
 Channels are probabilistic in nature. Errors due to thermal noise,
 faults, damage...

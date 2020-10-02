@@ -15,7 +15,7 @@ lecturer: Magnus
 
 M bit data stored at each N bit address
 
-![image](/img/Year_1/CSys/DEMA/Memory/memory.webp)
+![Memory ](/img/Year_1/CSys/DEMA/Memory/memory.webp)
 
 -   2 dimensional array of bit cells - each cell stores one bit
 
@@ -29,7 +29,7 @@ M bit data stored at each N bit address
 
     -   **Array Size:** depth $\times$ width
 
-![image](/img/Year_1/CSys/DEMA/Memory/memory1.webp)
+![Memory ](/img/Year_1/CSys/DEMA/Memory/memory1.webp)
 
 ## Wordline
 
@@ -37,9 +37,9 @@ M bit data stored at each N bit address
 
 -   Only one wordline high at once
 
-![image](/img/Year_1/CSys/DEMA/Memory/wordline.webp)
+![Wordline 1](/img/Year_1/CSys/DEMA/Memory/wordline.webp)
 
-![image](/img/Year_1/CSys/DEMA/Memory/wordline1.webp)
+![Wordline 2](/img/Year_1/CSys/DEMA/Memory/wordline1.webp)
 
 On memory read:
 
@@ -51,11 +51,11 @@ On memory read:
 
 ## Memory Diagrams
 
-![image](/img/Year_1/CSys/DEMA/Memory/memory_diagram.webp)
+![Memory Diagram 1](/img/Year_1/CSys/DEMA/Memory/memory_diagram.webp)
 
-![image](/img/Year_1/CSys/DEMA/Memory/memory_diagram1.webp)
+![Memory Diagrams 2](/img/Year_1/CSys/DEMA/Memory/memory_diagram1.webp)
 
-![image](/img/Year_1/CSys/DEMA/Memory/memory_diagram2.webp)
+![Memory Diagrams 3](/img/Year_1/CSys/DEMA/Memory/memory_diagram2.webp)
 
 ## Registers
 
@@ -138,7 +138,7 @@ cells:
 -   Capacitors discharge with time so need refreshing (reading and
     rewriting) every 64ms.
 
-![image](/img/Year_1/CSys/DEMA/Memory/DRAM.webp)
+![DRAM](/img/Year_1/CSys/DEMA/Memory/DRAM.webp)
 
 -   Weakly driving the bitline as there is one capacitor driving the
     whole bitline
@@ -153,9 +153,9 @@ cells:
 
 -   Can be easily incorporated into CPU manufacture
 
-![image](/img/Year_1/CSys/DEMA/Memory/SRAM.webp)
+![SRAM 1](/img/Year_1/CSys/DEMA/Memory/SRAM.webp)
 
-![image](/img/Year_1/CSys/DEMA/Memory/SRAM1.webp)
+![SRAM 2](/img/Year_1/CSys/DEMA/Memory/SRAM1.webp)
 
 -   Activating wl and connecting lhs to bit value, B will give the
     driven value
@@ -176,7 +176,7 @@ cells:
 -   If the bitline contains a 1, the bitline retains the weak high it
     was initialized with.
 
-![image](/img/Year_1/CSys/DEMA/Memory/basic_rom.webp)
+![Basic ROM](/img/Year_1/CSys/DEMA/Memory/basic_rom.webp)
 
 ### Programmable ROM
 
@@ -187,7 +187,7 @@ cells:
 -   FLASH memory uses floating gate transistors instead, which can be
     electrically activated or deactivated. We won't go into details.
 
-![image](/img/Year_1/CSys/DEMA/Memory/PROM.webp)
+![Programmable ROM](/img/Year_1/CSys/DEMA/Memory/PROM.webp)
 
 # Multi Ported Memory
 
@@ -205,7 +205,7 @@ Here the memory has inputs for
     -   1 - write data WD3 to address A3
 -   Also clock input CLK
 
-![image](/img/Year_1/CSys/DEMA/Memory/multi-port.webp)
+![Multi Ported Memory](/img/Year_1/CSys/DEMA/Memory/multi-port.webp)
 
 # The MAR
 
@@ -217,7 +217,7 @@ Typical modern MAR is at least 32 bits wide, giving 4 gigabytes of memory. Some 
 
 # Memory Hierarchy
 
-![image](/img/Year_1/CSys/DEMA/Memory/heirarchy.webp)
+![Memory Hierarchy](/img/Year_1/CSys/DEMA/Memory/heirarchy.webp)
 
 -   Ideal memory (Fast, cheap and large capacity) is impossible
 -   We use a hierarchy of memories to give the effect of ideal memory
@@ -254,7 +254,7 @@ A common theme we see in digital electronics - The trade off between higher spee
 -   Interleave, so consecutive addresses can be accessed simultaneously
 -   Useful for parallelisation/pipelining
 
-![image](/img/Year_1/CSys/DEMA/Memory/interleaving.webp)
+![Memory Interleaving](/img/Year_1/CSys/DEMA/Memory/interleaving.webp)
 
 ## Cache Memory
 
@@ -283,11 +283,11 @@ Spatial Locality:
 
 # Cache Hit
 
-![image](/img/Year_1/CSys/DEMA/Memory/cache-hit.webp)
+![Cache Hit](/img/Year_1/CSys/DEMA/Memory/cache-hit.webp)
 
 # Cache Miss
 
-![image](/img/Year_1/CSys/DEMA/Memory/cache-miss.webp)
+![Cache Miss](/img/Year_1/CSys/DEMA/Memory/cache-miss.webp)
 
 # Cache
 
@@ -304,7 +304,7 @@ Synchronizing cache and memory
 
 # Multi Level Cache
 
-![image](/img/Year_1/CSys/DEMA/Memory/multi-level-cache.webp)
+![Multi Level Cache](/img/Year_1/CSys/DEMA/Memory/multi-level-cache.webp)
 
 -   Level 2 cache - larger, further away and slower, but still better than main memory
 -   Multi core CPUs - each core has its own L2 and L2 cache, and there is typically a shared L3 cache

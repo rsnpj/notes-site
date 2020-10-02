@@ -19,7 +19,7 @@ We consider synchronous sequential circuits made from combinatorial components i
 
 ## NOR latch
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure2.webp)
+![NOR latch](/img/Year_1/CSys/DEMA/Sequential/figure2.webp)
 
 -   Both inputs "usually" set to 0
 -   If input S (set) has a pulse of 1, the output becomes 1
@@ -31,11 +31,11 @@ We consider synchronous sequential circuits made from combinatorial components i
 
 This circuit has two stable states for a given input - it is called bistable
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure3.webp)
+![NOR latch truth-table](/img/Year_1/CSys/DEMA/Sequential/figure3.webp)
 
 ### NAND latch
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure4.webp)
+![NAND latch](/img/Year_1/CSys/DEMA/Sequential/figure4.webp)
 
 -   Latches can also be built from NAND gates
 -   In this case the usual state for the inputs is 1, so the inputs are denoted with bars
@@ -46,7 +46,7 @@ In a latch a pulse on set or reset indicates what the new state should be, and w
 
 Designing circuits becomes easier if we can separate what and when
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure5.webp)
+![D latch](/img/Year_1/CSys/DEMA/Sequential/figure5.webp)
 
 D - data input, Defines wat the new value should be
 
@@ -59,7 +59,7 @@ CLK - clock input. Defines when the new value should arise
 
 In the D-latch the output can change whenever the clock is high. Even better is we can make it change only at the moment the clock goes high
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure6.webp)
+![D Flip Flop](/img/Year_1/CSys/DEMA/Sequential/figure6.webp)
 
 D flip-flop copies D to Q on the rising edge of the clock, and remembers its sate at all other times
 
@@ -67,13 +67,13 @@ D flip-flop copies D to Q on the rising edge of the clock, and remembers its sat
     master, when the clock is high, the data will not transmit through
     the master
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure7.webp)
+![D flip flop Register](/img/Year_1/CSys/DEMA/Sequential/figure7.webp)
 
 # Enabled Flip Flop
 
 Incorporates an additional input (enable) to control whether the data is loaded into the register or not
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure8.webp)
+![Enabled Flip Flop](/img/Year_1/CSys/DEMA/Sequential/figure8.webp)
 
 EN can control the input with a multiplexor, or can control the clock. This is called a gated clock.
 
@@ -93,7 +93,7 @@ How many transistors are needed to build the D flip-flop
 -   The D latch uses an SR latch, two AND gates, and a NOT gate, or 22 transistors
 -   The D flip flop uses two D latches and a NOT gate, or 46 transistors
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure9.webp)
+![Flip Flop Design](/img/Year_1/CSys/DEMA/Sequential/figure9.webp)
 
 Direct design can make more space efficient flip flops. Here 20 transistors
 
@@ -101,11 +101,11 @@ Direct design can make more space efficient flip flops. Here 20 transistors
 
 How would a latch and flip flow behave in the following setting?
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure10.webp)
+![Exapmle](/img/Year_1/CSys/DEMA/Sequential/figure10.webp)
 
 # Problem Circuits
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure11a.webp)
+![Problem Circuits](/img/Year_1/CSys/DEMA/Sequential/figure11a.webp)
 
 The gates have a delay of 1ns
 
@@ -114,11 +114,11 @@ How does this circuit behave?
 Suppose X=0, then Y=1 and Z=0, so X=1
 
 This is an **unstable** or **astable** circuit
-![image](/img/Year_1/CSys/DEMA/Sequential/figure11b.webp)
+![Problem Circuits Figure 1](/img/Year_1/CSys/DEMA/Sequential/figure11b.webp)
 
 An improved D latch? Fewer gates, so fewer transistors!
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure12.webp)
+![Problem Circuits figure 2](/img/Year_1/CSys/DEMA/Sequential/figure12.webp)
 
 Leads to race conditions - behaviour depends on which of the two routes through the circuits carries signal the fastest
 
@@ -150,13 +150,13 @@ A synchronous sequential circuit has:
 -   A clock input, whose rising edge indicates when a state change occurs
 -   A functional specification which details the next state and all outputs for each possible current state and set of inputs
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure14.webp)
+![Synchronous Circuits](/img/Year_1/CSys/DEMA/Sequential/figure14.webp)
 
 # Examples
 
 Which are synchronous sequential circuits?
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure15.webp)
+![Synchronous Circuits example](/img/Year_1/CSys/DEMA/Sequential/figure15.webp)
 
 <details>
   <summary>Answer</summary>
@@ -167,7 +167,7 @@ Which are synchronous sequential circuits?
 
 The dynamic discipline restricts us to using circuits satisfying timing constraints that allow us to combine components
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure16.webp)
+![Timing](/img/Year_1/CSys/DEMA/Sequential/figure16.webp)
 
 -   ccq - contamination clock to q
 -   pcq - propagation clock to q
@@ -180,7 +180,7 @@ With these constraints we can think of signals as discrete in time as well as lo
 
 # Setting Time
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure17.webp)
+![Setting Time](/img/Year_1/CSys/DEMA/Sequential/figure17.webp)
 
 -   The clock frequency determines how fast the computer operates
 -   Register 2 will not get an answer until the clock ticks a second time
@@ -206,13 +206,13 @@ There is also a minimum delay requirement:
 -   Designers have a min delay requirement t<sub>cd</sub>>t<sub>hold</sub>-t<sub>ccq</sub>
 -   Often, in order to allow direct connection of flip flops t<sub>hold</sub>< t<sub>ccq</sub>
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure18.webp)
+![Setting Time Figure](/img/Year_1/CSys/DEMA/Sequential/figure18.webp)
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure19.webp)
+![Setting Time](/img/Year_1/CSys/DEMA/Sequential/figure19.webp)
 
 # Example
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure20.webp)
+![Timing example](/img/Year_1/CSys/DEMA/Sequential/figure20.webp)
 
 _What is the max clock frequency?_
 
@@ -230,7 +230,7 @@ There would be a hold time violation
 
 # Fixing the hold time violation
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure21.webp)
+![Fixing hold time violation](/img/Year_1/CSys/DEMA/Sequential/figure21.webp)
 
 _What is the max clock frequency now?_
 
@@ -246,11 +246,11 @@ If F is in the process of being pressed when the clock rises, Q may be set to a 
 
 The state will br driven to 1 or 0 eventually, but it may take time
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure22.webp)
+![Metastable States](/img/Year_1/CSys/DEMA/Sequential/figure22.webp)
 
 # Synchronizers
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure23.webp)
+![Synchronizers](/img/Year_1/CSys/DEMA/Sequential/figure23.webp)
 
 A pair of flip-flops can be used to synchronise the input with the clock.
 
@@ -260,14 +260,14 @@ If the resolution time of F1 is small enough compared the the clock rate, Q will
 
 # Pipelining
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure24.webp)
+![Pipelining](/img/Year_1/CSys/DEMA/Sequential/figure24.webp)
 
 Insert an additional register into the circuit
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure25.webp)
+![Inserting additional register](/img/Year_1/CSys/DEMA/Sequential/figure25.webp)
 
 Insert another register in the circuit
 
-![image](/img/Year_1/CSys/DEMA/Sequential/figure26.webp)
+![Inserting another register](/img/Year_1/CSys/DEMA/Sequential/figure26.webp)
 
 -   Doing this gives higher latency, but greater throughput

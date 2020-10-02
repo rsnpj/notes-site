@@ -113,7 +113,7 @@ All of these are valid
 
 -   Requesting memory at run-time
 
-![image](/img/Year_2/Programming_Paradigms/Systems/Memory/Dynamic.webp)
+![Dynamic memory allocation](/img/Year_2/Programming_Paradigms/Systems/Memory/Dynamic.webp)
 
 # Memory Layout
 

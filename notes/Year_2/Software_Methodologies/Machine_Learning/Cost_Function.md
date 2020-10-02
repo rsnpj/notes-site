@@ -28,7 +28,7 @@ Supervised learning problem
 -   In regression, $h(x)$ is usually directly interpretable as a
     predicted response
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Cost_Function.webp)
+![Cost Function](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Cost_Function.webp)
 
 ## Least squares deviation cost
 
@@ -43,7 +43,7 @@ $r_i$ is the difference between the real value and the predicted value
 -   Problem with outliers- when you have a large residual and it is then
     squared, the impact is large where it should be ignored
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Least_Squares.webp)
+![Least squares](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Least_Squares.webp)
 
 ## Least Absolute Deviation Cost
 
@@ -56,7 +56,7 @@ $$
 
 -   May pose computational challenges
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Least_Absolute.webp)
+![Least Absolute](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Least_Absolute.webp)
 
 ## Huber-M Cost
 
@@ -73,4 +73,4 @@ $$
     percentile of absolute residuals. Calculate all residuals, then for
     example top 10% is $\delta$
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Huber-M.webp)
+![Huber-M Cost](/img/Year_2/Software_Methodologies/Machine_Learning/Cost_Function/Huber-M.webp)

@@ -3,7 +3,7 @@ title: Software Development Lifecycle
 lecturer: Craig
 ---
 
-![image](/img/Year_2/Software_Engineering/Methodologies/SDLC/Lifecycle.webp)
+![Software Development Lifecycle](/img/Year_2/Software_Engineering/Methodologies/SDLC/Lifecycle.webp)
 
 -   The SDLC framework is used in industry to design, develop and test
     high quality software

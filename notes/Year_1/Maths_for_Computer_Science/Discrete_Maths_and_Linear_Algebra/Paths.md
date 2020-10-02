@@ -57,7 +57,7 @@ A graph is called **connected** if any two distinct vertices are
 connected by a path. A **connected component** of a graph G is a maximal
 connected subgraph of G
 
-![image](/img/Year_1/MCS/DMLA/Paths/graph.webp)
+![Connectivity diagram](/img/Year_1/MCS/DMLA/Paths/graph.webp)
 
 _Is this path connected_
 

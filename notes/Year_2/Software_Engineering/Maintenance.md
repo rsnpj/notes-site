@@ -69,7 +69,7 @@ Restructuring or rewriting part or all of a legacy system without changing its f
 
 # Re-engineering
 
-![image](/img/Year_2/Software_Engineering/Maintenance/re-engineering.webp)
+![Re-engineering](/img/Year_2/Software_Engineering/Maintenance/re-engineering.webp)
 
 ## Refactoring vs re-engineering
 

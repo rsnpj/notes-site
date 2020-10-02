@@ -41,7 +41,7 @@ lecturer: Freddie
 
 -   Impact system performance
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Time_Redundancy.webp)
+![Time redundancy](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Time_Redundancy.webp)
 
 ## Component redundancy
 
@@ -58,11 +58,12 @@ N-Version Programming (NVP):
 
 -   Tolerate hardware and software faults, but not correlated faults
 
-![image](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Component_Redundancy.webp)
+![Component redundancy](/img/Year_2/Networks_and_Systems/Distributed_Systems/Fault_Tolerance/Component_Redundancy.webp)
 
 ## Information Redundancy
 
-Encode outputs with error detection or correcting code\
+Encode outputs with error detection or correcting code
+
 Advantage:
 
 -   Less hardware is required than replicating module

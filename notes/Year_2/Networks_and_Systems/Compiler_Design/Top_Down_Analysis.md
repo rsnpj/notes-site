@@ -162,7 +162,7 @@ $$
 A'\rightarrow \alpha_1A'|\alpha_2A'|...|\alpha_mA'|\epsilon
 $$
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Top_Down/algorithm_left_recursion.webp)
+![Left recursion algorithm](/img/Year_2/Networks_and_Systems/Compiler_Design/Top_Down/algorithm_left_recursion.webp)
 
 # Left factoring
 

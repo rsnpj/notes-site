@@ -46,7 +46,7 @@ vertex exactly once
 
 ## Example
 
-![image](/img/Year_1/MCS/DMLA/Cycles+Trees/Hamiltonian.webp)
+![Hamiltonian Cycles example](/img/Year_1/MCS/DMLA/Cycles+Trees/Hamiltonian.webp)
 
 -   Does this graph has a Eulerian circuit? - No
 

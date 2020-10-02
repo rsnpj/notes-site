@@ -24,7 +24,7 @@ lecturer: Chris
 
 -   Poor scalability, poor handling of changes, could get corrupted
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/ACM.webp)
+![ACM](/img/Year_2/Networks_and_Systems/Security/OS/ACM.webp)
 
 Dashes represent no access rights
 
@@ -40,7 +40,7 @@ Append typically used for log files
 
 -   Represented as numbers in base 8
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/permission.webp)
+![Access Permissions](/img/Year_2/Networks_and_Systems/Security/OS/permission.webp)
 
 `chown` and `chmod` can be used to modify access permissions
 
@@ -54,7 +54,7 @@ deleting the directory contained files (typically on `tmp` folder)
 
 # \*NIX Permissions to ACM
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/permission1.webp)
+![Permissions to ACM](/img/Year_2/Networks_and_Systems/Security/OS/permission1.webp)
 
 # Link Vulnerabilities
 
@@ -111,7 +111,7 @@ Created using mknod (only accessible by root)
 -   Poor overview of access rights per subject, difficult to remove
     subject
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/ACL.webp)
+![ACL](/img/Year_2/Networks_and_Systems/Security/OS/ACL.webp)
 
 # Capability-based Security
 
@@ -122,7 +122,7 @@ Created using mknod (only accessible by root)
 -   Poor overview of access rights per object, difficulty of revocation
     of object
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/capability.webp)
+![Capability-based Security](/img/Year_2/Networks_and_Systems/Security/OS/capability.webp)
 
 # Windows
 
@@ -159,7 +159,7 @@ Created using mknod (only accessible by root)
 
     -   Image randomization (OS boots in one of 256 configurations)
 
-    -   Services restart if failed (not the best practise for security)
+    -   Services restart if failed (not the best practice for security)
 
         -   Vista+ sets some critical services to only restart twice,
             then manual restart
@@ -192,7 +192,7 @@ Bell-LaPadula confidentiality policy, "read down, write up"
 
 -   Strong star property (Strong \* Property)
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/Bell-LaPadula.webp)
+![Bell-LaPadula Model](/img/Year_2/Networks_and_Systems/Security/OS/Bell-LaPadula.webp)
 
 # Biba integrity model
 
@@ -212,7 +212,7 @@ Biba integrity model - "read up, write down"
 
     -   Subject/process cannot request higher integrity access
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/biba.webp)
+![Biba integrity model](/img/Year_2/Networks_and_Systems/Security/OS/biba.webp)
 
 # Clark-Wilson Integrity Model
 
@@ -232,7 +232,7 @@ Biba integrity model - "read up, write down"
 
     -   Maintain internal/external consistency
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/Clark-Wilson.webp)
+![Clark-Wilson IM](/img/Year_2/Networks_and_Systems/Security/OS/Clark-Wilson.webp)
 
 # Protection Rings
 
@@ -250,7 +250,7 @@ Biba integrity model - "read up, write down"
 -   ARM implements 3 levels (application, operating system and
     hypervisor)
 
-![image](/img/Year_2/Networks_and_Systems/Security/OS/protection_ring.webp)
+![Protection Rings](/img/Year_2/Networks_and_Systems/Security/OS/protection_ring.webp)
 
 # Securing BIOS and Bootloader
 

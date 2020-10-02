@@ -222,7 +222,7 @@ WHERE b.branchNo=s.branchNo AND b.street='163 Main St.'
 -   Data fragments may be replicated in more sites (data consistency
     must be considered)
 
-![image](/img/Year_1/CSys/Databases/DBMS/Distributed.webp)
+![Distributed DBMS](/img/Year_1/CSys/Databases/DBMS/Distributed.webp)
 
 # Distributed processing vs Distributed DBMS
 
@@ -234,7 +234,7 @@ Distributed processing:
 
 -   This is not the same as a distributed DBMS
 
-![image](/img/Year_1/CSys/Databases/DBMS/processing.webp)
+![Distributed processing vs Distributed DBMS](/img/Year_1/CSys/Databases/DBMS/processing.webp)
 
 # Design of a distributed DBMS
 

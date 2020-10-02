@@ -118,7 +118,7 @@ Syntax of a program can be expressed by a context free grammar
 
 A simple context free grammar for branching statements:
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/context-free-grammar.webp)
+![Context free grammer example](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/context-free-grammar.webp)
 
 Terminal symbols of the grammar:
 
@@ -128,7 +128,7 @@ Terminal symbols of the grammar:
 
 Regular definitions for these operators
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/regular_definitions.webp)
+![Regular definitions](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/regular_definitions.webp)
 
 Important notes:
 
@@ -146,7 +146,7 @@ $$
 
 All tokens with their attribute value and their corresponding lexemes
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/attribute_value.webp)
+![attribute value](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/attribute_value.webp)
 
 # Transition diagrams
 
@@ -182,7 +182,7 @@ All tokens with their attribute value and their corresponding lexemes
 
     -   This is an example of a transition diagram for the token relop
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/transition_diagram.webp)
+![Transition diagram](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/transition_diagram.webp)
 
 # Keywords vs Identifiers
 
@@ -191,7 +191,7 @@ All tokens with their attribute value and their corresponding lexemes
 
 -   Usually we look for identifier lexemes with a transition diagram
 
-    ![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/lexemes.webp)
+    ![lexemes](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/lexemes.webp)
 
 Two ways to handle reserved words:
 
@@ -211,7 +211,7 @@ Two ways to handle reserved words:
 2.  Create separate transition diagrams for each reserved word, example
     for then
 
-    ![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/reserved_word.webp)
+    ![reserved word](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/reserved_word.webp)
 
     -   We must check that the scanned word ends after reading then,
         otherwise it might be an identifier containing the word then
@@ -243,11 +243,11 @@ An example of this is Lex, it performs as follows:
 
 Suppose Lex has three patterns
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/recognise.webp)
+![Recognise ](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/recognise.webp)
 
 It composes a single equivalent NFA that recognises all of them
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/combined.webp)
+![Combine](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/combined.webp)
 
 As it moves ahead:
 

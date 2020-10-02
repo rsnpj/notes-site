@@ -5,7 +5,7 @@ lecturer: Magnus
 
 # Components of a CPU
 
-![image](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.webp)
+![CPU components](/img/Year_1/CSys/DEMA/CPU_Architecture/cpu_components.webp)
 
 5 major components
 

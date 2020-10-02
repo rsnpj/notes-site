@@ -41,7 +41,7 @@ We shall investigate heuristic functions through the 8-Puzzle Problem
 
 A particular start state and goal state is shown below:
 
-![image](/img/Year_2/Software_Methodologies/AI_Search/Heuristics/8-puzzle.webp)
+![8-Puzzle Problem](/img/Year_2/Software_Methodologies/AI_Search/Heuristics/8-puzzle.webp)
 
 ## Common Heuristics
 

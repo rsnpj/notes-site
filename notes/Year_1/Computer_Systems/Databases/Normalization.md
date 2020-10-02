@@ -394,7 +394,7 @@ The fundamentals of normalization theory:
 -   We study the first 3 normal forms which are most important for
     practical applications
 
-![image](/img/Year_1/CSys/Databases/Normalization/Normal_Forms.webp)
+![3 Normal forms of normalization](/img/Year_1/CSys/Databases/Normalization/Normal_Forms.webp)
 
 # First Normal Form (1NF)
 

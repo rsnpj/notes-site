@@ -18,7 +18,7 @@ Ensure the test set meets the following 2 conditions:
 
 ## Validation Set
 
-![image](/img/Year_2/Software_Methodologies/Machine_Learning/Sets/Validation.webp)
+![Validation Set](/img/Year_2/Software_Methodologies/Machine_Learning/Sets/Validation.webp)
 
 1.  Keeping the test data way off to the side (completely unused)
 

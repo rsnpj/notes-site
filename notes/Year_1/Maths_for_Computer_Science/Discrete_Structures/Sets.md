@@ -88,7 +88,7 @@ lecturer: Daniel
 
 -   Sets are represented by circles and elements by points or items
 
-![image](/img/Year_1/MCS/Discrete_Structures/Sets/venn.webp)
+![Venn Diagrams](/img/Year_1/MCS/Discrete_Structures/Sets/venn.webp)
 
 # Subsets
 
@@ -102,7 +102,7 @@ lecturer: Daniel
     $X\subseteq Y$ and there may be at least one element of Y that is
     not in X
 
-![image](/img/Year_1/MCS/Discrete_Structures/Sets/venn1.webp)
+![Subsets](/img/Year_1/MCS/Discrete_Structures/Sets/venn1.webp)
 
 # Some facts about subsets
 
@@ -231,7 +231,7 @@ lecturer: Daniel
 
 ## Union and Intersection Venn Diagrams
 
-![image](/img/Year_1/MCS/Discrete_Structures/Sets/venn2.webp)
+![Union and Intersection Venn Diagrams](/img/Year_1/MCS/Discrete_Structures/Sets/venn2.webp)
 
 # Difference and Compliment
 
@@ -251,7 +251,7 @@ lecturer: Daniel
 
 ## Venn Diagram of Difference and Complement
 
-![image](/img/Year_1/MCS/Discrete_Structures/Sets/venn3.webp)
+![Venn Diagram of Difference and Complement](/img/Year_1/MCS/Discrete_Structures/Sets/venn3.webp)
 
 # A Different Semantics
 
@@ -287,4 +287,4 @@ lecturer: Daniel
     $( X \wedge ( Y \wedge Z ) ) \vee \neg ( \neg X \vee ( Y \wedge Z ) )$
     denotes the set of elements shown, i.e. X
 
-![image](/img/Year_1/MCS/Discrete_Structures/Sets/venn4.webp)
+![A Different Semanticsge](/img/Year_1/MCS/Discrete_Structures/Sets/venn4.webp)

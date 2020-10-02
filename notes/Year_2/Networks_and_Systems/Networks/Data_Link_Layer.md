@@ -12,7 +12,7 @@ lecturer: Donald
 -   The physical layer (below) is responsible for the transmission of
     raw sequences of bits
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/frame.webp)
+![Frames](/img/Year_2/Networks_and_Systems/Networks/Data_Link/frame.webp)
 
 # Framing methods
 
@@ -28,7 +28,7 @@ be incorrect.
 We add a header (e.g. the length of the data, etc.) and a trailer (extra
 data that can be used e.g. error-detection or error-correction)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/flag.webp)
+![Headers and trailers](/img/Year_2/Networks_and_Systems/Networks/Data_Link/flag.webp)
 
 Two adjacent frames are separated by a flag
 
@@ -40,13 +40,13 @@ Special flag bytes delimit frames; occurrences of flags in the data must
 If the flag value is found in the data you get lost again. The solution
 to this is byte or bit stuffing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing.webp)
+![Byte stuffing](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing.webp)
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing1.webp)
+![Byte stuffing fig 2](/img/Year_2/Networks_and_Systems/Networks/Data_Link/byte_stuffing1.webp)
 
 ## Bit stuffing
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/bit_stuffing.webp)
+![Bit stuffing](/img/Year_2/Networks_and_Systems/Networks/Data_Link/bit_stuffing.webp)
 
 This is useful where you aren’t working in bytes, as frames can be any
 size now
@@ -101,7 +101,7 @@ Receiver, upon receiving `0 1 1 1 1 1`:
 Error detection is not 100% reliable, protocol may miss some errors, but
 rarely
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/EDC.webp)
+![Error detection and correction](/img/Year_2/Networks_and_Systems/Networks/Data_Link/EDC.webp)
 
 # Codeword
 
@@ -198,4 +198,4 @@ Basic approach:
 
 -   Receiver gets M1 + CRC and extracts the M1 using P1
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Data_Link/CRC.webp)
+![Cyclic Redundancy Check](/img/Year_2/Networks_and_Systems/Networks/Data_Link/CRC.webp)

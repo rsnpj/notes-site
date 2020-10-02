@@ -8,7 +8,7 @@ lecturer: Matthew
 Input: a graph G=(V,E) with a weight (or a cost) w(u,v) for each edge
 (u,v)
 
-![image](/img/Year_1/ADS/Part_4/MST/graph1.webp)
+![Connecting vertices](/img/Year_1/ADS/Part_4/MST/graph1.webp)
 
 Objective: Choose a subset of the edges that connects the vertices. Find
 the solution that costs the least
@@ -34,7 +34,7 @@ $$
 Note that the zeros represent the fact there is no edge between the two
 nodes, it could equally be $\infty$
 
-![image](/img/Year_1/ADS/Part_4/MST/graph2.webp)
+![MST-Weighted graph](/img/Year_1/ADS/Part_4/MST/graph2.webp)
 
 # Kruskal's Algorithm
 
@@ -49,7 +49,7 @@ nodes, it could equally be $\infty$
 
 Running time is $\mathcal{O}(E\log V)$
 
-![image](/img/Year_1/ADS/Part_4/MST/graph3.webp)
+![Kruskal’s Algorithm](/img/Year_1/ADS/Part_4/MST/graph3.webp)
 
 ## Correctness
 

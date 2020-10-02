@@ -63,14 +63,14 @@ After compilation, the target program:
 
 -   Processes input and produces output
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Compiler.webp)
+![Compilers](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Compiler.webp)
 
 ## Interpreters
 
 Directly executes the operations specified in the source program on
 inputs supplied by the user
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Interpreter.webp)
+![Interpreters](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Interpreter.webp)
 
 ## Comparison
 
@@ -164,7 +164,7 @@ Why separate analysis and synthesis parts?
 
     -   Children nodes: arguments of the operations
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Parse_Tree.webp)
+![Parsing](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Parse_Tree.webp)
 
 ## After syntax analysis
 
@@ -192,7 +192,7 @@ In order to:
 -   Important part is type checking and automatic type conversion
     (coercion)
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Coercion.webp)
+![Semantic analysis](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Coercion.webp)
 
 ## Intermediate code generation
 
@@ -207,7 +207,7 @@ In order to:
 
     -   Three operands per instruction
 
-![image](Intermediate Code)
+![Intermediate code generation](Intermediate Code)
 
 ## Intermediate code optimization
 
@@ -221,7 +221,7 @@ In order to:
 
     -   Consume less power
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/optimization.webp)
+![Intermediate code optimization](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/optimization.webp)
 
 # Symbol table management
 
@@ -262,7 +262,7 @@ Can use previous compilers for new languages
 
 T diagrams: a set of "puzzle pieces"
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/T_Diagram.webp)
+![Evolution of compilers diagram](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/T_Diagram.webp)
 
 Recursive use of compilers (and T diagrams):
 
@@ -275,4 +275,4 @@ Recursive use of compilers (and T diagrams):
           the conjunction of the first two)
     </span>
 
-![image](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Recursive_Compiler.webp)
+![Recursive Compiler](/img/Year_2/Networks_and_Systems/Compiler_Design/Introduction/Recursive_Compiler.webp)

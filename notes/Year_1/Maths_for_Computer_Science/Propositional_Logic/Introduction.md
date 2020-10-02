@@ -43,7 +43,7 @@ propositional variables and formulae by the use of logical operators
 
 ## Construction
 
-The operators $\land, \lor , \Rightarrow$ and $\Leftrightarrow$ take two
+The operators $\land, \lor, \Rightarrow$ and $\Leftrightarrow$ take two
 propositional formulae $\varphi$ and $\psi$
 
 The operator $\lnot$ takes one propositional formula $\varphi$ and
@@ -58,7 +58,7 @@ then build $(\varphi \land \psi)\lor\chi$\
 $\varphi \land (\psi\lor\chi)$ means first build $\psi\lor\chi$ and then
 build $\varphi \land (\psi\lor\chi)$
 
-## Some typical well formed formulae
+## Some typical well-formed formulae
 
 $$\lnot((\lnot b\land a)\Rightarrow(c\lor\lnot d))$$
 $$((a\land\lnot a)\lor((b\lor c)\lor d))\Leftrightarrow d$$
@@ -141,7 +141,7 @@ is the same thing as
 "Either I explain this clearly or the students won't understand"
 
 To see this, denote the sub-statement "I don't explain this clearly"
-as **X** and denote the sub statement "the students won't understand" as **Y**
+as **X** and denote the sub-statement "the students won't understand" as **Y**
 
 The former statement is thus $X\Rightarrow Y$ and the latter:
 
@@ -286,7 +286,7 @@ Whereas De Morgan's Laws allow us to simplify formulae with respect to
 negations we often have "combinations" of disjunctions and
 conjunctions.
 
-The Distributive Law of Disjunction over Conjunction is:\
+The Distributive Law of Disjunction over Conjunction is:
 
 $$
 p\lor (q\land r)\equiv (p\lor q)\land (p\lor r)
@@ -481,7 +481,7 @@ So $\varphi$ is the $\lor$ of all of these
 
 # A spot of practice
 
-![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.webp)
+![A spot of practice](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig2.webp)
 
 # Converting to c.n.f syntactically
 
@@ -489,7 +489,7 @@ So $\varphi$ is the $\lor$ of all of these
 
 -   Consider the formula
 
-    ![image](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.webp)
+    ![Converting to c.n.f syntactically](/img/Year_1/MCS/Propositional_Logic/Introduction/Fig3.webp)
 
 -   In the "semantic" approach, i.e., using truth tables we are stuck
     with using exponentially sized truth tables
@@ -525,7 +525,7 @@ Non-Examinable from here on
         c.n.f, so it takes time exponential in the size of the formula
         to solve
 
--   However, modern day SAT-solvers can give extremely good results
+-   However, modern-day SAT-solvers can give extremely good results
 
-    -   Note that all modern day SAT-solvers need their inputs to be in
+    -   Note that all modern-day SAT-solvers need their inputs to be in
         c.n.f

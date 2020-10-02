@@ -8,7 +8,7 @@ lecturer: Craig
 A clear understanding of not only your role but what are the strengths
 and weaknesses of your skill set is vital
 
-![image](/img/Year_2/Software_Engineering/Project_Management/Team/Audit.webp)
+![Audit](/img/Year_2/Software_Engineering/Project_Management/Team/Audit.webp)
 
 ## Four Stages of Competence
 
@@ -25,7 +25,7 @@ effort
 
 ## Dunning Kruger Effect
 
-![image](/img/Year_2/Software_Engineering/Project_Management/Team/Dunning_Kruger.webp)
+![Dunning Kruger](/img/Year_2/Software_Engineering/Project_Management/Team/Dunning_Kruger.webp)
 
 ## Skill Development Plan
 
@@ -35,7 +35,7 @@ effort
 
 ## CPD Plan
 
-![image](/img/Year_2/Software_Engineering/Project_Management/Team/Plan.webp)
+![CPD Plan](/img/Year_2/Software_Engineering/Project_Management/Team/Plan.webp)
 
 # Ideation
 

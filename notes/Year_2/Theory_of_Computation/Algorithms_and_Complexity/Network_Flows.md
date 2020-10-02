@@ -257,7 +257,7 @@ $$
 c_{f}(P)=\min _{(u, v) \in P} c_{f}(u, v)
 $$
 
-![image](/img/Year_2/Theory_of_Computation/AAC/Network_Flows/Augmenting_Path.webp)
+![Augmenting Paths](/img/Year_2/Theory_of_Computation/AAC/Network_Flows/Augmenting_Path.webp)
 
 **Lemma**:
 

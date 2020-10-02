@@ -19,7 +19,7 @@ lecturer: Donald
 
 ## Store-and-forward
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/packet-switching.webp)
+![Packet-switching](/img/Year_2/Networks_and_Systems/Networks/Core/packet-switching.webp)
 
 -   Takes L/R seconds to transmit (push out) L-bit packet into link at R
     bps
@@ -31,7 +31,7 @@ lecturer: Donald
 
 ## Queuing delay, loss
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/queue.webp)
+![Queuing delay](/img/Year_2/Networks_and_Systems/Networks/Core/queue.webp)
 
 If arrival rate (in bits) to link exceeds transmission rate of link for
 a period of time
@@ -56,11 +56,11 @@ Packets queue in router buffers
 
 -   Packets queue, wait for turn
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/loss.webp)
+![loss](/img/Year_2/Networks_and_Systems/Networks/Core/loss.webp)
 
 # Four sources of packet delay
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/loss1.webp)
+![loss](/img/Year_2/Networks_and_Systems/Networks/Core/loss1.webp)
 
 $$
 d_{nodal}=d_{proc}+d_{queue}+d_{trans}+d_{prop}
@@ -104,7 +104,7 @@ $d_{prop}$: Propagation delay:
 
 ## Caravan Analogy
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/caravan.webp)
+![Caravan Analogy](/img/Year_2/Networks_and_Systems/Networks/Core/caravan.webp)
 
 Cars "propagate" at
 
@@ -130,7 +130,7 @@ Time for last car to propagate from 1st to 2nd toll booth =1hr
 -   Lost packet may be retransmitted by previous node, bu source end
     system, or not at all
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/packet_loss.webp)
+![Packet Loss](/img/Year_2/Networks_and_Systems/Networks/Core/packet_loss.webp)
 
 # "Real" internet delays and routes
 
@@ -145,11 +145,11 @@ Time for last car to propagate from 1st to 2nd toll booth =1hr
 
     -   Sender times interval between transmission and reply
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/delay_and_routes.webp)
+![delays and routes](/img/Year_2/Networks_and_Systems/Networks/Core/delay_and_routes.webp)
 
 # Alternative core: circuit switching
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/circuit_switching.webp)
+![circuit switching](/img/Year_2/Networks_and_Systems/Networks/Core/circuit_switching.webp)
 
 End resources allocated to, reserved for "call" between source and
 destination
@@ -203,7 +203,7 @@ Dealing with complex systems:
 
 -   **Physical**: Bits "on the wire"
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/IP_Stack.webp)
+![Internet Protocol Stack](/img/Year_2/Networks_and_Systems/Networks/Core/IP_Stack.webp)
 
 ## ISO/OSI Reference Model
 
@@ -216,4 +216,4 @@ Dealing with complex systems:
 -   Internet stack "missing" these layers. These services if needed must
     be implemented in application
 
-![image](/img/Year_2/Networks_and_Systems/Networks/Core/OSI.webp)
+![OSI Reference Modelage](/img/Year_2/Networks_and_Systems/Networks/Core/OSI.webp)

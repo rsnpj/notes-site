@@ -59,7 +59,7 @@ sum
 $\varphi$ is the phase. Changes in the phase shift a sinusoidal function
 left or right
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Fourier.webp)
+![1D Fourier series](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Fourier.webp)
 
 Low frequency components influence the coarse outline of the signal
 
@@ -75,7 +75,7 @@ We want to understand the signal as a sum of weighted and phase shifted
 frequencies. The Fourier transform reparametrises the signal by $\omega$
 instead of x
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/fourier_transform.webp)
+![Fourier transform](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/fourier_transform.webp)
 
 $F(\omega)$ itself is called the Fourier transform of $f(x)$. The
 inverse Fourier transform applied on $F(\omega)$ parametrizes the signal
@@ -95,7 +95,7 @@ a vertical vector)
 $F(\omega)$: Fourier domain representation (N frequency coefficients
 arranged as a vertical vector)
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Discrete_Fourier.webp)
+![1D discrete Fourier transform](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Discrete_Fourier.webp)
 
 The inverse Fourier transform $M^{-1}*F(\omega)=f(x)$ is again a change
 of basis
@@ -119,7 +119,7 @@ $$
 By taking integrals instead of infinite sums, we can extend the Fourier
 transform to continuous functions
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Continuous_Fourier.webp)
+![1D continuous Fourier transform](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/1D_Continuous_Fourier.webp)
 
 # 2D sine functions
 
@@ -153,7 +153,7 @@ than general matrix multiplication via the FFT algorithm
 
 # Visualising Fourier images
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/visualise.webp)
+![Visualising Fourier images](/img/Year_2/Software_Methodologies/Image_Processing/Fourier_Representation/visualise.webp)
 
 The output $F_{nm}$ of the DFT of an input image $I_{input}$ is a
 complex number valued output image containing the coefficients of the

@@ -237,7 +237,7 @@ $$
 \begin{array} { l } { E = \left\{ s _ { 1 } , r _ { 1 } , s _ { 2 } , r _ { 2 } , s _ { 3 } , r _ { 3 } , s _ { 4 } , r _ { 4 } \right\} } \\ { R = \left\{ \left( s _ { 1 } , r _ { 1 } \right) , \left( s _ { 2 } , r _ { 2 } \right) , \left( s _ { 3 } , r _ { 3 } \right) , \left( s _ { 4 } , r _ { 4 } \right) , \left( s _ { 1 } , r _ { 2 } \right) \right. } \\ { \quad \left( r _ { 2 } , s _ { 3 } \right) , \left( s _ { 3 } , r _ { 4 } \right) , \left( s _ { 2 } , r _ { 1 } \right) , \left( r _ { 1 } , s _ { 4 } \right) , \left( s _ { 4 } , r _ { 3 } \right) \} } \end{array}
 $$
 
-![image](/img/Year_1/MCS/Discrete_Structures/Relations/coms.webp)
+![posets in communication protocol](/img/Year_1/MCS/Discrete_Structures/Relations/coms.webp)
 
 Take the reflexive, transitive closure of R and denote it by T. If we obtain a partial order (that is, T is anti-symmetric) then the trace is a legitimate one
 

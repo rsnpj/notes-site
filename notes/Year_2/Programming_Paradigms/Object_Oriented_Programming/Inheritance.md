@@ -244,4 +244,4 @@ itn value = iwrap.intValue(); //unwrap it
 -   It is still recommended to keep fields provided and to define
     protected accessors and mutators
 
-![image](img/Year_2/Programming_Paradigms/Object/Inheritance/protected_access.webp)
+![Protected access](img/Year_2/Programming_Paradigms/Object/Inheritance/protected_access.webp)

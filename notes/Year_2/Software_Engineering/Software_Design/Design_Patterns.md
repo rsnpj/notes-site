@@ -59,7 +59,7 @@ Can also classify by scope
 A proxy provides a surrogate or placeholder for another object to
 control access to it.
 
-![image](/img/Year_2/Software_Engineering/Software_Design/Design/Proxy.webp)
+![Proxy](/img/Year_2/Software_Engineering/Software_Design/Design/Proxy.webp)
 
 A proxy is applicable wherever there is a need for a more versatile (and
 indirect) reference to an object than just a pointer. Examples of where

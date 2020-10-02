@@ -127,7 +127,7 @@ independently.
 
 ## Migrating to containers
 
-![image](/img/Certifications/AZ900/Principles/4-kub-migration.png)
+![Migration to containers](/img/Certifications/AZ900/Compute/4-kub-migration.png)
 
 The process is as follows:
 

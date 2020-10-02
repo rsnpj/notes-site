@@ -11,7 +11,7 @@ lecturer: Magnus
 In any physical gate or circuit there is a delay between the input
 changing and the output adjusting appropriately.
 
-![image](/img/Year_1/CSys/DEMA/Timing/timing.webp)
+![Timing](/img/Year_1/CSys/DEMA/Timing/timing.webp)
 
 -   Note that the lines are not vertical, they rise between low and high
 
@@ -21,7 +21,7 @@ stable
 **Comtamination delay $t_{cd}$**: The min delay before the output
 changes
 
-![image](/img/Year_1/CSys/DEMA/Timing/delay.webp)
+![Timing delay](/img/Year_1/CSys/DEMA/Timing/delay.webp)
 
 Delay is caused by:
 
@@ -40,7 +40,7 @@ Reasons why $t_{pd}$ and $t_{cd}$ may be different:
 
 # Critical paths
 
-![image](/img/Year_1/CSys/DEMA/Timing/critical_path.webp)
+![Critical paths](/img/Year_1/CSys/DEMA/Timing/critical_path.webp)
 
 In a circuit the critical path is the path determining the propagation
 delay of the circuit - i.e. the longest path in the circuit
@@ -64,14 +64,14 @@ stabilising.
 
 This is called a glitch.
 
-![image](/img/Year_1/CSys/DEMA/Timing/glitch.webp)
+![Glitches](/img/Year_1/CSys/DEMA/Timing/glitch.webp)
 
 With a=0,b=1 and c=1. If b falls to 0, the output will change from 1 to
 0 to 1.
 
 # Mux delays
 
-![image](/img/Year_1/CSys/DEMA/Timing/mux_delay.webp)
+![Mux delays](/img/Year_1/CSys/DEMA/Timing/mux_delay.webp)
 
 -   Tristate D - Data
 
@@ -84,7 +84,7 @@ With a=0,b=1 and c=1. If b falls to 0, the output will change from 1 to
 
 The full adder circuit we have looked at takes 3 gate delays for the carry out to be computed
 
-![image](/img/Year_1/CSys/DEMA/Timing/adder.webp)
+![Adder](/img/Year_1/CSys/DEMA/Timing/adder.webp)
 
 If we can precompute the first level, there are only 2 gate delays once the carry in arrives
 
@@ -92,7 +92,7 @@ If we can precompute the first level, there are only 2 gate delays once the carr
 
 The computation of the carry bit ripples through the chained adders
 
-![image](/img/Year_1/CSys/DEMA/Timing/ripple_adder.webp)
+![Ripple adder](/img/Year_1/CSys/DEMA/Timing/ripple_adder.webp)
 
 A k bit ripple adder will take 3+2(k-1)=2k+1 gate delays to compute C<sub>out</sub>. So a 32 bit adder takes 65 gate delays
 
@@ -101,7 +101,7 @@ A k bit ripple adder will take 3+2(k-1)=2k+1 gate delays to compute C<sub>out</s
 
 # Faster Adders - idea
 
-![image](/img/Year_1/CSys/DEMA/Timing/faster_adders.webp)
+![Faster Adders idea](/img/Year_1/CSys/DEMA/Timing/faster_adders.webp)
 
 **Key idea**: for later bits pre-compute the outcome with both carry in and no carry in, then quickly select the right answer
 
@@ -127,7 +127,7 @@ $$
 C_{out}=G(A,B)+P(A,B)\cdot C_{in}
 $$
 
-![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead1.webp)
+![Carry-Lookahead Adder](/img/Year_1/CSys/DEMA/Timing/carry-lookahead1.webp)
 
 $$
 C_{\text {out }}=G_{4}+P_{4} G_{3}+P_{4} P_{3} G_{2}+P_{4} P_{3} P_{2} G_{1}+P_{4} P_{3} P_{2} P_{1} \cdot C_{\text {in }}
@@ -139,15 +139,15 @@ So we can compute C<sub>out</sub> (and all the intermediate carries) in 3 gate d
 
 We could compute the full sum in 3 gate delays
 
-![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead3.webp)
+![full sum in 3 gate delays](/img/Year_1/CSys/DEMA/Timing/carry-lookahead3.webp)
 
 # Partial Full Adder
 
-![image](/img/Year_1/CSys/DEMA/Timing/partial_adder.webp)
+![Partial Full Adder](/img/Year_1/CSys/DEMA/Timing/partial_adder.webp)
 
 # MSI Chip
 
-![image](/img/Year_1/CSys/DEMA/Timing/MSI.webp)
+![MSI Chip](/img/Year_1/CSys/DEMA/Timing/MSI.webp)
 
 # More on the carry-lookahead adder
 
@@ -155,7 +155,7 @@ We could create a CLA which adds n-bit numbers in constant gate delay. It would 
 
 **First solution:** chain 4-bit CLAs
 
-![image](/img/Year_1/CSys/DEMA/Timing/carry-lookahead21.webp)
+![chain 4-bit CLAs](/img/Year_1/CSys/DEMA/Timing/carry-lookahead21.webp)
 
 The carry now ripples along the chain 4 times as fast as originally
 
@@ -163,7 +163,7 @@ The carry now ripples along the chain 4 times as fast as originally
 
 Rather than letting the carry ripple through the CLAs, we can precompute whether it would be generated or propagated by each CLA
 
-![image](/img/Year_1/CSys/DEMA/Timing/2-level-lookahead.webp)
+![2 Level Carry-Lookahead Adder](/img/Year_1/CSys/DEMA/Timing/2-level-lookahead.webp)
 
 We now have a 16-bit 2-level CLA
 
@@ -182,7 +182,7 @@ Alternately, a 3 (or more) level CLA could be used to create an n-bit adder with
 
 # Example
 
-![image](/img/Year_1/CSys/DEMA/Timing/example.webp)
+![Example](/img/Year_1/CSys/DEMA/Timing/example.webp)
 
 # Summary
 

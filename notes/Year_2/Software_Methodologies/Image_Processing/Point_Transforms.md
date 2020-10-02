@@ -10,7 +10,7 @@ manipulating the corresponding matrix\
 We can process (transform) images by manipulating the corresponding
 matrices
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/matrices.webp)
+![Matrices](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/matrices.webp)
 
 # Transformation aims
 
@@ -83,7 +83,7 @@ each pixel increases brightness
 Application blending: adding images together produces a composite image
 of both inputs
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/addition.webp)
+![Addition](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/addition.webp)
 
 In both cases watch for integer overflow. The result of the addition can
 be out of range
@@ -108,7 +108,7 @@ Application image differencing: dividing an image by another
 
 This is less efficient than subtraction
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/division.webp)
+![Division](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/division.webp)
 
 ## Multiplication
 
@@ -132,14 +132,14 @@ Alternatively,
 different weights can be used between images to enhance/suppress the
 features of different images in the final result
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/image_blending.webp)
+![image blending](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/image_blending.webp)
 
 # Bit planes
 
 Intuitively, logical (bit-wise) operations can be thought of as applied
 on bit planes
 
-![image](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/bit_planes.webp)
+![Bit planes](/img/Year_2/Software_Methodologies/Image_Processing/Point_Transforms/bit_planes.webp)
 
 -   The most significant bit contains most of the information in the
     image, and so image processing could just be done on that

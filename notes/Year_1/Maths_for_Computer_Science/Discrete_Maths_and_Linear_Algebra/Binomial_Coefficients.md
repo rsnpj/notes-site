@@ -60,7 +60,7 @@ $$
 
 ### Direct Proof
 
-![Proof](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_proof.webp)
+![Pascal's identity Proof](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_proof.webp)
 
 ### Combinatorial Proof
 
@@ -86,9 +86,9 @@ way:
 
 # Pascal's Triangle and Binomial Coefficients
 
-![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_1.webp)
+![Pascal's Triangle and Binomial Coefficients](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_1.webp)
 
-![image](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_2.webp)
+![Pascal's Triangle and Binomial Coefficients](/img/Year_1/MCS/DMLA/Binomial_Coefficients/pascal_triangle_2.webp)
 
 # Binomial Theorem
 
