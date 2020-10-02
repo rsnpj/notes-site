@@ -9,10 +9,10 @@ Encoding is easy: use the generator matrix G
 
 Decoder problem:
 
-- Input: a vector $v\in F^n$
+-   Input: a vector $v\in F^n$
 
-- Output: The unique codeword c at Hamming distance $\leqslant 1$ from
-  v
+-   Output: The unique codeword c at Hamming distance $\leqslant 1$ from
+    v
 
 Remarkable property of the Hamming code: a vector $v\in F^n$ either is a
 codeword, or is at Hamming distance 1 from a unique codeword
@@ -56,7 +56,8 @@ $$
 $$
 
 **Description**: Compute the Hamming distance between the received
-vector v and the ith codeword $m_iG$ until it is no more than 1.\
+vector v and the ith codeword $m_iG$ until it is no more than 1.
+
 **Remark**: For the brute force algorithm, we need G. It will be given
 in your practicals.
 
@@ -88,7 +89,7 @@ zero, then it is a codeword
 
 ### Example
 
-For the (7,4,3) - Hamming code. Recieve v=(1,0,0,0,0,0,1)
+For the (7,4,3) - Hamming code. Receive v=(1,0,0,0,0,0,1)
 
 $$
 \begin{aligned} \mathbf { v H } ^ { \top } & = ( 1,1,0 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 1 } \right) \mathbf { H } ^ { \top } & = ( 1,1,1 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 2 } \right) \mathbf { H } ^ { \top } & = ( 1,0,0 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 3 } \right) \mathbf { H } ^ { \top } & = ( 1,0,1 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 4 } \right) \mathbf { H } ^ { \top } & = ( 0,1,0 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 5 } \right) \mathbf { H } ^ { \top } & = ( 0,1,1 ) \\ \left( \mathbf { v } + \mathbf { e } _ { 6 } \right) \mathbf { H } ^ { \top } & = ( 0,0,0 ) \end{aligned}
@@ -111,7 +112,8 @@ the correct codeword $v+e_i$
 
 ### Example
 
-For the $(7,4,3)$-Hamming code. Receive v=(1,0,0,0,0,0,1)\
+For the $(7,4,3)$-Hamming code. Receive v=(1,0,0,0,0,0,1)
+
 Compute
 
 $$
