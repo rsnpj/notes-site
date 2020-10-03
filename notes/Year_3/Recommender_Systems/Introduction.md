@@ -41,7 +41,7 @@ Suggestions of selected items
 
 # Moving from a User item to a rating
 
-![User item to rating](/img/Year_3/Recommender/Introduction/Item->Rating.png)
+![User item to rating](/img/Year_3/Recommender/Introduction/Item->Rating.webp)
 
 # Prediction vs Recommendation
 
