@@ -15,7 +15,7 @@ lecturer: Andrei
 
 In a binary tree, each node has:
 
--   Pointer to parent (or NIL, or to itself, if root)
+-   Pointer to pSong by countryrent (or NIL, or to itself, if root)
 
 -   Pointer to left child (or NIL, or to itself, if there isn't one)
 

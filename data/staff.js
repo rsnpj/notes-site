@@ -79,5 +79,9 @@ const staff = {
 		name: "Stefan Dantchev",
 		link: "https://www.dur.ac.uk/computer.science/staff/profile/?id=2378",
 	},
+	Suncica: {
+		name: "Dr Sunčica Hadžidedić",
+		link: "https://www.dur.ac.uk/computer.science/staff/profile/?id=18580",
+	},
 };
 export default staff;
