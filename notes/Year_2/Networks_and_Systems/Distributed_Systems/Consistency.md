@@ -188,7 +188,8 @@ Modelling of Consistency Control:
 
 -   The interleaved sequence of operations meets the specification of a (single) correct copy of the contents
 -   The order of operations in the interleaving is consistent with the program order in which each individual process executed them
--   </Definition>
+
+</Definition>
 
 <Definition name="Casual Consistency">
   If event B is caused or influenced by an earlier event A, everyone first see A and then B

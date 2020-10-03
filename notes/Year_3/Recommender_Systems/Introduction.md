@@ -3,12 +3,6 @@ title: Introduction to Recommender Systems
 lecturer: Suncica
 ---
 
-<Test>
-
-**Hello**
-
-</Test>
-
 # What are Recommender Systems
 
 Belong to a class of **information filtering systems** combining:

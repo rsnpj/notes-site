@@ -182,7 +182,7 @@ HTTP is stateless - server maintains no information about past client requests
 -   **Client** - Browser that requests, receives, (using HTTP Protocol) and "displays" web objects
 -   **Server**: Web server sends (using HTTP protocol) objects in response to requests
 
-    </Definition>
+</Definition>
 
 # HTTP Connections
 

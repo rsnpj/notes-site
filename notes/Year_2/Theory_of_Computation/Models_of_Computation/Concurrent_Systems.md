@@ -23,13 +23,13 @@ flag[i]=false
 # Program Graph
 
 <Definition name="Program Graph">
-{String.raw`
+
 A program graph over a finite set of Boolean variables has
 * A finite set of states S called locations
 * A deterministic transition relation $\rightarrow \subseteq S\times S \times (Act\cup Cond)$ where
   * Act is a set of atomic actions that change the values of some variables - if a transition labelled by an action is taken, the respective variables are updated accordingly
   * Cond is a set of formulae over the variables - such a transition can be taken only if the respective condition (formula) is true under the current valuation of the variables
-`}
+
 </Definition>
 
 # Interleaved program graphs as a transition system
