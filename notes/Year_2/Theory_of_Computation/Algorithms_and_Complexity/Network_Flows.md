@@ -25,71 +25,78 @@ We wish to compute the greatest possible rate of transportation from source to s
 </Definition>
 
 <Definition name="Flow network">
-{String.raw`
-* G=(V,E)
-* Two distinguished vertices: source s and sink t
-* Each edge $(u,v)\in E$ as non-negative capacity $c(u,v)\geqslant 0$
-* If $(u,v) \not \in E$, we assume $c(u,v)=0$
-* For each $v\in V$, there is a path $s\rightarrow v \rightarrow t$
-`}
+
+-   G=(V,E)
+-   Two distinguished vertices: source s and sink t
+-   Each edge $(u,v)\in E$ as non-negative capacity $c(u,v)\geqslant 0$
+-   If $(u,v) \not \in E$, we assume $c(u,v)=0$
+-   For each $v\in V$, there is a path $s\rightarrow v \rightarrow t$
+
 </Definition>
 
 ## Flow constraints
 
 <Definition name="Capacity Constraint">
-{String.raw`
-For all $u,v\in V$, we require $f(u,v)\leqslant c(u,v)$ \n 
+
+For all $u,v\in V$, we require $f(u,v)\leqslant c(u,v)$ \n
 Flow from one vertex to another must not exceed given capacity
-`}
+
 </Definition>
 
 <Definition name="Skew symmetry">
-{String.raw`
-For all $u,v\in V$, we require $f(u,v)=-f(v,u)$ \n 
+
+For all $u,v\in V$, we require $f(u,v)=-f(v,u)$ \n
 Flow from vertex u to vertex v is negative of flow in reverse direction
-`}
+
 </Definition>
 
 <Definition name="Flow conservation">
-{String.raw`
+
 For all $u\in V - \{s,t\}$ we require
+
 $$
 \sum_{c\in V}f(u,v)=0
 $$
+
 Total flow out of a vertex is 0, likewise for total flow into a vertex (just saying what goes in, comes out), this doesn't apply to the source or drain
-`}
+
 </Definition>
 
 ## Total flows
 
 <Definition name="Total positive flow">
-{String.raw`
+
 The total positive flow entering vertex v is
+
 $$
 \sum_{u\in V: f(u,v)>0}f(u,v)
 $$
+
 The total positive flow leaving vertex u is
+
 $$
 \sum_{v\in V: f(u,v)>0}f(u,v)
 $$
-`}
+
 </Definition>
 
 <Definition name="Total net flow">
-{`
+
 The total net flow at a vertex v is \n
 total positive flow leaving v - total positive flow entering v
-`}
+
 </Definition>
 
 <Definition name="Flow value">
-{String.raw`
+
 The value of flow f is defined as the total flow leaving the source (and thus entering the sink)
+
 $$
 |f|=\sum_{v\in V}f(s,v)
 $$
+
 Note that $|\cdot|$ does not mean absolute value
-`}
+
 </Definition>
 
 If there is an arrow only in one direction on the graph, then the

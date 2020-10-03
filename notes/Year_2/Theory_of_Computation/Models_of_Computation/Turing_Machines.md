@@ -36,9 +36,9 @@ $(Q,\Sigma, \Gamma,\delta,q_0,q_{accept},q_{reject})$
 7.  $q_{reject}\in Q$ is the reject state
 
 <Important>
-{String.raw`
+
 The first $\sqcup$ denotes the start of the blanks
-`}
+
 </Important>
 
 # Computation of TM
@@ -86,23 +86,23 @@ $\mathscr{M}$, denoted by $L(\mathscr{M})$
 # Turing-Recognisable and Turing-Decidable languages
 
 <Definition name="Turing Recognisable">
-{String.raw`
+
 A language $\mathscr{L}$ is Turing-Recognisable, if there is a TM $\mathscr{M}$ that recognises it, i.e. $\mathscr{L}=L(\mathscr{M})$.
-`}
+
 </Definition>
 Informally it will halt for every input it accepts but will either halt or loop forever on an input it rejects
 <Definition name="Turing Decidable">
-{String.raw`
-A language $\mathscr{L}$ is Turing-Decidable, if there is a TM $\mathscr{M}$ that accepts every $w\in\mathscr{L}$ and reject every $w\notin \mathscr{L}
-`}
+
+A language $\mathscr{L}$ is Turing-Decidable, if there is a TM $\mathscr{M}$ that accepts every $w\in\mathscr{L}$ and reject every \$w\notin \mathscr{L}
+
 </Definition>
 
 Informally Halts on all accepting or rejecting inputs with the correct result
 
 <Important>
-{String.raw`
+
 If $\mathscr{M}$ recognises $\mathscr{L}$, it may or may not halt on words not in $\mathscr{L}$. However, if $\mathscr{M}$ decides $\mathscr{L}$, it always halts
-`}
+
 </Important>
 
 <Important>
@@ -176,17 +176,17 @@ finite alphabet, We shall use $\langle\mathscr{M}\rangle$ to denote the
 encoding of a Turing machine $\mathscr{M}$
 
 <Theorem>
-{String.raw`
+
 There is a TM $\mathscr{U}$ that takes a two-part input, the encoding of a TM $\mathscr{M},\langle\mathscr{M}\rangle$, and a word $w$, and simulate $\mathscr{M}$ on $w$. $\mathscr{U}$ is called a universal turing machine.
-`}
+
 </Theorem>
 
 # The Halting Problem
 
 <Definition name="The halting problem">
-{String.raw`
+
 Given a (encoding of a) TM $\mathscr{M}$, and a word $w$, does $\mathscr{M}$ terminate on $w$?
-`}
+
 </Definition>
 
 **Proposition**: The Halting Problem is **Turing-recognisable**
@@ -228,9 +228,9 @@ $\langle \mathscr{D}\rangle$?! There are two possibilities:
 # Turing-Recognisable vs Turing-Decidable
 
 <Theorem>
-{String.raw`
+
 A language $\mathscr{L}$ is Turing-Decidable iff both $\mathscr{L}$ and its complement $\overline{\mathscr{L}}$ are Turing-recognisable
-`}
+
 </Theorem>
 
 **Proof (of the "interesting" direction only)**: Suppose $\mathscr{M}_1$

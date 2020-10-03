@@ -32,23 +32,24 @@ An attribute may represent any quantity, e.g. type, string, memory
 allocation \...
 
 <Definition name="Syntax-Directed Definition">
-{`
+
 A context free grammar in which
-  * Every grammar symbol has an associated set of attributes
-  * Every production has an associated set of semantic rules for computing the attribute values
-`}
+
+-   Every grammar symbol has an associated set of attributes
+-   Every production has an associated set of semantic rules for computing the attribute values
+
 </Definition>
 
 # Syntax-directed translation
 
 <Definition name="Syntax-Directed Translation">
-{`
-  * Process an input string x using a syntax directed definition
-  * First build the parse tree for the string x
-  * For every node N of the parse tree that is labelled by a grammar symbol X denote X.a the attribute a of X at node N 
-  * If X is a non-terminal the value of attribute X.a is determined using a semantic rule associated with some production 
-  * If X is terminal the value of X.a is determined by the lexical analyser
-`}
+
+-   Process an input string x using a syntax directed definition
+-   First build the parse tree for the string x
+-   For every node N of the parse tree that is labelled by a grammar symbol X denote X.a the attribute a of X at node N
+-   If X is a non-terminal the value of attribute X.a is determined using a semantic rule associated with some production
+-   If X is terminal the value of X.a is determined by the lexical analyser
+
 </Definition>
 
 # Types of attributes
@@ -121,17 +122,17 @@ dependency graph has no directed cycles
 Some classes of SDD always admit an evaluation order for the attributes
 
 <Definition name="S-Attributed SDD">
-{`
-* The annotated Parse Tree has only synthesized attributes
-* Evaluate Attributed with any bottom up order
-`}
+
+-   The annotated Parse Tree has only synthesized attributes
+-   Evaluate Attributed with any bottom up order
+
 </Definition>
 
 <Definition name="L-Attributed SDD">
-{`
-* Both synthesized and inherited attributes
-* In the parse tree, the dependency graph edges between siblings are only "left to right"
-`}
+
+-   Both synthesized and inherited attributes
+-   In the parse tree, the dependency graph edges between siblings are only "left to right"
+
 </Definition>
 
 # Scopes of declarations

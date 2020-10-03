@@ -33,30 +33,35 @@ Let $S=\{(x_i,y_i)\}^m_{i=1} \in \mathbb{R}^d\times \{-1,+1\}$ be a training set
 $H_{w,b}=\{x\in \mathbb{R}^d:w^Tx+b=0\}$
 
 <Definition name="Separating Hyperplane">
-{String.raw`
-Let $S=\{(x_i,y_i)\}^m_{i=1} \in \mathbb{R}^d\times \{-1,+1\}$ be a training set. \n
-By a hyperplane we mean a set of Hilbert space $H_{w,b}=\{x\in \mathbb{R}^d:w^Tx+b=0\}$ parametrised by $w\in \mathbb{R}^d$ and $b\in \mathbb{R}$. \n
-We assume that the data are linearly separable, that is, there exist $w\in \mathbb{R}^d$ and $b\in \mathbb{R}$ such that $y_i(w^Tx_i+b)>0,i=1,..,m$. \n
+
+Let $S=\{(x_i,y_i)\}^m_{i=1} \in \mathbb{R}^d\times \{-1,+1\}$ be a training set.
+
+By a hyperplane we mean a set of Hilbert space $H_{w,b}=\{x\in \mathbb{R}^d:w^Tx+b=0\}$ parametrised by $w\in \mathbb{R}^d$ and $b\in \mathbb{R}$.
+
+We assume that the data are linearly separable, that is, there exist $w\in \mathbb{R}^d$ and $b\in \mathbb{R}$ such that $y_i(w^Tx_i+b)>0,i=1,..,m$.
+
 In which case we call $H_{w,b}$ a separating hyperplane.
-`}
+
 </Definition>
 
 <Definition name="Distance">
-{String.raw`
+
 The distance $\rho_x(w,b)$ of a point x from a hyperplane $H_{w,b}$ is
+
 $$
 \rho_{x}(w, b)=\frac{\left|w^{T} x+b\right|}{\|w\|}
 $$
-`}
+
 </Definition>
 
 <Definition name="Margin">
-{String.raw`
+
 If $H_{w,b}$ separates the training set S we define its margin as:
+
 $$
 \rho_{x}(w,b)=\min_{i=1:m}\rho_{x_i}(w,b)
 $$
-`}
+
 </Definition>
 
 If $H_{w,b}$ is a hyperplane (separating or not) we also define the
@@ -77,12 +82,12 @@ hyperplane)
 
 There are two possible ways to fix the parameterisation:
 
-- **Normalised hyperplane**: set $||w||=1$, in which case
-  $\rho_{x}(w,b)=|w^Tx+b|$ and $\rho_s(w,b)=\min_{i=1:m}y_i(w^Tx_i+b)$
+-   **Normalised hyperplane**: set $||w||=1$, in which case
+    $\rho_{x}(w,b)=|w^Tx+b|$ and $\rho_s(w,b)=\min_{i=1:m}y_i(w^Tx_i+b)$
 
-- **Canonical hyperplane**: choose $||w||$ such that
-  $\rho_s(w,b)=\dfrac{1}{||w||}$, i.e. we require that
-  $\min_{i=1:m}y_i(w^Tx_i+b)=1$
+-   **Canonical hyperplane**: choose $||w||$ such that
+    $\rho_s(w,b)=\dfrac{1}{||w||}$, i.e. we require that
+    $\min_{i=1:m}y_i(w^Tx_i+b)=1$
 
 The problem thus can be defined as
 

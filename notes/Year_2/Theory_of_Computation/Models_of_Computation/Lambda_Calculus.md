@@ -10,7 +10,7 @@ denote by (possibly indexed) small letters -
 $a,b,c, ..., x,y,z,a_0,a_1,a_2,...$
 
 <Definition name="$\lambda-term$">
-{String.raw`
+
 $$
 \begin{aligned}
 <term> :&= <name>\\
@@ -18,7 +18,7 @@ $$
     &| (<term><term>)
 \end{aligned}
 $$
-`}
+
 </Definition>
 
 **Conventions**
@@ -67,16 +67,16 @@ $(\lambda x.F)A \equiv F[x:=A]$ provided all free occurrences in A
 remain free in $F[x:=A]$
 
 <Definition name="Normal form">
-{String.raw`
+
 A $\lambda$-term is in normal form if no $\beta$ reduction can be applied to it
-`}
+
 </Definition>
 
 <Theorem>
-{String.raw`
+
 If a $\lambda$-term has a normal form then the formal for is
 unique (up to renaming of bound variables)
-`}
+
 </Theorem>
 
 **Computing the normal form**: Keep on replacing the leftmost bound
@@ -98,15 +98,15 @@ S=\lambda uvw.v(uvw)
 $$
 
 <Lemma>
-{String.raw`
+
 For every two terms in F and A, $C_nFA=F^{(n)}A$
-`}
+
 </Lemma>
 
 <Corollary>
-{String.raw`
+
 Doing addition in $\lambda$-calculus: $C_nSC_m=C_{n+m}$
-`}
+
 </Corollary>
 
 # Predecessor is hard

@@ -6,20 +6,21 @@ lecturer: Iain
 # Knowledge-based agents
 
 <Definition name="Knowledge-based agents">
-{`
+
 Knowledge based agents are structured around their knowledge base (KB)
-* Collection of logical formulae from some knowledge presentation language
-* Used to express assertions representing the agent's knowledge
-* Can implement the notion of "state"
-`}
+
+-   Collection of logical formulae from some knowledge presentation language
+-   Used to express assertions representing the agent's knowledge
+-   Can implement the notion of "state"
+
 </Definition>
 
 Logical agents can:
 
-- Query their knowledge base
+-   Query their knowledge base
 
-- Infer new formulae from the knowledge-base and percepts using some
-  inference system
+-   Infer new formulae from the knowledge-base and percepts using some
+    inference system
 
 A generic knowledge-based agent program is structured as follows
 

@@ -36,7 +36,7 @@ Thresholding produces a binary image from a grayscale image
 Easier to colour threshold in HSV space than RGB
 
 <Definition name="Colour slicing">
-A portion of the Hue colour channel (range of wavalengths) can be isolated. For better results, also use S and V in conjunction
+A portion of the Hue colour channel (range of wavelengths) can be isolated. For better results, also use S and V in conjunction
 </Definition>
 
 Isolate objects by colour:

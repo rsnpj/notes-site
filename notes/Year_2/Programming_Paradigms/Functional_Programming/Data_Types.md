@@ -7,25 +7,25 @@ lecturer: Lawrence
 
 ## Defining data types
 
-- So far we’ve only used the builtin data types
+-   So far we’ve only used the builtin data types
 
-- Of course, it often makes sense to define new data types
+-   Of course, it often makes sense to define new data types
 
-- Multiple reasons to do this
+-   Multiple reasons to do this
 
-  - Hide complexity
+    -   Hide complexity
 
-  - Build new abstractions
+    -   Build new abstractions
 
-  - Type safety
+    -   Type safety
 
-- Haskell has three ways to do this
+-   Haskell has three ways to do this
 
-  - `type`
+    -   `type`
 
-  - `data`
+    -   `data`
 
-  - `newtype` (won’t cover this)
+    -   `newtype` (won’t cover this)
 
 ## Type declarations
 
@@ -139,94 +139,98 @@ This is a type where we specify the "shape" of each element
 The two algebraic operations are "sum" and "product"
 
 <Definition name="Sum type">
+
 An alternation `data foo = A|B` means the value of Foo can be either A or B
+
 </Definition>
 
 <Definition name="Product Type">
+
 A combination `data Pair = P Int Double` represents a pair of numbers together
+
 </Definition>
 
 ## Haskell Types: Pros and Cons
 
 ### Classes
 
-- Easy to add new "kinds of things": just make a subclass
+-   Easy to add new "kinds of things": just make a subclass
 
-- Hard to add new "operation on existing things": need to change
-  superclass to add new method and potentially update all subclasses
+-   Hard to add new "operation on existing things": need to change
+    superclass to add new method and potentially update all subclasses
 
 ### Algebraic data classes
 
-- Hard to add new "kinds of things": need to add new constructor and
-  update all functions that use the data type
+-   Hard to add new "kinds of things": need to add new constructor and
+    update all functions that use the data type
 
-- Easy to add new "operation on existing things": just write a new
-  function
+-   Easy to add new "operation on existing things": just write a new
+    function
 
 # Higher order functions and type classes again
 
 ## Separating code and data
 
-- When designing software, a good aim is to hide the implementation of
-  data structures
+-   When designing software, a good aim is to hide the implementation of
+    data structures
 
-- In OO based languages we do this with classes and inheritence
+-   In OO based languages we do this with classes and inheritence
 
-- Or with interfaces, which define a contract that a class must
-  implement
+-   Or with interfaces, which define a contract that a class must
+    implement
 
-- Idea is that calling code doesn’t know internals and only relies on
-  interface
+-   Idea is that calling code doesn’t know internals and only relies on
+    interface
 
-- As a result, we can change the implementation, and the client code
-  still works
+-   As a result, we can change the implementation, and the client code
+    still works
 
 ## Generic higher order functions
 
-- In Haskell we can realise this idea with generic higher order
-  functions, and type classes
+-   In Haskell we can realise this idea with generic higher order
+    functions, and type classes
 
-- Last time, we saw some examples of higher order functions for list
+-   Last time, we saw some examples of higher order functions for list
 
-- For example, imagine we want to add two lists pairwise
+-   For example, imagine we want to add two lists pairwise
 
-  ```haskell
-  -- By hand
-  addLists _[] = []
-  addLists [] _ = []
-  addLists (x:xs) (y:ys) = (x+y) : addLists xs ys
-  -- Better
-  addLists xs ys = map (uncurry (+)) $ zip xs ys
-  -- Best
-  addLists = zipWith (+)
-  ```
+    ```haskell
+    -- By hand
+    addLists _[] = []
+    addLists [] _ = []
+    addLists (x:xs) (y:ys) = (x+y) : addLists xs ys
+    -- Better
+    addLists xs ys = map (uncurry (+)) $ zip xs ys
+    -- Best
+    addLists = zipWith (+)
+    ```
 
-- If we write our own data types, are we reduced to doing everything
-  "by hand" again
+-   If we write our own data types, are we reduced to doing everything
+    "by hand" again
 
 ## Using type classes
 
-- Recall, Haskell has a concept of type classes
+-   Recall, Haskell has a concept of type classes
 
-- These describe interfaces that can be used to constrain the
-  polymorphism of functions to those types satisfying the interface
+-   These describe interfaces that can be used to constrain the
+    polymorphism of functions to those types satisfying the interface
 
-- (+) acts on any type, as long as that type implements the Num
-  interface
+-   (+) acts on any type, as long as that type implements the Num
+    interface
 
-  ```haskell
-  (+) :: Num a => a -> a -> a
-  ```
+    ```haskell
+    (+) :: Num a => a -> a -> a
+    ```
 
-- (<) acts on any type, as long as that type implements the
-  Ord(erable) interface
+-   (<) acts on any type, as long as that type implements the
+    Ord(erable) interface
 
-  ```haskell
-  (<) :: Ord a => a -> a -> Bool
-  ```
+    ```haskell
+    (<) :: Ord a => a -> a -> Bool
+    ```
 
-- Haskell comes with many such type classes encapsulating common
-  patterns
+-   Haskell comes with many such type classes encapsulating common
+    patterns
 
-- When we implement out own data types, we can "just" implement
-  appropriate instances of these classes
+-   When we implement out own data types, we can "just" implement
+    appropriate instances of these classes

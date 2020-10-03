@@ -6,12 +6,13 @@ lecturer: Stefan
 # m-reducibility
 
 <Definition name="m-reducibility">
-{String.raw`
+
 Let A and B be languages over the same alphabet $\Sigma$. A is a many-to-one reducible to B (write $A\leqslant B$) if there is a Turing machine F that terminates on every input $u\in \Sigma^*$, and such that
+
 $$
 A\{u\in \Sigma^*|F(u)\in B\}
 $$
-`}
+
 </Definition>
 
 Informally: A is not harder than B

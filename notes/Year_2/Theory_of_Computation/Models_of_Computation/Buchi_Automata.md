@@ -71,30 +71,31 @@ regular)
 # $\omega$-regular languages
 
 <Definition name="$\omega$ regular language">
-{String.raw`
+
 An $\omega$-regular language/expression is built upon regular languages, using the following expressions
+
 1. $A\cup B$, where both A and B are $\omega$-regular
 2. $AB$, where A is regular and B is $\omega$-regular
 3. $A^\omega$, which is $\{a_1...| a_i\in A\}$, i.e. an infinite sequence of words from A, where A is regular and doesn't contain the empty word
-`}
+
 </Definition>
 
 <Theorem>
-{String.raw`
+
 An $\omega$-language is $\omega$-regular iff some non-deterministic Buchi Automaton recognises it
-`}
+
 </Theorem>
 
 # Limits of Regular Languages
 
 <Definition name="Limit of a regular language">
-{String.raw`
+
 Let A be a regular language. The limit of A limA is the language $\{a\in \Sigma^\omega| \text{a has infinitely many prefixes in A}\}$
-`}
+
 </Definition>
 
 <Theorem>
-{String.raw`
+
 An $\omega$-language is a limit of a regular language iff some deterministic Buchi Automaton recognises it
-`}
+
 </Theorem>

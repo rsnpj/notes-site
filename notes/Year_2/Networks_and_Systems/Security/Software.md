@@ -6,20 +6,22 @@ lecturer: Chris
 # Types of memory
 
 <Definition name="DRAM">
-{`
+
 1 Transistor per bit
-* Slow
-* Cheap
-`}
+
+-   Slow
+-   Cheap
+
 </Definition>
 
 <Definition name="SRAM">
-{`
+
 4+ Transistors per bit
-* Fast
-* Expensive
-* Takes up space on die
-`}
+
+-   Fast
+-   Expensive
+-   Takes up space on die
+
 </Definition>
 
 # Computer Architecture

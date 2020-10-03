@@ -26,11 +26,15 @@ lecturer: Donald
 ## Transport vs network layer
 
 <Definition name="Network Layer">
+
 Logical communication between **hosts**
+
 </Definition>
 
 <Definition name="Transport Layer">
+
 Logical communication between **processes**. Relies on and enhances network layer services
+
 </Definition>
 
 ## Internet transport-layer protocols
@@ -66,10 +70,11 @@ demultiplexing
 ![Multiplexing](/img/Year_2/Networks_and_Systems/Networks/Transport/multiplexing.webp)
 
 <Important>
-{`
-In the network layer it is called a packet \n
+
+In the network layer it is called a packet
+
 In the transport layer it is called a segment
-`}
+
 </Important>
 
 -   Host receives IP datagrams
@@ -330,21 +335,20 @@ protocols:
 Two generic forms of pipelined protocols:
 
 <Definition name="Go-back-N">
-{`
-* Sender can send multiple packets without waiting for ACK
-* Sender can have up to N unacked packets in pipeline
-* Receiver only sends cumulative ack, doesn't ack packet if there's a gap (so if it acks packet 4, it means it has packet 1,2,3 and 4)
-* Sender has timer for oldest unacked packet, when timer expired, retransmit all unacked packets
-`}
+
+-   Sender can send multiple packets without waiting for ACK
+-   Sender can have up to N unacked packets in pipeline
+-   Receiver only sends cumulative ack, doesn't ack packet if there's a gap (so if it acks packet 4, it means it has packet 1,2,3 and 4)
+-   Sender has timer for oldest unacked packet, when timer expired, retransmit all unacked packets
+
 </Definition>
 
 <Definition name="Selective Repeat">
-{`
-* Sender can have up to N unacked packets in pipeline
-* Receiver sends individual ack for each packet
-* Sender maintains timer for each unacked packet, when timer expires, retransmit only that unacked packet
-* 
-`}
+
+-   Sender can have up to N unacked packets in pipeline
+-   Receiver sends individual ack for each packet
+-   Sender maintains timer for each unacked packet, when timer expires, retransmit only that unacked packet
+
 </Definition>
 
 ## GBN(Go Back N) in action

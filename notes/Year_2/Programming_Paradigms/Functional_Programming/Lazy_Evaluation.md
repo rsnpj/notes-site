@@ -141,17 +141,19 @@ Prelude> square (1+2)
 # Controlling evaluation order
 
 <Definition name="Normal Form">
-{`
-The expression graph contains no redexes, is finite, and is acyclic \n
+
+The expression graph contains no redexes, is finite, and is acyclic
+
 Data constructors are not reducible, so they "look like functions, there is no reduction rule
-`}
+
 </Definition>
 
 <Definition name="Weak head normal form (WHNF)">
-{`
-The expression graph is in normal form, or the topmost node in the expression graph is a constructor.\n
+
+The expression graph is in normal form, or the topmost node in the expression graph is a constructor.
+
 This allows for cycles
-`}
+
 </Definition>
 
 ## Evaluation rule
@@ -182,10 +184,11 @@ This allows for cycles
 ## Strict functions
 
 <Definition name="Strict function">
-{`
-A function which requires its arguments to be evaluated before being applied \n
+
+A function which requires its arguments to be evaluated before being applied
+
 Even when using outermost evaluation
-`}
+
 </Definition>
 
 Some functions in Haskell are strict (normally when working with numeric

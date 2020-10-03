@@ -15,12 +15,13 @@ A potential solution, it may be correct or incorrect
 # Verifiers
 
 <Definition name="Verifier">
-{String.raw`
+
 An acceptor machine (FSM with accepting states) V which halts on all inputs is called a verifier for a language $\mathcal{L}$ if
+
 $$
 \mathcal{L}=\{w| V \text{accepts "w; c" for some string c}\}
 $$
-`}
+
 </Definition>
 
 -   w;c just means a problem certificate pair
@@ -58,26 +59,27 @@ denotes the tree of configurations which can be entered with input x,
 and NT accepts x if there is some accepting path in NT(x).
 
 <Definition name="Time complexity">
-{String.raw`
+
 The time complexity of a non-deterministic Turing Machine NT is the function $NTime_{NT}$ such that $NTime_{NT}(x)$ is the number of steps in the shortest accepting path $NT(x)$ is there is one, otherwise it is the number of steps in the shortest rejecting path
-`}
+
 </Definition>
 
 # Non-Deterministic time complexity
 
 <Definition name="Non-deterministic time complexity">
-{String.raw`
+
 For any function f, we say that the non-deterministic time complexity of a decidable language $\mathcal{L}$ is $\mathcal{O}(f)$ is there exists a non-deterministic TM NT which decides $\mathcal{L}$, and constants $n_0$, and $c$ such that for all inputs $x$ with $|x|>n_0$
+
 $$
 NTime_{NT}(x)\leqslant c\cdot f(|x|)
 $$
-`}
+
 </Definition>
 
 <Definition name="Non-deterministic time complexity class">
-{String.raw`
+
 The non-deterministic time complexity class NTIME[f] is defined to be the class of all problems (i.e. languages), for which there exists an algorithm with non-deterministic time complexity in $\mathcal{O}(f)$.
-`}
+
 </Definition>
 
 # Alternative NP Definition
@@ -129,9 +131,9 @@ Proof:
 # Ladner’s theorem
 
 <Theorem>
-{String.raw`
+
 If $P\neq NP$ then NP contains infinitely many (polynomial time) inequivalent problems
-`}
+
 </Theorem>
 
 -   This implies that unless P=NP, the class NP contains (infinitely

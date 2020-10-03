@@ -15,8 +15,8 @@ than M
 
 The matching number $\nu_G$ of G is the size of a maximum matching in G
 
-- Instance: a graph G
-- Task: determine $\nu_G$
+-   Instance: a graph G
+-   Task: determine $\nu_G$
 
 # Alternating Paths and Cycles
 
@@ -66,11 +66,11 @@ to M
 Let $G=(V,E)$ be an undirected graph, and let M and M\* be matchings in
 G. Then the subgraph $(V, M\otimes M*)$ is the disjoint union of
 
-- Isolated vertices
+-   Isolated vertices
 
-- Alternating cycles with respect to both M and M\*
+-   Alternating cycles with respect to both M and M\*
 
-- Alternating paths with respect to both M and M\*
+-   Alternating paths with respect to both M and M\*
 
 **Lemma**
 
@@ -168,15 +168,15 @@ Suppose you have only a small number of cameras that you want to place
 at crossroads in a city so that every road is "covered"
 
 <Definition name="Vertex Cover">
-{String.raw`
+
 A vertex cover of a graph G=(V,E) is a set $S\subseteq V$ so that each edge G has at least one end-vertex in S
-`}
+
 </Definition>
 
 <Definition name="Vertex Cover Number">
-{String.raw`
+
 The vertex cover number $\tau_G$ of G is the size of a smallest vertex cover of G
-`}
+
 </Definition>
 
 # Vertex cover for Bipartite Graphs
@@ -216,13 +216,13 @@ Instance: a graph G and integer $k\geqslant 0$
 
 Task: Does G have a vertex cover of size at most k?
 
-- Recall that this problem is computationally hard
+-   Recall that this problem is computationally hard
 
-- Let n and m be the number of vertices and edges of G. Brute force
-  requires checking $\mathcal{O}(n^k)$ possible choices for S
+-   Let n and m be the number of vertices and edges of G. Brute force
+    requires checking $\mathcal{O}(n^k)$ possible choices for S
 
-- Now assume k is relatively small compared to n. Can we find an
-  algorithm that runs in $f(k)+\mathcal{O}(n+m)$ time?
+-   Now assume k is relatively small compared to n. Can we find an
+    algorithm that runs in $f(k)+\mathcal{O}(n+m)$ time?
 
 **Rule 1**. If v is not an end-vertex of an edge, then remove v, so
 consider (G-v,k)
@@ -234,14 +234,14 @@ At some point, rules 1 and 2 can’t be applied any more. Let (G’,k’) be
 the resulting instance. Note that we found (G’,k’) in $\mathcal{O}(n+m)$
 time
 
-- If G’ has more tan $k+k^2$ vertices, then the answer is no. For
-  contradiction, assume S is vertex cover of G’ with
-  $|S|\leqslant k' \leqslant k$. By rule 2, there are at most
-  $k|S|\leqslant k^2$ vertices that are not in S but that have a
-  neighbour in S. Hence, there exists a vertex u in G’ that has no
-  neighbour S. BY rule 1, u has a neighbour v, so u or v must be in S,
-  a contradiction
+-   If G’ has more tan $k+k^2$ vertices, then the answer is no. For
+    contradiction, assume S is vertex cover of G’ with
+    $|S|\leqslant k' \leqslant k$. By rule 2, there are at most
+    $k|S|\leqslant k^2$ vertices that are not in S but that have a
+    neighbour in S. Hence, there exists a vertex u in G’ that has no
+    neighbour S. BY rule 1, u has a neighbour v, so u or v must be in S,
+    a contradiction
 
-- Otherwise G’ has at most $k+k^2$ vertices. We solve the problem on
-  G’ using brute force. This takes $f(k)$ time for some function f
-  that only depends on k
+-   Otherwise G’ has at most $k+k^2$ vertices. We solve the problem on
+    G’ using brute force. This takes $f(k)$ time for some function f
+    that only depends on k

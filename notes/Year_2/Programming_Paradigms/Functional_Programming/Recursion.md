@@ -177,10 +177,11 @@ A function is 1 of the 1st two and 1 of the 2nd two
 # Tail recursion: a special case
 
 <Definition name="Tail Recursion">
-{`
-A function is tail recursive if the last result of a recursive call is the result of the function itself. \n
+
+A function is tail recursive if the last result of a recursive call is the result of the function itself.
+
 Loosely, the last thing a tail recursive function does is call itself with new arguments, or return a value
-`}
+
 </Definition>
 
 -   Such functions are useful because they have a trivial translation
@@ -240,11 +241,12 @@ We’ll now look at higher order functions in the standard library that
 capture many of these patterns
 
 <Definition name="Higher order function">
-{`
+
 A function that does at least one of:
-* Take one or more functions as arguments
-* Returns a function as its result
-`}
+
+-   Take one or more functions as arguments
+-   Returns a function as its result
+
 </Definition>
 
 Due to currying, every function of more than one argument is higher

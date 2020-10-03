@@ -6,36 +6,38 @@ lecturer: Craig
 # Plan-driven vs Agile
 
 <Definition name="Plan Driven">
-{`
+
 Well established means for transferring knowledge about how to structure and design systems
-* Tend to put emphasis upon following procedures, and making use of notations to create models of the system
-* Work well for those classes of problem that lend themselves to being modelled using widely-available forms
-`}
+
+-   Tend to put emphasis upon following procedures, and making use of notations to create models of the system
+-   Work well for those classes of problem that lend themselves to being modelled using widely-available forms
+
 </Definition>
 
 <Definition name="Agile">
-{`
+
 More flexible and more centred around "concepts" and "social models"
-* They still require discipline in their application, and risk degenerating to a "code and fix" form without this
-* There is often still a need to determine the type of system architecture required, and what its main elements should be
-`}
+
+-   They still require discipline in their application, and risk degenerating to a "code and fix" form without this
+-   There is often still a need to determine the type of system architecture required, and what its main elements should be
+
 </Definition>
 
 # Evolution of agile forms
 
-- Waterfall model - descriptor of the over-arching process borrowed
-  from a manufacturing context, but in practice each step is not as
-  precise as implied
+-   Waterfall model - descriptor of the over-arching process borrowed
+    from a manufacturing context, but in practice each step is not as
+    precise as implied
 
-- Prototyping
+-   Prototyping
 
-- Spiral model - Incremental form
+-   Spiral model - Incremental form
 
-- Rapid application development
+-   Rapid application development
 
-- Scrum - process driven approach
+-   Scrum - process driven approach
 
-- DevOps - operations staff involved in process
+-   DevOps - operations staff involved in process
 
 # Extreme Programming
 
@@ -48,25 +50,25 @@ forms a well established and sell defined example of the agile concept
 
 Communication:
 
-- Rich collection of procedures and activities to support this
+-   Rich collection of procedures and activities to support this
 
-- Stakeholders include customers, users, developers
+-   Stakeholders include customers, users, developers
 
 Feedback:
 
-- Emphasis is on delivering quality, rather than on speed
+-   Emphasis is on delivering quality, rather than on speed
 
 Simplicity:
 
-- Every aspect of the system must be justified
+-   Every aspect of the system must be justified
 
 Courage:
 
-- Confidence to do risky things and accept change
+-   Confidence to do risky things and accept change
 
 Respect
 
-- Core underpinning of an effective team approach
+-   Core underpinning of an effective team approach
 
 ### Practices
 
@@ -91,19 +93,19 @@ XP is neither design-led nor plan-driven
 
 Characteristics of design strategy in XP:
 
-- KISS principle
+-   KISS principle
 
-- Use CRC (Class/Responsibilities/Collaboration) cards
+-   Use CRC (Class/Responsibilities/Collaboration) cards
 
-- Reduce risk by using "spike" solutions where appropriate
+-   Reduce risk by using "spike" solutions where appropriate
 
-- Have a metaphor for talking/naming
+-   Have a metaphor for talking/naming
 
-- Add extra functions for the customer (only)
+-   Add extra functions for the customer (only)
 
-- Refactor regularly and mercilessly
+-   Refactor regularly and mercilessly
 
-- Design for test
+-   Design for test
 
 # CRC Cards
 
@@ -115,60 +117,60 @@ term "class" can be used to describe any design element
 
 Used to document collaborative design decisions and
 
-- Identify components
+-   Identify components
 
-- Discuss design issues in (customer-developer) teams
+-   Discuss design issues in (customer-developer) teams
 
-- Provide an informal specification of components
+-   Provide an informal specification of components
 
 # Coding
 
 The popular emphasis on pair programming can easily obscure other
 aspects of the XP view of coding:
 
-- The customer is always available
+-   The customer is always available
 
-- The code must be written to agreed standards
+-   The code must be written to agreed standards
 
-- The unit tests are coded first
+-   The unit tests are coded first
 
-- All production code is developed by pair programming
+-   All production code is developed by pair programming
 
-- Only one pair integrates code at a time
+-   Only one pair integrates code at a time
 
-- Integrate often
+-   Integrate often
 
-- Use collective code ownership
+-   Use collective code ownership
 
-- Leave optimisation until last
+-   Leave optimisation until last
 
-- Coding should involve no overtime
+-   Coding should involve no overtime
 
 # Pair programming
 
 All programming is undertaken by teams of two
 
-- One person (the driver) uses the keyboard, and the other (the
-  observer or navigator) looks at the screen while they discuss what
-  they are doing
+-   One person (the driver) uses the keyboard, and the other (the
+    observer or navigator) looks at the screen while they discuss what
+    they are doing
 
-- The pairs swap roles on a regular basis
+-   The pairs swap roles on a regular basis
 
-- Provides learning benefit for less experienced programmers
+-   Provides learning benefit for less experienced programmers
 
 To work it does require:
 
-- Mutual respect between the team
+-   Mutual respect between the team
 
-- Getting used to talking while programming
+-   Getting used to talking while programming
 
 # Test-First
 
-- All code must have unit tests that are written before any code is
-  produced
+-   All code must have unit tests that are written before any code is
+    produced
 
-- All code must pass unit tests before it is released
+-   All code must pass unit tests before it is released
 
-- When a bug is found, tests are created
+-   When a bug is found, tests are created
 
-- Acceptance tests are run often and the score from these is published
+-   Acceptance tests are run often and the score from these is published

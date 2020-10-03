@@ -14,11 +14,12 @@ Additional information pertinent to the problem in hand is supplied (or construc
 We shall continue to base our strategies around the search tree
 
 <Definition name="Best-First Search">
-{`
+
 Expand a fringe node z with a minimal value according to a given evaluation function $f(z)$
-* $f$ is defined on the nodes of the search tree
-Put children on the fringe and repeat
-`}
+
+-   $f$ is defined on the nodes of the search tree
+    Put children on the fringe and repeat
+
 </Definition>
 
 Choice of evaluation function determined type of best-first search, e.g.
@@ -214,5 +215,7 @@ The greedy expansion of this doesn’t lead to an optimal path
         and this is signalled in output
 
 <Important>
-A goal-node is never expanded under A* Search (at that point the heuristic would be 0). A\* Search can be both complete and optimal
+
+A goal-node is never expanded under A\* Search (at that point the heuristic would be 0). A\* Search can be both complete and optimal
+
 </Important>

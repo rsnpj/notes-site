@@ -10,9 +10,9 @@ no path, then $\delta(u,v)=\infty$
 
 A directed cycle is:
 
-- Positive: if its edge weights sum up to a positive number
+-   Positive: if its edge weights sum up to a positive number
 
-- Negative: if its edge weights sum up to a negative number
+-   Negative: if its edge weights sum up to a negative number
 
 If there is a positive cycle in the graph, it will not be contained in
 any shortest path between u and v so we can assume that the shortest
@@ -24,33 +24,33 @@ not contain negative cycles.
 
 # Single-Source Shortest Paths
 
-- Aim: to describe an algorithm that solves the single-source shortest
-  paths problem, i.e. an algorithm that finds the shortest path from a
-  specific source vertex
+-   Aim: to describe an algorithm that solves the single-source shortest
+    paths problem, i.e. an algorithm that finds the shortest path from a
+    specific source vertex
 
-- This is a generalization of BFS
+-   This is a generalization of BFS
 
-- So the output of the algorithm should be two arrays d, $\pi$ where
-  for each vertex v:
+-   So the output of the algorithm should be two arrays d, $\pi$ where
+    for each vertex v:
 
-  - $d(v)=\delta(s,v)$
+    -   $d(v)=\delta(s,v)$
 
-  - $\pi(v)$ is the predecessor of v
+    -   $\pi(v)$ is the predecessor of v
 
 # Relaxation
 
-- Assume that the weight on every edge is non-negative
+-   Assume that the weight on every edge is non-negative
 
-- We do not directly compute the entry $d(v)=\delta(s,v)$
+-   We do not directly compute the entry $d(v)=\delta(s,v)$
 
-- Instead, at every step, $d(v)$ is an estimate for $\delta(s,v)$
+-   Instead, at every step, $d(v)$ is an estimate for $\delta(s,v)$
 
-  - Initially, $d(v)=\infty$, and it always remains
-    $d(v)\geqslant \delta(s,v)$
+    -   Initially, $d(v)=\infty$, and it always remains
+        $d(v)\geqslant \delta(s,v)$
 
-  - $d(v)$ is updated (i.e. it decreases) as shorter paths are found
+    -   $d(v)$ is updated (i.e. it decreases) as shorter paths are found
 
-  - At the end of the algorithm we have $d(v)=\delta(s,v)$
+    -   At the end of the algorithm we have $d(v)=\delta(s,v)$
 
 `Initialise-Single-Source(G,s)`
 
@@ -63,18 +63,18 @@ d(s)=0
 
 The process of relaxing an edge (u,v):
 
-- Test whether we can improve the shortest path from s to v that we
-  found so far, by going through u
+-   Test whether we can improve the shortest path from s to v that we
+    found so far, by going through u
 
-- If yes, then update $d(v)$ and $\pi(v)$
+-   If yes, then update $d(v)$ and $\pi(v)$
 
-  - Decrease the estimate $d(v)$
+    -   Decrease the estimate $d(v)$
 
-  - Update the predecessor $\pi(v)$ to u
+    -   Update the predecessor $\pi(v)$ to u
 
-- The algorithm first calls initialise-single-source and then it
-  repeatedly relaxes the appropriate edges (according to the weight
-  function w)
+-   The algorithm first calls initialise-single-source and then it
+    repeatedly relaxes the appropriate edges (according to the weight
+    function w)
 
 `Relax(u,v,w)`
 
@@ -86,19 +86,19 @@ if d(v)>d(u)+w(u,v):
 
 # Dijkstra’s Algorithm
 
-- Initialisation: distance to source A is 0, $S=\varnothing$, Q=V
+-   Initialisation: distance to source A is 0, $S=\varnothing$, Q=V
 
-- S stores the vertices v for which we already found $\delta(A,v)$
+-   S stores the vertices v for which we already found $\delta(A,v)$
 
-- Q stores all the other vertices
+-   Q stores all the other vertices
 
-- While q is not empty
+-   While q is not empty
 
-  - Remove from Q the vertex u for which d(u) is minimum
+    -   Remove from Q the vertex u for which d(u) is minimum
 
-  - Add this vertex to s
+    -   Add this vertex to s
 
-  - Relax all edges leaving u
+    -   Relax all edges leaving u
 
 `Dijkstra({G,w,s})`
 
@@ -121,9 +121,9 @@ vertex
 Finding the vertex v in Q with minimum d(v) takes $\mathcal{O}(V)$ time
 and this is done v times
 
-- To find the minimum, just scan the set Q
+-   To find the minimum, just scan the set Q
 
-- To compute the new vertex in S, find the new minimum of Q
+-   To compute the new vertex in S, find the new minimum of Q
 
 Relaxation takes in total $\mathcal{O}(E)$ time as every edge is relaxed
 once
@@ -136,9 +136,9 @@ minimum for Q it can run in $\mathcal{O}(V\log V+E)$ time
 # Properties of shortest paths and relaxation
 
 <Definition name="Triangle Inequality">
-{String.raw`
+
 For all edges (u,v) we have $\delta(s,v)\leqslant \delta(s,u)+w(u,v)$
-`}
+
 </Definition>
 
 <Definition name="Optimal substructure">
@@ -146,21 +146,21 @@ Any subpath of a shortest path is also a shortest path
 </Definition>
 
 <Definition name="Upper bound property">
-{String.raw`
+
 For every vertex v, we have $d(v)\geqslant \delta(s,v)$
-`}
+
 </Definition>
 
 <Definition name="No-path property">
-{String.raw`
+
 If $\delta(s,v)=\infty$ then we have $d(v)=\infty$ at every iteration
-`}
+
 </Definition>
 
 <Definition name="Convergence property">
-{String.raw`
+
 If there is a shortest path from s to v including the edge (u,v) and if $d(u)=\delta(s,u)$, then we obtain $d(v)=\delta(s,v)$ when $(u,v)$ is relaxed
-`}
+
 </Definition>
 
 # Correctness of Dijkstra’s algorithm
@@ -170,11 +170,11 @@ We need to prove the loop invariant always remains true.
 At the start of each iteration of the while loop, $d(v)=\delta(s,v)$ for
 every $v\in S$
 
-- Initialisation: at the start of the algorithm S is empty, so the
-  loop invariant is trivially true
+-   Initialisation: at the start of the algorithm S is empty, so the
+    loop invariant is trivially true
 
-- Maintenance: we need to show that $d(u)=\delta(s,u)$ when u is added
-  to S
+-   Maintenance: we need to show that $d(u)=\delta(s,u)$ when u is added
+    to S
 
-- Termination: at the end, S contains every vertex, which implies that
-  $d(v)=\delta(s,v)$ for all vertices v in the graph
+-   Termination: at the end, S contains every vertex, which implies that
+    $d(v)=\delta(s,v)$ for all vertices v in the graph

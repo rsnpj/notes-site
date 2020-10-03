@@ -3,6 +3,12 @@ title: Introduction to Recommender Systems
 lecturer: Suncica
 ---
 
+<Test>
+
+**Hello**
+
+</Test>
+
 # What are Recommender Systems
 
 Belong to a class of **information filtering systems** combining:
@@ -20,23 +26,33 @@ They are algorithms/tools/techniques that:
 # Key definitions
 
 <Definition name="User model/profile">
+
 Structured representation of user interests
+
 </Definition>
 
 <Definition name="Item's context">
+
 Attributes/text describing an item
+
 </Definition>
 
-<Definition name="Rating"> 
+<Definition name="Rating">
+
 Expression of preference
+
 </Definition>
 
 <Definition name="Prediction">
+
 Estimate of preference or rating
+
 </Definition>
 
 <Definition name="Recommendation">
+
 Suggestions of selected items
+
 </Definition>
 
 # Moving from a User item to a rating

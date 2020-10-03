@@ -178,11 +178,11 @@ HTTP is stateless - server maintains no information about past client requests
 </Important>
 
 <Definition name="Client/server model">
-{`
-- **Client** - Browser that requests, receives, (using HTTP Protocol) and "displays" web objects
-- **Server**: Web server sends (using HTTP protocol) objects in response to requests
-`}
-  </Definition>
+
+-   **Client** - Browser that requests, receives, (using HTTP Protocol) and "displays" web objects
+-   **Server**: Web server sends (using HTTP protocol) objects in response to requests
+
+    </Definition>
 
 # HTTP Connections
 

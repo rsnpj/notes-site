@@ -27,9 +27,9 @@ $$
 \dfrac{tp}{tp+fn}$$ Specificity
 $$
 
-![ROC Curve](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC)
+![ROC Curve](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC.webp)
 
-![ROC Curve fig2 ](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC1)
+![ROC Curve fig2 ](/img/Year_2/Software_Methodologies/Machine_Learning/Performance_Measures/ROC1.webp)
 
 # Gains and Lift
 
@@ -46,5 +46,23 @@ Support (% pop)
 Base rate
 
 $$
-Br=\dfrac{tp+fn}{n}$$ Gains $$\{Su,Se\}\$\$ Lift
+Br=\dfrac{tp+fn}{n}
+$$
+
+Gains
+
+$$
+\{Su,Se\}
+$$
+
+Lift
+
+$$
+\{Su,\dfrac{Se}{Su}\}
+$$
+
+ROC
+
+$$
+\{\dfrac{Su-Br\cdot Se}{1-Br},Se\}
 $$

@@ -36,10 +36,12 @@ Load information collection:
 # Simple task transfer
 
 <Definition name="Non preemptive task transfers">
-  {`Transfer tasks that have not started executing
-* Transfer only the request(or task) without processing states
-* Good for load sharing but difficult for load balancing
-`}
+
+Transfer tasks that have not started executing
+
+-   Transfer only the request(or task) without processing states
+-   Good for load sharing but difficult for load balancing
+
 </Definition>
 
 <Definition name="Preemptive task transfers">

@@ -19,9 +19,8 @@ A**BC**BD**A**B and **B**D**CA**BA have a common subsequence of BCA
 ## Formal definition
 
 <Definition name="Subsequence">
-{String.raw`
+
 Given a sequence $X=\langle x_1,...,x_m \rangle$, another sequence $Z=\langle z_1,...,z_k \rangle$ is a subsequence of X if $z_1=x_{i_1},...,z_k=x_{i_k}$ for some $i_1<i_2<...<i_k$
-`}
 
 </Definition>
 

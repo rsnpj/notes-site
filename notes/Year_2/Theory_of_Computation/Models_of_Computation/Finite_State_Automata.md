@@ -129,9 +129,9 @@ Let $M=(Q,\Sigma, \delta, q_0, F)$ be a NFA and $w=w_1w_2...w_n$ be a
 word over $\Sigma\cup \{\epsilon\}$
 
 <Important>
-{String.raw`
+
 $\epsilon$’s can be freely added inside the actual word $\in\Sigma^*$
-`}
+
 </Important>
 
 M accepts w if there exists a sequence of states $r_0,r_1,r_2,...,r_n$
@@ -347,7 +347,6 @@ Two states, s and t, are equivalent if any word w, which is accepted
 when starting from s, is accepted when starting from t and vice versa.
 
 ## Equivalent and Distinguishable states
-
 
 **Equivalent states**: Two states s and t are equivalent if
 

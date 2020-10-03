@@ -14,6 +14,7 @@ The signal that runs from 0 to a maximum frequency. Has very narrow and near-zer
 <Definition name="Passband">
 Signals that occupy the higher range of frequency and pass through frequency filter(s). Used in wireless spectrum
 </Definition>
+
 ## Signal Bandwidth
 
 Bandwidth of analogue and digital signals are measured differently:
@@ -33,10 +34,9 @@ There are many digital encoding schemes
 ## NRZ Encoding (Non-Return-to-Zero)
 
 <Definition name="NRZ Encoding">
-{`
-* A high voltage represents a 1 and a low voltage represents a 0
-* The voltage does not return to zero, it changes only when the bit value changes
-`}
+
+-   A high voltage represents a 1 and a low voltage represents a 0
+-   The voltage does not return to zero, it changes only when the bit value changes
 
 </Definition>
 
@@ -52,10 +52,10 @@ There are many digital encoding schemes
 -   NRZI attempts to alleviate the problem in NRZ scheme
 
 <Definition name="NRZI encoding">
-{`
-* 0 is encoded as no change in the level. 1 is encoded depending on the current state of the line
-* 1 is encoded as an inverting of the current state
-`}
+
+-   0 is encoded as no change in the level. 1 is encoded depending on the current state of the line
+-   1 is encoded as an inverting of the current state
+
 </Definition>
 
 -   This fixes the problem of sending consecutive 1s but not consecutive
@@ -64,12 +64,12 @@ There are many digital encoding schemes
 ## Bipolar Encoding
 
 <Definition name="Bipolar Encoding">
-{`
-* 0 is represented by a zero voltage, neither high nor low
-* 1 is represented by either positive voltage or negative voltage
-  * It is inverted based on the last transmission of 1
-  * It is represented by a negative voltage if it was represented by a positive voltage when it was last transmitted, and vice versa
-`}
+
+-   0 is represented by a zero voltage, neither high nor low
+-   1 is represented by either positive voltage or negative voltage
+    -   It is inverted based on the last transmission of 1
+    -   It is represented by a negative voltage if it was represented by a positive voltage when it was last transmitted, and vice versa
+
 </Definition>
 
 For this, over a long enough message, the sum of the voltages is zero,
@@ -79,11 +79,11 @@ applications
 ## Manchester Encoding
 
 <Definition name="Manchester Encoding">
-{`
-* A high to low voltage represents a 1 and a low to high voltage represents a 0
-* Uses signal changes to transmit a bit and achieves synchronisation
-* This is equivalent to an XOR of the clock signal and the NRZ encoding. The clock is at twice the frequency of the NRZ
-`}
+
+-   A high to low voltage represents a 1 and a low to high voltage represents a 0
+-   Uses signal changes to transmit a bit and achieves synchronisation
+-   This is equivalent to an XOR of the clock signal and the NRZ encoding. The clock is at twice the frequency of the NRZ
+
 </Definition>
 
 -   Twice the bandwidth of NRZ is required

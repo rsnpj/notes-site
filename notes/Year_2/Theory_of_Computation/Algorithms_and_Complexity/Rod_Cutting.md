@@ -40,9 +40,9 @@ Maximum revenue if we cut two rods of length 2, and we have $r_4=10$
 ## A note on integer partitions
 
 <Definition name="Integer Partitions">
-{String.raw`
+
 An integer partition of a positive integer n is a list of positive integers $\langle a_1,...,a_k \rangle$ such that $a_1\leqslant a_2\leqslant ... \leqslant a_k$ and $\sum*{i=1}^{k} a*{i}=n$
-`}
+
 </Definition>
 
 Let $p(n)$ denote the number of integer partitions of n, then
@@ -122,10 +122,10 @@ In the naive top-down method, we keep on solving the same subproblems:
 we say that these subproblems overlap. Memoization prevents that.
 Careful
 
-- Two subproblems are independent if they do not share resources
+-   Two subproblems are independent if they do not share resources
 
-- Two subproblems are overlapping if they are really the same
-  subproblem that occurs as a subproblem of different problems
+-   Two subproblems are overlapping if they are really the same
+    subproblem that occurs as a subproblem of different problems
 
 # Top-down vs Bottom-up
 
