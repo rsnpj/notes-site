@@ -74,7 +74,7 @@ $d_{proc}$: nodal processing (delay in one router to process the packet)
 
 -   Determine output link
 
--   Typically $<$ msec
+-   Typically < msec
 
 $d_{queue}$: queuing delay
 
@@ -216,4 +216,4 @@ Dealing with complex systems:
 -   Internet stack "missing" these layers. These services if needed must
     be implemented in application
 
-![OSI Reference Modelage](/img/Year_2/Networks_and_Systems/Networks/Core/OSI.webp)
+![OSI Reference Model](/img/Year_2/Networks_and_Systems/Networks/Core/OSI.webp)

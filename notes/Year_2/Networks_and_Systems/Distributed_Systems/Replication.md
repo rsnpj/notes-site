@@ -3,7 +3,6 @@ title: Replication models
 lecturer: Freddie
 ---
 
-
 # Replication
 
 -   Provide multiple copies of the same data or functionalities
@@ -122,7 +121,7 @@ Front End (FE)
     (backup, slave) Rs
 
 -   FEs communicate with the primary which executes the operation and
-    sends copies of the updates data to the result to backups
+    sends copies of the updated data to the result to backups
 
 -   If the primary fails, one of the backups is promoted to act as the
     primary

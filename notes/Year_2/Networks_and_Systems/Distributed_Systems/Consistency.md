@@ -16,7 +16,7 @@ lecturer: Freddie
 
 Extension to replication - If event T happens before event U in their
 conflicting access to objects at one of the servers then they must be in
-that order at all of the servers whose objects are accessed in a
+that order at all the servers whose objects are accessed in a
 conflicting manner by both T and U
 
 # Locking
@@ -68,7 +68,7 @@ Distributed Transaction:
 In a single machine:
 
 -   Concurrent operations (events), no matter originated from different
-    or the same machine, are handled by the time sharing feature of an
+    or the same machine, are handled by the time-sharing feature of an
     operating system
 
 -   Operations are implicitly executed one by one in a series under a

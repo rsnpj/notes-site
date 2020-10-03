@@ -118,7 +118,7 @@ Syntax of a program can be expressed by a context free grammar
 
 A simple context free grammar for branching statements:
 
-![Context free grammer example](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/context-free-grammar.webp)
+![Context free grammar example](/img/Year_2/Networks_and_Systems/Compiler_Design/Lexical_Analysis/context-free-grammar.webp)
 
 Terminal symbols of the grammar:
 
@@ -164,7 +164,7 @@ All tokens with their attribute value and their corresponding lexemes
     -   Recognised by a DFA
 
 -   We model the recognition of a pattern by a transition diagram (a
-    special type of a DFA)
+    special type of DFA)
 
     -   States represent all the current information between
         `lexemeBegin` and `forward`

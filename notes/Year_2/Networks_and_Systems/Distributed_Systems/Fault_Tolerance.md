@@ -192,7 +192,7 @@ Methods to avoid stopping the system:
 
 -   Require no knowledge about the error
 
--   Only need to mainatin some prior error free state
+-   Only need to maintain some prior error free state
 
 -   Application independent
 

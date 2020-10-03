@@ -96,8 +96,9 @@ Multiple wireless senders and receivers create additional problems
 
 -   A,C can’t hear each other interfering at B
 
-\begin{defin}[Exposed terminals]Senders who can sense each other but still transmit safely (to different receivers)
-\end{defin}
+<Definition name="Exposed Termnals">
+Senders who can sense each other but still transmit safely (to different receivers)
+</Definition>
 
 Exposed terminals will cause collisions but it won’t matter as the data
 gets to where it is intended anyway

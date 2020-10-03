@@ -18,7 +18,7 @@ A k-tape Turing machine is a 5-tuple $(Q,\Sigma, \delta, q_0, F)$, where
 </Definition>
 
 Each tape contains a sequence of symbols from $\Gamma = \Sigma \cup \{\triangle\}$
-($\triangle$ is a special blank symbol - al unoccupied cells are blank)
+($\triangle$ is a special blank symbol - all unoccupied cells are blank)
 
 The transition function defines the action of the machine in each (non-final) state, for each collection of symbols being read:
 
@@ -26,7 +26,7 @@ $$
 \delta:(Q \backslash F) \times \Gamma^{k} \rightarrow Q \times \Gamma^{k} \times\{L, S, R\}^{k}
 $$
 
-## Time complexity of a turing machine
+## Time complexity of a Turing machine
 
 The most critical computational resource is often time, so the most useful complexity measure is often time complexity
 

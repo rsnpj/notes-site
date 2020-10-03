@@ -25,7 +25,7 @@ Often we represent an NFA by a transition graph
 -   Edges are directed and labelled by a symbol from
     $\Sigma \cup \{\epsilon\}$
 
--   The same symbol can label edges from a state s to many different
+-   The same symbol can label edges from a state s to many
     other states
 
 Note that if a symbol is not defined at a state and you read it, then it
@@ -124,7 +124,7 @@ NFAs accept exactly the regular languages (i.e. the regular expressions)
 Therefore, simulation of an NFA can be used in the lexical analyser to
 recognise strings, identifiers etc
 
-However the simulation of NFAs is not straightforward
+However, the simulation of NFAs is not straightforward
 
 -   Many alternative outgoing edges from a state
 

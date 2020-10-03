@@ -7,21 +7,21 @@ lecturer: Max
 
 Basic concepts of any formal language:
 
-- Alphabet $\Sigma$ = set of all possible symbols
+-   Alphabet $\Sigma$ = set of all possible symbols
 
-- Sequence (or word) $\alpha$ = string of symbols
+-   Sequence (or word) $\alpha$ = string of symbols
 
-- Language = Particular set of sequences
+-   Language = Particular set of sequences
 
 Further concepts:
 
-- Syntax: which sequences belong to the language
+-   Syntax: which sequences belong to the language
 
-- Semantics: the meaning of these sequences
+-   Semantics: the meaning of these sequences
 
 In the context of programming languages:
 
-- Sequences in the formal language are all valid program codes
+-   Sequences in the formal language are all valid program codes
 
 If a language L has a finite number of sequences it is described by
 listing all sequences
@@ -37,38 +37,38 @@ Given by a start symbol and a set of production rules
 
 quadruple $(V_T,V_N,P,S)$ where:
 
-- $V_T$ is a set of terminal symbols (or terminals)
+-   $V_T$ is a set of terminal symbols (or terminals)
 
-- $V_N$ is a set of non-terminal symbols (or terminals)
+-   $V_N$ is a set of non-terminal symbols (or terminals)
 
-- $P$ is a set of productions (or rules)
+-   $P$ is a set of productions (or rules)
 
-- S is the start symbol (which is a non-terminal)
+-   S is the start symbol (which is a non-terminal)
 
 $V=V_T\cup V_N$ is the set of all symbols where
 $V_T\cap V_N=\varnothing$
 
 ## Notation
 
-- Non terminals: Capital letters
+-   Non terminals: Capital letters
 
-- Terminals: Lower case letters
+-   Terminals: Lower case letters
 
-- Sequences (strings): Greek letters
+-   Sequences (strings): Greek letters
 
-- Productions have the form: $\alpha \rightarrow \beta$
+-   Productions have the form: $\alpha \rightarrow \beta$
 
-  - $\alpha$ and $\beta$ are strings of both terminals and
-    non-terminals
+    -   $\alpha$ and $\beta$ are strings of both terminals and
+        non-terminals
 
-  - $\alpha$ lies in $VY^+$ (it has at least one non-terminal)
+    -   $\alpha$ lies in $VY^+$ (it has at least one non-terminal)
 
-  - $\beta$ lies in $V^*$ (i.e. can also be the empty string
-    $\epsilon$)
+    -   $\beta$ lies in $V^*$ (i.e. can also be the empty string
+        $\epsilon$)
 
-- Whenever we have two rules
-  $\alpha\rightarrow \beta_1, \alpha\rightarrow \beta_2$ we write
-  equivalently $\alpha \rightarrow \beta_1|\beta_2$
+-   Whenever we have two rules
+    $\alpha\rightarrow \beta_1, \alpha\rightarrow \beta_2$ we write
+    equivalently $\alpha \rightarrow \beta_1|\beta_2$
 
 ## Example
 
@@ -113,19 +113,19 @@ $$
 
 A non-terminal N is called
 
-- **Left-recursive** if starting with $N$, we can produce a string
-  that starts again with $N$
+-   **Left-recursive** if starting with $N$, we can produce a string
+    that starts again with $N$
 
-  - e.g. $N\rightarrow Nab$
+    -   e.g. $N\rightarrow Nab$
 
-- **Nullable** if starting with N, we can produce $\epsilon$
+-   **Nullable** if starting with N, we can produce $\epsilon$
 
-  - e.g. $N\rightarrow aNb | \epsilon$0
+    -   e.g. $N\rightarrow aNb | \epsilon$0
 
-- **Useless** if starting with $N$, we can never produce a string
-  consisting only of terminals
+-   **Useless** if starting with $N$, we can never produce a string
+    consisting only of terminals
 
-  - e.g. $N\rightarrow aN | bN$
+    -   e.g. $N\rightarrow aN | bN$
 
 # The Chomsky Hierarchy
 
@@ -136,45 +136,45 @@ that can appear
 
 **Type 1** (or context sensitive) grammars
 
-- The grammars that have only productions of the form
-  $\alpha \rightarrow \beta$, where $|\alpha| \geqslant |\beta|$
+-   The grammars that have only productions of the form
+    $\alpha \rightarrow \beta$, where $|\alpha| \geqslant |\beta|$
 
 **Type 2** (or context free) grammars:
 
-- The context sensitive grammars, in which the left part of each
-  production has one non terminal
+-   The context sensitive grammars, in which the left part of each
+    production has one non terminal
 
-- e.g. $A\rightarrow BaA$
+-   e.g. $A\rightarrow BaA$
 
 **Type 3** (or regular) grammars
 
-- The context free grammars, in which all productions have one of the
-  forms:
+-   The context free grammars, in which all productions have one of the
+    forms:
 
-  $$
-  A\rightarrow a
-  $$
+    $$
+    A\rightarrow a
+    $$
 
-  $$
-  A\rightarrow aB
-  $$
+    $$
+    A\rightarrow aB
+    $$
 
-- where B can also be equal to A. They are also called right linear
-  grammars
+-   where B can also be equal to A. They are also called right linear
+    grammars
 
 Equivalent definition of a type 3 (regular) grammars:
 
-- All productions have one of the forms
+-   All productions have one of the forms
 
-  $$
-  A\rightarrow a
-  $$
+    $$
+    A\rightarrow a
+    $$
 
-  $$
-  A\rightarrow Ba
-  $$
+    $$
+    A\rightarrow Ba
+    $$
 
-- They are also called left linear grammars
+-   They are also called left linear grammars
 
 The chomsky hierarchy also classifies the languages generated by these
 grammars
@@ -183,16 +183,16 @@ grammars
 
 Regular expressions over an alphabet $\Sigma$ (recursive definition):
 
-- If any element of $\Sigma$ is a regular expression (also the empty
-  string $\epsilon$)
+-   If any element of $\Sigma$ is a regular expression (also the empty
+    string $\epsilon$)
 
-- If P and Q are regular expressions, then the following are as well:
+-   If P and Q are regular expressions, then the following are as well:
 
-  - PQ, i.e. the concatenation of P and Q
+    -   PQ, i.e. the concatenation of P and Q
 
-  - $P|Q$ i.e. the disjunction of P and Q (that is: P or Q)
+    -   $P|Q$ i.e. the disjunction of P and Q (that is: P or Q)
 
-  - $P^*$ i.e. Kleene star of P (zero or more copies of P)
+    -   $P^*$ i.e. Kleene star of P (zero or more copies of P)
 
 Regular grammars generate exactly regular expressions
 
@@ -201,29 +201,37 @@ programming languages
 
 Regular grammars:
 
-- Many "local" features of a programming language can be expressed
-  by regular expressions, e.g. constants, strings, identifiers
+-   Many "local" features of a programming language can be expressed
+    by regular expressions, e.g. constants, strings, identifiers
 
-- A regular expression describing an identifier: $$L(L'|D)^*$$ Here:
+-   A regular expression describing an identifier: $$L(L'|D)^*$$ Here:
 
-  - L is the set of all letters
+    -   L is the set of all letters
 
-  - $L'=L\cup \{\_\}$ is the set of all letters, including '\_'
+    -   $L'=L\cup \{\_\}$ is the set of all letters, including '\_'
 
-  - D is the set of all digits
+    -   D is the set of all digits
 
 # Context Free Grammars
 
-- Many syntactic properties of a programming language can be expressed
-  by a context free grammar
+-   Many syntactic properties of a programming language can be expressed
+    by a context free grammar
 
-- e.g. the pattern of matching brackets of arbitrary length
+-   e.g. the pattern of matching brackets of arbitrary length
 
-- This can't be expressed by a regular expression but by this context
-  free grammar
+-   This can't be expressed by a regular expression but by this context
+    free grammar
 
 $$
-S\rightarrow (S)$$ $$S\rightarrow SS$$ $$S\rightarrow \epsilon
+S\rightarrow (S)
+$$
+
+$$
+S\rightarrow SS
+$$
+
+$$
+S\rightarrow \epsilon
 $$
 
 # Calling Graph
@@ -231,28 +239,28 @@ $$
 Many algorithms in compiler construction first collect some basic data
 items then apply some rules to them to:
 
-- Extend the known information about these data items
+-   Extend the known information about these data items
 
-- Draw more general conclusions about them
+-   Draw more general conclusions about them
 
 These "information-improving" algorithms:
 
-- Share a common structure
+-   Share a common structure
 
-- Although they seem different
+-   Although they seem different
 
 Basic example: the calling graph of a program
 
-- Directed graph with a node for each procedure
+-   Directed graph with a node for each procedure
 
-- Edge from A to B, whenever A calls
+-   Edge from A to B, whenever A calls
 
 An example of why we need to find the calling graph is to find out which
 procedures:
 
-- Are recursive
+-   Are recursive
 
-- Can be expanded in-line inside another procedure
+-   Can be expanded in-line inside another procedure
 
 # Regular Definition
 
@@ -264,10 +272,10 @@ $$
 
 Where:
 
-- Each $d_i$ is different and not in $\Sigma$
+-   Each $d_i$ is different and not in $\Sigma$
 
-- Each $r_i$ is a regular expression in
-  $\Sigma \cup \{r_1,r_2,...,r_{i-1}\}$
+-   Each $r_i$ is a regular expression in
+    $\Sigma \cup \{r_1,r_2,...,r_{i-1}\}$
 
 We avoid recursive definitions by sequentially "eliminating" all
 $d_i$'s, thus if we can write a set of regular expressions as a regular

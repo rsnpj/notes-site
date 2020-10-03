@@ -3,7 +3,7 @@ title: Semantic Analysis
 lecturer: Max
 ---
 
--   Ensure that the program has a well defined meaning
+-   Ensure that the program has a well-defined meaning
 
 -   Verify properties aren't caught during earlier phases e.g.
 

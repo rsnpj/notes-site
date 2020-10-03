@@ -7,7 +7,7 @@ lecturer: Lawrence
 
 ## Defining data types
 
--   So far we’ve only used the builtin data types
+-   So far we’ve only used the built in data types
 
 -   Of course, it often makes sense to define new data types
 

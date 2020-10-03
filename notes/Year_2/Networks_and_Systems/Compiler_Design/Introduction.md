@@ -129,7 +129,7 @@ Main phases of the synthesis part
 
 Why separate analysis and synthesis parts?
 
--   Can combine different analysis/synthesis parts in a modular way
+-   Can combine different analysis/synthesis parts modularly
 
 -   Create new compilers
 

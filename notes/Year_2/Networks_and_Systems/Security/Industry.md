@@ -5,183 +5,183 @@ lecturer: Chris
 
 Trade off between:
 
-- Security
+-   Security
 
 and
 
-- Cost
+-   Cost
 
-- Convenience
+-   Convenience
 
-- Usability
+-   Usability
 
 # Security in Large Corporations
 
 Locked down environments:
 
-- Software has to be pre-vetted before being installed
+-   Software has to be pre-vetted before being installed
 
-- Often will have VMs/OS images with everything setup
+-   Often will have VMs/OS images with everything setup
 
-- Network policies will be very strict
+-   Network policies will be very strict
 
 General security policies
 
-- Need to have badge and swipe everywhere you go
+-   Need to have badge and swipe everywhere you go
 
-- Very secure areas will be monitored/locked down
+-   Very secure areas will be monitored/locked down
 
-- Usually very locked down by default - need to escalate to managers
-  to get approval
+-   Usually very locked down by default - need to escalate to managers
+    to get approval
 
-- Clean desk policy
+-   Clean desk policy
 
-- Heavy monitoring of production servers
+-   Heavy monitoring of production servers
 
 Laptop security policies
 
-- Screen locks
+-   Screen locks
 
-- Encrypted HDD
+-   Encrypted HDD
 
-- Kensington locks
+-   Kensington locks
 
-- Monitoring software
+-   Monitoring software
 
 # Attacks on Large Corporations
 
-- Out of date software
+-   Out of date software
 
-- Exploit single server running software with security flaw
+-   Exploit single server running software with security flaw
 
-- Social engineering
+-   Social engineering
 
 # Best practices
 
 ## Login credentials
 
-- Use strong hash function for passwords
+-   Use strong hash function for passwords
 
-- Salt passwords
+-   Salt passwords
 
-- Secure your email and password database
+-   Secure your email and password database
 
-  - No outside access
+    -   No outside access
 
-  - Limit who can access this server
+    -   Limit who can access this server
 
-  - Encrypt if possible
+    -   Encrypt if possible
 
 ## MFA
 
 Pick at least 2 from:
 
-- Something you know
+-   Something you know
 
-- Something you have
+-   Something you have
 
-- Something you are
+-   Something you are
 
 ## Web Dev
 
-- Add SRI checks on all 3rd party resources
+-   Add SRI checks on all 3rd party resources
 
-- Keep software up to date
+-   Keep software up to date
 
-  - This is very important
+    -   This is very important
 
-  - Build in time to do this in estimates
+    -   Build in time to do this in estimates
 
-  - OS deps, language, frameworks - all are important
+    -   OS deps, language, frameworks - all are important
 
-- Use well maintained framework for web development
+-   Use well maintained framework for web development
 
-- Limit what users can upload
+-   Limit what users can upload
 
-  - XSS attacks
+    -   XSS attacks
 
-  - SQL injections
+    -   SQL injections
 
-  - CSRF attacks
+    -   CSRF attacks
 
-- Never execute input from user directly
+-   Never execute input from user directly
 
-- Use a strongly typed language
+-   Use a strongly typed language
 
-- Keep it simple
+-   Keep it simple
 
 # AWS Security
 
-- Port scanning is a good idea
+-   Port scanning is a good idea
 
-- Security Groups allow for good security
+-   Security Groups allow for good security
 
-  - Clump nodes together
+    -   Clump nodes together
 
-  - Connection-oriented (only have to allow outbound for outbound
-    TCP request)
+    -   Connection-oriented (only have to allow outbound for outbound
+        TCP request)
 
-- VPCs are complex but powerful
+-   VPCs are complex but powerful
 
-  - Network-level security
+    -   Network-level security
 
-  - Now even work between AWS regions
+    -   Now even work between AWS regions
 
-- IAM profiles are very useful for security
+-   IAM profiles are very useful for security
 
-  - Only give access to particular resources
+    -   Only give access to particular resources
 
-- Use ELBs/ALBs with HTTPS enabled
+-   Use ELBs/ALBs with HTTPS enabled
 
-  - Simple to setup and performant
+    -   Simple to setup and performant
 
-  - Scales automatically
+    -   Scales automatically
 
-  - No need to deal with certs in application
+    -   No need to deal with certs in application
 
 # Software Dependencies
 
 Trust and package managers
 
-- System packages vs programming language packages, which is safer?
+-   System packages vs programming language packages, which is safer?
 
-  - GPG checks ensure that package you download was uploaded by
-    maintainer
+    -   GPG checks ensure that package you download was uploaded by
+        maintainer
 
-  - Usually system packages have to go through rigorous vetting
-    process
+    -   Usually system packages have to go through rigorous vetting
+        process
 
-  - Linux has been decades ahead of windows and mac os on this front
+    -   Linux has been decades ahead of windows and mac os on this front
 
 # Anti-patterns
 
-- Automatic minor version updates
+-   Automatic minor version updates
 
-- Depending on a lot of packages
+-   Depending on a lot of packages
 
-  - Each dependent package is a liability
+    -   Each dependent package is a liability
 
-- Using packages which are no longer actively maintained
+-   Using packages which are no longer actively maintained
 
-- Installing dependencies directly on servers:
+-   Installing dependencies directly on servers:
 
-  - This is bad for speed and security
+    -   This is bad for speed and security
 
-  - Instead: bundle up dependencies with app using
-    package/container/system image
+    -   Instead: bundle up dependencies with app using
+        package/container/system image
 
 # Personal Security: Best practices
 
-- Use 2FA
+-   Use 2FA
 
-- Use secure apps
+-   Use secure apps
 
-- Use a password manager
+-   Use a password manager
 
-- Use TOR/SSH tunneling if you are on an unsafe connection
+-   Use TOR/SSH tunnelling if you are on an unsafe connection
 
-- Use an ad blocker
+-   Use an ad blocker
 
-- Use Linux
+-   Use Linux
 
-- Go to conferences
+-   Go to conferences

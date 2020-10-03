@@ -68,7 +68,7 @@ Processing of messages by intermediate message server(s)
 Natural for database integration
 
 Choose which requests get processed and combine duplicate requests into
-one request (in a similar way to multicasting)
+one request (similarly to multicasting)
 
 # Java Message Service (JMS)
 
@@ -92,7 +92,7 @@ one request (in a similar way to multicasting)
 
 # Web services
 
-Use well known web standards for distributed computing
+Use well-known web standards for distributed computing
 
 Communication
 
@@ -124,7 +124,7 @@ Interoperability - SOAP defines a common standard that allows differing
 systems to interoperate
 
 XML based - The Extensible Markup Language is a standard framework for
-creating machine readable documents
+creating machine-readable documents
 
 # REST and JSON
 

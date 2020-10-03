@@ -45,7 +45,7 @@ Derivation of a string s in grammar:
 
 Grammar:
 
-![Grammer](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.webp)
+![Grammar](/img/Year_2/Networks_and_Systems/Compiler_Design/Parsing/Grammar.webp)
 
 Considering the string $(x+y)\times x$
 
@@ -68,7 +68,7 @@ Purpose of a parser:
 
 -   If not, to report useful syntax errors
 
-For well formed strings of tokens (programs):
+For well-formed strings of tokens (programs):
 
 -   The parser constructs a syntax tree (parse tree)
 
@@ -135,7 +135,7 @@ e..g what is 9-5+2
 
 Two solutions:
 
--   Use diambiguating rules that "throw away" undesired parse trees
+-   Use disambiguating rules that "throw away" undesired parse trees
 
 -   Construct an equivalent unambiguous grammar
 

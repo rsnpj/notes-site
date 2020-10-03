@@ -6,7 +6,7 @@ lecturer: Chris
 # Access Control
 
 -   Your computer contains lots of subjects (typically users, people)
-    and lots of objects (typically documents, images, programs
+    and lots of objects (typically documents, images, programs)
 
 -   Who chooses access rights?
 
@@ -144,7 +144,7 @@ Created using mknod (only accessible by root)
 
     -   UPN - more modern
 
--   Login - Happens in different ways depending if the computer is alone
+-   Login - Happens in different ways depending on if the computer is alone
     or part of a network
 
 -   More levels than \*NIX

@@ -208,7 +208,7 @@ Multiple cardholder verification mechanism (CVM)
 An attacker can get records, $sig_{BANK}[records]$ by listening to a
 valid transaction
 
-The the attacker can create a fake card using $sig_{BANK}[records]$ and
+The attacker can create a fake card using $sig_{BANK}[records]$ and
 generate an invalid MAC. For offline transaction, the merchant cannot
 verify the MAC anyway. By the time the merchant sends the transactions
 to the bank, the attacker will be long gone

@@ -51,7 +51,7 @@ Transfer tasks that have not started executing
 
 ![Preemptive task transfers](/img/Year_2/Networks_and_Systems/Distributed_Systems/Load_Distribution/preemptive.webp)
 
-# Routing mechanisms based on network network packet content
+# Routing mechanisms based on network packet content
 
 Layer-4 routing
 

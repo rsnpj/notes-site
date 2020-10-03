@@ -77,7 +77,7 @@ Middleware options:
     links with the server-side stubs. Client programmer implements the
     client program and links it with client-side stubs
 
--   Operation - Stubs manage all of the details of remote communication
+-   Operation - Stubs manage all the details of remote communication
     between client ans server
 
 ### Properties and Limitations
@@ -175,7 +175,7 @@ Location transparency
 
 -   Object request broker maps object references to physical locations
 
-Services comprising of multiple servers are easier to built
+Services consisting of multiple servers are easier to built
 
 -   All services can be acquired through the object request broker
 

@@ -39,7 +39,7 @@ lecturer: Lawrence
 
 <Important>
 
-Use patterns in the equations defining a function. Not in the type of a function
+Use patterns in the equations defining a function. Not in the type of function
 
 Pattern matches in the equations don't change the type of the function. They just say how it should act on particular expressions
 

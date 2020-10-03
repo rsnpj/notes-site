@@ -107,7 +107,7 @@ NAT
 # IP Spoofing
 
 -   Changing the source IP of a packet with a fake IP address to hide
-    the identify of the sender
+    the identity of the sender
 
 -   The victim thinks he’s talking to his friend, but actually he’s
     talking to the hacker
