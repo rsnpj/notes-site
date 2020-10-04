@@ -139,7 +139,7 @@ Consider many memory locations connected to inputs. Using the selector we can se
 
 ![Building a simple ALU](/img/Year_1/CSys/DEMA/Circuits/ALU.webp)
 
--   The mux is used for the subraction part of the circuit as it can
+-   The mux is used for the subtraction part of the circuit as it can
     invert the data line
 
 -   Using the two control bits you can decide between ADD, SUBTRACT,

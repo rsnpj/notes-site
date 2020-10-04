@@ -126,7 +126,7 @@ But always:
 
 -   However, in special cases it is easy:
 
-    -   What an graph is a path:
+    -   When a graph is a path:
 
         ![image](/img/Year_1/CT/Graphs/Colouring/path.webp)
 

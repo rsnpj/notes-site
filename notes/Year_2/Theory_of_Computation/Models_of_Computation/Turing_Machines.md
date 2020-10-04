@@ -201,15 +201,16 @@ terminates.
 that decides the halting problem
 
 $$
-\mathscr{H}(\langle\mathscr{M}\rangle, w)=\left\{\begin{array}{ll}{\operatorname{accept}} & {\text { if } \mathscr{M} \text { terminates on } w} \\ {\text { reject }} & {\text { if } \mathscr{M} \text { does not terminate on } w}\end{array}\right
-.$$
+\mathscr{H}(\langle\mathscr{M}\rangle, w)=\left\{\begin{array}{ll}{\operatorname{accept}} & {\text { if } \mathscr{M} \text { terminates on } w} \\ {\text { reject }} & {\text { if } \mathscr{M} \text { does not terminate on } w}\end{array}\right\}
+$$
+
 Consider the TM $\mathscr{D}$ that takes a TM $\mathscr{M}$ as an input
 does the following:
-$$
 
+$$
 \mathscr{D}(\langle\mathscr{M}\rangle)=\left\{\begin{array}{ll}{\operatorname{accept}} & {\text { if } \mathscr{H}(\langle\mathscr{M}\rangle,\langle\mathscr{M}\rangle) \text { rejects }} \\ {\operatorname{loop}} & {\text { if } \mathscr{H}(\langle\mathscr{M}\rangle,\langle\mathscr{M}\rangle) \text { accepts }}\end{array}\right.
-
 $$
+
 What happens when $\mathscr{D}$ runs on its own encoding
 $\langle \mathscr{D}\rangle$?! There are two possibilities:
 
@@ -240,4 +241,3 @@ $\mathscr{M}_2$ "in parallel" (i.e. simulate alternating steps of
 $\mathscr{M}_1$ and $\mathscr{M}_2$ on a multitape TM). Either
 $\mathscr{M}_1$ or $\mathscr{M}_2$ must eventually accept; accept it if
 $\mathscr{M}_1$ accepts and reject it is $\mathscr{M}_2$ accepts
-$$

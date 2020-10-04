@@ -13,7 +13,8 @@ The most common transistor is the MOSFET (Metal Oxide Semiconductor
 Field Effect Transistor)
 
 Silicon (a semiconductor) is a poor conductor of electricity: all the
-available electrons(4) are used to form bonds with neighbouring atoms\
+available electrons(4) are used to form bonds with neighbouring atoms
+
 Impurities (dopants) provide extra electrons or electron holes which
 increase conductivity
 

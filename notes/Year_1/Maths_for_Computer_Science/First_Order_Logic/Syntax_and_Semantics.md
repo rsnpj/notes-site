@@ -5,7 +5,7 @@ lecturer: Daniel
 
 # Syntax of first-order logic
 
-Every (well formed) formula of first order logic is constructed from
+Every (well-formed) formula of first order logic is constructed from
 **atoms** (or **atomic formula**). We completely define the **syntax**
 of first-order logic by defining what we mean by atoms and the
 constructions we are allowed to use.
@@ -48,8 +48,8 @@ If a formula has no free variables then it is called a **sentence**
 
 # Parse trees
 
-We can check that a formula is well formed using a parse tree (if the
-tree cannot be made then the formula is not well formed). We can
+We can check that a formula is well-formed using a parse tree (if the
+tree cannot be made then the formula is not well-formed). We can
 illustrate with
 
 $$

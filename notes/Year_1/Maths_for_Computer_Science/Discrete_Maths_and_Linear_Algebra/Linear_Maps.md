@@ -324,6 +324,3 @@ are the possible pairs (rank(f),nullity(f))?
 $(0,5),(1,4),(2,3),(3,2)$. The pairs $(4,1)$ and $(5,0)$ are not
 possible because $\mathbb{ R }^3$ does not have a subspace of dimension
 $>3$
-
-$$
-$$

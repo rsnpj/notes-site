@@ -401,7 +401,7 @@ The fundamentals of normalization theory:
 -   Repeating group:
 
     -   an attribute (or group of attributes) that occurs with multiple
-        values for a single occurence of the primary key
+        values for a single occurrence of the primary key
 
 -   A table is in the un-normalised form (UNF):
 

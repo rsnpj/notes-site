@@ -18,7 +18,7 @@ lecturer: Magnus
 -   **Arithmetic/Logic Unit** - "the calculator"
 
 -   **Buses** - bundles of tiny wires that carry data between
-    components. The three most important buses are the address,data and
+    components. The three most important buses are the address, data and
     control buses
 
 -   **Control Unit** - Responsible for directing the flow of
@@ -120,7 +120,7 @@ e.g. Home PC to Printer
 
 ## Broadcast
 
-Bus used to carry signals to many different devices
+Bus used to carry signals to many devices
 
 ## Bus Interface Bridges
 

@@ -6,18 +6,19 @@ lecturer: Daniel
 Resolution is not only a proof system for propositional logic but it is
 a sound and complete proof system for first order logic too:
 
-- If $\Sigma$ is a set of first order formulae and $\phi$ is a first
-  order formula such that:
+-   If $\Sigma$ is a set of first order formulae and $\phi$ is a first
+    order formula such that:
 
-  for every interpretation $M , M = \Sigma \Rightarrow M = \phi$
+    for every interpretation $M , M = \Sigma \Rightarrow M = \phi$
 
-  then the proof system resolution will answer "yes" (completeness)
+    then the proof system resolution will answer "yes" (completeness)
 
-- If the proof system resolution answers "yes" on input
-  $(\Sigma,\phi)$ then for every interpretation
-  $M , M = \Sigma \Rightarrow M = \phi$ (soundness)
+-   If the proof system resolution answers "yes" on input
+    $(\Sigma,\phi)$ then for every interpretation
+    $M , M = \Sigma \Rightarrow M = \phi$ (soundness)
 
-We shall only consider Resolution for first order logic very briefly.\
+We shall only consider Resolution for first order logic very briefly.
+
 We are given a set of first-order formulae $\Sigma$ and another first
 order formula $\phi$ and we want to know whether for every
 interpretation M, if M satisfies each formula in $\Sigma$ then M
@@ -83,13 +84,13 @@ resolve to yield $A ( F ( x ) ) \vee \neg K ( G ( x ) , x )$
 
 Suppose we know the following:
 
-- Everyone who loves all animals is loved by someone
+-   Everyone who loves all animals is loved by someone
 
-- Anyone who kills an animal is loved by no-one
+-   Anyone who kills an animal is loved by no-one
 
-- Jack loves all animals
+-   Jack loves all animals
 
-- Either Jack or Curiosity killed the cat, whose name is Tuna
+-   Either Jack or Curiosity killed the cat, whose name is Tuna
 
 And we want to know: Did Curiosity kill the cat?\
 Translate to first order logic:

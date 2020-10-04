@@ -189,8 +189,6 @@ Two main approaches for graph exploration:
 
     -   dig deeper, until not possible any more
 
-<!-- -->
-
 -   DFS is **not** appropriate for shortest paths
 
     -   We may reach the target vertex b via a **very long** path, as we

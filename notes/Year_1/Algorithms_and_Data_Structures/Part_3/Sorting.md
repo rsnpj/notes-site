@@ -21,7 +21,7 @@ Two observations
 
 2.  Theorem says that "there exists an input". That means that for
     most inputs of length n it may actually beat the bound, but that
-    there must be at leat one for which it does not
+    there must be at least one for which it does not
 
 ## Bucketsort
 

@@ -323,7 +323,7 @@ fits into one computer word
 
 -   If the answer is no then we're fine
 
--   If the answer is yes then we'll have to check in the old fashioned
+-   If the answer is yes then we'll have to check in the old-fashioned
     way and may get a false positive
 
 -   Hope that it doesn't happen too often, so that the extra cost isn't

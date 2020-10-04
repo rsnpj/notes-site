@@ -45,8 +45,8 @@ $$
 4.  Read off the implicants that were circled
 
 If a boolean expression is minimal then it is the sum of **prime
-implicants**: implicants that cannot be combined with each other\
-\
+implicants**: implicants that cannot be combined with each other
+
 Each circle represents an implicant. Largest possible circles represent
 prime implicants
 

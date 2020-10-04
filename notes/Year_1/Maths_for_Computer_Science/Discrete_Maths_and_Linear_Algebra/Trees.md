@@ -16,52 +16,52 @@ has at least $n_3+2$ leaves
 
 Let T be a tree on $n\geqslant$ 2 vertices. We use induction on n
 
-- Let $l(T)$ denote the number of leaves in T, and $n_3(T)$ denote the
-  number of vertices of degree at least 3 in T
+-   Let $l(T)$ denote the number of leaves in T, and $n_3(T)$ denote the
+    number of vertices of degree at least 3 in T
 
-- Induction base: If n=2, then $n_3$=0 and T has 2 leaves
+-   Induction base: If n=2, then $n_3$=0 and T has 2 leaves
 
-- Step: Now suppose that every tree on $< n$ vertices has at least
-  $n_3+2$ leaves (induction hypothesis), and consider a tree T on
-  $n\geqslant 3$ vertices
+-   Step: Now suppose that every tree on $< n$ vertices has at least
+    $n_3+2$ leaves (induction hypothesis), and consider a tree T on
+    $n\geqslant 3$ vertices
 
-- Since T is a tree on at least 3 vertices, T has a leaf u
+-   Since T is a tree on at least 3 vertices, T has a leaf u
 
-- Then T'=T-u is a tree on n-1 vertices. By the induction hypothesis
-  we have $l(T')\geqslant n_3(T')+2$
+-   Then T'=T-u is a tree on n-1 vertices. By the induction hypothesis
+    we have $l(T')\geqslant n_3(T')+2$
 
-- We have: a leaf u in T, a tree T'=T-u, $l(T')\geqslant n_3(T')+2$
+-   We have: a leaf u in T, a tree T'=T-u, $l(T')\geqslant n_3(T')+2$
 
-- Let v be the (unique) neighbour of u in T
+-   Let v be the (unique) neighbour of u in T
 
-- T is connected and has at least 3 vertices, so v has at least 2
-  neightbours in T
+-   T is connected and has at least 3 vertices, so v has at least 2
+    neightbours in T
 
-- The rest of the proof is by **case analysis**
+-   The rest of the proof is by **case analysis**
 
 1.  Suppose that v has exactly 2 neighbours in T
 
-    - Then
-      $n _ { 3 } \left( T ^ { \prime } \right) = n _ { 3 } ( T ) \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T )$
+    -   Then
+        $n _ { 3 } \left( T ^ { \prime } \right) = n _ { 3 } ( T ) \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T )$
 
-    - Hence,
-      $\ell ( T ) = \ell \left( T ^ { \prime } \right) \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 = n _ { 3 } ( T ) + 2$
+    -   Hence,
+        $\ell ( T ) = \ell \left( T ^ { \prime } \right) \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 = n _ { 3 } ( T ) + 2$
 
 2.  Suppose that v has exactly 3 neighbours in T
 
-    - Then
-      $n _ { 3 } \left( T ^ { \prime } \right) = n _ { 3 } ( T ) - 1 \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T ) - 1$
+    -   Then
+        $n _ { 3 } \left( T ^ { \prime } \right) = n _ { 3 } ( T ) - 1 \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T ) - 1$
 
-    - Hence,
-      $\ell ( T ) = \ell \left( T ^ { \prime } \right) + 1 \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 + 1 = n _ { 3 } ( T ) - 1 + 2 + 1 = n _ { 3 } ( T ) + 2$
+    -   Hence,
+        $\ell ( T ) = \ell \left( T ^ { \prime } \right) + 1 \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 + 1 = n _ { 3 } ( T ) - 1 + 2 + 1 = n _ { 3 } ( T ) + 2$
 
 3.  Suppose that v has at least four neighbours in T
 
-    - Then,
-      $n _ { 3 } ( T ) = n _ { 3 } \left( T ^ { \prime } \right) \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T ) - 1$
+    -   Then,
+        $n _ { 3 } ( T ) = n _ { 3 } \left( T ^ { \prime } \right) \text { and } \ell \left( T ^ { \prime } \right) = \ell ( T ) - 1$
 
-    - Hence,
-      $\ell ( T ) = \ell \left( T ^ { \prime } \right) + 1 \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 + 1 = n _ { 3 } ( T ) + 2 + 1 \geq n _ { 3 } ( T ) + 2$
+    -   Hence,
+        $\ell ( T ) = \ell \left( T ^ { \prime } \right) + 1 \geq n _ { 3 } \left( T ^ { \prime } \right) + 2 + 1 = n _ { 3 } ( T ) + 2 + 1 \geq n _ { 3 } ( T ) + 2$
 
 This finishes the proof
 
@@ -76,45 +76,45 @@ Every tree is a bipartite graph
 We give a **direct** proof. We can use the known result on unique paths
 in a tree T to define a bipartition of its vertex set V(T)
 
-- Choose any vertex v and put this vertex in the set $V_1$
+-   Choose any vertex v and put this vertex in the set $V_1$
 
-- For every vertex $u\neq v$, there is a unique path from v to u in T,
-  consider the length of this path
+-   For every vertex $u\neq v$, there is a unique path from v to u in T,
+    consider the length of this path
 
-- If the length is odd, put u in $V_2$, otherwise put u in $V_1$
+-   If the length is odd, put u in $V_2$, otherwise put u in $V_1$
 
-- We have to show that this is a valid bipartition
+-   We have to show that this is a valid bipartition
 
-- $V_1$ and $V_2$ are disjoint and together make up $V(T)$
+-   $V_1$ and $V_2$ are disjoint and together make up $V(T)$
 
-- Every edge has end vertices in both $V_1$ and $V_2$
+-   Every edge has end vertices in both $V_1$ and $V_2$
 
-- This completes the proof
+-   This completes the proof
 
 # How to find and write down proofs?
 
 These are the questions to ask yourself to help finding a possible proof
 approach:
 
-- What do I have to **prove**? Is it one statement, or several; is it
-  an implication or an equivalence; can I repharase it; does it
-  resemble other statements?
+-   What do I have to **prove**? Is it one statement, or several; is it
+    an implication or an equivalence; can I repharase it; does it
+    resemble other statements?
 
-- What do I **know**? What are the assumptions; do I know the relevant
-  definitions; is there any known theory related to the statement
+-   What do I **know**? What are the assumptions; do I know the relevant
+    definitions; is there any known theory related to the statement
 
-- Can I get more **insight**? Can I sketch the situation, the
-  assumptions, the question; are there special (small) cases to check;
-  can I break it into several subcases?
+-   Can I get more **insight**? Can I sketch the situation, the
+    assumptions, the question; are there special (small) cases to check;
+    can I break it into several subcases?
 
-- How to **approach/attack** the question? Can I use induction; does a
-  direct proof have any chance; or does it help to use contraposition,
-  or a proof by contradiction?
+-   How to **approach/attack** the question? Can I use induction; does a
+    direct proof have any chance; or does it help to use contraposition,
+    or a proof by contradiction?
 
-- Is my solution **valid and convincing**? Write a draft first; check
-  all the steps; critically examine the steps for errors or
-  counterexamples; modify and revise the solution and write it down in
-  a clear way
+-   Is my solution **valid and convincing**? Write a draft first; check
+    all the steps; critically examine the steps for errors or
+    counterexamples; modify and revise the solution and write it down in
+    a clear way
 
 ## The start: write down what you see
 
@@ -128,34 +128,34 @@ is a forest consisting of precisely two trees.
 
 ### Proof
 
-- Clearly, you have to know what a **tree** is, what a **forest** is,
-  and what the **notations** $e\in E(T)$ and $T-e$ mean
+-   Clearly, you have to know what a **tree** is, what a **forest** is,
+    and what the **notations** $e\in E(T)$ and $T-e$ mean
 
-- In fact, you have to prove **two**(or perhaps even **three**)
-  statements: T-e is a forest, and this forest consists of precisely
-  two trees (so not $\leqslant$ 1 and not $\geqslant 3$ trees)
+-   In fact, you have to prove **two**(or perhaps even **three**)
+    statements: T-e is a forest, and this forest consists of precisely
+    two trees (so not $\leqslant$ 1 and not $\geqslant 3$ trees)
 
-- Here it (probably) helps to **draw a picture** that roughly sketches
-  the situation and concepts
+-   Here it (probably) helps to **draw a picture** that roughly sketches
+    the situation and concepts
 
-- If you draw the general situation, and know the definitions and
-  notations, then you more or less **see the solution** in the picture
+-   If you draw the general situation, and know the definitions and
+    notations, then you more or less **see the solution** in the picture
 
-- The question is **how to write it down** (and check that the picture
-  did not fool you)
+-   The question is **how to write it down** (and check that the picture
+    did not fool you)
 
-- This requires certain **skills and experience**
+-   This requires certain **skills and experience**
 
-- You can only learn this by **doing it yourself**
+-   You can only learn this by **doing it yourself**
 
-- A **tree** is a connected graph without cycles
+-   A **tree** is a connected graph without cycles
 
-- A forest is a graph without cycles
+-   A forest is a graph without cycles
 
-- Sine a tree is a connected graph, between any two vertices there is
-  a path in a tree
+-   Sine a tree is a connected graph, between any two vertices there is
+    a path in a tree
 
-- We know from the previous lecture that this path is **unique**
+-   We know from the previous lecture that this path is **unique**
 
 How to use (some of) the above facts to prove that T-e is a forest
 containing precisely two trees?
@@ -190,20 +190,20 @@ The proof seems to be complete. Now you have to write it down and
 
 Since T is a tree, T - e has no cycles, so T - e is a forest. Since in T
 
-- e there is no path between the two end vertices of e, T - e is not
-  connected, hence T - e consists of at least 2 trees.If T - e consists of
-  at least 3 trees, then T cannot be connected. Hence T - e is a forest
-  consisting of precisely two trees.
+-   e there is no path between the two end vertices of e, T - e is not
+    connected, hence T - e consists of at least 2 trees. If T - e consists of
+    at least 3 trees, then T cannot be connected. Hence T - e is a forest
+    consisting of precisely two trees.
 
-- There are probably many different correct ways to prove the lemma. For
-  instance for the last part you could use the fact that a tree on n
-  vertices has n-1 edges.
+-   There are probably many correct ways to prove the lemma. For
+    instance for the last part you could use the fact that a tree on n
+    vertices has n-1 edges.
 
-- So suppose that T-e consists of trees of $n_1,...,n_k$ vertices for some
-  integer $k\geqslant 1$. Now we count the number of edges of T in two
-  ways: As T has $n_1+...+n_k$ vertices, T has $n_1+...+n_k-1$ edges. On
-  the other hand, T has $(n_1-1)+...+(n_k-1)+1$ edges. The two expressions
-  can only be equal if k=2, so T-e consists of precisely 2 trees
+-   So suppose that T-e consists of trees of $n_1,...,n_k$ vertices for some
+    integer $k\geqslant 1$. Now we count the number of edges of T in two
+    ways: As T has $n_1+...+n_k$ vertices, T has $n_1+...+n_k-1$ edges. On
+    the other hand, T has $(n_1-1)+...+(n_k-1)+1$ edges. The two expressions
+    can only be equal if k=2, so T-e consists of precisely 2 trees
 
 # Full m-ary trees
 
@@ -215,7 +215,7 @@ exactly m children
 
 A (full) 2-ary tree is usually called a (full) **binary tree**
 
-Often, the children of each node are assumed to be orderred
+Often, the children of each node are assumed to be ordered
 
 ## Lemma
 
@@ -247,18 +247,18 @@ There are at most $m^h$ leaves in a m-ary tree of height h
 
 Induction on the height h
 
-- Base: If h=1 then the claim is obvious
+-   Base: If h=1 then the claim is obvious
 
-- Step: Assume the claim is true for m-ary trees of height at most h-1
+-   Step: Assume the claim is true for m-ary trees of height at most h-1
 
-- Take an m-ary tree T of height $h\geqslant 2$, with root r
+-   Take an m-ary tree T of height $h\geqslant 2$, with root r
 
-- Consider the subtrees of T rooted at children r
+-   Consider the subtrees of T rooted at children r
 
-- There are at most m of them, and, by induction hypothesis, each has
-  at most $m^{h-1}$ leaves
+-   There are at most m of them, and, by induction hypothesis, each has
+    at most $m^{h-1}$ leaves
 
-- Hence, T has at most $m\cdot m^{h-1}=m^h$ leaves
+-   Hence, T has at most $m\cdot m^{h-1}=m^h$ leaves
 
 # Balanced m-ary trees
 
@@ -277,18 +277,18 @@ If the tree is full and balances then $h=\lceil \log_m\ell\rceil$
 
 ## Proof
 
-- The first part immediately follows from the previous theorem: We
-  know that $\ell \leqslant m^h$, so $h\geqslant \log_m\ell$. Since h
-  is an integer, $h\geqslant \lceil \log_m\ell \rceil$
+-   The first part immediately follows from the previous theorem: We
+    know that $\ell \leqslant m^h$, so $h\geqslant \log_m\ell$. Since h
+    is an integer, $h\geqslant \lceil \log_m\ell \rceil$
 
-- For the second part, note that there is at least one leaf of level h
+-   For the second part, note that there is at least one leaf of level h
 
-- It follows that there are at least $m^{h-1}$ leaves
+-   It follows that there are at least $m^{h-1}$ leaves
 
-- So, we have $m^{h-1}<\ell\leqslant m^h$, or taking logarithm to the
-  base m, $h-1<\log_m\ell \leqslant h$
+-   So, we have $m^{h-1}<\ell\leqslant m^h$, or taking logarithm to the
+    base m, $h-1<\log_m\ell \leqslant h$
 
-- Since h is an integer, $h=\lceil \log_m\ell \rceil$
+-   Since h is an integer, $h=\lceil \log_m\ell \rceil$
 
 # Constructing trees
 
@@ -304,9 +304,9 @@ trees on n-1 vertices, by adding one vertex and joining it by one edge
 to a vertex in one of the trees, in all possible ways, and deleting
 multiple copies of the same trees
 
-- We can use the above result and procedure to obtain all different
-  trees on n vertices, starting with $K_1$ (or we can give a
-  **recursive definition** for the class of all trees)
+-   We can use the above result and procedure to obtain all different
+    trees on n vertices, starting with $K_1$ (or we can give a
+    **recursive definition** for the class of all trees)
 
-- Check that there are, respectively, 1,1,1,2,3 and 6 different trees
-  on 1,2,3,4,5 and 6 vertices
+-   Check that there are, respectively, 1,1,1,2,3 and 6 different trees
+    on 1,2,3,4,5 and 6 vertices

@@ -23,7 +23,8 @@ variables, atoms**)
 
 -   Which can take a truth value T (true) or F(false)
 
-Syntax\
+Syntax
+
 New propositions called **formulae** or **Boolean formulae** or
 **propositional formulae** or **compound propositions** are formed from
 propositional variables and formulae by the use of logical operators

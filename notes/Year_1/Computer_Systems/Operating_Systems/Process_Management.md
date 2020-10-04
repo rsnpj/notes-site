@@ -7,16 +7,16 @@ lecturer: Barnaby
 
 As a process executes, it changes state:
 
-- **New** - The process is being created
+-   **New** - The process is being created
 
-- **Running** - Instructions are being executed
+-   **Running** - Instructions are being executed
 
-- **Waiting** - The process is waiting for some event to occur
+-   **Waiting** - The process is waiting for some event to occur
 
-- **Ready** - The process is ready to be dispatched to the CPU
+-   **Ready** - The process is ready to be dispatched to the CPU
 
-- **Terminated** - The process has completed its execution, or some
-  other event causing termination
+-   **Terminated** - The process has completed its execution, or some
+    other event causing termination
 
 # Multiprogramming
 
@@ -30,13 +30,13 @@ co-operation
 The advantages of multiprogramming/implementing process co-operation may
 include:
 
-- Computation speed-up: if there are multiple CPUs and/or cores
+-   Computation speed-up: if there are multiple CPUs and/or cores
 
-- Convenience: single user wants to run many tasks
+-   Convenience: single user wants to run many tasks
 
-- Information sharing: for example shared files
+-   Information sharing: for example shared files
 
-- Modularity: programming (e.g. OOP)
+-   Modularity: programming (e.g. OOP)
 
 Multiprogramming supports the co-operation of processes
 
@@ -65,26 +65,26 @@ fundamental to operating system design
 An operating system operates three types of scheduler: long-term,
 medium, and short term
 
-- The **long term scheduler(job scheduler)** selects which process
-  should be brought into the ready queue
+-   The **long term scheduler(job scheduler)** selects which process
+    should be brought into the ready queue
 
-- The **medium-term scheduler** removes processes from active
-  contention for the CPU bv swapping processes in and out of the ready
-  queue. This temporarily reduces the number of processes that the
-  short-term scheduler (CPU scheduler must choose between)
+-   The **medium-term scheduler** removes processes from active
+    contention for the CPU by swapping processes in and out of the ready
+    queue. This temporarily reduces the number of processes that the
+    short-term scheduler (CPU scheduler must choose between)
 
-- The **short-term scheduler (CPU scheduler)** selects the process to
-  be executed next and allocated to the CPU
+-   The **short-term scheduler (CPU scheduler)** selects the process to
+    be executed next and allocated to the CPU
 
-  This decision is initiated when processes:
+    This decision is initiated when processes:
 
-  - Switch from running to waiting state
+    -   Switch from running to waiting state
 
-  - Switch from running to ready state
+    -   Switch from running to ready state
 
-  - Switch from waiting to ready
+    -   Switch from waiting to ready
 
-  - Terminate
+    -   Terminate
 
 ## Considerations
 
@@ -92,27 +92,27 @@ Design considerations for scheduling.
 
 When the CPU switches to another process:
 
-- The system must save the context of the old process
+-   The system must save the context of the old process
 
-- Load any saved context for the new process
+-   Load any saved context for the new process
 
 Context-switch time is an **overhead**: the system undertakes no user
 processing while switching
 
 ## Criteria
 
-- CPU utilisation
+-   CPU utilisation
 
-- Throughput: the number of processes that complete their execution
-  within a specific number of time unit
+-   Throughput: the number of processes that complete their execution
+    within a specific number of time units
 
-- Turnaround time: amount of time to execute a particular process
+-   Turnaround time: amount of time to execute a particular process
 
-- Waiting time: total (accumulated) amount of time a process has been
-  waiting in the ready queue
+-   Waiting time: total (accumulated) amount of time a process has been
+    waiting in the ready queue
 
-- Response time: amount of time it takes from when a request was first
-  submitted to the ready queue until the first response is produced
+-   Response time: amount of time it takes from when a request was first
+    submitted to the ready queue until the first response is produced
 
 # Scheduling Algorithms
 
@@ -143,8 +143,7 @@ priority
 **Solution:** Ageing - as time progresses increase the priority of the
 process
 
-Priority based CPU scheduling can be either pre-emptive or non pre
-emptive
+Priority based CPU scheduling can be either pre-emptive or non preemptive
 
 ## Multilevel queue scheduling
 
@@ -167,10 +166,10 @@ Each queue has its own scheduling algorithm
 
 Scheduling must be undertaken between the queues
 
-- Fixed priority scheduling
+-   Fixed priority scheduling
 
-- Time slice: each queue gets a certain amount of CPU time which it
-  can schedule among its processes
+-   Time slice: each queue gets a certain amount of CPU time which it
+    can schedule among its processes
 
 ### Multilevel feedback queue
 
@@ -178,20 +177,20 @@ A process can move between the various queues
 
 A multilevel feedback queue scheduler may use the following parameters:
 
-- The number of queues
+-   The number of queues
 
-- The scheduling algorithms for each queue
+-   The scheduling algorithms for each queue
 
-- The method used to determine when to upgrade a process
+-   The method used to determine when to upgrade a process
 
-- The method used to determine when to demote a process
+-   The method used to determine when to demote a process
 
-- The method used to determine which queue a process will enter
+-   The method used to determine which queue a process will enter
 
 ## First Come, First Served (FCFS)
 
-- The first process to request the CPU is allocated the CPU until it
-  is completed
+-   The first process to request the CPU is allocated the CPU until it
+    is completed
 
 | Process | Priority | Arrival Time | Burst Time |
 | ------- | -------- | ------------ | ---------- |
@@ -203,23 +202,23 @@ A multilevel feedback queue scheduler may use the following parameters:
 
 ![First Come, First Served ](/img/Year_1/CSys/Operating_Systems/Process_Management/FCFS.webp)
 
-- The average waiting time may or may not be lengthy
+-   The average waiting time may or may not be lengthy
 
-- A simple algorithm to implement
+-   A simple algorithm to implement
 
-- May result in a 'convoy' effect, for example short processes waiting
-  on a long process to finish
+-   May result in a 'convoy' effect, for example short processes waiting
+    on a long process to finish
 
 ## Shortest-Job-First
 
-- Compares each process waiting to determine the length of its next
-  CPU burst
+-   Compares each process waiting to determine the length of its next
+    CPU burst
 
-- Use these lengths to schedule the process with the shortest time (if
-  two have the same length then FCFS)
+-   Use these lengths to schedule the process with the shortest time (if
+    two have the same length then FCFS)
 
-- Non pre emptive - once the CPU is given a process it cannot be
-  pre-emptive until the process has completed its CPU Burst
+-   Non preemptive - once the CPU is given a process it cannot be
+    pre-emptive until the process has completed its CPU Burst
 
 | Process | Priority | Arrival Time | Burst Time |
 | ------- | -------- | ------------ | ---------- |
@@ -277,12 +276,12 @@ It can be viewed as a pre-emptive version of SJF.
 
 With priority in round robin, we can choose to implement either:
 
-- a priority queue, or
+-   a priority queue, or
 
-- a normal queue where the priority is used only when competing for
-  entry onto the queue
+-   a normal queue where the priority is used only when competing for
+    entry onto the queue
 
-  We will choose the latter
+    We will choose the latter
 
 This is with time slice 2
 

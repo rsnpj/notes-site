@@ -24,7 +24,7 @@ G.
 
 -   V(G) can be infinite, but all our graphs will be finite
 
--   If no confustion can arise we write $uv$ instead of $\{u,v\}$
+-   If no confusion can arise we write $uv$ instead of $\{u,v\}$
 
 -   If the graph G is clear from the context, we write V and E instead
     of V(G) and E(G)
@@ -82,7 +82,7 @@ objects
 -   vertices - base stations for mobile phones, Edges: overlapping
     service areas
 
--   vertices - traffic flows at a junctions, Edges: conflicting flows
+-   vertices - traffic flows at junctions, Edges: conflicting flows
 
 Graphs can be useful for **analysing strategies** and **solutions**
 

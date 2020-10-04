@@ -14,7 +14,7 @@ second task. Then there are $n_1\times n_2$ ways to do the procedure.
 
 ## Example
 
-_How many different passwords can be constructed using two (or k)
+_How many passwords can be constructed using two (or k)
 symbols from a set of N distinct symbols_
 
 For each of the N choices of the first symbol there are again N choices
@@ -49,71 +49,71 @@ $N\times M\times (N+M)$
 
 # Example: Counting IP addresses
 
-- The internet is made up of interconnected physical networks of
-  computers
+-   The internet is made up of interconnected physical networks of
+    computers
 
-- Each computer (actually, each network connection of a computer) is
-  assigned to an Internet address
+-   Each computer (actually, each network connection of a computer) is
+    assigned to an Internet address
 
-- Version 4 of the Internet Protocol is still in use
+-   Version 4 of the Internet Protocol is still in use
 
-  - An address in IPv4 is a string of 32 bits (looks like
-    172,16.254.1 in decimal)
+    -   An address in IPv4 is a string of 32 bits (looks like
+        172,16.254.1 in decimal)
 
-  - It consists of **netid** (network number) and **hostid** (host
-    number)
+    -   It consists of **netid** (network number) and **hostid** (host
+        number)
 
-  - There are three classes of addresses: class A,B and C
+    -   There are three classes of addresses: class A,B and C
 
-  - Class A is for large networks, B for medium sized and C for
-    small
+    -   Class A is for large networks, B for medium sized and C for
+        small
 
-  - Actually, there are also classes E and D, but for a separate
-    purpose
+    -   Actually, there are also classes E and D, but for a separate
+        purpose
 
-- Class A address <span class="text-green-600">0</span> <span class="text-red-600">7-bit netid</span> <span class="text-blue-600">24-bit hostid</span>
-  (Short
-  netid as small number of large networks, but lots of hosts on those
-  networks)
+-   Class A address <span class="text-green-600">0</span> <span class="text-red-600">7-bit netid</span> <span class="text-blue-600">24-bit hostid</span>
+    (Short
+    netid as small number of large networks, but lots of hosts on those
+    networks)
 
-  - Technical restriction: Class A netid cannot be 111111
+    -   Technical restriction: Class A netid cannot be 111111
 
-- Class B address <span class="text-green-600">10</span> <span class="text-red-600">14-bit netid</span> <span class="text-blue-600">16-bit hostid</span>
+-   Class B address <span class="text-green-600">10</span> <span class="text-red-600">14-bit netid</span> <span class="text-blue-600">16-bit hostid</span>
 
-- Class C address <span class="text-green-600">110</span> <span class="text-red-600">21-bit netid</span> <span class="text-blue-600">8-bit hostid</span>
+-   Class C address <span class="text-green-600">110</span> <span class="text-red-600">21-bit netid</span> <span class="text-blue-600">8-bit hostid</span>
 
-  - Technical restriction: hostid in any class cannot be all 0 or 1
+    -   Technical restriction: hostid in any class cannot be all 0 or 1
 
-_How many different IPv4 addresses are available for a computer on the
+_How many IPv4 addresses are available for a computer on the
 internet_
 
 Let x be the number we want to compute
 
-- Let $x_a$ be the number of class A addresses,
+-   Let $x_a$ be the number of class A addresses,
 
-- Let $n_a$ be the number of class A netids, and
+-   Let $n_a$ be the number of class A netids, and
 
-- Let $h_a$ be the number of class A hostids;
+-   Let $h_a$ be the number of class A hostids;
 
-- define $x_b, n_b, h_b$ and $x_c,n_c,h_c$ similarly
+-   define $x_b, n_b, h_b$ and $x_c,n_c,h_c$ similarly
 
-- By the sum rule $x=x_a+x_b+x_c$
+-   By the sum rule $x=x_a+x_b+x_c$
 
-- By the product rule, $x_a=n_a\times h_a$
+-   By the product rule, $x_a=n_a\times h_a$
 
-  - By the product rule, $n_a=2^7-1=127$ (since 111111 is not
-    available)
+    -   By the product rule, $n_a=2^7-1=127$ (since 111111 is not
+        available)
 
-  - By the product rule, $h_a=2^{24}-2=16,777,124$ (since can't have
-    all 0s or all 1s)
+    -   By the product rule, $h_a=2^{24}-2=16,777,124$ (since can't have
+        all 0s or all 1s)
 
-  - Hence $x_a=127\times 16,777,124=2,130,706,178$
+    -   Hence $x_a=127\times 16,777,124=2,130,706,178$
 
-- Similarly $x_b=n_b\cdot h_b=2^{14}\cdot (2^16-2)=1,073,709,056$
+-   Similarly $x_b=n_b\cdot h_b=2^{14}\cdot (2^16-2)=1,073,709,056$
 
-- Also, $x_c=n_c\cdot h_c=2^{21}\cdot(2^8-2)=532,676,608$
+-   Also, $x_c=n_c\cdot h_c=2^{21}\cdot(2^8-2)=532,676,608$
 
-- All in all, $x=x_a+x_b+x_c=3,737,091,842$ - this is a small number
+-   All in all, $x=x_a+x_b+x_c=3,737,091,842$ - this is a small number
 
 IPv4 addresses are exhausted now and 128-bit IPv6 addresses are now in
 use
@@ -163,7 +163,7 @@ arrangement of these objects
 An **ordered** arrangement of r elements from a set of at least r
 distinct objects is called an **r-permutation**.
 
-This is different from a standard permutations as some elements from the
+This is different from a standard permutation as some elements from the
 set will be unused
 
 ### Theorem
@@ -177,15 +177,15 @@ $$
 with n distinct elements
 Easy to prove using the product rule:
 
-- n different choices for the first position
+-   n different choices for the first position
 
-- for each of these choices, n-1 choices for the second position
+-   for each of these choices, n-1 choices for the second position
 
-- and so on, until the final position, for which there are n-r+1
-  different choices given any of the choices for the first r-1
-  position
+-   and so on, until the final position, for which there are n-r+1
+    different choices given any of the choices for the first r-1
+    position
 
-- The product rule yields the given formula
+-   The product rule yields the given formula
 
 ### Corollary
 
@@ -236,11 +236,11 @@ $$
 We can prove this as follows, using what
 we know about r-permutations:
 
-- Each r-combination can be ordered in r! different ways to obtain an
-  r-permutation
+-   Each r-combination can be ordered in r! different ways to obtain an
+    r-permutation
 
-- So $P(n,r)=r!\cdot C(n,r)$ Writing this out and dividing by $r!$
-  gives the above formula
+-   So $P(n,r)=r!\cdot C(n,r)$ Writing this out and dividing by $r!$
+    gives the above formula
 
 ## Example
 
@@ -251,9 +251,9 @@ this be done?_
 Answer: the ordering of the selecting committee members does not matter,
 so:
 
-- $C(9,3)=\dfrac{9!}{3!6!}=84$ ways to select postdocs and
+-   $C(9,3)=\dfrac{9!}{3!6!}=84$ ways to select postdocs and
 
-- $C(11,4)=\frac{11!}{4!7!}=330$ ways to select PhD students
+-   $C(11,4)=\frac{11!}{4!7!}=330$ ways to select PhD students
 
-- By the product rule, there are $84\cdot330=27,720$ ways to select
-  the committee
+-   By the product rule, there are $84\cdot330=27,720$ ways to select
+    the committee

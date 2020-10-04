@@ -63,7 +63,7 @@ in your practicals.
 
 ### Example
 
-For the (7,4,3)-Hamming code. Recieve $v=(1,0,0,0,0,0,1)$
+For the (7,4,3)-Hamming code. Receive $v=(1,0,0,0,0,0,1)$
 
 $$
 \begin{array} { l } { \mathbf { m } _ { 0 } \mathbf { G } = ( 0,0,0,0,0,0,0 ) : d _ { H } \left( \mathbf { m } _ { 0 } \mathbf { G } , \mathbf { v } \right) = 2 } \\ { \mathbf { m } _ { 1 } \mathbf { G } = ( 1,1,0,1,0,0,1 ) : d _ { H } \left( \mathbf { m } _ { 1 } \mathbf { G } , \mathbf { v } \right) = 2 } \\ { \mathbf { m } _ { 2 } \mathbf { G } = ( 0,1,0,1,0,1,0 ) : d _ { H } \left( \mathbf { m } _ { 2 } \mathbf { G } , \mathbf { v } \right) = 5 } \\ { \mathbf { m } _ { 3 } \mathbf { G } = ( 1,0,0,0,0,1,1 ) : d _ { H } \left( \mathbf { m } _ { 3 } \mathbf { G } , \mathbf { v } \right) = 1 } \end{array}

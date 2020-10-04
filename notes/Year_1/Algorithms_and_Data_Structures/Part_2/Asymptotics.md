@@ -219,7 +219,7 @@ $$| f ( x ) | \leq C \cdot | g ( x ) |$$ whenever $x\geqslant k$
     $\mathcal{O}(g(x))$, then there are infinitely many pairs of
     witnesses to that relationship
 
--   Indeed if C and k are one pair of witnesses, then any pair C' and
+-   Indeed, if C and k are one pair of witnesses, then any pair C' and
     k', where $C\leqslant C'$ and $k\leqslant k'$, is also a pair of
     witnesses
 

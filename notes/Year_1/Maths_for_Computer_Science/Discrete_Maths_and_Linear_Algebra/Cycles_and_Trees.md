@@ -19,8 +19,10 @@ each of its vertices has an even degree
 
 Necessity ($\Rightarrow$): each time this circuit passes through a
 vertex v, it contributes 2 to deg(v). Since each edge is used exactly
-once, deg(v) must be even\
-Sufficiency ($\Leftarrow$): Induction on the number of vertices in G.\
+once, deg(v) must be even
+
+Sufficiency ($\Leftarrow$): Induction on the number of vertices in G.
+
 Induction base: G=$K_3$, the claim is obvious. Induction step:
 
 -   Start walking from any vertex u along the untraversed edges, marking

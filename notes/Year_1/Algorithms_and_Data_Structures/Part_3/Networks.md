@@ -116,7 +116,7 @@ $a=(a_0,...,a_{n-1})$ be 0/1 sequence
 
 -   by hypothesis $(a_0,...,a_{n-2})$ get sorted
 
--   $a_{n-1}$ already in proper position so we're done
+-   $a_{n-1}$ already in proper position, so we're done
 
 **Case 2** if $a_{n-1}=0$ then
 
@@ -232,7 +232,7 @@ If clean in lower part: all 1s
 If clean in upper part: all 0s
 
 **Lemma**:
-If the imput to a half-cleaner is a bitonic 0-1 sequence, then for
+If the input to a half-cleaner is a bitonic 0-1 sequence, then for
 output:
 
 -   Both top and bottom half are bitonic

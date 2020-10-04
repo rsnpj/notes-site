@@ -46,10 +46,10 @@ lecturer: George
 
 -   Objective of the ER model
 
-    -   To help understanding of the nature and relationships among the
+    -   To help understand the nature and relationships among the
         data
 
-    -   To help deriving the tables in the relational data model
+    -   To help derive the tables in the relational data model
 
 -   Most important before building the ER model:
 
@@ -95,7 +95,7 @@ lecturer: George
 # Cardinality
 
 -   The cardinality of a relationship - the number of entity occurrences
-    that are related to a single occurence of an associated entity type
+    that are related to a single occurrence of an associated entity type
     through this relationship
 
 -   The cardinality of a relationship can be
@@ -136,7 +136,7 @@ to many.
 -   Diagrammatic representation of attributes have primary keys
     underlined
 
-    -   for every attribute one **labeled ellipse** attached to the
+    -   for every attribute one **labelled ellipse** attached to the
         entity rectangle
 
     -   all attributes in the lower part of the entity rectangle

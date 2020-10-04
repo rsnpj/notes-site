@@ -73,7 +73,7 @@ return fibs[n]
 ```
 # Recursive Fibonacci sequence
 Input n
-for n $\leqslant$ 1
+for n <= 1
     return n
 fibs
     return fibs(n-1)+fibs(n-2)

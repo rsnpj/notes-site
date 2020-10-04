@@ -287,11 +287,11 @@ return temp
 
 ## Implementation using arrays
 
--   If the size of the queue is N, then f=r and the isEmpty method
+-   If the size of the queue is N, then f=r and the `isEmpty` method
     returns true, even though the queue is not empty
 
 -   We avoid this problem by keeping the maximum number of elements that
-    can be stored in the queue to N-1. See the FullQueueException in the
+    can be stored in the queue to N-1. See the `FullQueueException` in the
     enqueue algorithm
 
 -   The array based implementation of the queue is time efficient. All

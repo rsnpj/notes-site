@@ -10,7 +10,7 @@ lecturer: Matthew
 -   To give an adjacency list representation of a graph, for each vertex
     v list all the vertices adjacent to v
 
--   To given an adjacency matrix representation of a graph create a
+-   To get an adjacency matrix representation of a graph create a
     square matrix A and label the rows and columns with the vertices:
     the entry in row i column j is 1 if vertex j is adjacent to vertex i
     and 0 if it is not

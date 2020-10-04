@@ -5,24 +5,24 @@ lecturer: Magnus
 
 # History of Computers
 
-- Pre 1950s - meant a person in a room doing calculations
+-   Pre 1950s - meant a person in a room doing calculations
 
-- 1871 - Babbage's analytical engine - advanced mechanical calculator
-  that could be programmed in a limited sense. Programmes made by Ada
-  Lovelace
+-   1871 - Babbage's analytical engine - advanced mechanical calculator
+    that could be programmed in a limited sense. Programmes made by Ada
+    Lovelace
 
-- 1950s-1960s - Curta Calculator - sophisticated mechanical calculator
+-   1950s-1960s - Curta Calculator - sophisticated mechanical calculator
 
 ## Enigma
 
-Evolved from mechanical to electromechanical in the emigma machine.
+Evolved from mechanical to electromechanical in the enigma machine.
 
 Rotor wheels at the heart of the device physically set at the start,
 then rotated as typed. Wires within wheels to increase difficulty to
 decrypt without the rotors.
 
 The enigma is a **polyalphabetic substitution cipher** based on
-electromechanical rotors that changed the substitution cypher after each
+electromechanical rotors that changed the substitution cipher after each
 letter.
 
 This would have been unbreakable if better procedures had been followed
@@ -35,7 +35,7 @@ speed, efficiency and reliability.
 
 ## Colossus
 
-More sophisticated than the BOMBE, used against the Lorenz cypher. This
+More sophisticated than the BOMBE, used against the Lorenz cipher. This
 was programmable, making it easier to input the new settings each day.
 
 ## Turing's definition of a computer
@@ -60,7 +60,7 @@ Impractical to use and program
 ## 1952 - IAS Machine
 
 A more practical Turing Complete computer, team behind it headed by von
-Neumann. Program not hard wired into machine, instead in storage.
+Neumann. Program not hard-wired into machine, instead in storage.
 
 ## von Neumann Architecture
 
@@ -70,50 +70,50 @@ Developed by the EDVAC design team for the US Army.
 
 The main elements of a computer are virtually unchanged from this:
 
-- Memory holds both programs and data - "Stored Program Concept" -
-  this means machine doesn't need to be rewired for different programs
+-   Memory holds both programs and data - "Stored Program Concept" -
+    this means machine doesn't need to be rewired for different programs
 
-- Memory is addressed linearly - memory read in order, find what is a
-  program and perform it
+-   Memory is addressed linearly - memory read in order, find what is a
+    program and perform it
 
-- Instructions executed sequentially (unless a branch or reset occurs)
+-   Instructions executed sequentially (unless a branch or reset occurs)
 
 # LMC Model of Computing
 
 Essential features:
 
-- **Mailboxes** - Have 2 digit addresses so a maximum of 100
-  mailboxes. Each mailbox contains a slip of paper with 3 digits on
-  it - no more. Store data in these mailboxes
+-   **Mailboxes** - Have 2 digit addresses so a maximum of 100
+    mailboxes. Each mailbox contains a slip of paper with 3 digits on
+    it - no more. Store data in these mailboxes
 
-- **Calculator** - Can only display 3 digits, has 0-9,+,- and a flag
-  for negative results. Calculator will loop after 999
+-   **Calculator** - Can only display 3 digits, has 0-9,+,- and a flag
+    for negative results. Calculator will loop after 999
 
-- **2 digit counter** - One button to increment the number, one
-  external one to reset it to zero - tells the man which mailbox to
-  look at next. Each time read, man increments it by 1
+-   **2 digit counter** - One button to increment the number, one
+    external one to reset it to zero - tells the man which mailbox to
+    look at next. Each time read, man increments it by 1
 
-- **Input and Output Trays**
+-   **Input and Output Trays**
 
-  - The user can put slips with 3 digits on the **input** tray, to
-    be read when the little man next looks at this tray
+    -   The user can put slips with 3 digits on the **input** tray, to
+        be read when the little man next looks at this tray
 
-  - The little man can write 3 digit notes and put them in the
-    **output** tray, to be read by the user - whenever number read
-    from input tray, put into calculator
+    -   The little man can write 3 digit notes and put them in the
+        **output** tray, to be read by the user - whenever number read
+        from input tray, put into calculator
 
 The process, the little man:
 
-- Starts by looking at the counter for a mailbox number X
+-   Starts by looking at the counter for a mailbox number X
 
-- The man increments the counter by 1
+-   The man increments the counter by 1
 
-- The man goes to mailbox X and reads what is written on the slip of
-  paper in the mailbox - 3 digits
+-   The man goes to mailbox X and reads what is written on the slip of
+    paper in the mailbox - 3 digits
 
-- The man takes the appropriate action depending on those digits
+-   The man takes the appropriate action depending on those digits
 
-- The man starts again
+-   The man starts again
 
 ## Instruction set
 
@@ -192,56 +192,56 @@ BRANCH can also be used to form loops by branching backwards
 
 **Machine Control**
 
-- op code 0 - BREAK
+-   op code 0 - BREAK
 
 **Arithmetic**
 
-- op code 1 - ADD
-- op code 2 - SUBTRACT
+-   op code 1 - ADD
+-   op code 2 - SUBTRACT
 
 **Data Movement**
 
-- op code 3 - STORE
-- op code 5 - LOAD
+-   op code 3 - STORE
+-   op code 5 - LOAD
 
 **Branching**
 
-- op code 6 - BRANCH
-- op code 7 - BRANCH on ZERO
-- op code 8 - BRANCH on POSITIVE
+-   op code 6 - BRANCH
+-   op code 7 - BRANCH on ZERO
+-   op code 8 - BRANCH on POSITIVE
 
 **Input/Output**
 
-- op code 901 - INPUT
-- op code 902 - OUTPUT
+-   op code 901 - INPUT
+-   op code 902 - OUTPUT
 
 ## LMC fetch execute cycle
 
 There are two essential phases of the LMC instruction cycle:
 
-- **fetch** - in which the little man finds the instruction to execute
+-   **fetch** - in which the little man finds the instruction to execute
 
-- **execute** - in which the little man performs the work specified in
-  the instruction
+-   **execute** - in which the little man performs the work specified in
+    the instruction
 
 ### Fetch
 
-- The man goes to the counter and reads the address there
+-   The man goes to the counter and reads the address there
 
-- The man goes to the mailbox at that address and reads the 3 digit
-  number in the mailbox
+-   The man goes to the mailbox at that address and reads the 3 digit
+    number in the mailbox
 
 ### Execute
 
-- The man remembers the target address
+-   The man remembers the target address
 
-- The man goes to the calculator and reads the 3 digits
+-   The man goes to the calculator and reads the 3 digits
 
-- The man goes to the mailbox at the remembered address
+-   The man goes to the mailbox at the remembered address
 
-- The man writes the 3 digits on a slip at that address
+-   The man writes the 3 digits on a slip at that address
 
-- The man goes to the counter and increments it
+-   The man goes to the counter and increments it
 
 The man needs to **remember** an address and a 3 digit value
 
@@ -267,24 +267,24 @@ just in case you skip over 0
 Branch on positive can be used as an error checker and you can direct
 the program to halt if the numbers go negative due to an error.
 
-To check not had overflow, subtract addition from original number, error
+To check the circuit has not overflown, subtract addition from original number, error
 if number is positive. Use branch on positive.
 
 # Assembly Code
 
 Uses mnemonics, unlike the LMC which only uses numbers.
 
-- Hash - comment
-- Column 1 - label
-- Column 2 mnemonic for op code
-- Column 3 - label for address
+-   Hash - comment
+-   Column 1 - label
+-   Column 2 mnemonic for op code
+-   Column 3 - label for address
 
-- LDA - Load into accumulator (calculator in LMC)\
-- DAT - Box used for data
-- STO - Store
-- BRZ - Branch on zero
-- HLT - Halt
-- BR - Branch
+-   LDA - Load into accumulator (calculator in LMC)\
+-   DAT - Box used for data
+-   STO - Store
+-   BRZ - Branch on zero
+-   HLT - Halt
+-   BR - Branch
 
 Lines of assembly sequentially given mailboxes, will fail to compile if
 not enough mailboxes
@@ -296,13 +296,13 @@ of the code and so the LMC will try to run it.
 
 **Separate memory for instructions and data**
 
-- Quicker to execute as can access instruction and data at the same
-  time
+-   Quicker to execute as can access instruction and data at the same
+    time
 
-- Simpler to follow/analyse code
+-   Simpler to follow/analyse code
 
-- Avoids the potential for some malware/bugs due to self-modifying
-  code
+-   Avoids the potential for some malware/bugs due to self-modifying
+    code
 
 Most modern processors have a CPU cache which partitions instruction and
 data, giving a "modified Harvard architecture" giving the best of both

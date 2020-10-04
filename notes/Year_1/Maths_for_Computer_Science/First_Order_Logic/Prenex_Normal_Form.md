@@ -14,7 +14,7 @@ $$
 
 # Parse Trees
 
-Recall that to check if a formula is well formed we can use a parse
+Recall that to check if a formula is well-formed we can use a parse
 tree. We illustrated this with
 
 ![Parse Trees](/img/Year_1/MCS/First_Order_Logic/Prenex_Normal_Form/parse.webp)

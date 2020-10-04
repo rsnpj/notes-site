@@ -60,7 +60,8 @@ On memory read:
 ## Registers
 
 Memory consists of latches, each holding a single bit value, at an
-address\
+address
+
 Interface between CPU and memory
 
 -   MAR

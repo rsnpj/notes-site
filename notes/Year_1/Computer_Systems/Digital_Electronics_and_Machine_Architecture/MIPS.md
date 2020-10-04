@@ -30,8 +30,7 @@ Underlying design principles:
 
 # Design principles
 
-MIPS is a reduced instruction set computer (RISC), with a small number
-of simple instructions. Other architectures, such as intel's x86 are
+MIPS is a reduced instruction set computer (RISC), with a few simple instructions. Other architectures, such as intel's x86 are
 complex instruction set computers (CISC)
 
 -   Simplicity favours regularity
@@ -52,7 +51,7 @@ complex instruction set computers (CISC)
 
 -   Smaller is faster
 
-    -   MIPS includes only a small number of registers
+    -   MIPS includes only a few registers
 
         | Name        | Register No | Usage                   |
         | ----------- | ----------- | ----------------------- |

@@ -35,8 +35,9 @@ Random Access Machine
 
 # Pseudocode
 
-To describe algorithms we will use generic pseudocode, not any one
+To describe algorithms we will use generic pseudocode, not any single
 programming language.
+
 There are no very strict rules on how it should be written.
 
 Will often use variables: int, float, char, str

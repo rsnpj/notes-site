@@ -7,21 +7,21 @@ lecturer: Andrei
 
 Recall that the three **elementary row operations** on a matrix are:
 
-- Multiply a row my a non zero constant c
+-   Multiply a row my a non zero constant c
 
-- Interchange two rows
+-   Interchange two rows
 
-- Add a constant c times one row $r_1$ to another row $r_2$
+-   Add a constant c times one row $r_1$ to another row $r_2$
 
 Observation: If B is obtained from A by using an elementary row
 operation then A can be obtained from B by using the **inverse
 elementary row operation**:
 
-- Multiply the same row by a non zero constant $1/c$
+-   Multiply the same row by a non zero constant $1/c$
 
-- Interchange the same two rows
+-   Interchange the same two rows
 
-- Add -c times row $r_1$ to row $r_2$
+-   Add -c times row $r_1$ to row $r_2$
 
 Matrices A and B are called **row equivalent** if either (hence each)
 can be obtained from the other by a sequence of elementary row
@@ -31,7 +31,8 @@ operations
 
 An $n\times n$ matrix is called an **elementary matrix** if it is
 obtained from the identity matrix $I_n$ by performing a single
-elementary row operation\
+elementary row operation
+
 Examples of elementary matrices:
 
 $$
@@ -154,36 +155,36 @@ $A ^ { - 1 } = \left( \begin{array} { r r r } { - 40 } & { 16 } & { 9 } \\ { 13 
 
 # Determinants reminder
 
-- The determinant of a $2\times 2$ matrix
-  $A = \left( \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right)$
-  is the number
+-   The determinant of a $2\times 2$ matrix
+    $A = \left( \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right)$
+    is the number
 
-  $$
-  \operatorname { det } ( A ) = \left| \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right| = a d - b c
-  $$
+    $$
+    \operatorname { det } ( A ) = \left| \begin{array} { l l } { a } & { b } \\ { c } & { d } \end{array} \right| = a d - b c
+    $$
 
-- If A is a square matrix of order n, then the minor of the entry
-  $a_{ij}$ denoted by $M_{ij}$, is the determinant of the matrix (of
-  order n-1) obtained from A by removing its ith row and jth column
+-   If A is a square matrix of order n, then the minor of the entry
+    $a_{ij}$ denoted by $M_{ij}$, is the determinant of the matrix (of
+    order n-1) obtained from A by removing its ith row and jth column
 
-- The number $C _ { i j } = ( - 1 ) ^ { i + j } M _ { i j }$ is called
-  the cofactor of $a_{ij}$
+-   The number $C _ { i j } = ( - 1 ) ^ { i + j } M _ { i j }$ is called
+    the cofactor of $a_{ij}$
 
-- If A is an $n\times n$ matrix then the determinant of A can be
-  computed by any of the following **cofactor expansions** along the
-  ith row and along the jth column, respectively
+-   If A is an $n\times n$ matrix then the determinant of A can be
+    computed by any of the following **cofactor expansions** along the
+    ith row and along the jth column, respectively
 
-  $$
-  \operatorname { det } ( A ) = a _ { i 1 } C _ { i 1 } + a _ { i 2 } C _ { i 2 } + \ldots + a _ { i n } C _ { i n }
-  $$
+    $$
+    \operatorname { det } ( A ) = a _ { i 1 } C _ { i 1 } + a _ { i 2 } C _ { i 2 } + \ldots + a _ { i n } C _ { i n }
+    $$
 
-  $$
-  \operatorname { det } ( A ) = a _ { 1 j } C _ { 1 j } + a _ { 2 j } C _ { 2 j } + \ldots + a _ { n j } C _ { n j }
-  $$
+    $$
+    \operatorname { det } ( A ) = a _ { 1 j } C _ { 1 j } + a _ { 2 j } C _ { 2 j } + \ldots + a _ { n j } C _ { n j }
+    $$
 
-- Easy to see: if A has a row of 0s or a column of 0s then det(A)=0
+-   Easy to see: if A has a row of 0s or a column of 0s then det(A)=0
 
-- Easy to see: it holds that $det(A)=det(A^T)$
+-   Easy to see: it holds that $det(A)=det(A^T)$
 
 # Determinants and elementary row operations
 
@@ -194,14 +195,14 @@ matrix?
 
 Let A be an $n\times n$ matrix
 
-- If B is obtained from A by multiplying a row by a constant k then
-  $det(B)=k\cdot det(A)$
+-   If B is obtained from A by multiplying a row by a constant k then
+    $det(B)=k\cdot det(A)$
 
-- If B is obtained from A by interchanging two rows then
-  $det(B)=-det(A)$
+-   If B is obtained from A by interchanging two rows then
+    $det(B)=-det(A)$
 
-- If B is obtained from A by adding a multiple of one row to another
-  row then $det(B)=det(A)$
+-   If B is obtained from A by adding a multiple of one row to another
+    row then $det(B)=det(A)$
 
 ## Lemma
 
@@ -214,13 +215,13 @@ $\operatorname { det } ( A ) = a _ { 11 } \cdot a _ { 22 } \cdots a _ { ( n - 1 
 The previous section suggests a strategy for computing the determinant
 of a matrix:
 
-- Use elementary row operations to transform the matrix into row
-  echelon form
+-   Use elementary row operations to transform the matrix into row
+    echelon form
 
-- Record how determinant changes during the transformation
+-   Record how determinant changes during the transformation
 
-- The row echelon form is upper triangular, its determinant is easy to
-  find
+-   The row echelon form is upper triangular, its determinant is easy to
+    find
 
 Example:
 
@@ -245,14 +246,14 @@ theorem
 
 Let E be an $n\times n$ elementary matrix
 
-- If E is obtained from $I_n$ by multiplying a row by a constant k
-  then $det(E)=k$
+-   If E is obtained from $I_n$ by multiplying a row by a constant k
+    then $det(E)=k$
 
-- If E is obtained from $I_n$ by interchanging two rows then
-  $det(E)=-1$
+-   If E is obtained from $I_n$ by interchanging two rows then
+    $det(E)=-1$
 
-- If E is obtained from $I_n$ by adding a multiple of one row to
-  another row then $det(E)=1$
+-   If E is obtained from $I_n$ by adding a multiple of one row to
+    another row then $det(E)=1$
 
 ## Lemma
 
@@ -279,23 +280,23 @@ A square matrix A is invertible iff $det(A)\neq 0$
 
 Let R be the reduced row echelon form of A. We have the following facts:
 
-- Either R=I (and $det(R)=1$) of R contains a row of 0s (and
-  $det(R)=0$)
+-   Either R=I (and $det(R)=1$) of R contains a row of 0s (and
+    $det(R)=0$)
 
-- A is invertible iff R=I, by the theorem about invertible matrices
-  $(1)\Leftrightarrow (3)$
+-   A is invertible iff R=I, by the theorem about invertible matrices
+    $(1)\Leftrightarrow (3)$
 
-- We know that $R=E_r\cdots E_2E_1A$ for some elementary matrices
-  $E_i$
+-   We know that $R=E_r\cdots E_2E_1A$ for some elementary matrices
+    $E_i$
 
-- $\operatorname { det } ( R ) = \operatorname { det } \left( E _ { r } \right) \cdots \operatorname { det } \left( E _ { 2 } \right) \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } ( A)$
-  by the previous lemma
+-   $\operatorname { det } ( R ) = \operatorname { det } \left( E _ { r } \right) \cdots \operatorname { det } \left( E _ { 2 } \right) \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } ( A)$
+    by the previous lemma
 
-- $det(E_i)\neq 0$ for all i, so $det(R)$ and $det(A)$ are either both
-  0 or both non 0
+-   $det(E_i)\neq 0$ for all i, so $det(R)$ and $det(A)$ are either both
+    0 or both non 0
 
-- Finally, A is invertible
-  $\Leftrightarrow R = I \Leftrightarrow \operatorname { det } ( R ) \neq 0 \Leftrightarrow \operatorname { det } ( A ) \neq 0$
+-   Finally, A is invertible
+    $\Leftrightarrow R = I \Leftrightarrow \operatorname { det } ( R ) \neq 0 \Leftrightarrow \operatorname { det } ( A ) \neq 0$
 
 # Properties of determinants
 
@@ -306,18 +307,18 @@ $det(AB)=det(A)det(B)$
 
 ## Proof
 
-- It can be shown that if A is invertible then neither is AB. In this
-  case $det(A)=det(AB)=0$
+-   It can be shown that if A is invertible then neither is AB. In this
+    case $det(A)=det(AB)=0$
 
-- Assume that A is invertible, then $A=E_1E_2\cdots E_r$ for some
-  elementary $E_i$
+-   Assume that A is invertible, then $A=E_1E_2\cdots E_r$ for some
+    elementary $E_i$
 
-- Then
-  $A B = E _ { 1 } E _ { 2 } \cdots E _ { r } B \text { and } \operatorname { det } ( A B ) = \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } \left( E _ { 2 } \right) \cdots \operatorname { det } \left( E _ { r } \right) \operatorname { det } ( B )$
+-   Then
+    $A B = E _ { 1 } E _ { 2 } \cdots E _ { r } B \text { and } \operatorname { det } ( A B ) = \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } \left( E _ { 2 } \right) \cdots \operatorname { det } \left( E _ { r } \right) \operatorname { det } ( B )$
 
-- Since
-  $\operatorname { det } ( A ) = \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } \left( E _ { 2 } \right) \cdots \operatorname { det } \left( E _ { r } \right)$,
-  we have the required equality.
+-   Since
+    $\operatorname { det } ( A ) = \operatorname { det } \left( E _ { 1 } \right) \operatorname { det } \left( E _ { 2 } \right) \cdots \operatorname { det } \left( E _ { r } \right)$,
+    we have the required equality.
 
 Applying the above theorem to the case when A is invertible and
 $B=A^{-1}$, we get
@@ -331,22 +332,22 @@ $B=-I_2$
 
 # Inverting a matrix via cofactors/adjoint
 
-- If A is a square matrix of order n, then the **minor of the entry
-  $a_{ij}$** denoted by $M_{ij}$, is the determinant of the matrix (of
-  order n-1) obtained from A by removing its ith row and jth column
+-   If A is a square matrix of order n, then the **minor of the entry
+    $a_{ij}$** denoted by $M_{ij}$, is the determinant of the matrix (of
+    order n-1) obtained from A by removing its ith row and jth column
 
-- The number $C _ { i j } = ( - 1 ) ^ { i + j } M _ { i j }$ is called
-  the **cofactor of $a_{ij}$**
+-   The number $C _ { i j } = ( - 1 ) ^ { i + j } M _ { i j }$ is called
+    the **cofactor of $a_{ij}$**
 
-- The matrix
+-   The matrix
 
-  $$
-  \operatorname { cof } ( A ) = \left( \begin{array} { c c c c } { C _ { 11 } } & { C _ { 12 } } & { \dots } & { C _ { 1 n } } \\ { C _ { 21 } } & { C _ { 22 } } & { \cdots } & { C _ { 2 n } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { c _ { n 1 } } & { C _ { n 2 } } & { \cdots } & { c _ { n n } } \end{array} \right)
-  $$
+    $$
+    \operatorname { cof } ( A ) = \left( \begin{array} { c c c c } { C _ { 11 } } & { C _ { 12 } } & { \dots } & { C _ { 1 n } } \\ { C _ { 21 } } & { C _ { 22 } } & { \cdots } & { C _ { 2 n } } \\ { \vdots } & { \vdots } & { } & { \vdots } \\ { c _ { n 1 } } & { C _ { n 2 } } & { \cdots } & { c _ { n n } } \end{array} \right)
+    $$
 
-  is called the **matrix of cofactors** of A
+    is called the **matrix of cofactors** of A
 
-- The transpose of cof(A) is the **adjoint** of A, denoted by $adj(A)$
+-   The transpose of cof(A) is the **adjoint** of A, denoted by $adj(A)$
 
 ## Theorem
 

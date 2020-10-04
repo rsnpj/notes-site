@@ -470,7 +470,7 @@ We have at least n! leaves - at least one for each outcome
 
 ![Selection Sort](/img/Year_1/ADS/Part_3/Trees/selection.webp)
 
-An correct sorting algorithm must be able to produce each permutation of
+A correct sorting algorithm must be able to produce each permutation of
 input (or: must sort any permutation of e.g. $\{1,...,n\}$)
 
 A necessary condition is that each of the n! permutations must appear as

@@ -48,7 +48,7 @@ Designing circuits becomes easier if we can separate what and when
 
 ![D latch](/img/Year_1/CSys/DEMA/Sequential/figure5.webp)
 
-D - data input, Defines wat the new value should be
+D - data input, Defines what the new value should be
 
 CLK - clock input. Defines when the new value should arise
 
@@ -256,7 +256,7 @@ A pair of flip-flops can be used to synchronise the input with the clock.
 
 The value of D2 may be intermediate if D is not synchronised
 
-If the resolution time of F1 is small enough compared the the clock rate, Q will be synchronised
+If the resolution time of F1 is small enough compared to the clock rate, Q will be synchronised
 
 # Pipelining
 

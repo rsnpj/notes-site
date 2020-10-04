@@ -174,7 +174,7 @@ assigns a number to each possible outcome
 ## Example
 
 A coin is flipped three times. Let X(t) be the random variable that
-equals the number of heads in the outcome t. Then we have\
+equals the number of heads in the outcome t. Then we have
 
 $$
 \begin{array} { l } { X ( H H H ) = 3 } \\ { X ( H H T ) = X ( H T H ) = X ( T H H ) = 2 } \\ { X ( T T H ) = X ( T H T ) = X ( H T T ) = 1 } \\ { X ( T T T ) = 0 } \end{array}
@@ -331,7 +331,4 @@ s. Then, for any real number $a>0$
 
 $$
 p ( X ( s ) \geq a ) \leq E ( x ) / a
-$$
-
-$$
 $$

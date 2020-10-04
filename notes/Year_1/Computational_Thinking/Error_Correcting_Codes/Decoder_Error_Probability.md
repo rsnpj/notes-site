@@ -24,8 +24,10 @@ If more than t errors occur, two situations could happen
 -   The decoder finds another (wrong) codeword at distance $\leqslant$ t
     from the received vector: Decoder **error**
 
-Failure: Ask for retransmission. No big deal\
-Error: the decoder is totally oblivious. Much more problematic.\
+Failure: Ask for retransmission. No big deal
+
+Error: the decoder is totally oblivious. Much more problematic.
+
 No failures when using hamming codes - hamming codes are optimal so all
 sequences will correspond to a codeword.
 
@@ -37,7 +39,7 @@ $$
 H = \left( \begin{array} { l l l l l } { 0 } & { 0 } & { 0 } & { 1 } & { 1 } \\ { 0 } & { 1 } & { 1 } & { 0 } & { 0 } \\ { 1 } & { 0 } & { 1 } & { 0 } & { 1 } \end{array} \right)
 $$
 
-This is a (5,2,3)-code. It's codewords are:
+This is a (5,2,3)-code. Its codewords are:
 
 $$
 \{ ( 0,0,0,0,0 ) , ( 0,1,1,1,1 ) , ( 1,1,1,0,0 ) , ( 1,0,0,1,1 ) \}

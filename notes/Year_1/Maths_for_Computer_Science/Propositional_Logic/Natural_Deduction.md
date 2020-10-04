@@ -8,7 +8,7 @@ lecturer: Daniel
 -   What we would like from a proof system
 
     -   **Completeness** - Using our proof system, we should be able to
-        prove all of the tautologies
+        prove all the tautologies
 
     -   **Soundness** - All theorems proved by our proof system should
         be tautologies
@@ -92,8 +92,7 @@ the statement on the bottom must be true.
     need to be checked
 
 -   Consequently, the proof-theoretic approach can be significantly more
-    efficient than the truth table approach, especially when there is a
-    large number of propositional variables
+    efficient than the truth table approach, especially when there is many propositional variables
 
 -   Of course knowing which rules of inference to apply which formulae
     so that we get a speedy proof is another difficulty that needs to be

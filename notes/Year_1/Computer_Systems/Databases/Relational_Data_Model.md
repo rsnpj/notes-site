@@ -58,7 +58,7 @@ lecturer: George
 -   **Normalized** - Appropriately structured (every cell has exactly
     one value, no repetitions of two identical rows)
 
--   **Relational Database** - A collection of normalised relations
+-   **Relational Database** - A collection of normalized relations
 
 # Instances of branch and staff relations
 
@@ -102,7 +102,7 @@ lecturer: George
 
     -   Their value uniquely determines a tuple of the table
 
-    -   These attribute are the primary key of the table
+    -   These attributes are the primary key of the table
 
 -   **Candidate key:** a minimal set of attributes whose values uniquely
     identify the tuples
@@ -148,7 +148,7 @@ lecturer: George
 
 -   A relation is represented by a two dimensional table
 
--   Each row (tuple) signifies a entity occurence
+-   Each row (tuple) signifies an entity occurrence
 
 -   No two rows can be identical (each row of the table is unique)
 

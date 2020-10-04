@@ -112,7 +112,7 @@ edges of G
 The classification is ambiguous for undirected graphs (back edges and
 forward edges are the same thing)
 
--   e is a forward edge if DFS first consideres e from u
+-   e is a forward edge if DFS first considers e from u
 
 -   e is a back edge if DFS first considers e from v
 

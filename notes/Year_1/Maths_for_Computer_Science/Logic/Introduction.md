@@ -7,19 +7,19 @@ lecturer: Daniel
 
 There are two parts of logic
 
-- Formal Language - Making statements about certain objects
+-   Formal Language - Making statements about certain objects
 
-- Formal System - Reasoning about the properties of objects
+-   Formal System - Reasoning about the properties of objects
 
 Objective of logic:
 
-- To carry out **precise** and **rigorous** arguments about
-  **assertions** and **proofs** and to **implement** these arguments
-  and **proofs**
+-   To carry out **precise** and **rigorous** arguments about
+    **assertions** and **proofs** and to **implement** these arguments
+    and **proofs**
 
-- We need a **language** whose structure (**syntax**) can be
-  **precisely** described and whose meaning (**semantics**) can be
-  **unambiguously** defined
+-   We need a **language** whose structure (**syntax**) can be
+    **precisely** described and whose meaning (**semantics**) can be
+    **unambiguously** defined
 
 **Proof System** - A system of **deduction** by which **proofs** can be
 constructed
@@ -33,23 +33,23 @@ propositions
 **First order logic** - Statement is broken down into a subject and a
 **predicate**, the predicate **modifies** the subject
 
-Logic comprises of 3 components:
+Logic consists of 3 components:
 
-- **Syntax** - The definition of the formulae of the logic
+-   **Syntax** - The definition of the formulae of the logic
 
-- **Semantics** - The association of meaning and truth to the formulae
-  of the logic
+-   **Semantics** - The association of meaning and truth to the formulae
+    of the logic
 
-- **Proof System** - The manipulation of formulae according to a
-  system of rules
+-   **Proof System** - The manipulation of formulae according to a
+    system of rules
 
 What is desired from these components is:
 
-- **Completeness** - All the "true" (semantics) formulae should be
-  "provable" (syntax, proof system)
+-   **Completeness** - All the "true" (semantics) formulae should be
+    "provable" (syntax, proof system)
 
-- **Soundness** - A formula that is "provable" (syntax, proof
-  system) should be "true" (semantics)
+-   **Soundness** - A formula that is "provable" (syntax, proof
+    system) should be "true" (semantics)
 
 # Logic in action
 
@@ -97,10 +97,10 @@ Model checking used for rapid prototyping systems
 
 Examples of use of formal methods:
 
-- Microprocessor design
+-   Microprocessor design
 
-- Design of data-communications protocol software
+-   Design of data-communications protocol software
 
-- Critical Software
+-   Critical Software
 
-- Operating Systems
+-   Operating Systems

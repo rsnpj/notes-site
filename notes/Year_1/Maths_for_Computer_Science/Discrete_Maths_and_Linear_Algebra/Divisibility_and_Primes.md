@@ -32,11 +32,11 @@ The following statements about divisibility hold
 
 Let's prove item 2:
 
-- Since a\|b, there is $k_1$ such that $b=ak_1$
+-   Since a\|b, there is $k_1$ such that $b=ak_1$
 
-- Since b\|c there is $k_2$ such that $c=bk_2$
+-   Since b\|c there is $k_2$ such that $c=bk_2$
 
-- Then $c=a(k_1k_2)$ so a\|c
+-   Then $c=a(k_1k_2)$ so a\|c
 
 # The division algorithm
 
@@ -49,9 +49,9 @@ numbers q and r, with $0\leqslant r<d$, such that $a=qd+r$
 
 In the equality in the division algorithm:
 
-- q is the quotient, denoted by $qent(a,d)$ or a div d
+-   q is the quotient, denoted by $qent(a,d)$ or a div d
 
-- r is the remainder, denoted by $rem(a,d)$ or a mod d
+-   r is the remainder, denoted by $rem(a,d)$ or a mod d
 
 # Fundamental properties of primes
 
@@ -112,11 +112,11 @@ Similarly one shows m\|b and so $m\leqslant gcd(a,b)$
 
 The following statements hold:
 
-- gcd(ka,kb)=$k\cdot gcd (a,b)$ for all $k>0$
+-   gcd(ka,kb)=$k\cdot gcd (a,b)$ for all $k>0$
 
-- If gcd(a.b)=1 and gcd(a,c)=1 then gcd(a,bc)=1
+-   If gcd(a.b)=1 and gcd(a,c)=1 then gcd(a,bc)=1
 
-- if a\|bc and gcd(a,b)=1 then a\|c
+-   if a\|bc and gcd(a,b)=1 then a\|c
 
 ## Proof
 
@@ -152,18 +152,18 @@ Then gcd(a,b) and gcd(b,r) divide each other, so gcd(a,b)=gcd(b,r)
 Suppose $a>b$ are positive numbers. Euclid's algorithm finds gcd(a,b) as
 follows
 
-- let $r_0=a$ and $r_1=b$. Recursively compute numbers $r_2,r_3...$
+-   let $r_0=a$ and $r_1=b$. Recursively compute numbers $r_2,r_3...$
 
-- Use division algorithm $(r_i=r_{i+1}q_1+r_{i+2})$ to find
-  $r_{i+2}=rem(r_i,r_{i+1})$
+-   Use division algorithm $(r_i=r_{i+1}q_1+r_{i+2})$ to find
+    $r_{i+2}=rem(r_i,r_{i+1})$
 
-- Note that $0\leqslant r_{i+2} <r_{i+1}$. Therefore, for some n,
-  $r_n>0$ and $r_{n+1}=0$
+-   Note that $0\leqslant r_{i+2} <r_{i+1}$. Therefore, for some n,
+    $r_n>0$ and $r_{n+1}=0$
 
-- We know that $gcd(r_i,r_{i+1})=gcd(r_{i+1},r_{i+2})$ for all i (by
-  the above lemma)
+-   We know that $gcd(r_i,r_{i+1})=gcd(r_{i+1},r_{i+2})$ for all i (by
+    the above lemma)
 
-- $\operatorname { gcd } ( a , b ) = \operatorname { gcd } \left( r _ { 0 } , r _ { 1 } \right) = \operatorname { gcd } \left( r _ { 1 } , r _ { 2 } \right) = \ldots = \operatorname { gcd } \left( r _ { n - 1 } , r _ { n } \right) = \operatorname { gcd } \left( r _ { n } , 0 \right) = r _ { n }$
+-   $\operatorname { gcd } ( a , b ) = \operatorname { gcd } \left( r _ { 0 } , r _ { 1 } \right) = \operatorname { gcd } \left( r _ { 1 } , r _ { 2 } \right) = \ldots = \operatorname { gcd } \left( r _ { n - 1 } , r _ { n } \right) = \operatorname { gcd } \left( r _ { n } , 0 \right) = r _ { n }$
 
 ## Example
 
@@ -203,6 +203,3 @@ Two numbers a and b are called relatively prime if gcd(a,b)=1
 The value $\phi(n)$ of Euler's $\phi$-function on a number n is the
 number of integers a with $1\leqslant a \leqslant n$ that are relatively
 prime with n
-
-$$
-$$

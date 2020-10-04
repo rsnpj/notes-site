@@ -17,7 +17,7 @@ iterative algorithms:
 One often ends up with some sort of sum (the more nested loops, the more
 nested sums).
 
-To analyse recursive algorithms, first of all note that most of them are
+To analyse recursive algorithms, first note that most of them are
 actually hybrids between iterative and strictly recursive (e.g., the
 Partition function in QuickSort is iterative, the rest of QuickSort is
 recursive.

@@ -12,13 +12,13 @@ spacial (data transmission) or temporal (storage)
 
 ## The tenets of error control
 
-Advantage of digital data v analog: we can perform error correction
+Advantage of digital data v analogue: we can perform error correction
 
 Main assumption:
 
-- Simplify the channel
+-   Simplify the channel
 
-- Suppose errors occur infrequently
+-   Suppose errors occur infrequently
 
 Main idea: add redundancy to the data
 
@@ -102,9 +102,9 @@ Very low rate 1/3, so we need more rate efficient techniques
 
 For n bits:
 
-- We can detect n-1 errors
+-   We can detect n-1 errors
 
-- We can correct $\lfloor \frac{n-1}{2}\rfloor$ errors
+-   We can correct $\lfloor \frac{n-1}{2}\rfloor$ errors
 
 $$
 t<m-t

@@ -70,10 +70,9 @@ $$
 \binom{n+1}{k}=\binom{n}{k-1}+\binom{n}{k}
 $$
 
-Show that both sides of the identity count the same things in a different
-way:
+Show that both sides of the identity count the same things differently:
 
--   The left hand side counts all the possible subsets of k elements
+-   The left-hand side counts all the possible subsets of k elements
     from a set of n+1 elements
 
 -   Fix one element x. The right hand side counts:
@@ -177,7 +176,8 @@ $C(n+r-1,n-1)=C(n+r-1,r)$
 
 # Distributing Objects into Boxes
 
-_How many ways are there to distribute n objects into k boxes?_\
+_How many ways are there to distribute n objects into k boxes?_
+
 The answer depends of whether the objects/boxes are distinguishable
 
 -   D objects into D boxes

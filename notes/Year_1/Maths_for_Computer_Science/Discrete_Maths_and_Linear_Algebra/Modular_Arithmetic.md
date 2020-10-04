@@ -7,7 +7,7 @@ lecturer: Andrei
 
 ## Definition
 
-if a,b are integers and m is a positive integer then a is congruent to b
+If a,b are integers and m is a positive integer then a is congruent to b
 modulo m iff m\|(a-b). Notation $a\equiv b (mod m)$
 
 Example: 8$\equiv 5 ( \bmod 3 )$ because
@@ -31,21 +31,21 @@ $$
 
 Congruences work a lot like equations, but there are some differences:
 
-- if $ac\equiv bc (\bmod m)$ and $c \not\equiv 0 (\bmod m)$ it is
-  possible that $a\not\equiv b (\bmod m)$. For example
-  $2 \cdot 3 \equiv 4 \cdot 3 ( \bmod 6 ) ,$ but
-  $2 \neq 4 ( \bmod 6 )$
+-   if $ac\equiv bc (\bmod m)$ and $c \not\equiv 0 (\bmod m)$ it is
+    possible that $a\not\equiv b (\bmod m)$. For example
+    $2 \cdot 3 \equiv 4 \cdot 3 ( \bmod 6 ) ,$ but
+    $2 \neq 4 ( \bmod 6 )$
 
-- If $a\equiv b (\bmod m)$ and $c\equiv d (\bmod m)$, it is possible
-  that $a^c\not\equiv d^d (\bmod m)$
+-   If $a\equiv b (\bmod m)$ and $c\equiv d (\bmod m)$, it is possible
+    that $a^c\not\equiv d^d (\bmod m)$
 
-- A congruence of the form $ax\equiv b(\bmod m)$ is called a **linear congruence**
+-   A congruence of the form $ax\equiv b(\bmod m)$ is called a **linear congruence**
 
-- Such congruences often appear in applications of number theory
+-   Such congruences often appear in applications of number theory
 
-- Solving such a congruence means finding all c (by default, in the
-  range $\{0,1,...,m-1\}$) such that $ac\equiv b (\bmod m)$, such c
-  might not be unique
+-   Solving such a congruence means finding all c (by default, in the
+    range $\{0,1,...,m-1\}$) such that $ac\equiv b (\bmod m)$, such c
+    might not be unique
 
 ## Example
 
@@ -60,17 +60,17 @@ $x \equiv 6 ( \bmod 7 ) .$ So $x = 6$
 
 # Multiplicative inverses
 
-- An easy way to solve equation $ax=b$ is to multiply both parts by
-  $a^{-1}$
+-   An easy way to solve equation $ax=b$ is to multiply both parts by
+    $a^{-1}$
 
-- We cannot do this within integers, but we often can when working
-  modulo m
+-   We cannot do this within integers, but we often can when working
+    modulo m
 
-- Call $\overline{a}$ the (multiplicative) inverse of a modulo m if
-  $\overline { \mathbf { a } } a \equiv 1 ( \bmod m )$
+-   Call $\overline{a}$ the (multiplicative) inverse of a modulo m if
+    $\overline { \mathbf { a } } a \equiv 1 ( \bmod m )$
 
-- Multiplicative inverses do not always exist, e.g.
-  $2\overline{a}\not\equiv 1 (\bmod 4)$ for any $\overline{a}$
+-   Multiplicative inverses do not always exist, e.g.
+    $2\overline{a}\not\equiv 1 (\bmod 4)$ for any $\overline{a}$
 
 ## Theorem
 
@@ -86,8 +86,8 @@ $sa\equiv 1 (\bmod m)$\
 Let $s=qm+r$ where $0\leqslant r <m$, then
 $ra=(s-qm)a\equiv sa \equiv 1 (\bmod m)$ so r is the required inverse
 
-- note that s can be found by using euclid's algorithm. Then $r$ is
-  easy to find
+-   note that s can be found by using euclid's algorithm. Then $r$ is
+    easy to find
 
 # The Chinese remainder theorem
 
@@ -120,15 +120,15 @@ $x\equiv a_kM_ky_k\equiv a_k (\bmod m_k)$
 
 # Computer arithmetic with large numbers
 
-- Suppose $m_1,m_2,...,m_n$ are all pairwise relatively prime (and all
-  $\geqslant 2$)
+-   Suppose $m_1,m_2,...,m_n$ are all pairwise relatively prime (and all
+    $\geqslant 2$)
 
-- By the chinese remainder theorem, any number $0\leqslant a <m$ can
-  all be uniquely represented by the n-tuple $(a_1,a_2,...,a_n)$ where
-  $a_i=rem(a,m_i)$ for all i
+-   By the chinese remainder theorem, any number $0\leqslant a <m$ can
+    all be uniquely represented by the n-tuple $(a_1,a_2,...,a_n)$ where
+    $a_i=rem(a,m_i)$ for all i
 
-- Example: let $m_1=3$ and $m_2=4$. Then the numbers $<12$ are
-  represented as
+-   Example: let $m_1=3$ and $m_2=4$. Then the numbers $<12$ are
+    represented as
 
 $$
 \begin{array}{llllllll}
@@ -139,20 +139,20 @@ $$
 \end{array}
 $$
 
-- To perform arithmetic with large numbers, choose the moduli
-  $m_1,...,m_n$ so that $m=m_1\cdots m_n>$ the result of the
-  operations you want to carry out
+-   To perform arithmetic with large numbers, choose the moduli
+    $m_1,...,m_n$ so that $m=m_1\cdots m_n>$ the result of the
+    operations you want to carry out
 
-- Then arithmetic can be performed with representations of numbers
+-   Then arithmetic can be performed with representations of numbers
 
-- Example: compute $2\cdot 5$. Instead, multiply (2,2) and (2,1)
-  component wise. 1st component modulo 3 and 2nd modulo 4. Get (1,2)
-  which represents 10
+-   Example: compute $2\cdot 5$. Instead, multiply (2,2) and (2,1)
+    component wise. 1st component modulo 3 and 2nd modulo 4. Get (1,2)
+    which represents 10
 
-- Advantages: can work with very large numbers and can compute in
-  parallel
+-   Advantages: can work with very large numbers and can compute in
+    parallel
 
-- Particularly good choices for $m_i$: numbers of the form $2^p-1$
+-   Particularly good choices for $m_i$: numbers of the form $2^p-1$
 
 # Fermat's Little theorem
 
@@ -164,11 +164,11 @@ Furthermore, for every integer a, $a^p\equiv a (\bmod p)$
 
 ## Example
 
-- We know how to find inverses modulo prime p (via Euclid's algorithm)
+-   We know how to find inverses modulo prime p (via Euclid's algorithm)
 
-- The above theorem gives an alternate approach:
-  $a^{p-2}\cdot a\equiv 1 (\bmod p)$ hence $rem(a^{p-2},p)$ is the
-  required inverse
+-   The above theorem gives an alternate approach:
+    $a^{p-2}\cdot a\equiv 1 (\bmod p)$ hence $rem(a^{p-2},p)$ is the
+    required inverse
 
 Find the multiplicative inverse of 6 modulo 17\
 Solution: we need to compute $rem(6^{15},17)$, which can be done as
@@ -194,21 +194,21 @@ $a^{\phi(n)}\equiv 1 (\bmod n)$
 
 ## Method
 
-- If n is a prime then $\phi(n)=n-1$, so this is indeed a
-  generalisation
+-   If n is a prime then $\phi(n)=n-1$, so this is indeed a
+    generalisation
 
-- If gcd(a,n)=1, then, as we proved, the inverse of a modulo n exists
-  and can be found using Euclid's algorithm
+-   If gcd(a,n)=1, then, as we proved, the inverse of a modulo n exists
+    and can be found using Euclid's algorithm
 
-- By Euler's Theorem, it can also be found as $rem(a^{\phi(n)-1},n)$
+-   By Euler's Theorem, it can also be found as $rem(a^{\phi(n)-1},n)$
 
-- Can a have a multiplicative inverse modulo n is $gcd(a,n)>1$? No
+-   Can a have a multiplicative inverse modulo n is $gcd(a,n)>1$? No
 
-  - If the inverse $\overline{a}$ exists we have
-    $\overline{a}a\equiv 1 (\bmod n)$, i.e. $\overline{a}a-1=kn$ for
-    some k
+    -   If the inverse $\overline{a}$ exists we have
+        $\overline{a}a\equiv 1 (\bmod n)$, i.e. $\overline{a}a-1=kn$ for
+        some k
 
-  - Rewrite as $\overline{a}a+(-k)n=1$, it follows that $gcd(a,n)=1$
+    -   Rewrite as $\overline{a}a+(-k)n=1$, it follows that $gcd(a,n)=1$
 
 # Computing Euler's $\phi$-function
 
@@ -223,10 +223,10 @@ If p is prime then $\phi(p^k)=p^k-p^{k-1}$
 By the chinese remainder theorem, there is a 1 to 1 correspondence
 between
 
-- numbers x with $0\leqslant x < m_1m_2$ and
+-   numbers x with $0\leqslant x < m_1m_2$ and
 
-- pairs $(1_2,a_2)$ such that $0\leqslant a_i <m_i$ and
-  $x\equiv a_i (\bmod m_i)$ for $i=1,2$
+-   pairs $(1_2,a_2)$ such that $0\leqslant a_i <m_i$ and
+    $x\equiv a_i (\bmod m_i)$ for $i=1,2$
 
 Since $a_i=rem(x,m_i)$ we have $gcd(x,m_i)=gcd(a_i,m_i)$ for i=1,2\
 We have

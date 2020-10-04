@@ -65,7 +65,7 @@ lecturer: Barnaby
 
 -   Truncate
 
--   $Open(F_i)$ - search the directory structure on dis for entry $F_i$
+-   $Open(F_i)$ - search the directory structure on disk for entry $F_i$
     and move the content of entry to memory
 
 -   $Close(F_i)$ - move the content of entry $F_i$ in memory to
@@ -94,7 +94,7 @@ lecturer: Barnaby
 
     -   Similar to reader-writer locks
 
-    -   Shared lock similar to reader lock - several process can acquire
+    -   Shared lock similar to reader lock - several processes can acquire
         concurrently
 
     -   Exclusive lock similar to writer lock

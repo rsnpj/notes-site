@@ -14,57 +14,57 @@ into one document
 
 # Version control software
 
-- RCS (Revision control system) - in order to save space, only stored
-  difference between files, rather than the whole files. Stores latest
-  versions, and stores diffs between previous versions
+-   RCS (Revision control system) - in order to save space, only stored
+    difference between files, rather than the whole files. Stores latest
+    versions, and stores diffs between previous versions
 
-- CVS (Concurrent Versions System) - Managed under RCS, manages
-  collections of files
+-   CVS (Concurrent Versions System) - Managed under RCS, manages
+    collections of files
 
-- Microsoft word track changes
+-   Microsoft word track changes
 
-- Subversion
+-   Subversion
 
-- git - Doesn't use diff and patch
+-   git - Doesn't use diff and patch
 
 # All about git
 
 RCS was designed to be compact, git is designed to be fast
 
-- Distributed version control system - no central repository of
-  anything
+-   Distributed version control system - no central repository of
+    anything
 
-- Developed by Linus Torvalds and others to manage the linux kernel
+-   Developed by Linus Torvalds and others to manage the Linux kernel
 
-- Designed to be fast
+-   Designed to be fast
 
-- Very widely used in academia and industry
+-   Very widely used in academia and industry
 
-- Stores every version of every file produced
+-   Stores every version of every file produced
 
 ## Git under the hood
 
-- Different from earlier systems such as RCS - no diffs
+-   Different from earlier systems such as RCS - no diffs
 
-- Originally developed under Linux, but available elsewhere
+-   Originally developed under Linux, but available elsewhere
 
-- No central repository, but can synchronise with remotes
+-   No central repository, but can synchronise with remotes
 
-- Cloud hosted repository servers: github etc
+-   Cloud hosted repository servers: GitHub etc
 
 ## Key concepts in git
 
-- A **file** (in a path)
+-   A **file** (in a path)
 
-- A **commit**: a snapshot of a collection of files at a particular
-  time
+-   A **commit**: a snapshot of a collection of files at a particular
+    time
 
-- A **branch**: A linear sequence of commits - always a previous
-  version on a branch, and relation known
+-   A **branch**: A linear sequence of commits - always a previous
+    version on a branch, and relation known
 
-- A **repository**: (possibly) many branches of a project
+-   A **repository**: (possibly) many branches of a project
 
-- A **remote**: another place where a repository is stored
+-   A **remote**: another place where a repository is stored
 
 ## Key commands in git
 

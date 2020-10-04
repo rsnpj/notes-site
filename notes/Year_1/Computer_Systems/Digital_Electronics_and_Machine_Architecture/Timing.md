@@ -18,7 +18,7 @@ changing and the output adjusting appropriately.
 **Propagation delay: $t_{pd}$**: The max delay before the output is
 stable
 
-**Comtamination delay $t_{cd}$**: The min delay before the output
+**Contamination delay $t_{cd}$**: The min delay before the output
 changes
 
 ![Timing delay](/img/Year_1/CSys/DEMA/Timing/delay.webp)

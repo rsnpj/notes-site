@@ -66,7 +66,7 @@ What can we do for that?
 
     -   each of then with equal probability
 
-    -   every call of RANDOM is independent from the other ones
+    -   every call of RANDOM is independent of the other ones
 
 -   In practice: real randomness is difficult
 
@@ -146,7 +146,7 @@ In a random experiment (e.g. a coin toss):
 
 -   Each subset of S is an event
 
--   Each single element of S is also an elementary events (elementary
+-   Each single element of S is also an elementary event (elementary
     events are also events)
 
 -   We assign to each elementary event $x\in S$ a number
@@ -172,7 +172,7 @@ The probability of an event shows:
 
     -   $Pr(A\cap B)=Pr(A)\cdot Pr(B)$
 
--   In general we consider A and B as independent if they correspond to
+-   In general, we consider A and B as independent if they correspond to
     random experiments defined on different time and space domains
 
 E.g for the random experiment "two independent tosses of a 'fair'
