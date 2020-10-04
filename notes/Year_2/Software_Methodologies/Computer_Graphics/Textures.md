@@ -3,29 +3,29 @@ title: Texture Mapping
 lecturer: Freddie
 ---
 
-- A method for adding surface details
+-   A method for adding surface details
 
-- Aims at increasing realism
+-   Aims at increasing realism
 
-  - Relying on mesh geometry to create such details is expensive
+    -   Relying on mesh geometry to create such details is expensive
 
-  - Lighting/shading models are not enough
+    -   Lighting/shading models are not enough
 
-- Associate 2D information with 3D surface
+-   Associate 2D information with 3D surface
 
 # Texture and 3D object
 
-- Texture image: 2D array of colour values (Texels)
+-   Texture image: 2D array of colour values (Texels)
 
-- Assigning texture coordinates (s,t) at vertex with object
-  coordinates (x,y,z,w)
+-   Assigning texture coordinates (s,t) at vertex with object
+    coordinates (x,y,z,w)
 
-  - Use interpolated (s,t) for texel lookup at each pixel
+    -   Use interpolated (s,t) for texel lookup at each pixel
 
-  - Use the retrieved colour value to modify a polygon’s colour (or
-    other surface properties)
+    -   Use the retrieved colour value to modify a polygon’s colour (or
+        other surface properties)
 
-  - Can be done manually or automatically
+    -   Can be done manually or automatically
 
 <Definition name="Texture Atlas">
 A large image containing a collection of sub-images, each of which is a texture for some part of an object
@@ -100,19 +100,19 @@ coordinates (UV map is difficult)
 
 Break the texture mapping into two parts
 
-- Map the texture to a simple intermediate surface
+-   Map the texture to a simple intermediate surface
 
-- The textured intermediate surface is then mapped to the object
+-   The textured intermediate surface is then mapped to the object
 
 ## Second mapping
 
 Map from intermediate object
 
-- Normals from intermediate to actual
+-   Normals from intermediate to actual
 
-- Normals from actual to intermediate
+-   Normals from actual to intermediate
 
-- Vectors from center of intermediate
+-   Vectors from centre of intermediate
 
 # MIP Mapping
 
@@ -122,12 +122,12 @@ aliasing.
 
 Advantages of MIP mapping
 
-- Reduce memory consumption of running application
+-   Reduce memory consumption of running application
 
-- Support anti aliasing, offering better output quality of a CG
-  application
+-   Support anti aliasing, offering better output quality of a CG
+    application
 
-- Only 1/3 more space required
+-   Only 1/3 more space required
 
 # Normal Mapping
 
@@ -136,74 +136,74 @@ applying lighting to perturbed normal vectors on the object surface.
 
 # Bump mapping
 
-- Treat the texture as a single valued height function
+-   Treat the texture as a single valued height function
 
-- Compute the normal from the partial derivatives in the texture
+-   Compute the normal from the partial derivatives in the texture
 
-- The heights encode the amount by which to perturb N in the (u,v)
-  directions of the parametric space describing the object surface
+-   The heights encode the amount by which to perturb N in the (u,v)
+    directions of the parametric space describing the object surface
 
 # Normal Map vs Bump Map
 
 Bump Map:
 
-- Texture (greyscale) encodes height
+-   Texture (greyscale) encodes height
 
-- Modifies the geometric normal
+-   Modifies the geometric normal
 
-- Harder to implement
+-   Harder to implement
 
-- Easier to specify
+-   Easier to specify
 
 Normal map:
 
-- Texture (RGB) encodes normal directly
+-   Texture (RGB) encodes normal directly
 
-- Replaces the normal
+-   Replaces the normal
 
-- Easier to implement
+-   Easier to implement
 
-- Harder to specify
+-   Harder to specify
 
 # Displacement Mapping
 
-- Use texture map to actually move surface points
+-   Use texture map to actually move surface points
 
-- Geometry must be displaced before visibility is determined
+-   Geometry must be displaced before visibility is determined
 
-- Done as a preprocess or with complicated vertex/fragment shader
-  implementation
+-   Done as a preprocess or with complicated vertex/fragment shader
+    implementation
 
 # Environment Maps
 
-- We can simulate reflections by using the direction of the reflected
-  ray to index a spherical texture map at "infinity"
+-   We can simulate reflections by using the direction of the reflected
+    ray to index a spherical texture map at "infinity"
 
-- Assumes that all reflected rays begin from the same point
+-   Assumes that all reflected rays begin from the same point
 
 # Light mapping
 
-- Realistic lighting can be achieved
+-   Realistic lighting can be achieved
 
-- Every single bit of expensive lighting calculation is done
-  pre-process time, avoiding overhead
+-   Every single bit of expensive lighting calculation is done
+    pre-process time, avoiding overhead
 
-- At run times, all calculations are done by hardware and so is very
-  fast
+-   At run times, all calculations are done by hardware and so is very
+    fast
 
-- Visual quality of the lighting is directly dependent on the size of
-  the light map texture(s)
+-   Visual quality of the lighting is directly dependent on the size of
+    the light map texture(s)
 
-- For every triangle, a diffuse texture map is applied first and then
-  a light map is usually modulated with it
+-   For every triangle, a diffuse texture map is applied first and then
+    a light map is usually modulated with it
 
 # Fog maps
 
-- Dynamic modification of light maps
+-   Dynamic modification of light maps
 
-- Put fog objects into the scene
+-   Put fog objects into the scene
 
-- Compute where they intersect with geometry and paint the fog density
-  into a dynamic light map
+-   Compute where they intersect with geometry and paint the fog density
+    into a dynamic light map
 
-- Apply the fog map as with a light map
+-   Apply the fog map as with a light map

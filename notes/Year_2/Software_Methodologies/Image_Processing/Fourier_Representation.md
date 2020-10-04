@@ -124,7 +124,8 @@ transform to continuous functions
 # 2D sine functions
 
 Any image can be reconstructed as a weighted sum of different
-frequencies aligned in different phases\
+frequencies aligned in different phases
+
 The weights are the Fourier coefficients of the image
 
 # Discrete Fourier transform

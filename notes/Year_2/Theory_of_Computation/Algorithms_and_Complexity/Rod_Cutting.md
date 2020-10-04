@@ -113,7 +113,7 @@ Dynamic programming thus uses additional memory to save computation: it
 is an example of time-memory trade-off
 
 A dynamic programming approach runs in polynomial time when the number
-of distinct subproblems involved is polynomial and we can solve each
+of distinct subproblems involved is polynomial, and we can solve each
 subproblem in polynomial time
 
 ## Overlapping subproblems

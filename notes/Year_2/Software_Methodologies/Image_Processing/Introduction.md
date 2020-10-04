@@ -77,13 +77,13 @@ Colour images: image(x,y) = (r,g,b)
 
 Pixel location: (x,y) position in the column by row coordinate system.
 
-Positive co-ordinate system: origin = top left
+Positive coordinate system: origin = top left
 
 Origin is not universal: OpenCV uses top left and:
 
-column (c) = x co-ordinate
+column (c) = x coordinate
 
-row (r) = y co-ordinate
+row (r) = y coordinate
 
 # What do pixel values actually represent in image data?
 

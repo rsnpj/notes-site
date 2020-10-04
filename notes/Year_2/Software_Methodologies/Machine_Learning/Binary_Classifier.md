@@ -9,7 +9,7 @@ lecturer: Lei
 
 -   Define relationship between $h(x)$ and $y$
 
--   If larger than the threshold, then set to 1, if less then set to 0
+-   If larger than the threshold, then set to 1, if less, then set to 0
 
 -   Use the decision rule:
 

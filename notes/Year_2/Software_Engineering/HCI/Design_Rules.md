@@ -5,13 +5,13 @@ lecturer: Craig
 
 3 Types:
 
-- Design standards
+-   Design standards
 
-- Design principles
+-   Design principles
 
-  - Universal/heuristic
+    -   Universal/heuristic
 
-  - Specific
+    -   Specific
 
 # Standards
 
@@ -28,26 +28,26 @@ lead to disaster (or a legal case)
 
 # Principles
 
-- Over the years many principles of good interactive system design
-  have been developed
+-   Over the years many principles of good interactive system design
+    have been developed
 
-- Design principles can be very broad such as "make things visible"
+-   Design principles can be very broad such as "make things visible"
 
-- They can be more specific such as "provide clearly marked exits"
+-   They can be more specific such as "provide clearly marked exits"
 
-- There are also good design principles that derive from psychology
-  such as "minimise memory load"
+-   There are also good design principles that derive from psychology
+    such as "minimize memory load"
 
-- General, high level, design knowledge
+-   General, high level, design knowledge
 
-- Principles are based on knowledge from many fields, particularly
-  psychology, graphic design, cultural studies
+-   Principles are based on knowledge from many fields, particularly
+    psychology, graphic design, cultural studies
 
-- Abstract guidelines (universal principles) applicable during early
-  design activities
+-   Abstract guidelines (universal principles) applicable during early
+    design activities
 
-- Detailed guidelines (specific principles) applicable during later
-  design activities
+-   Detailed guidelines (specific principles) applicable during later
+    design activities
 
 # Principles and patterns
 
@@ -56,93 +56,93 @@ interaction in certain circumstances
 
 Design principles can
 
-- Guide the designer during the design process
+-   Guide the designer during the design process
 
-- Can be used to evaluate and critique prototype design ideas
+-   Can be used to evaluate and critique prototype design ideas
 
 # Twelve principles for good human-centred interactive systems design
 
 Learnability - A system should not be difficult to learn how to use
 
-- Visibility
+-   Visibility
 
-  - Try to ensure that things are visible so that people can see
-    what functions are available and what the system is currently
-    doing
+    -   Try to ensure that things are visible so that people can see
+        what functions are available and what the system is currently
+        doing
 
-- Consistency
+-   Consistency
 
-  - Be consistent in the use of design features
+    -   Be consistent in the use of design features
 
-  - Be consistent with similar systems and standard ways of working
+    -   Be consistent with similar systems and standard ways of working
 
-  - This involves being consistent both internally to the system and
-    externally as the system relates to things outside of it
+    -   This involves being consistent both internally to the system and
+        externally as the system relates to things outside of it
 
-- Familiarity
+-   Familiarity
 
-  - Use language and symbols that the intended audience will be
-    familiar with
+    -   Use language and symbols that the intended audience will be
+        familiar with
 
-  - Where this is not possible because the concepts are quite
-    different from those people know about, use a metaphor
+    -   Where this is not possible because the concepts are quite
+        different from those people know about, use a metaphor
 
-- Affordance
+-   Affordance
 
-  - Design things so it is clear what they are for
+    -   Design things so it is clear what they are for
 
-  - Affordance refers to the properties that things have and how
-    these relate to how things could be used
+    -   Affordance refers to the properties that things have and how
+        these relate to how things could be used
 
-  - Affordances are culturally determined
+    -   Affordances are culturally determined
 
 Ease of use
 
-- Navigation
+-   Navigation
 
-  - Provide support to enable people to move around parts of the
-    system
+    -   Provide support to enable people to move around parts of the
+        system
 
-- Control
+-   Control
 
-  - Make it clear who or what is in control and allow people to take
-    control
+    -   Make it clear who or what is in control and allow people to take
+        control
 
-  - Control is enhanced if there is a clear, logical mapping between
-    controls and the effect they have
+    -   Control is enhanced if there is a clear, logical mapping between
+        controls and the effect they have
 
-- Feedback
+-   Feedback
 
-  - Rapidly feed back information from the system to people so that
-    they know what affect their actions had
+    -   Rapidly feed back information from the system to people so that
+        they know what affect their actions had
 
 Robustness
 
-- Recovery
+-   Recovery
 
-  - Enable recovery from actions, particularly mistakes and errors,
-    quickly and effectively
+    -   Enable recovery from actions, particularly mistakes and errors,
+        quickly and effectively
 
-- Constraints
+-   Constraints
 
-  - Provide constraints so that people do not try to do things that
-    are inappropriate
+    -   Provide constraints so that people do not try to do things that
+        are inappropriate
 
 Accommodation
 
-- Flexibility
+-   Flexibility
 
-  - Allow multiple ways of doing things to accommodate users with
-    different levels of experience and interest in the systems
+    -   Allow multiple ways of doing things to accommodate users with
+        different levels of experience and interest in the systems
 
-  - Provide people with the opportunity to change the way things
-    look or behave
+    -   Provide people with the opportunity to change the way things
+        look or behave
 
-- Style
+-   Style
 
-  - Designs should be stylish and attractive
+    -   Designs should be stylish and attractive
 
-- Conviviality
+-   Conviviality
 
-  - Interactive systems should be polite, friendly and generally
-    pleasant
+    -   Interactive systems should be polite, friendly and generally
+        pleasant

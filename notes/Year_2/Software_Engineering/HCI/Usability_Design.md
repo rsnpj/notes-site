@@ -21,16 +21,16 @@ design better products
 Not all the knowledge required for accurate behaviour has to be in the
 head. It can be distributed
 
-- Partly in the head
+-   Partly in the head
 
-- Partly in the world
+-   Partly in the world
 
 Placing knowledge in the world (as part of the design of objects)
 
-- Having knowledge in the world reduced the load on human memory
+-   Having knowledge in the world reduced the load on human memory
 
-- An example of the input format can be provided in the interface
-  "Please enter the date (yyyy/mm/dd)
+-   An example of the input format can be provided in the interface
+    "Please enter the date (yyyy/mm/dd)
 
 # Embedded Knowledge
 
@@ -55,13 +55,13 @@ failed
 For screen-based interfaces, the computer already has built in physical
 affordances
 
-- Screen affords touching
+-   Screen affords touching
 
-- Mouse affords pointing
+-   Mouse affords pointing
 
-- Mouse buttons afford clicking
+-   Mouse buttons afford clicking
 
-- Keyboard affords typing
+-   Keyboard affords typing
 
 Computer software/web pages can suggest on screen affordances by using
 raised buttons, icons in the shape of sliders or knobs
@@ -76,39 +76,39 @@ standards
 
 Examples:
 
-- Turn steering wheel clockwise to turn a car right
+-   Turn steering wheel clockwise to turn a car right
 
 # Constraints
 
 Constraints are physical, cultural or logical limits on the number of
 possibilities for an object’s use
 
-- Physical constraints such as pegs and holes limit possible
-  operations
+-   Physical constraints such as pegs and holes limit possible
+    operations
 
-- Cultural constraints rely upon accepted cultural conventions
+-   Cultural constraints rely upon accepted cultural conventions
 
 Where affordances suggest the range of possibilities, constraints limit
 the number of alternatives
 
 # Conventions
 
-Conventions are cultural constraints . They are initially arbitrary, but
+Conventions are cultural constraints. They are initially arbitrary, but
 evolve and become accepted over time. They can however still vary
-enormously across different cultures
+enormously across different cultures.
 
 # Conceptual Models
 
 Conceptual models are formed from:
 
-- Affordances
+-   Affordances
 
-- Mapping
+-   Mapping
 
-- Constraints
+-   Constraints
 
-- Familiarity with similar devices (transfer of previous experience)
+-   Familiarity with similar devices (transfer of previous experience)
 
-- Instructions
+-   Instructions
 
-- Interactions (trial and error)
+-   Interactions (trial and error)

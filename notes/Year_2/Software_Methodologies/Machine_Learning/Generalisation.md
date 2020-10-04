@@ -31,12 +31,12 @@ How do we know if our model is good?
 
     -   Asking: will our model do well on a new sample of data
 
-    -   Evaluate: get a new sample of data - call it the set set
+    -   Evaluate: get a new sample of data
 
     -   Good performance on the test set is a useful indicator of good
         performance
 
-Three basic assumptions in all of the above
+Three basic assumptions in all the above
 
 1.  We draw examples independently and identically at random from the
     distribution

@@ -85,7 +85,7 @@ Useful patterns describe or refer to:
 
 -   Other problems that rely upon this pattern
 
-Useful patterns also relates to other problems with similar contexts,
+Useful patterns also relate to other problems with similar contexts,
 problems or solutions
 
 # What is a pattern

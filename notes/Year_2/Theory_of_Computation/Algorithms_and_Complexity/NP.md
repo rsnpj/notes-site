@@ -157,4 +157,4 @@ If $P\neq NP$ then NP contains infinitely many (polynomial time) inequivalent pr
 
 <Problem name="Graph Isomorphism" instance="Two undirected graphs $G=(V_G,E_G)$ and $H=(V_H,E_H)$" question="Are G and H isomorphic, i.e., is there a bijection $f:V_G\rightarrow V_H$ such that $(u,v)\in E_G$ iff $(f(u),f(g))\in E_H$?"/>
 
--   Currently the main candidate for NP-intermediate
+-   Currently, the main candidate for NP-intermediate

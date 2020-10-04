@@ -5,7 +5,7 @@ lecturer: Daniel
 
 # Optimisation vs Decision Problems
 
--   A major variation of optimization problems: decision problems
+-   A major variation of optimisation problems: decision problems
 
 -   Answer is not a value but YES/NO
 
@@ -72,7 +72,7 @@ a) given instance belongs to the alphabet $\mathscr{L}(\Pi, e)$
 
 # Complexity measures
 
-Every decidable problems has a set of algorithms that solved it. The
+Every decidable problem has a set of algorithms that can solve it. The
 properties of this set of algorithms:
 
 -   The difficulty of constructing the algorithm
@@ -235,7 +235,7 @@ Hence the class P is the same for these encodings (and many others)
 # Proving a problem is in P
 
 -   The class P is said to be robust - it doesn’t depend on the exact
-    details of the computational model or encoding so we don’t need to
+    details of the computational model or encoding, so we don’t need to
     specify all the details of the machine model or even the encoding
 
 -   The most direct way to show that a problem is in P is to give a
@@ -376,7 +376,7 @@ We can reduce 2-Colourability to 2-Satisfiability
     $(\lnot x_i \lor \lnot x_j)$
 
 This translation of a 2-colourability problem to a 2-satisfiability
-problem is computable in polynomial time. now we check if it satisfies
+problem is computable in polynomial time. Now we check if it satisfies
 the reducibility condition:
 
 -   If the graph is 2-colourable, use 2-colouring to assign truth values

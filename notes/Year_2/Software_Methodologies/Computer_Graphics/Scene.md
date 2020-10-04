@@ -63,7 +63,7 @@ viewport, typically referring to the canvas
 ![Viewport Transform](/img/Year_2/Software_Methodologies/Computer_Graphics/Scene/Viewport_Transform.webp)
 
 **NDC** - Normalized Device Coordinates. Its x and y coordinates
-represent the location of your vertices on a normalised 2D screen space
+represent the location of your vertices on a normalized 2D screen space
 
 # Model-View-Projection Transformation
 

@@ -3,7 +3,6 @@ title: NP-Completeness
 lecturer: Daniel
 ---
 
-
 # Polynomial time reductions
 
 Problem X polynomially reduces to problem Y if an arbitrary instance of
@@ -202,4 +201,4 @@ mapping c as follows
         Then we can colour the five C-vertices with colours 1,2,3 in
         such a way that no two adjacent vertices are coloured alike
 
--   From above we conclude that c is a 3-colouring of $G_f$
+-   From above, we conclude that c is a 3-colouring of $G_f$

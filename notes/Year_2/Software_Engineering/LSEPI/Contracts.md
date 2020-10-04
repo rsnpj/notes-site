@@ -109,7 +109,6 @@ persons) that can be enforced in a court of law
     -   states precisely _what_ is to be provided
 
         -   source code / documentation / user training / software tools
-            …
 
     -   additional stipulations
 
@@ -363,7 +362,7 @@ Supplier is led, unwittingly, to infringe IP of third party
 
     -   Run software on server, limiting the maximum number of users
 
-    -   Use unlimited number of copies
+    -   Use an unlimited number of copies
 
 -   Vendors concern:
 

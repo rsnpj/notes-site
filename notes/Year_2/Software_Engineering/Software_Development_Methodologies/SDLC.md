@@ -161,7 +161,7 @@ been met
 -   Roles:
 
     -   **Solution Delivery Team** – Prepares all solution documentation
-        and manuals for the maintenance group.  The solution delivery
+        and manuals for the maintenance group. The solution delivery
         team will supply any requested training to help maintenance team
         technicians learn the solution’s behaviours
 

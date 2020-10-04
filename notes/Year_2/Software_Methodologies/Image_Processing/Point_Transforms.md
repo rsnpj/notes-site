@@ -6,7 +6,8 @@ lecturer: Ioannis
 # Matrices
 
 If our image is a matrix then can process (transform) an image by
-manipulating the corresponding matrix\
+manipulating the corresponding matrix
+
 We can process (transform) images by manipulating the corresponding
 matrices
 

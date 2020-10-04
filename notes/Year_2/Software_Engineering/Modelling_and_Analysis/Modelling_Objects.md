@@ -31,7 +31,7 @@ standard for describing object oriented systems
 
 Essentially it draws together (unifies) three earlier modelling forms,
 and does not do it particularly well. Empirical evidence suggests that
-is is not very widely used for developing models, although sometimes it
+it is not very widely used for developing models, although sometimes it
 is used for formalising them.
 
 However, it has extensive documentation and tool support, so hard to
@@ -188,7 +188,7 @@ Analysis usually addresses such characteristics as:
 
 -   Dependability
 
-## How do we a analyse such models?
+## How do we analyse such models?
 
 Various techniques, just mention two here
 

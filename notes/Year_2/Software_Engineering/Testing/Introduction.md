@@ -38,7 +38,7 @@ providing confidence about software
 -   In some ways it is a bit like a game, you are pitting your wits
     against the designer of the software
 
--   The job of the tester is to "think outside of the box" and try to
+-   The job of the tester is to "think outside the box" and try to
     avoid making the same (possibly wrong) assumptions that the
     developer might have done
 
@@ -75,7 +75,7 @@ The predictions are produced by the test oracle, a mythical being that
 So designing test cases involves specifying both input and output
 values/states. For more complex stages, such as acceptance testing, the
 oracle may actually take the form of a set of expert users who "judge"
-whether or not the outputs are acceptable.
+whether the outputs are acceptable.
 
 # Testing in the Life Cycle
 

@@ -106,7 +106,7 @@ Need to be performed at every stage during the (requirements) process
     -   Checking that the defined system requirement will meet the user
         requirements under the assumptions of the domain/environment
 
-    -   Checking conformity to well-formedness rules, standards ..
+    -   Checking conformity to well-formedness rules, standards…
 
 # Requirements checking
 
@@ -127,7 +127,7 @@ Need to be performed at every stage during the (requirements) process
 
 # How to make the requirements testable
 
-Each requirement carries a **fit** criteria
+Each requirement carries a fit criterion
 
 The fit criteria are a benchmark, or goal, that the testing activity
 used to determine whether the eventual solution satisfies the
@@ -278,7 +278,7 @@ later...
 -   Non-functional (e.g. reliability) or exclusive (e.g. define what
     should not happen) requirements are harder to validate with testing
 
--   Each requirements test case must be traced to its requirements
+-   Each requirement test case must be traced to its requirements
 
 -   Inventing requirements tests is an effective validation techniques
 
@@ -455,7 +455,7 @@ The following functions may be provided through tools:
 
 -   **Modifiable** - the requirements document should have a coherent
     and easy-to-use organisation, with a table of contents, an index and
-    explicit cross referencing. Statements should be non-redundant where
+    explicit cross-referencing. Statements should be non-redundant where
     possible
 
 -   **Correct** - every requirement listed within the document will be
@@ -479,7 +479,7 @@ The following functions may be provided through tools:
 
 Invent a standard format and use it for all requirements
 
-Use language in a consistent way. Use shall for mandatory requirements,
+Use language consistently. Use shall for mandatory requirements,
 should be for desirable requirements
 
 Use text highlighting to identify key parts of the requirements
@@ -492,7 +492,7 @@ To ensure requirements are traceable they must have
 
 -   An identifier of the type of requirement or constraint
 
--   Reference to all of the business events and use cases that contain
+-   Reference to all the business events and use cases that contain
     the requirement
 
 -   References to dependent requirements that might use the same matter,

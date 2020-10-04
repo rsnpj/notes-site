@@ -95,11 +95,11 @@ The most crucial observation to make about CSPs - commutativity
 -   In order to come up with an assignment it does not matter in which
     order we choose to assign values to variables
 
-Hence in every CSP search algorithm we expand a node of the search tree
+Hence, in every CSP search algorithm we expand a node of the search tree
 by considering possible assignments for only a single variable - it’s up
 to us to choose which variable
 
-Consequently we no longer speak of "the" search tree with CSPs but talk
+Consequently, we no longer speak of "the" search tree with CSPs but talk
 of "a" search tree, for we will build different search trees depending
 on which variable we choose to expand a node with respect to
 
@@ -114,7 +114,7 @@ We also have leeway in the order in which we choose to assign variables
 
 In reality CSPs can be much more general e.g., domains of values need
 not be finite nor take discrete values - many real world problems have
-as their domains the natural numbers or real numbers\
+as their domains the natural numbers or real numbers
 
 In the case of infinite domains of values, constraints might not be
 finitely describable, they might contain an infinite set of allowable

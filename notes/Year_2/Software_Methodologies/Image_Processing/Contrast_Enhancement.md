@@ -21,7 +21,7 @@ Also known as intensity transform functions
 
 # Image enhancement
 
-Goal: make the image look better so we can view and process the visual
+Goal: make the image look better, so we can view and process the visual
 information with greater clarity
 
 Image enhancement is subjective. It depends on

@@ -107,7 +107,7 @@ Hence brute force has an exponential running time
 
 # Applying dynamic programming
 
-To use dynamic programming, we follow a four step sequence:
+To use dynamic programming, we follow a four-step sequence:
 
 1.  Characterise the structure of an optimal solution
 

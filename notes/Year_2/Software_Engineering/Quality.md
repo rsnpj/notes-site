@@ -8,14 +8,14 @@ in a software product
 
 Two typical concerns:
 
-- At the organisational level, quality management is concerned with
-  establishing a framework of organisational processes and standards
-  that will lead to high quality software
+-   At the organisational level, quality management is concerned with
+    establishing a framework of organisational processes and standards
+    that will lead to high quality software
 
-- At the project level, quality management involves establishing a
-  quality plan for a project which sets out the quality goals for the
-  project and define what processes and standards are to be used; also
-  checking that these planned processes have been followed
+-   At the project level, quality management involves establishing a
+    quality plan for a project which sets out the quality goals for the
+    project and define what processes and standards are to be used; also
+    checking that these planned processes have been followed
 
 # Quality management activities
 
@@ -25,7 +25,7 @@ development process
 The quality management process checks the project deliverables to ensure
 that they are consistent with organisational standards and goals
 
-The quality team should be independent from the development team so that
+The quality team should be independent of the development team so that
 they can take an objective view of the software. This allows them to
 report on software quality without being influenced by software
 development issues
@@ -47,29 +47,29 @@ specification
 
 This is a problem for software systems:
 
-- There is a tension between customer quality requirements and
-  developer quality requirements
+-   There is a tension between customer quality requirements and
+    developer quality requirements
 
-- Some quality requirements are difficult to specify in an unambiguous
-  way
+-   Some quality requirements are difficult to specify in an unambiguous
+    way
 
-- Software specifications are usually incomplete and often
-  inconsistent
+-   Software specifications are usually incomplete and often
+    inconsistent
 
 ## Software fitness for purpose
 
-- Have programming and documentation standards been followed in the
-  development process?
+-   Have programming and documentation standards been followed in the
+    development process?
 
-- Has the software been properly tested
+-   Has the software been properly tested
 
-- Is the software sufficiently dependable to be put into use
+-   Is the software sufficiently dependable to be put into use
 
-- Is the performance of the software acceptable for normal use
+-   Is the performance of the software acceptable for normal use
 
-- Is the software usable
+-   Is the software usable
 
-- Is the software well structured and understandable
+-   Is the software well-structured and understandable
 
 # Reviews and inspections
 
@@ -78,11 +78,11 @@ deliverables: documents to find potential problems
 
 There are different types of review with different objectives:
 
-- Inspections for defect removal (product)
+-   Inspections for defect removal (product)
 
-- Reviews for progress assessment (product and process)
+-   Reviews for progress assessment (product and process)
 
-- Quality reviews (product and standards)
+-   Quality reviews (product and standards)
 
 Software or documents may be "signed off" at a review which signifies
 that progress to the next development stage has been approved by
@@ -128,11 +128,11 @@ life cycle
 
 Types of costs:
 
-- Facilities: hardware, space, furniture, telephone etc
+-   Facilities: hardware, space, furniture, telephone etc
 
-- Software tools for designing software
+-   Software tools for designing software
 
-- Staff (effort): the biggest component of cost
+-   Staff (effort): the biggest component of cost
 
 ## Estimation techniques
 
@@ -152,19 +152,19 @@ having a group consensus
 
 ### Top down
 
-- Estimate overall cost from global properties of the product
+-   Estimate overall cost from global properties of the product
 
-- Split up among various components
+-   Split up among various components
 
-- Disadvantage: low level tech problems not identified
+-   Disadvantage: low level tech problems not identified
 
 ### Bottom up
 
-- Estimate made for each component by the developer
+-   Estimate made for each component by the developer
 
-- Costs summmed
+-   Costs summed
 
-- Disadvantage: can look over many system level costs
+-   Disadvantage: can look over many system level costs
 
 ### Algorithmic cost modelling
 
@@ -175,51 +175,51 @@ approach to software development
 
 An example of this is CoCoMo II, this algorithmic model uses:
 
-- Scale drivers (on a 5 point scale) describe your project and
-  determine the exponent in the effort equation based primarily on the
-  software project size
+-   Scale drivers (on a 5 point scale) describe your project and
+    determine the exponent in the effort equation based primarily on the
+    software project size
 
-- Cost drivers (15 of these) assess the project development
-  environment and team
+-   Cost drivers (15 of these) assess the project development
+    environment and team
 
-- Scale drivers:
+-   Scale drivers:
 
-  - **Precedentedness** - is the project comparable to projects your
-    team has done before
+    -   **Precedentedness** - is the project comparable to projects your
+        team has done before
 
-  - **Dev flexibility** - are your reqs flexible, or must you meet
-    them all?
+    -   **Dev flexibility** - are your reqs flexible, or must you meet
+        them all?
 
-  - **Architecture/risk resolution** - to what degree have you
-    already defined the architecture
+    -   **Architecture/risk resolution** - to what degree have you
+        already defined the architecture
 
-  - **Team cohesion** - how would you describe the relationships
-    among the stakeholders?
+    -   **Team cohesion** - how would you describe the relationships
+        among the stakeholders?
 
-  - **Process maturity**
+    -   **Process maturity**
 
 ## Causes of inaccurate estimates
 
-- Frequent request for change by users
+-   Frequent request for change by users
 
-- Overlooked tasks
+-   Overlooked tasks
 
-- User’s lack of understanding of the requirements
+-   User’s lack of understanding of the requirements
 
-- Insufficient analysis when developing estimates
+-   Insufficient analysis when developing estimates
 
-- Lack of coordination of system development, technical services,
-  operations, data administration and other functions during
-  development
+-   Lack of coordination of system development, technical services,
+    operations, data administration and other functions during
+    development
 
-- Lack of an adequate method or guidelines for estimating
+-   Lack of an adequate method or guidelines for estimating
 
-- Complexity of the proposed application system
+-   Complexity of the proposed application system
 
-- Capabilities of the project team members/number of project team
-  members
+-   Capabilities of the project team members/number of project team
+    members
 
-- Project team’s experience with the application, the programming
-  language and hardware
+-   Project team’s experience with the application, the programming
+    language and hardware
 
-- Extent of programming and documentation standards
+-   Extent of programming and documentation standards

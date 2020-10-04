@@ -6,7 +6,7 @@ lecturer: David
 # The evidence based paradigm
 
 This seeks to employ secondary studies as the tool for finding, judging
-and synthesizing the outcomes of all relevant empirical studies in order
+and synthesising the outcomes of all relevant empirical studies in order
 to draw conclusions.
 
 # What is evidence?
@@ -22,7 +22,7 @@ identifying well-founded evidence by using a secondary study requires
 -   Carefully defined procedures for deciding whether to include or
     exclude each study that is found
 
-Aim is to minimise bias and to emphasis the objectivity of the
+Aim is to minimise bias and to emphasise the objectivity of the
 procedures employed
 
 # Secondary studies

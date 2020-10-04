@@ -193,7 +193,7 @@ Control issues are classified in terms of:
 
 -   Synchronicity (interdependence of actions and states)
 
--   Binding time (when is the identify of a partner established)
+-   Binding time (when is the identity of a partner established)
 
 Data issues are classified using:
 
@@ -221,7 +221,7 @@ Mismatched assumptions a reusable part makes about the system it is to be a part
 
 Basic cause was in the detail (of components, connectors and context).
 Each element had a slightly different model of how control and event
-passing was organised, reinforcing the point that all of the different
+passing was organised, reinforcing the point that all the different
 aspects of architectural style are relevant
 
 # Security

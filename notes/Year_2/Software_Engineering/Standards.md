@@ -31,7 +31,7 @@ lecturer: Craig
 
 -   Provide continuity
 
-    -   Record of decision making process
+    -   Record of decision-making process
 
     -   Organisational memory
 
@@ -129,7 +129,7 @@ regulations
 
     -   Activities and tasks
 
-    -   Tailored for any organization or project (inc. SME et al)
+    -   Tailored for any organisation or project (inc. SME et al)
 
     -   An ‘inventory’ of processes from which to choose
 

@@ -154,7 +154,7 @@ Processes are measured by collecting detailed data on the process and
 their quality. Statistical and other quantitative techniques used and
 therefore quantitatively predictable.
 
-These measures are used to support fact based decision making in the
+These measures are used to support fact based decision-making in the
 future
 
 Quality and process performance is understood in statistical terms and

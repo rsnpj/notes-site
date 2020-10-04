@@ -114,8 +114,7 @@ also accurate estimates for simplified versions of the problem
 -   Then $h_1$ would be the optimal number of steps to a goal node
 
 -   Suppose that the rules of the problem were changed so that a file
-    could move one cell up, down, left or right, regardless as to
-    whether the adjacent cell were vacant
+    could move one cell up, down, left or right, regardless of if the adjacent cell were vacant
 
 -   Then $h_2$ would be the optimal number of steps to a goal node
 

@@ -21,7 +21,7 @@ Comprises a set of connected polygons to represent an object
 
 GPU
 
--   Typically comprises of hundreds to thousands of processors
+-   Typically, consists of hundreds to thousands of processors
 
 -   Process graphics primitives in parallel
 

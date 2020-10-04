@@ -22,10 +22,10 @@ Intuitively, the mechanics of convolution work as follows
 
 For each pixel of the input image $I_{input}$
 
-- Place the centre of the mast M over the pixel $I_{input}(i,j)$
+-   Place the centre of the mast M over the pixel $I_{input}(i,j)$
 
-- Do the component-wise multiplication of corresponding elements of
-  the mask and the neighbourhood of $I_{input} (i,j)$
+-   Do the component-wise multiplication of corresponding elements of
+    the mask and the neighbourhood of $I_{input} (i,j)$
 
 The matrix should be updated only after all responses have been
 computed
@@ -76,7 +76,7 @@ In image processing we often require the elements of a mask to sum up to
 1, in which case convolution does not change the average intensity of
 the image
 
-The gaussian filter gives more weight to the centre of the mask and,
+The Gaussian filter gives more weight to the centre of the mask and,
 gradually, less weight to the values away from the centre
 
 The Gaussian function is positive everywhere
@@ -140,13 +140,13 @@ exponential function on the squared distance between neighbourhoods
 
 Performance:
 
-- Good on Gaussian noise removal
+-   Good on Gaussian noise removal
 
-- Dependent on neighbourhood size $N\times N$
+-   Dependent on neighbourhood size $N\times N$
 
-- Slow, but several optimisations exist
+-   Slow, but several optimisations exist
 
-- Easily parallelised
+-   Easily parallelised
 
 # Laplacian filtering
 
@@ -165,9 +165,9 @@ $$
 \begin{array}{ccccccc}{0} & {1} & {0} & {} & {1} & {1} & {1} \\ {1} & {-4} & {1} & {\text { or }} & {1} & {-8} & {1} \\ {0} & {1} & {0} & {} & {1} & {1} & {1}\end{array}
 $$
 
-Notice that both mass have some negative elements and they sum up to 0\
-\
-When we discrete a continuous function, derivatives and the second order
+Notice that both mass have some negative elements, and they sum up to 0
+
+When we make a continuous function discrete, derivatives and the second order
 derivatives become second order differences (i.e. differences of
 differences)
 
@@ -247,10 +247,10 @@ Gaussian (LoG))
 
 Image boundaries - what do we do here?
 
-- Extrapolate values from inside the image (one of the best options)
+-   Extrapolate values from inside the image (one of the best options)
 
-- Or, use padding with zeros or any other value (often visually poor
-  results)
+-   Or, use padding with zeros or any other value (often visually poor
+    results)
 
-- Or, do not perform convolution in these regions (the resulting
-  convolved image will be smaller than the original)
+-   Or, do not perform convolution in these regions (the resulting
+    convolved image will be smaller than the original)

@@ -5,7 +5,7 @@ lecturer: Freddie
 
 # Rendering in Computer Graphics
 
-Rendering pipeline comprises of operations converting 3D geometry into a
+Rendering pipeline consists of operations converting 3D geometry into a
 2D pixel representation for display
 
 Two types:

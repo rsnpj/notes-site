@@ -141,7 +141,7 @@ Used to collect information from a large group of people in a standard
 and systematic way, so that we can seek patterns in the data and
 generalise what these imply for a wider population than our sample
 
-Typically used for two purposes:
+Typically, used for two purposes:
 
 -   **Experimental**: To assess the impact of some intervention
 
@@ -183,10 +183,10 @@ Selection is made through use of a sampling technique, this can be:
 -   Small sample sizes make it difficult to get results with a high
     confidence level
 
--   It iq quite challenging to design questions that are unbiased and
+-   It is quite challenging to design questions that are unbiased and
     that allow users to answer them reliably
 
--   In a well designed survey the questions will reinforce each other so
+-   In a well-designed survey the questions will reinforce each other so
     that during analysis we can ensure that participants are giving
     consistent answers
 

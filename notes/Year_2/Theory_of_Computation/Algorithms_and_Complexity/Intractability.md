@@ -39,7 +39,7 @@ Hence 3 colouring is trivial for triangle free planar graphs
 
 # Using Heuristics
 
-A well know heuristic for colouring is first fit
+A well known heuristic for colouring is first fit
 
 -   Order the vertices of an n-vertex graph G as $v_1,...,v_n$
 

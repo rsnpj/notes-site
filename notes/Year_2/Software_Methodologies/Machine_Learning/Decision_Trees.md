@@ -18,7 +18,7 @@ The lower the value the better
 
 From a raw table of data to a decision tree:
 
-1.  Calculate all of the Gini Impurity values
+1.  Calculate all the Gini Impurity values
 
 2.  If a node itself has the lowest value, leave it as a Leaf node,
     don’t further separate it

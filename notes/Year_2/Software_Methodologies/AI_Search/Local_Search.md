@@ -109,7 +109,7 @@ of exactly where each queen is currently located
 
     -   so each state has $8\times 7=56$ successors
 
--   The objective function f(to be minimized) is the number of pairs of
+-   The objective function f(to be minimised) is the number of pairs of
     queens that are mutually attacking each other
 
 # Exiting local maxima/minima - simulated annealing

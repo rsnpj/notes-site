@@ -5,21 +5,21 @@ lecturer: Craig
 
 Poor leaders:
 
-- Lack of presence
+-   Lack of presence
 
-- Lack of direction
+-   Lack of direction
 
-- Lack of transparency
+-   Lack of transparency
 
-- Lack of authority
+-   Lack of authority
 
-- Lack of listening skills
+-   Lack of listening skills
 
-- Lack of faith
+-   Lack of faith
 
 How to build a positive team:
 
-1.  Discuss ’success’ - what does it mean? how would it feel? what would
+1.  Discuss ’success’ - what does it mean? how would it feel? What would
     it look like?
 
 2.  Set goals - Work with the team to identify individual and team goals
@@ -63,20 +63,20 @@ How to build a positive team:
 
 Belbin roles
 
-- Resource investigator
+-   Resource investigator
 
-- Monitor evaluator
+-   Monitor evaluator
 
-- Specialist
+-   Specialist
 
-- Plant (innovator)
+-   Plant (innovator)
 
-- Implementer
+-   Implementer
 
-- Completer finisher
+-   Completer finisher
 
-- Shaper
+-   Shaper
 
-- Coordinator
+-   Coordinator
 
-- Teamworker
+-   Teamworker

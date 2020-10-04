@@ -35,7 +35,7 @@ Machine learning is the study of algorithms that:
 
 -   With experience E
 
-A well defined learning task is given by `<P,T,E>`
+A well-defined learning task is given by `<P,T,E>`
 
 # Supervised Learning (regression)
 

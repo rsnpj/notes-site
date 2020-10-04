@@ -7,14 +7,14 @@ lecturer: Craig
 
 Prototypes can come in all shapes and forms
 
-- Early in the development process they may be made of paper, post-its
-  or cardboard
+-   Early in the development process they may be made of paper, post-its
+    or cardboard
 
-- Later they may be screen mock-ups or products with restricted
-  functionality
+-   Later they may be screen mock-ups or products with restricted
+    functionality
 
-- Finally they may be more polished pieces of software, metal or
-  plastic that represent the final product
+-   Finally they may be more polished pieces of software, metal or
+    plastic that represent the final product
 
 <Definition name="Prototyping">
 The process of building the interactive versions of the proposed product
@@ -22,11 +22,11 @@ The process of building the interactive versions of the proposed product
 
 A prototype allows users to
 
-- Interact with envisioned product
+-   Interact with envisioned product
 
-- Gain experience of using it in a realistic setting
+-   Gain experience of using it in a realistic setting
 
-- Explore imagined uses
+-   Explore imagined uses
 
 A prototype is a limited representation that allows interaction and
 helps users explore its suitability
@@ -35,60 +35,60 @@ helps users explore its suitability
 
 An interaction design it can be (among other things):
 
-- A series of screen sketches
+-   A series of screen sketches
 
-- A storyboard
+-   A storyboard
 
-- A powerpoint slide show
+-   A powerpoint slide show
 
-- A video simulating the use of a system
+-   A video simulating the use of a system
 
-- A lump of wood
+-   A lump of wood
 
-- A cardboard mock-up
+-   A cardboard mock-up
 
-- A piece of software with limited functionality
+-   A piece of software with limited functionality
 
 ## What to prototype
 
 Technical issues:
 
-- How feasible is the design
+-   How feasible is the design
 
-- If you can’t make a mock up what hope is there for the full product
+-   If you can’t make a mock up what hope is there for the full product
 
 Screen layouts and information display
 
-- What will the screens look like?
+-   What will the screens look like?
 
-- How will information be displayed?
+-   How will information be displayed?
 
-- How does this affect the proposed interaction?
+-   How does this affect the proposed interaction?
 
 Difficult, controversial, critical areas
 
-- Remove ambiguity from the design
+-   Remove ambiguity from the design
 
-- Clarify vague requirements
+-   Clarify vague requirements
 
-- Force the developers to make concrete design decisions and see how
-  they work
+-   Force the developers to make concrete design decisions and see how
+    they work
 
-- Can be difficult to get users to articulate exactly what they want
+-   Can be difficult to get users to articulate exactly what they want
 
-- When presented with examples Stakeholders can see, hold, interact
-  with a prototype more easily than a document or drawing
+-   When presented with examples Stakeholders can see, hold, interact
+    with a prototype more easily than a document or drawing
 
-- Allows developers to verify requirements
+-   Allows developers to verify requirements
 
-- Prototypes answer questions, and support designers in choosing
-  between alternatives
+-   Prototypes answer questions, and support designers in choosing
+    between alternatives
 
-- Team members can communicate effectively
+-   Team members can communicate effectively
 
-- It encourages reflection: very important aspect of design
+-   It encourages reflection: very important aspect of design
 
-- You can test out ideas yourself
+-   You can test out ideas yourself
 
 ## Wireframe vs Mockup vs Prototype
 
@@ -106,11 +106,11 @@ Semi functional and generally give the client the ability to click around and si
 
 ## Prototyping process
 
-- Very early in the process, you should develop paper prototypes-
-  wireframes of screen designs - and walk through this with end-users
+-   Very early in the process, you should develop paper prototypes-
+    wireframes of screen designs - and walk through this with end-users
 
-- You then refine your design and develop increasingly sophisticated
-  automated prototypes, then make them available to users for testing
+-   You then refine your design and develop increasingly sophisticated
+    automated prototypes, then make them available to users for testing
 
 ## Low-fidelity Prototyping
 
@@ -118,11 +118,11 @@ Uses a medium which is unlike the final medium
 
 Is quick, cheap and easily changes
 
-- Supports the exploration of alternative designs and ideas
+-   Supports the exploration of alternative designs and ideas
 
-- Important for early stage of design
+-   Important for early stage of design
 
-- They are exploratory only
+-   They are exploratory only
 
 ## Storyboards
 
@@ -132,177 +132,176 @@ play
 It is a series of sketches showing how a user might progress through a
 task using the device
 
-- A series of sketched screens for a GUI interface
+-   A series of sketched screens for a GUI interface
 
-- A series of scene sketches showing the user performing an activity
+-   A series of scene sketches showing the user performing an activity
 
-- Used early in design
+-   Used early in design
 
 ## High-fidelity programming
 
-- Uses materials that you would expect to be in the final product
+-   Uses materials that you would expect to be in the final product
 
-- Prototype looks more like the final system than a low-fidelity
-  version
+-   Prototype looks more like the final system than a low-fidelity
+    version
 
-- Danger that users think they have a full system - need to manage
-  user expectations
+-   Danger that users think they have a full system - need to manage
+    user expectations
 
 Problems with high fidelity prototypes
 
-- They take too long to build
+-   They take too long to build
 
-- Reviewers and testers tend to comment on superficial aspects rather
-  than content
+-   Reviewers and testers tend to comment on superficial aspects rather
+    than content
 
-- Developers are reluctant to change something they have crafted for
-  hours
+-   Developers are reluctant to change something they have crafted for
+    hours
 
-- A software prototype can set expectations too high
+-   A software prototype can set expectations too high
 
-- Just one bug in a high-fidelity prototype can bring testing to a
-  fault
+-   Just one bug in a high-fidelity prototype can bring testing to a
+    fault
 
 ## Compromises in prototyping
 
-- All prototypes involve compromises
+-   All prototypes involve compromises
 
-- For software based prototyping
+-   For software based prototyping
 
-  - Slow response
+    -   Slow response
 
-  - Sketchy icons
+    -   Sketchy icons
 
-  - Limited functionality
+    -   Limited functionality
 
-- Two common types of compromise
+-   Two common types of compromise
 
-  - Horizontal - lots of functions, little detail
+    -   Horizontal - lots of functions, little detail
 
-  - Vertical - Lots of detail, few functions
+    -   Vertical - Lots of detail, few functions
 
-- Compromises in prototypes mustn’t be ignored, product still needs to
-  be produced
+-   Compromises in prototypes mustn’t be ignored, product still needs to
+    be produced
 
 ## Management of problems for prototyping
 
 Time
 
-- Building prototypes take time
+-   Building prototypes take time
 
-- Needs to be fast - rapid prototyping. Careful this does not lead to
-  rushed evaluation and erroneous results
+-   Needs to be fast - rapid prototyping. Careful this does not lead to
+    rushed evaluation and erroneous results
 
 Planning
 
-- Hard to adequately and cost a design involving prototyping
+-   Hard to adequately and cost a design involving prototyping
 
 Non functional requirements
 
-- Such features sacrificed in prototypes
+-   Such features sacrificed in prototypes
 
-- May be critical to product acceptance
+-   May be critical to product acceptance
 
 Contracts
 
-- Design often bound by contractual agreement on technical and
-  managerial issues
+-   Design often bound by contractual agreement on technical and
+    managerial issues
 
-- Prototypes are quick to change but this needs to be reflected in the
-  requirements document which serves as the binding development
-  agreement
+-   Prototypes are quick to change but this needs to be reflected in the
+    requirements document which serves as the binding development
+    agreement
 
 ## Key points
 
-- Prototyping is the process of building interactions of a proposed
-  product
+-   Prototyping is the process of building interactions of a proposed
+    product
 
-- Used to gather formative evaluation results and feedback from users
+-   Used to gather formative evaluation results and feedback from users
 
-- Low fidelity prototypes are cheap and quick to develop and should be
-  used early in the design for formalise requirements
+-   Low fidelity prototypes are cheap and quick to develop and should be
+    used early in the design for formalise requirements
 
-- High fidelity prototypes provide the look and feel of the final
-  product and serve as a living specification
+-   High fidelity prototypes provide the look and feel of the final
+    product and serve as a living specification
 
-- Need early consideration of the nature of the prototype
+-   Need early consideration of the nature of the prototype
 
-- Prototyping can be difficult to plan and cost and we must be aware
-  of the non-functional components that may be missing
+-   Prototyping can be difficult to plan and cost, and we must be aware
+    of the non-functional components that may be missing
 
 # Evaluation
 
 ## Goals of evaluation
 
-- To assess the extent of the systems functionality
+-   To assess the extent of the systems functionality
 
-- To assess the effect of the interface on the user
+-   To assess the effect of the interface on the user
 
-- To identify any specific problems with the system
+-   To identify any specific problems with the system
 
 ## Why, what, where and when to evaluate
 
-- Why: to check users’ requirements and that users can use the product
-  and they like it
+-   Why: to check users’ requirements and that users can use the product, and they like it
 
-- What: a conceptual model, early prototypes of a new system and
-  later, more complete prototypes
+-   What: a conceptual model, early prototypes of a new system and
+    later, more complete prototypes
 
-- Where: in natural and laboratory settings
+-   Where: in natural and laboratory settings
 
-- When: Throughout design; finished products can be evaluated to
-  collect information and to inform new products
+-   When: Throughout design; finished products can be evaluated to
+    collect information and to inform new products
 
 ## Types of evaluation
 
-- **Controlled settings** involving users
+-   **Controlled settings** involving users
 
-  - Usability testing
+    -   Usability testing
 
-  - Living labs
+    -   Living labs
 
-- **Natural settings** involving users
+-   **Natural settings** involving users
 
-  - Evaluate people in natural settings
+    -   Evaluate people in natural settings
 
-  - Goal to be unobtrustive
+    -   Goal to be unobtrustive
 
-- **Any settings** not involving users
+-   **Any settings** not involving users
 
-  - Researcher has to imagine or model how an interaction will take
-    place
+    -   Researcher has to imagine or model how an interaction will take
+        place
 
-  - Inspection methods used to predict user behaviours and identify
-    usability problems
+    -   Inspection methods used to predict user behaviours and identify
+        usability problems
 
 ### Inspection methods
 
-- Heuristic evaluation
+-   Heuristic evaluation
 
-  - Guides design or critique a decision. Critique based on
-    principles and guidelines
+    -   Guides design or critique a decision. Critique based on
+        principles and guidelines
 
-- Cognitive walkthrough
+-   Cognitive walkthrough
 
-  - Analysis of action sequences the user interface requires the
-    user to perform
+    -   Analysis of action sequences the user interface requires the
+        user to perform
 
-- Analytics
+-   Analytics
 
-  - Measurement, collection, analysis and reporting of internet data
+    -   Measurement, collection, analysis and reporting of internet data
 
 ## Key points
 
-- Evaluation and design are closely integrated in user-centred design
+-   Evaluation and design are closely integrated in user-centred design
 
-- Some of the same data gathering methods are used in evaluation as
-  for establishing requirements but they are used differently
+-   Some of the same data gathering methods are used in evaluation as
+    for establishing requirements, but they are used differently
 
-- Three types of evaluation. Controlled - laboratory based with users,
-  Less controlled - in the field with users, studies that do not
-  involve users
+-   Three types of evaluation. Controlled - laboratory based with users,
+    Less controlled - in the field with users, studies that do not
+    involve users
 
-- Usability testing and experiments enable they evaluator to have high
-  level of control over what gets tested, whereas evaluations
-  typically impose little or no control on participants in field
-  studies
+-   Usability testing and experiments enable the evaluator to have high
+    level of control over what gets tested, whereas evaluations
+    typically impose little or no control on participants in field
+    studies

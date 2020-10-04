@@ -56,22 +56,22 @@ Relate to things we can measure and they may matter to us, but we can't directly
 
 # Why are metrics important
 
-- For any software project, metrics an provide the means of control,
-  to monitor how well our estimated values for such attributes as
-  size, quality, dependencies etc. match the actual values that we
-  measure
+-   For any software project, metrics provide the means of control,
+    to monitor how well our estimated values for such attributes as
+    size, quality, dependencies etc. match the actual values that we
+    measure
 
-- In turn, making estimates also requires that we use such measures,
-  because ultimately we need to determine how much effort a project
-  needs and what levels of skill, and when it might be delivered
+-   In turn, making estimates also requires that we use such measures,
+    because ultimately we need to determine how much effort a project
+    needs and what levels of skill, and when it might be delivered
 
 # Complexity
 
-- Complexity is not an attribute in itself so must have a clear
-  context of what attributes, or set of attributes we are referring to
+-   Complexity is not an attribute in itself so must have a clear
+    context of what attributes, or set of attributes we are referring to
 
-- Complexity is a property of attributes such as control flow,
-  information flow, coupling etc
+-   Complexity is a property of attributes such as control flow,
+    information flow, coupling etc
 
-- Therefore need some idea of what threshold value will be used to
-  determine that something is considered as being complex.
+-   Therefore need some idea of what threshold value will be used to
+    determine that something is considered as being complex.

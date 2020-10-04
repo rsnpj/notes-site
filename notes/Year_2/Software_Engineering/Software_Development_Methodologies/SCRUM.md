@@ -13,9 +13,8 @@ experience, and make the appropriate adjustments
 
 When to use
 
--   SCRUM is best suited in the base where a cross functional team is
-    working in a product development setting where there is a non
-    trivial amount of work that lends itself to being split into more
+-   SCRUM is best suited in the base where a cross-functional team is
+    working in a product development setting where there is a non-trivial amount of work that lends itself to being split into more
     than one 1-4 week iteration
 
 # Roles

@@ -156,7 +156,7 @@ Patterns need to be used with care:
 
 -   Avoid using the singleton pattern (ensure a class has only one
     instance, and provide a global point of access to it) - can be
-    mis-used to provide persistent data in a system
+    misused to provide persistent data in a system
 
 Hence patterns may be more use in identifying the form that a design
 solution might take, then in providing details of how it is to be
