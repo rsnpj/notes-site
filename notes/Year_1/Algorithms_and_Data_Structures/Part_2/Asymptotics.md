@@ -9,9 +9,7 @@ The more logs, the slower it grows
 Large constants before the terms will cause the crossover point to be
 pushed far into larger digits
 
-## Examples
-
-### Example 1
+<Example title="Growth Rate">
 
 _We want to compare the growth rate of $f(x)=x^2$ and $g(x)=2^x$_
 
@@ -25,7 +23,9 @@ _We want to compare the growth rate of $f(x)=x^2$ and $g(x)=2^x$_
 | 5   | 25         | 32         |
 | 10  | 100        | 1024       |
 
-### Example 2
+</Example>
+
+<Example title="Growth Rate">
 
 _We want to compare the growth rate of $f(x)=x^{100}$ and $g(x)=2^x$_
 
@@ -45,6 +45,8 @@ $$
 $$
  \mathbf { g } ( 10,000 )  = 2 ^ { 10,000 } = 2 ^ { 10.1000 } = 1024 ^ { 1000 }  \gg 1000 ^ { 133 } \approx 10,000 ^ { 100 } = \mathbf { f } ( 10,000 )
 $$
+
+</Example>
 
 -   Subbing in values will allow you to find the crossover point
 
@@ -73,7 +75,7 @@ The **space complexity** of an algorithm is expressed in terms of the
 memory required by the algorithm for an input of a particular size. Will
 mainly be concerned with time complexity
 
-## Example - Evaluation of polynomials
+<Example title="Evaluation of Polynomials">
 
 To evaluate the polynomial
 
@@ -125,7 +127,9 @@ If we use this procedure, then we will need n multiplications (1
 multiplication in loop, loop n times) and n additions to evaluate a
 polynomial of degree n at $x=x_0$
 
-## Example - Sorting
+</Example>
+
+<Example title="Sorting">
 
 The real numbers $a_1,...,a_n, n\geqslant 2$ can be sorted (i.e.
 arranged in ascending order) by the **insertion sort** algorithm
@@ -150,6 +154,8 @@ $$
 
 If $a_1\leqslant a_2\leqslant...\leqslant a_n$ then the number of
 comparisons $a_j>x$ is n-1
+
+</Example>
 
 ## Worst case time complexity
 
@@ -193,7 +199,12 @@ algorithm when the input has a particular size
 Let f(x) and g(x) be functions from the set of integers or the set of
 real numbers to the set of real numbers. We say that $f(x)$ is
 $\mathcal{O}(g(x))$ of there are constant C and k such that
-$$| f ( x ) | \leq C \cdot | g ( x ) |$$ whenever $x\geqslant k$
+
+$$
+| f ( x ) | \leq C \cdot | g ( x ) |
+$$
+
+whenever $x\geqslant k$
 
 ## More on Big O
 
@@ -229,7 +240,7 @@ $$| f ( x ) | \leq C \cdot | g ( x ) |$$ whenever $x\geqslant k$
 
 ## Examples
 
-### Example 1
+<Example>
 
 -   Here we are replacing all x terms with $x^2$, then the numbers will
     come out easily.
@@ -251,7 +262,9 @@ $$
 
 for every $x\geqslant k$
 
-### Example 2
+</Example>
+
+<Example>
 
 _Let $f(x)=3x^3-7x^2-4x+2$. Then $f(x)=\mathcal{O}(x^3)$_
 
@@ -273,7 +286,9 @@ $$
 
 for every $x\geqslant k$
 
-### Example 3
+</Example>
+
+<Example>
 
 _Let $f(x)=3^x$. Then $f(x)$ is not $\mathcal{O}(2^x)$_
 
@@ -289,7 +304,9 @@ when $x\geqslant k$
 But any exponential function $a^x$ grows monotonically whenever
 $a\geqslant 1$; a contradiction
 
-### Example 4
+</Example>
+
+<Example>
 
 The polynomial
 
@@ -317,6 +334,8 @@ $$
 
 The time complexity of the procedure is $\mathcal{O}(n)$
 
+</Example>
+
 ## Summary
 
 | Big-$\mathcal{O}$ form | Name        |
@@ -332,7 +351,7 @@ The time complexity of the procedure is $\mathcal{O}(n)$
 
 ## More examples
 
-### Example 1
+<Example>
 
 _Let $1<a<b$. Then $a^x=\mathcal{O}(b^x)$ but $b^x$ is not
 $\mathcal{O}(a^x)$_
@@ -351,7 +370,9 @@ when $x\geqslant k$
 Observe that $c=\dfrac{b}{a}>1$. Any exponential function $c^x$ grows
 monotonically whenever $c>1$; a contradiction.
 
-### Example 2
+</Example>
+
+<Example>
 
 _Let $a,b>1$ Then $\log_ax=\mathcal{O}(\log_bx)$_
 
@@ -366,7 +387,9 @@ $$
 f(x)=\frac{1}{C}\cdot g(x)
 $$
 
-### Example 3
+</Example>
+
+<Example>
 
 _Let $0<p<q$. Then $x^p=\mathcal{O}(x^q)$ but $x^q$ is not
 $\mathcal{O}(x^p)$_
@@ -384,15 +407,29 @@ $$
 Observe that $r=q-p>0$ Any function $x^r$ grows
 monotonically whenever $r>0$; a contradiction
 
-### Example 4
+</Example>
+
+<Example>
 
 Let $a>1$ and let $0<p$ then $x^p=\mathcal{ O }(a^x)$ but $a^x$ is not
-$\mathcal{O}(x^p)$ $$\lim_{x\to\infty}\frac{x^p}{a^x}= 0$$
+$\mathcal{O}(x^p)$
 
-### Example 5
+$$
+\lim_{x\to\infty}\frac{x^p}{a^x}= 0
+$$
+
+</Example>
+
+<Example>
 
 Let $a>1$ and get $0<p$. The $log_ax=\mathcal{ O }(x^p)$ but $x^p$ is
-not $\mathcal{ O }(\log_ax)$ $$\lim_{x\to\infty}\frac{\log_ax}{x^p}= 0$$
+not $\mathcal{ O }(\log_ax)$
+
+$$
+\lim_{x\to\infty}\frac{\log_ax}{x^p}= 0
+$$
+
+</Example>
 
 ## Sum and Product rules
 
@@ -403,7 +440,7 @@ Two functions $f_1(x)$ and $f_2(x)$ for each we know what their
 $\mathcal{ O }$ are. Adding these together, the big o of the sum of them
 is the maximum of their $\mathcal{O}$s
 
-#### Example
+<Example>
 
 $$
 f_1(x)=2x^2+1 \quad f_2(x)=4x^3+x^2+2
@@ -416,6 +453,8 @@ $$
 $$
 f_1(x)+f_2(x)=4x^3+3x^2+3
 $$
+
+</Example>
 
 ### The product rule
 
@@ -434,7 +473,7 @@ $$
 |f_1(x)\cdot f_2(x)| = |f_1(x)| \cdot |f_2(x)| \leq C_1 \cdot |g_1(x)| \cdot C_2 \cdot |g_2(x)| =   { C \cdot \left| g _ { 1 } ( x ) \cdot g _ { 2 } ( x ) \right| }
 $$
 
-### Example
+<Example>
 
 Let $a_0,a_1,\ldots,a_n$ be real numbers,
 
@@ -453,6 +492,8 @@ $x^k=\mathcal{O}(x^n)$
 
 Then we observe that for any constant a, $a\cdot x^k=\mathcal{O}(x^n)$\
 By the sum rule $f(x)=\mathcal{O}(x^n)$
+
+</Example>
 
 # Big Omega
 
@@ -574,17 +615,25 @@ $$
 
 ### Examples
 
+<Example>
+
 The function $f(x)=100x/\log x$ is sublinear since
 
 $$
 \lim*{x\to\infty}\dfrac{f(x)}{x}=\lim*{x\to\infty}\dfrac{100}{\log x}=0
 $$
 
+</Example>
+
+<Example>
+
 The function $f(x)=\sqrt[3]{x^2}$ is sublinear since:
 
 $$
 \lim*{x\to\infty}\dfrac{f(x)}{x}=\lim*{x\to\infty}\dfrac{x^{\frac{2}{3}}}{x}=\lim\_{x\to\infty}x^{-\frac{1}{3}}=0
 $$
+
+</Example>
 
 # Little omega
 

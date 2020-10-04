@@ -17,6 +17,7 @@ import {
 	Lemma,
 	Problem,
 } from "@/components/mdx/admonitions";
+import Example from "@/components/mdx/admonitions/example";
 import MyImg from "@/components/mdx/image";
 import MyTable from "@/components/mdx/table";
 import MyCode from "@/components/mdx/code";
@@ -37,6 +38,7 @@ const components = {
 	Corollary,
 	Lemma,
 	Problem,
+	Example,
 };
 function Lecture({
 	tree,
@@ -46,8 +48,8 @@ function Lecture({
 	sidebarVisible,
 	setSidebarVisible,
 }) {
-	// const content = hydrate(source, { components });
-	const content = source.renderedOutput;
+	const content = hydrate(source, { components });
+	// const content = source.renderedOutput;
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
@@ -140,12 +142,9 @@ function Lecture({
 								</div>
 								<hr className="pb-4" />
 								<div className="pb-6">
-									<div
-										className="prose pb-6 mx-auto"
-										dangerouslySetInnerHTML={{
-											__html: content,
-										}}
-									/>
+									<div className="prose pb-6 mx-auto">
+										{content}
+									</div>
 									<div className="flex justify-center">
 										<a
 											className="flex content-center hover:underline text-blue-700"

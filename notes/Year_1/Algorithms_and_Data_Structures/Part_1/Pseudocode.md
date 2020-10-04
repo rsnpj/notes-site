@@ -77,9 +77,7 @@ for variable=lower to upper do
 end for
 ```
 
-Body is simply a sequence of statements
-
-Example:
+<Example>
 
 ```
 s=0
@@ -98,6 +96,8 @@ Things this for loop does without being written down:
 -   Iterate i by 1
 
 -   Check if $i\leqslant U$
+
+</Example>
 
 In this for loop, it can only iterate consecutive integers
 
