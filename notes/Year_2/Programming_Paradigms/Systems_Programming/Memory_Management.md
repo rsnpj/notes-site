@@ -232,7 +232,7 @@ line = NULL;  // set pointer to NULL
     ```
 
 -   Allocates a contiguous block of memory of `n` elements each of
-    `size` bytes long, initialised to all bits `0`
+    `size` bytes long, initialized to all bits `0`
 
 -   Useful to ensure old data is not reused inappropriately
 

@@ -136,7 +136,7 @@ p = &i;    // & "address of"
 
 # Pointers as Arguments
 
--   Previously we tried write a `swap()` function that could modify its
+-   Previously we tried to write a `swap()` function that could modify its
     arguments, but it didn’t work
 
 -   By passing a pointer to a variable instead of the value of the

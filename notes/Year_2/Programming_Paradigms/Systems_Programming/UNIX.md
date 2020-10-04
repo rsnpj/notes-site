@@ -5,162 +5,162 @@ lecturer: Konrad
 
 # The Shell
 
-- A powerful way to perform work on a computer through a text
-  interface
+-   A powerful way to perform work on a computer through a text
+    interface
 
-  - Run programs
+    -   Run programs
 
-  - Control how the programs work
+    -   Control how the programs work
 
-- Perform sequences of commands to achieve even more complex work
+-   Perform sequences of commands to achieve even more complex work
 
-- There are many choices for which shell to use, the most popular of
-  which is `bash` (bourne again shell)
+-   There are many choices for which shell to use, the most popular of
+    which is `bash` (bourne again shell)
 
 # Ethos of the UNIX Shell
 
-- Not one monolithic program
+-   Not one monolithic program
 
-- Instead many small programs
+-   Instead many small programs
 
-- Allow user to combine these together to make new functionality
+-   Allow user to combine these together to make new functionality
 
-  - Using pipes
+    -   Using pipes
 
-  - Using script files
+    -   Using script files
 
 # `stdin`, `stdout` and `stderr`
 
-- Remove the need to worry about I/O devices
+-   Remove the need to worry about I/O devices
 
-- Two types of output, each can be redirected
+-   Two types of output, each can be redirected
 
-- These are stream variables, can redirect e.g. `2>&1`
+-   These are stream variables, can redirect e.g. `2>&1`
 
 # Pipes
 
-- The shell provides you with many small ‘tools’
+-   The shell provides you with many small ‘tools’
 
-  - The power comes from composing them together
+    -   The power comes from composing them together
 
-  - Pipes provide a means to do this
+    -   Pipes provide a means to do this
 
-  - Each command takes input (from the keyboard)
+    -   Each command takes input (from the keyboard)
 
-  - Each command produces output (to the screen)
+    -   Each command produces output (to the screen)
 
-- We can redirect input or output
+-   We can redirect input or output
 
-  - `<` take input from a file
+    -   `<` take input from a file
 
-  - `>` write output to a file
+    -   `>` write output to a file
 
-  - `|` take the output of one command and use as input to next
+    -   `|` take the output of one command and use as input to next
 
 # Output pipes
 
-- Add “`>`” or “`>>`” and the name of a file after your command before
-  you hit “Enter/Return” – e.g. “`ps > file.txt`”
+-   Add “`>`” or “`>>`” and the name of a file after your command before
+    you hit “Enter/Return” – e.g. “`ps > file.txt`”
 
-- If the file doesn’t exist already, it will be created for you in the
-  directory in which you are working
+-   If the file doesn’t exist already, it will be created for you in the
+    directory in which you are working
 
-- “`>>`” appends, “`>`” overwrites – so be careful when using “`>`”!!
+-   “`>>`” appends, “`>`” overwrites – so be careful when using “`>`”!!
 
 # `grep`
 
-- `grep` is a search tool that uses regular expressions for matching
+-   `grep` is a search tool that uses regular expressions for matching
 
-  - `grep "help" file.txt`{.bash}
+    -   `grep "help" file.txt`{.bash}
 
-    - Lists all lines in `file.txt` containing the word ‘`help`’
+        -   Lists all lines in `file.txt` containing the word ‘`help`’
 
 # Regular Expressions
 
-- A concise way to match different strings
+-   A concise way to match different strings
 
-  - `*` - match any number of the proceeding character
+    -   `*` - match any number of the proceeding character
 
-  - `?` - match one of the proceeding character
+    -   `?` - match one of the proceeding character
 
-  - `+` - match one or more of the proceeding character
+    -   `+` - match one or more of the proceeding character
 
-  - `[ABC]` - class as single character
+    -   `[ABC]` - class as single character
 
-  - `[A-Z]` - all the upper case characters `A` to `Z`
+    -   `[A-Z]` - all the upper case characters `A` to `Z`
 
-- e.g. `[A-Za-z]*[0-9].txt`
+-   e.g. `[A-Za-z]*[0-9].txt`
 
 # `sort`
 
-- Sorts a file (if specified)
+-   Sorts a file (if specified)
 
-  - `stdin`: standard input, by default from terminal
+    -   `stdin`: standard input, by default from terminal
 
-- Where does it put the results?
+-   Where does it put the results?
 
-  - `stdout`: standard output, by default the terminal
+    -   `stdout`: standard output, by default the terminal
 
-  - or a file with `-o filename`
+    -   or a file with `-o filename`
 
 # `tr` - translate
 
-- `tr SET1 SET2`
+-   `tr SET1 SET2`
 
-  - translates or deletes characters from `SET1` to `SET2`
+    -   translates or deletes characters from `SET1` to `SET2`
 
-  - e.g. `tr 'A-Z' 'a-z'` makes a lower case version of `stdin`
+    -   e.g. `tr 'A-Z' 'a-z'` makes a lower case version of `stdin`
 
-  - option `-c` takes complement of `SET1`
+    -   option `-c` takes complement of `SET1`
 
-  - option `-s` squeezes repeats to a single character
+    -   option `-s` squeezes repeats to a single character
 
-  - option `-d` deletes all characters in `SET1`
+    -   option `-d` deletes all characters in `SET1`
 
-  - e.g. `tr -dc '[:print:]'` - deletes all non printable characters
+    -   e.g. `tr -dc '[:print:]'` - deletes all non-printable characters
 
 # Options and more options…
 
-- Most UNIX commands have many options
+-   Most UNIX commands have many options
 
-- To find out what these are:
+-   To find out what these are:
 
-  - Ask the command
+    -   Ask the command
 
-    - e.g. `sort --help`, `grep -h`
+        -   e.g. `sort --help`, `grep -h`
 
-  - Refer to the manual
+    -   Refer to the manual
 
-    - e.g. `man sort`, `man tr`
+        -   e.g. `man sort`, `man tr`
 
-  - Go online
+    -   Go online
 
-    - e.g. Search command in Google
+        -   e.g. Search command in Google
 
 # `uniq`
 
-- Remove or report repeated lines
+-   Remove or report repeated lines
 
-- Use with `sort` to find lines repeated throughout document
+-   Use with `sort` to find lines repeated throughout document
 
-- e.g. `sort | uniq`
+-   e.g. `sort | uniq`
 
-- Use `-c` option to count number of repetitions
+-   Use `-c` option to count number of repetitions
 
-- Tie these all together: what does this do?
+-   Tie these all together: what does this do?
 
-- ```bash
-  tr 'A-Z' 'a-z' < infile | tr -cs 'a-z' '\n' | sort \
-        | uniq -c | sort -n!
-  ```
+-   ```bash
+    tr 'A-Z' 'a-z' < infile | tr -cs 'a-z' '\n' | sort \
+          | uniq -c | sort -n!
+    ```
 
 # Defining our own UNIX command
 
-- UNIX commands are just executables, most of which are written in C
+-   UNIX commands are just executables, most of which are written in C
 
-- Suppose we want to count only frequent words, we could write a
-  filter function to forward lines starting with a number above a
-  certain value
+-   Suppose we want to count only frequent words, we could write a
+    filter function to forward lines starting with a number above a
+    certain value
 
 ```c
 #include <stdio.h>
@@ -196,139 +196,139 @@ return 0;
 
 # `getline()`
 
-- From GNU C lib and is more reliable than `gets()`
+-   From GNU C lib and is more reliable than `gets()`
 
-- Parameters
+-   Parameters
 
-  - Pointer to `malloc()`’d block for result
+    -   Pointer to `malloc()`’d block for result
 
-    - will `malloc()` if `NULL`
+        -   will `malloc()` if `NULL`
 
-  - Pointer for number of bytes in the `malloc()`’d block
+    -   Pointer for number of bytes in the `malloc()`’d block
 
-  - Stream to read from
+    -   Stream to read from
 
 # Using our program in UNIX
 
-- Compile: `gcc filter.c -o filter`
+-   Compile: `gcc filter.c -o filter`
 
-- Put in a pipe e.g.
+-   Put in a pipe e.g.
 
-  ```bash
-  tr 'A-Z' 'a-z' < filter.c | tr -cs 'a-z' '\n' \
-         | sort | uniq -c | sort -n | ./filter 3
+    ```bash
+    tr 'A-Z' 'a-z' < filter.c | tr -cs 'a-z' '\n' \
+           | sort | uniq -c | sort -n | ./filter 3
 
-  wc * | sort -n | ./filter 10
-  ```
+    wc * | sort -n | ./filter 10
+    ```
 
 # Be robust
 
-- Check the number of command line parameters
+-   Check the number of command line parameters
 
-- Report problems to `stderr`
+-   Report problems to `stderr`
 
-- Return value of `main()`
+-   Return value of `main()`
 
-- For more complex joining of UNIX commands use shell script
+-   For more complex joining of UNIX commands use shell script
 
 # File handling
 
-- Files are stored in a hierarchical structure
+-   Files are stored in a hierarchical structure
 
-- Allows grouping
+-   Allows grouping
 
-- Navigation
+-   Navigation
 
-  - `ls` - list the current folder
+    -   `ls` - list the current folder
 
-  - `cd` - change folder
+    -   `cd` - change folder
 
-  - `mkdir` - make new folder
+    -   `mkdir` - make new folder
 
-  - `mv` - move a file / folder
+    -   `mv` - move a file / folder
 
-  - `cp` - copy a file / folder
+    -   `cp` - copy a file / folder
 
-  - `rm` - delete a file
+    -   `rm` - delete a file
 
-  - `rmdir` - delete a folder
+    -   `rmdir` - delete a folder
 
-  - `du` - how much space does a folder / file take?
+    -   `du` - how much space does a folder / file take?
 
-  - `find` - list all files
+    -   `find` - list all files
 
 # Shell scripts
 
-- A Shell Script is simply a collection of commands enclosed in a file
+-   A Shell Script is simply a collection of commands enclosed in a file
 
-- Useful for when you have to type lots of commands to do one thing
+-   Useful for when you have to type lots of commands to do one thing
 
-- Whilst this is not impossible, it can get rather time-consuming
+-   Whilst this is not impossible, it can get rather time-consuming
 
-- Putting all the commands into a shell script enables them to be
-  executed at the command line in one single command
+-   Putting all the commands into a shell script enables them to be
+    executed at the command line in one single command
 
 # Writing a Shell Script
 
-- You can write shell scripts in any text editor of your choosing
+-   You can write shell scripts in any text editor of your choosing
 
-- They should be saved with a `.sh` extension, e.g. `myscript.sh`
+-   They should be saved with a `.sh` extension, e.g. `myscript.sh`
 
-- They must all begin with the line `#!/bin/bash`
+-   They must all begin with the line `#!/bin/bash`
 
-  - “`#!`” tells UNIX this is a script that can be run
+    -   “`#!`” tells UNIX this is a script that can be run
 
-  - `/bin/bash` tells Linux what program to run the script with
+    -   `/bin/bash` tells Linux what program to run the script with
 
 # Example
 
-- This script creates a new directory, changes into it and creates two
-  new text files
+-   This script creates a new directory, changes into it and creates two
+    new text files
 
-  ```bash
-  #!/bin/bash
-  mkdir newDirectory
-  cd newDirectory
-  touch file1.txt
-  touch file2.txt
-  ```
+    ```bash
+    #!/bin/bash
+    mkdir newDirectory
+    cd newDirectory
+    touch file1.txt
+    touch file2.txt
+    ```
 
 # How do you run a shell script?
 
-- Firstly, you need to make sure you have permission to execute the
-  script file Use the `chmod` command to do this
+-   Firstly, you need to make sure you have permission to execute the
+    script file Use the `chmod` command to do this
 
-  - `chmod a+x myscript.sh`
+    -   `chmod a+x myscript.sh`
 
-- Then, at the command line, type `./scriptname` and your script
-  should run
+-   Then, at the command line, type `./scriptname` and your script
+    should run
 
-  - e.g. `./myscript.sh`
+    -   e.g. `./myscript.sh`
 
 # Doing things to multiple files
 
-- A handy little tool for doing the same operation to lots of files
+-   A handy little tool for doing the same operation to lots of files
 
-  ```bash
-  #!/bin/bash
-  for f in *
-  do
-    #something in here
-    echo $f
-  done
-  ```
+    ```bash
+    #!/bin/bash
+    for f in *
+    do
+      #something in here
+      echo $f
+    done
+    ```
 
 # Parameters
 
-- You can add parameters to a script when you run them
+-   You can add parameters to a script when you run them
 
-- `./myscript.sh foo bar`
+-   `./myscript.sh foo bar`
 
-  - “`foo`” and “`bar`” are the parameters here
+    -   “`foo`” and “`bar`” are the parameters here
 
-- Refer to them using the `$` sign in scripts
+-   Refer to them using the `$` sign in scripts
 
-  - `$1`, `$2`, etc.
+    -   `$1`, `$2`, etc.
 
 # The `if` statement in shell scripts
 
@@ -342,26 +342,26 @@ else
 fi
 ```
 
-- The `else` bit is optional
+-   The `else` bit is optional
 
-- Uses `==`, `!=`, `-gt`, `-lt`, `-le`, `-ge` for equality,
-  inequality, greater than, less than, less than or equal, greater
-  than or equal
+-   Uses `==`, `!=`, `-gt`, `-lt`, `-le`, `-ge` for equality,
+    inequality, greater than, less than, less than or equal, greater
+    than or equal
 
 # Some last bits
 
-- `if [ -a FILE ]` - true if `FILE` exists
+-   `if [ -a FILE ]` - true if `FILE` exists
 
-- `if [ -z STRING ]` - true if `STRING` is empty
+-   `if [ -z STRING ]` - true if `STRING` is empty
 
-- Variables:
+-   Variables:
 
-  - `VAR="Hello World"`
+    -   `VAR="Hello World"`
 
-  - `echo $VAR`
+    -   `echo $VAR`
 
-  - `` TD="The time is `date`" ``
+    -   `` TD="The time is `date`" ``
 
-  - `echo $TD`
+    -   `echo $TD`
 
-    - `The time is Wed 20 Nov 15:44:14 GMT 2019`
+        -   `The time is Wed 20 Nov 15:44:14 GMT 2019`
