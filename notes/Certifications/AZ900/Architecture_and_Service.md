@@ -42,7 +42,7 @@ Azure has the following geographies:
 
 -   Asia Pacific
 
--   Middle Easy and Africa
+-   Middle East and Africa
 
 # Availability Zones
 
@@ -69,7 +69,7 @@ Another region within the same geography at least 300 miles away
 This reduces the likelihood of interruptions such as natural disasters.
 
 <Important>
-An availability zone sits within a region pair. So an availability zone may be two datacenters in the UK, a region pair may be one in the UK and one in France
+An availability zone sits within a region pair. So an availability zone may be two datacenters in the UK, and a region pair may be one in the UK and one in France
 </Important>
 
 Advantages of region pairs:

@@ -60,7 +60,7 @@ requirements for the CIA of this data
 
 -   Control access to infrastructure and change control
 
--   Use single sign on and multi factor authentication
+-   Use single sign-on and multi-factor authentication
 
 -   Audit events and changes
 
@@ -82,11 +82,11 @@ Security Center can:
 -   Continuously monitor services to provide automatic security
     assessments
 
--   Use machine learning to detect and block malware being installed
+-   Use machine learning to detect and block malware from being installed
 
 -   Analyse and identify inbound attacks
 
--   Provide just in time access control for ports
+-   Provide just-in-time access control for ports
 
 ## Pricing Tiers
 
@@ -96,7 +96,7 @@ Security Center can:
 
 ## Usage scenarios
 
-You can use security centre to:
+You can use Security Center to:
 
 -   Detect - Review the first indication of an event investigation
 
@@ -121,13 +121,13 @@ Azure AD provides services such as:
 
 -   Authentication
 
--   Single Sign On - One ID and password for multiple services
+-   Single Sign-On - One ID and password for multiple services
 
 -   Application management
 
--   Business to Business identity services
+-   Business-to-Business identity services
 
--   Business to Customer identity services
+-   Business-to-Customer identity services
 
 -   Device management
 
@@ -150,7 +150,7 @@ An identity that is used by a service or application
 ### Managed identities for Azure services
 
 This makes creating service principles easier. A managed identity can be
-instantly created for any azure service that supports it.
+instantly created for any Azure service that supports it.
 
 ## Role based access control
 
@@ -160,12 +160,12 @@ Azure service instance.
 Identities are mapped to roles directly or through group membership.
 
 Roles can be granted at the individual service instance level, but they
-also flow down the Azure resource manager hierarchy.
+also flow down the Azure Resource Manager hierarchy.
 
 ### Privileged Identity Management
 
 This is an additional offering that provides oversight of role
-assignments to ensure people don’t hav excess privileges.
+assignments to ensure people don’t have excess privileges.
 
 # Encryption
 
@@ -233,12 +233,12 @@ A service that grants server access based on the originating IP address of each 
 To provide inbound protection at the perimeter, you have several
 choices:
 
--   Azure firewall - Managed cloud based network security service
+-   Azure Firewall - Managed cloud based network security service
 
--   Azure application gateway - Load balancer that includes a web
+-   Azure Application Gateway - Load balancer that includes a web
     application firewall
 
--   Network virtual appliances (NVAs) - Ideal for non HTTP services or
+-   Network Virtual Appliances (NVAs) - Ideal for non-HTTP services or
     advanced configs
 
 ## DDoS Protection
@@ -277,13 +277,13 @@ you can use Azure ExpressRoute.
 
 # Protecting shared documents
 
-Azure information protection - A cloud based solution to help
+Azure information protection - A cloud-based solution to help
 organizations classify and optionally protect documents by applying
 labels
 
 # Azure Advanced Threat Protection
 
-This is a cloud based solution to identify, detect and help to
+This is a cloud-based solution to identify, detect and help to
 investigate threats.
 
 It has the following components:
@@ -324,7 +324,7 @@ It has the following components:
 -   Perform Static Analysis Security Testing - Analyse source code prior
     to compilation
 
--   Perform Dynamic Analysis Security Testing - Analyse fully compiled
+-   Perform Dynamic Analysis Security Testing - Analyse fully-compiled
     code
 
 -   Perform penetration testing
