@@ -147,7 +147,7 @@ The process is as follows:
 ## Costs
 
 You pay for the compute resources your app uses. The app service plan
-determines how much hardware is devotes to the host. There’s even a free
+determines how much hardware is devoted to the host. There’s even a free
 tier for low traffic sites
 
 ## Types of app services
