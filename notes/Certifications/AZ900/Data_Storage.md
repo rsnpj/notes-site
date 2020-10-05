@@ -45,7 +45,7 @@ through migration.
 ## Azure Cosmos DB
 
 Globally distributed database service supporting schema-less data
-(NoSQL). Used for highly responsive and always on applications
+(NoSQL). Used for highly responsive and always-on applications
 
 ## Azure Blob storage
 
@@ -80,7 +80,7 @@ Can be used to:
 ## Disk storage
 
 Provides disks for virtual machines and other services to access as they
-need. Come in many different sizes and performance levels, from SSDs to
+need. Comes in many different sizes and performance levels, from SSDs to
 HDDs.
 
 ## Storage tiers
