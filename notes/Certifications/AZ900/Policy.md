@@ -9,7 +9,7 @@ An Azure service to create, assign and manage policies
 </Definition>
 
 RBAC focuses on user actions at different scopes whereas Azure Policy
-focuses on resouce properties during deployment. Azure Policy is a
+focuses on resource properties during deployment. Azure Policy is a
 default allow and explicit deny system, in contrast with RBAC
 
 ## Creating a policy
@@ -31,7 +31,7 @@ The policy definition itself is represented as a JSON file
 ### Applying Azure Policy
 
 This can be done using the Azure portal or one of the command line
-tools, it takes the following parameters
+tools. It takes the following parameters:
 
 | Parameter   | Description                                                                                       |
 | ----------- | ------------------------------------------------------------------------------------------------- |
@@ -156,7 +156,7 @@ This provides the following features:
     2.  Information Microsoft compiles internally for its compliance
         with regulations
 
-    3.  An organisation’s self assessment of their own compliance with
+    3.  An organisation’s self-assessment of their own compliance with
         these standards and regulations
 
 -   Enables you to assign, track, and record compliance and
@@ -182,7 +182,7 @@ telemetry.
 | Application monitoring data        | Data about the performance and functionality of written code                      |
 | Guest OS monitoring data           | Data about the OS your application is running                                     |
 | Azure resource monitoring data     | Data about the operation of an Azure resource                                     |
-| Azure subscription monitoring data | Data about the operation and management of an azure subscription and azure itself |
+| Azure subscription monitoring data | Data about the operation and management of an Azure subscription and Azure itself |
 | Azure tenant monitoring data       | Data about the operation of tenant-level Azure services                           |
 
 ### Diagnostic Settings
@@ -228,7 +228,7 @@ manage the load on your application effectively
 
 ## Azure Service Health
 
-This provides guidance when issues with Azure notify you, it is composed
+This provides guidance when issues with Azure notify you. It is composed
 of the following views:
 
 -   Azure Status - Global view of the health state of Azure Services

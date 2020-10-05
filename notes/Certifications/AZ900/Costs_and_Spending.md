@@ -46,12 +46,12 @@ Azure credit allotment
 
 ## Reserved instances
 
-If you know you have static and predictable costs you can reserve for
+If you know you have static and predictable costs, you can reserve for
 one or three year to save money
 
 ## Low cost locations and regions
 
-Some regions are cheaper, ensure all resources are in that region or you
+Some regions are cheaper, so ensure all resources are in that region or you
 will have a cost of sending data between regions
 
 ## Reduce the size of Virtual machines
@@ -62,7 +62,7 @@ being used
 ## Deallocate virtual machines in off hours
 
 You can use the auto shutdown feature to either reduce capacity by
-reducing the number of virtual machines behind a load balancer or stop a
+reducing the number of virtual machines behind a load balancer or stopping a
 service
 
 ## Migrate to PaaS or SaaS
@@ -76,7 +76,7 @@ In Linux you don’t have to pay a licence cost.
 ## Azure Hybrid Benefit
 
 If you already have a Windows Server Licence covered by software
-assurance you can get a large discount by using this licence in Azure.
+assurance, you can get a large discount by using this licence in Azure.
 
 ### Azure Hybrid Benefit for SQL Server
 
@@ -84,19 +84,19 @@ Similarly, SQL licences can be given for a saving.
 
 ## Use Dev/Test subscription offers
 
-By specifying you are in a non production environment, you don’t need to
+By specifying you are in a non-production environment, you don’t need to
 pay a licence fee
 
 ## Bring your own SQL server license
 
 If you are on an Enterprise agreement and have an investment in SQL
-server licences, you can use this in Virtual machines for free.
+server licences, you can use this in Virtual Machines for free.
 
 ## Use SQL server developer edition
 
-SQL server developer edition is a free product for nonproduction use
+SQL server developer edition is a free product for non-production use
 
 ## Use constrained instance sizes of database workloads
 
-SQL server costs are per core, so my reducing the number of cores, you
+SQL server costs are per core, so by reducing the number of cores, you
 can save on cost

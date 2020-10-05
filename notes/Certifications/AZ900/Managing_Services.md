@@ -27,7 +27,7 @@ Tools that are commonly used for management include:
 
 -   Azure Cloud Shell
 
-    -   Interactive, authenticated browser accessible shell
+    -   Interactive, authenticated browser-accessible shell
 
     -   Can use either bash or powershell
 

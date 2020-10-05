@@ -80,12 +80,12 @@ Agility (speed to set up)
 
 # Compliance terms and requirements
 
-Questions include
+Questions include:
 
 -   How compliant is the cloud provider when it comes to handling
-    sensitive data
+    sensitive data?
 
--   How compliant are the services offered by the cloud provider
+-   How compliant are the services offered by the cloud provider?
 
 -   How can I deploy my own cloud-based solutions to scenarios that have
     accreditation or compliance requirements?
@@ -150,14 +150,14 @@ Easier to respond to change
 | Name          | Description                                                | Advantages                                                                                                                                                                                                                                     | Disadvantages                                                                                                                                                                                                                                                      |
 | ------------- | ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Private Cloud | Cloud set up in own datacenter                             | <ul> <li>Ensure the configuration is as needed</li> <li>Control over security and compliance</li></ul>                                                                                                                                         | <ul><li>Some initial CapEx costs</li> <li>Limited agility</li> <li>Require IT skills</li></ul>                                                                                                                                                                     |
-| Public cloud  | No local hardware, all running on cloud providers hardware | <ul><li>High scalability/agility</li><li>Pay as you go pricing</li><li>Not responsible for maintenance and updates of the hardware</li><li>Minimal technical knowledge required</li></ul>                                                      | <ul><li>May be security requirement that can't be met</li><li> May be government policies, industry standards or legal requirements that can't be met</li><li>Can't manage hardware in the way you want to</li><li>May not work with legacy applications</li></ul> |
+| Public cloud  | No local hardware, all running on cloud provider's hardware | <ul><li>High scalability/agility</li><li>Pay-as-you-go pricing</li><li>Not responsible for maintenance and updates of the hardware</li><li>Minimal technical knowledge required</li></ul>                                                      | <ul><li>May be security requirement that can't be met</li><li> May be government policies, industry standards or legal requirements that can't be met</li><li>Can't manage hardware in the way you want to</li><li>May not work with legacy applications</li></ul> |
 | Hybrid Cloud  | Combining public and private clouds                        | <ul><li>Keep any legacy systems running</li><li>Flexibility to choose where things run</li><li>Get economies of scale from public cloud where available</li><li>Meet more compliance</li><li>Run things where it is most appropriate</li></ul> | Increased cost and complexity                                                                                                                                                                                                                                      |
 
 # Types of cloud services
 
 ## IaaS
 
-Most flexible category, gives control over hardware.
+Most flexible category; gives control over hardware.
 
 Commonly used for:
 
@@ -174,7 +174,7 @@ configured correctly, is up to date and is available to users.
 ## PaaS
 
 Provides an environment for building, testing and deploying software
-applications. Don’t have to manage infrastructure
+applications. Don’t have to manage infrastructure.
 Commonly used for:
 
 -   Development framework
@@ -187,7 +187,7 @@ Only responsible for data+access
 
 Access in Azure via marketplace
 
-Pay as you go pricing
+Pay-as-you-go pricing
 
 Users pay for software they use on a subscription model
 
@@ -196,7 +196,7 @@ Users pay for software they use on a subscription model
 |                          | IaaS                                                           | PaaS                                              | SaaS                                                           |
 | ------------------------ | -------------------------------------------------------------- | ------------------------------------------------- | -------------------------------------------------------------- |
 | Upfront costs            | None, pay for consumption                                      | None, pay for consumption                         | None, pay subscription                                         |
-| User ownership           | User responsible for software, OS, middleware and applications | User responsible fort development of applications | Users just use software                                        |
+| User ownership           | User responsible for software, OS, middleware and applications | User responsible for development of applications | Users just use software                                        |
 | Cloud provider ownership | Infrastructure is available to user                            | OS, Network and service                           | Provision, management and maintenance of application software. |
 
 ![5 Layer Diagram](/img/Certifications/AZ900/Principles/5-layer-diagram.png)
