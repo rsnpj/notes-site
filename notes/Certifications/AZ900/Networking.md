@@ -6,7 +6,7 @@ title: Azure Networking Options
 
 ## Using an N tier architecture
 
-An architectural pattern that can be used to build loosely couples
+An architectural pattern that can be used to build loosely-coupled
 systems is N-tier
 
 This divides an architecture into two or more logical tiers.
@@ -27,19 +27,19 @@ A logically isolated network on Azure
 A virtual network allows Azure resources to securely communicate with
 each other, the internet and on premises networks.
 
-A virtual network is scoped to a single region, however, multiple
-virtual networks form different regions can be connected together using
+A virtual network is scoped to a single region; however, multiple
+virtual networks from different regions can be connected together using
 virtual network peering.
 
 Virtual networks can be segmented into one or more subnets to allow you
 to organize and secure your resources into discrete sections.
 
 For VMs that the users interact with directly, such as the web tier, the
-VM will have both a public and private IP whereas other tiers will just
+VM will have both a public and private IP, whereas other tiers will just
 have private IPs.
 
 <Definition name="VPN Gateway">
-Allows a secure connection between an Azure Virtual Network and an on premises location over the internet
+Allows a secure connection between an Azure Virtual Network and an on-premises location over the internet
 </Definition>
 
 ## Network security group
@@ -79,7 +79,7 @@ You can use it with:
 
 -   Outbound connectivity for VMs in your virtual network
 
-With Azure load balancer there’s no infrastructure or software to
+With Azure load balancer, there’s no infrastructure or software to
 maintain, just a set of rules.
 
 ## Azure Application Gateway
