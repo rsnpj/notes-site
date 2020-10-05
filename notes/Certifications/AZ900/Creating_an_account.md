@@ -40,15 +40,15 @@ per subscription is 10.
 
 -   Community support
 
-    -   Azure knowledge center
+    -   Azure Knowledge Center
 
-    -   Microsoft tech community
+    -   Microsoft Tech Community
 
-    -   Stack overflow
+    -   Stack Overflow
 
-    -   Server fault
+    -   Server Fault
 
-    -   Azure feedback forums
+    -   Azure Feedback Forums
 
     -   Twitter
 
@@ -56,11 +56,11 @@ per subscription is 10.
 
 -   Billing and subscription management support
 
--   Azure quickstart center
+-   Azure Quickstart Center
 
--   Azure service health
+-   Azure Service Health
 
--   Azure advisor
+-   Azure Advisor
 
 ## Support plans
 
