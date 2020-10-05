@@ -28,7 +28,7 @@ A resource can have up to 50 tags
 Tags can be used to group billing data or to keep track of usage for
 different projects
 
-Not all resources support tags, so you need to check your resource
+Not all resources support tags, so you need to check if your resource
 supports them
 
 # Resource locks
