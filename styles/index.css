@@ -82,13 +82,16 @@
 		@apply opacity-100;
 	}
 
-	/*  This offsets the links by the size of the navbar */
-	:target::before {
-		content: "";
-		display: block;
-		height: 4rem; /* fixed header height*/
-		margin: -4rem 0 0; /* negative fixed header height */
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	sup {
+		scroll-margin-top: 6em;
 	}
+
 	.bmc-button img {
 		height: 34px !important;
 		width: 35px !important;

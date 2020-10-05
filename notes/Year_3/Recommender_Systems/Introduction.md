@@ -31,6 +31,8 @@ Attributes/text describing an item
 
 </Definition>
 
+The main content of the item will be unstructured data (text etc) as opposed to clear variables
+
 <Definition name="Rating">
 
 Expression of preference
@@ -45,13 +47,23 @@ Estimate of preference or rating
 
 <Definition name="Recommendation">
 
-Suggestions of selected items
+Suggestions of selected items - what is actually displayed
 
 </Definition>
 
 # Moving from a User item to a rating
 
 ![User item to rating](/img/Year_3/Recommender/Introduction/Item->Rating.webp)
+
+<Definition name="Context">
+
+The information outside of the recommender system e.g. weather, time of day
+
+</Definition>
+
+If you are not generating a recommender systems with homogenous items it is difficult to understand the user's interest
+
+Because of this, recommender systems are mostly used in specific contexts
 
 # Prediction vs Recommendation
 
@@ -60,16 +72,17 @@ Prediction:
 -   Helps quantify
 -   A numerical value
 -   Predicting liking of an item for the active user
+-   Not necessarily seen by the user (can be displayed, e.g. Netflix says 94% match)
 
 Recommendation:
 
--   Selected items for the user from a larger set
+-   Selected items for the user from a larger set (produced from prediction)
 
 # Dimensions of an analytical framework
 
--   Domain
--   Context
--   Knowledge source
+-   Domain - area where the recommender system is applied
+-   Context - what does the user want to achieve?
+-   Knowledge source - where the data is coming from
 -   Purpose
 -   Personalisation level
 -   Recommendation algorithm(s)
@@ -101,7 +114,7 @@ Community building:
 
 # Inputs to a recommender system
 
-Explicit:
+Explicit - user knows the data is being collected:
 
 -   Like
 -   Rating
@@ -109,7 +122,7 @@ Explicit:
 -   Vote
 -   Profile data
 
-Implicit:
+Implicit - user doesn't know the data is being collected:
 
 -   View, click
 -   Order, purchase
@@ -149,3 +162,9 @@ Generic recommendations are:
 Automatic - little customer effort to generate the recommendation
 
 Ephemeral - the system does not recognise the user from session to session
+
+<Important>
+
+It is important to explain to the user why a given thing is being recommended to them
+
+</Important>

@@ -26,6 +26,7 @@ import slug from "remark-slug";
 import remarkSmartypants from "@/lib/remarkSmartypants";
 import math from "@/lib/remark-math";
 import highlightCode from "@mapbox/rehype-prism";
+import footnotes from "remark-footnotes";
 import Footer from "@/components/footer";
 const components = {
 	table: MyTable,
@@ -244,7 +245,7 @@ export async function getStaticProps({ params }) {
 	const source = await renderToString(postData.contentHtml, {
 		components: components,
 		mdxOptions: {
-			remarkPlugins: [slug, math, remarkSmartypants],
+			remarkPlugins: [slug, math, remarkSmartypants, footnotes],
 			rehypePlugins: [[highlightCode, { ignoreMissing: true }]],
 		},
 	});
