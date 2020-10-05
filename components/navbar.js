@@ -16,7 +16,7 @@ const NavBar = React.forwardRef((props, ref) => {
 	}, []);
 
 	return (
-		<nav className="fixed h-16 p-4 bg-white border-b border-gray-200 shadow w-full z-20 flex justify-between">
+		<nav className="h-16 p-4 bg-white border-b border-gray-200 shadow flex justify-between">
 			<div className="flex">
 				<span className="visible mr-6 sm:hidden self-center" ref={ref}>
 					<button
