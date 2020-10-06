@@ -128,7 +128,7 @@ function Lecture({
 				</div>
 				<hr className="pb-4" />
 				<div className="pb-6">
-					<div className="prose pb-6 mx-auto">{content}</div>
+					<div className="prose pb-6 mx-auto px-4">{content}</div>
 					<div className="flex justify-center">
 						<a
 							className="flex content-center hover:underline text-blue-700"
@@ -150,7 +150,7 @@ function Lecture({
 							<p>Edit this page on GitHub</p>
 						</a>
 					</div>
-				</div>{" "}
+				</div>
 			</>
 		);
 	}
@@ -216,15 +216,13 @@ function Lecture({
 			</Head>
 			<Layout
 				main={<Main />}
-				sidebar={
-					<Sidebar
-						toggle={sidebarVisible}
-						ref={node}
-						tree={tree}
-						slug={params.slug}
-					/>
-				}
+				sidebar={<Sidebar ref={node} tree={tree} slug={params.slug} />}
 				navbar={<NavBar toggleFunction={toggleSidebar} ref={node2} />}
+				footer={<Footer details={postData.details} />}
+				isFooter={
+					postData.details !== undefined && postData.details !== null
+				}
+				toggle={sidebarVisible}
 			/>
 			{/* <NavBar toggleFunction={toggleSidebar} ref={node2} />
 			<div className="flex">

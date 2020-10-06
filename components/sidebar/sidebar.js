@@ -4,7 +4,6 @@ import LinkList from "./LinkList";
 const Sidebar = React.forwardRef((props, ref) => {
 	const [year, setYear] = useState(props.slug ? props.slug[0] : "Base");
 	const [module, setModule] = useState(props.slug ? props.slug[1] : false);
-	const toggle = props.toggle ? "" : "hidden md:block";
 	function handleChange(event) {
 		setModule(false);
 		setYear(event.target.value);
@@ -118,7 +117,7 @@ const Sidebar = React.forwardRef((props, ref) => {
 	}
 
 	return (
-		<div>
+		<div ref={ref}>
 			<select
 				className="form-select mt-1 block w-full"
 				value={year}
