@@ -12,7 +12,7 @@ export default function Layout(props) {
 				>
 					{props.sidebar}
 				</div>
-				<div className="flex flex-col flex-grow max-w-full h-screen">
+				<div className="flex flex-col flex-grow max-w-full h-screen lg:h-auto">
 					<div
 						className={`flex-grow pt-16 ${
 							props.toggle && "opacity-25"
