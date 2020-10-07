@@ -9,13 +9,15 @@ Theory and Experiments
 
 </Definition>
 
-This is not enough as, some experiments are:
+This is not enough as, some experiments are[^1]:
 
 -   economically infeasible
 -   ethically inappropriate
 -   ecologically dubious
 -   by construction impossible
 -   so complex that we can't solve them analytically - fluid dynamics
+
+[^1]: David E. Keyes:Computational Science. In N.J. Higham: The Princeton Companion to Applied Mathematics. pp. 335–350 (2015)
 
 For these reasons simulation is proposed at the third pillar of science. Some disagree with this statement, but regardless, computer simulations are very important in modern science, be they as a pillar of their own or as an essential part of theory and experiment.
 
