@@ -7,8 +7,11 @@ export default function MyCode(props) {
 		var result = base64.encode(props.children);
 		return <img src={"https://mermaid.ink/img/" + result} alt="Diagram" />;
 	} else if (props.className === "language-graphviz") {
-		var bytes = utf8.encode(props.children);
-		const compressed = pako.deflate(bytes, { level: 9, to: "string" });
+		// var bytes = utf8.encode(props.children);
+		const compressed = pako.deflate(props.children, {
+			level: 9,
+			to: "string",
+		});
 		var result = base64
 			.encode(compressed)
 			.replace(/\+/g, "-")

@@ -93,4 +93,72 @@ $$
 | S        | 0.5  | 1.0  | 0.7175325  | 0.717535 |
 | S        | 0.5  | 1.0  | 0.71753375 | 0.717535 |
 
+The final code is the final value of *Low*, 0.71753375 if which only the eight digits 71753375 need to be written. 
+
+The decoder first inputs the symbols and their range, and reconstructs the table of frequencies and probabilities. It then inputs the rest of the code. The first digit is 7, so then number is $0.7\in [0.5,1)$. This means that the first symbol is S. It carries on, updating the code number to remove the effect of the character it just input, so after the character $x$, it performs the update
+
+$$
+C\leftarrow \dfrac{C-L(x)}{H(x)-L(x)}
+$$
+
+The decoder carries on until $C=0$, in which case there should be a way to make it stop
+
+| x        | L(x) | H(x) | C          |
+| -------- | ---- | ---- | ---------- |
+|          |      |      | 0.71753375 |
+| S        | 0.5  | 1.0  | 0.4350675  |
+| W        | 0.4  | 0.5  | 0.350675   |
+| I        | 0.2  | 0.4  | 0.753375   |
+| S        | 0.5  | 1.0  | 0.50675    |
+| S        | 0.5  | 1.0  | 0.0135     |
+| $\sqcup$ | 0.0  | 0.1  | 0.135      |
+| M        | 0.1  | 0.2  | 0.35       |
+| I        | 0.2  | 0.4  | 0.75       |
+| S        | 0.5  | 1.0  | 0.5        |
+| S        | 0.5  | 1.0  | 0          |
+
 </Example>
+
+# Implementation details
+
+## Using integers
+
+The encoding as described before is impractical since it uses numbers of unlimited precision for *Low* and *High*, similarly *C* can be a very long integer.
+
+Any practical implementation of arithmetic encoding should only use integers and should not be very long (four digits for example).
+
+The main idea is that once the leftmost digits of *Low* and *High* are equal, they continue to be equal. So we should "forget about" the leftmost digit once the encoder has output it. This is done by shifting the digits.
+
+Using four digits, we first initialise $L^*=000$ and $H^*=9999$ and proceed as follows
+
+<Example>
+
+| x        | Low   | High  | Digit | $L^*$ | $H^*$ |
+| -------- | ----- | ----- | ----- | ----- | ----- |
+|          | 0     | 1     |       | 0000  | 9999  |
+| S        | 0.5   | 1     |       | 5000  | 9999  |
+| W        | 0.7   | 0.75  | 7     | 0000  | 4999  |
+| I        | 0.1   | 0.2   | 1     | 0000  | 9999  |
+| S        | 0.5   | 1.0   |       | 5000  | 9999  |
+| S        | 0.75  | 1.0   |       | 7500  | 9999  |
+| $\sqcup$ | 0.75  | 0.775 | 7     | 5000  | 7499  |
+| M        | 0.525 | 0.55  | 5     | 2500  | 4999  |
+| I        | 0.3   | 0.35  | 3     | 0000  | 4999  |
+| S        | 0.25  | 0.5   |       | 2500  | 4999  |
+| S        | 0.375 | 3750  |       |       | 4999  |
+
+</Example>
+
+In practice we should be using enough digits to ensure that enough information is conveyed by $H^*$ and $L^*$ at all times. Another potential issue is that of underflow, when for instance *High* decreases too fast and loses its significant digits. Scaling is then performed to avoid this situation.
+
+## Using binary strings
+
+Firstly note that we can choose to output any number in the range $[Low,High)$ and not necessarily *Low* per se. A certain choice of value may have fewer digits in its binary expression and so require less space than *Low*.
+
+It can be shown that, if one uses the number $(Low+High)/2$, then one only needs to transmit the first
+
+$$
+l={\huge\lceil}\log \dfrac{1}{p(m)}{\huge\rceil}+1
+$$
+
+bits of that number, where $p(m)$ is the probability of the input sequence m
