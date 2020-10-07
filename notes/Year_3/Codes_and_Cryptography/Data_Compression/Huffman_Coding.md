@@ -187,6 +187,6 @@ There is no need for tie-breaking rules. Different merges may yield different co
 
 Huffman codes can be extended to non-binary alphabets. For an alphabet of D characters, we group the D least likely symbols at each stage of reducing the source.
 
-When expending the code we append each of the D characters to one of the least likely symbol's codewords.
+When expanding the code we append each of the D characters to one of the least likely symbol's codewords.
 
 We must end up with exactly D symbols in the final source. So we may need to pad the original source up to $D+k(D+1)$ by adding symbols of probability 0
