@@ -153,7 +153,7 @@ This is true even if X and Y are **not independent**
 
 Linearity of explanation does not apply for multiplication
 
-<Important>
+</Important>
 
 If $X,Y$ are **independent** then
 
