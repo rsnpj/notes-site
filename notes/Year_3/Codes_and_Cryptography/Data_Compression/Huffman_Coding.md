@@ -49,7 +49,7 @@ $$
 
 <Definition name="Uniquely decodable">
 
-A code C is uniquely decodable if every finite string in $\mathscr{D}^*$ is the image of at most 1 message
+A code C is uniquely decodable if every finite string in $\mathscr{D}^*$ is the image of at most 1 message. i.e. a 1 to 1 mapping
 
 </Definition>
 
@@ -60,6 +60,8 @@ A prefix of a word $w-w_1...w_k\in \mathscr{D}^*$ is any word of the form $w_1..
 A code is a prefix if there are no two distinct source symbols $x,y\in \mathscr{X}$ such that $C(x)$ is a prefix of $C(y)$
 
 </Definition>
+
+You can see from the below example, running through the string, you will only get one match.
 
 <Theorem>
 
@@ -137,7 +139,9 @@ For any source X, there is a compact prefix code for X
 
 ## Binary Huffman code
 
-The key is to construct a tree where the leaves correspond to symbols in $\mathscr{X}$ and the paths from the root to the leaves gives the codewords
+[^1]The key is to construct a tree where the leaves correspond to symbols in $\mathscr{X}$ and the paths from the root to the leaves gives the codewords
+
+[^1]: Huffman, D.A., 1952. A method for the construction of minimum-redundancy codes. Proceedings of the IRE, 40(9), pp.1098-1101.
 
 The tree is constructed iteratively. Suppose $\mathscr{X}=\{x_1,...,x_n\}$ with $p_1\geqslant .... \geqslant p_n$
 
@@ -145,7 +149,7 @@ The tree is constructed iteratively. Suppose $\mathscr{X}=\{x_1,...,x_n\}$ with 
 -   Label the edges from $x_{n-1,n}$ to its children as 0 and 1, respectively
 -   Repeat for the new source $X^{(1)}$, making sure to order the symbols in non-decreasing probability
 -   Repeat until the final source $X^{(n-1)}$ only has one symbol left with probability 1, this is the root of the tree
--   Once the tree is built, read off the labels on the path from the root to a lead to get the corresponding codeword
+-   Once the tree is built, read off the labels on the path from the root to a leaf to get the corresponding codeword
 
 <Example title="Non-binary huffman code">
 
