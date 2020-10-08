@@ -5,7 +5,11 @@ lecturer: Tom
 
 # Events
 
-**Probability space**, usually denoted by $\Omega$, is a set of things that describe the possible outcomes of a random experiment
+<Definition name="Probability Space">
+
+Usually denoted by $\Omega$, a set of things that describe the possible outcomes of a random experiment
+
+</Definition>
 
 For example, tossing a coin, $\Omega=\{Head,Tail\}$
 
@@ -17,10 +21,10 @@ A **composite event** is a subset of $\Omega$, for example the event that you ge
 
 # Axioms
 
-A probability distribution $\mathbb{P}$ on $\Omega$ is mapping from events to reals such that
+A probability distribution $\mathbb{P}()$ on $\Omega$ is mapping from events to reals such that
 
-1. $\mathbb{P}(A)\geqslant 0$ for all $A\subseteq \Omega$
-2. $\mathbb{P}(\Omega)=1$ (normalisation)
+1. $\mathbb{P}(A)\geqslant 0$ for all $A\subseteq \Omega$ - Events have positive probability
+2. $\mathbb{P}(\Omega)=1$ (normalisation) - The probability of the whole space is 1
 3. $\mathbb{P}(A)+\mathbb{P}(B)=\mathbb{P}(A\cup B)$ for any two mutually exclusive events A and B, i.e. $A\cap B = \varnothing$
 
 The generalisation of this is that for any finite sequence of pairwise mutually exclusive events $A_1,A_2,...$
@@ -85,6 +89,10 @@ $$
 \mathbb{P}(A \mid B) \stackrel{\text { def }}{=} \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} \stackrel{\text { above }}{=} \frac{\mathbb{P}(A) \cdot \mathbb{P}(B)}{\mathbb{P}(B)}=\mathbb{P}(A)
 $$
 
+Note that $\stackrel{\text{above}}{=}$ is referring to substitution of the above formula
+
+Beware of the false assumption that if two events don't have an intersection, then they're independent
+
 </Definition>
 
 <Definition name="Pairwise independent">
@@ -118,6 +126,8 @@ Used most often as in
 > Probability that random variable X (defined on events of some probability space $\Omega$) takes a certain value
 
 Which is an event: for $y\in\mathbb{R}$ $X=y$ is defined to be $\{\omega \in \Omega : X(\omega)=y\}$
+
+Note that $\mathbb{P}(X)$ doesn't make sense, it must be $\mathbb{P}(X=something)$
 
 ## Independence between random variables
 
