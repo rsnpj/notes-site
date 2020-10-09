@@ -129,7 +129,7 @@ Which is an event: for $y\in\mathbb{R}$ $X=y$ is defined to be $\{\omega \in \Om
 
 Note that $\mathbb{P}(X)$ doesn't make sense, it must be $\mathbb{P}(X=something)$
 
-## Independence between random variables
+## Independence between random variabls
 
 Random variables X and Y are independent if $\forall x,y\in\mathbb{R}$ events "X=x" and "Y=y" are independent
 
@@ -175,5 +175,7 @@ $$
 &=\mathbb{E}[\boldsymbol{X}] \mathbb{E}[\boldsymbol{Y}]
 \end{aligned}
 $$
+
+The first step is shown above in the section about independence between random variables
 
 If not, then (usually) not

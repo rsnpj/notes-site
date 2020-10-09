@@ -13,13 +13,15 @@ Dictionary data sources are used for storing a set of items and support three ba
 
 # Hashing
 
-Performance bounds will often not hold in the worst case, but in the expected case, worst case can be very bad.
+_n is the upper bound of the number of elements in our table_
+
+Performance bounds will often not hold in the worst case, but in the **expected** case, worst case can be very bad.
 
 Often can show that true "with high probability", that is, extremely unlikely to deviate much from expected values
 
-Behaviour determined by one of two hash functions which take items as input and return "random" values in some set $\{1...r\}$
+Behaviour determined by one of two hash functions which take items as input and return "random" values in some set $\{1...r\}$. Throughout r will be the size of our hash table.
 
-Space usage will be bounded in terms of n
+Space usage (table size) will be bounded in terms of n
 
 Balanced search trees usually logarithmic time bounds on operations, we will achieve constant expected per operation
 
@@ -52,9 +54,11 @@ A linked list is sufficient for this
 
 ## Analysing hashing with chaining
 
+> We are using $\mathcal{O}$ in here as constant factors come in, but we don't care about them
+
 Starting with two observations
 
-1. For any two distinct items x and y, the probability that x hashes to y is $\mathcal{O}(1/r)$
+1. For any two distinct items x and y, the probability that x hashes to y is $\mathcal{O}(1/r)$ - our table has size r, so just the odds of that one bucket out of r
 2. The time for an operation on an item x is bounded by some constant times the number of items in the bucket of x
 
 By the second observation, we can bound the time by bounding the size of x's bucket
