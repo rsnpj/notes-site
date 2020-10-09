@@ -79,6 +79,8 @@ The time complexity of a non-deterministic Turing Machine NT is the function $NT
 
 </Definition>
 
+If not all branches halt, then it is undefined
+
 ## Nondeterministic time complexity
 
 <Definition name="Nondeterministic Time complexity">
@@ -119,7 +121,7 @@ $$
 
 -   Any complexity class can be partitioned into equivalence classes via polynomial-time reduction - each class contains problems that are reducible to each other
 -   These equivalence classes are partially ordered by reduction
--   Problems in the maximal class are called complete
+-   Problems in the maximal class are called **complete** - every problem in the class is polynomial time reducible to them
 
 # NP completeness
 
@@ -133,6 +135,12 @@ $$
 Satisfiability is NP complete
 </Theorem>
 
+<Corollary>
+
+**P=NP** iff Satisfiability is in **P**
+
+</Corollary>
+
 ## Proof
 
 -   Let $\mathcal{L}\in NP$, hence there is some nondeterministic NT that decides $\mathcal{L}$ in at most $p(|x|)$ steps
@@ -144,10 +152,10 @@ Satisfiability is NP complete
 Assume that NT uses:
 
 -   $h+1$ symbols $\sigma_0, \sigma_1,...,\sigma_h$ (where $\sigma_0$ is the blank symbol)
--   $k+1$ states $q_0, q_1,...,q_k$ where ($q_1$ is the accepting state)
+-   $k+1$ states $q_0, q_1,...,q_k$ (where $q_0$ is the initial state and $q_1$ is the accepting state)
 -   l instructions $r_1,...,r_l$ (distinct possible transitions)
 
-Assume that every path in NT(x) has length $x_a$ (the length of an accepting path for input x). For this:
+Assume that every path in NT(x) has length $x_a=p(|x|)$ (the length of an accepting path for input x). For this:
 
 -   Extend all shorter paths assuming that no further action is taken
 -   Cut all longer paths, since such paths make no difference to whether or not x will be accepted
@@ -156,13 +164,13 @@ Assume that every path in NT(x) has length $x_a$ (the length of an accepting pat
 
 We use Boolean variables to specify exactly the possible configurations at each time $t\leqslant t^* = x_a$
 
--   $P_{s,t}^i$ is **true** if s-th cell contains symbol $\sigma_i$ at time t
+-   $P_{s,t}^i$ is **true** iff s-th cell contains symbol $\sigma_i$ at time t (describes **tape**)
     -   There are $(h+1)\cdot x_a \cdot x_a$ of such variables
--   $Q_t^i$ is **true** iff NT is in state $q_i$ at time t
+-   $Q_t^i$ is **true** iff NT is in state $q_i$ at time t (describes **state**)
     -   There are $(k+1)\cdot x_a$ of them
--   $S_{s,t}$ is **true** if tape head is on the s-th dell at time t
+-   $S_{s,t}$ is **true** if tape head is on the s-th dell at time t (describes **head**)
     -   There are $x_a \cdot x_a$ of them
--   $R_t^i$ is **true** if the machine implements instruction $r_i$ at time $t$
+-   $R_t^i$ is **true** if the machine implements instruction $r_i$ at time $t$ (describes **instructions**)
     -   There are $l\cdot x_a$ of them
 
 ### Formula
@@ -173,12 +181,10 @@ $$
 \Phi_x=A\land B \land C \land D \land E \land F \land G \land H \land J \land K
 $$
 
-> Question - why is I missing?
-
 **A** says each cell contains exactly one symbol
 
 $$
-A_{s, t}=\left(P_{s, t}^{0} \vee P_{s, t}^{1} \vee \ldots \vee P_{s, t}^{h}\right) \wedge \bigwedge_{0 \leq i<j \leq h}\left(P_{s, t}^{i} \Rightarrow \neg P_{s, t}^{j}\right)
+A_{s, t}=\left(P_{s, t}^{0} \vee P_{s, t}^{1} \vee \ldots \vee P_{s, t}^{h}\right) \wedge \bigwedge_{0 \leq i<j \leq h}\underbrace{\left(P_{s, t}^{i} \Rightarrow \neg P_{s, t}^{j}\right)}_{\text{One call can't contain two pieces of data}}
 $$
 
 Remember that $(X \Rightarrow Y)\equiv (\lnot X \lor Y)$
