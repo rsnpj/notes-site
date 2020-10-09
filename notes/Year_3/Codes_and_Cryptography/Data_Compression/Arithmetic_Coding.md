@@ -17,7 +17,7 @@ $$
 p(m)=p(a)^{10}\approx 0.904
 $$
 
-So if we were to compute the Huffman code based on all $2^10$ possible sequenced, m would be encoded as just one bit.
+So if we were to compute the Huffman code based on all $2^{10}$ possible sequenced, m would be encoded as just one bit.
 
 The main limitation of Huffman is that codewords are only defined for symbols, not messages.
 
@@ -51,7 +51,7 @@ The interval is then recursively subdivided in the same fashion, for example $a_
 -   $a_1a_2=[0.16,0.36)$
 -   $a_1a_3=[0.36,0.4)$
 
-The decoding is performed by iteratively performing splits and choosing the interval where the code belongs. For example if we send $c=0.36$ the decoder finds that $c\in[0,0.4)$ so $m_1=a_1$ then $c\in[0.36,0.4)$ so $m_2=a_2$
+The decoding is performed by iteratively performing splits and choosing the interval where the code belongs. For example if we send $c=0.36$ the decoder finds that $c\in[0,0.4)$ so $m_1=a_1$ then $c\in[0.36,0.4)$ so $m_2=a_3$
 
 </Example>
 
@@ -59,15 +59,15 @@ For each symbol processed, the current interval gets smaller and requires more b
 
 <Example>
 
-In this example, we are compressing the string SWISS$\sqcup$MISS
+In this example, we are compressing the string SWISS␣MISS
 
-| Character x | Frequency | Probability | Range [L(x),R(x)) |
+| Character x | Frequency | Probability | Range [L(x),H(x)) |
 | ----------- | --------- | ----------- | ----------------- |
 | S           | 5         | 0.5         | [0.5,1.0)         |
 | W           | 1         | 0.1         | [0.4,0.5)         |
 | I           | 2         | 0.2         | [0.2,0.4)         |
 | M           | 1         | 0.1         | [0.1,0.2)         |
-| $\sqcup$    | 1         | 0.1         | [0.1,0.2)         |
+| ␣           | 1         | 0.1         | [0.1,0.2)         |
 
 The encoding process begins by defining two variables _Low_ and _High_ and setting them to 0 and 1 respectively. They define an interval $[Low, High)$. As symbols are input and processed, the values _High_ and _Low_ are moved closer together. As the symbol x is being input and processed, _Low_ and _High_ are updated according to
 
@@ -79,21 +79,23 @@ $$
 Low \rightarrow Low + (High - Low)L(x)
 $$
 
-| x        | L(x) | H(x) | _Low_      | _High_   |
-| -------- | ---- | ---- | ---------- | -------- |
-|          |      |      | 0          | 1        |
-| S        | 0.5  | 1.0  | 0.5        | 1.0      |
-| W        | 0.4  | 0.5  | 0.70       | 0.75     |
-| I        | 0.2  | 0.4  | 0.71       | 0.72     |
-| S        | 0.5  | 1.0  | 0.715      | 0.72     |
-| S        | 0.5  | 1.0  | 0.7175     | 0.72     |
-| $\sqcup$ | 0.0  | 0.1  | 0.7175     | 0.71775  |
-| M        | 0.1  | 0.2  | 0.717525   | 0.717550 |
-| I        | 0.2  | 0.4  | 0.717530   | 0.717535 |
-| S        | 0.5  | 1.0  | 0.7175325  | 0.717535 |
-| S        | 0.5  | 1.0  | 0.71753375 | 0.717535 |
+Note here high and low are updated simultaneously, so the new _High_ value doesn't get used in the calculation of the new _Low_ value
 
-The final code is the final value of _Low_, 0.71753375 of which only the eight digits 71753375 need to be written.
+| x   | L(x) | H(x) | _Low_      | _High_   |
+| --- | ---- | ---- | ---------- | -------- |
+|     |      |      | 0          | 1        |
+| S   | 0.5  | 1.0  | 0.5        | 1.0      |
+| W   | 0.4  | 0.5  | 0.70       | 0.75     |
+| I   | 0.2  | 0.4  | 0.71       | 0.72     |
+| S   | 0.5  | 1.0  | 0.715      | 0.72     |
+| S   | 0.5  | 1.0  | 0.7175     | 0.72     |
+| ␣   | 0.0  | 0.1  | 0.7175     | 0.71775  |
+| M   | 0.1  | 0.2  | 0.717525   | 0.717550 |
+| I   | 0.2  | 0.4  | 0.717530   | 0.717535 |
+| S   | 0.5  | 1.0  | 0.7175325  | 0.717535 |
+| S   | 0.5  | 1.0  | 0.71753375 | 0.717535 |
+
+The final code is the final value of _Low_, 0.71753375 of which only the eight digits 71753375 need to be written. Any value in the [low, high) interval can be sent and it would still work though. The frequency values also need to be sent in order to reconstruct the high and low values.
 
 The decoder first inputs the symbols and their range, and reconstructs the table of frequencies and probabilities. It then inputs the rest of the code. The first digit is 7, so then number is $0.7\in [0.5,1)$. This means that the first symbol is S. It carries on, updating the code number to remove the effect of the character it just input, so after the character $x$, it performs the update
 
@@ -145,7 +147,7 @@ Using four digits, we first initialise $L^*=000$ and $H^*=9999$ and proceed as f
 | M        | 0.525 | 0.55  | 5     | 2500  | 4999  |
 | I        | 0.3   | 0.35  | 3     | 0000  | 4999  |
 | S        | 0.25  | 0.5   |       | 2500  | 4999  |
-| S        | 0.375 | 3750  |       |       | 4999  |
+| S        | 0.375 | 0.5   | 3750  |       | 4999  |
 
 </Example>
 
