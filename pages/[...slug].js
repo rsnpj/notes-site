@@ -299,7 +299,7 @@ function Lecture({
 									/_/g,
 									" "
 							  )
-					)}.png?theme=dark&md=1&fontSize=150px`}
+					)}.png?theme=dark&md=1&fontSize=100px`}
 				></meta>
 				<meta
 					property="og:title"
