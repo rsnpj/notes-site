@@ -214,16 +214,16 @@ function Lecture({
 				/>
 				<meta
 					property="og:image"
-					content={`https://og.csnotes.me/**${params.slug[
-						params.slug.length - 1
-					].replace(/_/g, " ")}**/${
+					content={`https://og.csnotes.me/**${escape(
+						params.slug[params.slug.length - 1].replace(/_/g, " ")
+					)}**/${escape(
 						params.slug.length <= 1
 							? "Sam's Notes"
 							: params.slug[params.slug.length - 2].replace(
 									/_/g,
 									" "
 							  )
-					}.png?theme=dark&md=1&fontSize=150px`}
+					)}.png?theme=dark&md=1&fontSize=150px`}
 				></meta>
 				<meta
 					property="og:title"
