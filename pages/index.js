@@ -140,6 +140,12 @@ export default function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 					name="description"
 					content="Notes from my course at Durham University"
 				/>
+				<meta
+					property="og:image"
+					content={
+						"https://og.csnotes.me/**Sam's%20Notes**%20/.png?theme=dark&md=1&fontSize=200px"
+					}
+				></meta>
 			</Head>
 
 			<Layout
