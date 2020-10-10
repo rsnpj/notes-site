@@ -212,6 +212,26 @@ function Lecture({
 					name="description"
 					content="Notes from my course at Durham University"
 				/>
+				<meta
+					property="og:image"
+					content={`https://og.csnotes.me/**${params.slug[
+						params.slug.length - 1
+					].replace(/_/g, " ")}**/${
+						params.slug.length <= 1
+							? "Sam's Notes"
+							: params.slug[params.slug.length - 2].replace(
+									/_/g,
+									" "
+							  )
+					}.png?theme=dark&md=1&fontSize=150px`}
+				></meta>
+				<meta
+					property="og:title"
+					content={params.slug[params.slug.length - 1].replace(
+						/_/g,
+						" "
+					)}
+				></meta>
 			</Head>
 			<Layout
 				main={<Main />}
