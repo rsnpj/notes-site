@@ -133,6 +133,20 @@ function Lecture({
 					<h2 className="text-center text-lg text-gray-700">
 						{params.slug[1].replace(/_/g, " ")}
 					</h2>
+					{postData.author && (
+						<h3 className="text-center text-green-700 text-lg">
+							Written by{" "}
+							<a
+								className="underline"
+								href={
+									"https://github.com/" +
+									postData.author.github
+								}
+							>
+								{postData.author.name}
+							</a>
+						</h3>
+					)}
 				</div>
 				{postData.exercise && (
 					<div className="flex justify-center pb-4">
