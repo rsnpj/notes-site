@@ -11,7 +11,7 @@ Analyses features of the items/documents previously rated by a user then builds 
 
 The aim of this is to recommend items similar to items this user has liked in the past
 
-Benefits of Content-Based Filtering:
+Benefits of Content-Based Filtering[^1]:
 
 -   User independence
     -   Use only ratings to build user profile
@@ -21,7 +21,7 @@ Benefits of Content-Based Filtering:
     -   List content features/descriptions
 -   New item
     -   New items recommended
-    -   Not susceptible to first-rater problem
+    -   Not susceptible to first-rater problem(heavy influence of those who first rate the item)
 
 Drawbacks of Content-Based Filtering:
 
@@ -41,6 +41,8 @@ Drawbacks of Content-Based Filtering:
     -   Throw away/recompute
     -   Mix in new rating; decay old profile over time
 
+[^1]: Lops, P., De Gemmis, M. and Semeraro, G., 2011. Content-based recommender systems: State of the art and trends. In Recommender systems handbook (pp. 73-105). Springer, Boston, MA.
+
 # Content based filtering architecture
 
 ![Architecture](/img/Year_3/Recommender/CBF/Architecture.webp)
@@ -54,11 +56,12 @@ Aim:
 Feature extraction techniques
 
 -   Transforming original information space to target one
+-   Understanding which features are relevant and so should be selected to represent an item
 
 Item representations:
 
--   Type 1: Structured - same number of attributes, with known set of values
--   Type 2: Unstructured data
+-   Type 1: **Structured** - same number of attributes, with known set of values
+-   Type 2: **Unstructured data**
 
 ## Profile learner
 
@@ -67,14 +70,15 @@ Aim:
 -   Collect and generalise user preference data
 -   Construct user profile
 
-Represented items repository
+Takes data from
 
-Feedback repository:
+-   Represented items repository
+    -   Features + Descriptions of items
+-   Feedback repository:
+    -   Explicitly defined user interests
+    -   Inferred from reactions to recommendations
 
--   Explicitly defined user interests
--   Inferred from reactions to recommendations
-
-User profile model
+Generates a User profile model
 
 -   Inferred preferences
 -   Supervised learning algorithm
@@ -98,7 +102,7 @@ Aim:
 -   Unstructured data
     -   Keyword based approach
         -   Requires training sets with a large number of examples
-        -   Lack of intelligence
+        -   Lack of intelligence - can't infer a related keyword from a keyword, won't find wider category for example
     -   Semantic analysis
         -   Knowledge bases (lexicons or ontologies)
 
@@ -120,9 +124,10 @@ Item/document representation
 
 -   All documents represented by vectors of equal length
 -   A vector of term weights
+-   Dimensions are a subset of the dictionary of the relevant terms
 -   In an n-dimensional space
-    -   Dimension is a term from the dictionary of the corpus
-    -   Weight is the degree of association between the document and the term
+    -   **Dimension** is a term from the dictionary of the corpus
+    -   **Weight** is the degree of association between the document and the term
 
 ## Feature extraction/selection procedure
 
@@ -130,11 +135,11 @@ Item/document representation
     - Tokenization, stopwords removal, stemming, lemmatization
 2. Compute selection metric
 3. Sort metric values
-    - Pick rich informative features
+    - Pick rich informative features - features with high values
 4. Combine all feature vectors
     - Remove duplicate terms
     - Generate new feature vector space
-        - All documents represented by vectors of equal length
+        - All documents represented by vectors of equal length for the matching process to be successful
 
 ## Feature selection metrics
 
@@ -169,7 +174,7 @@ $$
 M I(t, c)=\log \left(\frac{A /(A+C)}{(A+B) / N}\right)
 $$
 
-### TF-IDF
+### TF-IDF(Term frequency - Inverse document frequency)
 
 -   The most common weighting scheme
 -   Terms with higher TF-IDF are more important
@@ -191,11 +196,13 @@ $$
 
 TF-IDF
 
+> Notation is annoying here, TF-IDF doesn't mean any subtraction
+
 -   N - number of documents
 -   $n_k$ - number of documents with term k
 
 $$
-\operatorname{TF}-\operatorname{IDF}\left(t_{k}, d_{j}\right)=\underbrace{\operatorname{TF}\left(t_{k}, d_{j}\right)}_{\mathrm{TF}} \cdot \underbrace{\log \frac{N}{n_{k}}}_{\mathrm{IDF}}
+\operatorname{TF-IDF}\left(t_{k}, d_{j}\right)=\underbrace{\operatorname{TF}\left(t_{k}, d_{j}\right)}_{\mathrm{TF}} \cdot \underbrace{\log \frac{N}{n_{k}}}_{\mathrm{IDF}}
 $$
 
 (cosine) Normalisation
@@ -204,5 +211,5 @@ $$
 -   Documents represented by vectors of terms with weights in [0,1] interval
 
 $$
-\large w_{k,j}=\dfrac{TF-IDF(t_k,d_j)}{\sqrt{\sum^{|T|}_{s=1}TF-IDF(t_s,d_j)^2}}
+\large w_{k,j}=\dfrac{\operatorname{TF-IDF}(t_k,d_j)}{\sqrt{\sum^{|T|}_{s=1}\operatorname{TF-IDF}(t_s,d_j)^2}}
 $$
