@@ -74,7 +74,7 @@ Can run in browser as file, not just with http
 
 ## Importing code
 
--   Link to external javascript code with `src` attribute
+-   Link to external JavaScript code with `src` attribute
 
 -   Usually placed in `head`
 
