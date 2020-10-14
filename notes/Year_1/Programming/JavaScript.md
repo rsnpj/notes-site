@@ -9,7 +9,7 @@ lecturer: Steven
 - Not Java
 - It has some good parts
 - Standardised by Ecma (once ECMA) as EcmaScript
-- Current version is ES8 (2018)
+- Current version is ES11 (2020)
 - Most recent widely-supported version is ES6 (2015)
 - [Support varies](http://kangax.github.io/compat-table/es6/)
 
