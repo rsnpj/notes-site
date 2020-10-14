@@ -49,7 +49,7 @@ To be effective must:
 
 Factors in impact analysis:
 
--   The consequence of not making the change
+-   The consequences of not making the change
 
 -   The benefits of the change
 
