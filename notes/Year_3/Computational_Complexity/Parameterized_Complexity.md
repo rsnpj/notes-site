@@ -102,3 +102,47 @@ Assume now neither rule can be applied
 
 -   If $|V|>k(k+1)$ then the answer is no - each vertex v has $\deg(v)\leqslant k$, and so k vertices can cover at most $k^2$ other vertices
 -   If $|V|\leqslant k(k+1)$ then we have a kernel
+
+## Kernelization and FPT
+
+<Theorem>
+
+A parameterized problem is FPT iff it admits kernelization
+
+</Theorem>
+
+Proof:
+
+-   We already know $\Leftarrow$ direction, need to prove $\Rightarrow$ direction
+-   Assume the problem as a $f(k)n^c$ algorithm
+    -   If $f(k)\leqslant n$ when solve the problem in time $f(k)n^c\leqslant n^{c+1}$ and output yes or no instance
+    -   If $n\leqslant f(k)$ then we have a kernel
+-   Size of the kernel is critical for the running time
+
+# Parameterized reductions
+
+<Definition name="Parameterized Reduction">
+
+A parameterized reduction from problem X to problem Y is a function $\phi$ such that
+
+1. $\phi(I)$ is a yes-instance of Y iff I is a yes-instance of X
+2. $\phi(I)$ can be computed in time $f(k)|I|^c$ where $k$ is the parameter of I
+3. If k is the parameter f I and $k'$ is the parameter of $\phi(I)$ then $k'\leqslant g(k)$ for some function g
+
+</Definition>
+
+# The class W[1]
+
+<Problem name="Short acceptance" instance="A non-deterministic TMM, input string x, and parameter k" question="Is there a computation of M that accepts x after at most k steps?"/>
+
+<Definition name="W[1]">
+
+All parameterized problems that admit a parameterized reduction to Short Acceptance
+
+</Definition>
+
+-   Short acceptance is W[1]-complete by definition
+-   Independent set is inter-reducible with Short Acceptance so it is also W[1] complete
+-   If independent set has a parameterized reduction to X, then X is W[1]-hard
+-   It is generally believed that $FPT\neq W[1]$, but is not proven
+-   Many problems are known to be W[1]-hard
