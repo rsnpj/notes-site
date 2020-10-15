@@ -118,12 +118,12 @@ def insert(x)
     if (T[h1(x)]==x or T[h2(x)]==x):
         return
     pos=h1(x)
-    for x in range (n):
+    for i in range(n):
         if(T[pos]==None):
             T[pos]=x
             return
         swap(x,T[pos])
-        if pos === h1(x):
+        if pos == h1(x):
             pos=h2(x)
         else:
             pos=h1(x)
@@ -131,13 +131,13 @@ def insert(x)
     insert(x)
 ```
 
-The variable pos keeps track of the position in which we are currently trying to inset an item
+The variable `pos` keeps track of the position in which we are currently trying to inset an item
 
 Note that the procedure doesn't start out with checking whether $h_1(x)$ or $h_2(x)$ are vacant but simply tries to inset x into $h_1(x)$
 
 ## Analysis
 
-Insertion procedure can loop n times only if there is a cycle in the graph
+Insertion procedure can loop n times **only** if there is a cycle in the graph
 
 Every insertion will succeed so long as there is no cycle
 
@@ -162,7 +162,7 @@ For any positions j and j, and any $c>1$, if table size $r\geqslant 2cn$ then th
 
 -   There is a set S of at most n items that have i **and** j as possible positions
     -   We're only interested in paths of length 1 here
-    -   Those are edges, and an edge represent an item's the two hash values - **what does this mean?**
+    -   Those are edges, and an edge represents the two hash values of an item
 -   For each item, the probability that this is true is at most $2/r^2$
     -   First goes here and second there (each with probability 1/r) or the other way round
 

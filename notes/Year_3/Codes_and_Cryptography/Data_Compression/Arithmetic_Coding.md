@@ -160,7 +160,7 @@ Firstly note that we can choose to output any number in the range $[Low,High)$ a
 It can be shown that, if one uses the number $(Low+High)/2$, then one only needs to transmit the first
 
 $$
-l={\huge\lceil}\log \dfrac{1}{p(m)}{\huge\rceil}+1
+l=\bigg\lceil\log \dfrac{1}{p(m)}\bigg\rceil+1
 $$
 
 bits of that number, where $p(m)$ is the probability of the input sequence m

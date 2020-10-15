@@ -213,3 +213,92 @@ $$
 $$
 \large w_{k,j}=\dfrac{\operatorname{TF-IDF}(t_k,d_j)}{\sqrt{\sum^{|T|}_{s=1}\operatorname{TF-IDF}(t_s,d_j)^2}}
 $$
+
+# Profile Learning
+
+<Definition name="Training set">
+
+Label item/document based on active user's rating
+
+</Definition>
+
+# Methods
+
+## (k-) nearest neighbour
+
+Lazy learners
+
+Process
+
+1. Compare new item to all stored items
+2. Find k-nearest neighbours
+3. Assign neighbours' class to the new item
+
+## Prediction and recommendations
+
+Predict like/dislike for a (new/unseen) item
+
+Match two vectors of the same length
+
+1. User profile vector
+2. Item representation vector
+
+## Similarity/distance measures
+
+-   Cosine:
+
+$$
+\cos (x, y)=\frac{(x \bullet y)}{\|x\|\|y\|} \quad \sin \left(d_{i}, d_{j}\right)=\frac{\sum_{k} w_{k i} \cdot w_{k j}}{\sqrt{\sum_{k} w_{k i}^{2}} \cdot \sqrt{\sum_{k} w_{k j}^{2}}}
+$$
+
+-   Pearson correlation
+
+$$
+\operatorname{Pearson}(x,y)=\dfrac{\Sigma(x,y)}{\sigma_x\times \sigma_y}
+$$
+
+-   Euclidean
+
+$$
+d(x,y)=\sqrt{\sum_{k=1}^n(x_k-y_k)^2}
+$$
+
+-   Minkowski
+
+$$
+d(x,y)=\bigg(\sum^n_{k=1}|x_k-y_k|^r\bigg)^{\frac{1}{r}}
+$$
+
+-   Mahalanobis
+
+$$
+d(x,y)=\sqrt{(x-y)\sigma^{-1}(x-y)^T}
+$$
+
+-   Jaccard, Simple Matching
+
+$$
+JC=\dfrac{M11}{M01+M10+M11} \quad SMC=\dfrac{\text{Number of matches}}{\text{Number of attributes}}
+$$
+
+# Other methods
+
+## Rocchio's formula
+
+User profile as a classifier
+
+-   $\overrightarrow{c_i}$ - category/class
+-   T - dictionary, distinct terms in the training set
+-   $\omega_{kj}$ - TF-IDF weight
+-   $POS_i$, $NEG_i$ - positive/negative examples
+-   $\beta, \gamma$, control parameters
+
+$$
+\omega_{k i}=\beta \cdot \sum_{\left\{d_{j} \in P O S_{i}\right\}} \frac{\omega_{k j}}{\left|P O S_{i}\right|}-\gamma \cdot \sum_{\left\{d_{j} \in N E G_{i}\right\}} \frac{\omega_{k j}}{\left|N E G_{i}\right|}
+$$
+
+$$
+\overrightarrow{c_i}=\langle \omega_{wi},...,\omega_{|T|i}\rangle
+$$
+
+## Prediction
