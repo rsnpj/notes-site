@@ -113,14 +113,14 @@ origin defined by `git remote add origin` or `git clone`
 To make a git folder, either use git init to start a new repo, or git
 clone to copy a repo from a remote repository.
 
-Git add adds the files you want to commit to staging
+`git add` adds the files you want to commit to staging
 
-Git commit will move the files from the staging area to the head of one
+`git commit` will move the files from the staging area to the head of one
 of the branches in the repository.
 
-Git push moves the files into the remote repository
+`git push` moves the files into the remote repository
 
-Git add does not also commit as there are some changed files that you do
+`git add` does not also commit as there are some changed files that you do
 not want to commit to the repository.
 
 To move a repo to github, create an empty repository and set the remote.
