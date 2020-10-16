@@ -201,7 +201,7 @@ Rehashing isn't very common:
 
 ### Problem
 
-When doing analysis carefully, we can show that with arbitrary constant $\epsilon>0$ and $2(1+\epsilon)n$ slots, for at most n keys, we get
+When doing analysis in more detail, we can show that with arbitrary constant $\epsilon>0$ and $2(1+\epsilon)n$ slots, for at most n keys, we get
 
 -   Lookups $\mathcal{O}(1)$ worst-case
 -   Deletions $\mathcal{O}(1)$ worst-case

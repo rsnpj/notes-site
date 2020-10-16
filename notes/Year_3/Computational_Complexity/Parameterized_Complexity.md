@@ -14,7 +14,7 @@ Similarities and differences
 -   Both problems are NP complete
 -   Both solvable by complete enumeration in $\mathcal{O}(n^k)$ time
 -   VC can be solved in $\mathcal{O}(2^kn)$ time
--   No known $n^{\mathcal{O}(k)}$ algorithm for IndSet
+-   No known $n^{o(k)}$ algorithm for IndSet
 -   IndSet is (probably) harder than VC
 
 # A $\mathcal{O}(2^kn)$ algorithm for Vertex Cover
@@ -24,25 +24,25 @@ Each edge in G must be covered
 Build a binary search tree of depth k as follows:
 
 -   Pick any edge $(x,y)$ and branch
--   Left branch buts x in VC and removes it from G
+-   Left branch puts x in VC and removes it from G
 -   Right branch puts y in VC and removes it from G
 -   Recurse by choosing the next (any) edge on each branch
 
 Note that:
 
 -   If G have VC with at most k elements the algorithm must find it in one of the branches of the search tree
--   The tree has $\mathcal{O}(2^k)$ nodes, and $\mathcal{O}(n)$ work is done at each node, so $\mathcal{O}(2^k)$ is optimal
+-   The tree has $\mathcal{O}(2^k)$ nodes, and $\mathcal{O}(n)$ work is done at each node, so $\mathcal{O}(2^kn)$ is optimal
 
 # Parameterized problems and FPT
 
 Parameterized problem:
 
--   Input $I$ has distinguished integer $k$, called parameter
+-   Input $I$ has distinguished integer $k$, called **parameter**
 -   We wish to express run time in terms of both $n=|I|$ and $k$
 
-<Definition name="Fixed Parameter Traceable">
+<Definition name="Fixed Parameter Tractable">
 
-A parameterized problem is fixed-parameter traceable if it can be solved in time $f(k)n^c$ where f is an arbitrary function depending only on k and c is a constant (independent of k)
+A parameterized problem is fixed-parameter tractable if it can be solved in time $f(k)n^c$ where f is an arbitrary function depending only on k and c is a constant (independent of k)
 
 </Definition>
 
@@ -89,14 +89,14 @@ A polynomial-time procedure that transforms instance $(I,k)$ into another instan
 
 </Definition>
 
-If a problem X admits kernelization then it is **FPT**. The proof for this is that the size of $(I',k')$ depends only on k, not on n, so we can solve $(I',k')$ by brute force.
+If a problem X admits kernelization then it is **FPT**. The proof for this is that the size of $(I',k')$ depends only on k, not on n, so we can solve $(I',k')$ by brute force. This is shown by point 3.
 
 ## Kernelization for vertex cover
 
 Exhaustively apply the following rules
 
--   **Rule 1**: If v is an isolated vertex, $(G,k)\Rightarrow (G\backslash v,k)$
--   **Rule 2**: If $\operatorname{deg}(v)>k, (G,k)\Rightarrow (G\backslash v, k-1)$
+-   **Rule 1**: If v is an isolated vertex, $(G,k)\Rightarrow (G\backslash v,k)$ (doesn't touch any edges so we don't care)
+-   **Rule 2**: If $\operatorname{deg}(v)>k, (G,k)\Rightarrow (G\backslash v, k-1)$ (this vertex must be the cover)
 
 Assume now neither rule can be applied
 
@@ -131,6 +131,8 @@ A parameterized reduction from problem X to problem Y is a function $\phi$ such 
 
 </Definition>
 
+In this case, if Y is FPT, then so is X
+
 # The class W[1]
 
 <Problem name="Short acceptance" instance="A non-deterministic TMM, input string x, and parameter k" question="Is there a computation of M that accepts x after at most k steps?"/>
@@ -142,7 +144,7 @@ All parameterized problems that admit a parameterized reduction to Short Accepta
 </Definition>
 
 -   Short acceptance is W[1]-complete by definition
--   Independent set is inter-reducible with Short Acceptance so it is also W[1] complete
+-   Independent set is inter-reducible with Short Acceptance so it is also W[1] complete (parameterized reductions in both directions)
 -   If independent set has a parameterized reduction to X, then X is W[1]-hard
 -   It is generally believed that $FPT\neq W[1]$, but is not proven
 -   Many problems are known to be W[1]-hard
