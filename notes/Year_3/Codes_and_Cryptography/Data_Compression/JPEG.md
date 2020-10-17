@@ -44,7 +44,7 @@ the eventual perceptual quality of the image, is confined to a single
 channel. This more closely corresponds to the perception of color in the
 human visual system.
 
-![YCbCr](/img/Year_3/CaC/Data_Compression/JPEG/YCbCr.jpg)
+![YCbCr](/img/Year_3/CaC/Data_Compression/JPEG/YCbCr.webp)
 
 ## Downsampling
 
@@ -124,7 +124,7 @@ $(f_0, \dots, f_{N-1}, f_{N-1}, f_{N-2}, \dots, f_0)$. That signal does
 not have such discontinuity anymore. See below for an example; note that
 there are four main kinds of DCT and that JPEG uses DCT-II.
 
-![image](/img/Year_3/CaC/Data_Compression/JPEG/DCT.png)
+![image](/img/Year_3/CaC/Data_Compression/JPEG/DCT.webp)
 
 # Step 2: Quantization
 
