@@ -182,7 +182,9 @@ function Lecture({
 				<hr className="pb-4" />
 				{(tab === "Notes" || !postData.exercise) && (
 					<div className="pb-6">
-						<div className="prose pb-6 mx-auto px-4">{content}</div>
+						<div className="prose pb-6 mx-auto px-4 wrapper">
+							{content}
+						</div>
 						<div className="flex justify-center">
 							<a
 								className="flex content-center hover:underline text-blue-700"
