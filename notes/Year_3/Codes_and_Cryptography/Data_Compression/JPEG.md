@@ -97,7 +97,7 @@ value is now -4) before applying the DCT. Following our running example,
 we obtain
 
 $$
-\Theta = \begin{pmatrix}
+\Theta = \begin{pmatrix}\begin{array}{rrrrrrrr}
     39.88 & 6.56 & -2.24 & 1.22 & -0.37 & -1.08 & 0.79 & 1.13 \\
     -102.43 & 4.56 & 2.26 & 1.12 & 0.35 & -0.63 & -1.05 & -0.48\\
     37.77 & 1.31 & 1.77 & 0.25 & -1.50 & -2.21 & -0.10 & 0.23\\
@@ -106,7 +106,7 @@ $$
     5.98 & -0.13 & -0.45 & -0.77 & 1.99 & -0.26 & 1.46 & 0.00\\
     3.97 & 5.52 & 2.39 & -0.55 & -0.051 & -0.84 & -0.52 & -0.13\\
     -3.43 & 0.51 & -1.07 & 0.87 & 0.96 & 0.09 & 0.33 & 0.01
-\end{pmatrix}
+\end{array}\end{pmatrix}
 $$
 
 ## DCT over DFT
@@ -147,7 +147,7 @@ quantization steps are organized in a quantization table; an example is
 given in the following matrix.
 
 $$
-{\bf Q} = \begin{pmatrix}
+{\bf Q} = \begin{pmatrix}\begin{array}{rrrrrrrr}
     16 & 11 & 10 & 16 & 24 & 40 & 51 & 61\\
     12 & 12 & 14 & 19 & 26 & 58 & 60 & 55\\
     14 & 13 & 16 & 24 & 40 & 57 & 69 & 56\\
@@ -156,6 +156,7 @@ $$
     24 & 35 & 55 & 64 & 81 & 104 & 113 & 92\\
     49 & 64 & 78 & 87 & 103 & 121 & 120 & 101\\
     72 & 92 & 95 & 98 & 112 & 100 & 103 & 99
+\end{array}
 \end{pmatrix}
 $$
 
@@ -181,7 +182,7 @@ errors in the higher AC frequencies.
 Following our example, we obtain the following quantized coefficients
 
 $$
-\begin{pmatrix}
+\begin{pmatrix}\begin{array}{rrrrrrrr}
     2 & 1 & 0 & 0 & 0 & 0 & 0 & 0\\
     -9 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     3 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
@@ -190,6 +191,7 @@ $$
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+\end{array}
 \end{pmatrix}
 $$
 
@@ -204,7 +206,7 @@ Reconstruction at the decoder’s end is straightforward: the
 reconstructed value $\hat{\theta}_{i,j}$ is given by
 
 $$
-\begin{pmatrix}
+\begin{pmatrix}\begin{array}{rrrrrrrr}
     32 & 11 & 0 & 0 & 0 & 0 & 0 & 0\\
     -108 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     42 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
@@ -213,6 +215,7 @@ $$
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0\\
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0
+    \end{array}
     \end{pmatrix}
 $$
 

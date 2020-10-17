@@ -8,37 +8,29 @@ lecturer: Max
 ## Fourier series
 
 The representation of periodic functions in terms of a series of sines
-and cosines was first used by Fourier in 1812. This idea has like
-wildfire across mathematics and its applications and is used in a
-ridiculous range of areas under different guises.
+and cosines was first used by Fourier[^1].
 
-In this section, we want to give an introduction to Fourier series. We
-shall be rather informal: we will not prove many of the claimed results,
-and we will not worry about the precise assumptions we make.
+[^1]: Grattan-Guinness, I., 2005. Joseph Fourier, Théorie analytique de la chaleur (1822). In Landmark Writings in Western Mathematics 1640-1940 (pp. 354-365). Elsevier Science.
 
 Let $f$ be a periodic function of period $T$, i.e.
 
 $$
-f(t) = f(t + nT) \quad \forall t \in \R, n \in \Z.
+f(t) = f(t + nT) \quad \forall t \in \R, n \in \Z
 $$
 
 Then we can write
 $f(t)$ as
 
 $$
-f(t) = \sum_{k=-\infty}^\infty c_k e^{i k \omega t},
+f(t) = \sum_{k=-\infty}^\infty c_k e^{i k \omega t}
 $$
 
-where $i = \sqrt{-1}$ and
-
-$$
-\omega = \frac{2 \pi}{ T }.
-$$
+where $i = \sqrt{-1}$ and $\omega = \frac{2 \pi}{ T }$
 
 Equivalently, we have
 
 $$
-f(t) = a_0 + \sum_{k=1}^\infty a_k \cos ( k \omega t ) + \sum_{k=1}^\infty b_k \sin ( k \omega t ).
+f(t) = a_0 + \sum_{k=1}^\infty a_k \cos ( k \omega t ) + \sum_{k=1}^\infty b_k \sin ( k \omega t )
 $$
 
 In other words, the periodic functions of period $T$ form a vector
@@ -46,14 +38,14 @@ space, and $\{ e^{i n \omega t} \}$ forms a basis. In fact, this basis
 is orthonormal w.r.t. the inner product
 
 $$
-\langle f(t), g(t) \rangle = \frac{1}{T} \int_0^T f(t) g^*(t) \ dt,
+\langle f(t), g(t) \rangle = \frac{1}{T} \int_0^T f(t) g^*(t) \ dt
 $$
 
 where $g^*(t)$ denotes the complex conjugate of $g$. The coefficients
 can then be obtained as follows:
 
 $$
-    c_k = \langle f(t), e^{i k \omega t} \rangle = \frac{1}{T} \int_0^T f(t) e^{-i k \omega t} dt.
+    c_k = \langle f(t), e^{i k \omega t} \rangle = \frac{1}{T} \int_0^T f(t) e^{-i k \omega t} dt
 $$
 
 The intuition behind this representation is as follows. Suppose we have
@@ -70,7 +62,7 @@ time. Suppose we have a signal $f(t)$ that is limited in time (say from
 $t=0$ to $t = t_1$). Then we can extend it to a periodic signal by doing
 
 $$
-f_P(t) = \sum_{n \in \Z} f(t - nT),
+f_P(t) = \sum_{n \in \Z} f(t - nT)
 $$
 
 where $T > t_1$. This is the so-called periodic extension of $f$.
@@ -80,14 +72,14 @@ are considering $\{f_0, f_1, \dots, f_{N-1} \}$. We can discretise
 Equation the formula give above as follows:
 
 $$
-F_k = \sum_{n=0}^{N-1}  f_n e^{-i \frac{2 \pi k n }{N}} \quad k = 0, 1, \dots, N-1.
+F_k = \sum_{n=0}^{N-1}  f_n e^{-i \frac{2 \pi k n }{N}} \quad k = 0, 1, \dots, N-1
 $$
 
 The coefficients $F_k$ are called the discrete Fourier transform
 (DFT) of $f$. We can recover the signal from its DFT by
 
 $$
-f_n = \frac{1}{N} \sum_{k=0}^{N-1} F_k e^{i \frac{2 \pi k n }{N}} \quad n = 0, 1, \dots, N-1.
+f_n = \frac{1}{N} \sum_{k=0}^{N-1} F_k e^{i \frac{2 \pi k n }{N}} \quad n = 0, 1, \dots, N-1
 $$
 
 ## Matrix representation of DFT
@@ -96,7 +88,7 @@ Let $f = (f_0, f_1, \dots, f_{N-1})$ and let $F = (F_0, \dots, F_{n-1})$
 be its DFT. Then we have
 
 $$
-F = {\bf A} f,
+F = {\bf A} f
 $$
 
 where ${\bf A}$ is an $N \times N$ matrix with coefficients
@@ -117,7 +109,7 @@ $$
 The matrix ${\bf A}$ from the DFT is \Define{unitary}: it satisfies
 
 $$
-{\bf A}^\dagger = {\bf A}^{-1},
+{\bf A}^\dagger = {\bf A}^{-1}
 $$
 
 where ${\bf A}^\dagger$ is its
@@ -129,18 +121,20 @@ that the following are equivalent for a matrix ${\bf U}$:
 2.  ${\bf U}$ preserves the inner product, i.e.
 
     $$
-    \langle x,y \rangle = \langle {\bf U} x, {\bf U}y \rangle;
+    \langle x,y \rangle = \langle {\bf U} x, {\bf U}y \rangle
     $$
 
 3.  ${\bf U}$ preserves the norm, i.e.
-    $$\| x \|^2 = \sum_{i=0}^{N-1} |x_i|^2 = \langle x,x \rangle = \langle {\bf U} x, {\bf U}x \rangle = \sum_{i=0}^{N-1} |({\bf U}x)_i|^2 = \| {\bf U} x \|^2.$$
+    $$
+    \| x \|^2 = \sum_{i=0}^{N-1} |x_i|^2 = \langle x,x \rangle = \langle {\bf U} x, {\bf U}x \rangle = \sum_{i=0}^{N-1} |({\bf U}x)_i|^2 = \| {\bf U} x \|^2
+    $$
 
 We will not actually use the DFT and instead we will restrict ourselves
 to real matrices. A real unitary matrix is called orthogonal.
 So an orthogonal matrix is a real matrix ${\bf A}$ such that
 
 $$
-{\bf A}^{-1} = {\bf A}^\top.
+{\bf A}^{-1} = {\bf A}^\top
 $$
 
 # Two-dimensional transforms
@@ -151,7 +145,7 @@ In general, in one dimension, we could apply any orthogonal transform as
 such:
 
 $$
-\theta = {\bf A}x, \quad x = {\bf A}^\top \theta.
+\theta = {\bf A}x, \quad x = {\bf A}^\top \theta
 $$
 
 We will use transforms for two-dimensional data (small blocks of pixels). How are we
@@ -165,7 +159,7 @@ More succinctly, let ${\bf X}$ be an $N \times N$ matrix with entries
 $\{x_{i,j} : i,j = 0, \dots, N-1\}$. We then perform
 
 $$
-\Theta = {\bf A} {\bf X} {\bf A}^\top.
+\Theta = {\bf A} {\bf X} {\bf A}^\top
 $$
 
 ($\Theta$ is another $N \times N$ matrix.) Multiplying on the left by ${\bf A}$ performs the
@@ -173,7 +167,7 @@ transform column-wise, while multiplying on the right by ${\bf A}^\top$
 performs the transform row-wise. By associativity,
 
 $$
-\Theta = ({\bf A} {\bf X}) {\bf A}^\top = {\bf A} ( {\bf X} {\bf A}^\top ),
+\Theta = ({\bf A} {\bf X}) {\bf A}^\top = {\bf A} ( {\bf X} {\bf A}^\top )
 $$
 
 and hence the order does not matter!
@@ -181,7 +175,7 @@ and hence the order does not matter!
 Note that the inverse is straightforward:
 
 $$
-{\bf X} = {\bf A}^\top \Theta {\bf A}.
+{\bf X} = {\bf A}^\top \Theta {\bf A}
 $$
 
 ## Basis matrices
@@ -193,7 +187,7 @@ matrices form a basis for the vector space of all $N \times N$ matrices,
 and we have the decomposition
 
 $$
-{\bf X} = \sum_{i=0}^{N-1} \sum_{j=0}^{N-1} x_{i,j} {\bf E}_{i,j}.
+{\bf X} = \sum_{i=0}^{N-1} \sum_{j=0}^{N-1} x_{i,j} {\bf E}_{i,j}
 $$
 
 Any two-dimensional orthogonal transform also yields a similar
@@ -204,7 +198,7 @@ $$
 \begin{aligned}
     {\bf X} &= {\bf A}^\top \Theta {\bf A}\\
             &= {\bf A}^\top \left( \sum_{i,j} \theta_{i,j} {\bf E}_{i,j} \right) {\bf A}\\
-            &= \sum_{i,j} \theta_{i,j} {\bf A}_{i,j},
+            &= \sum_{i,j} \theta_{i,j} {\bf A}_{i,j}
 \end{aligned}
 $$
 
@@ -213,7 +207,7 @@ are the \Define{basis matrices} of the transform. More concretely,
 denote the $k$-th row of ${\bf A}$ as $a_k$, then
 
 $$
-    {\bf A}_{i,j} = a_i^\top a_j.
+    {\bf A}_{i,j} = a_i^\top a_j
 $$
 
 For instance, let
@@ -223,7 +217,7 @@ $$
     \begin{pmatrix}
     1 & 1\\
     1 & -1
-    \end{pmatrix}.
+    \end{pmatrix}
 $$
 
 Then the four basis matrices are given by
@@ -251,7 +245,7 @@ $$
     \begin{pmatrix}
     1 & -1\\
     -1 & 1
-    \end{pmatrix}.
+    \end{pmatrix}
 \end{aligned}
 $$
 
