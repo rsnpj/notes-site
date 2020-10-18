@@ -129,6 +129,15 @@ $$
 -   To show that $\mathcal{L}$ is NP-complete we must show that every language in NP can be reduced to $\mathcal{L}$ in polynomial time
 -   However, once we have one NP complete language $\mathcal{L}_0$, we can show that any other language in $\mathcal{L}$ is NP-complete just by showing $\mathcal{L}_0\leqslant \mathcal{L}$
 
+## Proving NP completeness
+
+To prove NP completeness by reduction, do the following:
+
+1. Describe the transformation (reduction function)
+2. Show that the transformation works in polynomial time
+3. Prove that the "yes" answer is preserved
+4. Prove that the "no" answer is preserved
+
 # Cook-Levin theorem
 
 <Theorem>
