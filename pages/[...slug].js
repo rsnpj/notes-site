@@ -150,7 +150,7 @@ function Lecture({
 							</a>
 						</h3>
 					)}
-					<div className="flex justify-center">
+					<div className="flex justify-center pt-2">
 						<InnerHTML html={html} />
 					</div>
 				</div>
