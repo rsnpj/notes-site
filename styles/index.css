@@ -164,3 +164,39 @@
 	width: 100%;
 	grid-column: 1 / 4;
 }
+
+#carbonads {
+	@apply flex bg-white border border-gray-400 rounded;
+	max-width: 330px;
+}
+
+#carbonads span {
+	@apply relative block overflow-hidden;
+}
+
+#carbonads .carbon-wrap {
+	@apply flex;
+}
+
+.carbon-img {
+	@apply block m-0 leading-none;
+}
+
+.carbon-img img {
+	@apply block;
+}
+
+.carbon-text {
+	font-size: 13px;
+	padding: 10px;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.carbon-poweredby {
+	@apply block text-center uppercase font-semibold text-gray-600 leading-none text-xs tracking-wide py-2 border-t border-gray-400;
+}
+
+#carbonads_1 {
+	display: none;
+}
