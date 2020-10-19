@@ -226,7 +226,7 @@ Label item/document based on active user's rating
 
 ## (k-) nearest neighbour
 
-Lazy learners
+Lazy learners - not building a model, but stores all training examples in memory
 
 Process
 
@@ -238,7 +238,7 @@ Process
 
 Predict like/dislike for a (new/unseen) item
 
-Match two vectors of the same length
+Match two vectors of the same length (same items in each vector, but with different weights)
 
 1. User profile vector
 2. Item representation vector
@@ -248,7 +248,7 @@ Match two vectors of the same length
 -   Cosine:
 
 $$
-\cos (x, y)=\frac{(x \bullet y)}{\|x\|\|y\|} \quad \sin \left(d_{i}, d_{j}\right)=\frac{\sum_{k} w_{k i} \cdot w_{k j}}{\sqrt{\sum_{k} w_{k i}^{2}} \cdot \sqrt{\sum_{k} w_{k j}^{2}}}
+\cos (x, y)=\frac{(x \bullet y)}{\|x\|\|y\|} \quad \operatorname{sim} \left(d_{i}, d_{j}\right)=\frac{\sum_{k} w_{k i} \cdot w_{k j}}{\sqrt{\sum_{k} w_{k i}^{2}} \cdot \sqrt{\sum_{k} w_{k j}^{2}}}
 $$
 
 -   Pearson correlation
@@ -301,4 +301,63 @@ $$
 \overrightarrow{c_i}=\langle \omega_{wi},...,\omega_{|T|i}\rangle
 $$
 
-## Prediction
+### Prediction
+
+Predict like/dislike for a new/unseen item
+
+Match two vectors of the same length
+
+1. User profile vector
+2. Item representation vector of the unseen item
+
+-   By applying a distance/similarity measure
+-   Class of the more similar $\overrightarrow{c_i}$ vector is assigned to the new item
+
+## Naїve Bayes
+
+-   $P(c|d)$ a **posteriori** probability of a document _d_ belonging to class _c_
+-   $P(c)$ a **priori** probability
+-   Select the class with the highest probability
+
+$$
+P(c|d)=\dfrac{P(c)P(d|c)}{P(d)}
+$$
+
+$$
+P\left(c_{j} \mid d_{i}\right)=P\left(c_{j}\right) \prod_{w \in V_{d_{i}}} P\left(t_{k} \mid c_{j}\right)^{N_{\left(d_{i}, t_{k}\right)}}
+$$
+
+> Here t is used for a **term** and N is used for the frequency of the term
+
+## Further methods
+
+Decision trees
+
+-   **nodes** - labelled by terms
+-   **Branches** - labelled by term weight
+-   **Leaves** - labelled by categories
+-   Learned by recursively partitioning training data into subgroups
+
+Decision rule
+
+-   From all the rules that correctly classify all the training examples select the "best" one according to minimality criterion
+
+Logistic (Softmax) regression:
+
+-   Estimates a probability of $p(y=jx)$ for input x for each value of j from 1 to k
+-   Output k-dimensional vector with k estimated probabilities summing to 1
+
+# Advances in CBF
+
+Algorithm based:
+
+-   Deep learning
+-   Meta-path methods
+-   Metadata encodings
+
+Data-based:
+
+-   User generated content
+-   Other features: visual, multimedia
+-   Linked open data
+-   Heterogeneous information networks
