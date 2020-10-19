@@ -18,6 +18,9 @@ module.exports = {
 			mono: ["Jetbrains Mono"],
 		},
 		extend: {
+			maxWidth: {
+				ch64: "64ch",
+			},
 			colors: {
 				code: {
 					green: "var(--color-code-green)",

@@ -60,7 +60,7 @@ export default function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 					<h2 className="text-lg text-gray-700 pt-6 text-center">
 						These are my notes from my Course at Durham University
 					</h2>
-					<h2 className="text-center w-1/4 mx-auto text-gray-600 pt-4">
+					<h2 className="text-center mx-auto text-gray-600 pt-4 max-w-ch64">
 						If you use adblock, it'd be great if you turned it off
 						for this site. I've chosen developer focused ads, so
 						they might even be helpful.
