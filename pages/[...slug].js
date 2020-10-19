@@ -31,6 +31,7 @@ import highlightCode from "@mapbox/rehype-prism";
 import footnotes from "remark-footnotes";
 import Layout from "@/components/layout";
 import Footer from "@/components/footer";
+import InnerHTML from "dangerously-set-html-content";
 const components = {
 	table: MyTable,
 	img: MyImg,
@@ -61,6 +62,8 @@ function Lecture({
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
+
+	const html = `<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBIVKQN&placement=csnotesme" id="_carbonads_js"></script>`;
 
 	function toggleSidebar() {
 		setSidebarVisible(!sidebarVisible);
@@ -147,6 +150,9 @@ function Lecture({
 							</a>
 						</h3>
 					)}
+					<div className="flex justify-center">
+						<InnerHTML html={html} />
+					</div>
 				</div>
 				{postData.exercise && (
 					<div className="flex justify-center pb-4">
