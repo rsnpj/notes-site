@@ -253,6 +253,9 @@ function Lecture({
 	function IntermediatePage() {
 		return (
 			<>
+				<div className="flex justify-center pt-2">
+					<InnerHTML html={html} />
+				</div>
 				<h1 className="pt-4 text-5xl text-center font-bold text-purple-800 w-5/6 mx-auto">
 					{params.slug.length <= 2 &&
 						params.slug[params.slug.length - 1].replace(/_/g, " ")}
