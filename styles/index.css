@@ -181,6 +181,10 @@
 	@apply block text-center uppercase font-semibold text-gray-600 leading-none text-xs tracking-wide py-2 border-t border-gray-400;
 }
 
-#carbonads_1 {
+/* #carbonads_1 {
+	display: none;
+} */
+
+div[id^="carbonads_"] {
 	display: none;
 }
