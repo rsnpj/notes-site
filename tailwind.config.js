@@ -36,7 +36,6 @@ module.exports = {
 		typography: (theme) => ({
 			default: {
 				css: {
-					maxWidth: "120ch",
 					"code::after": {
 						content: "none",
 					},

@@ -149,22 +149,6 @@
 	}
 }
 
-.wrapper {
-	display: grid;
-	grid-template-columns:
-		1fr
-		min(65ch, 100%)
-		1fr;
-}
-.wrapper > * {
-	grid-column: 2;
-}
-.full-bleed,
-.math-display {
-	width: 100%;
-	grid-column: 1 / 4;
-}
-
 #carbonads {
 	@apply flex bg-white border border-gray-400 rounded;
 	max-width: 330px;
