@@ -150,7 +150,7 @@ function Lecture({
 							</a>
 						</h3>
 					)}
-					<div className="flex justify-center pt-2">
+					<div className="flex justify-center pt-2 h-32">
 						<InnerHTML html={html} />
 					</div>
 				</div>
@@ -253,7 +253,7 @@ function Lecture({
 	function IntermediatePage() {
 		return (
 			<>
-				<div className="flex justify-center pt-2">
+				<div className="flex justify-center pt-2 h-32">
 					<InnerHTML html={html} />
 				</div>
 				<h1 className="pt-4 text-5xl text-center font-bold text-purple-800 w-5/6 mx-auto">
