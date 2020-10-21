@@ -69,7 +69,7 @@ export default function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 						If you want to donate:
 					</h2>
 					<div className="flex justify-center">
-						<div className="grid sm:grid-cols-2 gap-4">
+						<div className="grid sm:grid-cols-3 gap-4">
 							<a
 								className="bmc-button"
 								href="https://www.buymeacoffee.com/samrobbins"
@@ -98,6 +98,40 @@ export default function Homepage({ tree, sidebarVisible, setSidebarVisible }) {
 											/>
 										</svg>
 										Sponsor on GitHub
+									</a>
+								</div>
+							</div>
+							<div className="flex items-center justify-center">
+								<div className="px-4 py-2 border border-gray-400 rounded ">
+									<a href="https://brave.com/csn586">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 2000 1719"
+											width="2000"
+											height="2000"
+											className="h-8 w-8 inline-block"
+										>
+											<path
+												fill="#662d91"
+												d="M2000 1716.64 1004.79 1146.78 0 1719 2000 1716.64z"
+											/>
+											<path
+												fill="#9e1f63"
+												d="M1005.11 0 1004.79 1146.78 2000 1716.64 1005.11 0z"
+											/>
+											<path
+												fill="#ff5000"
+												d="M0 1719 1004.79 1146.78 1005.11 0 0 1719z"
+											/>
+											<path
+												fill="#fff"
+												stroke="#ff5000"
+												stroke-miterlimit="10"
+												stroke-width="25"
+												d="m1002.75 695.67l-410.85 686.25h823.54l-412.69-686.25z"
+											/>
+										</svg>
+										Tip on Brave
 									</a>
 								</div>
 							</div>
