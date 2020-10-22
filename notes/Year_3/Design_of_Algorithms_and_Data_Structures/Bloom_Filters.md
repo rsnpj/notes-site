@@ -3,6 +3,8 @@ title: Bloom Filters
 lecturer: Tom
 ---
 
+> This topic is non examinable
+
 This is a variant on a dictionary data structure (is **not** a dictionary) that allows for very efficient **set membership queries**, using very little space
 
 Doesn't actually store any elements, used rather for bookkeeping
@@ -55,10 +57,10 @@ $$
     -   1-1/n to not be hit by one function for one element
     -   m many elements, each with k functions
     -   the "$\approx$" comes from $(1-1/n)^n\approx 1/e$
--   Let $p_0\approx e^{-km/n}$, then the probability of a false positive is
+-   Let $p_0\approx e^{-km/n}$. To simplify presentation temporarily assume that a fraction $p_0$ of entries are still 0 after all of S is hashed into the BF. The probability of a false positive is then
 
 $$
-\Bigg(1-\Big(1-\dfrac{1}{n}\Big)^{km}\Bigg)^k\approx \Big(1-e^{-km/n}\Big)^k=(1-p_0)^k
+(1-p_0)^k
 $$
 
 For convenience we'll use
@@ -68,7 +70,7 @@ For convenience we'll use
 
 We're given m and n, and wish to optimise the number of hash functions k so as to minimise false positive probability $p_f$
 
--   Using more hash functions gives us more chances to find a 0-bit for an element $x\not\in S$, but
+-   Using more hash functions gives us more chances to find a 0-bit for an element $x\notin S$, but
 -   Using fewer hash functions increases fraction $p_0$ of 0-bits in array
 
 # Wrap up

@@ -188,3 +188,7 @@
 div[id^="carbonads_"] {
 	display: none;
 }
+
+.adwrap > div {
+	@apply my-auto;
+}

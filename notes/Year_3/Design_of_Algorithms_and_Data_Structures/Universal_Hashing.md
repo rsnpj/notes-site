@@ -13,6 +13,8 @@ $$
 p(h(x_1)=\cdots = h(x_k))\leqslant \dfrac{1}{n^{k-1}}
 $$
 
+The probability here is just saying the probability that they all collide
+
 For example with k=2:
 
 Family of hash functions H from U to V is 2-universal if $\forall x_1,x_2 \in U$, and for a h chosen randomly from H,
@@ -32,6 +34,8 @@ p(h(x_1)=y_1,...,h(x_k)=y_k)\leqslant \dfrac{1}{n^k}
 $$
 
 With strong universality I can ask questions about this going here and that going there, whereas with universality only about collisions somewhere.
+
+> Note that for both k-universality and strong k-universality, the probability is actually in $\mathcal{O}$, so if we have a constant on the top, we don't need to worry
 
 ## Comparison with completely random functions
 

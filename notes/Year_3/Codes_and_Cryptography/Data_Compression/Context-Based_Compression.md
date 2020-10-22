@@ -7,16 +7,19 @@ lecturer: Max
 
 ## Context-based compression
 
-Statistical compression (mainly for text, but not only) can be based on
-two properties. The first property is the frequency of symbols: the
-model assigns probabilities to the symbol according to their frequency
-in the document.
+Statistical compression (used mainly for text) can be based on
+two properties:
 
-The second one is the context. In practice, the context a
-symbol consists of the $N$ symbols preceding it (note that we cannot use
-symbols succeeding it, as the decoder typically does not know them
-yet!). Context-based compression then uses the context of a symbol to
-predict it (i.e. to assign it a probability).
+-   The frequency of symbols: the
+    model assigns probabilities to the symbol according to their frequency
+    in the document.
+-   Context. In practice, the context a
+    symbol consists of the $N$ symbols preceding it (note that we cannot use
+    symbols succeeding it, as the decoder typically does not know them
+    yet!). Context-based compression then uses the context of a symbol to
+    predict it (i.e. to assign it a probability).
+
+<Example>
 
 For instance, let’s use a context of only one character. The letter h
 occurs in typical English text only about 5% of the time. However, if
@@ -25,15 +28,17 @@ the current symbol is t, then there is a much higher probability (around
 in English. Note that the prediction is about assigning probabilities,
 not trying to figure out the next symbol exactly (which is impossible).
 
+</Example>
+
 ## Static v Adaptive contexts
 
-A static context-based modeller always uses the same probabilities, which
+A **static** context-based modeller always uses the same probabilities, which
 are stored in some large table. Those probabilities are usually obtained
 by crawling through many documents (say typical English texts). There
 are issues with that approach, notably the fact that this might assign
 zero probabilities to some strings.
 
-An adaptive context-based modeller also maintains tables of probabilities
+An **adaptive** context-based modeller also maintains tables of probabilities
 of all the possible digrams (or trigrams, or even longer $n$-grams). But
 this time the tables are updated all the time as more data are input,
 which adapts the probabilities to the particular data being compressed.
@@ -58,8 +63,6 @@ case:
     different symbol distributions.
 
 Therefore, in practice relatively small contexts are used in practice
-(for text compression, traditional methods use no more than 10
-characters).
 
 # PPM
 
@@ -76,12 +79,13 @@ keeps shortening the context until it is successful.
 The encoder reads the next symbol $S$ from the input stream, looks at
 the current order-$N$ context $C$ (the last $N$ symbols read), and based
 on the previous input data, computes the probability $P$ that $S$ will
-appear following $C$. The encoder then calls an adaptive arithmetic
-encoder to encode $S$ with probability $P$. If the probability $P$ is
-zero, the PPM encoder tries with a smaller context; it reduces the
+appear following $C$.
+
+The encoder then calls an adaptive arithmetic encoder to encode $S$ with probability $P$. If the probability $P$ is zero, the PPM encoder tries with a smaller context; it reduces the
 context until $P \ne 0$. What if the symbol $S$ has not been seen yet
-(and hence, even with order-$0$ context, we still have $P = 0$)? Then
-the PPM encoder enters order-$(-1)$ context, where the
+(and hence, even with order-$0$ context, we still have $P = 0$)?
+
+Then the PPM encoder enters order-$(-1)$ context, where the
 probability of $S$ is simply $1/$(size of alphabet).
 
 <Example>
@@ -104,13 +108,14 @@ $$
 </Example>
 
 Now, how does the encoder tell the decoder which order context it is
-currently using (and hence what the decoder should be using too)? The
-answer is to have a dedicated escape symbol, which we’ll
-denote esc, which should be output whenever the context size is
+currently using?
+
+The answer is to have a dedicated escape symbol, which we’ll
+denote `esc`, which should be output whenever the context size is
 decreased. Since this is a new character, we should also assign a
 probability for the escape symbol for every encountered context. There
 are various ways (heuristics) of assigning such probabilities. Here, we
-will use the so-called Method A, where the escape symbol is assigned a
+will use the so-called **Method A**, where the escape symbol is assigned a
 frequency of 1.
 
 We are now in position to give a more explicit example. Encoding a full
@@ -124,9 +129,12 @@ Let’s assume we have already encoded “this⏘is” and we
 wish to encode the next character ⏘.
 
 We assume the word length for arithmetic coding is six bits. For the
-sake of simplicity, we have $Low = 0$ and hence $L^* = 000000$ and
-$High = 1$ hence $H^* = 111111$. (As we shall see, the low and high
-values may vary over time.)
+sake of simplicity, we have:
+
+-   $Low = 0$ hence $L^* = 000000$
+-   $High = 1$ hence $H^* = 111111$
+
+(As we shall see, the low and high values may vary over time.)
 
 Here is what the table of contexts looks like
 
@@ -136,18 +144,26 @@ Here is what the table of contexts looks like
 | th → esc  | 1   | t → esc | 1   | h       | 1   |
 | hi → s    | 1   | h → i   | 1   | i       | 2   |
 | hi → esc  | 1   | h → esc | 1   | s       | 2   |
-| is → ␣    | 1   | i → s   | 2   | ␣       | 2   |
+| is → ␣    | 1   | i → s   | 2   | ␣       | 1   |
 | is → esc  | 1   | i → esc | 1   | esc     | 1   |
 | s␣ → i    | 1   | ␣ → i   | 1   |
 | s␣ → esc  | 1   | ␣ → esc | 1   |
 | ␣ i → s   | 1   | s → ␣   | 1   |
 | ␣ i → esc | 1   | s → esc | 1   |
 
-The second-order context is “is”. We use characters in the
+The second-order context is `is`. We use characters in the
 order of the table: the first row gives the first interval and so on. In
-this context, the probability of the space sign “␣” and
+this context, the probability of the space sign `␣` and
 the probability of the escape symbol esc are both equal to 1/2, and
-$$L(\text{␣}) = 0, H(\text{␣}) = 1/2 = L(esc), H(esc) = 1.$$
+
+$$
+\begin{gathered}
+    L(\text{␣}) = 0\\
+    H(\text{␣}) = 1/2 = L(esc)\\
+    H(esc) = 1
+\end{gathered}
+$$
+
 The update equations for the new $Low$ and $High$ are
 
 $$
@@ -169,8 +185,8 @@ into $L^*$ and shift $1$ into $H^*$. So we obtain:
 
 3.  Higher bound $H^* = 111111$.
 
-The next symbol is “t”. The second-order context is
-“s␣”. Since “t” has zero frequency in this
+The next symbol is `t`. The second-order context is
+`s␣`. Since `t` has zero frequency in this
 context, we need to encode the escape symbol. By a similar argument as
 above, we obtain
 
@@ -181,7 +197,7 @@ above, we obtain
 3.  Higher bound $H^* = 111111$.
 
 We need to look at the first-order context, which is
-“␣”. Again, “t” does not appear with this
+`␣`. Again, `t` does not appear with this
 context, so we encode another escape symbol. We obtain
 
 1.  Encoded escape symbol sequence: $1$,
@@ -190,7 +206,7 @@ context, so we encode another escape symbol. We obtain
 
 3.  Higher bound $H^* = 111111$.
 
-We need to look at the zero-th order context. This time, “t” has already
+We need to look at the zero-th order context. This time, `t` has already
 appeared, and is assigned the interval $[0, 1/9 )$. We then have
 
 $$
@@ -205,13 +221,13 @@ $$
 Since the three leftmost bits are
 equal, we shift them out. We finally obtain
 
-1.  Encoded sequence: for “t”: $000$,
+1.  Encoded sequence: for `t`: $000$,
 
 2.  Lower bound $L^* = 000000$,
 
 3.  Higher bound $H^* = 111111$.
 
-So, to encode “␣t”, we have transmitted $011000$.
+So, to encode `␣t`, we have transmitted $011000$.
 
 Note that there would be a slight difference in practice: to keep
 everything integral, we would use $High = 63$, $Low = 0$ and perform an
@@ -234,7 +250,8 @@ size of the resulting sequence for that symbol. The main idea is that if
 a context is followed by many different characters, then you are likely
 to encounter yet another character following that same context. For
 instance, think of the context “s” in English, which can be followed by
-virtually any other letter. Methods B and C give the escape
-symbol a count equal to the number of symbols following the context;
+virtually any other letter.
+
+Methods B and C give the escape symbol a count equal to the number of symbols following the context;
 Method B then subtracts the count of every other symbol by one, while
 Method C does not amend those.

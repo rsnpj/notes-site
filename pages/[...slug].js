@@ -129,7 +129,7 @@ function Lecture({
 	function LecturePage() {
 		return (
 			<>
-				<div className="p-6 pt-4 pb-12">
+				<div className="p-6 pt-4 pb-4">
 					<h1 className="text-4xl sm:text-5xl text-center font-semibold title">
 						{postData.title}
 					</h1>
@@ -150,7 +150,7 @@ function Lecture({
 							</a>
 						</h3>
 					)}
-					<div className="flex justify-center pt-2 h-40">
+					<div className="flex justify-center pt-2 h-40 adwrap">
 						<InnerHTML html={html} />
 					</div>
 				</div>
