@@ -61,15 +61,17 @@ $$
 \end{gathered}
 $$
 
-Also if $x\approx y$, then
+If $x\approx y$, then
 
 $$
 x-_My=\epsilon
 $$
 
-<Definition name="Cancellation">
-
 Subtracting two similar values will return us the machine error
+
+<Definition name="Error cancellation">
+
+Where one operation is overestimated and one is underestimated such that they cancel out. We can't rely on this though
 
 </Definition>
 
@@ -104,6 +106,13 @@ $$
 
 </Example>
 
+Method:
+
+1. Replace all calculations of the machine with machine calculations
+2. Ignore rules like the associative law
+3. Replace the machine operation with their $\epsilon$ parametrised counterpart
+4. Throw away higher order terms like $\epsilon^2$ and above as they are too small to count
+
 # Programming Recipes
 
 With the way that errors work, we no longer get associativity in our formulas, as in:
@@ -111,6 +120,8 @@ With the way that errors work, we no longer get associativity in our formulas, a
 $$
 (x+_M y)+_M z \neq x+_M (y+_M z)
 $$
+
+> You can see this in practice in the example above, as z has a lower epsilon
 
 This means that we want to try and reorder our operations so that the operation introducing the potentially largest error comes last
 
@@ -148,3 +159,19 @@ $$
 Here we get a maximal error amplification of $(N-1)\epsilon$ for a standard sum, but recursive summation has amplification of $\log_2(N)\epsilon$
 
 Using this method we can also use **Mixed Precision** by computing the smaller blocks with lower precision than the total sum.
+
+# Cancellation
+
+<Definition name="Cancellation">
+
+Subtracting two numbers of the same magnitude can lead to lots of garbage bits in the result as the ALU backfills the significand
+
+</Definition>
+
+If your calculations run risk to suffer from cancellation, rearrange the calculations such that the cancellation arises as late as possible
+
+# Register assignment and compiler impact
+
+It is never a good idea to work on a variable, then not touch it for ages, then reuse it, as it may be moved back to main memory. Rewrites to ensure this increase spatial and temporal data access locality.
+
+Compilers will do this for you automatically, for example with the GNU compiler `-fassociative-math` allows for re-association of operands in a series of floating point operations.

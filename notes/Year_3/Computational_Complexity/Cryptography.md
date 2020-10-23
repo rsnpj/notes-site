@@ -26,7 +26,7 @@ Message passing:
 <Problem name="Integer Factorisation" instance="Positive integers N and M, M<N" question="Does N have a factor d, $1\leqslant d \leqslant M$"/>
 
 -   No polynomial algorithm is known for Integer Factorisation
--   Is is both NP and coNP
+-   Is is both **NP** and **coNP** (complement of problem in NP e.g. invert is it true to is it not true)
 -   It is not NP-complete unless NP=coNP
 
 # Generic Authentication scheme
@@ -60,6 +60,8 @@ Repeat the following:
 -   Alice computes a permutation $\rho$ such that H is obtained from $G_i$ by permuting the vertices according to $\rho$
 -   Alice sends $\rho$ to Bob
 -   Bob checks that $G_i$ can be obtained from H using $\rho$. Bob accepts Alice is $\rho$ is correct for every repetition.
+
+> The strength comes in here that $\pi$ is easy to apply, but difficult to work backwards to get, just like with RSA
 
 ## Properties of zero knowledge proofs
 
