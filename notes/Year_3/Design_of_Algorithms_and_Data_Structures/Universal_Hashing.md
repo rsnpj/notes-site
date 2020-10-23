@@ -194,7 +194,7 @@ $\Rightarrow$ distinct keys definitely won't collide after mod p. We want to cou
 $$
 \begin{gathered}
     ax_1+b=u\bmod p\\
-    ax_2+b=v\vmod p
+    ax_2+b=v\bmod p
 \end{gathered}
 $$
 
