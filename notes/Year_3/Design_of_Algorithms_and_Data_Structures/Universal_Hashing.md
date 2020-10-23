@@ -337,7 +337,7 @@ This motivates perfect hashing: given set S, we'd like to construct a hash table
 
 ## Lemma
 
-If $h\in H$ is chosen uniformly at random from 2-universal family, mapping universe U to $\{0,...,n-1}$, then, for any set $S\subset U$ of size m, the probability of h being perfect is at least 1/2 when $n\geqslant m^2$
+If $h\in H$ is chosen uniformly at random from 2-universal family, mapping universe U to $\{0,...,n-1\}$, then, for any set $S\subset U$ of size m, the probability of h being perfect is at least 1/2 when $n\geqslant m^2$
 
 ## Proof
 
