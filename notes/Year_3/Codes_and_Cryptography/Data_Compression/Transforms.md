@@ -34,8 +34,7 @@ f(t) = a_0 + \sum_{k=1}^\infty a_k \cos ( k \omega t ) + \sum_{k=1}^\infty b_k \
 $$
 
 In other words, the periodic functions of period $T$ form a vector
-space, and $\{ e^{i n \omega t} \}$ forms a basis. In fact, this basis
-is orthonormal w.r.t. the inner product
+space, and $\{ e^{i n \omega t} \}$ forms a basis orthonormal w.r.t. the inner product
 
 $$
 \langle f(t), g(t) \rangle = \frac{1}{T} \int_0^T f(t) g^*(t) \ dt
@@ -48,8 +47,9 @@ $$
     c_k = \langle f(t), e^{i k \omega t} \rangle = \frac{1}{T} \int_0^T f(t) e^{-i k \omega t} dt
 $$
 
-The intuition behind this representation is as follows. Suppose we have
-a periodic signal $f$. Then its $c_k$ Fourier coefficients decompose the
+The intuition behind this representation is as follows.
+
+Suppose we have a periodic signal $f$. Then its $c_k$ Fourier coefficients decompose the
 signal into basic fluctuating signals; each $e^{i k \omega t}$
 fluctuates at a frequency of $k \omega/(2 \pi)$. As such, these
 coefficients give us a measure of the different amounts of fluctuation
@@ -65,7 +65,7 @@ $$
 f_P(t) = \sum_{n \in \Z} f(t - nT)
 $$
 
-where $T > t_1$. This is the so-called periodic extension of $f$.
+where $T > t_1$. This is the so-called **periodic extension** of $f$.
 
 Moreover, we are dealing with discrete signals: instead of $f(t)$, we
 are considering $\{f_0, f_1, \dots, f_{N-1} \}$. We can discretise
@@ -98,7 +98,7 @@ obtain
 $$
 {\bf A} = \begin{pmatrix}
     1 & 1 & 1 & 1\\
-    1 & i & -1 & -i\\
+    1 & -i & -1 & i\\
     1 & -1 & 1 & -1\\
     1 & -i & -1 & i
     \end{pmatrix}
@@ -106,7 +106,7 @@ $$
 
 ## Unitary and orthogonal transforms
 
-The matrix ${\bf A}$ from the DFT is \Define{unitary}: it satisfies
+The matrix ${\bf A}$ from the DFT is **unitary**: it satisfies
 
 $$
 {\bf A}^\dagger = {\bf A}^{-1}
@@ -223,7 +223,7 @@ $$
 Then the four basis matrices are given by
 
 $$
-\begin{aligned}{3}
+\begin{aligned}
     {\bf A}_{0,0} &= \frac{1}{2}
     \begin{pmatrix}
     1 & 1\\
