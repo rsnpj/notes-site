@@ -15,7 +15,7 @@ let ball = { x: 200, y: 300, radius: 50 };
 
 ## obj.prop
 
-Access and properties like this
+Access object properties like this
 
 ```js
 ellipse(ball.x, ball.y, ball.radius * 2, ball.radius * 2);
