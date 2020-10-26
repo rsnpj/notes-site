@@ -58,12 +58,12 @@ function Lecture({
 	exercise,
 }) {
 	const [tab, setTab] = useState("Notes");
-	const content = hydrate(source, { components });
 	const router = useRouter();
 	const node = useRef();
 	const node2 = useRef();
 
-	const html = `<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBIVKQN&placement=csnotesme" id="_carbonads_js"></script>`;
+	const html =
+		'<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CEBIVKQN&placement=csnotesme" id="_carbonads_js"></script>';
 
 	function toggleSidebar() {
 		setSidebarVisible(!sidebarVisible);
@@ -188,7 +188,9 @@ function Lecture({
 				<hr className="pb-4" />
 				{(tab === "Notes" || !postData.exercise) && (
 					<div className="pb-6">
-						<div className="prose pb-6 mx-auto px-4">{content}</div>
+						<div className="prose pb-6 mx-auto px-4">
+							{hydrate(source, { components })}
+						</div>
 						<div className="flex justify-center">
 							<a
 								className="flex content-center hover:underline text-blue-700"
