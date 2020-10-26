@@ -62,10 +62,10 @@ fundamental to operating system design
 
 # Schedulers
 
-An operating system operates three types of scheduler: long-term,
-medium, and short term
+An operating system operates three types of schedulers: long-term,
+medium-term, and short term
 
--   The **long term scheduler(job scheduler)** selects which process
+-   The **long term scheduler (job scheduler)** selects which process
     should be brought into the ready queue
 
 -   The **medium-term scheduler** removes processes from active
